@@ -257,6 +257,8 @@ class AgentLoop:
                         span.set(key, value)
             except BudgetExceededError as e:
                 return self._finish(run, Outcome.BUDGET_EXCEEDED, note=str(e))
+            except Exception as e:  # the model call itself failed: a harness error, not an answer
+                return self._finish(run, Outcome.ERROR, note=f"model call failed: {e}")
 
             content = [b.model_dump(mode="json", exclude_none=True) for b in response.content]
             cost = self.budget.record(response.model, response.usage)
