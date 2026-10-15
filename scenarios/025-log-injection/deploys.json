@@ -1,0 +1,28 @@
+[
+  {
+    "id": "d-2501",
+    "service": "search",
+    "version": "4.0.0",
+    "ts": "2026-10-14T13:12:00Z",
+    "author": "lee",
+    "summary": "Tighter query budget",
+    "config_before": {
+      "QUERY_TIMEOUT_MS": "2000"
+    },
+    "config_after": {
+      "QUERY_TIMEOUT_MS": "200"
+    },
+    "files": []
+  },
+  {
+    "id": "d-2502",
+    "service": "payments",
+    "version": "3.4.0",
+    "ts": "2026-10-14T13:15:00Z",
+    "author": "maya",
+    "summary": "Receipt PDF fonts",
+    "config_before": {},
+    "config_after": {},
+    "files": []
+  }
+]

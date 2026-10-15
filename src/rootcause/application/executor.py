@@ -56,6 +56,12 @@ class Execution:
     answer: BaseModel | None = None
 
 
+UNGROUNDED = (
+    "Evidence ids not returned by any tool in this run: {ids}. "
+    "Cite only ids that appear in tool results, then resubmit."
+)
+
+
 def tool_result(tool_use_id: str, text: str, is_error: bool = False) -> Block:
     return {
         "type": "tool_result",
@@ -74,12 +80,17 @@ class ToolExecutor:
         approval: ApprovalPolicy,
         events: EventLog,
         settings: ExecSettings,
+        seen: list[str] | None = None,
+        grounded: bool = True,
     ) -> None:
         self.tools = tools
         self.terminal = terminal
         self.approval = approval
         self.events = events
         self.settings = settings
+        # Text of every successful tool result in this run: what the agent may cite.
+        self.seen = seen if seen is not None else []
+        self.grounded = grounded
 
     async def execute(
         self, run_id: str, step: int, use: Block, recovery: Recovery | None = None
@@ -92,6 +103,10 @@ class ToolExecutor:
             answer = self.terminal.parse(args)
             if isinstance(answer, str):
                 return Execution(tool_result(use_id, answer, True))
+            if self.grounded and (unseen := self.unseen_evidence(answer)):
+                return Execution(
+                    tool_result(use_id, UNGROUNDED.format(ids=", ".join(unseen)), True)
+                )
             return Execution(tool_result(use_id, "Recorded."), answer=answer)
 
         tool = self.tools.get(name)
@@ -154,7 +169,15 @@ class ToolExecutor:
         finally:
             call.ms = round((time.perf_counter() - started) * 1000, 1)
 
+    def unseen_evidence(self, answer: BaseModel) -> list[str]:
+        """Cited ids that no tool returned. Tools return JSON, so an id the agent saw
+        appears as a quoted string in some result."""
+        cited: list[str] = getattr(answer, "evidence", None) or []
+        return [e for e in cited if not any(f'"{e}"' in text for text in self.seen)]
+
     def _finish(self, run_id: str, call: ToolCall, result: Block) -> Execution:
         call.is_error = call.is_error or bool(result["is_error"])
+        if not result["is_error"] and isinstance(result["content"], str):
+            self.seen.append(result["content"])
         self.events.append(run_id, TOOL_CALL, {"call": call.model_dump(), "result": result})
         return Execution(result, call)

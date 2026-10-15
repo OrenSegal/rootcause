@@ -1,7 +1,7 @@
 """A run that crashes can be resumed from its event log: same history, no tool run
 twice, and a side effect of unknown outcome reported instead of repeated."""
 
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from typing import Any
 
 import pytest
@@ -46,7 +46,9 @@ class CountingTool:
 
 
 def spec():
-    return investigator_spec(max_steps=10)
+    # Stub tools return no telemetry ids, so nothing could be cited; the grounding
+    # check is covered in test_loop.py.
+    return replace(investigator_spec(max_steps=10), require_grounded_evidence=False)
 
 
 async def test_resume_after_a_crash_in_the_model_call_replays_the_same_history():

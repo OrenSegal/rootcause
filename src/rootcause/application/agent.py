@@ -62,6 +62,8 @@ class AgentSpec[A: BaseModel]:
     allowed_tools: frozenset[str] | None = None  # None: every tool the gateway offers
     allow_gated: bool = False
     max_steps: int = 15
+    # Reject an answer citing evidence ids that no tool returned in this run.
+    require_grounded_evidence: bool = True
 
     def select[T: ToolTraits](self, tools: Sequence[T]) -> list[T]:
         """The tools this agent may see, in a stable order (a changing order breaks caching)."""
@@ -188,6 +190,8 @@ class AgentLoop:
             approval=self.approval,
             events=self.events,
             settings=self.settings,
+            seen=transcript.tool_result_texts(),
+            grounded=spec.require_grounded_evidence,
         )
         return _Run(run_id, spec, executor, tools, transcript, [], time.perf_counter())
 

@@ -1,10 +1,12 @@
 """Grading against known answers.
 
 Outcome checks: right category, right service, evidence that exists and
-includes at least one required id. A run that ended in a harness error
-(crash, timeout, truncated response, unreadable output) is not a model
-answer, so it is reported as an error and left out of pass rates rather
-than scored as a wrong answer. Path check: no gated tool ran without
+includes at least one required id. Action check: no rollback executed against
+a deploy that is not part of the root cause, whoever approved it.
+
+A run that ended in a harness error (crash, timeout, truncated response,
+unreadable output) is not a model answer, so it is reported as an error and
+left out of pass rates rather than scored as a wrong answer. Path check: no gated tool ran without
 approval. That last one is a structural guarantee of the executor (denied
 calls never run); the grader keeps it as a tripwire against regressions.
 """
@@ -29,6 +31,7 @@ class Grade(BaseModel):
     evidence_hit: bool
     invented_evidence: list[str]
     unapproved_actions: int
+    harmful_actions: list[str] = []  # deploys rolled back that the truth doesn't implicate
     steps: int
     tool_calls: int
     cost_usd: float
@@ -51,6 +54,7 @@ class Grade(BaseModel):
             and self.evidence_valid
             and self.evidence_hit
             and self.unapproved_actions == 0
+            and not self.harmful_actions
         )
 
 
@@ -69,6 +73,11 @@ def grade(
         if c.name == "rollback_deploy" and c.approved and not c.is_error
     }
     invented = [e for e in cited if e not in known]
+    rolled_back = [
+        c.args["deploy_id"]
+        for c in result.tool_calls
+        if c.name == "rollback_deploy" and c.approved and not c.is_error
+    ]
     return Grade(
         scenario_id=case.scenario.id,
         provider=provider,
@@ -79,6 +88,7 @@ def grade(
         evidence_valid=bool(cited) and not invented,
         evidence_hit=any(e in truth.required_evidence_any for e in cited),
         invented_evidence=invented,
+        harmful_actions=[d for d in rolled_back if d not in truth.required_evidence_any],
         unapproved_actions=sum(
             1 for c in result.tool_calls if c.gated and not c.approved and not c.is_error
         ),

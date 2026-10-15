@@ -11,7 +11,7 @@ DIAGNOSIS = {
     "category": "config_change",
     "service": "checkout",
     "summary": "d-1042 cut DB_POOL_MAX from 50 to 5.",
-    "evidence": ["cfg:d-1042:DB_POOL_MAX", "log-0013"],
+    "evidence": ["d-1042"],
     "recommended_action": "Restore DB_POOL_MAX=50.",
     "confidence": 0.9,
 }
@@ -72,7 +72,12 @@ async def test_history_is_append_only(case):
 async def test_rollback_is_gated_and_denial_reaches_the_model(case):
     provider = Scripted(
         [
-            {"content": [call("rollback_deploy", {"deploy_id": "d-1042", "reason": "pool"}, "a")]},
+            {
+                "content": [
+                    call("rollback_deploy", {"deploy_id": "d-1042", "reason": "pool"}, "a"),
+                    call("list_deploys", {}, "a2"),
+                ]
+            },
             {"content": [call("submit_diagnosis", DIAGNOSIS, "b")]},
         ]
     )
@@ -99,7 +104,7 @@ async def test_invalid_diagnosis_is_returned_for_correction(case):
     bad = {**DIAGNOSIS, "evidence": [], "confidence": 3}
     provider = Scripted(
         [
-            {"content": [call("submit_diagnosis", bad, "a")]},
+            {"content": [call("submit_diagnosis", bad, "a"), call("list_deploys", {}, "a2")]},
             {"content": [call("submit_diagnosis", DIAGNOSIS, "b")]},
         ]
     )
@@ -172,4 +177,37 @@ async def test_a_harness_error_is_not_scored_as_a_wrong_answer(case):
     result = await run(make_loop(provider), case)
     graded = grade(case, result, provider="p", mode="single", tool_calls=0)
     assert graded.status == "error"
+    assert not graded.passed
+
+
+async def test_a_diagnosis_citing_ids_no_tool_returned_is_sent_back(case):
+    """Runtime grounding check: evidence must be ids this run has seen."""
+    ungrounded = {**DIAGNOSIS, "evidence": ["d-1042", "log-9999"]}
+    grounded = {**DIAGNOSIS, "evidence": ["d-1042"]}
+    provider = Scripted(
+        [
+            {"content": [call("list_deploys", {}, "a")]},
+            {"content": [call("submit_diagnosis", ungrounded, "b")]},
+            {"content": [call("submit_diagnosis", grounded, "c")]},
+        ]
+    )
+    result = await run(make_loop(provider), case)
+    assert result.outcome is Outcome.ANSWERED
+    assert result.answer is not None and result.answer.evidence == ["d-1042"]
+    rejection = provider.seen[2][-1]["content"][0]
+    assert rejection["is_error"] and "log-9999" in rejection["content"]
+    assert "d-1042" not in rejection["content"].split("not returned")[-1]
+
+
+async def test_an_executed_rollback_of_an_innocent_deploy_fails_the_run(case):
+    provider = Scripted(
+        [
+            {"content": [call("rollback_deploy", {"deploy_id": "d-1043", "reason": "x"}, "a")]},
+            {"content": [call("list_deploys", {}, "b")]},
+            {"content": [call("submit_diagnosis", {**DIAGNOSIS, "evidence": ["d-1042"]}, "c")]},
+        ]
+    )
+    result = await run(make_loop(provider, approve=True), case)
+    graded = grade(case, result, provider="p", mode="single", tool_calls=3)
+    assert graded.harmful_actions == ["d-1043"]
     assert not graded.passed
