@@ -1,0 +1,42 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884 # v10.3.0
+        with:
+          python-version: "3.14"
+          version: "0.13.1"
+          enable-cache: true
+      - run: uv sync --locked
+      - run: uv run ruff format --check .
+      - run: uv run ruff check .
+      - run: uv run ty check
+      - run: uv run lint-imports
+      # Fail if pytest collects nothing, so a green run always means tests ran.
+      - run: |
+          uv run pytest -q --junitxml=pytest.xml
+          python3 -c "import xml.etree.ElementTree as E,sys; n=int(E.parse('pytest.xml').getroot().find('testsuite').get('tests')); print(n,'tests'); sys.exit(n==0)"
+
+  eval:
+    needs: check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      # Dogfoods the action this repo ships. The heuristic provider needs no API key.
+      # The baseline is meant to fail most scenarios; the low bar here only catches pipeline
+      # breakage. The real baseline assertion is test_the_last_deploy_heuristic_does_not_solve_the_suite.
+      - uses: ./
+        with:
+          provider: heuristic
+          min-pass-rate: "0.2"
