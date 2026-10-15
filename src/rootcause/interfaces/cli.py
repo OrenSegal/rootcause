@@ -202,7 +202,8 @@ def sweep_cmd(
     if dry_run:
         return
     counts = asyncio.run(run_sweep(loaded, target, concurrency=concurrency))
-    typer.echo(f"ran {counts['ran']}, skipped {counts['skipped']}; results in {target}")
+    crashed = f", {counts['crashed']} crashed (retried next time)" if counts["crashed"] else ""
+    typer.echo(f"ran {counts['ran']}, skipped {counts['skipped']}{crashed}; results in {target}")
 
 
 @app.command("report")

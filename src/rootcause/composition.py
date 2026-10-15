@@ -32,7 +32,7 @@ from rootcause.adapters.github_actions import GhCli, RawRun, case_from_raw
 from rootcause.adapters.mcp_telemetry import build_telemetry_server
 from rootcause.adapters.mcp_tools import mcp_tools
 from rootcause.adapters.sqlite_events import SqliteEventLog
-from rootcause.application.agent import AgentLoop, RunResult
+from rootcause.application.agent import AgentLoop, RunResult, TokenUsage
 from rootcause.application.approval import StaticApproval
 from rootcause.application.budget import Budget
 from rootcause.application.evals import Grade, SuiteReport, grade
@@ -52,7 +52,7 @@ from rootcause.application.sweep import (
     summarize,
 )
 from rootcause.application.tracing import NullTracer
-from rootcause.application.transcript import TOOL_CALL
+from rootcause.application.transcript import OUTCOME, TOOL_CALL
 from rootcause.domain.answers import Diagnosis
 from rootcause.domain.scenario import Case, Scenario
 
@@ -184,6 +184,20 @@ def supports(provider_name: str, mode: Mode) -> bool:
     return mode is Mode.SINGLE or provider_name.split(":")[0] not in SINGLE_AGENT_ONLY
 
 
+def worker_spend(events: EventLog, run_id: str) -> tuple[float, TokenUsage]:
+    """Cost and tokens of every run this one started (workers), read from their logged
+    outcomes. The shared budget already caps them; the grade has to count them too."""
+    cost, usage = 0.0, TokenUsage()
+    for child in events.children(run_id):
+        for e in events.events(child.run_id):
+            if e.kind == OUTCOME:
+                cost += e.payload.get("cost_usd", 0.0)
+                usage = usage + TokenUsage.model_validate(e.payload.get("usage") or {})
+        sub_cost, sub_usage = worker_spend(events, child.run_id)
+        cost, usage = cost + sub_cost, usage + sub_usage
+    return cost, usage
+
+
 def count_tool_calls(events: EventLog, run_id: str) -> int:
     """Tool calls in a run and every run it started (workers)."""
     own = sum(1 for e in events.events(run_id) if e.kind == TOOL_CALL)
@@ -262,6 +276,11 @@ async def investigate(
         mode=mode.value,
         tool_calls=count_tool_calls(events, result.run_id),
     )
+    if mode is Mode.MULTI:
+        cost, usage = worker_spend(events, result.run_id)
+        graded = graded.model_copy(
+            update={"cost_usd": round(result.cost_usd + cost, 6), "usage": result.usage + usage}
+        )
     return Investigation(result=result, grade=graded)
 
 
@@ -348,13 +367,24 @@ def sweep_engine(config: SweepConfig) -> Engine:
 
 
 def read_sweep(out: Path) -> tuple[list[Row], list[Row]]:
+    """Finished rows, and errors not since retried successfully. A line cut short by a
+    killed process is skipped; its run is simply done again on resume."""
+
     def load(name: str) -> list[Row]:
         path = out / name
         if not path.exists():
             return []
-        return [Row.model_validate_json(line) for line in path.read_text().splitlines() if line]
+        loaded = []
+        for line in path.read_text().splitlines():
+            try:
+                loaded.append(Row.model_validate_json(line))
+            except ValueError:
+                continue
+        return loaded
 
-    return load(ROWS), load(ERRORS)
+    rows = load(ROWS)
+    done = {(r.config, r.scenario_id, r.rep) for r in rows}
+    return rows, [e for e in load(ERRORS) if (e.config, e.scenario_id, e.rep) not in done]
 
 
 def _start_sweep(spec: SweepSpec, out: Path) -> set[tuple[str, str, int]]:
@@ -389,7 +419,7 @@ async def run_sweep(
         for config in spec.configs
     ]
     gate, write = asyncio.Semaphore(concurrency), asyncio.Lock()
-    counts = {"ran": 0, "skipped": 0}
+    counts = {"ran": 0, "skipped": 0, "crashed": 0}
 
     async def one(rep: int, path: Path, config: SweepConfig) -> None:
         case = load_case(path)
@@ -411,7 +441,10 @@ async def run_sweep(
             await asyncio.to_thread(_append, target, row.model_dump_json())
             counts["ran"] += 1
 
-    await asyncio.gather(*(one(*t) for t in todo))
+    # One crashing run (an engine that fails to start, a bug) must not take the rest
+    # down; it writes no row, so the next call retries it.
+    outcomes = await asyncio.gather(*(one(*t) for t in todo), return_exceptions=True)
+    counts["crashed"] = sum(isinstance(o, Exception) for o in outcomes)
     return counts
 
 
@@ -423,6 +456,7 @@ def summarize_sweep(out: Path) -> tuple[SweepSpec, list[ConfigSummary], list[Row
             c,
             [r for r in rows if r.config == c.name],
             [r for r in errors if r.config == c.name],
+            k=spec.repeats,
         )
         for c in spec.configs
     ]

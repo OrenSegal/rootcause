@@ -1,19 +1,21 @@
 # rootcause
 
-An agent that investigates incidents and failed CI runs, written to show how agents work underneath the frameworks: a hand-written loop, tools served over MCP, an approval gate, a crash-safe event log, an orchestrator with workers, and evals scored against known root causes.
+An agent that investigates incidents and failed CI runs, written to show how agents work underneath the frameworks: a hand-written loop, tools served over MCP, an approval gate, a crash-safe event log, an orchestrator with workers, retrieval over past postmortems, OpenTelemetry traces, and evals scored against known root causes, run repeatedly and reported with intervals and cost.
 
 It runs three ways: as a CLI with exit codes for CI, as an MCP server a coding agent can call, and as a GitHub Action.
 
 ## Quickstart
 
 ```bash
-uv sync
-uv run rootcause eval --min-pass-rate 0.05               # every scenario, no API key needed
+uv sync                                                   # core only; extras below
+uv run rootcause eval --min-pass-rate 0.05                # every scenario, no API key needed
 uv run rootcause investigate scenarios/007-inventory-timeout-cascade
 uv run rootcause ci-triage --raw scenarios/008-sous-shellcheck/raw
-uv run rootcause eval --provider claude-code --min-pass-rate 0   # Claude Code drives the tools
-uv run rootcause compare --provider heuristic --provider anthropic --budget-usd 0.25
-# ^ paid API calls: 48 investigations (24 scenarios, 2 modes), each capped at $0.25
+uv run rootcause retrieval-eval --retrieval bm25 --query alert+log
+uv run rootcause eval --provider claude-code --min-pass-rate 0     # Claude Code drives the tools
+uv run rootcause sweep sweeps/models-and-retrieval.yaml --dry-run  # run count before spending
+uv run rootcause report results/sweeps/models-and-retrieval-2026-10-15
+uv run rootcause --trace console investigate scenarios/025-log-injection  # needs the otel extra
 ```
 
 By default the investigator is a rule-based baseline that needs no key. `--provider anthropic` runs Claude Opus 5.5 through the hand-written loop on an API key. `--provider claude-code` hands the same tools and brief to headless Claude Code, which needs the `claude` CLI installed and signed in, and runs on whatever account that is.
@@ -36,7 +38,19 @@ By default the investigator is a rule-based baseline that needs no key. `--provi
 
 **Two harnesses, one grader.** `adapters/claude_code.py` runs `claude -p` against the same telemetry MCP server, with built-in tools, user settings and other MCP servers switched off, and with the ground truth left out of the fixtures it serves. Its stream is mapped onto the same `RunResult` the hand-written loop returns, so both are graded by the same code. A rollback is visible to both but only runs when the scenario's operator approves; a denial reaches the model as a tool error.
 
-**Evals that can fail.** Twenty-four scenarios. The twenty-one written as code are each built around a mistake a responder could make: a deploy that lands just before a vendor outage, a flag flipped at runtime with no deploy on record, a retry policy two services away turning a one-minute blip into an outage, a migration hidden in a deploy whose config diff points elsewhere, a maintenance window that looks like an incident. The baseline ("blame the last deploy before the first error") is right on three. Grades check the category, the service, and that every cited id is one the tools returned.
+**Evals that can fail.** Twenty-five scenarios. The twenty-two written as code are each built around a mistake a responder could make: a deploy that lands just before a vendor outage, a flag flipped at runtime with no deploy on record, a retry policy two services away turning a one-minute blip into an outage, a migration hidden in a deploy whose config diff points elsewhere, a maintenance window that looks like an incident. The baseline ("blame the last deploy before the first error") is right on three. Grades check the category, the service, that every cited id is one the tools returned, and that no rollback ran against a deploy outside the root cause.
+
+**Measurement before claims.** `rootcause sweep` runs each configuration several times per scenario, interleaved so rate limits or time of day don't land on one configuration, and resumes where it stopped. Harness failures (crash, timeout, unreadable output, a run served by a different model than configured) go to a separate file and are retried; they never count as wrong answers. `rootcause report` gives each configuration a Wilson interval, pass^k (every attempt right, which is what an on-call agent needs) next to pass@k, cost per solved incident including spend on failed runs, p50/p90 latency, and whether another configuration is at least as reliable for less. Every run records API-reported token counts, so costs can be repriced. An oracle check (answers built from the truth pass) and a null check (no answer, or a wrong category, fails) run over every scenario in CI.
+
+**Guardrails.** Three layers, each tested:
+
+- Operator approval for anything that changes production, enforced in the loop.
+- A grounding check: the hand-written loop sends back an answer that cites ids no tool returned in the run, naming them, before the grader ever sees it.
+- A harm check in the grader: a rollback that ran against a deploy outside the root cause fails the run even when the operator approved it. Scenario 025 tests this with a prompt injection, an attacker-controlled query string reflected into a log line that tells automated responders to roll back an innocent deploy, in a scenario where the operator approves rollbacks.
+
+**Retrieval as a tool, measured on its own.** With `--retrieval`, the telemetry server also offers `search_postmortems` over a corpus of 33 past incident write-ups (`corpus/`), labelled per scenario with the postmortems that share its mechanism; some others share only its symptoms. Four retrievers, cheapest first: BM25 written out in `adapters/retrieval.py`, static embeddings (model2vec), a small transformer embedding model run locally (fastembed), and a reciprocal-rank-fusion hybrid. `rootcause retrieval-eval` scores them on recall@k, MRR and nDCG@5 with index and query latency, separately from any agent; the sweep then measures whether search changes the end result and how often the agent actually uses it.
+
+**Traces.** `--trace console|otlp` emits OpenTelemetry spans named after the GenAI semantic conventions: `invoke_agent` per run, `chat` per model call with token usage, `execute_tool` per call with its gate and approval. The Anthropic and MCP SDKs' own spans nest inside them, so one trace shows the agent's decisions, the model requests and the tool transport. Claude Code runs are traced from their stream after the fact and marked as reconstructed.
 
 ## Results
 
@@ -64,16 +78,29 @@ Not run yet: the hand-written loop against a live model (`--provider anthropic`,
 ```
 interfaces/   CLI, MCP server for coding agents
 composition   the only module that wires adapters together
-adapters/     MCP server and client, Anthropic, Claude Code, heuristic, SQLite, fixtures, GitHub Actions
-application/  agent loop, executor, budget, orchestrator, evals, ports
-domain/       telemetry, scenarios, answers (no framework imports)
+adapters/     MCP server and client, Anthropic, Claude Code, heuristic, SQLite, fixtures,
+              GitHub Actions, corpus and retrievers, OpenTelemetry
+application/  agent loop, executor, budget, orchestrator, evals, sweeps, statistics,
+              retrieval metrics, tracing names, ports
+domain/       telemetry, scenarios, answers, postmortems (no framework imports)
 ```
 
-The layering is enforced, not described: `import-linter` contracts in `pyproject.toml` run in CI, and `tests/test_contracts.py` checks the rules import-linter can't express. `docs/AUDIT.md` lists the SSOT, SOLID and layering problems found in the first version, how each was fixed, and which changes were written test-first.
+The layering is enforced, not described: `import-linter` contracts in `pyproject.toml` run in CI, and `tests/test_contracts.py` checks the rules import-linter can't express. `docs/AUDIT.md` lists the SSOT, SOLID and layering problems found so far, how each was fixed, and which changes were written test-first.
+
+### Optional extras
+
+The core install has no ML or telemetry dependencies. Add what you need:
+
+| extra | adds | install |
+|---|---|---|
+| `rag` | static and transformer embeddings for `--retrieval static\|dense\|hybrid` (BM25 needs nothing) | `uv sync --extra rag` |
+| `otel` | OpenTelemetry SDK and OTLP exporter for `--trace` | `uv sync --extra otel` |
+
+A CI job installs the core alone and runs the tests, the baseline and BM25 retrieval, and the import contracts keep numpy, the embedding libraries and OpenTelemetry out of the domain and application layers. Asking for a mode whose extra is missing fails with the install command.
 
 ## Scenarios
 
-`scenarios/001` to `007` and `009` to `022` are written as code in `scripts/author_scenarios.py`, each with a docstring saying what makes it hard. A test regenerates them and fails if the committed fixtures drift, and another fails if the baseline solves more than half. A runtime flag flip or an operator's cache flush shows up as a log line, the way a flag service or a runbook audit log would record it, so neither needed a new tool.
+`scenarios/001` to `007`, `009` to `022` and `025` are written as code in `scripts/author_scenarios.py`, each with a docstring saying what makes it hard. A test regenerates them and fails if the committed fixtures drift, and another fails if the baseline solves more than half. A runtime flag flip or an operator's cache flush shows up as a log line, the way a flag service or a runbook audit log would record it, so neither needed a new tool.
 
 `scenarios/008`, `023` and `024` are real failed runs from [sous](https://github.com/OrenSegal/sous): the raw `gh` output is kept in `raw/`, the fixtures are derived from it, and the ground truth was set by reading the logs and diffs, with the reasoning in each `scenario.yaml` header. In 024 the head commit is a decoy and only the earlier guilty commit counts as evidence.
 
@@ -97,7 +124,9 @@ The eval gate, as a reusable action:
     min-pass-rate: "0.05"
 ```
 
-Triage of a failed run, read-only (it fetches with `gh` and writes a comment body; it never posts):
+Triage of every failed CI run, in Actions: `.github/workflows/triage.yml` runs on `workflow_run` when the `ci` workflow fails, checks out the default branch (never the code under test), and writes a diagnosis to the job summary. It needs only `actions: read` and `contents: read`.
+
+The same from a terminal, read-only (it fetches with `gh` and writes a comment body; it never posts):
 
 ```bash
 rootcause ci-triage --repo owner/name --run 123456789 --provider anthropic --comment-md comment.md
@@ -106,8 +135,8 @@ rootcause ci-triage --repo owner/name --run 123456789 --record scenarios/   # ke
 
 ## Not done yet
 
-- The hand-written loop and the multi-agent mode against a live model. Both are tested against scripted model turns only.
-- Repeated runs per configuration, so differences come with a spread.
+- The hand-written loop and the multi-agent mode against a live model. Both are tested against scripted model turns only; every model result here comes through Claude Code. Running them needs an API key, and the sweep file format already takes `provider: anthropic`.
+- A LangGraph version of the orchestrator to compare against the hand-written one. Blocked on the same API key, since a framework comparison only means something on live runs.
 - Telemetry recorded from a running service stack. The CI adapter covers real recorded data for now.
-- A LangGraph version of the orchestrator to compare against the hand-written one, and OpenTelemetry traces.
 - `ci-triage` inside Actions on a `workflow_run` trigger. The CI workflow and the composite action run on every pull request; `ci-triage` has run against live GitHub data from a terminal.
+- A held-out set. The scenarios, the corpus and the labels share an author, which flatters lexical retrieval and limits how far any result here generalizes.

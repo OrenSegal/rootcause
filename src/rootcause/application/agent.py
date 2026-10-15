@@ -93,6 +93,11 @@ class TokenUsage(BaseModel):
     cache_read_tokens: int = 0
     cache_write_tokens: int = 0
 
+    def __add__(self, other: TokenUsage) -> TokenUsage:
+        return TokenUsage(
+            **{k: getattr(self, k) + getattr(other, k) for k in TokenUsage.model_fields}
+        )
+
     def add(self, usage: BetaUsage) -> None:
         self.input_tokens += usage.input_tokens or 0
         self.output_tokens += usage.output_tokens or 0

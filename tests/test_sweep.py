@@ -105,13 +105,17 @@ async def test_sweep_is_resumable_and_keeps_errors_out_of_the_rows(two_scenarios
 
     out = tmp_path / "sweep"
     first = await run_sweep(spec, out, make_engine=engine)
-    assert first == {"ran": 8, "skipped": 0}
+    assert first == {"ran": 8, "skipped": 0, "crashed": 0}
     done, errors = read_sweep(out)
     assert len(done) == 4 and {r.config for r in done} == {"baseline"}
     assert len(errors) == 4 and {r.config for r in errors} == {"broken"}
 
     again = await run_sweep(spec, out, make_engine=engine)
-    assert again == {"ran": 4, "skipped": 4}  # errors are retried, finished runs are not
+    assert again == {
+        "ran": 4,
+        "skipped": 4,
+        "crashed": 0,
+    }  # errors are retried, finished runs are not
 
 
 def test_cli_plans_runs_a_sweep_and_reports_it(two_scenarios, tmp_path):
@@ -152,3 +156,62 @@ def test_summary_reports_how_often_runs_used_postmortem_search():
         ],
     )
     assert s.search_rate == 0.5
+
+
+def test_pass_hat_k_uses_one_k_across_configs_so_errors_cannot_flatter_a_config():
+    a = SweepConfig(name="a", provider="claude-code")
+    b = SweepConfig(name="b", provider="claude-code")
+    outcomes = {"s1": [True, True, True], "s2": [True, False, True]}
+    rows_a = rows("a", outcomes)
+    # b: same outcomes, but two s2 reps were lost to harness errors
+    rows_b = [r for r in rows("b", outcomes) if not (r.scenario_id == "s2" and r.rep > 0)]
+    sa = summarize(a, rows_a, k=3)
+    sb = summarize(b, rows_b, k=3)
+    assert sa.k == sb.k == 3
+    assert sb.pass_hat_k == pytest.approx(0.5)  # s2 has 1 run < k: counts as not shown reliable
+    assert sa.pass_hat_k == pytest.approx(0.5)
+
+
+def test_mean_cost_is_per_scored_run_and_error_spend_stays_in_cost_per_pass():
+    scored = rows("opus-high", {"a": [True]})  # one run at $0.10
+    error = Row(config="opus-high", scenario_id="b", rep=0, grade=grade("b", False, cost=0.0))
+    error.grade.outcome = Outcome.ERROR
+    s = summarize(OPUS, scored, [error])
+    assert s.mean_cost == pytest.approx(0.10)
+    assert s.cost_per_pass == pytest.approx(0.10)
+    expensive_error = error.model_copy(deep=True)
+    expensive_error.grade.cost_usd = 0.30
+    assert summarize(OPUS, scored, [expensive_error]).cost_per_pass == pytest.approx(0.40)
+
+
+def test_read_sweep_drops_retried_errors_and_survives_a_truncated_line(tmp_path):
+    ok = rows("c", {"s": [True]})[0]
+    (tmp_path / "rows.jsonl").write_text(ok.model_dump_json() + "\n" + '{"config": "c", "sce')
+    stale = ok.model_copy(deep=True)
+    stale.grade.outcome = Outcome.ERROR
+    (tmp_path / "errors.jsonl").write_text(stale.model_dump_json() + "\n")
+    done, errors = read_sweep(tmp_path)
+    assert [r.scenario_id for r in done] == ["s"]
+    assert errors == []
+
+
+def test_duplicate_config_names_are_rejected():
+    with pytest.raises(ValueError, match="duplicate"):
+        SweepSpec(name="x", configs=[OPUS, OPUS])
+
+
+async def test_an_exception_in_one_run_does_not_stop_the_sweep(two_scenarios, tmp_path):
+    spec = SweepSpec(
+        name="t", repeats=1, scenarios=str(two_scenarios),
+        configs=[SweepConfig(name="baseline", provider="heuristic"),
+                 SweepConfig(name="boom", provider="heuristic")],
+    )  # fmt: skip
+
+    def engine(config):
+        if config.name == "boom":
+            raise RuntimeError("engine failed to start")
+        return HeuristicProvider()
+
+    counts = await run_sweep(spec, tmp_path / "o", make_engine=engine)
+    assert counts == {"ran": 2, "skipped": 0, "crashed": 2}
+    assert len(read_sweep(tmp_path / "o")[0]) == 2

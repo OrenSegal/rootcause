@@ -9,6 +9,7 @@ Delivery semantics, stated plainly:
 """
 
 import asyncio
+import re
 import time
 from collections.abc import Mapping
 from dataclasses import dataclass, field
@@ -61,6 +62,10 @@ UNGROUNDED = (
     "Evidence ids not returned by any tool in this run: {ids}. "
     "Cite only ids that appear in tool results, then resubmit."
 )
+
+
+def _mentions(text: str, token: str) -> bool:
+    return re.search(rf"(?<![\w:-]){re.escape(token)}(?![\w:-])", text) is not None
 
 
 def tool_result(tool_use_id: str, text: str, is_error: bool = False) -> Block:
@@ -190,10 +195,11 @@ class ToolExecutor:
             call.ms = round((time.perf_counter() - started) * 1000, 1)
 
     def unseen_evidence(self, answer: BaseModel) -> list[str]:
-        """Cited ids that no tool returned. Tools return JSON, so an id the agent saw
-        appears as a quoted string in some result."""
+        """Cited ids that appear in no tool result as a whole token: an id is seen when
+        it is a JSON value or mentioned inside one (a deploy named in a log message),
+        but not when it is only a prefix of a longer id."""
         cited: list[str] = getattr(answer, "evidence", None) or []
-        return [e for e in cited if not any(f'"{e}"' in text for text in self.seen)]
+        return [e for e in cited if not any(_mentions(text, e) for text in self.seen)]
 
     def _finish(self, run_id: str, call: ToolCall, result: Block) -> Execution:
         call.is_error = call.is_error or bool(result["is_error"])

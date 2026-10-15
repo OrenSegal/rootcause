@@ -25,6 +25,7 @@ How the stream maps onto `RunResult`:
 
 import asyncio
 import json
+import os
 import shutil
 import sys
 import tempfile
@@ -62,6 +63,9 @@ ANSWER_TOOL = "StructuredOutput"
 SPAWN_ERROR = "rootcause_spawn_error"
 AGENT = "claude-code"
 TIMEOUT_S = 900
+# The telemetry server builds its search index at startup; with embeddings on a busy
+# machine that can outlast Claude Code's default MCP startup wait.
+SPAWN_ENV = {"MCP_TIMEOUT": "120000"}
 
 
 def prompt(*, retrieval: bool = False) -> str:
@@ -166,6 +170,10 @@ def parse_stream(
         kind = e.get("type")
         if kind == SPAWN_ERROR:
             problems.append(e["message"])
+        elif kind == "system" and e.get("subtype") == "init":
+            servers = {s.get("name"): s.get("status") for s in e.get("mcp_servers") or []}
+            if servers.get(SERVER) != "connected":
+                problems.append(f"{SERVER} server failed to start ({servers.get(SERVER)})")
         elif kind == "assistant":
             msg = e["message"]
             if msg["id"] not in turns:
@@ -217,10 +225,9 @@ def parse_stream(
         else:
             outcome = OUTCOMES.get(subtype, Outcome.ERROR)
     if problems:
-        if outcome is Outcome.ANSWERED:
-            note = "; ".join(problems)
-        else:
-            outcome, note = Outcome.ERROR, "; ".join([*problems, note])
+        # Any of these means the run did not measure the model with its tools, even if it
+        # produced an answer, so the answer is not graded.
+        outcome, note = Outcome.ERROR, "; ".join([*problems, note])
     return RunResult[Diagnosis](
         run_id=run_id,
         agent=AGENT,
@@ -252,6 +259,7 @@ async def spawn_claude(cmd: list[str], cwd: Path) -> list[str]:
         proc = await asyncio.create_subprocess_exec(
             *cmd,
             cwd=cwd,
+            env={**os.environ, **SPAWN_ENV},
             stdin=asyncio.subprocess.DEVNULL,
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.PIPE,

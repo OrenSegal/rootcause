@@ -1,0 +1,35 @@
+name: triage
+
+# Runs when the ci workflow fails and writes a root-cause diagnosis to the job summary.
+# It checks out the default branch, never the code under test, and only reads: logs and
+# commits through a read-only token. The heuristic needs no key; with an API key in a
+# secret, switch to --provider anthropic.
+on:
+  workflow_run:
+    workflows: [ci]
+    types: [completed]
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  triage:
+    if: github.event.workflow_run.conclusion == 'failure'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884 # v10.3.0
+        with:
+          python-version: "3.14"
+          version: "0.13.1"
+          enable-cache: true
+      - run: uv sync --locked
+      - name: ci-triage
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+        run: |
+          uv run rootcause ci-triage --repo "$GITHUB_REPOSITORY" --run "$RUN_ID" \
+            --provider heuristic --comment-md triage.md --runlog triage.sqlite || true
+          cat triage.md >> "$GITHUB_STEP_SUMMARY"
