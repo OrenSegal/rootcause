@@ -47,6 +47,7 @@ class SweepConfig(BaseModel):
     mode: Literal["single", "multi"] = "single"
     retrieval: Retrieval = Retrieval.NONE
     budget_usd: float = 1.0
+    brief: str | None = None  # path to a file replacing the investigator's instructions
 
     @property
     def checks_served_model(self) -> bool:
