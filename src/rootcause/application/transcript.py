@@ -39,6 +39,18 @@ class Transcript:
             return []
         return [b for b in self.messages[-1]["content"] if b.get("type") == "tool_use"]
 
+    def tool_result_texts(self) -> list[str]:
+        """Successful tool results so far, for the grounding check on a resumed run."""
+        return [
+            b["content"]
+            for m in self.messages
+            if m["role"] == "user" and isinstance(m["content"], list)
+            for b in m["content"]
+            if b.get("type") == "tool_result"
+            and not b.get("is_error")
+            and isinstance(b.get("content"), str)
+        ]
+
     @classmethod
     def from_events(cls, events: list[Event]) -> Transcript:
         transcript: Transcript | None = None
