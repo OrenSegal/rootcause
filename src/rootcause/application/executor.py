@@ -180,7 +180,7 @@ class ToolExecutor:
             for attempt in range(1, attempts + 1):
                 call.attempts = attempt
                 try:
-                    async with asyncio.timeout(self.settings.timeout_s):
+                    async with asyncio.timeout(getattr(tool, "timeout_s", self.settings.timeout_s)):
                         return await tool.invoke(args)
                 except Exception as e:  # timeouts, transport and protocol errors
                     if attempt == attempts:

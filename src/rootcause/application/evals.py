@@ -39,6 +39,7 @@ class Grade(BaseModel):
     usage: TokenUsage = TokenUsage()
     models: list[str] = []
     tools_used: list[str] = []  # distinct tools called, in first-call order
+    note: str = ""  # why a run ended in an error, when it did
 
     @computed_field
     @property
@@ -100,7 +101,18 @@ def grade(
         usage=result.usage,
         models=result.models,
         tools_used=list(dict.fromkeys(c.name for c in result.tool_calls)),
+        note=result.note if result.outcome is Outcome.ERROR else "",
     )
+
+
+def crash_grade(scenario_id: str, provider: str, mode: str, note: str) -> Grade:
+    """A run that raised before producing a result: recorded as a harness error."""
+    return Grade(
+        scenario_id=scenario_id, provider=provider, mode=mode, outcome=Outcome.ERROR,
+        category_ok=False, service_ok=False, evidence_valid=False, evidence_hit=False,
+        invented_evidence=[], unapproved_actions=0, steps=0, tool_calls=0, cost_usd=0.0,
+        wall_ms=0.0, note=note,
+    )  # fmt: skip
 
 
 class SuiteReport(BaseModel):
