@@ -12,6 +12,9 @@ from mcp.server.mcpserver.exceptions import ToolError
 from mcp.types import ToolAnnotations
 from pydantic import BaseModel
 
+from rootcause.application.investigator import SEARCH_POSTMORTEMS
+from rootcause.application.ports import Retriever
+from rootcause.domain.postmortems import Hit
 from rootcause.domain.store import TelemetryStore
 from rootcause.domain.telemetry import (
     ConfigChange,
@@ -35,7 +38,7 @@ class RollbackResult(BaseModel):
     already_rolled_back: bool
 
 
-def build_telemetry_server(store: TelemetryStore) -> MCPServer:
+def build_telemetry_server(store: TelemetryStore, retriever: Retriever | None = None) -> MCPServer:
     mcp = MCPServer("rootcause-telemetry")
 
     def require_deploy(deploy_id: str) -> None:
@@ -100,5 +103,14 @@ def build_telemetry_server(store: TelemetryStore) -> MCPServer:
         return RollbackResult(
             action_id=action_id, deploy_id=deploy_id, already_rolled_back=not created
         )
+
+    if retriever is not None:
+
+        @mcp.tool(name=SEARCH_POSTMORTEMS, annotations=READ_ONLY)
+        def search_postmortems(query: str, k: int = 3) -> list[Hit]:
+            """Search past incident postmortems by description. Returns the closest
+            write-ups with their root cause and fix. They describe earlier incidents,
+            not this one, so cite telemetry ids as evidence, not postmortem ids."""
+            return retriever.search(query, min(k, 10))
 
     return mcp

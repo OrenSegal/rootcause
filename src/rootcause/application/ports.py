@@ -5,10 +5,13 @@ SDK's `BetaMessage` data type (see docs/AUDIT.md, "Deliberate exceptions").
 """
 
 from collections.abc import Mapping
+from contextlib import AbstractContextManager
 from dataclasses import dataclass
 from typing import Any, Protocol
 
 from anthropic.types.beta import BetaMessage
+
+from rootcause.domain.postmortems import Hit
 
 Block = dict[str, Any]
 Message = dict[str, Any]
@@ -89,3 +92,26 @@ class EventLog(Protocol):
     def run_info(self, run_id: str) -> RunInfo: ...
 
     def children(self, run_id: str) -> list[RunInfo]: ...
+
+
+class Retriever(Protocol):
+    """Searches past postmortems. Implementations range from a keyword index to
+    embedding models, so `name` says which one produced a result."""
+
+    name: str
+
+    def search(self, query: str, k: int) -> list[Hit]: ...
+
+
+class Span(Protocol):
+    def set(self, key: str, value: str | int | float | bool) -> None: ...
+    def fail(self, message: str) -> None: ...
+
+
+class Tracer(Protocol):
+    """Opens a span that is current for the body of the `with` block, so spans opened
+    inside it, including the Anthropic SDK's own request spans, become its children."""
+
+    def span(
+        self, name: str, **attributes: str | int | float | bool
+    ) -> AbstractContextManager[Span]: ...

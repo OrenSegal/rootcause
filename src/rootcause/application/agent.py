@@ -14,10 +14,10 @@ import asyncio
 import time
 from collections.abc import Sequence
 from contextvars import ContextVar
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Any
 
-from anthropic.types.beta import BetaMessage
+from anthropic.types.beta import BetaMessage, BetaUsage
 from pydantic import BaseModel
 
 from rootcause.application.budget import Budget, BudgetExceededError
@@ -34,8 +34,17 @@ from rootcause.application.ports import (
     LLMProvider,
     Tool,
     ToolTraits,
+    Tracer,
 )
 from rootcause.application.terminal import TerminalTool
+from rootcause.application.tracing import (
+    AGENT,
+    OPERATION,
+    REQUEST_MODEL,
+    RESPONSE_MODEL,
+    NullTracer,
+    usage_attributes,
+)
 from rootcause.application.transcript import (
     ASSISTANT,
     OUTCOME,
@@ -62,6 +71,8 @@ class AgentSpec[A: BaseModel]:
     allowed_tools: frozenset[str] | None = None  # None: every tool the gateway offers
     allow_gated: bool = False
     max_steps: int = 15
+    # Reject an answer citing evidence ids that no tool returned in this run.
+    require_grounded_evidence: bool = True
 
     def select[T: ToolTraits](self, tools: Sequence[T]) -> list[T]:
         """The tools this agent may see, in a stable order (a changing order breaks caching)."""
@@ -71,6 +82,27 @@ class AgentSpec[A: BaseModel]:
             if (self.allowed_tools is None or t.name in self.allowed_tools)
             and (self.allow_gated or t.read_only)
         ]
+
+
+class TokenUsage(BaseModel):
+    """Token counts as the API reports them. `input_tokens` excludes cache reads
+    and writes, as in the Messages API `usage` block."""
+
+    input_tokens: int = 0
+    output_tokens: int = 0
+    cache_read_tokens: int = 0
+    cache_write_tokens: int = 0
+
+    def __add__(self, other: TokenUsage) -> TokenUsage:
+        return TokenUsage(
+            **{k: getattr(self, k) + getattr(other, k) for k in TokenUsage.model_fields}
+        )
+
+    def add(self, usage: BetaUsage) -> None:
+        self.input_tokens += usage.input_tokens or 0
+        self.output_tokens += usage.output_tokens or 0
+        self.cache_read_tokens += usage.cache_read_input_tokens or 0
+        self.cache_write_tokens += usage.cache_creation_input_tokens or 0
 
 
 class RunResult[A: BaseModel](BaseModel):
@@ -83,6 +115,8 @@ class RunResult[A: BaseModel](BaseModel):
     cost_usd: float
     wall_ms: float
     note: str = ""
+    usage: TokenUsage = TokenUsage()
+    models: list[str] = []  # every model that served a turn, in first-seen order
 
 
 @dataclass
@@ -94,6 +128,13 @@ class _Run:
     transcript: Transcript
     calls: list[ToolCall]
     started: float
+    usage: TokenUsage = field(default_factory=TokenUsage)
+    models: list[str] = field(default_factory=list)
+
+    def record(self, model: str, usage: BetaUsage) -> None:
+        self.usage.add(usage)
+        if model not in self.models:
+            self.models.append(model)
 
 
 class AgentLoop:
@@ -105,12 +146,14 @@ class AgentLoop:
         budget: Budget,
         approval: ApprovalPolicy,
         settings: ExecSettings | None = None,
+        tracer: Tracer | None = None,
     ) -> None:
         self.provider = provider
         self.events = events
         self.budget = budget
         self.approval = approval
         self.settings = settings or ExecSettings()
+        self.tracer: Tracer = tracer or NullTracer()
 
     async def run[A: BaseModel](
         self,
@@ -144,7 +187,9 @@ class AgentLoop:
         run = self._prepare(run_id, spec, spec.select(tools), transcript)
         recovery = Recovery()
         for e in events:
-            if e.kind == TOOL_CALL:
+            if e.kind == ASSISTANT and "usage" in e.payload:
+                run.record(e.payload["model"], BetaUsage.model_validate(e.payload["usage"]))
+            elif e.kind == TOOL_CALL:
                 run.calls.append(ToolCall.model_validate(e.payload["call"]))
                 recovery.results[e.payload["call"]["tool_use_id"]] = e.payload["result"]
             elif e.kind == TOOL_INTENT:
@@ -161,13 +206,28 @@ class AgentLoop:
             approval=self.approval,
             events=self.events,
             settings=self.settings,
+            seen=transcript.tool_result_texts(),
+            grounded=spec.require_grounded_evidence,
+            tracer=self.tracer,
         )
         return _Run(run_id, spec, executor, tools, transcript, [], time.perf_counter())
 
     async def _drive(self, run: _Run, recovery: Recovery) -> RunResult[Any]:
         token = CURRENT_RUN.set(run.run_id)
+        attributes = {
+            OPERATION: "invoke_agent",
+            AGENT: run.spec.name,
+            "rootcause.run_id": run.run_id,
+        }
         try:
-            return await self._turns(run, recovery)
+            with self.tracer.span(f"invoke_agent {run.spec.name}", **attributes) as span:
+                result = await self._turns(run, recovery)
+                span.set("rootcause.outcome", result.outcome.value)
+                span.set("rootcause.steps", result.steps)
+                span.set("rootcause.cost_usd", result.cost_usd)
+                if result.outcome is Outcome.ERROR:
+                    span.fail(result.note)
+                return result
         finally:
             CURRENT_RUN.reset(token)
 
@@ -182,16 +242,25 @@ class AgentLoop:
                 return done
 
         while transcript.steps < spec.max_steps:
+            model = getattr(self.provider, "model", self.provider.name)
             try:
                 self.budget.check()
-                response = await self.provider.complete(
-                    system=system, messages=transcript.messages, tools=definitions
-                )
+                with self.tracer.span(
+                    f"chat {model}", **{OPERATION: "chat", REQUEST_MODEL: model}
+                ) as span:
+                    response = await self.provider.complete(
+                        system=system, messages=transcript.messages, tools=definitions
+                    )
+                    span.set(RESPONSE_MODEL, response.model)
+                    span.set("gen_ai.response.finish_reasons", str(response.stop_reason))
+                    for key, value in usage_attributes(response.usage).items():
+                        span.set(key, value)
             except BudgetExceededError as e:
                 return self._finish(run, Outcome.BUDGET_EXCEEDED, note=str(e))
 
             content = [b.model_dump(mode="json", exclude_none=True) for b in response.content]
             cost = self.budget.record(response.model, response.usage)
+            run.record(response.model, response.usage)
             self.events.append(
                 run.run_id,
                 ASSISTANT,
@@ -200,6 +269,7 @@ class AgentLoop:
                     "model": response.model,
                     "stop_reason": response.stop_reason,
                     "cost_usd": cost,
+                    "usage": response.usage.model_dump(mode="json"),
                 },
             )
             transcript.add_assistant(content)
@@ -262,6 +332,8 @@ class AgentLoop:
             cost_usd=round(run.transcript.spent_usd, 6),
             wall_ms=round((time.perf_counter() - run.started) * 1000, 1),
             note=note,
+            usage=run.usage,
+            models=run.models,
         )
         self.events.append(run.run_id, OUTCOME, result.model_dump(mode="json"))
         return result
