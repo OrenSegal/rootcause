@@ -4,6 +4,7 @@ Interfaces (CLI, MCP server) call these functions and never construct adapters
 themselves, so each wiring decision is made in one place.
 """
 
+import asyncio
 from collections.abc import Callable
 from enum import StrEnum
 from pathlib import Path
@@ -20,6 +21,9 @@ from rootcause.adapters.fixtures import (
     load_scenario,
     write_case,
 )
+from rootcause.adapters.fixtures import (
+    load_sweep_spec as load_sweep_spec,  # re-exported: the CLI may not import adapters
+)
 from rootcause.adapters.github_actions import GhCli, RawRun, case_from_raw
 from rootcause.adapters.mcp_telemetry import build_telemetry_server
 from rootcause.adapters.mcp_tools import mcp_tools
@@ -31,6 +35,16 @@ from rootcause.application.evals import Grade, SuiteReport, grade
 from rootcause.application.investigator import investigator_spec
 from rootcause.application.orchestrator import DispatchWorkers, orchestrator_spec
 from rootcause.application.ports import EventLog, LLMProvider
+from rootcause.application.sweep import (
+    ConfigSummary,
+    Row,
+    SweepConfig,
+    SweepSpec,
+    frontier,
+    is_error,
+    report_markdown,
+    summarize,
+)
 from rootcause.application.transcript import TOOL_CALL
 from rootcause.domain.answers import Diagnosis
 from rootcause.domain.scenario import Case, Scenario
@@ -240,3 +254,111 @@ def fetch_ci_case(repo: str, run_id: int, record_to: Path | None = None) -> Case
         raw.save(out / "raw")
         write_case(case, out)
     return case
+
+
+ROWS, ERRORS, SPEC = "rows.jsonl", "errors.jsonl", "spec.json"
+EngineFactory = Callable[[SweepConfig], Engine]
+
+
+def sweep_engine(config: SweepConfig) -> Engine:
+    """Validates the names in a sweep file against the ones this build knows."""
+    return provider_factory(
+        ProviderName(config.provider), config.model, EffortLevel(config.effort)
+    )()
+
+
+def read_sweep(out: Path) -> tuple[list[Row], list[Row]]:
+    def load(name: str) -> list[Row]:
+        path = out / name
+        if not path.exists():
+            return []
+        return [Row.model_validate_json(line) for line in path.read_text().splitlines() if line]
+
+    return load(ROWS), load(ERRORS)
+
+
+def _start_sweep(spec: SweepSpec, out: Path) -> set[tuple[str, str, int]]:
+    out.mkdir(parents=True, exist_ok=True)
+    (out / SPEC).write_text(spec.model_dump_json(indent=2))
+    return {(r.config, r.scenario_id, r.rep) for r in read_sweep(out)[0]}
+
+
+def _append(path: Path, line: str) -> None:
+    with path.open("a") as f:
+        f.write(line + "\n")
+
+
+async def run_sweep(
+    spec: SweepSpec,
+    out: Path,
+    *,
+    make_engine: EngineFactory = sweep_engine,
+    concurrency: int = 1,
+) -> dict[str, int]:
+    """Every (repeat, scenario, config) not already in rows.jsonl. Configs are interleaved
+    within each scenario and repeat, so rate limits or time of day don't fall on one
+    config. Errors go to errors.jsonl and are retried by the next call."""
+    done = _start_sweep(spec, out)
+    events = open_events(out / "runs.sqlite")
+    paths = discover(Path(spec.scenarios))
+    by_name = {c.name: c for c in spec.configs}
+    todo = [
+        (rep, path, config)
+        for rep in range(spec.repeats)
+        for path in paths
+        for config in spec.configs
+    ]
+    gate, write = asyncio.Semaphore(concurrency), asyncio.Lock()
+    counts = {"ran": 0, "skipped": 0}
+
+    async def one(rep: int, path: Path, config: SweepConfig) -> None:
+        case = load_case(path)
+        if (config.name, case.scenario.id, rep) in done:
+            counts["skipped"] += 1
+            return
+        async with gate:
+            run = await investigate(
+                case,
+                make_engine(config),
+                events=events,
+                budget_usd=config.budget_usd,
+                mode=Mode(config.mode),
+            )
+        row = Row(config=config.name, scenario_id=case.scenario.id, rep=rep, grade=run.grade)
+        target = out / (ERRORS if is_error(by_name[row.config], row) else ROWS)
+        async with write:
+            await asyncio.to_thread(_append, target, row.model_dump_json())
+            counts["ran"] += 1
+
+    await asyncio.gather(*(one(*t) for t in todo))
+    return counts
+
+
+def summarize_sweep(out: Path) -> tuple[SweepSpec, list[ConfigSummary], list[Row]]:
+    spec = SweepSpec.model_validate_json((out / SPEC).read_text())
+    rows, errors = read_sweep(out)
+    summaries = [
+        summarize(
+            c,
+            [r for r in rows if r.config == c.name],
+            [r for r in errors if r.config == c.name],
+        )
+        for c in spec.configs
+    ]
+    return spec, frontier(summaries), rows
+
+
+def plan_sweep(spec: SweepSpec, out: Path) -> tuple[int, int]:
+    """(runs planned, runs already done) without starting anything."""
+    total = spec.repeats * len(discover(Path(spec.scenarios))) * len(spec.configs)
+    return total, len(read_sweep(out)[0])
+
+
+def write_sweep_report(out: Path) -> str:
+    spec, summaries, rows = summarize_sweep(out)
+    md = report_markdown(spec, summaries, rows)
+    (out / "report.md").write_text(md)
+    (out / "summary.json").write_text(
+        "[" + ",\n".join(s.model_dump_json() for s in summaries) + "]\n"
+    )
+    return md
