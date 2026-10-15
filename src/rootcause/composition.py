@@ -5,15 +5,19 @@ themselves, so each wiring decision is made in one place.
 """
 
 import asyncio
+import time
 from collections.abc import Callable
 from enum import StrEnum
+from functools import cache
 from pathlib import Path
+from typing import Literal
 
 from mcp.server import MCPServer
 from pydantic import BaseModel
 
 from rootcause.adapters import anthropic_provider, heuristic
 from rootcause.adapters.claude_code import ClaudeCodeHarness
+from rootcause.adapters.corpus import load_corpus, load_qrels
 from rootcause.adapters.fixtures import (
     SCENARIO_FILE,
     discover,
@@ -34,9 +38,11 @@ from rootcause.application.budget import Budget
 from rootcause.application.evals import Grade, SuiteReport, grade
 from rootcause.application.investigator import investigator_spec
 from rootcause.application.orchestrator import DispatchWorkers, orchestrator_spec
-from rootcause.application.ports import EventLog, LLMProvider
+from rootcause.application.ports import EventLog, LLMProvider, Retriever
+from rootcause.application.retrieval_eval import RetrievalReport, evaluate
 from rootcause.application.sweep import (
     ConfigSummary,
+    Retrieval,
     Row,
     SweepConfig,
     SweepSpec,
@@ -100,8 +106,34 @@ def find_case(root: Path, scenario_id: str) -> Case | None:
     return load_case(path) if (path / SCENARIO_FILE).exists() else None
 
 
-def telemetry_server(scenario_dir: Path) -> MCPServer:
-    return build_telemetry_server(load_case(scenario_dir).store)
+CORPUS = Path("corpus")
+
+
+@cache
+def make_retriever(mode: Retrieval, corpus: Path = CORPUS) -> Retriever | None:
+    """One index per mode and process: dense modes load a model and embed the corpus."""
+    if mode == "none":
+        return None
+    from rootcause.adapters import retrieval  # embedders import their extras lazily
+
+    docs = load_corpus(corpus)
+    keyword = retrieval.BM25Retriever(docs)
+    match mode:
+        case "bm25":
+            return keyword
+        case "static":
+            return retrieval.DenseRetriever(docs, retrieval.StaticEmbedder())
+        case "dense":
+            return retrieval.DenseRetriever(docs, retrieval.TransformerEmbedder())
+        case "hybrid":
+            dense = retrieval.DenseRetriever(docs, retrieval.TransformerEmbedder())
+            return retrieval.HybridRetriever(keyword, dense)
+
+
+def telemetry_server(
+    scenario_dir: Path, retrieval: Retrieval = Retrieval.NONE, corpus: Path = CORPUS
+) -> MCPServer:
+    return build_telemetry_server(load_case(scenario_dir).store, make_retriever(retrieval, corpus))
 
 
 class Investigation(BaseModel):
@@ -141,11 +173,14 @@ def _loop(provider: LLMProvider, events: EventLog, budget_usd: float, approve: b
     )
 
 
-async def _investigate(case: Case, loop: AgentLoop, mode: Mode) -> RunResult[Diagnosis]:
+async def _investigate(
+    case: Case, loop: AgentLoop, mode: Mode, retrieval: Retrieval = Retrieval.NONE
+) -> RunResult[Diagnosis]:
     if not supports(loop.provider.name, mode):
         raise ValueError(UNSUPPORTED.format(provider=loop.provider.name))
     scenario = case.scenario
-    async with mcp_tools(build_telemetry_server(case.store)) as tools:
+    server = build_telemetry_server(case.store, make_retriever(retrieval))
+    async with mcp_tools(server) as tools:
         if mode is Mode.SINGLE:
             spec, agent_tools = investigator_spec(), list(tools)
         else:
@@ -155,13 +190,27 @@ async def _investigate(case: Case, loop: AgentLoop, mode: Mode) -> RunResult[Dia
 
 
 async def _run(
-    case: Case, engine: Engine, events: EventLog, budget_usd: float, mode: Mode, approve: bool
+    case: Case,
+    engine: Engine,
+    events: EventLog,
+    budget_usd: float,
+    mode: Mode,
+    approve: bool,
+    retrieval: Retrieval = Retrieval.NONE,
 ) -> RunResult[Diagnosis]:
     if isinstance(engine, ClaudeCodeHarness):
         if not supports(engine.name, mode):
             raise ValueError(UNSUPPORTED.format(provider=engine.name))
-        return await engine.investigate(case, events=events, approve=approve, budget_usd=budget_usd)
-    return await _investigate(case, _loop(engine, events, budget_usd, approve), mode)
+        return await engine.investigate(
+            case,
+            events=events,
+            approve=approve,
+            budget_usd=budget_usd,
+            retrieval=retrieval,
+            corpus=CORPUS,
+        )
+    loop = _loop(engine, events, budget_usd, approve)
+    return await _investigate(case, loop, mode, retrieval)
 
 
 async def investigate(
@@ -172,9 +221,10 @@ async def investigate(
     budget_usd: float,
     mode: Mode = Mode.SINGLE,
     approve: bool | None = None,
+    retrieval: Retrieval = Retrieval.NONE,
 ) -> Investigation:
     allow = case.scenario.approval == "approve" if approve is None else approve
-    result = await _run(case, provider, events, budget_usd, mode, allow)
+    result = await _run(case, provider, events, budget_usd, mode, allow, retrieval)
     graded = grade(
         case,
         result,
@@ -323,6 +373,7 @@ async def run_sweep(
                 events=events,
                 budget_usd=config.budget_usd,
                 mode=Mode(config.mode),
+                retrieval=config.retrieval,
             )
         row = Row(config=config.name, scenario_id=case.scenario.id, rep=rep, grade=run.grade)
         target = out / (ERRORS if is_error(by_name[row.config], row) else ROWS)
@@ -362,3 +413,33 @@ def write_sweep_report(out: Path) -> str:
         "[" + ",\n".join(s.model_dump_json() for s in summaries) + "]\n"
     )
     return md
+
+
+QueryKind = Literal["alert", "alert+log"]
+
+
+def retrieval_queries(scenarios: Path, kind: QueryKind) -> dict[str, str]:
+    """What an investigator could search with: the alert alone, or the alert plus the
+    first error line from the paging service (one look at the logs)."""
+    queries = {}
+    for path in discover(scenarios):
+        case = load_case(path)
+        alert = case.scenario.alert
+        text = f"{alert.service}: {alert.summary}"
+        if kind == "alert+log":
+            errors = case.store.query_logs(alert.service, "error", None, None, None, 1)
+            text += " " + (errors[0].message if errors else "")
+        queries[case.scenario.id] = text
+    return queries
+
+
+def retrieval_eval(
+    mode: Retrieval, scenarios: Path, corpus: Path = CORPUS, query: QueryKind = "alert"
+) -> RetrievalReport:
+    started = time.perf_counter()
+    retriever = make_retriever(mode, corpus)
+    index_ms = (time.perf_counter() - started) * 1000
+    if retriever is None:
+        raise ValueError("retrieval mode 'none' has nothing to evaluate")
+    qrels = load_qrels(corpus)
+    return evaluate(retriever, retrieval_queries(scenarios, query), qrels, index_ms=index_ms)

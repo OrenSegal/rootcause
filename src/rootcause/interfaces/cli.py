@@ -9,9 +9,12 @@ import typer
 
 from rootcause.application.evals import comparison_markdown
 from rootcause.composition import (
+    CORPUS,
     EffortLevel,
     Mode,
     ProviderName,
+    QueryKind,
+    Retrieval,
     compare,
     fetch_ci_case,
     investigate,
@@ -21,6 +24,7 @@ from rootcause.composition import (
     open_events,
     plan_sweep,
     provider_factory,
+    retrieval_eval,
     run_suite,
     run_sweep,
     telemetry_server,
@@ -52,6 +56,11 @@ Effort = Annotated[
 BudgetUsd = Annotated[float, typer.Option(help="Hard cap in USD per investigation.")]
 EventsPath = Annotated[Path, typer.Option("--runlog", help="SQLite event log path.")]
 ScenariosDir = Annotated[Path, typer.Argument(help="Directory of scenario directories.")]
+RetrievalOpt = Annotated[
+    Retrieval,
+    typer.Option(help="Postmortem search for the investigator. Dense modes need the rag extra."),
+]
+CorpusOpt = Annotated[Path, typer.Option(help="Postmortem corpus directory.")]
 ModeOpt = Annotated[Mode, typer.Option(help="single agent, or multi (orchestrator plus workers).")]
 
 DEFAULT_RUNLOG = Path(".rootcause/runs.sqlite")
@@ -266,7 +275,37 @@ def mcp_cmd(
 @app.command("telemetry-mcp")
 def telemetry_mcp_cmd(
     scenario: Annotated[Path, typer.Argument(help="Scenario directory.")],
+    retrieval: RetrievalOpt = Retrieval.NONE,
+    corpus: CorpusOpt = CORPUS,
 ) -> None:
     """Serve one scenario's raw telemetry tools over MCP (stdio), so any agent,
     Claude Code included, can investigate it directly."""
-    telemetry_server(scenario).run()
+    telemetry_server(scenario, retrieval, corpus).run()
+
+
+@app.command("retrieval-eval")
+def retrieval_eval_cmd(
+    retrieval: Annotated[
+        list[Retrieval] | None, typer.Option(help="Repeat for several. Default: bm25.")
+    ] = None,
+    scenarios: ScenariosDir = Path("scenarios"),
+    corpus: CorpusOpt = CORPUS,
+    query: Annotated[
+        QueryKind, typer.Option(help="alert, or alert plus the first error log line.")
+    ] = "alert",
+) -> None:
+    """Score postmortem search on its own: recall@k, MRR and nDCG@5 against the labels
+    in corpus/qrels.yaml, with index time and per-query latency."""
+    lines = [
+        "| retriever | queries | recall@1 | recall@3 | recall@5 | MRR | nDCG@5 "
+        "| index | p50 / p90 query | misses at 5 |",
+        "|---|---|---|---|---|---|---|---|---|---|",
+    ]
+    for mode in retrieval or [Retrieval.BM25]:
+        r = retrieval_eval(mode, scenarios, corpus, query)
+        lines.append(
+            f"| {r.retriever} | {r.queries} | {r.recall_at_1:.2f} | {r.recall_at_3:.2f} "
+            f"| {r.recall_at_5:.2f} | {r.mrr:.2f} | {r.ndcg_at_5:.2f} | {r.index_ms:.0f} ms "
+            f"| {r.p50_query_ms:.1f} / {r.p90_query_ms:.1f} ms | {len(r.misses)} |"
+        )
+    typer.echo("\n".join(lines))
