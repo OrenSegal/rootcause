@@ -24,6 +24,7 @@ from rootcause.domain.answers import Diagnosis, Findings
 
 SUBMIT_FINDINGS = TerminalTool("submit_findings", Findings)
 MAX_WORKERS = 3
+DISPATCH = "dispatch_workers"
 
 
 class WorkerRole(StrEnum):
@@ -85,11 +86,51 @@ def orchestrator_spec(max_steps: int = 8) -> AgentSpec[Diagnosis]:
     )
 
 
+DISPATCH_DEFINITION: Block = {
+    "name": DISPATCH,
+    "description": (
+        "Send focused questions to worker investigators, who run in parallel and "
+        "return findings with evidence ids. One task per role."
+    ),
+    "strict": True,
+    "input_schema": {
+        "type": "object",
+        "additionalProperties": False,
+        "required": ["tasks"],
+        "properties": {
+            "tasks": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "additionalProperties": False,
+                    "required": ["role", "question"],
+                    "properties": {
+                        "role": {"type": "string", "enum": [r.value for r in WorkerRole]},
+                        "question": {"type": "string"},
+                    },
+                },
+            }
+        },
+    },
+}
+
+
+def parse_tasks(args: dict[str, Any]) -> list[tuple[WorkerRole, str]] | str:
+    """The (role, question) pairs of a dispatch, or an error message the model can act on."""
+    try:
+        tasks = [(WorkerRole(t["role"]), str(t["question"])) for t in args["tasks"]]
+    except (KeyError, TypeError, ValueError) as e:
+        return f"Invalid tasks: {e}"
+    if not tasks or len(tasks) > MAX_WORKERS:
+        return f"Send between 1 and {MAX_WORKERS} tasks."
+    return tasks
+
+
 class DispatchWorkers:
     """A local tool: runs worker agents concurrently on the same loop, so they share
     its provider, event log and budget. Read-only, because workers are."""
 
-    name = "dispatch_workers"
+    name = DISPATCH
     read_only = True
     # Not retried: a retry would start every worker again. And it runs whole agents, so
     # it gets their time, not the few seconds one telemetry call is allowed.
@@ -103,41 +144,12 @@ class DispatchWorkers:
 
     @property
     def definition(self) -> Block:
-        return {
-            "name": self.name,
-            "description": (
-                "Send focused questions to worker investigators, who run in parallel and "
-                "return findings with evidence ids. One task per role."
-            ),
-            "strict": True,
-            "input_schema": {
-                "type": "object",
-                "additionalProperties": False,
-                "required": ["tasks"],
-                "properties": {
-                    "tasks": {
-                        "type": "array",
-                        "items": {
-                            "type": "object",
-                            "additionalProperties": False,
-                            "required": ["role", "question"],
-                            "properties": {
-                                "role": {"type": "string", "enum": [r.value for r in WorkerRole]},
-                                "question": {"type": "string"},
-                            },
-                        },
-                    }
-                },
-            },
-        }
+        return DISPATCH_DEFINITION
 
     async def invoke(self, args: dict[str, Any]) -> ToolResult:
-        try:
-            tasks = [(WorkerRole(t["role"]), str(t["question"])) for t in args["tasks"]]
-        except (KeyError, TypeError, ValueError) as e:
-            return ToolResult(f"Invalid tasks: {e}", is_error=True)
-        if not tasks or len(tasks) > MAX_WORKERS:
-            return ToolResult(f"Send between 1 and {MAX_WORKERS} tasks.", is_error=True)
+        tasks = parse_tasks(args)
+        if isinstance(tasks, str):
+            return ToolResult(tasks, is_error=True)
 
         parent = CURRENT_RUN.get()
         results = await asyncio.gather(

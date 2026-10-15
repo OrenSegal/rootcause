@@ -31,6 +31,7 @@ from rootcause.adapters.fixtures import (
     load_sweep_spec as load_sweep_spec,  # re-exported: the CLI may not import adapters
 )
 from rootcause.adapters.github_actions import GhCli, RawRun, case_from_raw
+from rootcause.adapters.langgraph_engine import LangGraphEngine
 from rootcause.adapters.mcp_telemetry import build_telemetry_server
 from rootcause.adapters.mcp_tools import mcp_tools
 from rootcause.adapters.sqlite_events import SqliteEventLog
@@ -91,6 +92,7 @@ class ProviderName(StrEnum):
     ANTHROPIC = "anthropic"
     CLAUDE_CODE = "claude-code"  # Claude Code runs the loop; single agent only
     CLAUDE_CODE_LOOP = "claude-code-loop"  # the hand-written loop, each turn through Claude Code
+    LANGGRAPH = "langgraph"  # the same investigation on LangGraph, each turn through Claude Code
 
 
 class EffortLevel(StrEnum):
@@ -103,7 +105,7 @@ class EffortLevel(StrEnum):
 
 # What runs an investigation: a model behind the hand-written loop, or a harness
 # that brings its own loop.
-Engine = LLMProvider | ClaudeCodeHarness
+Engine = LLMProvider | ClaudeCodeHarness | LangGraphEngine
 ProviderFactory = Callable[[], Engine]
 
 
@@ -111,6 +113,8 @@ def provider_factory(name: ProviderName, model: str, effort: EffortLevel) -> Pro
     def make() -> Engine:
         if name is ProviderName.HEURISTIC:
             return heuristic.HeuristicProvider()
+        if name is ProviderName.LANGGRAPH:
+            return LangGraphEngine(ClaudeCodeCompletion(model=model, effort=effort.value))
         if name is ProviderName.CLAUDE_CODE_LOOP:
             return ClaudeCodeCompletion(model=model, effort=effort.value)
         if name is ProviderName.CLAUDE_CODE:
@@ -266,6 +270,20 @@ async def _run(
             corpus=CORPUS,
             brief=brief,
         )
+    if isinstance(engine, LangGraphEngine):
+        server = build_telemetry_server(case.store, make_retriever(retrieval))
+        async with mcp_tools(server) as tools:
+            return await engine.investigate(
+                case.scenario.alert.render(),
+                list(tools),
+                scenario_id=case.scenario.id,
+                events=events,
+                budget=Budget(limit_usd=budget_usd, prices=PRICES),
+                approval=StaticApproval(approve),
+                multi=mode is Mode.MULTI,
+                retrieval=retrieval != Retrieval.NONE,
+                brief=brief,
+            )
     loop = _loop(engine, events, budget_usd, approve)
     return await _investigate(case, loop, mode, retrieval, brief)
 
