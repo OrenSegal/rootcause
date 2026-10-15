@@ -1,0 +1,17 @@
+# Recorded from github.com/OrenSegal/sous run 36960431348 (raw/ holds the gh output).
+# Truth set by hand: commit 4870121d6d added tests/gate.test.sh, which fails
+# shellcheck SC2120 at -S warning. Its .github/workflows/ci.yml edit is a decoy.
+id: 008-sous-shellcheck
+title: Add sous gate and sous fleet
+alert:
+  severity: ci
+  service: test-ubuntu-latest
+  summary: 'workflow ci failed on feat/gate-fleet at 4870121d6d: step ''shellcheck'' in job
+    ''test (ubuntu-latest)'' failed.'
+truth:
+  category: bad_code_deploy
+  service: sous
+  required_evidence_any:
+  - 4870121d6d
+  - log-0006
+provenance: recorded

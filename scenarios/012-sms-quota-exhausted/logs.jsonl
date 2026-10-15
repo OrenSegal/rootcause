@@ -1,0 +1,21 @@
+{"id":"log-0002","ts":"2026-10-14T13:00:00Z","service":"signup","level":"info","message":"verification code sent via sms-gateway in 210ms","trace_id":null}
+{"id":"log-0003","ts":"2026-10-14T13:03:00Z","service":"signup","level":"info","message":"verification code sent via sms-gateway in 210ms","trace_id":null}
+{"id":"log-0001","ts":"2026-10-14T13:05:00Z","service":"marketing","level":"info","message":"campaign autumn-push started: email to 1.2M recipients","trace_id":null}
+{"id":"log-0004","ts":"2026-10-14T13:06:00Z","service":"signup","level":"info","message":"verification code sent via sms-gateway in 210ms","trace_id":null}
+{"id":"log-0005","ts":"2026-10-14T13:09:00Z","service":"signup","level":"info","message":"verification code sent via sms-gateway in 210ms","trace_id":null}
+{"id":"log-0006","ts":"2026-10-14T13:12:00Z","service":"signup","level":"info","message":"verification code sent via sms-gateway in 210ms","trace_id":null}
+{"id":"log-0007","ts":"2026-10-14T13:15:00Z","service":"signup","level":"info","message":"verification code sent via sms-gateway in 210ms","trace_id":null}
+{"id":"log-0008","ts":"2026-10-14T13:18:00Z","service":"sms-gateway","level":"error","message":"provider skyline-sms returned 429: daily message quota exceeded (250000/250000)","trace_id":null}
+{"id":"log-0009","ts":"2026-10-14T13:18:18Z","service":"signup","level":"error","message":"send verification code failed: sms-gateway returned 503","trace_id":null}
+{"id":"log-0010","ts":"2026-10-14T13:18:30Z","service":"sms-gateway","level":"error","message":"provider skyline-sms returned 429: daily message quota exceeded (250000/250000)","trace_id":null}
+{"id":"log-0011","ts":"2026-10-14T13:18:48Z","service":"signup","level":"error","message":"send verification code failed: sms-gateway returned 503","trace_id":null}
+{"id":"log-0012","ts":"2026-10-14T13:19:00Z","service":"sms-gateway","level":"error","message":"provider skyline-sms returned 429: daily message quota exceeded (250000/250000)","trace_id":null}
+{"id":"log-0013","ts":"2026-10-14T13:19:18Z","service":"signup","level":"error","message":"send verification code failed: sms-gateway returned 503","trace_id":null}
+{"id":"log-0014","ts":"2026-10-14T13:21:00Z","service":"sms-gateway","level":"error","message":"provider skyline-sms returned 429: daily message quota exceeded (250000/250000)","trace_id":null}
+{"id":"log-0015","ts":"2026-10-14T13:21:18Z","service":"signup","level":"error","message":"send verification code failed: sms-gateway returned 503","trace_id":null}
+{"id":"log-0016","ts":"2026-10-14T13:24:00Z","service":"sms-gateway","level":"error","message":"provider skyline-sms returned 429: daily message quota exceeded (250000/250000)","trace_id":null}
+{"id":"log-0017","ts":"2026-10-14T13:24:18Z","service":"signup","level":"error","message":"send verification code failed: sms-gateway returned 503","trace_id":null}
+{"id":"log-0018","ts":"2026-10-14T13:28:00Z","service":"sms-gateway","level":"error","message":"provider skyline-sms returned 429: daily message quota exceeded (250000/250000)","trace_id":null}
+{"id":"log-0019","ts":"2026-10-14T13:28:18Z","service":"signup","level":"error","message":"send verification code failed: sms-gateway returned 503","trace_id":null}
+{"id":"log-0020","ts":"2026-10-14T13:33:00Z","service":"sms-gateway","level":"error","message":"provider skyline-sms returned 429: daily message quota exceeded (250000/250000)","trace_id":null}
+{"id":"log-0021","ts":"2026-10-14T13:33:18Z","service":"signup","level":"error","message":"send verification code failed: sms-gateway returned 503","trace_id":null}

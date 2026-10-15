@@ -1,0 +1,11 @@
+id: 011-runtime-flag-flip
+title: Runtime flag flip in pricing, no deploy
+alert:
+  service: checkout
+  summary: 'checkout error rate at 6%: order total mismatch.'
+truth:
+  category: config_change
+  service: pricing
+  required_evidence_any:
+  - log-0011
+  - m-pricing-discount

@@ -1,0 +1,19 @@
+{"id":"log-0001","ts":"2026-10-14T13:00:00Z","service":"orders","level":"info","message":"order written in 12ms","trace_id":null}
+{"id":"log-0002","ts":"2026-10-14T13:04:00Z","service":"orders","level":"info","message":"order written in 12ms","trace_id":null}
+{"id":"log-0003","ts":"2026-10-14T13:08:00Z","service":"orders","level":"info","message":"order written in 12ms","trace_id":null}
+{"id":"log-0004","ts":"2026-10-14T13:12:00Z","service":"orders","level":"info","message":"order written in 12ms","trace_id":null}
+{"id":"log-0005","ts":"2026-10-14T13:16:00Z","service":"orders","level":"info","message":"order written in 12ms","trace_id":null}
+{"id":"log-0006","ts":"2026-10-14T13:20:00Z","service":"orders","level":"info","message":"order written in 12ms","trace_id":null}
+{"id":"log-0007","ts":"2026-10-14T13:21:48Z","service":"postgres","level":"warn","message":"primary pg-1 lost quorum on node ip-10-0-3-17; promoting replica pg-2","trace_id":null}
+{"id":"log-0008","ts":"2026-10-14T13:22:00Z","service":"orders","level":"error","message":"could not connect to server: connection refused (pg-1:5432)","trace_id":null}
+{"id":"log-0009","ts":"2026-10-14T13:22:12Z","service":"checkout","level":"error","message":"order create failed: orders returned 500","trace_id":null}
+{"id":"log-0010","ts":"2026-10-14T13:22:30Z","service":"orders","level":"error","message":"could not connect to server: connection refused (pg-1:5432)","trace_id":null}
+{"id":"log-0011","ts":"2026-10-14T13:22:42Z","service":"checkout","level":"error","message":"order create failed: orders returned 500","trace_id":null}
+{"id":"log-0012","ts":"2026-10-14T13:23:00Z","service":"orders","level":"error","message":"could not connect to server: connection refused (pg-1:5432)","trace_id":null}
+{"id":"log-0013","ts":"2026-10-14T13:23:12Z","service":"checkout","level":"error","message":"order create failed: orders returned 500","trace_id":null}
+{"id":"log-0014","ts":"2026-10-14T13:23:30Z","service":"orders","level":"error","message":"could not connect to server: connection refused (pg-1:5432)","trace_id":null}
+{"id":"log-0015","ts":"2026-10-14T13:23:42Z","service":"checkout","level":"error","message":"order create failed: orders returned 500","trace_id":null}
+{"id":"log-0016","ts":"2026-10-14T13:24:00Z","service":"orders","level":"error","message":"could not connect to server: connection refused (pg-1:5432)","trace_id":null}
+{"id":"log-0017","ts":"2026-10-14T13:24:12Z","service":"checkout","level":"error","message":"order create failed: orders returned 500","trace_id":null}
+{"id":"log-0018","ts":"2026-10-14T13:25:00Z","service":"postgres","level":"info","message":"pg-2 accepting writes as primary","trace_id":null}
+{"id":"log-0019","ts":"2026-10-14T13:25:30Z","service":"orders","level":"info","message":"reconnected to primary pg-2","trace_id":null}

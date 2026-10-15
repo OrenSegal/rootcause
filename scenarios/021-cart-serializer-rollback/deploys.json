@@ -1,0 +1,24 @@
+[
+  {
+    "id": "d-2101",
+    "service": "cart",
+    "version": "5.0.0",
+    "ts": "2026-10-14T13:10:00Z",
+    "author": "kim",
+    "summary": "Switch session codec to msgpack",
+    "config_before": {},
+    "config_after": {},
+    "files": []
+  },
+  {
+    "id": "d-2102",
+    "service": "search",
+    "version": "3.0.3",
+    "ts": "2026-10-14T13:14:00Z",
+    "author": "lee",
+    "summary": "Synonyms for color names",
+    "config_before": {},
+    "config_after": {},
+    "files": []
+  }
+]

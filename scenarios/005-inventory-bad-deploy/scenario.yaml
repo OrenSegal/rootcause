@@ -1,0 +1,12 @@
+id: 005-inventory-bad-deploy
+title: Inventory deploy ships a crash in the reservation path
+alert:
+  service: inventory
+  summary: inventory error rate at 18%.
+approval: approve
+truth:
+  category: bad_code_deploy
+  service: inventory
+  required_evidence_any:
+  - d-5001
+  - log-0006

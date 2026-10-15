@@ -1,0 +1,28 @@
+[
+  {
+    "id": "d-3001",
+    "service": "checkout",
+    "version": "2.3.9",
+    "ts": "2026-10-14T10:40:00Z",
+    "author": "lee",
+    "summary": "Copy changes on receipt page",
+    "config_before": {},
+    "config_after": {},
+    "files": []
+  },
+  {
+    "id": "d-3002",
+    "service": "inventory",
+    "version": "4.1.7",
+    "ts": "2026-10-14T11:25:00Z",
+    "author": "dev-bot",
+    "summary": "Tune cache TTL",
+    "config_before": {
+      "CACHE_TTL_S": "60"
+    },
+    "config_after": {
+      "CACHE_TTL_S": "120"
+    },
+    "files": []
+  }
+]

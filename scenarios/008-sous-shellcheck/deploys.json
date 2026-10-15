@@ -1,0 +1,42 @@
+[
+  {
+    "id": "afdd3f008b",
+    "service": "sous",
+    "version": "afdd3f008b",
+    "ts": "2026-10-02T02:52:25Z",
+    "author": "OrenSegal",
+    "summary": "Log the project directory with each guard block",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "hooks/sous-guard.sh",
+      "tests/sous-guard.test.sh"
+    ]
+  },
+  {
+    "id": "4870121d6d",
+    "service": "sous",
+    "version": "4870121d6d",
+    "ts": "2026-10-02T02:52:25Z",
+    "author": "OrenSegal",
+    "summary": "Add sous gate and sous fleet",
+    "config_before": {
+      ".github/workflows/ci.yml": "previous"
+    },
+    "config_after": {
+      ".github/workflows/ci.yml": "modified in 4870121d6d"
+    },
+    "files": [
+      ".github/workflows/ci.yml",
+      "CHANGELOG.md",
+      "CONTRIBUTING.md",
+      "README.md",
+      "bin/sous",
+      "commands/fleet.md",
+      "commands/gate.md",
+      "tests/fleet.test.sh",
+      "tests/gate.test.sh",
+      "tests/install.test.sh"
+    ]
+  }
+]

@@ -1,0 +1,9 @@
+{"id":"log-0001","ts":"2026-10-02T03:30:06.118768Z","service":"test-ubuntu-latest","level":"info","message":"shellcheck: Run shellcheck -S warning hooks/*.sh bin/tests-ran bin/tests-weakened docs/demo.sh tests/*.sh","trace_id":null}
+{"id":"log-0002","ts":"2026-10-02T03:30:06.118984Z","service":"test-ubuntu-latest","level":"info","message":"shellcheck: shellcheck -S warning hooks/*.sh bin/tests-ran bin/tests-weakened docs/demo.sh tests/*.sh","trace_id":null}
+{"id":"log-0003","ts":"2026-10-02T03:30:06.138788Z","service":"test-ubuntu-latest","level":"info","message":"shellcheck: shell: /usr/bin/bash -e {0}","trace_id":null}
+{"id":"log-0004","ts":"2026-10-02T03:30:08.022520Z","service":"test-ubuntu-latest","level":"info","message":"shellcheck: In tests/gate.test.sh line 51:","trace_id":null}
+{"id":"log-0005","ts":"2026-10-02T03:30:08.022612Z","service":"test-ubuntu-latest","level":"info","message":"shellcheck: green() { printf '============ 3 passed in 0.12s ============\\n' >\"$(logpath \"${1:-$R}\")\"; }","trace_id":null}
+{"id":"log-0006","ts":"2026-10-02T03:30:08.022693Z","service":"test-ubuntu-latest","level":"warn","message":"shellcheck: ^-- SC2120 (warning): green references arguments, but none are ever passed.","trace_id":null}
+{"id":"log-0007","ts":"2026-10-02T03:30:08.022748Z","service":"test-ubuntu-latest","level":"info","message":"shellcheck: For more information:","trace_id":null}
+{"id":"log-0008","ts":"2026-10-02T03:30:08.022815Z","service":"test-ubuntu-latest","level":"info","message":"shellcheck: https://www.shellcheck.net/wiki/SC2120 -- green references arguments, but n...","trace_id":null}
+{"id":"log-0009","ts":"2026-10-02T03:30:08.030106Z","service":"test-ubuntu-latest","level":"error","message":"shellcheck: Process completed with exit code 1.","trace_id":null}

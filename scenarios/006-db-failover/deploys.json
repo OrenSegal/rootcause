@@ -1,0 +1,17 @@
+[
+  {
+    "id": "d-6001",
+    "service": "orders",
+    "version": "1.8.0",
+    "ts": "2026-10-14T13:20:00Z",
+    "author": "dev-bot",
+    "summary": "Larger write batches",
+    "config_before": {
+      "ORDERS_BATCH_SIZE": "100"
+    },
+    "config_after": {
+      "ORDERS_BATCH_SIZE": "200"
+    },
+    "files": []
+  }
+]

@@ -1,0 +1,12 @@
+id: 017-cache-flush-herd
+title: Thundering herd on the database after a cache flush
+alert:
+  service: product-api
+  summary: product-api error rate at 20%, p99 above 3s.
+truth:
+  category: resource_exhaustion
+  service: postgres
+  required_evidence_any:
+  - log-0007
+  - m-pg-conns
+  - log-0006

@@ -1,0 +1,22 @@
+test (macos-latest)	install + doctor	﻿2026-10-02T06:14:31.6998500Z ##[group]Run bash tests/install.test.sh
+test (macos-latest)	install + doctor	2026-10-02T06:14:31.6998840Z ^[[36;1mbash tests/install.test.sh^[[0m
+test (macos-latest)	install + doctor	2026-10-02T06:14:31.7031180Z shell: /bin/bash -e {0}
+test (macos-latest)	install + doctor	2026-10-02T06:14:31.7031400Z ##[endgroup]
+test (macos-latest)	install + doctor	2026-10-02T06:15:35.7471100Z FAIL README toolkit table lists exactly the marketplace plugins: want=0 got=1
+test (macos-latest)	install + doctor	2026-10-02T06:15:35.7495560Z Traceback (most recent call last):
+test (macos-latest)	install + doctor	2026-10-02T06:15:35.7502190Z   File "<string>", line 8, in <module>
+test (macos-latest)	install + doctor	2026-10-02T06:15:35.7503080Z     assert sorted(rows) == sorted(p["name"] for p in m["plugins"]), sorted(rows)
+test (macos-latest)	install + doctor	2026-10-02T06:15:35.7503810Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+test (macos-latest)	install + doctor	2026-10-02T06:15:35.7504250Z AssertionError: ['cited', 'deuce', 'litmus', 'scoped', 'sous']
+test (macos-latest)	install + doctor	2026-10-02T06:15:35.9184770Z 166 passed, 1 failed
+test (macos-latest)	install + doctor	2026-10-02T06:15:35.9396120Z ##[error]Process completed with exit code 1.
+test (ubuntu-latest)	install + doctor	﻿2026-10-02T06:14:15.6843002Z ##[group]Run bash tests/install.test.sh
+test (ubuntu-latest)	install + doctor	2026-10-02T06:14:15.6843356Z ^[[36;1mbash tests/install.test.sh^[[0m
+test (ubuntu-latest)	install + doctor	2026-10-02T06:14:15.6905429Z shell: /usr/bin/bash -e {0}
+test (ubuntu-latest)	install + doctor	2026-10-02T06:14:15.6905696Z ##[endgroup]
+test (ubuntu-latest)	install + doctor	2026-10-02T06:14:56.8855157Z FAIL README toolkit table lists exactly the marketplace plugins: want=0 got=1
+test (ubuntu-latest)	install + doctor	2026-10-02T06:14:56.8865724Z Traceback (most recent call last):
+test (ubuntu-latest)	install + doctor	2026-10-02T06:14:56.8866393Z   File "<string>", line 8, in <module>
+test (ubuntu-latest)	install + doctor	2026-10-02T06:14:57.0287012Z AssertionError: ['cited', 'deuce', 'litmus', 'scoped', 'sous']
+test (ubuntu-latest)	install + doctor	2026-10-02T06:14:57.0287747Z 166 passed, 1 failed
+test (ubuntu-latest)	install + doctor	2026-10-02T06:14:57.0413805Z ##[error]Process completed with exit code 1.

@@ -1,0 +1,20 @@
+{"id":"log-0012","ts":"2026-10-02T06:14:15.684300Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: Run bash tests/install.test.sh","trace_id":null}
+{"id":"log-0013","ts":"2026-10-02T06:14:15.684335Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: bash tests/install.test.sh","trace_id":null}
+{"id":"log-0014","ts":"2026-10-02T06:14:15.690542Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: shell: /usr/bin/bash -e {0}","trace_id":null}
+{"id":"log-0001","ts":"2026-10-02T06:14:31.699850Z","service":"test-macos-latest","level":"info","message":"install + doctor: Run bash tests/install.test.sh","trace_id":null}
+{"id":"log-0002","ts":"2026-10-02T06:14:31.699884Z","service":"test-macos-latest","level":"info","message":"install + doctor: bash tests/install.test.sh","trace_id":null}
+{"id":"log-0003","ts":"2026-10-02T06:14:31.703118Z","service":"test-macos-latest","level":"info","message":"install + doctor: shell: /bin/bash -e {0}","trace_id":null}
+{"id":"log-0015","ts":"2026-10-02T06:14:56.885515Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: FAIL README toolkit table lists exactly the marketplace plugins: want=0 got=1","trace_id":null}
+{"id":"log-0016","ts":"2026-10-02T06:14:56.886572Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: Traceback (most recent call last):","trace_id":null}
+{"id":"log-0017","ts":"2026-10-02T06:14:56.886639Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: File \"<string>\", line 8, in <module>","trace_id":null}
+{"id":"log-0018","ts":"2026-10-02T06:14:57.028701Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: AssertionError: ['cited', 'deuce', 'litmus', 'scoped', 'sous']","trace_id":null}
+{"id":"log-0019","ts":"2026-10-02T06:14:57.028774Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: 166 passed, 1 failed","trace_id":null}
+{"id":"log-0020","ts":"2026-10-02T06:14:57.041380Z","service":"test-ubuntu-latest","level":"error","message":"install + doctor: Process completed with exit code 1.","trace_id":null}
+{"id":"log-0004","ts":"2026-10-02T06:15:35.747110Z","service":"test-macos-latest","level":"info","message":"install + doctor: FAIL README toolkit table lists exactly the marketplace plugins: want=0 got=1","trace_id":null}
+{"id":"log-0005","ts":"2026-10-02T06:15:35.749556Z","service":"test-macos-latest","level":"info","message":"install + doctor: Traceback (most recent call last):","trace_id":null}
+{"id":"log-0006","ts":"2026-10-02T06:15:35.750219Z","service":"test-macos-latest","level":"info","message":"install + doctor: File \"<string>\", line 8, in <module>","trace_id":null}
+{"id":"log-0007","ts":"2026-10-02T06:15:35.750308Z","service":"test-macos-latest","level":"info","message":"install + doctor: assert sorted(rows) == sorted(p[\"name\"] for p in m[\"plugins\"]), sorted(rows)","trace_id":null}
+{"id":"log-0008","ts":"2026-10-02T06:15:35.750381Z","service":"test-macos-latest","level":"info","message":"install + doctor: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","trace_id":null}
+{"id":"log-0009","ts":"2026-10-02T06:15:35.750425Z","service":"test-macos-latest","level":"info","message":"install + doctor: AssertionError: ['cited', 'deuce', 'litmus', 'scoped', 'sous']","trace_id":null}
+{"id":"log-0010","ts":"2026-10-02T06:15:35.918477Z","service":"test-macos-latest","level":"info","message":"install + doctor: 166 passed, 1 failed","trace_id":null}
+{"id":"log-0011","ts":"2026-10-02T06:15:35.939612Z","service":"test-macos-latest","level":"error","message":"install + doctor: Process completed with exit code 1.","trace_id":null}

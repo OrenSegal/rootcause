@@ -1,0 +1,19 @@
+{"id":"log-0001","ts":"2026-10-14T13:00:00Z","service":"checkout","level":"info","message":"POST /checkout 200 in 160ms","trace_id":null}
+{"id":"log-0002","ts":"2026-10-14T13:04:00Z","service":"checkout","level":"info","message":"POST /checkout 200 in 160ms","trace_id":null}
+{"id":"log-0003","ts":"2026-10-14T13:08:00Z","service":"checkout","level":"info","message":"POST /checkout 200 in 160ms","trace_id":null}
+{"id":"log-0004","ts":"2026-10-14T13:12:00Z","service":"checkout","level":"info","message":"POST /checkout 200 in 160ms","trace_id":null}
+{"id":"log-0005","ts":"2026-10-14T13:16:00Z","service":"checkout","level":"info","message":"POST /checkout 200 in 160ms","trace_id":null}
+{"id":"log-0006","ts":"2026-10-14T13:20:00Z","service":"checkout","level":"info","message":"POST /checkout 200 in 160ms","trace_id":null}
+{"id":"log-0007","ts":"2026-10-14T13:22:00Z","service":"payments","level":"error","message":"TypeError: cannot read 'rate' of undefined in tax/v2/eu.ts:88 (country=PT)","trace_id":null}
+{"id":"log-0008","ts":"2026-10-14T13:22:12Z","service":"checkout","level":"error","message":"payment intent failed: payments returned 500","trace_id":null}
+{"id":"log-0019","ts":"2026-10-14T13:22:24Z","service":"shipping","level":"info","message":"carrier logo cache warmed","trace_id":null}
+{"id":"log-0009","ts":"2026-10-14T13:22:30Z","service":"payments","level":"error","message":"TypeError: cannot read 'rate' of undefined in tax/v2/eu.ts:88 (country=PT)","trace_id":null}
+{"id":"log-0010","ts":"2026-10-14T13:22:42Z","service":"checkout","level":"error","message":"payment intent failed: payments returned 500","trace_id":null}
+{"id":"log-0011","ts":"2026-10-14T13:23:00Z","service":"payments","level":"error","message":"TypeError: cannot read 'rate' of undefined in tax/v2/eu.ts:88 (country=PT)","trace_id":null}
+{"id":"log-0012","ts":"2026-10-14T13:23:12Z","service":"checkout","level":"error","message":"payment intent failed: payments returned 500","trace_id":null}
+{"id":"log-0013","ts":"2026-10-14T13:25:00Z","service":"payments","level":"error","message":"TypeError: cannot read 'rate' of undefined in tax/v2/eu.ts:88 (country=PT)","trace_id":null}
+{"id":"log-0014","ts":"2026-10-14T13:25:12Z","service":"checkout","level":"error","message":"payment intent failed: payments returned 500","trace_id":null}
+{"id":"log-0015","ts":"2026-10-14T13:28:00Z","service":"payments","level":"error","message":"TypeError: cannot read 'rate' of undefined in tax/v2/eu.ts:88 (country=PT)","trace_id":null}
+{"id":"log-0016","ts":"2026-10-14T13:28:12Z","service":"checkout","level":"error","message":"payment intent failed: payments returned 500","trace_id":null}
+{"id":"log-0017","ts":"2026-10-14T13:32:00Z","service":"payments","level":"error","message":"TypeError: cannot read 'rate' of undefined in tax/v2/eu.ts:88 (country=PT)","trace_id":null}
+{"id":"log-0018","ts":"2026-10-14T13:32:12Z","service":"checkout","level":"error","message":"payment intent failed: payments returned 500","trace_id":null}

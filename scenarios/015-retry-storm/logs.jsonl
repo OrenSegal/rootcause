@@ -1,0 +1,19 @@
+{"id":"log-0001","ts":"2026-10-14T13:00:00Z","service":"product-api","level":"info","message":"GET /products/{id} 200 in 35ms","trace_id":null}
+{"id":"log-0002","ts":"2026-10-14T13:04:00Z","service":"product-api","level":"info","message":"GET /products/{id} 200 in 35ms","trace_id":null}
+{"id":"log-0003","ts":"2026-10-14T13:08:00Z","service":"product-api","level":"info","message":"GET /products/{id} 200 in 35ms","trace_id":null}
+{"id":"log-0004","ts":"2026-10-14T13:12:00Z","service":"product-api","level":"info","message":"GET /products/{id} 200 in 35ms","trace_id":null}
+{"id":"log-0005","ts":"2026-10-14T13:16:00Z","service":"product-api","level":"info","message":"GET /products/{id} 200 in 35ms","trace_id":null}
+{"id":"log-0006","ts":"2026-10-14T13:20:00Z","service":"catalog","level":"warn","message":"vacuum on products table: queries slow for ~60s","trace_id":null}
+{"id":"log-0008","ts":"2026-10-14T13:20:30Z","service":"product-api","level":"error","message":"rejecting request: worker pool full (256/256), queue 4100","trace_id":null}
+{"id":"log-0009","ts":"2026-10-14T13:20:36Z","service":"web-bff","level":"warn","message":"product-api 503, retrying immediately (attempt 5/5)","trace_id":null}
+{"id":"log-0010","ts":"2026-10-14T13:21:00Z","service":"product-api","level":"error","message":"rejecting request: worker pool full (256/256), queue 4100","trace_id":null}
+{"id":"log-0011","ts":"2026-10-14T13:21:06Z","service":"web-bff","level":"warn","message":"product-api 503, retrying immediately (attempt 5/5)","trace_id":null}
+{"id":"log-0007","ts":"2026-10-14T13:21:12Z","service":"catalog","level":"info","message":"vacuum finished; query latency back to normal","trace_id":null}
+{"id":"log-0012","ts":"2026-10-14T13:22:00Z","service":"product-api","level":"error","message":"rejecting request: worker pool full (256/256), queue 4100","trace_id":null}
+{"id":"log-0013","ts":"2026-10-14T13:22:06Z","service":"web-bff","level":"warn","message":"product-api 503, retrying immediately (attempt 5/5)","trace_id":null}
+{"id":"log-0014","ts":"2026-10-14T13:24:00Z","service":"product-api","level":"error","message":"rejecting request: worker pool full (256/256), queue 4100","trace_id":null}
+{"id":"log-0015","ts":"2026-10-14T13:24:06Z","service":"web-bff","level":"warn","message":"product-api 503, retrying immediately (attempt 5/5)","trace_id":null}
+{"id":"log-0016","ts":"2026-10-14T13:27:00Z","service":"product-api","level":"error","message":"rejecting request: worker pool full (256/256), queue 4100","trace_id":null}
+{"id":"log-0017","ts":"2026-10-14T13:27:06Z","service":"web-bff","level":"warn","message":"product-api 503, retrying immediately (attempt 5/5)","trace_id":null}
+{"id":"log-0018","ts":"2026-10-14T13:31:00Z","service":"product-api","level":"error","message":"rejecting request: worker pool full (256/256), queue 4100","trace_id":null}
+{"id":"log-0019","ts":"2026-10-14T13:31:06Z","service":"web-bff","level":"warn","message":"product-api 503, retrying immediately (attempt 5/5)","trace_id":null}

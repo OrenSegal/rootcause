@@ -1,0 +1,302 @@
+[
+  {
+    "span_id": "run-36960431348",
+    "trace_id": "run-36960431348",
+    "parent_id": null,
+    "service": "ci",
+    "name": "ci",
+    "start": "2026-10-02T03:30:00Z",
+    "duration_ms": 195000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-110692709065",
+    "trace_id": "run-36960431348",
+    "parent_id": "run-36960431348",
+    "service": "marketplace",
+    "name": "marketplace",
+    "start": "2026-10-02T03:30:04Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110692709065-step-1",
+    "trace_id": "run-36960431348",
+    "parent_id": "job-110692709065",
+    "service": "marketplace",
+    "name": "Set up job",
+    "start": "2026-10-02T03:30:05Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110692709065-step-2",
+    "trace_id": "run-36960431348",
+    "parent_id": "job-110692709065",
+    "service": "marketplace",
+    "name": "Run actions/checkout@v4",
+    "start": "2026-10-02T03:30:05Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110692709065-step-3",
+    "trace_id": "run-36960431348",
+    "parent_id": "job-110692709065",
+    "service": "marketplace",
+    "name": "shape (offline, blocking)",
+    "start": "2026-10-02T03:30:06Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110692709065-step-4",
+    "trace_id": "run-36960431348",
+    "parent_id": "job-110692709065",
+    "service": "marketplace",
+    "name": "pinned refs resolve to their shas (network failure only warns)",
+    "start": "2026-10-02T03:30:06Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110692709065-step-8",
+    "trace_id": "run-36960431348",
+    "parent_id": "job-110692709065",
+    "service": "marketplace",
+    "name": "Post Run actions/checkout@v4",
+    "start": "2026-10-02T03:30:07Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110692709065-step-9",
+    "trace_id": "run-36960431348",
+    "parent_id": "job-110692709065",
+    "service": "marketplace",
+    "name": "Complete job",
+    "start": "2026-10-02T03:30:07Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110692709233",
+    "trace_id": "run-36960431348",
+    "parent_id": "run-36960431348",
+    "service": "test-macos-latest",
+    "name": "test (macos-latest)",
+    "start": "2026-10-02T03:30:07Z",
+    "duration_ms": 187000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110692709233-step-1",
+    "trace_id": "run-36960431348",
+    "parent_id": "job-110692709233",
+    "service": "test-macos-latest",
+    "name": "Set up job",
+    "start": "2026-10-02T03:30:07Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110692709233-step-2",
+    "trace_id": "run-36960431348",
+    "parent_id": "job-110692709233",
+    "service": "test-macos-latest",
+    "name": "Run actions/checkout@v4",
+    "start": "2026-10-02T03:30:08Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110692709233-step-5",
+    "trace_id": "run-36960431348",
+    "parent_id": "job-110692709233",
+    "service": "test-macos-latest",
+    "name": "guard table",
+    "start": "2026-10-02T03:30:09Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110692709233-step-6",
+    "trace_id": "run-36960431348",
+    "parent_id": "job-110692709233",
+    "service": "test-macos-latest",
+    "name": "red-team corpus",
+    "start": "2026-10-02T03:30:10Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110692709233-step-7",
+    "trace_id": "run-36960431348",
+    "parent_id": "job-110692709233",
+    "service": "test-macos-latest",
+    "name": "guard rules each have a block and an allow fixture",
+    "start": "2026-10-02T03:30:15Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110692709233-step-8",
+    "trace_id": "run-36960431348",
+    "parent_id": "job-110692709233",
+    "service": "test-macos-latest",
+    "name": "tests-ran table",
+    "start": "2026-10-02T03:30:16Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110692709233-step-9",
+    "trace_id": "run-36960431348",
+    "parent_id": "job-110692709233",
+    "service": "test-macos-latest",
+    "name": "tests-weakened table",
+    "start": "2026-10-02T03:30:16Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110692709233-step-10",
+    "trace_id": "run-36960431348",
+    "parent_id": "job-110692709233",
+    "service": "test-macos-latest",
+    "name": "tables on bash 3.2 (macOS system bash)",
+    "start": "2026-10-02T03:30:17Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110692709233-step-11",
+    "trace_id": "run-36960431348",
+    "parent_id": "job-110692709233",
+    "service": "test-macos-latest",
+    "name": "install + doctor",
+    "start": "2026-10-02T03:30:24Z",
+    "duration_ms": 66000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110692709233-step-12",
+    "trace_id": "run-36960431348",
+    "parent_id": "job-110692709233",
+    "service": "test-macos-latest",
+    "name": "install + doctor on bash 3.2 (macOS system bash)",
+    "start": "2026-10-02T03:31:30Z",
+    "duration_ms": 55000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110692709233-step-13",
+    "trace_id": "run-36960431348",
+    "parent_id": "job-110692709233",
+    "service": "test-macos-latest",
+    "name": "gate and fleet on throwaway repos and worktrees",
+    "start": "2026-10-02T03:32:25Z",
+    "duration_ms": 24000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110692709233-step-14",
+    "trace_id": "run-36960431348",
+    "parent_id": "job-110692709233",
+    "service": "test-macos-latest",
+    "name": "gate and fleet on bash 3.2 (macOS system bash)",
+    "start": "2026-10-02T03:32:49Z",
+    "duration_ms": 21000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110692709233-step-15",
+    "trace_id": "run-36960431348",
+    "parent_id": "job-110692709233",
+    "service": "test-macos-latest",
+    "name": "python syntax",
+    "start": "2026-10-02T03:33:10Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110692709233-step-32",
+    "trace_id": "run-36960431348",
+    "parent_id": "job-110692709233",
+    "service": "test-macos-latest",
+    "name": "Post Run actions/checkout@v4",
+    "start": "2026-10-02T03:33:11Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110692709233-step-33",
+    "trace_id": "run-36960431348",
+    "parent_id": "job-110692709233",
+    "service": "test-macos-latest",
+    "name": "Complete job",
+    "start": "2026-10-02T03:33:11Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110692709274",
+    "trace_id": "run-36960431348",
+    "parent_id": "run-36960431348",
+    "service": "test-ubuntu-latest",
+    "name": "test (ubuntu-latest)",
+    "start": "2026-10-02T03:30:04Z",
+    "duration_ms": 5000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-110692709274-step-1",
+    "trace_id": "run-36960431348",
+    "parent_id": "job-110692709274",
+    "service": "test-ubuntu-latest",
+    "name": "Set up job",
+    "start": "2026-10-02T03:30:04Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110692709274-step-2",
+    "trace_id": "run-36960431348",
+    "parent_id": "job-110692709274",
+    "service": "test-ubuntu-latest",
+    "name": "Run actions/checkout@v4",
+    "start": "2026-10-02T03:30:05Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110692709274-step-3",
+    "trace_id": "run-36960431348",
+    "parent_id": "job-110692709274",
+    "service": "test-ubuntu-latest",
+    "name": "shellcheck",
+    "start": "2026-10-02T03:30:06Z",
+    "duration_ms": 2000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-110692709274-step-32",
+    "trace_id": "run-36960431348",
+    "parent_id": "job-110692709274",
+    "service": "test-ubuntu-latest",
+    "name": "Post Run actions/checkout@v4",
+    "start": "2026-10-02T03:30:08Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110692709274-step-33",
+    "trace_id": "run-36960431348",
+    "parent_id": "job-110692709274",
+    "service": "test-ubuntu-latest",
+    "name": "Complete job",
+    "start": "2026-10-02T03:30:08Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

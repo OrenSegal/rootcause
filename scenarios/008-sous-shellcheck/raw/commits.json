@@ -1,0 +1,78 @@
+[
+  {
+    "oid": "afdd3f008b256b2bbe0ab4815b5f2acc0b197b5b",
+    "committedDate": "2026-10-02T02:52:25Z",
+    "messageHeadline": "Log the project directory with each guard block",
+    "author": "OrenSegal",
+    "files": [
+      {
+        "filename": "hooks/sous-guard.sh",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/sous-guard.test.sh",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "oid": "4870121d6daa4d41c68ec496122f89c207bd2844",
+    "committedDate": "2026-10-02T02:52:25Z",
+    "messageHeadline": "Add sous gate and sous fleet",
+    "author": "OrenSegal",
+    "files": [
+      {
+        "filename": ".github/workflows/ci.yml",
+        "status": "modified"
+      },
+      {
+        "filename": "CHANGELOG.md",
+        "status": "modified"
+      },
+      {
+        "filename": "CONTRIBUTING.md",
+        "status": "modified"
+      },
+      {
+        "filename": "README.md",
+        "status": "modified"
+      },
+      {
+        "filename": "bin/sous",
+        "status": "modified"
+      },
+      {
+        "filename": "commands/fleet.md",
+        "status": "added"
+      },
+      {
+        "filename": "commands/gate.md",
+        "status": "added"
+      },
+      {
+        "filename": "tests/fleet.test.sh",
+        "status": "added"
+      },
+      {
+        "filename": "tests/gate.test.sh",
+        "status": "added"
+      },
+      {
+        "filename": "tests/install.test.sh",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "oid": "345cd70b57682a9af888d0028a1082ea28f8e31c",
+    "committedDate": "2026-10-02T03:35:19Z",
+    "messageHeadline": "Fix shellcheck SC2120 in gate.test.sh",
+    "author": "OrenSegal",
+    "files": [
+      {
+        "filename": "tests/gate.test.sh",
+        "status": "modified"
+      }
+    ]
+  }
+]

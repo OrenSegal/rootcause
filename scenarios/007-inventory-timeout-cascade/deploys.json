@@ -1,0 +1,28 @@
+[
+  {
+    "id": "d-7001",
+    "service": "inventory",
+    "version": "4.3.0",
+    "ts": "2026-10-14T13:12:00Z",
+    "author": "dev-bot",
+    "summary": "Fail fast on slow queries",
+    "config_before": {
+      "INVENTORY_DB_TIMEOUT_MS": "3000"
+    },
+    "config_after": {
+      "INVENTORY_DB_TIMEOUT_MS": "300"
+    },
+    "files": []
+  },
+  {
+    "id": "d-7002",
+    "service": "checkout",
+    "version": "2.4.2",
+    "ts": "2026-10-14T13:13:30Z",
+    "author": "lee",
+    "summary": "Copy tweak on cart page",
+    "config_before": {},
+    "config_after": {},
+    "files": []
+  }
+]

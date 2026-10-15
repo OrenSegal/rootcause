@@ -1,0 +1,13 @@
+[
+  {
+    "id": "d-1701",
+    "service": "catalog",
+    "version": "6.0.4",
+    "ts": "2026-10-14T13:16:00Z",
+    "author": "ana",
+    "summary": "Index on products.brand_id",
+    "config_before": {},
+    "config_after": {},
+    "files": []
+  }
+]

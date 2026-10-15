@@ -1,0 +1,11 @@
+id: 019-planned-maintenance
+title: Errors inside an announced maintenance window
+alert:
+  service: reporting
+  summary: reporting error rate at 70% on dashboard queries.
+truth:
+  category: no_incident
+  service: reporting
+  required_evidence_any:
+  - log-0001
+  - log-0014
