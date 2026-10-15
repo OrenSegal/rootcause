@@ -12,6 +12,7 @@ from mcp.server import MCPServer
 from pydantic import BaseModel
 
 from rootcause.adapters import anthropic_provider, heuristic
+from rootcause.adapters.claude_code import ClaudeCodeHarness
 from rootcause.adapters.fixtures import (
     SCENARIO_FILE,
     discover,
@@ -40,6 +41,7 @@ PRICES = {**anthropic_provider.PRICES, **heuristic.PRICES}
 class ProviderName(StrEnum):
     HEURISTIC = "heuristic"
     ANTHROPIC = "anthropic"
+    CLAUDE_CODE = "claude-code"  # Claude Code runs the loop; single agent only
 
 
 class EffortLevel(StrEnum):
@@ -50,13 +52,18 @@ class EffortLevel(StrEnum):
     MAX = "max"
 
 
-ProviderFactory = Callable[[], LLMProvider]
+# What runs an investigation: a model behind the hand-written loop, or a harness
+# that brings its own loop.
+Engine = LLMProvider | ClaudeCodeHarness
+ProviderFactory = Callable[[], Engine]
 
 
 def provider_factory(name: ProviderName, model: str, effort: EffortLevel) -> ProviderFactory:
-    def make() -> LLMProvider:
+    def make() -> Engine:
         if name is ProviderName.HEURISTIC:
             return heuristic.HeuristicProvider()
+        if name is ProviderName.CLAUDE_CODE:
+            return ClaudeCodeHarness(model=model, effort=effort.value)
         return anthropic_provider.AnthropicProvider(model=model, effort=effort.value)
 
     return make
@@ -96,9 +103,13 @@ class Mode(StrEnum):
 UNSUPPORTED = "{provider} has no multi-agent mode; it only speaks the single-agent tools."
 
 
+SINGLE_AGENT_ONLY = {ProviderName.HEURISTIC, ProviderName.CLAUDE_CODE}
+
+
 def supports(provider_name: str, mode: Mode) -> bool:
-    """The heuristic only knows the single-agent tool protocol."""
-    return not (mode is Mode.MULTI and provider_name == ProviderName.HEURISTIC)
+    """The heuristic only knows the single-agent tool protocol, and Claude Code
+    runs its own loop, so neither can be an orchestrator here."""
+    return mode is Mode.SINGLE or provider_name.split(":")[0] not in SINGLE_AGENT_ONLY
 
 
 def count_tool_calls(events: EventLog, run_id: str) -> int:
@@ -129,9 +140,19 @@ async def _investigate(case: Case, loop: AgentLoop, mode: Mode) -> RunResult[Dia
         return await loop.run(spec, scenario.alert.render(), agent_tools, scenario_id=scenario.id)
 
 
+async def _run(
+    case: Case, engine: Engine, events: EventLog, budget_usd: float, mode: Mode, approve: bool
+) -> RunResult[Diagnosis]:
+    if isinstance(engine, ClaudeCodeHarness):
+        if not supports(engine.name, mode):
+            raise ValueError(UNSUPPORTED.format(provider=engine.name))
+        return await engine.investigate(case, events=events, approve=approve, budget_usd=budget_usd)
+    return await _investigate(case, _loop(engine, events, budget_usd, approve), mode)
+
+
 async def investigate(
     case: Case,
-    provider: LLMProvider,
+    provider: Engine,
     *,
     events: EventLog,
     budget_usd: float,
@@ -139,7 +160,7 @@ async def investigate(
     approve: bool | None = None,
 ) -> Investigation:
     allow = case.scenario.approval == "approve" if approve is None else approve
-    result = await _investigate(case, _loop(provider, events, budget_usd, allow), mode)
+    result = await _run(case, provider, events, budget_usd, mode, allow)
     graded = grade(
         case,
         result,
@@ -193,7 +214,7 @@ async def compare(
 
 async def triage_ci(
     case: Case,
-    provider: LLMProvider,
+    provider: Engine,
     *,
     events: EventLog,
     budget_usd: float,
@@ -201,7 +222,7 @@ async def triage_ci(
 ) -> RunResult[Diagnosis]:
     """Investigate a real failed CI run. There is no ground truth, so nothing is graded,
     and the operator always denies: triage never changes anything."""
-    return await _investigate(case, _loop(provider, events, budget_usd, approve=False), mode)
+    return await _run(case, provider, events, budget_usd, mode, approve=False)
 
 
 def load_ci_raw(raw_dir: Path) -> Case:
