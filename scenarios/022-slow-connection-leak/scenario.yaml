@@ -1,0 +1,12 @@
+id: 022-slow-connection-leak
+title: Connection leak from a deploy three hours earlier
+alert:
+  service: notifications
+  summary: notifications error rate at 90%.
+truth:
+  category: bad_code_deploy
+  service: notifications
+  required_evidence_any:
+  - d-2201
+  - log-0001
+  - m-notif-pool

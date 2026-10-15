@@ -1,0 +1,17 @@
+[
+  {
+    "id": "d-1401",
+    "service": "auth",
+    "version": "7.1.0",
+    "ts": "2026-10-14T13:05:00Z",
+    "author": "sec-bot",
+    "summary": "Rotate JWT signing key",
+    "config_before": {
+      "JWT_KID": "2026-09"
+    },
+    "config_after": {
+      "JWT_KID": "2026-10"
+    },
+    "files": []
+  }
+]

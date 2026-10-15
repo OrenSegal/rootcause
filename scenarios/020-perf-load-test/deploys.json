@@ -1,0 +1,13 @@
+[
+  {
+    "id": "d-2001",
+    "service": "checkout",
+    "version": "2.4.4",
+    "ts": "2026-10-14T13:18:00Z",
+    "author": "lee",
+    "summary": "Tidy cart page markup",
+    "config_before": {},
+    "config_after": {},
+    "files": []
+  }
+]

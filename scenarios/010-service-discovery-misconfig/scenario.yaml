@@ -1,0 +1,12 @@
+id: 010-service-discovery-misconfig
+title: Registry search-domain change breaks name resolution
+alert:
+  service: orders
+  summary: orders error rate at 40%; calls to inventory failing.
+truth:
+  category: config_change
+  service: service-registry
+  required_evidence_any:
+  - cfg:d-1001:DNS_SEARCH_DOMAIN
+  - d-1001
+  - m-dns-nxdomain

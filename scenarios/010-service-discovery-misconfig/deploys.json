@@ -1,0 +1,30 @@
+[
+  {
+    "id": "d-1001",
+    "service": "service-registry",
+    "version": "0.14.0",
+    "ts": "2026-10-14T13:10:00Z",
+    "author": "platform-bot",
+    "summary": "Move internal zone to svc.cluster.internal",
+    "config_before": {
+      "DNS_SEARCH_DOMAIN": "svc.cluster.local",
+      "RECORD_TTL_S": "300"
+    },
+    "config_after": {
+      "DNS_SEARCH_DOMAIN": "svc.cluster.internal",
+      "RECORD_TTL_S": "300"
+    },
+    "files": []
+  },
+  {
+    "id": "d-1002",
+    "service": "orders",
+    "version": "1.9.0",
+    "ts": "2026-10-14T13:13:00Z",
+    "author": "ana",
+    "summary": "Add order notes field",
+    "config_before": {},
+    "config_after": {},
+    "files": []
+  }
+]

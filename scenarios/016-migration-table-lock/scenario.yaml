@@ -1,0 +1,12 @@
+id: 016-migration-table-lock
+title: Migration takes a table lock inside a deploy with a config change
+alert:
+  service: orders
+  summary: orders write latency above 30s; error rate at 60%.
+truth:
+  category: bad_code_deploy
+  service: orders
+  required_evidence_any:
+  - d-1601
+  - log-0006
+  - log-0007

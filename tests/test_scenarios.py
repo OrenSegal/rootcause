@@ -57,5 +57,5 @@ async def test_the_last_deploy_heuristic_does_not_solve_the_suite():
         if run.grade.passed:
             passed.append(case.scenario.id)
     authored = [p for p in CASES if load_case(p).scenario.provenance == "authored"]
-    assert len(authored) >= 6
+    assert len(authored) >= 20
     assert 0 < len(passed) <= len(authored) // 2, passed

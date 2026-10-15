@@ -1,0 +1,17 @@
+[
+  {
+    "id": "d-1601",
+    "service": "orders",
+    "version": "2.0.0",
+    "ts": "2026-10-14T13:20:00Z",
+    "author": "dev-bot",
+    "summary": "Add fulfillment_status column; quieter logs",
+    "config_before": {
+      "LOG_LEVEL": "debug"
+    },
+    "config_after": {
+      "LOG_LEVEL": "info"
+    },
+    "files": []
+  }
+]

@@ -8,7 +8,7 @@ It runs three ways: as a CLI with exit codes for CI, as an MCP server a coding a
 
 ```bash
 uv sync
-uv run rootcause eval --min-pass-rate 0.2                # every scenario, no API key needed
+uv run rootcause eval --min-pass-rate 0.05               # every scenario, no API key needed
 uv run rootcause investigate scenarios/007-inventory-timeout-cascade
 uv run rootcause ci-triage --raw scenarios/008-sous-shellcheck/raw
 uv run rootcause compare --provider heuristic --provider anthropic --budget-usd 0.25
@@ -78,7 +78,7 @@ The eval gate, as a reusable action (once this repository is on GitHub):
 - uses: OrenSegal/rootcause@main
   with:
     provider: heuristic
-    min-pass-rate: "0.2"
+    min-pass-rate: "0.05"
 ```
 
 Triage of a failed run, read-only (it fetches with `gh` and writes a comment body; it never posts):

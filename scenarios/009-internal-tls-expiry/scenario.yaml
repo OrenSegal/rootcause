@@ -1,0 +1,12 @@
+id: 009-internal-tls-expiry
+title: Expired certificate on an internal endpoint
+alert:
+  service: payments
+  summary: payments error rate at 100% on settlement calls.
+truth:
+  category: infrastructure
+  service: ledger
+  required_evidence_any:
+  - log-0011
+  - log-0002
+  - m-ledger-cert-days
