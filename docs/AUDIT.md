@@ -62,3 +62,5 @@ Week 1 was test-covered, not test-driven. From the refactor on:
 | GitHub Actions adapter | Red, then green | Two expectations were corrected while still red: the run-level span also fails, and the fixture writer lives in `fixtures.py`. |
 | `ci-triage` command | Red, then green | Two failing CLI tests first (comment output, missing input). |
 | Event log schema version | Red, then green | Written after the stdio smoke test exposed the bug (#20). |
+| CLI tests under GitHub Actions | Red, then green | The first Actions run failed one test: Rich colors and wraps output when `GITHUB_ACTIONS` is set. Reproduced locally with `GITHUB_ACTIONS=true FORCE_COLOR=1` before pinning the test runner's environment. |
+| Claude Code harness | Red, then green | Two throwaway `claude -p` runs came first, to learn the stream format, including what a denied rollback looks like. Then seven tests against a scrubbed copy of one run failed with `ModuleNotFoundError` before the adapter existed. |

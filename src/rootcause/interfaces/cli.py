@@ -37,9 +37,14 @@ EXIT_CODES: dict[Outcome, int] = {
 }
 EVAL_BELOW_THRESHOLD = 1
 
-Provider = Annotated[ProviderName, typer.Option(help="heuristic needs no API key.")]
-Model = Annotated[str, typer.Option(help="Model id for the anthropic provider.")]
-Effort = Annotated[EffortLevel, typer.Option(help="Reasoning effort for the anthropic provider.")]
+Provider = Annotated[
+    ProviderName,
+    typer.Option(help="heuristic needs no API key; claude-code uses the Claude Code sign-in."),
+]
+Model = Annotated[str, typer.Option(help="Model id for anthropic and claude-code.")]
+Effort = Annotated[
+    EffortLevel, typer.Option(help="Reasoning effort for anthropic and claude-code.")
+]
 BudgetUsd = Annotated[float, typer.Option(help="Hard cap in USD per investigation.")]
 EventsPath = Annotated[Path, typer.Option("--runlog", help="SQLite event log path.")]
 ScenariosDir = Annotated[Path, typer.Argument(help="Directory of scenario directories.")]

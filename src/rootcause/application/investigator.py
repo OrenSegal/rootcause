@@ -6,9 +6,13 @@ from rootcause.domain.answers import Diagnosis
 
 SUBMIT_DIAGNOSIS = TerminalTool("submit_diagnosis", Diagnosis)
 
-INVESTIGATOR_PROMPT = f"""\
+
+def investigator_prompt(report: str, finish: str) -> str:
+    """The investigator's instructions. Only how the answer is handed in differs
+    between harnesses, so every row of a comparison gets the same brief."""
+    return f"""\
 You are an on-call investigator. An alert has fired. Find the root cause using the \
-telemetry tools, then report it by calling {SUBMIT_DIAGNOSIS.name} exactly once.
+telemetry tools, then {report}.
 
 How to work:
 - Gather evidence before concluding. Logs, metrics, traces, deploys and config diffs \
@@ -21,7 +25,13 @@ trace ids, deploy ids, config change ids). Only cite ids you have seen.
 when the evidence supports it. If it is denied, finish the diagnosis anyway.
 - If the evidence shows nothing is actually wrong, say so with category no_incident.
 
-Finish by calling {SUBMIT_DIAGNOSIS.name}. Do not answer in plain text."""
+{finish}"""
+
+
+INVESTIGATOR_PROMPT = investigator_prompt(
+    report=f"report it by calling {SUBMIT_DIAGNOSIS.name} exactly once",
+    finish=f"Finish by calling {SUBMIT_DIAGNOSIS.name}. Do not answer in plain text.",
+)
 
 
 def investigator_spec(max_steps: int = 15) -> AgentSpec[Diagnosis]:
