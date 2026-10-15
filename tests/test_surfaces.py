@@ -11,7 +11,11 @@ from rootcause.adapters.sqlite_events import SqliteEventLog
 from rootcause.interfaces.cli import app
 from rootcause.interfaces.mcp_server import build_agent_server
 
-runner = CliRunner()
+# GitHub Actions makes Rich emit color and wrap at its own width, which splits
+# the messages these tests look for. Pin both so output matches a local run.
+runner = CliRunner(
+    env={"NO_COLOR": "1", "FORCE_COLOR": None, "GITHUB_ACTIONS": None, "COLUMNS": "200"}
+)
 
 
 def test_investigate_json_and_exit_code(scenario_dir, tmp_path):
