@@ -11,7 +11,10 @@ from conftest import SCENARIOS
 from rootcause.adapters.fixtures import discover, load_case
 from rootcause.adapters.heuristic import HeuristicProvider
 from rootcause.adapters.sqlite_events import SqliteEventLog
+from rootcause.application.agent import RunResult
+from rootcause.application.evals import grade
 from rootcause.composition import investigate
+from rootcause.domain.answers import Diagnosis, Outcome
 from rootcause.domain.scenario import Category
 
 AUTHORING = SCENARIOS.parent / "scripts" / "author_scenarios.py"
@@ -59,3 +62,32 @@ async def test_the_last_deploy_heuristic_does_not_solve_the_suite():
     authored = [p for p in CASES if load_case(p).scenario.provenance == "authored"]
     assert len(authored) >= 20
     assert 0 < len(passed) <= len(authored) // 2, passed
+
+
+def _graded(path: Path, answer: Diagnosis | None, outcome: Outcome) -> bool:
+    case = load_case(path)
+    result = RunResult[Diagnosis](
+        run_id="r", agent="a", outcome=outcome, answer=answer, steps=1, tool_calls=[],
+        cost_usd=0.0, wall_ms=0.0,
+    )  # fmt: skip
+    return grade(case, result, provider="p", mode="single", tool_calls=0).passed
+
+
+@pytest.mark.parametrize("path", CASES, ids=lambda p: p.name)
+def test_the_grader_passes_the_oracle_and_fails_the_null_and_a_confident_wrong_answer(path):
+    """Harness check: an answer built from the truth must pass, no answer must fail,
+    and the right service and evidence under the wrong category must fail too."""
+    truth = load_case(path).scenario.truth
+    assert truth is not None
+    oracle = Diagnosis(
+        category=truth.category,
+        service=truth.service,
+        summary="Oracle answer built from the ground truth.",
+        evidence=truth.required_evidence_any[:1],
+        recommended_action="n/a",
+        confidence=1.0,
+    )
+    wrong = oracle.model_copy(update={"category": next(c for c in Category if c != truth.category)})
+    assert _graded(path, oracle, Outcome.ANSWERED)
+    assert not _graded(path, None, Outcome.NO_ANSWER)
+    assert not _graded(path, wrong, Outcome.ANSWERED)

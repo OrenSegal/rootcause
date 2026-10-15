@@ -14,10 +14,10 @@ import asyncio
 import time
 from collections.abc import Sequence
 from contextvars import ContextVar
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Any
 
-from anthropic.types.beta import BetaMessage
+from anthropic.types.beta import BetaMessage, BetaUsage
 from pydantic import BaseModel
 
 from rootcause.application.budget import Budget, BudgetExceededError
@@ -73,6 +73,22 @@ class AgentSpec[A: BaseModel]:
         ]
 
 
+class TokenUsage(BaseModel):
+    """Token counts as the API reports them. `input_tokens` excludes cache reads
+    and writes, as in the Messages API `usage` block."""
+
+    input_tokens: int = 0
+    output_tokens: int = 0
+    cache_read_tokens: int = 0
+    cache_write_tokens: int = 0
+
+    def add(self, usage: BetaUsage) -> None:
+        self.input_tokens += usage.input_tokens or 0
+        self.output_tokens += usage.output_tokens or 0
+        self.cache_read_tokens += usage.cache_read_input_tokens or 0
+        self.cache_write_tokens += usage.cache_creation_input_tokens or 0
+
+
 class RunResult[A: BaseModel](BaseModel):
     run_id: str
     agent: str
@@ -83,6 +99,8 @@ class RunResult[A: BaseModel](BaseModel):
     cost_usd: float
     wall_ms: float
     note: str = ""
+    usage: TokenUsage = TokenUsage()
+    models: list[str] = []  # every model that served a turn, in first-seen order
 
 
 @dataclass
@@ -94,6 +112,13 @@ class _Run:
     transcript: Transcript
     calls: list[ToolCall]
     started: float
+    usage: TokenUsage = field(default_factory=TokenUsage)
+    models: list[str] = field(default_factory=list)
+
+    def record(self, model: str, usage: BetaUsage) -> None:
+        self.usage.add(usage)
+        if model not in self.models:
+            self.models.append(model)
 
 
 class AgentLoop:
@@ -144,7 +169,9 @@ class AgentLoop:
         run = self._prepare(run_id, spec, spec.select(tools), transcript)
         recovery = Recovery()
         for e in events:
-            if e.kind == TOOL_CALL:
+            if e.kind == ASSISTANT and "usage" in e.payload:
+                run.record(e.payload["model"], BetaUsage.model_validate(e.payload["usage"]))
+            elif e.kind == TOOL_CALL:
                 run.calls.append(ToolCall.model_validate(e.payload["call"]))
                 recovery.results[e.payload["call"]["tool_use_id"]] = e.payload["result"]
             elif e.kind == TOOL_INTENT:
@@ -192,6 +219,7 @@ class AgentLoop:
 
             content = [b.model_dump(mode="json", exclude_none=True) for b in response.content]
             cost = self.budget.record(response.model, response.usage)
+            run.record(response.model, response.usage)
             self.events.append(
                 run.run_id,
                 ASSISTANT,
@@ -200,6 +228,7 @@ class AgentLoop:
                     "model": response.model,
                     "stop_reason": response.stop_reason,
                     "cost_usd": cost,
+                    "usage": response.usage.model_dump(mode="json"),
                 },
             )
             transcript.add_assistant(content)
@@ -262,6 +291,8 @@ class AgentLoop:
             cost_usd=round(run.transcript.spent_usd, 6),
             wall_ms=round((time.perf_counter() - run.started) * 1000, 1),
             note=note,
+            usage=run.usage,
+            models=run.models,
         )
         self.events.append(run.run_id, OUTCOME, result.model_dump(mode="json"))
         return result
