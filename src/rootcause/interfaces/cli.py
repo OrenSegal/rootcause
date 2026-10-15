@@ -17,11 +17,15 @@ from rootcause.composition import (
     investigate,
     load_case,
     load_ci_raw,
+    load_sweep_spec,
     open_events,
+    plan_sweep,
     provider_factory,
     run_suite,
+    run_sweep,
     telemetry_server,
     triage_ci,
+    write_sweep_report,
 )
 from rootcause.domain.answers import Diagnosis, Outcome
 
@@ -155,6 +159,36 @@ def compare_cmd(
         )
     )
     typer.echo(comparison_markdown(reports, notes))
+
+
+@app.command("sweep")
+def sweep_cmd(
+    spec: Annotated[Path, typer.Argument(help="Sweep file (YAML).")],
+    out: Annotated[
+        Path | None, typer.Option(help="Results directory. Default: results/sweeps/<name>.")
+    ] = None,
+    concurrency: Annotated[int, typer.Option(help="Investigations in flight at once.")] = 1,
+    dry_run: Annotated[bool, typer.Option(help="Print the run count and stop.")] = False,
+) -> None:
+    """Run every configuration in a sweep file several times. Resumable: runs already
+    in the results directory are skipped, and harness errors are retried."""
+    loaded = load_sweep_spec(spec)
+    target = out or Path("results/sweeps") / loaded.name
+    total, done = plan_sweep(loaded, target)
+    typer.echo(f"{total} runs planned, {done} done, {total - done} to run")
+    if dry_run:
+        return
+    counts = asyncio.run(run_sweep(loaded, target, concurrency=concurrency))
+    typer.echo(f"ran {counts['ran']}, skipped {counts['skipped']}; results in {target}")
+
+
+@app.command("report")
+def report_cmd(
+    out: Annotated[Path, typer.Argument(help="A sweep results directory.")],
+) -> None:
+    """Summarize a sweep: intervals, pass^k, cost per solved incident, frontier.
+    Writes report.md and summary.json next to the rows."""
+    typer.echo(write_sweep_report(out))
 
 
 @app.command("ci-triage")
