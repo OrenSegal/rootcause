@@ -159,7 +159,7 @@ def test_the_brief_mentions_postmortems_only_when_search_is_available():
 
 
 def test_dense_index_is_cached_on_disk(tmp_path):
-    import numpy as np
+    np = pytest.importorskip("numpy", reason="dense retrieval needs the rag extra")
 
     from rootcause.adapters.retrieval import DenseRetriever
 
