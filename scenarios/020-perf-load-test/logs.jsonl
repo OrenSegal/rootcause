@@ -1,0 +1,18 @@
+{"id":"log-0002","ts":"2026-10-14T13:00:00Z","service":"checkout","level":"info","message":"POST /checkout 200 in 150ms (organic)","trace_id":null}
+{"id":"log-0003","ts":"2026-10-14T13:03:00Z","service":"checkout","level":"info","message":"POST /checkout 200 in 150ms (organic)","trace_id":null}
+{"id":"log-0004","ts":"2026-10-14T13:06:00Z","service":"checkout","level":"info","message":"POST /checkout 200 in 150ms (organic)","trace_id":null}
+{"id":"log-0005","ts":"2026-10-14T13:09:00Z","service":"checkout","level":"info","message":"POST /checkout 200 in 150ms (organic)","trace_id":null}
+{"id":"log-0006","ts":"2026-10-14T13:12:00Z","service":"checkout","level":"info","message":"POST /checkout 200 in 150ms (organic)","trace_id":null}
+{"id":"log-0007","ts":"2026-10-14T13:15:00Z","service":"checkout","level":"info","message":"POST /checkout 200 in 150ms (organic)","trace_id":null}
+{"id":"log-0008","ts":"2026-10-14T13:18:00Z","service":"checkout","level":"info","message":"POST /checkout 200 in 150ms (organic)","trace_id":null}
+{"id":"log-0001","ts":"2026-10-14T13:20:00Z","service":"perf-runner","level":"info","message":"k6 run perf-2026-10-14 started: 4000 VUs against checkout, header x-synthetic=perf","trace_id":null}
+{"id":"log-0009","ts":"2026-10-14T13:21:00Z","service":"checkout","level":"info","message":"POST /checkout 200 in 150ms (organic)","trace_id":null}
+{"id":"log-0014","ts":"2026-10-14T13:21:00Z","service":"checkout","level":"warn","message":"slow request 2700ms (x-synthetic=perf)","trace_id":null}
+{"id":"log-0015","ts":"2026-10-14T13:23:00Z","service":"checkout","level":"warn","message":"slow request 2700ms (x-synthetic=perf)","trace_id":null}
+{"id":"log-0010","ts":"2026-10-14T13:24:00Z","service":"checkout","level":"info","message":"POST /checkout 200 in 150ms (organic)","trace_id":null}
+{"id":"log-0016","ts":"2026-10-14T13:25:00Z","service":"checkout","level":"warn","message":"slow request 2700ms (x-synthetic=perf)","trace_id":null}
+{"id":"log-0011","ts":"2026-10-14T13:27:00Z","service":"checkout","level":"info","message":"POST /checkout 200 in 150ms (organic)","trace_id":null}
+{"id":"log-0017","ts":"2026-10-14T13:27:00Z","service":"checkout","level":"warn","message":"slow request 2700ms (x-synthetic=perf)","trace_id":null}
+{"id":"log-0018","ts":"2026-10-14T13:28:30Z","service":"perf-runner","level":"info","message":"k6 run perf-2026-10-14 finished: p99 2.71s","trace_id":null}
+{"id":"log-0012","ts":"2026-10-14T13:30:00Z","service":"checkout","level":"info","message":"POST /checkout 200 in 150ms (organic)","trace_id":null}
+{"id":"log-0013","ts":"2026-10-14T13:33:00Z","service":"checkout","level":"info","message":"POST /checkout 200 in 150ms (organic)","trace_id":null}

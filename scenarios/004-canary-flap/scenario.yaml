@@ -1,0 +1,11 @@
+id: 004-canary-flap
+title: Latency alert from a cold synthetic probe
+alert:
+  service: checkout
+  summary: p99 latency above 2s (single evaluation window).
+truth:
+  category: no_incident
+  service: checkout
+  required_evidence_any:
+  - log-0015
+  - m-checkout-err

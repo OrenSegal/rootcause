@@ -1,0 +1,13 @@
+[
+  {
+    "id": "d-5001",
+    "service": "inventory",
+    "version": "4.2.0",
+    "ts": "2026-10-14T13:18:00Z",
+    "author": "dev-bot",
+    "summary": "New reservation path behind no flag",
+    "config_before": {},
+    "config_after": {},
+    "files": []
+  }
+]

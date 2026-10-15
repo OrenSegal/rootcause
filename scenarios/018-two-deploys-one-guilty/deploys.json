@@ -1,0 +1,24 @@
+[
+  {
+    "id": "d-1801",
+    "service": "payments",
+    "version": "3.3.0",
+    "ts": "2026-10-14T13:21:06Z",
+    "author": "dev-bot",
+    "summary": "Tax engine v2 for EU orders",
+    "config_before": {},
+    "config_after": {},
+    "files": []
+  },
+  {
+    "id": "d-1802",
+    "service": "shipping",
+    "version": "2.7.0",
+    "ts": "2026-10-14T13:21:36Z",
+    "author": "mo",
+    "summary": "New carrier logos",
+    "config_before": {},
+    "config_after": {},
+    "files": []
+  }
+]

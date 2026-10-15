@@ -1,0 +1,12 @@
+test (ubuntu-latest)	shellcheck	﻿2026-10-02T03:30:06.1187688Z ##[group]Run shellcheck -S warning hooks/*.sh bin/tests-ran bin/tests-weakened docs/demo.sh tests/*.sh
+test (ubuntu-latest)	shellcheck	2026-10-02T03:30:06.1189847Z ^[[36;1mshellcheck -S warning hooks/*.sh bin/tests-ran bin/tests-weakened docs/demo.sh tests/*.sh^[[0m
+test (ubuntu-latest)	shellcheck	2026-10-02T03:30:06.1387884Z shell: /usr/bin/bash -e {0}
+test (ubuntu-latest)	shellcheck	2026-10-02T03:30:06.1388771Z ##[endgroup]
+test (ubuntu-latest)	shellcheck	2026-10-02T03:30:08.0224488Z 
+test (ubuntu-latest)	shellcheck	2026-10-02T03:30:08.0225201Z In tests/gate.test.sh line 51:
+test (ubuntu-latest)	shellcheck	2026-10-02T03:30:08.0226128Z green() { printf '============ 3 passed in 0.12s ============\n' >"$(logpath "${1:-$R}")"; }
+test (ubuntu-latest)	shellcheck	2026-10-02T03:30:08.0226934Z ^-- SC2120 (warning): green references arguments, but none are ever passed.
+test (ubuntu-latest)	shellcheck	2026-10-02T03:30:08.0227341Z 
+test (ubuntu-latest)	shellcheck	2026-10-02T03:30:08.0227482Z For more information:
+test (ubuntu-latest)	shellcheck	2026-10-02T03:30:08.0228157Z   https://www.shellcheck.net/wiki/SC2120 -- green references arguments, but n...
+test (ubuntu-latest)	shellcheck	2026-10-02T03:30:08.0301063Z ##[error]Process completed with exit code 1.

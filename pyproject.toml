@@ -1,0 +1,87 @@
+[project]
+name = "rootcause"
+version = "0.1.0"
+description = "An incident-investigation agent with a hand-written loop, MCP tools, and known-answer evals"
+readme = "README.md"
+authors = [
+    { name = "OrenSegal", email = "orenssegal@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "anthropic>=1.14.0",
+    "mcp>=2.3.0",
+    "pydantic>=2.14.1",
+    "pydantic-settings>=2.16.0",
+    "pyyaml>=6.0.3",
+    "structlog>=26.1.0",
+    "typer>=0.27.3",
+]
+
+[build-system]
+requires = ["uv_build>=0.13.1,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "import-linter>=2.15",
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+    "ruff>=0.17.0",
+    "ty>=0.0.87",
+]
+
+[project.scripts]
+rootcause = "rootcause.interfaces.cli:app"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "ASYNC", "RUF"]
+
+[tool.importlinter]
+root_package = "rootcause"
+include_external_packages = true
+
+[[tool.importlinter.contracts]]
+name = "Layers: interfaces -> composition -> adapters -> application -> domain"
+type = "layers"
+layers = [
+    "rootcause.interfaces",
+    "rootcause.composition",
+    "rootcause.adapters",
+    "rootcause.application",
+    "rootcause.domain",
+]
+
+[[tool.importlinter.contracts]]
+name = "Domain is pure: no frameworks, no IO libraries"
+type = "forbidden"
+source_modules = ["rootcause.domain"]
+forbidden_modules = ["anthropic", "mcp", "mcp_types", "sqlite3", "yaml", "typer", "httpx2"]
+
+[[tool.importlinter.contracts]]
+name = "Application depends on ports, not transports"
+type = "forbidden"
+source_modules = ["rootcause.application"]
+forbidden_modules = [
+    "mcp",
+    "mcp_types",
+    "sqlite3",
+    "yaml",
+    "typer",
+    "httpx2",
+]
+# The narrower rule "application may use anthropic.types but not the client" is
+# enforced by tests/test_architecture.py: import-linter can't name external subpackages.
+
+[[tool.importlinter.contracts]]
+name = "Interfaces wire nothing themselves: adapters are reached through composition"
+type = "forbidden"
+source_modules = ["rootcause.interfaces"]
+forbidden_modules = ["rootcause.adapters"]
+allow_indirect_imports = true

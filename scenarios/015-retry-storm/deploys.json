@@ -1,0 +1,30 @@
+[
+  {
+    "id": "d-1501",
+    "service": "web-bff",
+    "version": "8.2.0",
+    "ts": "2026-10-14T11:30:00Z",
+    "author": "kim",
+    "summary": "Make product page more resilient",
+    "config_before": {
+      "PRODUCT_API_RETRIES": "1",
+      "PRODUCT_API_RETRY_BACKOFF_MS": "200"
+    },
+    "config_after": {
+      "PRODUCT_API_RETRIES": "5",
+      "PRODUCT_API_RETRY_BACKOFF_MS": "0"
+    },
+    "files": []
+  },
+  {
+    "id": "d-1502",
+    "service": "product-api",
+    "version": "3.3.1",
+    "ts": "2026-10-14T13:18:00Z",
+    "author": "lee",
+    "summary": "Add size chart to response",
+    "config_before": {},
+    "config_after": {},
+    "files": []
+  }
+]

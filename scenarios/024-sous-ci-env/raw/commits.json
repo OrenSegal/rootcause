@@ -1,0 +1,346 @@
+[
+  {
+    "oid": "cea6e6e8ee542005fa2aced67af75dd0af8f6560",
+    "committedDate": "2026-10-01T20:31:34Z",
+    "messageHeadline": "fix(guard): quote-aware heredoc scan, expanding messages, long-input \u2026",
+    "author": "OrenSegal",
+    "files": [
+      {
+        "filename": "hooks/sous-guard.sh",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/adversarial.test.sh",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "oid": "8f91f8a832c46abfe730c8ec79dc5f40d1656964",
+    "committedDate": "2026-10-01T20:43:38Z",
+    "messageHeadline": "feat(guard): close 55 audited bypasses, add version stamp",
+    "author": "OrenSegal",
+    "files": [
+      {
+        "filename": "hooks/sous-guard.sh",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/adversarial.test.sh",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "oid": "d6e8a871bdb3a6c20df10204bc03e11e8c2589c7",
+    "committedDate": "2026-10-01T20:44:59Z",
+    "messageHeadline": "test: run the hook under the bash that runs the table",
+    "author": "OrenSegal",
+    "files": [
+      {
+        "filename": "tests/adversarial.test.sh",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/sous-guard.test.sh",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/tests-ran.test.sh",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "oid": "981861331bc4a182248fb74fdd79247005cf8091",
+    "committedDate": "2026-10-01T21:09:22Z",
+    "messageHeadline": "fix(sous): parse settings defensively, write atomically, reject bad u\u2026",
+    "author": "OrenSegal",
+    "files": [
+      {
+        "filename": ".claude-plugin/marketplace.json",
+        "status": "modified"
+      },
+      {
+        "filename": ".claude-plugin/plugin.json",
+        "status": "modified"
+      },
+      {
+        "filename": "bin/sous",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/install.test.sh",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "oid": "66eb7dd75bfdc9bdf269ceb39fb26325ff41b96f",
+    "committedDate": "2026-10-01T21:26:26Z",
+    "messageHeadline": "feat(doctor): local overlay, strict host + probe record, double guard\u2026",
+    "author": "OrenSegal",
+    "files": [
+      {
+        "filename": "bin/sous",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/install.test.sh",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "oid": "68fea33bee566cf3d3ecac99ed125a2927064e0b",
+    "committedDate": "2026-10-01T21:29:51Z",
+    "messageHeadline": "feat(sous): manifest-backed uninstall, upgrade alias",
+    "author": "OrenSegal",
+    "files": [
+      {
+        "filename": "bin/sous",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/install.test.sh",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "oid": "c6ecfcdc8e5997c8f7b18c960aba6bb4d40a156b",
+    "committedDate": "2026-10-01T21:32:30Z",
+    "messageHeadline": "feat(sous): marketplace-check verifies pinned refs resolve to their shas",
+    "author": "OrenSegal",
+    "files": [
+      {
+        "filename": ".github/workflows/ci.yml",
+        "status": "modified"
+      },
+      {
+        "filename": "bin/sous",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/install.test.sh",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "oid": "eb0f71b02dfa44541c482cd3a7007cbb76aa708e",
+    "committedDate": "2026-10-01T21:40:20Z",
+    "messageHeadline": "docs: 0.3.0 changelog, community files, release workflow, evals, CI lint",
+    "author": "OrenSegal",
+    "files": [
+      {
+        "filename": ".gitattributes",
+        "status": "added"
+      },
+      {
+        "filename": ".github/ISSUE_TEMPLATE/bug.md",
+        "status": "added"
+      },
+      {
+        "filename": ".github/ISSUE_TEMPLATE/config.yml",
+        "status": "added"
+      },
+      {
+        "filename": ".github/ISSUE_TEMPLATE/false_positive.md",
+        "status": "added"
+      },
+      {
+        "filename": ".github/dependabot.yml",
+        "status": "added"
+      },
+      {
+        "filename": ".github/pull_request_template.md",
+        "status": "added"
+      },
+      {
+        "filename": ".github/workflows/ci.yml",
+        "status": "modified"
+      },
+      {
+        "filename": ".github/workflows/release.yml",
+        "status": "added"
+      },
+      {
+        "filename": ".gitignore",
+        "status": "modified"
+      },
+      {
+        "filename": "CHANGELOG.md",
+        "status": "modified"
+      },
+      {
+        "filename": "CODE_OF_CONDUCT.md",
+        "status": "added"
+      },
+      {
+        "filename": "CONTRIBUTING.md",
+        "status": "added"
+      },
+      {
+        "filename": "README.md",
+        "status": "modified"
+      },
+      {
+        "filename": "SECURITY.md",
+        "status": "modified"
+      },
+      {
+        "filename": "docs/demo.tape",
+        "status": "added"
+      },
+      {
+        "filename": "evals/blocks-recursive-delete/graders/criteria.md",
+        "status": "added"
+      },
+      {
+        "filename": "evals/blocks-recursive-delete/prompt.md",
+        "status": "added"
+      },
+      {
+        "filename": "evals/test-audit-deletion/graders/criteria.md",
+        "status": "added"
+      },
+      {
+        "filename": "evals/test-audit-deletion/prompt.md",
+        "status": "added"
+      },
+      {
+        "filename": "ruff.toml",
+        "status": "added"
+      }
+    ]
+  },
+  {
+    "oid": "7f43a5432e33a43d5b09f8917ad11c3dbdb3cba1",
+    "committedDate": "2026-10-01T21:41:52Z",
+    "messageHeadline": "docs: cache key wording matches the code",
+    "author": "OrenSegal",
+    "files": [
+      {
+        "filename": "README.md",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "oid": "3b133c1f892d6407d2216de26934fd85bacfed2b",
+    "committedDate": "2026-10-01T23:48:14Z",
+    "messageHeadline": "chore: drop private references and the unrendered demo tape",
+    "author": "OrenSegal",
+    "files": [
+      {
+        "filename": "README.md",
+        "status": "modified"
+      },
+      {
+        "filename": "bin/sous",
+        "status": "modified"
+      },
+      {
+        "filename": "docs/demo.tape",
+        "status": "removed"
+      },
+      {
+        "filename": "skills/test-audit/SKILL.md",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/install.test.sh",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/sous-guard.test.sh",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "oid": "e7451e10b946694f718c8bae8676284575510f12",
+    "committedDate": "2026-10-01T23:49:19Z",
+    "messageHeadline": "docs: one concept line and a toolkit table for the family",
+    "author": "OrenSegal",
+    "files": [
+      {
+        "filename": ".claude-plugin/marketplace.json",
+        "status": "modified"
+      },
+      {
+        "filename": "README.md",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/install.test.sh",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "oid": "fee0c00418a709ea537373ddb1210de29561027b",
+    "committedDate": "2026-10-02T00:02:38Z",
+    "messageHeadline": "chore: one version source, shared helpers, a shorter README",
+    "author": "OrenSegal",
+    "files": [
+      {
+        "filename": ".github/pull_request_template.md",
+        "status": "modified"
+      },
+      {
+        "filename": ".github/workflows/release.yml",
+        "status": "modified"
+      },
+      {
+        "filename": "CHANGELOG.md",
+        "status": "modified"
+      },
+      {
+        "filename": "CONTRIBUTING.md",
+        "status": "modified"
+      },
+      {
+        "filename": "README.md",
+        "status": "modified"
+      },
+      {
+        "filename": "bin/sous",
+        "status": "modified"
+      },
+      {
+        "filename": "hooks/sous-guard.sh",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/install.test.sh",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "oid": "f4af8a9908f98ae69c9399bda9181830522968ec",
+    "committedDate": "2026-10-02T00:37:39Z",
+    "messageHeadline": "test: unset GITHUB_ACTIONS wherever CI is unset, so the suite passes \u2026",
+    "author": "OrenSegal",
+    "files": [
+      {
+        "filename": "tests/install.test.sh",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "oid": "0126137d8c922ab0597dbff67a3fe0257289ce14",
+    "committedDate": "2026-10-02T00:42:01Z",
+    "messageHeadline": "chore(marketplace): pin litmus 0.2.0, cited 0.3.0, scoped 0.4.0",
+    "author": "OrenSegal",
+    "files": [
+      {
+        "filename": ".claude-plugin/marketplace.json",
+        "status": "modified"
+      }
+    ]
+  }
+]

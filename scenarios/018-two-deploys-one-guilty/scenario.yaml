@@ -1,0 +1,11 @@
+id: 018-two-deploys-one-guilty
+title: Two deploys in the same minute, one guilty
+alert:
+  service: checkout
+  summary: checkout error rate at 14%.
+truth:
+  category: bad_code_deploy
+  service: payments
+  required_evidence_any:
+  - d-1801
+  - log-0007

@@ -1,0 +1,383 @@
+{
+  "conclusion": "failure",
+  "createdAt": "2026-10-02T06:13:59Z",
+  "databaseId": 36972567801,
+  "displayTitle": "Add handoff mod: write LATEST.md and LATEST.patch after each turn",
+  "event": "pull_request",
+  "headBranch": "feat/handoff-mod",
+  "headSha": "7dbc2abc9ed851522c002de64453b89c599d58ce",
+  "jobs": [
+    {
+      "completedAt": "2026-10-02T06:15:39Z",
+      "conclusion": "failure",
+      "databaseId": 110729446492,
+      "name": "test (macos-latest)",
+      "startedAt": "2026-10-02T06:14:07Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-02T06:14:08Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-02T06:14:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:14:11Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v4",
+          "number": 2,
+          "startedAt": "2026-10-02T06:14:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:14:11Z",
+          "conclusion": "skipped",
+          "name": "shellcheck",
+          "number": 3,
+          "startedAt": "2026-10-02T06:14:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:14:11Z",
+          "conclusion": "skipped",
+          "name": "ruff",
+          "number": 4,
+          "startedAt": "2026-10-02T06:14:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:14:13Z",
+          "conclusion": "success",
+          "name": "guard table",
+          "number": 5,
+          "startedAt": "2026-10-02T06:14:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:14:20Z",
+          "conclusion": "success",
+          "name": "red-team corpus",
+          "number": 6,
+          "startedAt": "2026-10-02T06:14:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:14:21Z",
+          "conclusion": "success",
+          "name": "guard rules each have a block and an allow fixture",
+          "number": 7,
+          "startedAt": "2026-10-02T06:14:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:14:21Z",
+          "conclusion": "success",
+          "name": "tests-ran table",
+          "number": 8,
+          "startedAt": "2026-10-02T06:14:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:14:22Z",
+          "conclusion": "success",
+          "name": "tests-weakened table",
+          "number": 9,
+          "startedAt": "2026-10-02T06:14:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:14:31Z",
+          "conclusion": "success",
+          "name": "tables on bash 3.2 (macOS system bash)",
+          "number": 10,
+          "startedAt": "2026-10-02T06:14:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:15:35Z",
+          "conclusion": "failure",
+          "name": "install + doctor",
+          "number": 11,
+          "startedAt": "2026-10-02T06:14:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:15:35Z",
+          "conclusion": "skipped",
+          "name": "install + doctor on bash 3.2 (macOS system bash)",
+          "number": 12,
+          "startedAt": "2026-10-02T06:15:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:15:35Z",
+          "conclusion": "skipped",
+          "name": "gate and fleet on throwaway repos and worktrees",
+          "number": 13,
+          "startedAt": "2026-10-02T06:15:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:15:35Z",
+          "conclusion": "skipped",
+          "name": "gate and fleet on bash 3.2 (macOS system bash)",
+          "number": 14,
+          "startedAt": "2026-10-02T06:15:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:15:35Z",
+          "conclusion": "skipped",
+          "name": "python syntax",
+          "number": 15,
+          "startedAt": "2026-10-02T06:15:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:15:35Z",
+          "conclusion": "skipped",
+          "name": "validate plugin",
+          "number": 16,
+          "startedAt": "2026-10-02T06:15:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:15:36Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v4",
+          "number": 32,
+          "startedAt": "2026-10-02T06:15:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:15:37Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 33,
+          "startedAt": "2026-10-02T06:15:36Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/OrenSegal/sous/actions/runs/36972567801/job/110729446492"
+    },
+    {
+      "completedAt": "2026-10-02T06:14:58Z",
+      "conclusion": "failure",
+      "databaseId": 110729446533,
+      "name": "test (ubuntu-latest)",
+      "startedAt": "2026-10-02T06:14:03Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-02T06:14:04Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-02T06:14:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:14:05Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v4",
+          "number": 2,
+          "startedAt": "2026-10-02T06:14:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:14:07Z",
+          "conclusion": "success",
+          "name": "shellcheck",
+          "number": 3,
+          "startedAt": "2026-10-02T06:14:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:14:10Z",
+          "conclusion": "success",
+          "name": "ruff",
+          "number": 4,
+          "startedAt": "2026-10-02T06:14:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:14:11Z",
+          "conclusion": "success",
+          "name": "guard table",
+          "number": 5,
+          "startedAt": "2026-10-02T06:14:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:14:14Z",
+          "conclusion": "success",
+          "name": "red-team corpus",
+          "number": 6,
+          "startedAt": "2026-10-02T06:14:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:14:15Z",
+          "conclusion": "success",
+          "name": "guard rules each have a block and an allow fixture",
+          "number": 7,
+          "startedAt": "2026-10-02T06:14:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:14:15Z",
+          "conclusion": "success",
+          "name": "tests-ran table",
+          "number": 8,
+          "startedAt": "2026-10-02T06:14:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:14:15Z",
+          "conclusion": "success",
+          "name": "tests-weakened table",
+          "number": 9,
+          "startedAt": "2026-10-02T06:14:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:14:15Z",
+          "conclusion": "skipped",
+          "name": "tables on bash 3.2 (macOS system bash)",
+          "number": 10,
+          "startedAt": "2026-10-02T06:14:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:14:57Z",
+          "conclusion": "failure",
+          "name": "install + doctor",
+          "number": 11,
+          "startedAt": "2026-10-02T06:14:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:14:57Z",
+          "conclusion": "skipped",
+          "name": "install + doctor on bash 3.2 (macOS system bash)",
+          "number": 12,
+          "startedAt": "2026-10-02T06:14:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:14:57Z",
+          "conclusion": "skipped",
+          "name": "gate and fleet on throwaway repos and worktrees",
+          "number": 13,
+          "startedAt": "2026-10-02T06:14:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:14:57Z",
+          "conclusion": "skipped",
+          "name": "gate and fleet on bash 3.2 (macOS system bash)",
+          "number": 14,
+          "startedAt": "2026-10-02T06:14:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:14:57Z",
+          "conclusion": "skipped",
+          "name": "python syntax",
+          "number": 15,
+          "startedAt": "2026-10-02T06:14:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:14:57Z",
+          "conclusion": "skipped",
+          "name": "validate plugin",
+          "number": 16,
+          "startedAt": "2026-10-02T06:14:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:14:57Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v4",
+          "number": 32,
+          "startedAt": "2026-10-02T06:14:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:14:57Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 33,
+          "startedAt": "2026-10-02T06:14:57Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/OrenSegal/sous/actions/runs/36972567801/job/110729446533"
+    },
+    {
+      "completedAt": "2026-10-02T06:14:10Z",
+      "conclusion": "success",
+      "databaseId": 110729446712,
+      "name": "marketplace",
+      "startedAt": "2026-10-02T06:14:04Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-02T06:14:05Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-02T06:14:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:14:06Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v4",
+          "number": 2,
+          "startedAt": "2026-10-02T06:14:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:14:06Z",
+          "conclusion": "success",
+          "name": "shape (offline, blocking)",
+          "number": 3,
+          "startedAt": "2026-10-02T06:14:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:14:07Z",
+          "conclusion": "success",
+          "name": "pinned refs resolve to their shas (network failure only warns)",
+          "number": 4,
+          "startedAt": "2026-10-02T06:14:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:14:08Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v4",
+          "number": 8,
+          "startedAt": "2026-10-02T06:14:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T06:14:08Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 9,
+          "startedAt": "2026-10-02T06:14:08Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/OrenSegal/sous/actions/runs/36972567801/job/110729446712"
+    }
+  ],
+  "name": "ci",
+  "updatedAt": "2026-10-02T06:15:40Z",
+  "repository": "OrenSegal/sous"
+}

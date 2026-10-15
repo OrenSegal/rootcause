@@ -1,0 +1,20 @@
+# Recorded from github.com/OrenSegal/sous run 36946337909 (raw/ holds the gh output).
+# Truth set by hand: commit 66eb7dd75b made doctor treat GITHUB_ACTIONS as CI and
+# added the nine failing tests, which unset only CI, so they pass locally and fail
+# on Actions. The head commit fee0c00418 touches the same check but only moves it
+# into a helper, so blaming the last commit is wrong. Only the commit counts as
+# evidence here: the failing log lines don't tell the two commits apart. The fix,
+# f4af8a9908, unsets GITHUB_ACTIONS in the tests.
+id: 024-sous-ci-env
+title: Hardening pass for 0.3.0
+alert:
+  severity: ci
+  service: test-ubuntu-latest
+  summary: 'workflow ci failed on hardening/a-plus at fee0c00418: step ''install + doctor''
+    in job ''test (ubuntu-latest)'' failed.'
+truth:
+  category: bad_code_deploy
+  service: sous
+  required_evidence_any:
+  - 66eb7dd75b
+provenance: recorded

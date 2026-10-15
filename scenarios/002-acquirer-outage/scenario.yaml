@@ -1,0 +1,11 @@
+id: 002-acquirer-outage
+title: Card acquirer outage behind a fresh payments deploy
+alert:
+  service: payments
+  summary: payment error rate at 31% for 5 minutes.
+truth:
+  category: dependency_failure
+  service: card-gateway
+  required_evidence_any:
+  - log-0016
+  - m-cardgw-upstream-err

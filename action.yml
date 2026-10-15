@@ -1,0 +1,58 @@
+name: rootcause eval
+description: Run the rootcause incident-investigation evals and fail the job below a pass rate.
+inputs:
+  scenarios:
+    description: Directory of scenario directories.
+    default: scenarios
+  provider:
+    description: heuristic (no API key) or anthropic.
+    default: heuristic
+  model:
+    description: Model id for the anthropic provider.
+    default: claude-opus-5-5
+  effort:
+    description: low | medium | high | xhigh | max
+    default: high
+  mode:
+    description: single (one agent) or multi (orchestrator plus workers; needs a model).
+    default: single
+  budget-usd:
+    description: Hard spending cap per scenario run.
+    default: "0.50"
+  min-pass-rate:
+    description: Fail the job below this pass rate (0 to 1).
+    default: "1.0"
+  anthropic-api-key:
+    description: Required when provider is anthropic.
+    required: false
+outputs:
+  report:
+    description: Path to the JSON eval report.
+    value: ${{ steps.eval.outputs.report }}
+runs:
+  using: composite
+  steps:
+    - uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884 # v10.3.0
+      with:
+        python-version: "3.14"
+        version: "0.13.1"
+    - id: eval
+      shell: bash
+      working-directory: ${{ github.action_path }}
+      env:
+        ANTHROPIC_API_KEY: ${{ inputs.anthropic-api-key }}
+        SCENARIOS: ${{ inputs.scenarios }}
+      run: |
+        case "$SCENARIOS" in /*) dir="$SCENARIOS" ;; *) dir="$GITHUB_WORKSPACE/$SCENARIOS" ;; esac
+        [ -d "$dir" ] || dir="$SCENARIOS"
+        report="$RUNNER_TEMP/rootcause-report.json"
+        echo "report=$report" >> "$GITHUB_OUTPUT"
+        uv run --locked rootcause eval "$dir" \
+          --provider "${{ inputs.provider }}" \
+          --model "${{ inputs.model }}" \
+          --effort "${{ inputs.effort }}" \
+          --mode "${{ inputs.mode }}" \
+          --budget-usd "${{ inputs.budget-usd }}" \
+          --min-pass-rate "${{ inputs.min-pass-rate }}" \
+          --runlog "$RUNNER_TEMP/rootcause-runs.sqlite" \
+          --json-out "$report"

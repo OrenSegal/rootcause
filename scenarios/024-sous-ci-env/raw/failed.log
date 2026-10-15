@@ -1,0 +1,130 @@
+test (macos-latest)	install + doctor	﻿2026-10-02T00:30:57.1902500Z ##[group]Run bash tests/install.test.sh
+test (macos-latest)	install + doctor	2026-10-02T00:30:57.1902840Z ^[[36;1mbash tests/install.test.sh^[[0m
+test (macos-latest)	install + doctor	2026-10-02T00:30:57.1943210Z shell: /bin/bash -e {0}
+test (macos-latest)	install + doctor	2026-10-02T00:30:57.1943510Z ##[endgroup]
+test (macos-latest)	install + doctor	2026-10-02T00:32:03.0012810Z FAIL strict outside CI wants a probe: want=0 got=1
+test (macos-latest)	install + doctor	2026-10-02T00:32:03.1190550Z FAIL non-strict only notes it: want=0 got=1
+test (macos-latest)	install + doctor	2026-10-02T00:32:03.2827750Z FAIL recorded probe satisfies strict: want=0 got=1
+test (macos-latest)	install + doctor	2026-10-02T00:32:03.6752150Z FAIL changed settings need a fresh probe: want=0 got=1
+test (macos-latest)	install + doctor	2026-10-02T00:32:03.8437810Z FAIL plugin + project guard fails: want=1 got=0
+test (macos-latest)	install + doctor	2026-10-02T00:32:03.8462060Z sous harness (doctor) /private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/sous-test.X9BWyt/fresh
+test (macos-latest)	install + doctor	2026-10-02T00:32:03.8463340Z 
+test (macos-latest)	install + doctor	2026-10-02T00:32:03.8463890Z Layer 1 memory
+test (macos-latest)	install + doctor	2026-10-02T00:32:03.8465450Z   info  no CLAUDE.md / AGENTS.md (agent starts cold)
+test (macos-latest)	install + doctor	2026-10-02T00:32:03.8468250Z Layer 2 tools
+test (macos-latest)	install + doctor	2026-10-02T00:32:03.8468650Z   info  no project .mcp.json
+test (macos-latest)	install + doctor	2026-10-02T00:32:03.8469120Z Layer 3 permissions + sandbox
+test (macos-latest)	install + doctor	2026-10-02T00:32:03.8471400Z   ok    deny rules
+test (macos-latest)	install + doctor	2026-10-02T00:32:03.8471960Z   ok    sandbox enabled
+test (macos-latest)	install + doctor	2026-10-02T00:32:03.8472360Z   info  sandbox host: Seatbelt (/usr/bin/sandbox-exec) (CI runner, not enforced)
+test (macos-latest)	install + doctor	2026-10-02T00:32:03.8473610Z   info  escape hatch open: unsandboxed retries ask first (--strict closes it for unattended runs)
+test (macos-latest)	install + doctor	2026-10-02T00:32:03.8474440Z   skip  live probe record (kept in your ~/.claude, not the CI runner's)
+test (macos-latest)	install + doctor	2026-10-02T00:32:03.8475730Z   ok    no allow/ask/deny overlap
+test (macos-latest)	install + doctor	2026-10-02T00:32:03.8476700Z   ok    no duplicate rules
+test (macos-latest)	install + doctor	2026-10-02T00:32:03.8479420Z   ok    no rules for missing scripts
+test (macos-latest)	install + doctor	2026-10-02T00:32:03.8480870Z Layer 4 hooks
+test (macos-latest)	install + doctor	2026-10-02T00:32:03.8482420Z   ok    sous-guard: 35 passed, 0 failed (cached, unchanged)
+test (macos-latest)	install + doctor	2026-10-02T00:32:03.8483050Z   ok    adversarial: 216 passed, 0 failed (cached, unchanged)
+test (macos-latest)	install + doctor	2026-10-02T00:32:03.8485280Z   ok    guard answers in 11ms (budget 500ms)
+test (macos-latest)	install + doctor	2026-10-02T00:32:03.8485830Z Layer 5 gates
+test (macos-latest)	install + doctor	2026-10-02T00:32:03.8486660Z   ok    push / commit / unsandboxed retry ask first
+test (macos-latest)	install + doctor	2026-10-02T00:32:03.8487120Z   skip  user scope (a CI runner's $HOME is not yours)
+test (macos-latest)	install + doctor	2026-10-02T00:32:03.8487840Z Feedback loop
+test (macos-latest)	install + doctor	2026-10-02T00:32:03.8488280Z   info  2 blocks in 30 days, most often: force push (2x); `sous report` to tune
+test (macos-latest)	install + doctor	2026-10-02T00:32:03.8488820Z 
+test (macos-latest)	install + doctor	2026-10-02T00:32:03.8489010Z sous: all layers hold.
+test (macos-latest)	install + doctor	2026-10-02T00:32:03.9427890Z FAIL double guard names the fix: want=0 got=1
+test (macos-latest)	install + doctor	2026-10-02T00:32:04.0064160Z FAIL install warns about the double guard: want=0 got=1
+test (macos-latest)	install + doctor	2026-10-02T00:32:04.2401680Z FAIL plugin-only guard is enough: want=0 got=1
+test (macos-latest)	install + doctor	2026-10-02T00:32:04.2426080Z sous harness (doctor) /private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/sous-test.X9BWyt/pluginonly
+test (macos-latest)	install + doctor	2026-10-02T00:32:04.2426640Z 
+test (macos-latest)	install + doctor	2026-10-02T00:32:04.2426700Z Layer 1 memory
+test (macos-latest)	install + doctor	2026-10-02T00:32:04.2427030Z   info  no CLAUDE.md / AGENTS.md (agent starts cold)
+test (macos-latest)	install + doctor	2026-10-02T00:32:04.2720540Z Layer 2 tools
+test (macos-latest)	install + doctor	2026-10-02T00:32:04.2720900Z   info  no project .mcp.json
+test (macos-latest)	install + doctor	2026-10-02T00:32:04.2721260Z Layer 3 permissions + sandbox
+test (macos-latest)	install + doctor	2026-10-02T00:32:04.2721540Z   ok    deny rules
+test (macos-latest)	install + doctor	2026-10-02T00:32:04.2721810Z   ok    sandbox enabled
+test (macos-latest)	install + doctor	2026-10-02T00:32:04.2722210Z   info  sandbox host: Seatbelt (/usr/bin/sandbox-exec) (CI runner, not enforced)
+test (macos-latest)	install + doctor	2026-10-02T00:32:04.2722900Z   info  escape hatch open: unsandboxed retries ask first (--strict closes it for unattended runs)
+test (macos-latest)	install + doctor	2026-10-02T00:32:04.2723430Z   skip  live probe record (kept in your ~/.claude, not the CI runner's)
+test (macos-latest)	install + doctor	2026-10-02T00:32:04.2723860Z   ok    no allow/ask/deny overlap
+test (macos-latest)	install + doctor	2026-10-02T00:32:04.2724110Z   ok    no duplicate rules
+test (macos-latest)	install + doctor	2026-10-02T00:32:04.2724490Z   ok    no rules for missing scripts
+test (macos-latest)	install + doctor	2026-10-02T00:32:04.2724750Z Layer 4 hooks
+test (macos-latest)	install + doctor	2026-10-02T00:32:04.2725090Z   FAIL  no PreToolUse hook carries the sous guard
+test (macos-latest)	install + doctor	2026-10-02T00:32:04.2725460Z Layer 5 gates
+test (macos-latest)	install + doctor	2026-10-02T00:32:04.2725690Z   ok    push / commit / unsandboxed retry ask first
+test (macos-latest)	install + doctor	2026-10-02T00:32:04.2726100Z   skip  user scope (a CI runner's $HOME is not yours)
+test (macos-latest)	install + doctor	2026-10-02T00:32:04.2726390Z Feedback loop
+test (macos-latest)	install + doctor	2026-10-02T00:32:04.2727530Z   info  2 blocks in 30 days, most often: force push (2x); `sous report` to tune
+test (macos-latest)	install + doctor	2026-10-02T00:32:04.2727840Z 
+test (macos-latest)	install + doctor	2026-10-02T00:32:04.2727900Z sous: 1 layer check(s) failed.
+test (macos-latest)	install + doctor	2026-10-02T00:32:04.4596290Z FAIL plugin hooks.json pointing at a missing file is named: want=0 got=1
+test (macos-latest)	install + doctor	2026-10-02T00:32:07.0411250Z 125 passed, 9 failed
+test (macos-latest)	install + doctor	2026-10-02T00:32:07.0583580Z ##[error]Process completed with exit code 1.
+test (ubuntu-latest)	install + doctor	﻿2026-10-02T00:30:46.2610352Z ##[group]Run bash tests/install.test.sh
+test (ubuntu-latest)	install + doctor	2026-10-02T00:30:46.2610713Z ^[[36;1mbash tests/install.test.sh^[[0m
+test (ubuntu-latest)	install + doctor	2026-10-02T00:30:46.2678424Z shell: /usr/bin/bash -e {0}
+test (ubuntu-latest)	install + doctor	2026-10-02T00:30:46.2678712Z ##[endgroup]
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:23.4958780Z FAIL strict outside CI wants a probe: want=0 got=1
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:23.5836256Z FAIL non-strict only notes it: want=0 got=1
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:23.7210888Z FAIL recorded probe satisfies strict: want=0 got=1
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:23.9175750Z FAIL changed settings need a fresh probe: want=0 got=1
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.0554114Z FAIL plugin + project guard fails: want=1 got=0
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.0564550Z sous harness (doctor) /tmp/sous-test.3CbNHq/fresh
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.0564931Z 
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.0570234Z Layer 1 memory
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.0570670Z   info  no CLAUDE.md / AGENTS.md (agent starts cold)
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.0571179Z Layer 2 tools
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.0571498Z   info  no project .mcp.json
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.0571854Z Layer 3 permissions + sandbox
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.0572262Z   ok    deny rules
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.0572662Z   ok    sandbox enabled
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.0573234Z   info  sandbox host: bubblewrap + socat: missing bwrap, socat (CI runner, not enforced)
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.0574260Z   info  escape hatch open: unsandboxed retries ask first (--strict closes it for unattended runs)
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.0575372Z   skip  live probe record (kept in your ~/.claude, not the CI runner's)
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.0575963Z   ok    no allow/ask/deny overlap
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.0576373Z   ok    no duplicate rules
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.0576725Z   ok    no rules for missing scripts
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.0577112Z Layer 4 hooks
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.0577564Z   ok    sous-guard: 35 passed, 0 failed (cached, unchanged)
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.0578146Z   ok    adversarial: 216 passed, 0 failed (cached, unchanged)
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.0578708Z   ok    guard answers in 10ms (budget 500ms)
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.0579122Z Layer 5 gates
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.0579483Z   ok    push / commit / unsandboxed retry ask first
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.0580503Z   skip  user scope (a CI runner's $HOME is not yours)
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.0580995Z Feedback loop
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.0581524Z   info  2 blocks in 30 days, most often: force push (2x); `sous report` to tune
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.0582020Z 
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.0582170Z sous: all layers hold.
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.1442174Z FAIL double guard names the fix: want=0 got=1
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.1977139Z FAIL install warns about the double guard: want=0 got=1
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.3617124Z FAIL plugin-only guard is enough: want=0 got=1
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.3627466Z sous harness (doctor) /tmp/sous-test.3CbNHq/pluginonly
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.3627885Z 
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.3628024Z Layer 1 memory
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.3628360Z   info  no CLAUDE.md / AGENTS.md (agent starts cold)
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.3628688Z Layer 2 tools
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.3628943Z   info  no project .mcp.json
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.3629215Z Layer 3 permissions + sandbox
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.3629456Z   ok    deny rules
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.3629722Z   ok    sandbox enabled
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.3630102Z   info  sandbox host: bubblewrap + socat: missing bwrap, socat (CI runner, not enforced)
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.3630959Z   info  escape hatch open: unsandboxed retries ask first (--strict closes it for unattended runs)
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.3631800Z   skip  live probe record (kept in your ~/.claude, not the CI runner's)
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.3632384Z   ok    no allow/ask/deny overlap
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.3632774Z   ok    no duplicate rules
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.3633141Z   ok    no rules for missing scripts
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.3633515Z Layer 4 hooks
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.3633890Z   FAIL  no PreToolUse hook carries the sous guard
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.3634349Z Layer 5 gates
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.3634712Z   ok    push / commit / unsandboxed retry ask first
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.3635372Z   skip  user scope (a CI runner's $HOME is not yours)
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.3635676Z Feedback loop
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.3636061Z   info  2 blocks in 30 days, most often: force push (2x); `sous report` to tune
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.3636638Z 
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.3636742Z sous: 1 layer check(s) failed.
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:24.5024618Z FAIL plugin hooks.json pointing at a missing file is named: want=0 got=1
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:26.5390558Z 125 passed, 9 failed
+test (ubuntu-latest)	install + doctor	2026-10-02T00:31:26.5493752Z ##[error]Process completed with exit code 1.

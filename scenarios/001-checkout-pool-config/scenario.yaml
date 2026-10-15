@@ -1,0 +1,12 @@
+id: 001-checkout-pool-config
+title: Checkout deploy shrinks the DB connection pool
+alert:
+  service: checkout
+  summary: p99 latency above 2s for 10 minutes and error rate at 8%. Payments is also paging
+    on elevated upstream errors.
+truth:
+  category: config_change
+  service: checkout
+  required_evidence_any:
+  - cfg:d-1042:DB_POOL_MAX
+  - d-1042

@@ -1,0 +1,13 @@
+[
+  {
+    "id": "d-1201",
+    "service": "signup",
+    "version": "5.6.0",
+    "ts": "2026-10-14T13:14:00Z",
+    "author": "mo",
+    "summary": "Reword welcome screen",
+    "config_before": {},
+    "config_after": {},
+    "files": []
+  }
+]

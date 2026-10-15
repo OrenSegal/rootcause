@@ -1,0 +1,19 @@
+# Recorded from github.com/OrenSegal/sous run 36972567801 (raw/ holds the gh output).
+# Truth set by hand: commit 7dbc2abc9e added the handoff mod to
+# .claude-plugin/marketplace.json but not to the README toolkit table, which
+# tests/install.test.sh requires to match. The next commit, 89421994c3, added the row.
+id: 023-sous-readme-table
+title: 'Add handoff mod: write LATEST.md and LATEST.patch after each turn'
+alert:
+  severity: ci
+  service: test-ubuntu-latest
+  summary: 'workflow ci failed on feat/handoff-mod at 7dbc2abc9e: step ''install + doctor''
+    in job ''test (ubuntu-latest)'' failed.'
+truth:
+  category: bad_code_deploy
+  service: sous
+  required_evidence_any:
+  - 7dbc2abc9e
+  - log-0015
+  - log-0004
+provenance: recorded

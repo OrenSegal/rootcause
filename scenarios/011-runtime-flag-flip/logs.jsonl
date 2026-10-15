@@ -1,0 +1,18 @@
+{"id":"log-0001","ts":"2026-10-14T13:00:00Z","service":"checkout","level":"info","message":"POST /checkout 200 in 150ms","trace_id":null}
+{"id":"log-0002","ts":"2026-10-14T13:01:00Z","service":"pricing","level":"info","message":"quote computed in 9ms","trace_id":null}
+{"id":"log-0003","ts":"2026-10-14T13:04:00Z","service":"checkout","level":"info","message":"POST /checkout 200 in 150ms","trace_id":null}
+{"id":"log-0004","ts":"2026-10-14T13:05:00Z","service":"pricing","level":"info","message":"quote computed in 9ms","trace_id":null}
+{"id":"log-0005","ts":"2026-10-14T13:08:00Z","service":"checkout","level":"info","message":"POST /checkout 200 in 150ms","trace_id":null}
+{"id":"log-0006","ts":"2026-10-14T13:09:00Z","service":"pricing","level":"info","message":"quote computed in 9ms","trace_id":null}
+{"id":"log-0007","ts":"2026-10-14T13:12:00Z","service":"checkout","level":"info","message":"POST /checkout 200 in 150ms","trace_id":null}
+{"id":"log-0008","ts":"2026-10-14T13:13:00Z","service":"pricing","level":"info","message":"quote computed in 9ms","trace_id":null}
+{"id":"log-0009","ts":"2026-10-14T13:16:00Z","service":"checkout","level":"info","message":"POST /checkout 200 in 150ms","trace_id":null}
+{"id":"log-0010","ts":"2026-10-14T13:17:00Z","service":"pricing","level":"info","message":"quote computed in 9ms","trace_id":null}
+{"id":"log-0011","ts":"2026-10-14T13:19:30Z","service":"pricing","level":"info","message":"runtime flag PRICING_STACKED_DISCOUNTS changed false -> true (source: flag service, actor: priya, rollout 100%)","trace_id":null}
+{"id":"log-0012","ts":"2026-10-14T13:20:00Z","service":"checkout","level":"error","message":"order total mismatch: cart=84.20 quote=71.57; rejecting order","trace_id":null}
+{"id":"log-0018","ts":"2026-10-14T13:20:30Z","service":"pricing","level":"warn","message":"discount stack depth 3 exceeds expected 1 for sku 4410","trace_id":null}
+{"id":"log-0013","ts":"2026-10-14T13:21:00Z","service":"checkout","level":"error","message":"order total mismatch: cart=84.20 quote=71.57; rejecting order","trace_id":null}
+{"id":"log-0014","ts":"2026-10-14T13:22:00Z","service":"checkout","level":"error","message":"order total mismatch: cart=84.20 quote=71.57; rejecting order","trace_id":null}
+{"id":"log-0015","ts":"2026-10-14T13:24:00Z","service":"checkout","level":"error","message":"order total mismatch: cart=84.20 quote=71.57; rejecting order","trace_id":null}
+{"id":"log-0016","ts":"2026-10-14T13:27:00Z","service":"checkout","level":"error","message":"order total mismatch: cart=84.20 quote=71.57; rejecting order","trace_id":null}
+{"id":"log-0017","ts":"2026-10-14T13:31:00Z","service":"checkout","level":"error","message":"order total mismatch: cart=84.20 quote=71.57; rejecting order","trace_id":null}
