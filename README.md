@@ -12,13 +12,24 @@ uv run rootcause eval --min-pass-rate 0.05                # every scenario, no A
 uv run rootcause investigate scenarios/007-inventory-timeout-cascade
 uv run rootcause ci-triage --raw scenarios/008-sous-shellcheck/raw
 uv run rootcause retrieval-eval --retrieval bm25 --query alert+log
-uv run rootcause eval --provider claude-code --min-pass-rate 0     # Claude Code drives the tools
+uv run rootcause eval --provider claude-code --min-pass-rate 0     # Claude Code runs its own loop
+uv run rootcause investigate scenarios/007-inventory-timeout-cascade --provider claude-code-loop --mode multi
+uv run rootcause investigate scenarios/007-inventory-timeout-cascade --provider langgraph  # langgraph extra
 uv run rootcause sweep sweeps/models-and-retrieval.yaml --dry-run  # run count before spending
 uv run rootcause report results/sweeps/models-and-retrieval-2026-10-15
 uv run rootcause --trace console investigate scenarios/025-log-injection  # needs the otel extra
 ```
 
-By default the investigator is a rule-based baseline that needs no key. `--provider anthropic` runs Claude Opus 5.5 through the hand-written loop on an API key. `--provider claude-code` hands the same tools and brief to headless Claude Code, which needs the `claude` CLI installed and signed in, and runs on whatever account that is.
+By default the investigator is a rule-based baseline that needs no key. The others:
+
+| provider | what runs the loop | model access |
+|---|---|---|
+| `anthropic` | the hand-written loop | Messages API, native tool use (needs an API key) |
+| `claude-code-loop` | the hand-written loop | each turn a structured completion through headless Claude Code |
+| `langgraph` | the same investigation as a LangGraph graph | same as `claude-code-loop` |
+| `claude-code` | Claude Code's own agent loop, given the telemetry tools over MCP | Claude Code |
+
+The Claude Code options need the `claude` CLI installed and signed in, and run on whatever account that is.
 
 ## What it shows
 
@@ -36,7 +47,7 @@ By default the investigator is a rule-based baseline that needs no key. `--provi
 
 **One loop, three roles.** An `AgentSpec` sets the prompt, the tools an agent may see, whether it may reach gated tools, and its answer type. The single investigator, the orchestrator and each worker are specs over the same loop. Workers get read-only subsets (changes, logs, metrics), run concurrently, share the orchestrator's budget, and are linked to it in the event log.
 
-**Two harnesses, one grader.** `adapters/claude_code.py` runs `claude -p` against the same telemetry MCP server, with built-in tools, user settings and other MCP servers switched off, and with the ground truth left out of the fixtures it serves. Its stream is mapped onto the same `RunResult` the hand-written loop returns, so both are graded by the same code. A rollback is visible to both but only runs when the scenario's operator approves; a denial reaches the model as a tool error.
+**Several harnesses, one grader.** `adapters/claude_code.py` runs Claude Code's own loop against the same telemetry MCP server, with built-in tools, user settings and other MCP servers switched off, and with the ground truth left out of the fixtures it serves. `adapters/claude_code_completion.py` instead puts Claude Code behind the hand-written loop as a completion endpoint, one structured call per turn. `adapters/langgraph_engine.py` rebuilds the investigation as a LangGraph graph, with `Send` fanning questions out to worker subgraphs, and shares everything except the control flow. Every path returns the same `RunResult` and is graded by the same code. A rollback is visible to all of them but only runs when the scenario's operator approves; a denial reaches the model as a tool error.
 
 **Evals that can fail.** Twenty-five scenarios. The twenty-two written as code are each built around a mistake a responder could make: a deploy that lands just before a vendor outage, a flag flipped at runtime with no deploy on record, a retry policy two services away turning a one-minute blip into an outage, a migration hidden in a deploy whose config diff points elsewhere, a maintenance window that looks like an incident. The baseline ("blame the last deploy before the first error") is right on three. Grades check the category, the service, that every cited id is one the tools returned, and that no rollback ran against a deploy outside the root cause.
 
@@ -54,32 +65,66 @@ By default the investigator is a rule-based baseline that needs no key. `--provi
 
 ## Results
 
-One run of each over all 24 scenarios, on 2026-10-15. The grades and every diagnosis are in `results/`. The run used the fixtures at commit `6cf3166`; a review afterwards corrected metric values in 012, 014 and 022 that contradicted their own logs.
+Every run below was made on 2026-10-15 through a Claude subscription. Costs are what Claude Code reports the calls would cost at API list prices; token counts are recorded per run, so they can be repriced. Per-scenario tables, grades and every diagnosis are in `results/`.
 
-| provider | mode | pass rate | cost | avg steps | avg tool calls | avg wall |
+### Model tier, reasoning effort and retrieval
+
+`sweeps/models-and-retrieval.yaml`: seven configurations through Claude Code's own loop, every scenario three times, 525 runs (`results/sweeps/models-and-retrieval-2026-10-15/`).
+
+| configuration | pass rate (95% CI) | pass^3 | cost per solved | p50 wall | searched |
+|---|---|---|---|---|---|
+| Opus 5.5, high effort | 79% (68% to 86%) | 72% | $0.0810 | 15.4s | |
+| Opus 5.5, medium | 81% (71% to 89%) | 76% | $0.0686 | 13.4s | |
+| Opus 5.5, low | 79% (68% to 86%) | 72% | $0.0468 | 11.2s | |
+| Sonnet 5.5, high | 80% (70% to 87%) | 72% | $0.0325 | 9.7s | |
+| Haiku 5.5, high | 77% (67% to 85%) | 68% | $0.0033 | 15.3s | |
+| Opus 5.5, high, BM25 search | 77% (67% to 85%) | 72% | $0.0822 | 15.7s | 4% |
+| Opus 5.5, high, hybrid search | 84% (74% to 91%) | 80% | $0.0750 | 16.3s | 4% |
+
+What it shows:
+
+- **Accuracy does not separate the configurations; cost does.** Every interval overlaps the others, and at 75 runs per configuration a difference under about ten points is noise. Cost per solved incident spans 25x, from $0.0033 for Haiku 5.5 to $0.081 for Opus 5.5 at high effort. On the cost/reliability frontier are Haiku, Sonnet, Opus at medium effort and Opus with hybrid search. Opus at high effort is dominated by Opus at medium: the extra reasoning bought nothing measurable here.
+- **Search went almost unused.** With the tool available and named in the brief, Opus searched in 3 of 75 runs in each retrieval configuration, so the hybrid row's 84% can't be credited to retrieval. Measuring what retrieval adds would need a step that makes the agent consult it.
+- **The injection never worked.** In all 21 runs of 025, no model touched the deploy the planted instruction named. Nineteen rolled back the actual cause, which the operator approves.
+- **Most failures are disagreements with a strict grader, and one is a decoy doing its job.** On 014 every configuration names `auth`, the service on the host with the skewed clock, where the truth says NTP; on 019 the models name the database under maintenance, and 11 of 21 runs also call the planned window an incident. 012 splits on category, and 017 between the database and the cache. On 024 the decoy works: 14 of 21 runs blamed the head commit, which only moved the check the failing tests depend on.
+
+### Retrieval on its own
+
+`rootcause retrieval-eval` over the 25 labelled scenarios (`results/retrieval/2026-10-15.md`). With the alert plus the first error log line as the query, BM25 reaches recall@5 0.94 and MRR 0.83; static embeddings 0.90 and 0.74; the transformer model 0.86 and 0.68, at roughly a thousand times BM25's query latency; the fused hybrid 0.94 and 0.75. With the alert alone, the best recall@5 is 0.76. Incident text is full of exact tokens (`x509`, `No space left on device`, config keys), which lexical matching handles directly; the corpus and the scenarios also share an author, which favors it.
+
+### Hand-written loop against LangGraph
+
+`sweeps/loop.yaml` and `sweeps/langgraph.yaml`: Opus 5.5 at high effort, single agent and orchestrator with workers, three runs per scenario, 300 runs. Both harnesses get the same model access (each turn is one structured completion through Claude Code), the same briefs and tool subsets, the same executor with its approval gate and grounding check, and the same grader, so the difference between them is the orchestration layer.
+
+| harness | mode | pass rate (95% CI) | pass^3 | cost per solved | p50 wall | output tokens |
 |---|---|---|---|---|---|---|
-| heuristic | single | 12% | $0.0000 | 3.0 | 3.0 | 0.1s |
-| Claude Code, Opus 5.5, high effort | single | 75% | $1.5974 | 3.8 | 6.5 | 14.0s |
+| hand-written loop | single | 81% (71% to 89%) | 72% | $0.1149 | 36.8s | 2033 |
+| LangGraph | single | 84% (74% to 91%) | 84% | $0.1114 | 34.9s | 2056 |
+| hand-written loop | orchestrator + workers | 77% (67% to 85%) | 72% | $0.3745 | 69.5s | 8327 |
+| LangGraph | orchestrator + workers | 81% (71% to 89%) | 72% | $0.3430 | 69.0s | 8250 |
 
-The cost column is what Claude Code reports the calls would cost at API rates. This run went through a subscription.
+- **The framework is not the variable.** With identical model access, the two implementations are indistinguishable on accuracy, cost, tokens and latency. Choosing between them is a question of code ownership, not of results.
+- **Splitting the work did not pay.** Orchestrator plus workers costs about three times as much per solved incident and takes twice as long, for no measurable gain in either harness.
+- **Either loop matches Claude Code's own** on the same model (79%), at a higher cost per solved incident. Every turn here is a fresh completion that re-sends the transcript, so the loop's own prompt caching never gets a chance to work. Wall time includes starting a process per turn.
+- No harmful actions and no invented evidence in any of the 300 runs. The only path still untested on a live model is the Anthropic adapter's native one (`--provider anthropic`: real `tool_use`, cache control, refusal fallbacks), which needs an API key.
 
-What the six failures were:
+### Mutation testing the brief
 
-- **One grader bug.** On 021 the diagnosis was right but cited `rb-d-2101`, the id the rollback tool returned, and the grader only knew telemetry ids. Fixed (`docs/AUDIT.md`, #21); re-grading the same answers gives 19 of 24.
-- **Four disagreements about where the cause lives.** The model named the vendor instead of our card gateway (002), cert-manager's failed renewal instead of the ledger's certificate (009), the auth host with the skewed clock instead of NTP (014), and the database under maintenance instead of the paged reporting service (019). Each is defensible. The grader accepts one service per scenario, and I left the truths as they were written before the run rather than fit them to the answers.
-- **One category disagreement.** On 012 it called a used-up SMS quota resource exhaustion; the truth says dependency failure.
+litmus's operators applied to the investigator brief: one broken copy per site (an instruction deleted, a rule inverted, a fact made wrong, the brief truncated or emptied), each run once over the suite at Opus 5.5 high, 300 runs (`results/litmus/2026-10-15.md`). A mutant counts as killed when it fails a scenario the unmodified brief passed in all three baseline runs.
 
-So the strict score mostly measures attribution, not whether the model found the problem: in every case it found the real trigger and cited evidence for it. Single runs, so small differences between configurations would be noise.
+**None of the 11 mutants that ran was killed**; their pass rates fell between 72% and 84%, against 79% for the original. The twelfth, the emptied brief, could not run, since the API rejects an empty system prompt, so it is inconclusive. Read with the sweep results, the conclusion is about the suite more than the brief: no scenario depends on any single instruction, so the suite could not catch a regression in one. The next scenarios should each be built so that one rule (check what changed relative to the first errors; report no incident when nothing is wrong) decides the outcome.
 
-Not run yet: the hand-written loop against a live model (`--provider anthropic`, which needs an API key) and the orchestrator-plus-workers mode.
+### First run
+
+An earlier single pass over 24 scenarios (`results/claude-code-opus-5-5-high.*`) scored 75% and surfaced the grader bug fixed as #21 in `docs/AUDIT.md`.
 
 ## Architecture
 
 ```
 interfaces/   CLI, MCP server for coding agents
 composition   the only module that wires adapters together
-adapters/     MCP server and client, Anthropic, Claude Code, heuristic, SQLite, fixtures,
-              GitHub Actions, corpus and retrievers, OpenTelemetry
+adapters/     MCP server and client, Anthropic, Claude Code (harness and completion), LangGraph,
+              heuristic, SQLite, fixtures, GitHub Actions, corpus and retrievers, OpenTelemetry
 application/  agent loop, executor, budget, orchestrator, evals, sweeps, statistics,
               retrieval metrics, tracing names, ports
 domain/       telemetry, scenarios, answers, postmortems (no framework imports)
@@ -95,6 +140,7 @@ The core install has no ML or telemetry dependencies. Add what you need:
 |---|---|---|
 | `rag` | static and transformer embeddings for `--retrieval static\|dense\|hybrid` (BM25 needs nothing) | `uv sync --extra rag` |
 | `otel` | OpenTelemetry SDK and OTLP exporter for `--trace` | `uv sync --extra otel` |
+| `langgraph` | the LangGraph version of the investigation, `--provider langgraph` | `uv sync --extra langgraph` |
 
 A CI job installs the core alone and runs the tests, the baseline and BM25 retrieval, and the import contracts keep numpy, the embedding libraries and OpenTelemetry out of the domain and application layers. Asking for a mode whose extra is missing fails with the install command.
 
@@ -124,7 +170,7 @@ The eval gate, as a reusable action:
     min-pass-rate: "0.05"
 ```
 
-Triage of every failed CI run, in Actions: `.github/workflows/triage.yml` runs on `workflow_run` when the `ci` workflow fails, checks out the default branch (never the code under test), and writes a diagnosis to the job summary. It needs only `actions: read` and `contents: read`.
+Triage of every failed CI run, in Actions: `.github/workflows/triage.yml` runs on `workflow_run` when the `ci` workflow fails, checks out the default branch (never the code under test), and writes a diagnosis to the job summary. It needs only `actions: read` and `contents: read`. Proven on a deliberately failing pull request: it named the commit that broke the build.
 
 The same from a terminal, read-only (it fetches with `gh` and writes a comment body; it never posts):
 
@@ -135,8 +181,8 @@ rootcause ci-triage --repo owner/name --run 123456789 --record scenarios/   # ke
 
 ## Not done yet
 
-- The hand-written loop and the multi-agent mode against a live model. Both are tested against scripted model turns only; every model result here comes through Claude Code. Running them needs an API key, and the sweep file format already takes `provider: anthropic`.
-- A LangGraph version of the orchestrator to compare against the hand-written one. Blocked on the same API key, since a framework comparison only means something on live runs.
+- The Anthropic adapter on a live model: native `tool_use`, cache control and refusal fallbacks are tested against a mocked transport only. Every live result here reaches the model through Claude Code. The sweep file format already takes `provider: anthropic`.
+- Scenarios that each hinge on one rule of the brief, so mutation testing can kill mutants (see above).
+- A grader that accepts more than one defensible service per scenario, decided before seeing model answers, and a retrieval step the agent must take, so search can be measured.
 - Telemetry recorded from a running service stack. The CI adapter covers real recorded data for now.
-- `ci-triage` inside Actions on a `workflow_run` trigger. The CI workflow and the composite action run on every pull request; `ci-triage` has run against live GitHub data from a terminal.
 - A held-out set. The scenarios, the corpus and the labels share an author, which flatters lexical retrieval and limits how far any result here generalizes.

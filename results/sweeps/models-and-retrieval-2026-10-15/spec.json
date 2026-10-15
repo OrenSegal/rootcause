@@ -1,0 +1,70 @@
+{
+  "name": "models-and-retrieval-2026-10-15",
+  "repeats": 3,
+  "scenarios": "scenarios",
+  "configs": [
+    {
+      "name": "opus-5.5-high",
+      "provider": "claude-code",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "mode": "single",
+      "retrieval": "none",
+      "budget_usd": 1.0
+    },
+    {
+      "name": "opus-5.5-medium",
+      "provider": "claude-code",
+      "model": "claude-opus-5-5",
+      "effort": "medium",
+      "mode": "single",
+      "retrieval": "none",
+      "budget_usd": 1.0
+    },
+    {
+      "name": "opus-5.5-low",
+      "provider": "claude-code",
+      "model": "claude-opus-5-5",
+      "effort": "low",
+      "mode": "single",
+      "retrieval": "none",
+      "budget_usd": 1.0
+    },
+    {
+      "name": "sonnet-5.5-high",
+      "provider": "claude-code",
+      "model": "claude-sonnet-5-5",
+      "effort": "high",
+      "mode": "single",
+      "retrieval": "none",
+      "budget_usd": 1.0
+    },
+    {
+      "name": "haiku-5.5-high",
+      "provider": "claude-code",
+      "model": "claude-haiku-5-5",
+      "effort": "high",
+      "mode": "single",
+      "retrieval": "none",
+      "budget_usd": 1.0
+    },
+    {
+      "name": "opus-5.5-high-bm25",
+      "provider": "claude-code",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "mode": "single",
+      "retrieval": "bm25",
+      "budget_usd": 1.0
+    },
+    {
+      "name": "opus-5.5-high-hybrid",
+      "provider": "claude-code",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "mode": "single",
+      "retrieval": "hybrid",
+      "budget_usd": 1.0
+    }
+  ]
+}
