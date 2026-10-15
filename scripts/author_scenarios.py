@@ -457,7 +457,7 @@ def sms_quota_exhausted() -> ScenarioBuilder:
         "sms-gateway",
         "provider_quota_remaining",
         "messages",
-        {m: max(0.0, 31000.0 - m * 1720.0) for m in range(0, 40, 2)},
+        {m: max(0.0, 30960.0 - m * 1720.0) for m in range(0, 40, 2)},
     )
     b.step_series("m-signup-err", "signup", "http_error_rate", "ratio", 0.003, 0.35, 18)
     assert first
@@ -531,7 +531,7 @@ def clock_skew() -> ScenarioBuilder:
         12,
         "ntp",
         "error",
-        "chronyd on ip-10-0-5-21: no reachable sources; clock unsynchronised, offset +94.2s",
+        "chronyd on ip-10-0-5-21: no reachable sources; clock unsynchronised, free-running",
     )
     for m in range(0, 20, 4):
         b.log(m, "api-gateway", "info", "GET /v1/orders 200 in 40ms")
@@ -868,7 +868,7 @@ def slow_connection_leak() -> ScenarioBuilder:
         "notifications",
         "db_pool_in_use",
         "connections",
-        {m: min(100.0, round(64 + (m + 180) * 0.17, 1)) for m in range(-180, 40, 10)},
+        {m: min(100.0, round(64 + (m + 180) * 0.172, 1)) for m in range(-180, 40, 10)},
     )
     b.step_series("m-notif-err", "notifications", "http_error_rate", "ratio", 0.002, 0.9, 30)
     assert first

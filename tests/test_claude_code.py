@@ -9,6 +9,7 @@ from pathlib import Path
 
 from conftest import SCENARIOS
 
+from rootcause.adapters import claude_code
 from rootcause.adapters.claude_code import (
     ClaudeCodeHarness,
     allowed_tools,
@@ -35,7 +36,7 @@ def lines() -> list[str]:
 
 
 def test_stream_maps_to_a_gradable_run():
-    result = parse_stream(lines(), run_id="r1", gated=GATED)
+    result = parse_stream(lines(), run_id="r1", gated=GATED, approve=False)
     assert result.outcome is Outcome.ANSWERED
     assert result.answer is not None
     assert result.answer.category is Category.BAD_CODE_DEPLOY
@@ -72,12 +73,12 @@ def result_line(subtype: str, structured: object = None) -> str:
 
 def test_harness_limits_map_to_outcomes():
     def outcome(line: str) -> Outcome:
-        return parse_stream([line], run_id="r", gated=GATED).outcome
+        return parse_stream([line], run_id="r", gated=GATED, approve=False).outcome
 
     assert outcome(result_line("error_max_turns")) is Outcome.STEP_LIMIT
     assert outcome(result_line("error_max_budget_usd")) is Outcome.BUDGET_EXCEEDED
     assert outcome(result_line("success", {"category": "not-a-category"})) is Outcome.NO_ANSWER
-    assert parse_stream([], run_id="r", gated=GATED).outcome is Outcome.ERROR
+    assert parse_stream([], run_id="r", gated=GATED, approve=False).outcome is Outcome.ERROR
 
 
 def test_command_offers_only_the_telemetry_server(tmp_path):
@@ -147,7 +148,7 @@ def test_an_approved_rollback_id_counts_as_returned_evidence():
     """The rollback tool returns an action id, so citing it is not inventing evidence.
     Found when Claude Code cited rb-d-2101 on scenario 021 and was graded as inventing it."""
     case = load_case(CASE_005)
-    denied = parse_stream(lines(), run_id="r", gated=GATED)
+    denied = parse_stream(lines(), run_id="r", gated=GATED, approve=False)
     assert denied.answer is not None
     cited = denied.answer.model_copy(update={"evidence": [*denied.answer.evidence, "rb-d-5001"]})
     calls = [
@@ -165,3 +166,48 @@ def test_an_approved_rollback_id_counts_as_returned_evidence():
     assert graded(approved).passed
     # A denied rollback returned no action id, so citing one is still invented.
     assert graded(denied.model_copy(update={"answer": cited})).invented_evidence == ["rb-d-5001"]
+
+
+def parse(raw: list[str], approve: bool = False):
+    return parse_stream(raw, run_id="r", gated=GATED, approve=approve)
+
+
+def test_a_truncated_line_is_an_error_not_a_crash():
+    result = parse([*lines()[:3], '{"type": "assist'])
+    assert result.outcome is Outcome.ERROR
+    assert "unparseable" in result.note
+
+
+def test_a_harness_failure_is_not_blamed_on_the_model():
+    line = json.dumps({"type": "result", "subtype": "success", "is_error": True, "result": "401"})
+    result = parse([line])
+    assert result.outcome is Outcome.ERROR
+    assert "401" in result.note
+
+
+def test_an_unapproved_rollback_is_never_marked_approved():
+    """Cut off after the rollback call, before any denial arrived."""
+    raw = lines()
+    cut = raw[: next(i for i, line in enumerate(raw) if "rollback_deploy" in line) + 1]
+    rollback = next(c for c in parse(cut).tool_calls if c.name == "rollback_deploy")
+    assert rollback.approved is False
+    approved = next(c for c in parse(cut, approve=True).tool_calls if c.name == "rollback_deploy")
+    assert approved.approved is True
+
+
+async def test_spawn_reports_exit_code_and_stderr(tmp_path):
+    out = await claude_code.spawn_claude(
+        ["sh", "-c", 'echo \'{"type": "x"}\'; echo bad login >&2; exit 3'], tmp_path
+    )
+    result = parse(out)
+    assert result.outcome is Outcome.ERROR
+    assert "exit 3" in result.note and "bad login" in result.note
+
+
+async def test_spawn_keeps_partial_output_and_kills_on_timeout(tmp_path, monkeypatch):
+    monkeypatch.setattr(claude_code, "TIMEOUT_S", 2.0)  # room for a slow sh start
+    out = await claude_code.spawn_claude(
+        ["sh", "-c", 'echo \'{"type": "x"}\'; exec sleep 30'], tmp_path
+    )
+    assert json.loads(out[0]) == {"type": "x"}
+    assert "timed out" in parse(out).note
