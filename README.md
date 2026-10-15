@@ -16,7 +16,7 @@ uv run rootcause compare --provider heuristic --provider anthropic --budget-usd 
 # ^ paid API calls: 48 investigations (24 scenarios, 2 modes), each capped at $0.25
 ```
 
-By default the investigator is a rule-based baseline that needs no key. `--provider anthropic` runs Claude Opus 5.5 through the hand-written loop on an API key. `--provider claude-code` hands the same tools and brief to headless Claude Code, which runs on whatever it is signed in with.
+By default the investigator is a rule-based baseline that needs no key. `--provider anthropic` runs Claude Opus 5.5 through the hand-written loop on an API key. `--provider claude-code` hands the same tools and brief to headless Claude Code, which needs the `claude` CLI installed and signed in, and runs on whatever account that is.
 
 ## What it shows
 
@@ -36,7 +36,7 @@ By default the investigator is a rule-based baseline that needs no key. `--provi
 
 **Two harnesses, one grader.** `adapters/claude_code.py` runs `claude -p` against the same telemetry MCP server, with built-in tools, user settings and other MCP servers switched off, and with the ground truth left out of the fixtures it serves. Its stream is mapped onto the same `RunResult` the hand-written loop returns, so both are graded by the same code. A rollback is visible to both but only runs when the scenario's operator approves; a denial reaches the model as a tool error.
 
-**Evals that can fail.** Twenty-four scenarios, each built around a mistake a responder could make: a deploy that lands just before a vendor outage, a flag flipped at runtime with no deploy on record, a retry policy two services away turning a one-minute blip into an outage, a migration hidden in a deploy whose config diff points elsewhere, a maintenance window that looks like an incident. The baseline ("blame the last deploy before the first error") is right on three. Grades check the category, the service, and that every cited id is one the tools returned.
+**Evals that can fail.** Twenty-four scenarios. The twenty-one written as code are each built around a mistake a responder could make: a deploy that lands just before a vendor outage, a flag flipped at runtime with no deploy on record, a retry policy two services away turning a one-minute blip into an outage, a migration hidden in a deploy whose config diff points elsewhere, a maintenance window that looks like an incident. The baseline ("blame the last deploy before the first error") is right on three. Grades check the category, the service, and that every cited id is one the tools returned.
 
 ## Results
 

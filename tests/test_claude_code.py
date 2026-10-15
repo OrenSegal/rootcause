@@ -211,3 +211,10 @@ async def test_spawn_keeps_partial_output_and_kills_on_timeout(tmp_path, monkeyp
     )
     assert json.loads(out[0]) == {"type": "x"}
     assert "timed out" in parse(out).note
+
+
+async def test_a_missing_claude_binary_is_an_error_not_a_crash(tmp_path):
+    out = await claude_code.spawn_claude(["rootcause-no-such-binary"], tmp_path)
+    result = parse(out)
+    assert result.outcome is Outcome.ERROR
+    assert "could not start" in result.note
