@@ -38,7 +38,7 @@ from rootcause.application.budget import Budget
 from rootcause.application.evals import Grade, SuiteReport, grade
 from rootcause.application.investigator import investigator_spec
 from rootcause.application.orchestrator import DispatchWorkers, orchestrator_spec
-from rootcause.application.ports import EventLog, LLMProvider, Retriever
+from rootcause.application.ports import EventLog, LLMProvider, Retriever, Tracer
 from rootcause.application.retrieval_eval import RetrievalReport, evaluate
 from rootcause.application.sweep import (
     ConfigSummary,
@@ -51,11 +51,37 @@ from rootcause.application.sweep import (
     report_markdown,
     summarize,
 )
+from rootcause.application.tracing import NullTracer
 from rootcause.application.transcript import TOOL_CALL
 from rootcause.domain.answers import Diagnosis
 from rootcause.domain.scenario import Case, Scenario
 
 PRICES = {**anthropic_provider.PRICES, **heuristic.PRICES}
+
+
+class TraceExporter(StrEnum):
+    NONE = "none"
+    CONSOLE = "console"
+    OTLP = "otlp"
+
+
+class _Tracing:
+    """The process-wide tracer. Off unless `configure_tracing` is called."""
+
+    tracer: Tracer = NullTracer()
+
+
+_tracing = _Tracing()
+
+
+def configure_tracing(exporter: TraceExporter) -> None:
+    if exporter is TraceExporter.NONE:
+        return
+    try:
+        from rootcause.adapters import otel
+    except ImportError as e:
+        raise RuntimeError("tracing needs the otel extra: uv sync --extra otel") from e
+    _tracing.tracer = otel.configure(exporter.value)
 
 
 class ProviderName(StrEnum):
@@ -83,7 +109,7 @@ def provider_factory(name: ProviderName, model: str, effort: EffortLevel) -> Pro
         if name is ProviderName.HEURISTIC:
             return heuristic.HeuristicProvider()
         if name is ProviderName.CLAUDE_CODE:
-            return ClaudeCodeHarness(model=model, effort=effort.value)
+            return ClaudeCodeHarness(model=model, effort=effort.value, tracer=_tracing.tracer)
         return anthropic_provider.AnthropicProvider(model=model, effort=effort.value)
 
     return make
@@ -170,6 +196,7 @@ def _loop(provider: LLMProvider, events: EventLog, budget_usd: float, approve: b
         events=events,
         budget=Budget(limit_usd=budget_usd, prices=PRICES),
         approval=StaticApproval(approve),
+        tracer=_tracing.tracer,
     )
 
 
