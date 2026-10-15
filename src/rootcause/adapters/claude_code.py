@@ -205,13 +205,16 @@ def parse_stream(
 async def spawn_claude(cmd: list[str], cwd: Path) -> list[str]:
     """Stdout lines as they arrived. A timeout keeps what came before it, and a
     failure of the process is appended as a `SPAWN_ERROR` line with stderr."""
-    proc = await asyncio.create_subprocess_exec(
-        *cmd,
-        cwd=cwd,
-        stdin=asyncio.subprocess.DEVNULL,
-        stdout=asyncio.subprocess.PIPE,
-        stderr=asyncio.subprocess.PIPE,
-    )
+    try:
+        proc = await asyncio.create_subprocess_exec(
+            *cmd,
+            cwd=cwd,
+            stdin=asyncio.subprocess.DEVNULL,
+            stdout=asyncio.subprocess.PIPE,
+            stderr=asyncio.subprocess.PIPE,
+        )
+    except OSError as e:  # most often: the claude CLI is not installed
+        return [spawn_error(f"could not start {cmd[0]}: {e}")]
     assert proc.stdout is not None and proc.stderr is not None
     stdout, stderr = proc.stdout, proc.stderr
     lines: list[str] = []
