@@ -7,6 +7,7 @@ themselves, so each wiring decision is made in one place.
 import asyncio
 import time
 from collections.abc import Callable
+from dataclasses import replace
 from enum import StrEnum
 from functools import cache
 from pathlib import Path
@@ -215,7 +216,11 @@ def _loop(provider: LLMProvider, events: EventLog, budget_usd: float, approve: b
 
 
 async def _investigate(
-    case: Case, loop: AgentLoop, mode: Mode, retrieval: Retrieval = Retrieval.NONE
+    case: Case,
+    loop: AgentLoop,
+    mode: Mode,
+    retrieval: Retrieval = Retrieval.NONE,
+    brief: str | None = None,
 ) -> RunResult[Diagnosis]:
     if not supports(loop.provider.name, mode):
         raise ValueError(UNSUPPORTED.format(provider=loop.provider.name))
@@ -230,6 +235,8 @@ async def _investigate(
         else:
             dispatcher = DispatchWorkers(loop, tools, scenario_id=scenario.id)
             spec, agent_tools = orchestrator_spec(), [*tools, dispatcher]
+        if brief is not None:
+            spec = replace(spec, system_prompt=brief)
         return await loop.run(spec, scenario.alert.render(), agent_tools, scenario_id=scenario.id)
 
 
@@ -241,6 +248,7 @@ async def _run(
     mode: Mode,
     approve: bool,
     retrieval: Retrieval = Retrieval.NONE,
+    brief: str | None = None,
 ) -> RunResult[Diagnosis]:
     if isinstance(engine, ClaudeCodeHarness):
         if not supports(engine.name, mode):
@@ -252,9 +260,10 @@ async def _run(
             budget_usd=budget_usd,
             retrieval=retrieval,
             corpus=CORPUS,
+            brief=brief,
         )
     loop = _loop(engine, events, budget_usd, approve)
-    return await _investigate(case, loop, mode, retrieval)
+    return await _investigate(case, loop, mode, retrieval, brief)
 
 
 async def investigate(
@@ -266,9 +275,11 @@ async def investigate(
     mode: Mode = Mode.SINGLE,
     approve: bool | None = None,
     retrieval: Retrieval = Retrieval.NONE,
+    brief: str | None = None,
 ) -> Investigation:
+    """`brief` replaces the investigator's instructions, for testing variants of them."""
     allow = case.scenario.approval == "approve" if approve is None else approve
-    result = await _run(case, provider, events, budget_usd, mode, allow, retrieval)
+    result = await _run(case, provider, events, budget_usd, mode, allow, retrieval, brief)
     graded = grade(
         case,
         result,
@@ -387,10 +398,12 @@ def read_sweep(out: Path) -> tuple[list[Row], list[Row]]:
     return rows, [e for e in load(ERRORS) if (e.config, e.scenario_id, e.rep) not in done]
 
 
-def _start_sweep(spec: SweepSpec, out: Path) -> set[tuple[str, str, int]]:
+def _start_sweep(spec: SweepSpec, out: Path) -> tuple[set[tuple[str, str, int]], dict[str, str]]:
+    """Finished (config, scenario, rep) keys, and each config's replacement brief."""
     out.mkdir(parents=True, exist_ok=True)
     (out / SPEC).write_text(spec.model_dump_json(indent=2))
-    return {(r.config, r.scenario_id, r.rep) for r in read_sweep(out)[0]}
+    briefs = {c.name: Path(c.brief).read_text() for c in spec.configs if c.brief}
+    return {(r.config, r.scenario_id, r.rep) for r in read_sweep(out)[0]}, briefs
 
 
 def _append(path: Path, line: str) -> None:
@@ -408,7 +421,7 @@ async def run_sweep(
     """Every (repeat, scenario, config) not already in rows.jsonl. Configs are interleaved
     within each scenario and repeat, so rate limits or time of day don't fall on one
     config. Errors go to errors.jsonl and are retried by the next call."""
-    done = _start_sweep(spec, out)
+    done, briefs = _start_sweep(spec, out)
     events = open_events(out / "runs.sqlite")
     paths = discover(Path(spec.scenarios))
     by_name = {c.name: c for c in spec.configs}
@@ -434,6 +447,7 @@ async def run_sweep(
                 budget_usd=config.budget_usd,
                 mode=Mode(config.mode),
                 retrieval=config.retrieval,
+                brief=briefs.get(config.name),
             )
         row = Row(config=config.name, scenario_id=case.scenario.id, rep=rep, grade=run.grade)
         target = out / (ERRORS if is_error(by_name[row.config], row) else ROWS)

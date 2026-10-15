@@ -215,3 +215,23 @@ async def test_an_exception_in_one_run_does_not_stop_the_sweep(two_scenarios, tm
     counts = await run_sweep(spec, tmp_path / "o", make_engine=engine)
     assert counts == {"ran": 2, "skipped": 0, "crashed": 2}
     assert len(read_sweep(tmp_path / "o")[0]) == 2
+
+
+async def test_a_config_can_replace_the_brief(two_scenarios, tmp_path):
+    """For mutation testing the brief: each mutant is a config pointing at a brief file."""
+    brief = tmp_path / "mutant.md"
+    brief.write_text("You are an on-call investigator. (mutated)")
+    seen = []
+
+    async def spawn(cmd, cwd):
+        seen.append(cmd[cmd.index("--system-prompt") + 1])
+        return []
+
+    spec = SweepSpec(
+        name="t", repeats=1, scenarios=str(two_scenarios),
+        configs=[SweepConfig(name="m", provider="claude-code", brief=str(brief))],
+    )  # fmt: skip
+    await run_sweep(
+        spec, tmp_path / "o", make_engine=lambda c: ClaudeCodeHarness(model=c.model, spawn=spawn)
+    )
+    assert seen == ["You are an on-call investigator. (mutated)"] * 2

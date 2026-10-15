@@ -99,10 +99,11 @@ def command(
     max_turns: int,
     budget_usd: float,
     retrieval: bool = False,
+    brief: str | None = None,
 ) -> list[str]:
     return [
         "claude", "-p",
-        "--system-prompt", prompt(retrieval=retrieval),
+        "--system-prompt", brief if brief is not None else prompt(retrieval=retrieval),
         "--model", model,
         "--effort", effort,
         "--tools", "",
@@ -319,6 +320,7 @@ class ClaudeCodeHarness:
         budget_usd: float,
         retrieval: str = "none",
         corpus: Path | None = None,
+        brief: str | None = None,
     ) -> RunResult[Diagnosis]:
         async with mcp_tools(build_telemetry_server(case.store)) as tools:
             gated = frozenset(t.name for t in tools if not t.read_only)
@@ -342,6 +344,7 @@ class ClaudeCodeHarness:
                 max_turns=self.max_turns,
                 budget_usd=budget_usd,
                 retrieval=retrieval != "none",
+                brief=brief,
             )
             lines = await self.spawn([*cmd, case.scenario.alert.render()], work)
         result = parse_stream(lines, run_id=run_id, gated=gated, approve=approve)
