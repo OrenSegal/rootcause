@@ -50,7 +50,12 @@ def grade(
         raise ValueError(f"{case.scenario.id} has no ground truth to grade against")
     d = result.answer
     cited = d.evidence if d else []
-    known = case.store.evidence_ids()
+    # Telemetry ids, plus the action id of any rollback that ran: the tool returned it.
+    known = case.store.evidence_ids() | {
+        case.store.rollback_action_id(c.args["deploy_id"])
+        for c in result.tool_calls
+        if c.name == "rollback_deploy" and c.approved and not c.is_error
+    }
     invented = [e for e in cited if e not in known]
     return Grade(
         scenario_id=case.scenario.id,

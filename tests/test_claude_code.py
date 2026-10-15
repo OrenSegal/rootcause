@@ -141,3 +141,27 @@ async def test_investigate_grades_a_claude_code_run():
     assert run.grade.tool_calls == len(run.result.tool_calls)
     assert "mcp__telemetry__rollback_deploy" not in seen[0][seen[0].index("--allowedTools") + 1]
     assert events.run_info(run.result.run_id).provider == "claude-code:claude-opus-5-5:high"
+
+
+def test_an_approved_rollback_id_counts_as_returned_evidence():
+    """The rollback tool returns an action id, so citing it is not inventing evidence.
+    Found when Claude Code cited rb-d-2101 on scenario 021 and was graded as inventing it."""
+    case = load_case(CASE_005)
+    denied = parse_stream(lines(), run_id="r", gated=GATED)
+    assert denied.answer is not None
+    cited = denied.answer.model_copy(update={"evidence": [*denied.answer.evidence, "rb-d-5001"]})
+    calls = [
+        c.model_copy(update={"approved": True, "is_error": False})
+        if c.name == "rollback_deploy"
+        else c
+        for c in denied.tool_calls
+    ]
+    approved = denied.model_copy(update={"answer": cited, "tool_calls": calls})
+
+    def graded(result):
+        return grade(case, result, provider="p", mode="single", tool_calls=len(calls))
+
+    assert graded(approved).invented_evidence == []
+    assert graded(approved).passed
+    # A denied rollback returned no action id, so citing one is still invented.
+    assert graded(denied.model_copy(update={"answer": cited})).invented_evidence == ["rb-d-5001"]
