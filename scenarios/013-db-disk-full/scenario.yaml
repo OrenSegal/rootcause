@@ -1,0 +1,11 @@
+id: 013-db-disk-full
+title: Database volume fills with retained WAL
+alert:
+  service: orders
+  summary: orders writes failing, error rate at 50%.
+truth:
+  category: resource_exhaustion
+  service: postgres
+  required_evidence_any:
+  - log-0010
+  - m-pg-disk

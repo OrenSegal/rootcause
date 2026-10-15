@@ -1,0 +1,28 @@
+[
+  {
+    "id": "d-2201",
+    "service": "notifications",
+    "version": "4.0.0",
+    "ts": "2026-10-14T10:00:00Z",
+    "author": "mo",
+    "summary": "Batch push sends; new retry wrapper",
+    "config_before": {},
+    "config_after": {},
+    "files": []
+  },
+  {
+    "id": "d-2202",
+    "service": "notifications",
+    "version": "4.0.1",
+    "ts": "2026-10-14T13:25:00Z",
+    "author": "dev-bot",
+    "summary": "Lower push batch size",
+    "config_before": {
+      "PUSH_BATCH": "500"
+    },
+    "config_after": {
+      "PUSH_BATCH": "250"
+    },
+    "files": []
+  }
+]

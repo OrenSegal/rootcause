@@ -64,3 +64,4 @@ Week 1 was test-covered, not test-driven. From the refactor on:
 | Event log schema version | Red, then green | Written after the stdio smoke test exposed the bug (#20). |
 | CLI tests under GitHub Actions | Red, then green | The first Actions run failed one test: Rich colors and wraps output when `GITHUB_ACTIONS` is set. Reproduced locally with `GITHUB_ACTIONS=true FORCE_COLOR=1` before pinning the test runner's environment. |
 | Claude Code harness | Red, then green | Two throwaway `claude -p` runs came first, to learn the stream format, including what a denied rollback looks like. Then seven tests against a scrubbed copy of one run failed with `ModuleNotFoundError` before the adapter existed. |
+| Scenarios 009-022 | Red, then green | The suite-size floor was raised to 20 authored scenarios first and failed at 7. Adding the builders without regenerating failed the drift test. Regenerating made both pass, and the baseline still passes only 001 and 005. |

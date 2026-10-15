@@ -1,0 +1,17 @@
+{"id":"log-0001","ts":"2026-10-14T12:00:00Z","service":"cert-manager","level":"warn","message":"certificate ledger-internal-tls expires in 90m; renewing","trace_id":null}
+{"id":"log-0003","ts":"2026-10-14T13:00:00Z","service":"payments","level":"info","message":"settlement batch posted to ledger.internal in 61ms","trace_id":null}
+{"id":"log-0004","ts":"2026-10-14T13:04:00Z","service":"payments","level":"info","message":"settlement batch posted to ledger.internal in 61ms","trace_id":null}
+{"id":"log-0005","ts":"2026-10-14T13:08:00Z","service":"payments","level":"info","message":"settlement batch posted to ledger.internal in 61ms","trace_id":null}
+{"id":"log-0002","ts":"2026-10-14T13:10:00Z","service":"cert-manager","level":"error","message":"renewal of ledger-internal-tls failed: DNS-01 challenge record not found; giving up","trace_id":null}
+{"id":"log-0006","ts":"2026-10-14T13:12:00Z","service":"payments","level":"info","message":"settlement batch posted to ledger.internal in 61ms","trace_id":null}
+{"id":"log-0007","ts":"2026-10-14T13:16:00Z","service":"payments","level":"info","message":"settlement batch posted to ledger.internal in 61ms","trace_id":null}
+{"id":"log-0008","ts":"2026-10-14T13:20:00Z","service":"payments","level":"info","message":"settlement batch posted to ledger.internal in 61ms","trace_id":null}
+{"id":"log-0009","ts":"2026-10-14T13:24:00Z","service":"payments","level":"info","message":"settlement batch posted to ledger.internal in 61ms","trace_id":null}
+{"id":"log-0010","ts":"2026-10-14T13:28:00Z","service":"payments","level":"info","message":"settlement batch posted to ledger.internal in 61ms","trace_id":null}
+{"id":"log-0011","ts":"2026-10-14T13:30:00Z","service":"payments","level":"error","message":"POST https://ledger.internal/v1/settle failed: x509: certificate has expired (notAfter 2026-10-14T13:30:00Z)","trace_id":null}
+{"id":"log-0017","ts":"2026-10-14T13:30:12Z","service":"ledger","level":"warn","message":"TLS handshake error from 10.0.4.12: remote error: bad cert","trace_id":null}
+{"id":"log-0012","ts":"2026-10-14T13:30:30Z","service":"payments","level":"error","message":"POST https://ledger.internal/v1/settle failed: x509: certificate has expired (notAfter 2026-10-14T13:30:00Z)","trace_id":null}
+{"id":"log-0013","ts":"2026-10-14T13:31:00Z","service":"payments","level":"error","message":"POST https://ledger.internal/v1/settle failed: x509: certificate has expired (notAfter 2026-10-14T13:30:00Z)","trace_id":null}
+{"id":"log-0014","ts":"2026-10-14T13:33:00Z","service":"payments","level":"error","message":"POST https://ledger.internal/v1/settle failed: x509: certificate has expired (notAfter 2026-10-14T13:30:00Z)","trace_id":null}
+{"id":"log-0015","ts":"2026-10-14T13:36:00Z","service":"payments","level":"error","message":"POST https://ledger.internal/v1/settle failed: x509: certificate has expired (notAfter 2026-10-14T13:30:00Z)","trace_id":null}
+{"id":"log-0016","ts":"2026-10-14T13:40:00Z","service":"payments","level":"error","message":"POST https://ledger.internal/v1/settle failed: x509: certificate has expired (notAfter 2026-10-14T13:30:00Z)","trace_id":null}

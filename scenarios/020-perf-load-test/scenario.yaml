@@ -1,0 +1,11 @@
+id: 020-perf-load-test
+title: Latency page from a scheduled load test
+alert:
+  service: checkout
+  summary: p99 latency above 2.5s for 8 minutes.
+truth:
+  category: no_incident
+  service: checkout
+  required_evidence_any:
+  - log-0001
+  - m-checkout-p99-organic

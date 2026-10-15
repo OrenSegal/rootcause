@@ -1,0 +1,12 @@
+{"id":"log-0001","ts":"2026-10-14T13:00:00Z","service":"orders","level":"info","message":"order written in 13ms","trace_id":null}
+{"id":"log-0002","ts":"2026-10-14T13:04:00Z","service":"orders","level":"info","message":"order written in 13ms","trace_id":null}
+{"id":"log-0003","ts":"2026-10-14T13:08:00Z","service":"orders","level":"info","message":"order written in 13ms","trace_id":null}
+{"id":"log-0004","ts":"2026-10-14T13:12:00Z","service":"orders","level":"info","message":"order written in 13ms","trace_id":null}
+{"id":"log-0005","ts":"2026-10-14T13:16:00Z","service":"orders","level":"info","message":"order written in 13ms","trace_id":null}
+{"id":"log-0006","ts":"2026-10-14T13:20:12Z","service":"orders","level":"info","message":"running migration 0042: ALTER TABLE orders ADD COLUMN fulfillment_status text NOT NULL DEFAULT 'new' (rewrites 41M rows)","trace_id":null}
+{"id":"log-0007","ts":"2026-10-14T13:20:30Z","service":"postgres","level":"warn","message":"process 8812 holds AccessExclusiveLock on relation orders; 212 waiters","trace_id":null}
+{"id":"log-0008","ts":"2026-10-14T13:21:00Z","service":"orders","level":"error","message":"insert into orders timed out after 30000ms waiting for lock","trace_id":null}
+{"id":"log-0009","ts":"2026-10-14T13:21:30Z","service":"orders","level":"error","message":"insert into orders timed out after 30000ms waiting for lock","trace_id":null}
+{"id":"log-0010","ts":"2026-10-14T13:22:00Z","service":"orders","level":"error","message":"insert into orders timed out after 30000ms waiting for lock","trace_id":null}
+{"id":"log-0011","ts":"2026-10-14T13:24:00Z","service":"orders","level":"error","message":"insert into orders timed out after 30000ms waiting for lock","trace_id":null}
+{"id":"log-0012","ts":"2026-10-14T13:27:00Z","service":"orders","level":"error","message":"insert into orders timed out after 30000ms waiting for lock","trace_id":null}

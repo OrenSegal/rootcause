@@ -1,0 +1,12 @@
+id: 015-retry-storm
+title: Retry storm amplifies a short catalog slowdown
+alert:
+  service: product-api
+  summary: 'product-api saturated: p99 above 5s, errors 30%.'
+truth:
+  category: config_change
+  service: web-bff
+  required_evidence_any:
+  - cfg:d-1501:PRODUCT_API_RETRIES
+  - d-1501
+  - m-product-rps

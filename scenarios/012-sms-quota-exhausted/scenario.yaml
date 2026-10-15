@@ -1,0 +1,11 @@
+id: 012-sms-quota-exhausted
+title: Third-party SMS quota exhausted during a campaign
+alert:
+  service: signup
+  summary: 'signup error rate at 35%: verification codes failing.'
+truth:
+  category: dependency_failure
+  service: sms-gateway
+  required_evidence_any:
+  - log-0008
+  - m-sms-quota

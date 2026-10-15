@@ -1,0 +1,13 @@
+[
+  {
+    "id": "d-1301",
+    "service": "orders",
+    "version": "1.9.1",
+    "ts": "2026-10-14T13:15:00Z",
+    "author": "ana",
+    "summary": "Add weekly sales report query",
+    "config_before": {},
+    "config_after": {},
+    "files": []
+  }
+]

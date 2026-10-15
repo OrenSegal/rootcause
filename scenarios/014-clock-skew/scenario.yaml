@@ -1,0 +1,11 @@
+id: 014-clock-skew
+title: Clock skew on one node breaks token validation
+alert:
+  service: api-gateway
+  summary: 401 rate at 25% across all routes.
+truth:
+  category: infrastructure
+  service: ntp
+  required_evidence_any:
+  - log-0002
+  - m-ntp-offset

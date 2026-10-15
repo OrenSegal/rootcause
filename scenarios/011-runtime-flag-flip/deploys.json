@@ -1,0 +1,24 @@
+[
+  {
+    "id": "d-1101",
+    "service": "pricing",
+    "version": "2.0.3",
+    "ts": "2026-10-14T12:20:00Z",
+    "author": "raj",
+    "summary": "Log currency on quote",
+    "config_before": {},
+    "config_after": {},
+    "files": []
+  },
+  {
+    "id": "d-1102",
+    "service": "checkout",
+    "version": "2.4.3",
+    "ts": "2026-10-14T13:17:00Z",
+    "author": "lee",
+    "summary": "Analytics event on coupon apply",
+    "config_before": {},
+    "config_after": {},
+    "files": []
+  }
+]
