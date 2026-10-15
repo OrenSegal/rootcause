@@ -46,6 +46,7 @@ refactor below. Week-2 features started from a failing test, with one exception
 | 18 | ISP | `application/agent.py` `AgentSpec.select` | Choosing an agent's tools needs only a name and a read-only flag, but `select` demanded the full `Tool` port. Found by `ty`. | `ToolTraits` protocol. `Tool` extends it. |
 | 19 | Layering | `interfaces/cli.py`, `interfaces/mcp_server.py` | Both built adapters themselves (event log, fixtures, MCP server), so wiring lived in three places. Found by the layer contract. | Composition is its own layer. A fourth contract bars interfaces from importing adapters. |
 | 20 | Robustness | `adapters/sqlite_events.py` | `create table if not exists` silently kept a week-1 table layout, and the first insert failed inside an MCP tool whose error the server hides. Found by the stdio smoke test. | Schema version in `pragma user_version`; an old log is refused with a message saying what to do. |
+| 21 | Correctness | `application/evals.py` `grade` | Only telemetry ids counted as real evidence, so citing the action id an approved rollback returned was graded as invented. Found by the first Claude Code run (scenario 021). | Ids of rollbacks that ran in the run count as known. The id format has one definition, `TelemetryStore.rollback_action_id`. |
 
 ## TDD log
 
@@ -65,3 +66,4 @@ Week 1 was test-covered, not test-driven. From the refactor on:
 | CLI tests under GitHub Actions | Red, then green | The first Actions run failed one test: Rich colors and wraps output when `GITHUB_ACTIONS` is set. Reproduced locally with `GITHUB_ACTIONS=true FORCE_COLOR=1` before pinning the test runner's environment. |
 | Claude Code harness | Red, then green | Two throwaway `claude -p` runs came first, to learn the stream format, including what a denied rollback looks like. Then seven tests against a scrubbed copy of one run failed with `ModuleNotFoundError` before the adapter existed. |
 | Scenarios 009-022 | Red, then green | The suite-size floor was raised to 20 authored scenarios first and failed at 7. Adding the builders without regenerating failed the drift test. Regenerating made both pass, and the baseline still passes only 001 and 005. |
+| Grader fix #21 | Red, then green | A test that cites an approved rollback's action id failed first; a denied rollback's id must still count as invented. |

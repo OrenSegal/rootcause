@@ -97,11 +97,15 @@ class TelemetryStore:
             if deploy.config_before.get(key) != deploy.config_after.get(key)
         ]
 
+    @staticmethod
+    def rollback_action_id(deploy_id: str) -> str:
+        return f"rb-{deploy_id}"
+
     def rollback(self, deploy_id: str) -> tuple[str, bool]:
         """Returns (action_id, created). Idempotent per deploy."""
         if deploy_id in self.rollbacks:
             return self.rollbacks[deploy_id], False
-        action_id = f"rb-{deploy_id}"
+        action_id = self.rollback_action_id(deploy_id)
         self.rollbacks[deploy_id] = action_id
         return action_id, True
 
