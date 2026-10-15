@@ -1,0 +1,120 @@
+{"id":"log-0061","ts":"2026-10-02T00:30:46.261035Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: Run bash tests/install.test.sh","trace_id":null}
+{"id":"log-0062","ts":"2026-10-02T00:30:46.261071Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: bash tests/install.test.sh","trace_id":null}
+{"id":"log-0063","ts":"2026-10-02T00:30:46.267842Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: shell: /usr/bin/bash -e {0}","trace_id":null}
+{"id":"log-0001","ts":"2026-10-02T00:30:57.190250Z","service":"test-macos-latest","level":"info","message":"install + doctor: Run bash tests/install.test.sh","trace_id":null}
+{"id":"log-0002","ts":"2026-10-02T00:30:57.190284Z","service":"test-macos-latest","level":"info","message":"install + doctor: bash tests/install.test.sh","trace_id":null}
+{"id":"log-0003","ts":"2026-10-02T00:30:57.194321Z","service":"test-macos-latest","level":"info","message":"install + doctor: shell: /bin/bash -e {0}","trace_id":null}
+{"id":"log-0064","ts":"2026-10-02T00:31:23.495878Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: FAIL strict outside CI wants a probe: want=0 got=1","trace_id":null}
+{"id":"log-0065","ts":"2026-10-02T00:31:23.583625Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: FAIL non-strict only notes it: want=0 got=1","trace_id":null}
+{"id":"log-0066","ts":"2026-10-02T00:31:23.721088Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: FAIL recorded probe satisfies strict: want=0 got=1","trace_id":null}
+{"id":"log-0067","ts":"2026-10-02T00:31:23.917575Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: FAIL changed settings need a fresh probe: want=0 got=1","trace_id":null}
+{"id":"log-0068","ts":"2026-10-02T00:31:24.055411Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: FAIL plugin + project guard fails: want=1 got=0","trace_id":null}
+{"id":"log-0069","ts":"2026-10-02T00:31:24.056455Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: sous harness (doctor) /tmp/sous-test.3CbNHq/fresh","trace_id":null}
+{"id":"log-0070","ts":"2026-10-02T00:31:24.057023Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: Layer 1 memory","trace_id":null}
+{"id":"log-0071","ts":"2026-10-02T00:31:24.057067Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: info  no CLAUDE.md / AGENTS.md (agent starts cold)","trace_id":null}
+{"id":"log-0072","ts":"2026-10-02T00:31:24.057117Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: Layer 2 tools","trace_id":null}
+{"id":"log-0073","ts":"2026-10-02T00:31:24.057149Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: info  no project .mcp.json","trace_id":null}
+{"id":"log-0074","ts":"2026-10-02T00:31:24.057185Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: Layer 3 permissions + sandbox","trace_id":null}
+{"id":"log-0075","ts":"2026-10-02T00:31:24.057226Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: ok    deny rules","trace_id":null}
+{"id":"log-0076","ts":"2026-10-02T00:31:24.057266Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: ok    sandbox enabled","trace_id":null}
+{"id":"log-0077","ts":"2026-10-02T00:31:24.057323Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: info  sandbox host: bubblewrap + socat: missing bwrap, socat (CI runner, not enforced)","trace_id":null}
+{"id":"log-0078","ts":"2026-10-02T00:31:24.057426Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: info  escape hatch open: unsandboxed retries ask first (--strict closes it for unattended runs)","trace_id":null}
+{"id":"log-0079","ts":"2026-10-02T00:31:24.057537Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: skip  live probe record (kept in your ~/.claude, not the CI runner's)","trace_id":null}
+{"id":"log-0080","ts":"2026-10-02T00:31:24.057596Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: ok    no allow/ask/deny overlap","trace_id":null}
+{"id":"log-0081","ts":"2026-10-02T00:31:24.057637Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: ok    no duplicate rules","trace_id":null}
+{"id":"log-0082","ts":"2026-10-02T00:31:24.057672Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: ok    no rules for missing scripts","trace_id":null}
+{"id":"log-0083","ts":"2026-10-02T00:31:24.057711Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: Layer 4 hooks","trace_id":null}
+{"id":"log-0084","ts":"2026-10-02T00:31:24.057756Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: ok    sous-guard: 35 passed, 0 failed (cached, unchanged)","trace_id":null}
+{"id":"log-0085","ts":"2026-10-02T00:31:24.057814Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: ok    adversarial: 216 passed, 0 failed (cached, unchanged)","trace_id":null}
+{"id":"log-0086","ts":"2026-10-02T00:31:24.057870Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: ok    guard answers in 10ms (budget 500ms)","trace_id":null}
+{"id":"log-0087","ts":"2026-10-02T00:31:24.057912Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: Layer 5 gates","trace_id":null}
+{"id":"log-0088","ts":"2026-10-02T00:31:24.057948Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: ok    push / commit / unsandboxed retry ask first","trace_id":null}
+{"id":"log-0089","ts":"2026-10-02T00:31:24.058050Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: skip  user scope (a CI runner's $HOME is not yours)","trace_id":null}
+{"id":"log-0090","ts":"2026-10-02T00:31:24.058099Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: Feedback loop","trace_id":null}
+{"id":"log-0091","ts":"2026-10-02T00:31:24.058152Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: info  2 blocks in 30 days, most often: force push (2x); `sous report` to tune","trace_id":null}
+{"id":"log-0092","ts":"2026-10-02T00:31:24.058217Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: sous: all layers hold.","trace_id":null}
+{"id":"log-0093","ts":"2026-10-02T00:31:24.144217Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: FAIL double guard names the fix: want=0 got=1","trace_id":null}
+{"id":"log-0094","ts":"2026-10-02T00:31:24.197713Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: FAIL install warns about the double guard: want=0 got=1","trace_id":null}
+{"id":"log-0095","ts":"2026-10-02T00:31:24.361712Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: FAIL plugin-only guard is enough: want=0 got=1","trace_id":null}
+{"id":"log-0096","ts":"2026-10-02T00:31:24.362746Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: sous harness (doctor) /tmp/sous-test.3CbNHq/pluginonly","trace_id":null}
+{"id":"log-0097","ts":"2026-10-02T00:31:24.362802Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: Layer 1 memory","trace_id":null}
+{"id":"log-0098","ts":"2026-10-02T00:31:24.362836Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: info  no CLAUDE.md / AGENTS.md (agent starts cold)","trace_id":null}
+{"id":"log-0099","ts":"2026-10-02T00:31:24.362868Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: Layer 2 tools","trace_id":null}
+{"id":"log-0100","ts":"2026-10-02T00:31:24.362894Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: info  no project .mcp.json","trace_id":null}
+{"id":"log-0101","ts":"2026-10-02T00:31:24.362921Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: Layer 3 permissions + sandbox","trace_id":null}
+{"id":"log-0102","ts":"2026-10-02T00:31:24.362945Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: ok    deny rules","trace_id":null}
+{"id":"log-0103","ts":"2026-10-02T00:31:24.362972Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: ok    sandbox enabled","trace_id":null}
+{"id":"log-0104","ts":"2026-10-02T00:31:24.363010Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: info  sandbox host: bubblewrap + socat: missing bwrap, socat (CI runner, not enforced)","trace_id":null}
+{"id":"log-0105","ts":"2026-10-02T00:31:24.363095Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: info  escape hatch open: unsandboxed retries ask first (--strict closes it for unattended runs)","trace_id":null}
+{"id":"log-0106","ts":"2026-10-02T00:31:24.363180Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: skip  live probe record (kept in your ~/.claude, not the CI runner's)","trace_id":null}
+{"id":"log-0107","ts":"2026-10-02T00:31:24.363238Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: ok    no allow/ask/deny overlap","trace_id":null}
+{"id":"log-0108","ts":"2026-10-02T00:31:24.363277Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: ok    no duplicate rules","trace_id":null}
+{"id":"log-0109","ts":"2026-10-02T00:31:24.363314Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: ok    no rules for missing scripts","trace_id":null}
+{"id":"log-0110","ts":"2026-10-02T00:31:24.363351Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: Layer 4 hooks","trace_id":null}
+{"id":"log-0111","ts":"2026-10-02T00:31:24.363389Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: FAIL  no PreToolUse hook carries the sous guard","trace_id":null}
+{"id":"log-0112","ts":"2026-10-02T00:31:24.363434Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: Layer 5 gates","trace_id":null}
+{"id":"log-0113","ts":"2026-10-02T00:31:24.363471Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: ok    push / commit / unsandboxed retry ask first","trace_id":null}
+{"id":"log-0114","ts":"2026-10-02T00:31:24.363537Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: skip  user scope (a CI runner's $HOME is not yours)","trace_id":null}
+{"id":"log-0115","ts":"2026-10-02T00:31:24.363567Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: Feedback loop","trace_id":null}
+{"id":"log-0116","ts":"2026-10-02T00:31:24.363606Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: info  2 blocks in 30 days, most often: force push (2x); `sous report` to tune","trace_id":null}
+{"id":"log-0117","ts":"2026-10-02T00:31:24.363674Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: sous: 1 layer check(s) failed.","trace_id":null}
+{"id":"log-0118","ts":"2026-10-02T00:31:24.502461Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: FAIL plugin hooks.json pointing at a missing file is named: want=0 got=1","trace_id":null}
+{"id":"log-0119","ts":"2026-10-02T00:31:26.539055Z","service":"test-ubuntu-latest","level":"info","message":"install + doctor: 125 passed, 9 failed","trace_id":null}
+{"id":"log-0120","ts":"2026-10-02T00:31:26.549375Z","service":"test-ubuntu-latest","level":"error","message":"install + doctor: Process completed with exit code 1.","trace_id":null}
+{"id":"log-0004","ts":"2026-10-02T00:32:03.001281Z","service":"test-macos-latest","level":"info","message":"install + doctor: FAIL strict outside CI wants a probe: want=0 got=1","trace_id":null}
+{"id":"log-0005","ts":"2026-10-02T00:32:03.119055Z","service":"test-macos-latest","level":"info","message":"install + doctor: FAIL non-strict only notes it: want=0 got=1","trace_id":null}
+{"id":"log-0006","ts":"2026-10-02T00:32:03.282775Z","service":"test-macos-latest","level":"info","message":"install + doctor: FAIL recorded probe satisfies strict: want=0 got=1","trace_id":null}
+{"id":"log-0007","ts":"2026-10-02T00:32:03.675215Z","service":"test-macos-latest","level":"info","message":"install + doctor: FAIL changed settings need a fresh probe: want=0 got=1","trace_id":null}
+{"id":"log-0008","ts":"2026-10-02T00:32:03.843781Z","service":"test-macos-latest","level":"info","message":"install + doctor: FAIL plugin + project guard fails: want=1 got=0","trace_id":null}
+{"id":"log-0009","ts":"2026-10-02T00:32:03.846206Z","service":"test-macos-latest","level":"info","message":"install + doctor: sous harness (doctor) /private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/sous-test.X9BWyt/fresh","trace_id":null}
+{"id":"log-0010","ts":"2026-10-02T00:32:03.846389Z","service":"test-macos-latest","level":"info","message":"install + doctor: Layer 1 memory","trace_id":null}
+{"id":"log-0011","ts":"2026-10-02T00:32:03.846545Z","service":"test-macos-latest","level":"info","message":"install + doctor: info  no CLAUDE.md / AGENTS.md (agent starts cold)","trace_id":null}
+{"id":"log-0012","ts":"2026-10-02T00:32:03.846825Z","service":"test-macos-latest","level":"info","message":"install + doctor: Layer 2 tools","trace_id":null}
+{"id":"log-0013","ts":"2026-10-02T00:32:03.846865Z","service":"test-macos-latest","level":"info","message":"install + doctor: info  no project .mcp.json","trace_id":null}
+{"id":"log-0014","ts":"2026-10-02T00:32:03.846912Z","service":"test-macos-latest","level":"info","message":"install + doctor: Layer 3 permissions + sandbox","trace_id":null}
+{"id":"log-0015","ts":"2026-10-02T00:32:03.847140Z","service":"test-macos-latest","level":"info","message":"install + doctor: ok    deny rules","trace_id":null}
+{"id":"log-0016","ts":"2026-10-02T00:32:03.847196Z","service":"test-macos-latest","level":"info","message":"install + doctor: ok    sandbox enabled","trace_id":null}
+{"id":"log-0017","ts":"2026-10-02T00:32:03.847236Z","service":"test-macos-latest","level":"info","message":"install + doctor: info  sandbox host: Seatbelt (/usr/bin/sandbox-exec) (CI runner, not enforced)","trace_id":null}
+{"id":"log-0018","ts":"2026-10-02T00:32:03.847361Z","service":"test-macos-latest","level":"info","message":"install + doctor: info  escape hatch open: unsandboxed retries ask first (--strict closes it for unattended runs)","trace_id":null}
+{"id":"log-0019","ts":"2026-10-02T00:32:03.847444Z","service":"test-macos-latest","level":"info","message":"install + doctor: skip  live probe record (kept in your ~/.claude, not the CI runner's)","trace_id":null}
+{"id":"log-0020","ts":"2026-10-02T00:32:03.847573Z","service":"test-macos-latest","level":"info","message":"install + doctor: ok    no allow/ask/deny overlap","trace_id":null}
+{"id":"log-0021","ts":"2026-10-02T00:32:03.847670Z","service":"test-macos-latest","level":"info","message":"install + doctor: ok    no duplicate rules","trace_id":null}
+{"id":"log-0022","ts":"2026-10-02T00:32:03.847942Z","service":"test-macos-latest","level":"info","message":"install + doctor: ok    no rules for missing scripts","trace_id":null}
+{"id":"log-0023","ts":"2026-10-02T00:32:03.848087Z","service":"test-macos-latest","level":"info","message":"install + doctor: Layer 4 hooks","trace_id":null}
+{"id":"log-0024","ts":"2026-10-02T00:32:03.848242Z","service":"test-macos-latest","level":"info","message":"install + doctor: ok    sous-guard: 35 passed, 0 failed (cached, unchanged)","trace_id":null}
+{"id":"log-0025","ts":"2026-10-02T00:32:03.848305Z","service":"test-macos-latest","level":"info","message":"install + doctor: ok    adversarial: 216 passed, 0 failed (cached, unchanged)","trace_id":null}
+{"id":"log-0026","ts":"2026-10-02T00:32:03.848528Z","service":"test-macos-latest","level":"info","message":"install + doctor: ok    guard answers in 11ms (budget 500ms)","trace_id":null}
+{"id":"log-0027","ts":"2026-10-02T00:32:03.848583Z","service":"test-macos-latest","level":"info","message":"install + doctor: Layer 5 gates","trace_id":null}
+{"id":"log-0028","ts":"2026-10-02T00:32:03.848666Z","service":"test-macos-latest","level":"info","message":"install + doctor: ok    push / commit / unsandboxed retry ask first","trace_id":null}
+{"id":"log-0029","ts":"2026-10-02T00:32:03.848712Z","service":"test-macos-latest","level":"info","message":"install + doctor: skip  user scope (a CI runner's $HOME is not yours)","trace_id":null}
+{"id":"log-0030","ts":"2026-10-02T00:32:03.848784Z","service":"test-macos-latest","level":"info","message":"install + doctor: Feedback loop","trace_id":null}
+{"id":"log-0031","ts":"2026-10-02T00:32:03.848828Z","service":"test-macos-latest","level":"info","message":"install + doctor: info  2 blocks in 30 days, most often: force push (2x); `sous report` to tune","trace_id":null}
+{"id":"log-0032","ts":"2026-10-02T00:32:03.848901Z","service":"test-macos-latest","level":"info","message":"install + doctor: sous: all layers hold.","trace_id":null}
+{"id":"log-0033","ts":"2026-10-02T00:32:03.942789Z","service":"test-macos-latest","level":"info","message":"install + doctor: FAIL double guard names the fix: want=0 got=1","trace_id":null}
+{"id":"log-0034","ts":"2026-10-02T00:32:04.006416Z","service":"test-macos-latest","level":"info","message":"install + doctor: FAIL install warns about the double guard: want=0 got=1","trace_id":null}
+{"id":"log-0035","ts":"2026-10-02T00:32:04.240168Z","service":"test-macos-latest","level":"info","message":"install + doctor: FAIL plugin-only guard is enough: want=0 got=1","trace_id":null}
+{"id":"log-0036","ts":"2026-10-02T00:32:04.242608Z","service":"test-macos-latest","level":"info","message":"install + doctor: sous harness (doctor) /private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/sous-test.X9BWyt/pluginonly","trace_id":null}
+{"id":"log-0037","ts":"2026-10-02T00:32:04.242670Z","service":"test-macos-latest","level":"info","message":"install + doctor: Layer 1 memory","trace_id":null}
+{"id":"log-0038","ts":"2026-10-02T00:32:04.242703Z","service":"test-macos-latest","level":"info","message":"install + doctor: info  no CLAUDE.md / AGENTS.md (agent starts cold)","trace_id":null}
+{"id":"log-0039","ts":"2026-10-02T00:32:04.272054Z","service":"test-macos-latest","level":"info","message":"install + doctor: Layer 2 tools","trace_id":null}
+{"id":"log-0040","ts":"2026-10-02T00:32:04.272090Z","service":"test-macos-latest","level":"info","message":"install + doctor: info  no project .mcp.json","trace_id":null}
+{"id":"log-0041","ts":"2026-10-02T00:32:04.272126Z","service":"test-macos-latest","level":"info","message":"install + doctor: Layer 3 permissions + sandbox","trace_id":null}
+{"id":"log-0042","ts":"2026-10-02T00:32:04.272154Z","service":"test-macos-latest","level":"info","message":"install + doctor: ok    deny rules","trace_id":null}
+{"id":"log-0043","ts":"2026-10-02T00:32:04.272181Z","service":"test-macos-latest","level":"info","message":"install + doctor: ok    sandbox enabled","trace_id":null}
+{"id":"log-0044","ts":"2026-10-02T00:32:04.272221Z","service":"test-macos-latest","level":"info","message":"install + doctor: info  sandbox host: Seatbelt (/usr/bin/sandbox-exec) (CI runner, not enforced)","trace_id":null}
+{"id":"log-0045","ts":"2026-10-02T00:32:04.272290Z","service":"test-macos-latest","level":"info","message":"install + doctor: info  escape hatch open: unsandboxed retries ask first (--strict closes it for unattended runs)","trace_id":null}
+{"id":"log-0046","ts":"2026-10-02T00:32:04.272343Z","service":"test-macos-latest","level":"info","message":"install + doctor: skip  live probe record (kept in your ~/.claude, not the CI runner's)","trace_id":null}
+{"id":"log-0047","ts":"2026-10-02T00:32:04.272386Z","service":"test-macos-latest","level":"info","message":"install + doctor: ok    no allow/ask/deny overlap","trace_id":null}
+{"id":"log-0048","ts":"2026-10-02T00:32:04.272411Z","service":"test-macos-latest","level":"info","message":"install + doctor: ok    no duplicate rules","trace_id":null}
+{"id":"log-0049","ts":"2026-10-02T00:32:04.272449Z","service":"test-macos-latest","level":"info","message":"install + doctor: ok    no rules for missing scripts","trace_id":null}
+{"id":"log-0050","ts":"2026-10-02T00:32:04.272475Z","service":"test-macos-latest","level":"info","message":"install + doctor: Layer 4 hooks","trace_id":null}
+{"id":"log-0051","ts":"2026-10-02T00:32:04.272509Z","service":"test-macos-latest","level":"info","message":"install + doctor: FAIL  no PreToolUse hook carries the sous guard","trace_id":null}
+{"id":"log-0052","ts":"2026-10-02T00:32:04.272546Z","service":"test-macos-latest","level":"info","message":"install + doctor: Layer 5 gates","trace_id":null}
+{"id":"log-0053","ts":"2026-10-02T00:32:04.272569Z","service":"test-macos-latest","level":"info","message":"install + doctor: ok    push / commit / unsandboxed retry ask first","trace_id":null}
+{"id":"log-0054","ts":"2026-10-02T00:32:04.272610Z","service":"test-macos-latest","level":"info","message":"install + doctor: skip  user scope (a CI runner's $HOME is not yours)","trace_id":null}
+{"id":"log-0055","ts":"2026-10-02T00:32:04.272639Z","service":"test-macos-latest","level":"info","message":"install + doctor: Feedback loop","trace_id":null}
+{"id":"log-0056","ts":"2026-10-02T00:32:04.272753Z","service":"test-macos-latest","level":"info","message":"install + doctor: info  2 blocks in 30 days, most often: force push (2x); `sous report` to tune","trace_id":null}
+{"id":"log-0057","ts":"2026-10-02T00:32:04.272790Z","service":"test-macos-latest","level":"info","message":"install + doctor: sous: 1 layer check(s) failed.","trace_id":null}
+{"id":"log-0058","ts":"2026-10-02T00:32:04.459629Z","service":"test-macos-latest","level":"info","message":"install + doctor: FAIL plugin hooks.json pointing at a missing file is named: want=0 got=1","trace_id":null}
+{"id":"log-0059","ts":"2026-10-02T00:32:07.041125Z","service":"test-macos-latest","level":"info","message":"install + doctor: 125 passed, 9 failed","trace_id":null}
+{"id":"log-0060","ts":"2026-10-02T00:32:07.058358Z","service":"test-macos-latest","level":"error","message":"install + doctor: Process completed with exit code 1.","trace_id":null}

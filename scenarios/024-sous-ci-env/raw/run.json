@@ -1,0 +1,319 @@
+{
+  "conclusion": "failure",
+  "createdAt": "2026-10-02T00:30:30Z",
+  "databaseId": 36946337909,
+  "displayTitle": "Hardening pass for 0.3.0",
+  "event": "pull_request",
+  "headBranch": "hardening/a-plus",
+  "headSha": "fee0c00418a709ea537373ddb1210de29561027b",
+  "jobs": [
+    {
+      "completedAt": "2026-10-02T00:30:38Z",
+      "conclusion": "success",
+      "databaseId": 110649220289,
+      "name": "marketplace",
+      "startedAt": "2026-10-02T00:30:33Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-02T00:30:35Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-02T00:30:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T00:30:35Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v4",
+          "number": 2,
+          "startedAt": "2026-10-02T00:30:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T00:30:36Z",
+          "conclusion": "success",
+          "name": "shape (offline, blocking)",
+          "number": 3,
+          "startedAt": "2026-10-02T00:30:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T00:30:36Z",
+          "conclusion": "success",
+          "name": "pinned refs resolve to their shas (network failure only warns)",
+          "number": 4,
+          "startedAt": "2026-10-02T00:30:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T00:30:37Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v4",
+          "number": 8,
+          "startedAt": "2026-10-02T00:30:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T00:30:37Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 9,
+          "startedAt": "2026-10-02T00:30:37Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/OrenSegal/sous/actions/runs/36946337909/job/110649220289"
+    },
+    {
+      "completedAt": "2026-10-02T00:32:09Z",
+      "conclusion": "failure",
+      "databaseId": 110649220447,
+      "name": "test (macos-latest)",
+      "startedAt": "2026-10-02T00:30:39Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-02T00:30:40Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-02T00:30:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T00:30:42Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v4",
+          "number": 2,
+          "startedAt": "2026-10-02T00:30:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T00:30:42Z",
+          "conclusion": "skipped",
+          "name": "shellcheck",
+          "number": 3,
+          "startedAt": "2026-10-02T00:30:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T00:30:42Z",
+          "conclusion": "skipped",
+          "name": "ruff",
+          "number": 4,
+          "startedAt": "2026-10-02T00:30:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T00:30:43Z",
+          "conclusion": "success",
+          "name": "guard table",
+          "number": 5,
+          "startedAt": "2026-10-02T00:30:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T00:30:49Z",
+          "conclusion": "success",
+          "name": "red-team corpus",
+          "number": 6,
+          "startedAt": "2026-10-02T00:30:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T00:30:49Z",
+          "conclusion": "success",
+          "name": "tests-ran table",
+          "number": 7,
+          "startedAt": "2026-10-02T00:30:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T00:30:57Z",
+          "conclusion": "success",
+          "name": "tables on bash 3.2 (macOS system bash)",
+          "number": 8,
+          "startedAt": "2026-10-02T00:30:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T00:32:07Z",
+          "conclusion": "failure",
+          "name": "install + doctor",
+          "number": 9,
+          "startedAt": "2026-10-02T00:30:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T00:32:07Z",
+          "conclusion": "skipped",
+          "name": "install + doctor on bash 3.2 (macOS system bash)",
+          "number": 10,
+          "startedAt": "2026-10-02T00:32:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T00:32:07Z",
+          "conclusion": "skipped",
+          "name": "python syntax",
+          "number": 11,
+          "startedAt": "2026-10-02T00:32:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T00:32:07Z",
+          "conclusion": "skipped",
+          "name": "validate plugin",
+          "number": 12,
+          "startedAt": "2026-10-02T00:32:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T00:32:07Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v4",
+          "number": 24,
+          "startedAt": "2026-10-02T00:32:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T00:32:08Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 25,
+          "startedAt": "2026-10-02T00:32:07Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/OrenSegal/sous/actions/runs/36946337909/job/110649220447"
+    },
+    {
+      "completedAt": "2026-10-02T00:31:27Z",
+      "conclusion": "failure",
+      "databaseId": 110649220569,
+      "name": "test (ubuntu-latest)",
+      "startedAt": "2026-10-02T00:30:34Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-02T00:30:35Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-02T00:30:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T00:30:36Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v4",
+          "number": 2,
+          "startedAt": "2026-10-02T00:30:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T00:30:37Z",
+          "conclusion": "success",
+          "name": "shellcheck",
+          "number": 3,
+          "startedAt": "2026-10-02T00:30:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T00:30:41Z",
+          "conclusion": "success",
+          "name": "ruff",
+          "number": 4,
+          "startedAt": "2026-10-02T00:30:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T00:30:42Z",
+          "conclusion": "success",
+          "name": "guard table",
+          "number": 5,
+          "startedAt": "2026-10-02T00:30:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T00:30:45Z",
+          "conclusion": "success",
+          "name": "red-team corpus",
+          "number": 6,
+          "startedAt": "2026-10-02T00:30:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T00:30:46Z",
+          "conclusion": "success",
+          "name": "tests-ran table",
+          "number": 7,
+          "startedAt": "2026-10-02T00:30:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T00:30:46Z",
+          "conclusion": "skipped",
+          "name": "tables on bash 3.2 (macOS system bash)",
+          "number": 8,
+          "startedAt": "2026-10-02T00:30:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T00:31:26Z",
+          "conclusion": "failure",
+          "name": "install + doctor",
+          "number": 9,
+          "startedAt": "2026-10-02T00:30:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T00:31:26Z",
+          "conclusion": "skipped",
+          "name": "install + doctor on bash 3.2 (macOS system bash)",
+          "number": 10,
+          "startedAt": "2026-10-02T00:31:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T00:31:26Z",
+          "conclusion": "skipped",
+          "name": "python syntax",
+          "number": 11,
+          "startedAt": "2026-10-02T00:31:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T00:31:26Z",
+          "conclusion": "skipped",
+          "name": "validate plugin",
+          "number": 12,
+          "startedAt": "2026-10-02T00:31:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T00:31:26Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v4",
+          "number": 24,
+          "startedAt": "2026-10-02T00:31:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-02T00:31:26Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 25,
+          "startedAt": "2026-10-02T00:31:26Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/OrenSegal/sous/actions/runs/36946337909/job/110649220569"
+    }
+  ],
+  "name": "ci",
+  "updatedAt": "2026-10-02T00:32:09Z",
+  "repository": "OrenSegal/sous"
+}
