@@ -40,7 +40,7 @@ By default the investigator is a rule-based baseline that needs no key. `--provi
 
 ## Results
 
-One run of each over all 24 scenarios, on 2026-10-15. The grades and every diagnosis are in `results/`.
+One run of each over all 24 scenarios, on 2026-10-15. The grades and every diagnosis are in `results/`. The run used the fixtures at commit `6cf3166`; a review afterwards corrected metric values in 012, 014 and 022 that contradicted their own logs.
 
 | provider | mode | pass rate | cost | avg steps | avg tool calls | avg wall |
 |---|---|---|---|---|---|---|

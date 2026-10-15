@@ -13,12 +13,14 @@ working directory, and fixtures staged without the scenario's ground truth.
 How the stream maps onto `RunResult`:
 - steps: distinct assistant message ids (one per model turn).
 - tool_calls: every `tool_use` except `StructuredOutput`, which is how the answer
-  is handed in. A gated tool is approved unless Claude Code reported a
-  permission denial for that call.
-- outcome: from the `result` event's subtype, and whether `structured_output`
-  parses as a `Diagnosis`.
+  is handed in. A gated call counts as approved only if the operator approves
+  and Claude Code reported no denial for it.
+- outcome: from the `result` event's subtype and `is_error`, and whether
+  `structured_output` parses as a `Diagnosis`. A failure of the harness itself
+  (bad sign-in, crash, timeout, unparseable output) is an error, not a wrong answer.
 - cost_usd: the `total_cost_usd` Claude Code reports, which is what the run
-  would cost at API rates. On a subscription nothing is billed per call.
+  would cost at API rates. On a subscription nothing is billed per call. A run
+  that ends without a `result` event reports no cost, so its cost is unknown.
 """
 
 import asyncio
@@ -46,6 +48,8 @@ from rootcause.domain.scenario import Case
 SERVER = "telemetry"
 PREFIX = f"mcp__{SERVER}__"
 ANSWER_TOOL = "StructuredOutput"
+# Written into the stream by `spawn_claude` when the process itself fails.
+SPAWN_ERROR = "rootcause_spawn_error"
 AGENT = "claude-code"
 TIMEOUT_S = 900
 
@@ -108,22 +112,36 @@ def server_command(fixtures: Path) -> list[str]:
     return [exe, "telemetry-mcp", str(fixtures)]
 
 
+def spawn_error(message: str) -> str:
+    return json.dumps({"type": SPAWN_ERROR, "message": message})
+
+
 def parse_stream(
-    lines: Iterable[str], *, run_id: str, gated: frozenset[str]
+    lines: Iterable[str], *, run_id: str, gated: frozenset[str], approve: bool
 ) -> RunResult[Diagnosis]:
-    events = [json.loads(line) for line in lines if line.strip()]
     turns: list[str] = []
     uses: list[tuple[int, dict[str, Any]]] = []
     errors: dict[str, bool] = {}
     denied: set[str] = set()
     final: dict[str, Any] | None = None
-    for e in events:
+    problems: list[str] = []
+    for line in lines:
+        if not line.strip():
+            continue
+        try:
+            e = json.loads(line)
+        except json.JSONDecodeError:
+            problems.append(f"unparseable output line: {line[:200]!r}")
+            continue
         kind = e.get("type")
-        if kind == "assistant":
+        if kind == SPAWN_ERROR:
+            problems.append(e["message"])
+        elif kind == "assistant":
             msg = e["message"]
             if msg["id"] not in turns:
                 turns.append(msg["id"])
-            uses += [(len(turns), b) for b in msg["content"] if b["type"] == "tool_use"]
+            step = turns.index(msg["id"]) + 1
+            uses += [(step, b) for b in msg["content"] if b["type"] == "tool_use"]
         elif kind == "user":
             for b in e["message"]["content"]:
                 if b.get("type") == "tool_result":
@@ -147,7 +165,7 @@ def parse_stream(
                 name=name,
                 args=b["input"],
                 gated=is_gated,
-                approved=(b["id"] not in denied) if is_gated else None,
+                approved=(approve and b["id"] not in denied) if is_gated else None,
                 is_error=errors.get(b["id"], False),
             )
         )
@@ -156,7 +174,9 @@ def parse_stream(
     if final is not None:
         subtype = final.get("subtype", "")
         note = subtype
-        if subtype == "success":
+        if final.get("is_error") and subtype == "success":
+            note = f"harness error: {str(final.get('result', ''))[:500]}"
+        elif subtype == "success":
             try:
                 answer = Diagnosis.model_validate(final.get("structured_output"))
                 outcome = Outcome.ANSWERED
@@ -164,6 +184,11 @@ def parse_stream(
                 outcome, note = Outcome.NO_ANSWER, f"invalid structured output: {err}"
         else:
             outcome = OUTCOMES.get(subtype, Outcome.ERROR)
+    if problems:
+        if outcome is Outcome.ANSWERED:
+            note = "; ".join(problems)
+        else:
+            outcome, note = Outcome.ERROR, "; ".join([*problems, note])
     return RunResult[Diagnosis](
         run_id=run_id,
         agent=AGENT,
@@ -178,6 +203,8 @@ def parse_stream(
 
 
 async def spawn_claude(cmd: list[str], cwd: Path) -> list[str]:
+    """Stdout lines as they arrived. A timeout keeps what came before it, and a
+    failure of the process is appended as a `SPAWN_ERROR` line with stderr."""
     proc = await asyncio.create_subprocess_exec(
         *cmd,
         cwd=cwd,
@@ -185,13 +212,32 @@ async def spawn_claude(cmd: list[str], cwd: Path) -> list[str]:
         stdout=asyncio.subprocess.PIPE,
         stderr=asyncio.subprocess.PIPE,
     )
+    assert proc.stdout is not None and proc.stderr is not None
+    stdout, stderr = proc.stdout, proc.stderr
+    lines: list[str] = []
+    err = bytearray()
+    killed = False
+
+    async def read_stdout() -> None:
+        async for raw in stdout:
+            lines.append(raw.decode(errors="replace").rstrip("\n"))
+
+    async def read_stderr() -> None:
+        err.extend(await stderr.read())
+
     try:
-        out, _ = await asyncio.wait_for(proc.communicate(), TIMEOUT_S)
+        await asyncio.wait_for(asyncio.gather(read_stdout(), read_stderr(), proc.wait()), TIMEOUT_S)
     except TimeoutError:
-        proc.kill()
-        await proc.wait()
-        return []
-    return out.decode().splitlines()
+        lines.append(spawn_error(f"timed out after {TIMEOUT_S}s"))
+    finally:
+        if proc.returncode is None:  # timed out or cancelled: never leave it running
+            killed = True
+            proc.kill()
+            await proc.wait()
+    if proc.returncode != 0 and not killed:
+        tail = err.decode(errors="replace").strip()[-500:]
+        lines.append(spawn_error(f"claude exit {proc.returncode}: {tail}"))
+    return lines
 
 
 class ClaudeCodeHarness:
@@ -232,7 +278,7 @@ class ClaudeCodeHarness:
                 budget_usd=budget_usd,
             )
             lines = await self.spawn([*cmd, case.scenario.alert.render()], work)
-        result = parse_stream(lines, run_id=run_id, gated=gated)
+        result = parse_stream(lines, run_id=run_id, gated=gated, approve=approve)
         for call in result.tool_calls:
             events.append(run_id, TOOL_CALL, {"call": call.model_dump(mode="json"), "result": ""})
         events.append(run_id, OUTCOME, result.model_dump(mode="json"))
