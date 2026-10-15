@@ -9,6 +9,7 @@ Delivery semantics, stated plainly:
 """
 
 import asyncio
+import re
 import time
 from collections.abc import Mapping
 from dataclasses import dataclass, field
@@ -16,8 +17,9 @@ from typing import Any
 
 from pydantic import BaseModel
 
-from rootcause.application.ports import ApprovalPolicy, Block, EventLog, Tool, ToolResult
+from rootcause.application.ports import ApprovalPolicy, Block, EventLog, Tool, ToolResult, Tracer
 from rootcause.application.terminal import TerminalTool
+from rootcause.application.tracing import OPERATION, TOOL, TOOL_CALL_ID, NullTracer
 from rootcause.application.transcript import APPROVAL, TOOL_CALL, TOOL_INTENT
 
 
@@ -56,6 +58,16 @@ class Execution:
     answer: BaseModel | None = None
 
 
+UNGROUNDED = (
+    "Evidence ids not returned by any tool in this run: {ids}. "
+    "Cite only ids that appear in tool results, then resubmit."
+)
+
+
+def _mentions(text: str, token: str) -> bool:
+    return re.search(rf"(?<![\w:-]){re.escape(token)}(?![\w:-])", text) is not None
+
+
 def tool_result(tool_use_id: str, text: str, is_error: bool = False) -> Block:
     return {
         "type": "tool_result",
@@ -74,14 +86,38 @@ class ToolExecutor:
         approval: ApprovalPolicy,
         events: EventLog,
         settings: ExecSettings,
+        seen: list[str] | None = None,
+        grounded: bool = True,
+        tracer: Tracer | None = None,
     ) -> None:
         self.tools = tools
         self.terminal = terminal
         self.approval = approval
         self.events = events
         self.settings = settings
+        # Text of every successful tool result in this run: what the agent may cite.
+        self.seen = seen if seen is not None else []
+        self.grounded = grounded
+        self.tracer: Tracer = tracer or NullTracer()
 
     async def execute(
+        self, run_id: str, step: int, use: Block, recovery: Recovery | None = None
+    ) -> Execution:
+        if use["name"] == self.terminal.name:
+            return await self._execute(run_id, step, use, recovery)
+        attributes = {OPERATION: "execute_tool", TOOL: use["name"], TOOL_CALL_ID: use["id"]}
+        with self.tracer.span(f"execute_tool {use['name']}", **attributes) as span:
+            done = await self._execute(run_id, step, use, recovery)
+            if done.call is not None:
+                span.set("rootcause.tool.gated", done.call.gated)
+                if done.call.approved is not None:
+                    span.set("rootcause.tool.approved", done.call.approved)
+                span.set("rootcause.tool.attempts", done.call.attempts)
+            if done.result["is_error"]:
+                span.fail(str(done.result["content"])[:300])
+            return done
+
+    async def _execute(
         self, run_id: str, step: int, use: Block, recovery: Recovery | None = None
     ) -> Execution:
         use_id, name = use["id"], use["name"]
@@ -92,6 +128,10 @@ class ToolExecutor:
             answer = self.terminal.parse(args)
             if isinstance(answer, str):
                 return Execution(tool_result(use_id, answer, True))
+            if self.grounded and (unseen := self.unseen_evidence(answer)):
+                return Execution(
+                    tool_result(use_id, UNGROUNDED.format(ids=", ".join(unseen)), True)
+                )
             return Execution(tool_result(use_id, "Recorded."), answer=answer)
 
         tool = self.tools.get(name)
@@ -154,7 +194,16 @@ class ToolExecutor:
         finally:
             call.ms = round((time.perf_counter() - started) * 1000, 1)
 
+    def unseen_evidence(self, answer: BaseModel) -> list[str]:
+        """Cited ids that appear in no tool result as a whole token: an id is seen when
+        it is a JSON value or mentioned inside one (a deploy named in a log message),
+        but not when it is only a prefix of a longer id."""
+        cited: list[str] = getattr(answer, "evidence", None) or []
+        return [e for e in cited if not any(_mentions(text, e) for text in self.seen)]
+
     def _finish(self, run_id: str, call: ToolCall, result: Block) -> Execution:
         call.is_error = call.is_error or bool(result["is_error"])
+        if not result["is_error"] and isinstance(result["content"], str):
+            self.seen.append(result["content"])
         self.events.append(run_id, TOOL_CALL, {"call": call.model_dump(), "result": result})
         return Execution(result, call)

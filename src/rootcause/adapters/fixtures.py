@@ -7,6 +7,7 @@ from pathlib import Path
 import yaml
 from pydantic import BaseModel, TypeAdapter
 
+from rootcause.application.sweep import SweepSpec
 from rootcause.domain.scenario import Case, Scenario
 from rootcause.domain.store import TelemetryStore
 from rootcause.domain.telemetry import Deploy, LogLine, MetricSeries, Span
@@ -58,3 +59,7 @@ def write_case(case: Case, out: Path, *, scenario_file: bool = True) -> Path:
     (out / TRACES).write_text(_dump(list(store.spans)))
     (out / DEPLOYS).write_text(_dump(list(store.deploys)))
     return out
+
+
+def load_sweep_spec(path: Path) -> SweepSpec:
+    return SweepSpec.model_validate(yaml.safe_load(path.read_text()))

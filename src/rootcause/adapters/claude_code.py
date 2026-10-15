@@ -25,6 +25,7 @@ How the stream maps onto `RunResult`:
 
 import asyncio
 import json
+import os
 import shutil
 import sys
 import tempfile
@@ -37,10 +38,20 @@ from pydantic import ValidationError
 from rootcause.adapters.fixtures import write_case
 from rootcause.adapters.mcp_telemetry import build_telemetry_server
 from rootcause.adapters.mcp_tools import mcp_tools
-from rootcause.application.agent import RunResult
+from rootcause.application.agent import RunResult, TokenUsage
 from rootcause.application.executor import ToolCall
-from rootcause.application.investigator import investigator_prompt
-from rootcause.application.ports import EventLog, ToolTraits
+from rootcause.application.investigator import SEARCH_POSTMORTEMS, investigator_prompt
+from rootcause.application.ports import EventLog, ToolTraits, Tracer
+from rootcause.application.tracing import (
+    AGENT as AGENT_NAME,
+)
+from rootcause.application.tracing import (
+    OPERATION,
+    REQUEST_MODEL,
+    TOOL,
+    TOOL_CALL_ID,
+    NullTracer,
+)
 from rootcause.application.transcript import OUTCOME, TOOL_CALL
 from rootcause.domain.answers import Diagnosis, Outcome
 from rootcause.domain.scenario import Case
@@ -52,11 +63,18 @@ ANSWER_TOOL = "StructuredOutput"
 SPAWN_ERROR = "rootcause_spawn_error"
 AGENT = "claude-code"
 TIMEOUT_S = 900
+# The telemetry server builds its search index at startup; with embeddings on a busy
+# machine that can outlast Claude Code's default MCP startup wait.
+SPAWN_ENV = {"MCP_TIMEOUT": "120000"}
 
-PROMPT = investigator_prompt(
-    report="report it as the structured diagnosis",
-    finish="Finish with the structured diagnosis. Do not answer in plain text.",
-)
+
+def prompt(*, retrieval: bool = False) -> str:
+    return investigator_prompt(
+        report="report it as the structured diagnosis",
+        finish="Finish with the structured diagnosis. Do not answer in plain text.",
+        retrieval=retrieval,
+    )
+
 
 OUTCOMES = {
     "error_max_turns": Outcome.STEP_LIMIT,
@@ -80,10 +98,11 @@ def command(
     effort: str,
     max_turns: int,
     budget_usd: float,
+    retrieval: bool = False,
 ) -> list[str]:
     return [
         "claude", "-p",
-        "--system-prompt", PROMPT,
+        "--system-prompt", prompt(retrieval=retrieval),
         "--model", model,
         "--effort", effort,
         "--tools", "",
@@ -106,10 +125,24 @@ def stage_case(case: Case, out: Path) -> Path:
     return write_case(hidden, out)
 
 
-def server_command(fixtures: Path) -> list[str]:
-    """The `rootcause` entry point installed next to this interpreter."""
+def server_command(
+    fixtures: Path, retrieval: str = "none", corpus: Path | None = None
+) -> list[str]:
+    """The `rootcause` entry point installed next to this interpreter. Paths are absolute:
+    Claude Code starts the server from an empty working directory."""
     exe = shutil.which("rootcause", path=str(Path(sys.executable).parent)) or "rootcause"
-    return [exe, "telemetry-mcp", str(fixtures)]
+    cmd = [exe, "telemetry-mcp", str(fixtures.resolve()), "--retrieval", retrieval]
+    return cmd + (["--corpus", str(corpus.resolve())] if corpus else [])
+
+
+def _usage_attributes(usage: TokenUsage) -> dict[str, int]:
+    read, write = usage.cache_read_tokens, usage.cache_write_tokens
+    return {
+        "gen_ai.usage.input_tokens": usage.input_tokens + read + write,
+        "gen_ai.usage.output_tokens": usage.output_tokens,
+        "gen_ai.usage.cache_read.input_tokens": read,
+        "gen_ai.usage.cache_write.input_tokens": write,
+    }
 
 
 def spawn_error(message: str) -> str:
@@ -120,6 +153,7 @@ def parse_stream(
     lines: Iterable[str], *, run_id: str, gated: frozenset[str], approve: bool
 ) -> RunResult[Diagnosis]:
     turns: list[str] = []
+    models: list[str] = []
     uses: list[tuple[int, dict[str, Any]]] = []
     errors: dict[str, bool] = {}
     denied: set[str] = set()
@@ -136,10 +170,16 @@ def parse_stream(
         kind = e.get("type")
         if kind == SPAWN_ERROR:
             problems.append(e["message"])
+        elif kind == "system" and e.get("subtype") == "init":
+            servers = {s.get("name"): s.get("status") for s in e.get("mcp_servers") or []}
+            if servers.get(SERVER) != "connected":
+                problems.append(f"{SERVER} server failed to start ({servers.get(SERVER)})")
         elif kind == "assistant":
             msg = e["message"]
             if msg["id"] not in turns:
                 turns.append(msg["id"])
+            if (model := msg.get("model")) and model not in models:
+                models.append(model)
             step = turns.index(msg["id"]) + 1
             uses += [(step, b) for b in msg["content"] if b["type"] == "tool_use"]
         elif kind == "user":
@@ -185,10 +225,9 @@ def parse_stream(
         else:
             outcome = OUTCOMES.get(subtype, Outcome.ERROR)
     if problems:
-        if outcome is Outcome.ANSWERED:
-            note = "; ".join(problems)
-        else:
-            outcome, note = Outcome.ERROR, "; ".join([*problems, note])
+        # Any of these means the run did not measure the model with its tools, even if it
+        # produced an answer, so the answer is not graded.
+        outcome, note = Outcome.ERROR, "; ".join([*problems, note])
     return RunResult[Diagnosis](
         run_id=run_id,
         agent=AGENT,
@@ -199,6 +238,17 @@ def parse_stream(
         cost_usd=float((final or {}).get("total_cost_usd") or 0.0),
         wall_ms=float((final or {}).get("duration_ms") or 0.0),
         note=note,
+        usage=_usage((final or {}).get("usage") or {}),
+        models=models,
+    )
+
+
+def _usage(raw: dict[str, Any]) -> TokenUsage:
+    return TokenUsage(
+        input_tokens=raw.get("input_tokens") or 0,
+        output_tokens=raw.get("output_tokens") or 0,
+        cache_read_tokens=raw.get("cache_read_input_tokens") or 0,
+        cache_write_tokens=raw.get("cache_creation_input_tokens") or 0,
     )
 
 
@@ -209,6 +259,7 @@ async def spawn_claude(cmd: list[str], cwd: Path) -> list[str]:
         proc = await asyncio.create_subprocess_exec(
             *cmd,
             cwd=cwd,
+            env={**os.environ, **SPAWN_ENV},
             stdin=asyncio.subprocess.DEVNULL,
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.PIPE,
@@ -250,24 +301,35 @@ class ClaudeCodeHarness:
         effort: str = "high",
         max_turns: int = 15,
         spawn: Spawn = spawn_claude,
+        tracer: Tracer | None = None,
     ) -> None:
         self.model = model
         self.effort = effort
         self.max_turns = max_turns
         self.spawn = spawn
+        self.tracer: Tracer = tracer or NullTracer()
         self.name = f"{AGENT}:{model}:{effort}"
 
     async def investigate(
-        self, case: Case, *, events: EventLog, approve: bool, budget_usd: float
+        self,
+        case: Case,
+        *,
+        events: EventLog,
+        approve: bool,
+        budget_usd: float,
+        retrieval: str = "none",
+        corpus: Path | None = None,
     ) -> RunResult[Diagnosis]:
         async with mcp_tools(build_telemetry_server(case.store)) as tools:
             gated = frozenset(t.name for t in tools if not t.read_only)
             allowed = allowed_tools(tools, approve=approve)
+        if retrieval != "none":  # served by the subprocess, not the in-process server above
+            allowed.append(SEARCH_POSTMORTEMS)
         run_id = events.start_run(scenario_id=case.scenario.id, agent=AGENT, provider=self.name)
         with tempfile.TemporaryDirectory(prefix="rootcause-") as tmp:
             root = Path(tmp)
             fixtures = stage_case(case, root / "fixtures")
-            exe, *args = server_command(fixtures)
+            exe, *args = server_command(fixtures, retrieval, corpus)
             config = root / "mcp.json"
             config.write_text(json.dumps({"mcpServers": {SERVER: {"command": exe, "args": args}}}))
             work = root / "work"
@@ -279,10 +341,31 @@ class ClaudeCodeHarness:
                 effort=self.effort,
                 max_turns=self.max_turns,
                 budget_usd=budget_usd,
+                retrieval=retrieval != "none",
             )
             lines = await self.spawn([*cmd, case.scenario.alert.render()], work)
         result = parse_stream(lines, run_id=run_id, gated=gated, approve=approve)
+        self._trace(result)
         for call in result.tool_calls:
             events.append(run_id, TOOL_CALL, {"call": call.model_dump(mode="json"), "result": ""})
         events.append(run_id, OUTCOME, result.model_dump(mode="json"))
         return result
+
+    def _trace(self, result: RunResult[Diagnosis]) -> None:
+        """Spans rebuilt from the stream after the run: Claude Code owns the loop, so
+        there is no live hook. Parent and order are right; per-tool timing is not."""
+        attributes = {
+            OPERATION: "invoke_agent", AGENT_NAME: AGENT, REQUEST_MODEL: self.model,
+            "rootcause.run_id": result.run_id, "rootcause.reconstructed": True,
+            "rootcause.outcome": result.outcome.value, "rootcause.steps": result.steps,
+            "rootcause.cost_usd": result.cost_usd, **_usage_attributes(result.usage),
+        }  # fmt: skip
+        with self.tracer.span(f"invoke_agent {AGENT}", **attributes) as agent:
+            for call in result.tool_calls:
+                tool = {OPERATION: "execute_tool", TOOL: call.name, TOOL_CALL_ID: call.tool_use_id}
+                with self.tracer.span(f"execute_tool {call.name}", **tool) as span:
+                    span.set("rootcause.tool.gated", call.gated)
+                    if call.is_error:
+                        span.fail("tool returned an error or was denied")
+            if result.outcome is Outcome.ERROR:
+                agent.fail(result.note)

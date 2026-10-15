@@ -94,7 +94,10 @@ async def test_orchestrator_dispatches_workers_and_diagnoses(case):
         ]
     )
     logs = Scripted(
-        [{"content": [call("submit_findings", {**FINDINGS, "evidence": ["log-0013"]}, "l1")]}]
+        [
+            {"content": [call("query_logs", {"service": "checkout", "level": "error"}, "l0")]},
+            {"content": [call("submit_findings", {**FINDINGS, "evidence": ["log-0013"]}, "l1")]},
+        ]
     )
     events = SqliteEventLog()
     loop = make_loop(Router(orchestrator=orchestrator, changes=changes, logs=logs), events=events)
@@ -135,7 +138,7 @@ async def test_workers_run_concurrently():
     worker = lambda name, id_: Scripted(  # noqa: E731
         [
             {"content": [call(name, {}, id_)]},
-            {"content": [call("submit_findings", FINDINGS, id_ + "f")]},
+            {"content": [call("submit_findings", {**FINDINGS, "evidence": []}, id_ + "f")]},
         ]
     )
     loop = make_loop(
@@ -152,7 +155,7 @@ async def test_a_worker_cannot_call_a_gated_tool(case):
     changes = Scripted(
         [
             {"content": [call("rollback_deploy", {"deploy_id": "d-1042", "reason": "x"}, "r")]},
-            {"content": [call("submit_findings", FINDINGS, "f")]},
+            {"content": [call("submit_findings", {**FINDINGS, "evidence": []}, "f")]},
         ]
     )
     loop = make_loop(Router(changes=changes), approve=True)
