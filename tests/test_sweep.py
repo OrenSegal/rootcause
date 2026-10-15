@@ -213,7 +213,7 @@ async def test_an_exception_in_one_run_does_not_stop_the_sweep(two_scenarios, tm
         return HeuristicProvider()
 
     counts = await run_sweep(spec, tmp_path / "o", make_engine=engine)
-    assert counts == {"ran": 2, "skipped": 0, "crashed": 2}
+    assert counts == {"ran": 4, "skipped": 0, "crashed": 2}  # crashes leave error rows
     assert len(read_sweep(tmp_path / "o")[0]) == 2
 
 
@@ -235,3 +235,18 @@ async def test_a_config_can_replace_the_brief(two_scenarios, tmp_path):
         spec, tmp_path / "o", make_engine=lambda c: ClaudeCodeHarness(model=c.model, spawn=spawn)
     )
     assert seen == ["You are an on-call investigator. (mutated)"] * 2
+
+
+async def test_a_crashed_run_leaves_an_error_row_with_the_reason(two_scenarios, tmp_path):
+    spec = SweepSpec(
+        name="t", repeats=1, scenarios=str(two_scenarios),
+        configs=[SweepConfig(name="boom", provider="heuristic")],
+    )  # fmt: skip
+
+    def engine(config):
+        raise RuntimeError("engine failed to start")
+
+    await run_sweep(spec, tmp_path / "o", make_engine=engine)
+    _, errors = read_sweep(tmp_path / "o")
+    assert len(errors) == 2
+    assert all("engine failed to start" in e.grade.note for e in errors)

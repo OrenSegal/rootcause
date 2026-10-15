@@ -18,6 +18,7 @@ from pydantic import BaseModel
 
 from rootcause.adapters import anthropic_provider, heuristic
 from rootcause.adapters.claude_code import ClaudeCodeHarness
+from rootcause.adapters.claude_code_completion import ClaudeCodeCompletion
 from rootcause.adapters.corpus import load_corpus, load_qrels
 from rootcause.adapters.fixtures import (
     SCENARIO_FILE,
@@ -36,7 +37,7 @@ from rootcause.adapters.sqlite_events import SqliteEventLog
 from rootcause.application.agent import AgentLoop, RunResult, TokenUsage
 from rootcause.application.approval import StaticApproval
 from rootcause.application.budget import Budget
-from rootcause.application.evals import Grade, SuiteReport, grade
+from rootcause.application.evals import Grade, SuiteReport, crash_grade, grade
 from rootcause.application.investigator import investigator_spec
 from rootcause.application.orchestrator import DispatchWorkers, orchestrator_spec
 from rootcause.application.ports import EventLog, LLMProvider, Retriever, Tracer
@@ -89,6 +90,7 @@ class ProviderName(StrEnum):
     HEURISTIC = "heuristic"
     ANTHROPIC = "anthropic"
     CLAUDE_CODE = "claude-code"  # Claude Code runs the loop; single agent only
+    CLAUDE_CODE_LOOP = "claude-code-loop"  # the hand-written loop, each turn through Claude Code
 
 
 class EffortLevel(StrEnum):
@@ -109,6 +111,8 @@ def provider_factory(name: ProviderName, model: str, effort: EffortLevel) -> Pro
     def make() -> Engine:
         if name is ProviderName.HEURISTIC:
             return heuristic.HeuristicProvider()
+        if name is ProviderName.CLAUDE_CODE_LOOP:
+            return ClaudeCodeCompletion(model=model, effort=effort.value)
         if name is ProviderName.CLAUDE_CODE:
             return ClaudeCodeHarness(model=model, effort=effort.value, tracer=_tracing.tracer)
         return anthropic_provider.AnthropicProvider(model=model, effort=effort.value)
@@ -440,25 +444,30 @@ async def run_sweep(
             counts["skipped"] += 1
             return
         async with gate:
-            run = await investigate(
-                case,
-                make_engine(config),
-                events=events,
-                budget_usd=config.budget_usd,
-                mode=Mode(config.mode),
-                retrieval=config.retrieval,
-                brief=briefs.get(config.name),
-            )
-        row = Row(config=config.name, scenario_id=case.scenario.id, rep=rep, grade=run.grade)
+            try:
+                run = await investigate(
+                    case,
+                    make_engine(config),
+                    events=events,
+                    budget_usd=config.budget_usd,
+                    mode=Mode(config.mode),
+                    retrieval=config.retrieval,
+                    brief=briefs.get(config.name),
+                )
+                graded = run.grade
+            except Exception as e:
+                # Recorded, not swallowed: a deterministic failure must show in the report
+                # instead of being retried silently forever. Still retried next time.
+                counts["crashed"] += 1
+                note = f"crashed: {type(e).__name__}: {e}"
+                graded = crash_grade(case.scenario.id, config.provider, config.mode, note)
+        row = Row(config=config.name, scenario_id=case.scenario.id, rep=rep, grade=graded)
         target = out / (ERRORS if is_error(by_name[row.config], row) else ROWS)
         async with write:
             await asyncio.to_thread(_append, target, row.model_dump_json())
             counts["ran"] += 1
 
-    # One crashing run (an engine that fails to start, a bug) must not take the rest
-    # down; it writes no row, so the next call retries it.
-    outcomes = await asyncio.gather(*(one(*t) for t in todo), return_exceptions=True)
-    counts["crashed"] = sum(isinstance(o, Exception) for o in outcomes)
+    await asyncio.gather(*(one(*t) for t in todo))
     return counts
 
 
