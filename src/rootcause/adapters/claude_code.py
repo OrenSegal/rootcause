@@ -37,7 +37,7 @@ from pydantic import ValidationError
 from rootcause.adapters.fixtures import write_case
 from rootcause.adapters.mcp_telemetry import build_telemetry_server
 from rootcause.adapters.mcp_tools import mcp_tools
-from rootcause.application.agent import RunResult
+from rootcause.application.agent import RunResult, TokenUsage
 from rootcause.application.executor import ToolCall
 from rootcause.application.investigator import investigator_prompt
 from rootcause.application.ports import EventLog, ToolTraits
@@ -120,6 +120,7 @@ def parse_stream(
     lines: Iterable[str], *, run_id: str, gated: frozenset[str], approve: bool
 ) -> RunResult[Diagnosis]:
     turns: list[str] = []
+    models: list[str] = []
     uses: list[tuple[int, dict[str, Any]]] = []
     errors: dict[str, bool] = {}
     denied: set[str] = set()
@@ -140,6 +141,8 @@ def parse_stream(
             msg = e["message"]
             if msg["id"] not in turns:
                 turns.append(msg["id"])
+            if (model := msg.get("model")) and model not in models:
+                models.append(model)
             step = turns.index(msg["id"]) + 1
             uses += [(step, b) for b in msg["content"] if b["type"] == "tool_use"]
         elif kind == "user":
@@ -199,6 +202,17 @@ def parse_stream(
         cost_usd=float((final or {}).get("total_cost_usd") or 0.0),
         wall_ms=float((final or {}).get("duration_ms") or 0.0),
         note=note,
+        usage=_usage((final or {}).get("usage") or {}),
+        models=models,
+    )
+
+
+def _usage(raw: dict[str, Any]) -> TokenUsage:
+    return TokenUsage(
+        input_tokens=raw.get("input_tokens") or 0,
+        output_tokens=raw.get("output_tokens") or 0,
+        cache_read_tokens=raw.get("cache_read_input_tokens") or 0,
+        cache_write_tokens=raw.get("cache_creation_input_tokens") or 0,
     )
 
 

@@ -142,3 +142,34 @@ async def test_runlog_records_every_step(case):
     kinds = [e.kind for e in loop.events.events(result.run_id)]
     assert kinds[0] == "start" and kinds[-1] == "outcome"
     assert kinds.count("assistant") == result.steps
+
+
+async def test_run_records_token_usage_and_the_model_that_served_it(case):
+    usage = {
+        "input_tokens": 100,
+        "output_tokens": 20,
+        "cache_read_input_tokens": 900,
+        "cache_creation_input_tokens": 50,
+    }
+    provider = Scripted(
+        [
+            {"content": [call("list_deploys", {}, "a")], "usage": usage},
+            {"content": [call("submit_diagnosis", DIAGNOSIS, "b")], "usage": usage},
+        ]
+    )
+    result = await run(make_loop(provider), case)
+    assert result.usage.model_dump() == {
+        "input_tokens": 200,
+        "output_tokens": 40,
+        "cache_read_tokens": 1800,
+        "cache_write_tokens": 100,
+    }
+    assert result.models == ["claude-opus-5-5"]
+
+
+async def test_a_harness_error_is_not_scored_as_a_wrong_answer(case):
+    provider = Scripted([{"content": [], "stop_reason": "max_tokens"}])
+    result = await run(make_loop(provider), case)
+    graded = grade(case, result, provider="p", mode="single", tool_calls=0)
+    assert graded.status == "error"
+    assert not graded.passed

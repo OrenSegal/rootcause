@@ -218,3 +218,11 @@ async def test_a_missing_claude_binary_is_an_error_not_a_crash(tmp_path):
     result = parse(out)
     assert result.outcome is Outcome.ERROR
     assert "could not start" in result.note
+
+
+def test_stream_usage_and_served_model_are_kept():
+    result = parse(lines())
+    assert result.models == ["claude-opus-5-5"]
+    assert result.usage.output_tokens == 1117
+    assert result.usage.cache_read_tokens == 15386
+    assert result.usage.cache_write_tokens == 3662
