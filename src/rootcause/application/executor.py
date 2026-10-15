@@ -16,8 +16,9 @@ from typing import Any
 
 from pydantic import BaseModel
 
-from rootcause.application.ports import ApprovalPolicy, Block, EventLog, Tool, ToolResult
+from rootcause.application.ports import ApprovalPolicy, Block, EventLog, Tool, ToolResult, Tracer
 from rootcause.application.terminal import TerminalTool
+from rootcause.application.tracing import OPERATION, TOOL, TOOL_CALL_ID, NullTracer
 from rootcause.application.transcript import APPROVAL, TOOL_CALL, TOOL_INTENT
 
 
@@ -82,6 +83,7 @@ class ToolExecutor:
         settings: ExecSettings,
         seen: list[str] | None = None,
         grounded: bool = True,
+        tracer: Tracer | None = None,
     ) -> None:
         self.tools = tools
         self.terminal = terminal
@@ -91,8 +93,26 @@ class ToolExecutor:
         # Text of every successful tool result in this run: what the agent may cite.
         self.seen = seen if seen is not None else []
         self.grounded = grounded
+        self.tracer: Tracer = tracer or NullTracer()
 
     async def execute(
+        self, run_id: str, step: int, use: Block, recovery: Recovery | None = None
+    ) -> Execution:
+        if use["name"] == self.terminal.name:
+            return await self._execute(run_id, step, use, recovery)
+        attributes = {OPERATION: "execute_tool", TOOL: use["name"], TOOL_CALL_ID: use["id"]}
+        with self.tracer.span(f"execute_tool {use['name']}", **attributes) as span:
+            done = await self._execute(run_id, step, use, recovery)
+            if done.call is not None:
+                span.set("rootcause.tool.gated", done.call.gated)
+                if done.call.approved is not None:
+                    span.set("rootcause.tool.approved", done.call.approved)
+                span.set("rootcause.tool.attempts", done.call.attempts)
+            if done.result["is_error"]:
+                span.fail(str(done.result["content"])[:300])
+            return done
+
+    async def _execute(
         self, run_id: str, step: int, use: Block, recovery: Recovery | None = None
     ) -> Execution:
         use_id, name = use["id"], use["name"]

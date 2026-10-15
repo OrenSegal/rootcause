@@ -15,7 +15,9 @@ from rootcause.composition import (
     ProviderName,
     QueryKind,
     Retrieval,
+    TraceExporter,
     compare,
+    configure_tracing,
     fetch_ci_case,
     investigate,
     load_case,
@@ -34,6 +36,18 @@ from rootcause.composition import (
 from rootcause.domain.answers import Diagnosis, Outcome
 
 app = typer.Typer(no_args_is_help=True, add_completion=False)
+
+
+@app.callback()
+def main(
+    trace: Annotated[
+        TraceExporter,
+        typer.Option(help="Trace agent runs with OpenTelemetry (needs the otel extra)."),
+    ] = TraceExporter.NONE,
+) -> None:
+    """Incident and CI root-cause agent with known-answer evals."""
+    configure_tracing(trace)
+
 
 EXIT_CODES: dict[Outcome, int] = {
     Outcome.ANSWERED: 0,

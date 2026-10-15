@@ -34,8 +34,17 @@ from rootcause.application.ports import (
     LLMProvider,
     Tool,
     ToolTraits,
+    Tracer,
 )
 from rootcause.application.terminal import TerminalTool
+from rootcause.application.tracing import (
+    AGENT,
+    OPERATION,
+    REQUEST_MODEL,
+    RESPONSE_MODEL,
+    NullTracer,
+    usage_attributes,
+)
 from rootcause.application.transcript import (
     ASSISTANT,
     OUTCOME,
@@ -132,12 +141,14 @@ class AgentLoop:
         budget: Budget,
         approval: ApprovalPolicy,
         settings: ExecSettings | None = None,
+        tracer: Tracer | None = None,
     ) -> None:
         self.provider = provider
         self.events = events
         self.budget = budget
         self.approval = approval
         self.settings = settings or ExecSettings()
+        self.tracer: Tracer = tracer or NullTracer()
 
     async def run[A: BaseModel](
         self,
@@ -192,13 +203,26 @@ class AgentLoop:
             settings=self.settings,
             seen=transcript.tool_result_texts(),
             grounded=spec.require_grounded_evidence,
+            tracer=self.tracer,
         )
         return _Run(run_id, spec, executor, tools, transcript, [], time.perf_counter())
 
     async def _drive(self, run: _Run, recovery: Recovery) -> RunResult[Any]:
         token = CURRENT_RUN.set(run.run_id)
+        attributes = {
+            OPERATION: "invoke_agent",
+            AGENT: run.spec.name,
+            "rootcause.run_id": run.run_id,
+        }
         try:
-            return await self._turns(run, recovery)
+            with self.tracer.span(f"invoke_agent {run.spec.name}", **attributes) as span:
+                result = await self._turns(run, recovery)
+                span.set("rootcause.outcome", result.outcome.value)
+                span.set("rootcause.steps", result.steps)
+                span.set("rootcause.cost_usd", result.cost_usd)
+                if result.outcome is Outcome.ERROR:
+                    span.fail(result.note)
+                return result
         finally:
             CURRENT_RUN.reset(token)
 
@@ -213,11 +237,19 @@ class AgentLoop:
                 return done
 
         while transcript.steps < spec.max_steps:
+            model = getattr(self.provider, "model", self.provider.name)
             try:
                 self.budget.check()
-                response = await self.provider.complete(
-                    system=system, messages=transcript.messages, tools=definitions
-                )
+                with self.tracer.span(
+                    f"chat {model}", **{OPERATION: "chat", REQUEST_MODEL: model}
+                ) as span:
+                    response = await self.provider.complete(
+                        system=system, messages=transcript.messages, tools=definitions
+                    )
+                    span.set(RESPONSE_MODEL, response.model)
+                    span.set("gen_ai.response.finish_reasons", str(response.stop_reason))
+                    for key, value in usage_attributes(response.usage).items():
+                        span.set(key, value)
             except BudgetExceededError as e:
                 return self._finish(run, Outcome.BUDGET_EXCEEDED, note=str(e))
 

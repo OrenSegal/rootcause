@@ -40,7 +40,17 @@ from rootcause.adapters.mcp_tools import mcp_tools
 from rootcause.application.agent import RunResult, TokenUsage
 from rootcause.application.executor import ToolCall
 from rootcause.application.investigator import investigator_prompt
-from rootcause.application.ports import EventLog, ToolTraits
+from rootcause.application.ports import EventLog, ToolTraits, Tracer
+from rootcause.application.tracing import (
+    AGENT as AGENT_NAME,
+)
+from rootcause.application.tracing import (
+    OPERATION,
+    REQUEST_MODEL,
+    TOOL,
+    TOOL_CALL_ID,
+    NullTracer,
+)
 from rootcause.application.transcript import OUTCOME, TOOL_CALL
 from rootcause.domain.answers import Diagnosis, Outcome
 from rootcause.domain.scenario import Case
@@ -114,6 +124,16 @@ def server_command(
     exe = shutil.which("rootcause", path=str(Path(sys.executable).parent)) or "rootcause"
     cmd = [exe, "telemetry-mcp", str(fixtures.resolve()), "--retrieval", retrieval]
     return cmd + (["--corpus", str(corpus.resolve())] if corpus else [])
+
+
+def _usage_attributes(usage: TokenUsage) -> dict[str, int]:
+    read, write = usage.cache_read_tokens, usage.cache_write_tokens
+    return {
+        "gen_ai.usage.input_tokens": usage.input_tokens + read + write,
+        "gen_ai.usage.output_tokens": usage.output_tokens,
+        "gen_ai.usage.cache_read.input_tokens": read,
+        "gen_ai.usage.cache_write.input_tokens": write,
+    }
 
 
 def spawn_error(message: str) -> str:
@@ -268,11 +288,13 @@ class ClaudeCodeHarness:
         effort: str = "high",
         max_turns: int = 15,
         spawn: Spawn = spawn_claude,
+        tracer: Tracer | None = None,
     ) -> None:
         self.model = model
         self.effort = effort
         self.max_turns = max_turns
         self.spawn = spawn
+        self.tracer: Tracer = tracer or NullTracer()
         self.name = f"{AGENT}:{model}:{effort}"
 
     async def investigate(
@@ -307,7 +329,27 @@ class ClaudeCodeHarness:
             )
             lines = await self.spawn([*cmd, case.scenario.alert.render()], work)
         result = parse_stream(lines, run_id=run_id, gated=gated, approve=approve)
+        self._trace(result)
         for call in result.tool_calls:
             events.append(run_id, TOOL_CALL, {"call": call.model_dump(mode="json"), "result": ""})
         events.append(run_id, OUTCOME, result.model_dump(mode="json"))
         return result
+
+    def _trace(self, result: RunResult[Diagnosis]) -> None:
+        """Spans rebuilt from the stream after the run: Claude Code owns the loop, so
+        there is no live hook. Parent and order are right; per-tool timing is not."""
+        attributes = {
+            OPERATION: "invoke_agent", AGENT_NAME: AGENT, REQUEST_MODEL: self.model,
+            "rootcause.run_id": result.run_id, "rootcause.reconstructed": True,
+            "rootcause.outcome": result.outcome.value, "rootcause.steps": result.steps,
+            "rootcause.cost_usd": result.cost_usd, **_usage_attributes(result.usage),
+        }  # fmt: skip
+        with self.tracer.span(f"invoke_agent {AGENT}", **attributes) as agent:
+            for call in result.tool_calls:
+                tool = {OPERATION: "execute_tool", TOOL: call.name, TOOL_CALL_ID: call.tool_use_id}
+                with self.tracer.span(f"execute_tool {call.name}", **tool) as span:
+                    span.set("rootcause.tool.gated", call.gated)
+                    if call.is_error:
+                        span.fail("tool returned an error or was denied")
+            if result.outcome is Outcome.ERROR:
+                agent.fail(result.note)

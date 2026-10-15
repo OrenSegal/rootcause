@@ -5,6 +5,7 @@ SDK's `BetaMessage` data type (see docs/AUDIT.md, "Deliberate exceptions").
 """
 
 from collections.abc import Mapping
+from contextlib import AbstractContextManager
 from dataclasses import dataclass
 from typing import Any, Protocol
 
@@ -100,3 +101,17 @@ class Retriever(Protocol):
     name: str
 
     def search(self, query: str, k: int) -> list[Hit]: ...
+
+
+class Span(Protocol):
+    def set(self, key: str, value: str | int | float | bool) -> None: ...
+    def fail(self, message: str) -> None: ...
+
+
+class Tracer(Protocol):
+    """Opens a span that is current for the body of the `with` block, so spans opened
+    inside it, including the Anthropic SDK's own request spans, become its children."""
+
+    def span(
+        self, name: str, **attributes: str | int | float | bool
+    ) -> AbstractContextManager[Span]: ...
