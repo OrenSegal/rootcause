@@ -1,0 +1,20 @@
+[
+  {
+    "id": "7dbc2abc9e",
+    "service": "sous",
+    "version": "7dbc2abc9e",
+    "ts": "2026-10-02T06:11:36Z",
+    "author": "OrenSegal",
+    "summary": "Add handoff mod: write LATEST.md and LATEST.patch after each turn",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      ".claude-plugin/marketplace.json",
+      "mods/handoff/.claude-plugin/plugin.json",
+      "mods/handoff/hooks/hooks.json",
+      "mods/handoff/hooks/register.test.ts",
+      "mods/handoff/hooks/register.ts",
+      "mods/handoff/types/index.d.ts"
+    ]
+  }
+]

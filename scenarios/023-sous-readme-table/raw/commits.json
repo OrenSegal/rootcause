@@ -1,0 +1,50 @@
+[
+  {
+    "oid": "7dbc2abc9ed851522c002de64453b89c599d58ce",
+    "committedDate": "2026-10-02T06:11:36Z",
+    "messageHeadline": "Add handoff mod: write LATEST.md and LATEST.patch after each turn",
+    "author": "OrenSegal",
+    "files": [
+      {
+        "filename": ".claude-plugin/marketplace.json",
+        "status": "modified"
+      },
+      {
+        "filename": "mods/handoff/.claude-plugin/plugin.json",
+        "status": "added"
+      },
+      {
+        "filename": "mods/handoff/hooks/hooks.json",
+        "status": "added"
+      },
+      {
+        "filename": "mods/handoff/hooks/register.test.ts",
+        "status": "added"
+      },
+      {
+        "filename": "mods/handoff/hooks/register.ts",
+        "status": "added"
+      },
+      {
+        "filename": "mods/handoff/types/index.d.ts",
+        "status": "added"
+      }
+    ]
+  },
+  {
+    "oid": "89421994c3567d8901a3a8cba30b1364e6fd4481",
+    "committedDate": "2026-10-02T06:31:09Z",
+    "messageHeadline": "List handoff in the README toolkit table; let the table test accept i\u2026",
+    "author": "OrenSegal",
+    "files": [
+      {
+        "filename": "README.md",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/install.test.sh",
+        "status": "modified"
+      }
+    ]
+  }
+]

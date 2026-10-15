@@ -1,0 +1,292 @@
+[
+  {
+    "span_id": "run-36946337909",
+    "trace_id": "run-36946337909",
+    "parent_id": null,
+    "service": "ci",
+    "name": "ci",
+    "start": "2026-10-02T00:30:30Z",
+    "duration_ms": 99000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-110649220289",
+    "trace_id": "run-36946337909",
+    "parent_id": "run-36946337909",
+    "service": "marketplace",
+    "name": "marketplace",
+    "start": "2026-10-02T00:30:33Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110649220289-step-1",
+    "trace_id": "run-36946337909",
+    "parent_id": "job-110649220289",
+    "service": "marketplace",
+    "name": "Set up job",
+    "start": "2026-10-02T00:30:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110649220289-step-2",
+    "trace_id": "run-36946337909",
+    "parent_id": "job-110649220289",
+    "service": "marketplace",
+    "name": "Run actions/checkout@v4",
+    "start": "2026-10-02T00:30:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110649220289-step-3",
+    "trace_id": "run-36946337909",
+    "parent_id": "job-110649220289",
+    "service": "marketplace",
+    "name": "shape (offline, blocking)",
+    "start": "2026-10-02T00:30:35Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110649220289-step-4",
+    "trace_id": "run-36946337909",
+    "parent_id": "job-110649220289",
+    "service": "marketplace",
+    "name": "pinned refs resolve to their shas (network failure only warns)",
+    "start": "2026-10-02T00:30:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110649220289-step-8",
+    "trace_id": "run-36946337909",
+    "parent_id": "job-110649220289",
+    "service": "marketplace",
+    "name": "Post Run actions/checkout@v4",
+    "start": "2026-10-02T00:30:36Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110649220289-step-9",
+    "trace_id": "run-36946337909",
+    "parent_id": "job-110649220289",
+    "service": "marketplace",
+    "name": "Complete job",
+    "start": "2026-10-02T00:30:37Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110649220447",
+    "trace_id": "run-36946337909",
+    "parent_id": "run-36946337909",
+    "service": "test-macos-latest",
+    "name": "test (macos-latest)",
+    "start": "2026-10-02T00:30:39Z",
+    "duration_ms": 90000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-110649220447-step-1",
+    "trace_id": "run-36946337909",
+    "parent_id": "job-110649220447",
+    "service": "test-macos-latest",
+    "name": "Set up job",
+    "start": "2026-10-02T00:30:40Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110649220447-step-2",
+    "trace_id": "run-36946337909",
+    "parent_id": "job-110649220447",
+    "service": "test-macos-latest",
+    "name": "Run actions/checkout@v4",
+    "start": "2026-10-02T00:30:40Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110649220447-step-5",
+    "trace_id": "run-36946337909",
+    "parent_id": "job-110649220447",
+    "service": "test-macos-latest",
+    "name": "guard table",
+    "start": "2026-10-02T00:30:42Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110649220447-step-6",
+    "trace_id": "run-36946337909",
+    "parent_id": "job-110649220447",
+    "service": "test-macos-latest",
+    "name": "red-team corpus",
+    "start": "2026-10-02T00:30:43Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110649220447-step-7",
+    "trace_id": "run-36946337909",
+    "parent_id": "job-110649220447",
+    "service": "test-macos-latest",
+    "name": "tests-ran table",
+    "start": "2026-10-02T00:30:49Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110649220447-step-8",
+    "trace_id": "run-36946337909",
+    "parent_id": "job-110649220447",
+    "service": "test-macos-latest",
+    "name": "tables on bash 3.2 (macOS system bash)",
+    "start": "2026-10-02T00:30:49Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110649220447-step-9",
+    "trace_id": "run-36946337909",
+    "parent_id": "job-110649220447",
+    "service": "test-macos-latest",
+    "name": "install + doctor",
+    "start": "2026-10-02T00:30:57Z",
+    "duration_ms": 70000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-110649220447-step-24",
+    "trace_id": "run-36946337909",
+    "parent_id": "job-110649220447",
+    "service": "test-macos-latest",
+    "name": "Post Run actions/checkout@v4",
+    "start": "2026-10-02T00:32:07Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110649220447-step-25",
+    "trace_id": "run-36946337909",
+    "parent_id": "job-110649220447",
+    "service": "test-macos-latest",
+    "name": "Complete job",
+    "start": "2026-10-02T00:32:07Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110649220569",
+    "trace_id": "run-36946337909",
+    "parent_id": "run-36946337909",
+    "service": "test-ubuntu-latest",
+    "name": "test (ubuntu-latest)",
+    "start": "2026-10-02T00:30:34Z",
+    "duration_ms": 53000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-110649220569-step-1",
+    "trace_id": "run-36946337909",
+    "parent_id": "job-110649220569",
+    "service": "test-ubuntu-latest",
+    "name": "Set up job",
+    "start": "2026-10-02T00:30:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110649220569-step-2",
+    "trace_id": "run-36946337909",
+    "parent_id": "job-110649220569",
+    "service": "test-ubuntu-latest",
+    "name": "Run actions/checkout@v4",
+    "start": "2026-10-02T00:30:35Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110649220569-step-3",
+    "trace_id": "run-36946337909",
+    "parent_id": "job-110649220569",
+    "service": "test-ubuntu-latest",
+    "name": "shellcheck",
+    "start": "2026-10-02T00:30:36Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110649220569-step-4",
+    "trace_id": "run-36946337909",
+    "parent_id": "job-110649220569",
+    "service": "test-ubuntu-latest",
+    "name": "ruff",
+    "start": "2026-10-02T00:30:37Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110649220569-step-5",
+    "trace_id": "run-36946337909",
+    "parent_id": "job-110649220569",
+    "service": "test-ubuntu-latest",
+    "name": "guard table",
+    "start": "2026-10-02T00:30:41Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110649220569-step-6",
+    "trace_id": "run-36946337909",
+    "parent_id": "job-110649220569",
+    "service": "test-ubuntu-latest",
+    "name": "red-team corpus",
+    "start": "2026-10-02T00:30:42Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110649220569-step-7",
+    "trace_id": "run-36946337909",
+    "parent_id": "job-110649220569",
+    "service": "test-ubuntu-latest",
+    "name": "tests-ran table",
+    "start": "2026-10-02T00:30:45Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110649220569-step-9",
+    "trace_id": "run-36946337909",
+    "parent_id": "job-110649220569",
+    "service": "test-ubuntu-latest",
+    "name": "install + doctor",
+    "start": "2026-10-02T00:30:46Z",
+    "duration_ms": 40000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-110649220569-step-24",
+    "trace_id": "run-36946337909",
+    "parent_id": "job-110649220569",
+    "service": "test-ubuntu-latest",
+    "name": "Post Run actions/checkout@v4",
+    "start": "2026-10-02T00:31:26Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-110649220569-step-25",
+    "trace_id": "run-36946337909",
+    "parent_id": "job-110649220569",
+    "service": "test-ubuntu-latest",
+    "name": "Complete job",
+    "start": "2026-10-02T00:31:26Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

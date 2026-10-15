@@ -1,0 +1,223 @@
+[
+  {
+    "id": "cea6e6e8ee",
+    "service": "sous",
+    "version": "cea6e6e8ee",
+    "ts": "2026-10-01T20:31:34Z",
+    "author": "OrenSegal",
+    "summary": "fix(guard): quote-aware heredoc scan, expanding messages, long-input \u2026",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "hooks/sous-guard.sh",
+      "tests/adversarial.test.sh"
+    ]
+  },
+  {
+    "id": "8f91f8a832",
+    "service": "sous",
+    "version": "8f91f8a832",
+    "ts": "2026-10-01T20:43:38Z",
+    "author": "OrenSegal",
+    "summary": "feat(guard): close 55 audited bypasses, add version stamp",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "hooks/sous-guard.sh",
+      "tests/adversarial.test.sh"
+    ]
+  },
+  {
+    "id": "d6e8a871bd",
+    "service": "sous",
+    "version": "d6e8a871bd",
+    "ts": "2026-10-01T20:44:59Z",
+    "author": "OrenSegal",
+    "summary": "test: run the hook under the bash that runs the table",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "tests/adversarial.test.sh",
+      "tests/sous-guard.test.sh",
+      "tests/tests-ran.test.sh"
+    ]
+  },
+  {
+    "id": "981861331b",
+    "service": "sous",
+    "version": "981861331b",
+    "ts": "2026-10-01T21:09:22Z",
+    "author": "OrenSegal",
+    "summary": "fix(sous): parse settings defensively, write atomically, reject bad u\u2026",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      ".claude-plugin/marketplace.json",
+      ".claude-plugin/plugin.json",
+      "bin/sous",
+      "tests/install.test.sh"
+    ]
+  },
+  {
+    "id": "66eb7dd75b",
+    "service": "sous",
+    "version": "66eb7dd75b",
+    "ts": "2026-10-01T21:26:26Z",
+    "author": "OrenSegal",
+    "summary": "feat(doctor): local overlay, strict host + probe record, double guard\u2026",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "bin/sous",
+      "tests/install.test.sh"
+    ]
+  },
+  {
+    "id": "68fea33bee",
+    "service": "sous",
+    "version": "68fea33bee",
+    "ts": "2026-10-01T21:29:51Z",
+    "author": "OrenSegal",
+    "summary": "feat(sous): manifest-backed uninstall, upgrade alias",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "bin/sous",
+      "tests/install.test.sh"
+    ]
+  },
+  {
+    "id": "c6ecfcdc8e",
+    "service": "sous",
+    "version": "c6ecfcdc8e",
+    "ts": "2026-10-01T21:32:30Z",
+    "author": "OrenSegal",
+    "summary": "feat(sous): marketplace-check verifies pinned refs resolve to their shas",
+    "config_before": {
+      ".github/workflows/ci.yml": "previous"
+    },
+    "config_after": {
+      ".github/workflows/ci.yml": "modified in c6ecfcdc8e"
+    },
+    "files": [
+      ".github/workflows/ci.yml",
+      "bin/sous",
+      "tests/install.test.sh"
+    ]
+  },
+  {
+    "id": "eb0f71b02d",
+    "service": "sous",
+    "version": "eb0f71b02d",
+    "ts": "2026-10-01T21:40:20Z",
+    "author": "OrenSegal",
+    "summary": "docs: 0.3.0 changelog, community files, release workflow, evals, CI lint",
+    "config_before": {
+      ".github/workflows/ci.yml": "previous"
+    },
+    "config_after": {
+      ".github/ISSUE_TEMPLATE/bug.md": "added in eb0f71b02d",
+      ".github/ISSUE_TEMPLATE/config.yml": "added in eb0f71b02d",
+      ".github/ISSUE_TEMPLATE/false_positive.md": "added in eb0f71b02d",
+      ".github/dependabot.yml": "added in eb0f71b02d",
+      ".github/pull_request_template.md": "added in eb0f71b02d",
+      ".github/workflows/ci.yml": "modified in eb0f71b02d",
+      ".github/workflows/release.yml": "added in eb0f71b02d",
+      "ruff.toml": "added in eb0f71b02d"
+    },
+    "files": [
+      ".gitattributes",
+      ".github/ISSUE_TEMPLATE/bug.md",
+      ".github/ISSUE_TEMPLATE/config.yml",
+      ".github/ISSUE_TEMPLATE/false_positive.md",
+      ".github/dependabot.yml",
+      ".github/pull_request_template.md",
+      ".github/workflows/ci.yml",
+      ".github/workflows/release.yml",
+      ".gitignore",
+      "CHANGELOG.md",
+      "CODE_OF_CONDUCT.md",
+      "CONTRIBUTING.md",
+      "README.md",
+      "SECURITY.md",
+      "docs/demo.tape",
+      "evals/blocks-recursive-delete/graders/criteria.md",
+      "evals/blocks-recursive-delete/prompt.md",
+      "evals/test-audit-deletion/graders/criteria.md",
+      "evals/test-audit-deletion/prompt.md",
+      "ruff.toml"
+    ]
+  },
+  {
+    "id": "7f43a5432e",
+    "service": "sous",
+    "version": "7f43a5432e",
+    "ts": "2026-10-01T21:41:52Z",
+    "author": "OrenSegal",
+    "summary": "docs: cache key wording matches the code",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "README.md"
+    ]
+  },
+  {
+    "id": "3b133c1f89",
+    "service": "sous",
+    "version": "3b133c1f89",
+    "ts": "2026-10-01T23:48:14Z",
+    "author": "OrenSegal",
+    "summary": "chore: drop private references and the unrendered demo tape",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "README.md",
+      "bin/sous",
+      "docs/demo.tape",
+      "skills/test-audit/SKILL.md",
+      "tests/install.test.sh",
+      "tests/sous-guard.test.sh"
+    ]
+  },
+  {
+    "id": "e7451e10b9",
+    "service": "sous",
+    "version": "e7451e10b9",
+    "ts": "2026-10-01T23:49:19Z",
+    "author": "OrenSegal",
+    "summary": "docs: one concept line and a toolkit table for the family",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      ".claude-plugin/marketplace.json",
+      "README.md",
+      "tests/install.test.sh"
+    ]
+  },
+  {
+    "id": "fee0c00418",
+    "service": "sous",
+    "version": "fee0c00418",
+    "ts": "2026-10-02T00:02:38Z",
+    "author": "OrenSegal",
+    "summary": "chore: one version source, shared helpers, a shorter README",
+    "config_before": {
+      ".github/pull_request_template.md": "previous",
+      ".github/workflows/release.yml": "previous"
+    },
+    "config_after": {
+      ".github/pull_request_template.md": "modified in fee0c00418",
+      ".github/workflows/release.yml": "modified in fee0c00418"
+    },
+    "files": [
+      ".github/pull_request_template.md",
+      ".github/workflows/release.yml",
+      "CHANGELOG.md",
+      "CONTRIBUTING.md",
+      "README.md",
+      "bin/sous",
+      "hooks/sous-guard.sh",
+      "tests/install.test.sh"
+    ]
+  }
+]
