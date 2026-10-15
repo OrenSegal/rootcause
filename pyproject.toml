@@ -42,6 +42,9 @@ otel = [
     "opentelemetry-exporter-otlp-proto-http>=1.40.0",
     "opentelemetry-sdk>=1.40.0",
 ]
+langgraph = [
+    "langgraph>=1.2.15",
+]
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
@@ -74,7 +77,7 @@ type = "forbidden"
 source_modules = ["rootcause.domain"]
 forbidden_modules = [
     "anthropic", "mcp", "mcp_types", "sqlite3", "yaml", "typer", "httpx2",
-    "numpy", "fastembed", "model2vec", "opentelemetry",
+    "numpy", "fastembed", "model2vec", "opentelemetry", "langgraph",
 ]
 
 [[tool.importlinter.contracts]]
@@ -92,6 +95,7 @@ forbidden_modules = [
     "fastembed",
     "model2vec",
     "opentelemetry",
+    "langgraph",
 ]
 # The narrower rule "application may use anthropic.types but not the client" is
 # enforced by tests/test_architecture.py: import-linter can't name external subpackages.
