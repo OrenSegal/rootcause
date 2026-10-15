@@ -39,7 +39,7 @@ from rootcause.adapters.mcp_telemetry import build_telemetry_server
 from rootcause.adapters.mcp_tools import mcp_tools
 from rootcause.application.agent import RunResult, TokenUsage
 from rootcause.application.executor import ToolCall
-from rootcause.application.investigator import investigator_prompt
+from rootcause.application.investigator import SEARCH_POSTMORTEMS, investigator_prompt
 from rootcause.application.ports import EventLog, ToolTraits, Tracer
 from rootcause.application.tracing import (
     AGENT as AGENT_NAME,
@@ -63,10 +63,14 @@ SPAWN_ERROR = "rootcause_spawn_error"
 AGENT = "claude-code"
 TIMEOUT_S = 900
 
-PROMPT = investigator_prompt(
-    report="report it as the structured diagnosis",
-    finish="Finish with the structured diagnosis. Do not answer in plain text.",
-)
+
+def prompt(*, retrieval: bool = False) -> str:
+    return investigator_prompt(
+        report="report it as the structured diagnosis",
+        finish="Finish with the structured diagnosis. Do not answer in plain text.",
+        retrieval=retrieval,
+    )
+
 
 OUTCOMES = {
     "error_max_turns": Outcome.STEP_LIMIT,
@@ -90,10 +94,11 @@ def command(
     effort: str,
     max_turns: int,
     budget_usd: float,
+    retrieval: bool = False,
 ) -> list[str]:
     return [
         "claude", "-p",
-        "--system-prompt", PROMPT,
+        "--system-prompt", prompt(retrieval=retrieval),
         "--model", model,
         "--effort", effort,
         "--tools", "",
@@ -310,6 +315,8 @@ class ClaudeCodeHarness:
         async with mcp_tools(build_telemetry_server(case.store)) as tools:
             gated = frozenset(t.name for t in tools if not t.read_only)
             allowed = allowed_tools(tools, approve=approve)
+        if retrieval != "none":  # served by the subprocess, not the in-process server above
+            allowed.append(SEARCH_POSTMORTEMS)
         run_id = events.start_run(scenario_id=case.scenario.id, agent=AGENT, provider=self.name)
         with tempfile.TemporaryDirectory(prefix="rootcause-") as tmp:
             root = Path(tmp)
@@ -326,6 +333,7 @@ class ClaudeCodeHarness:
                 effort=self.effort,
                 max_turns=self.max_turns,
                 budget_usd=budget_usd,
+                retrieval=retrieval != "none",
             )
             lines = await self.spawn([*cmd, case.scenario.alert.render()], work)
         result = parse_stream(lines, run_id=run_id, gated=gated, approve=approve)

@@ -137,3 +137,18 @@ def test_cli_plans_runs_a_sweep_and_reports_it(two_scenarios, tmp_path):
     assert report.exit_code == 0, report.output
     assert "| baseline | 4 / 0 | 100%" in report.output
     assert (out / "report.md").exists() and (out / "summary.json").exists()
+
+
+def test_summary_reports_how_often_runs_used_postmortem_search():
+    used = grade("a", True).model_copy(
+        update={"tools_used": ["list_deploys", "search_postmortems"]}
+    )
+    unused = grade("b", True).model_copy(update={"tools_used": ["list_deploys"]})
+    s = summarize(
+        OPUS,
+        [
+            Row(config="opus-high", scenario_id="a", rep=0, grade=used),
+            Row(config="opus-high", scenario_id="b", rep=0, grade=unused),
+        ],
+    )
+    assert s.search_rate == 0.5
