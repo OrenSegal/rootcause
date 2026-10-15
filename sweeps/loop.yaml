@@ -1,0 +1,9 @@
+# The hand-written loop on a live model, single agent and orchestrator plus workers.
+# Each model turn goes through headless Claude Code as a structured completion.
+# Compare with opus-5.5-high in models-and-retrieval: same model, Claude Code's own loop.
+name: loop-2026-10-15
+repeats: 3
+scenarios: scenarios
+configs:
+  - {name: loop-opus-5.5-high-single, provider: claude-code-loop, model: claude-opus-5-5, effort: high, mode: single}
+  - {name: loop-opus-5.5-high-multi, provider: claude-code-loop, model: claude-opus-5-5, effort: high, mode: multi}
