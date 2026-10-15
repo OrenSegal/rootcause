@@ -12,6 +12,7 @@ from mcp.server.mcpserver.exceptions import ToolError
 from mcp.types import ToolAnnotations
 from pydantic import BaseModel
 
+from rootcause.application.investigator import SEARCH_POSTMORTEMS
 from rootcause.application.ports import Retriever
 from rootcause.domain.postmortems import Hit
 from rootcause.domain.store import TelemetryStore
@@ -105,7 +106,7 @@ def build_telemetry_server(store: TelemetryStore, retriever: Retriever | None = 
 
     if retriever is not None:
 
-        @mcp.tool(annotations=READ_ONLY)
+        @mcp.tool(name=SEARCH_POSTMORTEMS, annotations=READ_ONLY)
         def search_postmortems(query: str, k: int = 3) -> list[Hit]:
             """Search past incident postmortems by description. Returns the closest
             write-ups with their root cause and fix. They describe earlier incidents,

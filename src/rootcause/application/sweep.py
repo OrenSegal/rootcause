@@ -22,6 +22,7 @@ from typing import Literal
 from pydantic import BaseModel
 
 from rootcause.application.evals import Grade
+from rootcause.application.investigator import SEARCH_POSTMORTEMS
 from rootcause.application.stats import pass_at_k, pass_hat_k, percentile, wilson
 
 
@@ -84,6 +85,7 @@ class ConfigSummary(BaseModel):
     p90_wall_s: float
     mean_output_tokens: float
     mean_tool_calls: float
+    search_rate: float = 0.0  # share of scored runs that called search_postmortems
     dominated: bool = False
 
 
@@ -127,6 +129,7 @@ def summarize(
         p90_wall_s=percentile(walls, 90),
         mean_output_tokens=sum(r.grade.usage.output_tokens for r in scored) / n,
         mean_tool_calls=sum(r.grade.tool_calls for r in scored) / n,
+        search_rate=sum(SEARCH_POSTMORTEMS in r.grade.tools_used for r in scored) / n,
     )
 
 
@@ -157,8 +160,8 @@ def report_markdown(
         f"### Sweep `{spec.name}`: {len(summaries)} configurations, {spec.repeats} runs each",
         "",
         f"| config | scored / errors | pass rate (95% CI) | pass^{k} | pass@{k} | mean cost "
-        "| cost per solved | p50 / p90 wall | output tokens | tool calls | frontier |",
-        "|---|---|---|---|---|---|---|---|---|---|---|",
+        "| cost per solved | p50 / p90 wall | output tokens | tool calls | searched | frontier |",
+        "|---|---|---|---|---|---|---|---|---|---|---|---|",
     ]
     for s in summaries:
         per_pass = f"${s.cost_per_pass:.4f}" if s.cost_per_pass is not None else "n/a"
@@ -167,7 +170,8 @@ def report_markdown(
             f"| {_pct(s.pass_rate)} ({_pct(s.ci_low)} to {_pct(s.ci_high)}) "
             f"| {_pct(s.pass_hat_k)} | {_pct(s.pass_at_k)} | ${s.mean_cost:.4f} | {per_pass} "
             f"| {s.p50_wall_s:.1f}s / {s.p90_wall_s:.1f}s | {s.mean_output_tokens:.0f} "
-            f"| {s.mean_tool_calls:.1f} | {'dominated' if s.dominated else 'yes'} |"
+            f"| {s.mean_tool_calls:.1f} | {_pct(s.search_rate)} "
+            f"| {'dominated' if s.dominated else 'yes'} |"
         )
     names = [s.name for s in summaries]
     grid: dict[str, dict[str, list[bool]]] = defaultdict(lambda: defaultdict(list))

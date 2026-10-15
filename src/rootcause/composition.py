@@ -209,7 +209,10 @@ async def _investigate(
     server = build_telemetry_server(case.store, make_retriever(retrieval))
     async with mcp_tools(server) as tools:
         if mode is Mode.SINGLE:
-            spec, agent_tools = investigator_spec(), list(tools)
+            spec, agent_tools = (
+                investigator_spec(retrieval=retrieval != Retrieval.NONE),
+                list(tools),
+            )
         else:
             dispatcher = DispatchWorkers(loop, tools, scenario_id=scenario.id)
             spec, agent_tools = orchestrator_spec(), [*tools, dispatcher]

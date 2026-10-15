@@ -124,8 +124,11 @@ async def test_claude_code_gets_the_retrieval_mode_in_its_server_config(case):
     def read(path: str) -> dict:
         return json.loads(Path(path).read_text())
 
+    commands = []
+
     async def spawn(cmd, cwd):
         configs.append(read(cmd[cmd.index("--mcp-config") + 1]))
+        commands.append(cmd)
         return []
 
     await investigate(
@@ -134,6 +137,9 @@ async def test_claude_code_gets_the_retrieval_mode_in_its_server_config(case):
     )  # fmt: skip
     args = configs[0]["mcpServers"]["telemetry"]["args"]
     assert args[args.index("--retrieval") + 1] == "bm25"
+    allowed = commands[0][commands[0].index("--allowedTools") + 1]
+    assert "mcp__telemetry__search_postmortems" in allowed
+    assert "search_postmortems" in commands[0][commands[0].index("--system-prompt") + 1]
 
 
 def test_retrieval_eval_reports_every_labelled_scenario():
@@ -143,3 +149,10 @@ def test_retrieval_eval_reports_every_labelled_scenario():
     assert report.queries == len(load_qrels(CORPUS))
     assert 0.0 <= report.recall_at_5 <= 1.0
     assert report.retriever == "bm25"
+
+
+def test_the_brief_mentions_postmortems_only_when_search_is_available():
+    from rootcause.application.investigator import investigator_spec
+
+    assert "search_postmortems" in investigator_spec(retrieval=True).system_prompt
+    assert "search_postmortems" not in investigator_spec().system_prompt

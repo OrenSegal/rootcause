@@ -38,6 +38,7 @@ class Grade(BaseModel):
     wall_ms: float
     usage: TokenUsage = TokenUsage()
     models: list[str] = []
+    tools_used: list[str] = []  # distinct tools called, in first-call order
 
     @computed_field
     @property
@@ -98,6 +99,7 @@ def grade(
         wall_ms=result.wall_ms,
         usage=result.usage,
         models=result.models,
+        tools_used=list(dict.fromkeys(c.name for c in result.tool_calls)),
     )
 
 
