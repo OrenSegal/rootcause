@@ -16,6 +16,7 @@ since its grade says nothing about the configured model.
 
 from collections import defaultdict
 from collections.abc import Iterable, Sequence
+from enum import StrEnum
 from typing import Literal
 
 from pydantic import BaseModel
@@ -23,7 +24,15 @@ from pydantic import BaseModel
 from rootcause.application.evals import Grade
 from rootcause.application.stats import pass_at_k, pass_hat_k, percentile, wilson
 
-Retrieval = Literal["none", "bm25", "dense", "hybrid"]
+
+class Retrieval(StrEnum):
+    """Which postmortem search the investigator gets, cheapest first."""
+
+    NONE = "none"
+    BM25 = "bm25"
+    STATIC = "static"  # static embeddings (model2vec)
+    DENSE = "dense"  # transformer embeddings (fastembed)
+    HYBRID = "hybrid"  # BM25 and dense, rank-fused
 
 
 class SweepConfig(BaseModel):
@@ -35,7 +44,7 @@ class SweepConfig(BaseModel):
     model: str = "claude-opus-5-5"
     effort: str = "high"
     mode: Literal["single", "multi"] = "single"
-    retrieval: Retrieval = "none"
+    retrieval: Retrieval = Retrieval.NONE
     budget_usd: float = 1.0
 
     @property

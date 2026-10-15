@@ -18,7 +18,7 @@ jobs:
           python-version: "3.14"
           version: "0.13.1"
           enable-cache: true
-      - run: uv sync --locked
+      - run: uv sync --locked --all-extras
       - run: uv run ruff format --check .
       - run: uv run ruff check .
       - run: uv run ty check
@@ -27,6 +27,21 @@ jobs:
       - run: |
           uv run pytest -q --junitxml=pytest.xml
           python3 -c "import xml.etree.ElementTree as E,sys; n=int(E.parse('pytest.xml').getroot().find('testsuite').get('tests')); print(n,'tests'); sys.exit(n==0)"
+
+  # The optional extras (rag, otel) stay optional: the core installs and passes without them.
+  base-install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884 # v10.3.0
+        with:
+          python-version: "3.14"
+          version: "0.13.1"
+          enable-cache: true
+      - run: uv sync --locked
+      - run: uv run pytest -q
+      - run: uv run rootcause eval --min-pass-rate 0.05
+      - run: uv run rootcause retrieval-eval --retrieval bm25 --query alert+log
 
   eval:
     needs: check

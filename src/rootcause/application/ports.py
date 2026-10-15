@@ -10,6 +10,8 @@ from typing import Any, Protocol
 
 from anthropic.types.beta import BetaMessage
 
+from rootcause.domain.postmortems import Hit
+
 Block = dict[str, Any]
 Message = dict[str, Any]
 
@@ -89,3 +91,12 @@ class EventLog(Protocol):
     def run_info(self, run_id: str) -> RunInfo: ...
 
     def children(self, run_id: str) -> list[RunInfo]: ...
+
+
+class Retriever(Protocol):
+    """Searches past postmortems. Implementations range from a keyword index to
+    embedding models, so `name` says which one produced a result."""
+
+    name: str
+
+    def search(self, query: str, k: int) -> list[Hit]: ...

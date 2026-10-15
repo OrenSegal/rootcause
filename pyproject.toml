@@ -33,6 +33,12 @@ dev = [
 [project.scripts]
 rootcause = "rootcause.interfaces.cli:app"
 
+[project.optional-dependencies]
+rag = [
+    "fastembed>=0.9.0",
+    "model2vec>=0.10.0",
+]
+
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
 testpaths = ["tests"]
@@ -62,7 +68,10 @@ layers = [
 name = "Domain is pure: no frameworks, no IO libraries"
 type = "forbidden"
 source_modules = ["rootcause.domain"]
-forbidden_modules = ["anthropic", "mcp", "mcp_types", "sqlite3", "yaml", "typer", "httpx2"]
+forbidden_modules = [
+    "anthropic", "mcp", "mcp_types", "sqlite3", "yaml", "typer", "httpx2",
+    "numpy", "fastembed", "model2vec", "opentelemetry",
+]
 
 [[tool.importlinter.contracts]]
 name = "Application depends on ports, not transports"
@@ -75,6 +84,10 @@ forbidden_modules = [
     "yaml",
     "typer",
     "httpx2",
+    "numpy",
+    "fastembed",
+    "model2vec",
+    "opentelemetry",
 ]
 # The narrower rule "application may use anthropic.types but not the client" is
 # enforced by tests/test_architecture.py: import-linter can't name external subpackages.
