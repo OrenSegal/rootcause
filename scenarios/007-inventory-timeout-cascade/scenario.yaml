@@ -1,0 +1,11 @@
+id: 007-inventory-timeout-cascade
+title: Inventory timeout change cascades into checkout
+alert:
+  service: checkout
+  summary: checkout error rate at 9%.
+truth:
+  category: config_change
+  service: inventory
+  required_evidence_any:
+  - cfg:d-7001:INVENTORY_DB_TIMEOUT_MS
+  - d-7001

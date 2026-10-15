@@ -1,0 +1,42 @@
+[
+  {
+    "span_id": "s-1",
+    "trace_id": "t-900",
+    "parent_id": null,
+    "service": "checkout",
+    "name": "POST /checkout",
+    "start": "2026-10-14T13:22:00Z",
+    "duration_ms": 2214.0,
+    "status": "error"
+  },
+  {
+    "span_id": "s-2",
+    "trace_id": "t-900",
+    "parent_id": "s-1",
+    "service": "checkout",
+    "name": "db.pool.acquire",
+    "start": "2026-10-14T13:22:00Z",
+    "duration_ms": 2001.0,
+    "status": "error"
+  },
+  {
+    "span_id": "s-3",
+    "trace_id": "t-100",
+    "parent_id": null,
+    "service": "checkout",
+    "name": "POST /checkout",
+    "start": "2026-10-14T13:10:00Z",
+    "duration_ms": 141.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "s-4",
+    "trace_id": "t-100",
+    "parent_id": "s-3",
+    "service": "checkout",
+    "name": "db.pool.acquire",
+    "start": "2026-10-14T13:10:00Z",
+    "duration_ms": 1.0,
+    "status": "ok"
+  }
+]

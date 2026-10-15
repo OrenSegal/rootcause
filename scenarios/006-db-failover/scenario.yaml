@@ -1,0 +1,11 @@
+id: 006-db-failover
+title: Postgres primary failover during an orders deploy
+alert:
+  service: orders
+  summary: orders error rate at 22%; checkout also degraded.
+truth:
+  category: infrastructure
+  service: postgres
+  required_evidence_any:
+  - log-0007
+  - m-pg-primary-up

@@ -1,0 +1,11 @@
+id: 003-search-memory-leak
+title: Search pods OOM-killed after a slow leak
+alert:
+  service: search
+  summary: search error rate at 12% and pods restarting.
+truth:
+  category: resource_exhaustion
+  service: search
+  required_evidence_any:
+  - log-0007
+  - m-search-mem

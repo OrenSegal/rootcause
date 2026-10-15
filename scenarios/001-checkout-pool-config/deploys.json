@@ -1,0 +1,45 @@
+[
+  {
+    "id": "d-1041",
+    "service": "payments",
+    "version": "1.9.0",
+    "ts": "2026-10-14T12:10:00Z",
+    "author": "maya",
+    "summary": "Retry idempotency keys on card capture",
+    "config_before": {
+      "CAPTURE_RETRIES": "2"
+    },
+    "config_after": {
+      "CAPTURE_RETRIES": "3"
+    },
+    "files": []
+  },
+  {
+    "id": "d-1042",
+    "service": "checkout",
+    "version": "2.4.1",
+    "ts": "2026-10-14T13:20:00Z",
+    "author": "dev-bot",
+    "summary": "Enable new cart UI; tidy DB settings",
+    "config_before": {
+      "DB_POOL_MAX": "50",
+      "FEATURE_NEW_CART_UI": "false"
+    },
+    "config_after": {
+      "DB_POOL_MAX": "5",
+      "FEATURE_NEW_CART_UI": "true"
+    },
+    "files": []
+  },
+  {
+    "id": "d-1043",
+    "service": "search",
+    "version": "3.0.2",
+    "ts": "2026-10-14T13:35:00Z",
+    "author": "lee",
+    "summary": "Bump ranking model",
+    "config_before": {},
+    "config_after": {},
+    "files": []
+  }
+]

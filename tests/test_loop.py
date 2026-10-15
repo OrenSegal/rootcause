@@ -1,0 +1,144 @@
+from conftest import Scripted, call, make_loop
+
+from rootcause.adapters.heuristic import HeuristicProvider
+from rootcause.adapters.mcp_telemetry import build_telemetry_server
+from rootcause.adapters.mcp_tools import mcp_tools
+from rootcause.application.evals import grade
+from rootcause.application.investigator import investigator_spec
+from rootcause.domain.answers import Outcome
+
+DIAGNOSIS = {
+    "category": "config_change",
+    "service": "checkout",
+    "summary": "d-1042 cut DB_POOL_MAX from 50 to 5.",
+    "evidence": ["cfg:d-1042:DB_POOL_MAX", "log-0013"],
+    "recommended_action": "Restore DB_POOL_MAX=50.",
+    "confidence": 0.9,
+}
+
+
+async def run(loop, case, max_steps=15):
+    async with mcp_tools(build_telemetry_server(case.store)) as tools:
+        return await loop.run(
+            investigator_spec(max_steps),
+            case.scenario.alert.render(),
+            tools,
+            scenario_id=case.scenario.id,
+        )
+
+
+def graded(case, result):
+    return grade(case, result, provider="t", mode="single", tool_calls=len(result.tool_calls))
+
+
+async def test_heuristic_baseline_solves_scenario_001(case):
+    result = await run(make_loop(HeuristicProvider()), case)
+    assert result.outcome is Outcome.ANSWERED
+    assert graded(case, result).passed
+
+
+async def test_parallel_tool_results_return_in_one_message(case):
+    provider = Scripted(
+        [
+            {
+                "content": [
+                    call("list_deploys", {}, "a"),
+                    call("query_metrics", {"service": "checkout"}, "b"),
+                ]
+            },
+            {"content": [call("submit_diagnosis", DIAGNOSIS, "c")]},
+        ]
+    )
+    result = await run(make_loop(provider), case)
+    assert result.outcome is Outcome.ANSWERED
+    last_user = provider.seen[1][-1]
+    assert [b["tool_use_id"] for b in last_user["content"]] == ["a", "b"]
+
+
+async def test_history_is_append_only(case):
+    provider = Scripted(
+        [
+            {"content": [{"type": "text", "text": "Looking."}, call("list_deploys", {}, "a")]},
+            {"content": [call("diff_config", {"deploy_id": "d-1042"}, "b")]},
+            {"content": [call("submit_diagnosis", DIAGNOSIS, "c")]},
+        ]
+    )
+    await run(make_loop(provider), case)
+    first, second, third = provider.seen
+    assert second[: len(first)] == first
+    assert third[: len(second)] == second
+
+
+async def test_rollback_is_gated_and_denial_reaches_the_model(case):
+    provider = Scripted(
+        [
+            {"content": [call("rollback_deploy", {"deploy_id": "d-1042", "reason": "pool"}, "a")]},
+            {"content": [call("submit_diagnosis", DIAGNOSIS, "b")]},
+        ]
+    )
+    result = await run(make_loop(provider, approve=False), case)
+    assert case.store.rollbacks == {}
+    denial = provider.seen[1][-1]["content"][0]
+    assert denial["is_error"] and "denied" in denial["content"]
+    assert result.tool_calls[0].gated and result.tool_calls[0].approved is False
+    assert graded(case, result).unapproved_actions == 0
+
+
+async def test_approved_rollback_runs_once(case):
+    provider = Scripted(
+        [
+            {"content": [call("rollback_deploy", {"deploy_id": "d-1042", "reason": "pool"}, "a")]},
+            {"content": [call("submit_diagnosis", DIAGNOSIS, "b")]},
+        ]
+    )
+    await run(make_loop(provider, approve=True), case)
+    assert case.store.rollbacks == {"d-1042": "rb-d-1042"}
+
+
+async def test_invalid_diagnosis_is_returned_for_correction(case):
+    bad = {**DIAGNOSIS, "evidence": [], "confidence": 3}
+    provider = Scripted(
+        [
+            {"content": [call("submit_diagnosis", bad, "a")]},
+            {"content": [call("submit_diagnosis", DIAGNOSIS, "b")]},
+        ]
+    )
+    result = await run(make_loop(provider), case)
+    assert result.outcome is Outcome.ANSWERED
+    assert provider.seen[1][-1]["content"][0]["is_error"] is True
+
+
+async def test_budget_stops_the_run_before_the_next_call(case):
+    expensive = {"input_tokens": 200_000, "output_tokens": 20_000}  # $1.20 on Opus 5.5
+    provider = Scripted([{"content": [call("list_deploys", {}, "a")], "usage": expensive}] * 3)
+    result = await run(make_loop(provider, budget=1.0), case)
+    assert result.outcome is Outcome.BUDGET_EXCEEDED
+    assert len(provider.seen) == 1
+
+
+async def test_refusal_is_checked_before_content(case):
+    provider = Scripted([{"content": [], "stop_reason": "refusal"}])
+    result = await run(make_loop(provider), case)
+    assert result.outcome is Outcome.REFUSED
+
+
+async def test_plain_text_ending_gets_one_nudge(case):
+    text = {"content": [{"type": "text", "text": "Probably the pool."}], "stop_reason": "end_turn"}
+    provider = Scripted([text, text])
+    result = await run(make_loop(provider), case)
+    assert result.outcome is Outcome.NO_ANSWER
+    assert len(provider.seen) == 2
+
+
+async def test_step_limit(case):
+    provider = Scripted([{"content": [call("list_deploys", {}, f"x{i}")]} for i in range(3)])
+    result = await run(make_loop(provider), case, max_steps=3)
+    assert result.outcome is Outcome.STEP_LIMIT
+
+
+async def test_runlog_records_every_step(case):
+    loop = make_loop(HeuristicProvider())
+    result = await run(loop, case)
+    kinds = [e.kind for e in loop.events.events(result.run_id)]
+    assert kinds[0] == "start" and kinds[-1] == "outcome"
+    assert kinds.count("assistant") == result.steps
