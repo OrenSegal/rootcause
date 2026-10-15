@@ -1,0 +1,27 @@
+{
+  "name": "langgraph-2026-10-15",
+  "repeats": 3,
+  "scenarios": "scenarios",
+  "configs": [
+    {
+      "name": "langgraph-opus-5.5-high-single",
+      "provider": "langgraph",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "mode": "single",
+      "retrieval": "none",
+      "budget_usd": 1.0,
+      "brief": null
+    },
+    {
+      "name": "langgraph-opus-5.5-high-multi",
+      "provider": "langgraph",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "mode": "multi",
+      "retrieval": "none",
+      "budget_usd": 1.0,
+      "brief": null
+    }
+  ]
+}
