@@ -187,3 +187,49 @@ async def test_workers_and_orchestrator_share_one_budget(case):
         )
     assert result.outcome is Outcome.BUDGET_EXCEEDED
     assert len(orchestrator.seen) == 1
+
+
+async def test_dispatch_is_not_cut_off_by_the_per_tool_timeout_or_retried():
+    """Found live: workers take longer than one tool call is allowed, so every dispatch
+    timed out and was retried, starting the workers again each time."""
+    from rootcause.application.executor import ExecSettings
+
+    @dataclass
+    class Slow:
+        name: str
+        read_only: bool = True
+        idempotent: bool = True
+
+        @property
+        def definition(self) -> dict[str, Any]:
+            return {"name": self.name, "description": "", "input_schema": {"type": "object"}}
+
+        async def invoke(self, args: dict[str, Any]) -> ToolResult:
+            return ToolResult('[{"id": "d-1"}]')
+
+    class SlowModel(Scripted):
+        async def complete(self, *, system, messages, tools):
+            await asyncio.sleep(0.2)  # each worker turn outlasts one tool call's timeout
+            return await super().complete(system=system, messages=messages, tools=tools)
+
+    worker = SlowModel(
+        [
+            {"content": [call("list_deploys", {}, "w1")]},
+            {"content": [call("submit_findings", {**FINDINGS, "evidence": ["d-1"]}, "w2")]},
+        ]
+    )
+    orchestrator = Scripted(
+        [
+            {"content": [dispatch("changes")]},
+            {"content": [call("submit_diagnosis", {**DIAGNOSIS, "evidence": ["d-1"]}, "s")]},
+        ]
+    )
+    settings = ExecSettings(timeout_s=0.1, max_attempts=3, backoff_s=0)
+    loop = make_loop(Router(orchestrator=orchestrator, changes=worker), settings=settings)
+    tools = [Slow("list_deploys")]
+    dispatcher = DispatchWorkers(loop, tools, scenario_id="s")
+    result = await loop.run(orchestrator_spec(), "ALERT", [*tools, dispatcher], scenario_id="s")
+    assert result.outcome is Outcome.ANSWERED
+    dispatch_call = next(c for c in result.tool_calls if c.name == "dispatch_workers")
+    assert dispatch_call.attempts == 1 and not dispatch_call.is_error
+    assert len(worker.seen) == 2  # the worker ran once

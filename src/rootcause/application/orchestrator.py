@@ -91,7 +91,10 @@ class DispatchWorkers:
 
     name = "dispatch_workers"
     read_only = True
-    idempotent = True
+    # Not retried: a retry would start every worker again. And it runs whole agents, so
+    # it gets their time, not the few seconds one telemetry call is allowed.
+    idempotent = False
+    timeout_s = 900.0
 
     def __init__(self, loop: AgentLoop, tools: Sequence[Tool], *, scenario_id: str) -> None:
         self.loop = loop
