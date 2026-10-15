@@ -1,0 +1,9 @@
+# The same investigation on LangGraph, single agent and orchestrator plus workers.
+# Same model access as sweeps/loop.yaml (each turn through Claude Code), same
+# executor and grader, so the difference between the two is the orchestration layer.
+name: langgraph-2026-10-15
+repeats: 3
+scenarios: scenarios
+configs:
+  - {name: langgraph-opus-5.5-high-single, provider: langgraph, model: claude-opus-5-5, effort: high, mode: single}
+  - {name: langgraph-opus-5.5-high-multi, provider: langgraph, model: claude-opus-5-5, effort: high, mode: multi}
