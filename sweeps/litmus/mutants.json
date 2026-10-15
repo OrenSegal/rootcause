@@ -1,0 +1,62 @@
+[
+  {
+    "name": "delete-body-0",
+    "operator": "delete-body",
+    "site": "empty the body; keep only the frontmatter"
+  },
+  {
+    "name": "delete-instruction-0",
+    "operator": "delete-instruction",
+    "site": "delete line 4: - Gather evidence before concluding. Logs, metrics, traces, deploys a..."
+  },
+  {
+    "name": "delete-instruction-1",
+    "operator": "delete-instruction",
+    "site": "delete line 5: - Symptoms spread: the paging service is not always the cause. Check ..."
+  },
+  {
+    "name": "delete-instruction-2",
+    "operator": "delete-instruction",
+    "site": "delete line 6: - Cite evidence by the exact ids the tools returned (log ids, metric ..."
+  },
+  {
+    "name": "delete-instruction-3",
+    "operator": "delete-instruction",
+    "site": "delete line 7: - rollback_deploy changes production and needs operator approval. Onl..."
+  },
+  {
+    "name": "delete-instruction-4",
+    "operator": "delete-instruction",
+    "site": "delete line 8: - If the evidence shows nothing is actually wrong, say so with catego..."
+  },
+  {
+    "name": "delete-instruction-5",
+    "operator": "delete-instruction",
+    "site": "delete line 10: Finish with the structured diagnosis. Do not answer in plain text."
+  },
+  {
+    "name": "invert-rule-0",
+    "operator": "invert-rule",
+    "site": "line 5: 'always' -> 'never' in: - Symptoms spread: the paging service is not always the cause. Check ..."
+  },
+  {
+    "name": "invert-rule-1",
+    "operator": "invert-rule",
+    "site": "line 10: 'Do not' -> 'Do' in: Finish with the structured diagnosis. Do not answer in plain text."
+  },
+  {
+    "name": "truncate-0",
+    "operator": "truncate",
+    "site": "keep the first 5 of 10 body lines"
+  },
+  {
+    "name": "wrong-fact-0",
+    "operator": "wrong-fact",
+    "site": "line 4: 'before' -> 'after' in: - Gather evidence before concluding. Logs, metrics, traces, deploys a..."
+  },
+  {
+    "name": "wrong-fact-1",
+    "operator": "wrong-fact",
+    "site": "line 5: 'first' -> 'last' in: - Symptoms spread: the paging service is not always the cause. Check ..."
+  }
+]
