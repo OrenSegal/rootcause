@@ -60,6 +60,7 @@ def configure(exporter: Exporter) -> OtelTracer:
 
         provider = tracer_provider(OTLPSpanExporter(), batch=True)
     else:
-        provider = tracer_provider(ConsoleSpanExporter(out=sys.stdout))  # bound now, not at import
+        # stderr: stdout carries MCP stdio and --json output. Bound now, not at import.
+        provider = tracer_provider(ConsoleSpanExporter(out=sys.stderr))
     trace.set_tracer_provider(provider)
     return OtelTracer(provider)

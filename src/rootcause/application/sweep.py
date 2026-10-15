@@ -19,7 +19,7 @@ from collections.abc import Iterable, Sequence
 from enum import StrEnum
 from typing import Literal
 
-from pydantic import BaseModel
+from pydantic import BaseModel, model_validator
 
 from rootcause.application.evals import Grade
 from rootcause.application.investigator import SEARCH_POSTMORTEMS
@@ -59,6 +59,13 @@ class SweepSpec(BaseModel):
     scenarios: str = "scenarios"
     configs: list[SweepConfig]
 
+    @model_validator(mode="after")
+    def _unique_names(self) -> SweepSpec:
+        names = [c.name for c in self.configs]
+        if dupes := sorted({n for n in names if names.count(n) > 1}):
+            raise ValueError(f"duplicate config names: {', '.join(dupes)}")
+        return self
+
 
 class Row(BaseModel):
     config: str
@@ -86,6 +93,7 @@ class ConfigSummary(BaseModel):
     mean_output_tokens: float
     mean_tool_calls: float
     search_rate: float = 0.0  # share of scored runs that called search_postmortems
+    short_scenarios: int = 0  # scenarios with fewer than k scored runs
     dominated: bool = False
 
 
@@ -96,18 +104,29 @@ def is_error(config: SweepConfig, row: Row) -> bool:
 
 
 def summarize(
-    config: SweepConfig, rows: Sequence[Row], errors: Sequence[Row] = ()
+    config: SweepConfig, rows: Sequence[Row], errors: Sequence[Row] = (), *, k: int | None = None
 ) -> ConfigSummary:
+    """`k` should be the same for every configuration being compared (the sweep's
+    repeat count): a configuration that lost runs to errors must not get a smaller k
+    and with it an easier pass^k. A scenario with fewer than k scored runs counts as
+    not shown reliable for pass^k, and as passed for pass@k only if a run passed."""
     scored = [r for r in rows if not is_error(config, r)]
     failed = [*errors, *(r for r in rows if is_error(config, r))]
     passes = sum(r.grade.passed for r in scored)
     by_scenario: dict[str, list[bool]] = defaultdict(list)
     for r in scored:
         by_scenario[r.scenario_id].append(r.grade.passed)
-    k = min((len(v) for v in by_scenario.values()), default=1)
-    hat = [pass_hat_k(n=len(v), c=sum(v), k=k) for v in by_scenario.values()]
-    at = [pass_at_k(n=len(v), c=sum(v), k=k) for v in by_scenario.values()]
-    spent = sum(r.grade.cost_usd for r in [*scored, *failed])
+    k = k or min((len(v) for v in by_scenario.values()), default=1)
+    hat = [
+        pass_hat_k(n=len(v), c=sum(v), k=k) if len(v) >= k else 0.0 for v in by_scenario.values()
+    ]
+    at = [
+        pass_at_k(n=len(v), c=sum(v), k=k) if len(v) >= k else float(any(v))
+        for v in by_scenario.values()
+    ]
+    short = sum(len(v) < k for v in by_scenario.values())
+    spent_scored = sum(r.grade.cost_usd for r in scored)
+    spent = spent_scored + sum(r.grade.cost_usd for r in failed)
     walls = [r.grade.wall_ms / 1000 for r in scored]
     lo, hi = wilson(passes, len(scored))
     n = len(scored) or 1
@@ -123,7 +142,8 @@ def summarize(
         k=k,
         pass_hat_k=sum(hat) / len(hat) if hat else 0.0,
         pass_at_k=sum(at) / len(at) if at else 0.0,
-        mean_cost=spent / max(1, len(scored) + len(failed)),
+        mean_cost=spent_scored / n,
+        short_scenarios=short,
         cost_per_pass=spent / passes if passes else None,
         p50_wall_s=percentile(walls, 50),
         p90_wall_s=percentile(walls, 90),
@@ -173,6 +193,13 @@ def report_markdown(
             f"| {s.mean_tool_calls:.1f} | {_pct(s.search_rate)} "
             f"| {'dominated' if s.dominated else 'yes'} |"
         )
+    if short := [s for s in summaries if s.short_scenarios]:
+        lines += [
+            "",
+            "Scenarios with fewer than k scored runs, counted as not shown reliable in pass^k: "
+            + ", ".join(f"{s.name} {s.short_scenarios}" for s in short)
+            + ".",
+        ]
     names = [s.name for s in summaries]
     grid: dict[str, dict[str, list[bool]]] = defaultdict(lambda: defaultdict(list))
     for r in rows:

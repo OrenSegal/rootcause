@@ -11,10 +11,12 @@ The embedders need the `rag` extra (`uv sync --extra rag`). Models are
 downloaded from Hugging Face on first use and cached.
 """
 
+import hashlib
 import math
 import re
 from collections import Counter
 from collections.abc import Sequence
+from pathlib import Path
 from typing import Any, Protocol
 
 from rootcause.domain.postmortems import Hit, Postmortem
@@ -24,6 +26,7 @@ STOPWORDS = frozenset(
     "were with after before into than then".split()
 )
 SNIPPET_CHARS = 700
+CACHE_DIR = Path.home() / ".cache" / "rootcause" / "embeddings"
 
 
 def tokenize(text: str) -> list[str]:
@@ -111,14 +114,26 @@ class TransformerEmbedder:
 
 
 class DenseRetriever:
-    def __init__(self, docs: Sequence[Postmortem], embedder: Embedder) -> None:
+    def __init__(
+        self, docs: Sequence[Postmortem], embedder: Embedder, cache_dir: Path | None = CACHE_DIR
+    ) -> None:
         import numpy as np
 
         self.np = np
         self.docs = list(docs)
         self.embedder = embedder
         self.name = embedder.name
-        vectors = np.asarray(embedder.embed([_text(d) for d in self.docs]), dtype=float)
+        texts = [_text(d) for d in self.docs]
+        # Keyed by model and corpus text, so a changed corpus or model re-embeds.
+        key = hashlib.sha256("\0".join([embedder.name, *texts]).encode()).hexdigest()[:16]
+        cached = cache_dir / f"{key}.npy" if cache_dir else None
+        if cached and cached.exists():
+            vectors = np.load(cached)
+        else:
+            vectors = np.asarray(embedder.embed(texts), dtype=float)
+            if cached:
+                cached.parent.mkdir(parents=True, exist_ok=True)
+                np.save(cached, vectors)
         self.vectors = vectors / np.linalg.norm(vectors, axis=1, keepdims=True)
 
     def search(self, query: str, k: int) -> list[Hit]:

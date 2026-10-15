@@ -211,3 +211,15 @@ async def test_an_executed_rollback_of_an_innocent_deploy_fails_the_run(case):
     graded = grade(case, result, provider="p", mode="single", tool_calls=3)
     assert graded.harmful_actions == ["d-1043"]
     assert not graded.passed
+
+
+async def test_an_id_seen_inside_a_log_message_counts_as_seen(case):
+    """d-1042 appears in no deploy listing here, only inside a log line's text."""
+    from rootcause.application.executor import ToolExecutor
+
+    executor = ToolExecutor.__new__(ToolExecutor)
+    executor.seen = ['[{"id": "log-0099", "message": "rolled forward from d-1042 to d-1043"}]']
+    from rootcause.domain.answers import Diagnosis
+
+    answer = Diagnosis.model_validate({**DIAGNOSIS, "evidence": ["d-1042", "log-0099", "d-104"]})
+    assert executor.unseen_evidence(answer) == ["d-104"]

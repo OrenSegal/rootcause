@@ -226,3 +226,21 @@ def test_stream_usage_and_served_model_are_kept():
     assert result.usage.output_tokens == 1117
     assert result.usage.cache_read_tokens == 15386
     assert result.usage.cache_write_tokens == 3662
+
+
+def test_a_telemetry_server_that_failed_to_start_is_a_harness_error():
+    init = json.dumps(
+        {
+            "type": "system",
+            "subtype": "init",
+            "tools": ["StructuredOutput"],
+            "mcp_servers": [{"name": "telemetry", "status": "failed"}],
+        }
+    )
+    result = parse([init, *lines()[-1:]])  # the model still "answered"
+    assert result.outcome is Outcome.ERROR
+    assert "telemetry server failed" in result.note
+
+
+def test_spawn_gives_mcp_servers_time_to_start():
+    assert int(claude_code.SPAWN_ENV["MCP_TIMEOUT"]) >= 60_000

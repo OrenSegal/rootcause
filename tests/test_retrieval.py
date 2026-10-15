@@ -156,3 +156,23 @@ def test_the_brief_mentions_postmortems_only_when_search_is_available():
 
     assert "search_postmortems" in investigator_spec(retrieval=True).system_prompt
     assert "search_postmortems" not in investigator_spec().system_prompt
+
+
+def test_dense_index_is_cached_on_disk(tmp_path):
+    import numpy as np
+
+    from rootcause.adapters.retrieval import DenseRetriever
+
+    class Counting:
+        name = "fake"
+        calls = 0
+
+        def embed(self, texts):
+            Counting.calls += len(texts)
+            return np.ones((len(texts), 3)) + np.arange(len(texts))[:, None]
+
+    docs = load_corpus(CORPUS)
+    DenseRetriever(docs, Counting(), cache_dir=tmp_path)
+    first = Counting.calls
+    DenseRetriever(docs, Counting(), cache_dir=tmp_path)
+    assert first == len(docs) and Counting.calls == first  # second index read from disk
