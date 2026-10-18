@@ -4,7 +4,7 @@ An agent that investigates incidents and failed CI runs, written to show how age
 
 It runs three ways: as a CLI with exit codes for CI, as an MCP server a coding agent can call, and as a GitHub Action.
 
-**What the measurements show** ([Results](#results)): across 525 runs on 25 incidents, seven model and effort settings all landed at 77-84% with overlapping intervals, while cost per solved incident varied 25x. An orchestrator with workers cost about three times as much for no measurable gain. Mutation-testing the brief killed none of 11 mutants, so the suite can't yet catch a regression in a single instruction.
+**What the measurements show** ([Results](#results)): across 525 runs on 25 incidents, seven model and effort settings all landed at 77-84% with overlapping intervals, while cost per solved incident varied 25x. In a separate 300-run comparison, an orchestrator with workers cost about three times as much for no measurable gain. Mutation-testing the brief killed none of 11 mutants, so the suite can't yet catch a regression in a single instruction.
 
 ## Quickstart
 
