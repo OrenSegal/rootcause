@@ -15,7 +15,7 @@ Two different agent loops were measured. In the 525-run sweep, Claude Code's own
 | 7 model, effort and retrieval settings, 525 runs | Claude Code's own, over rootcause's MCP tools and grader | 77-84% pass rate, all intervals overlap; cost per solved incident $0.0033 to $0.081 (25x) |
 | hand-written loop vs LangGraph, 300 runs | rootcause's hand-written loop and its LangGraph port | indistinguishable on accuracy, cost, tokens and latency; orchestrator with workers cost about 3x for no measurable gain |
 | retrieval over 33 postmortems | none (retriever alone) | BM25 recall@5 0.94 vs 0.86 for a transformer model at roughly 1,000x the query latency |
-| mutation testing the brief, 300 runs | Claude Code's own | 0 of 11 mutants killed, so the suite can't yet catch a regression in a single instruction |
+| mutation testing the brief, 12 mutants, 275 scored runs | Claude Code's own | 0 of 12 killed (11 survived, 1 inconclusive), so the suite can't yet catch a regression in a single instruction |
 
 **How it's evaluated.** 25 incidents with known root causes, each built around a mistake a responder could make, several with planted decoys; the "blame the last deploy" baseline gets three right. The grader checks category, service, that every cited id came from a tool, and that no rollback hit an innocent deploy. Each configuration runs every scenario three times and is reported with a Wilson interval, pass^k, and cost per solved incident including failed runs. Harness failures are retried and never counted as wrong answers. More under "Evals that can fail" and "Measurement before claims" in [What it shows](#what-it-shows).
 
@@ -130,9 +130,9 @@ What it shows:
 
 ### Mutation testing the brief
 
-litmus's operators applied to the investigator brief: one broken copy per site (an instruction deleted, a rule inverted, a fact made wrong, the brief truncated or emptied), each run once over the suite at Opus 5.5 high, 300 runs (`results/litmus/2026-10-15.md`). A mutant counts as killed when it fails a scenario the unmodified brief passed in all three baseline runs.
+litmus's operators applied to the investigator brief: one broken copy per site (an instruction deleted, a rule inverted, a fact made wrong, the brief truncated or emptied), each run once over the suite at Opus 5.5 high: 12 mutants, 275 scored runs (`results/litmus/2026-10-15.md`). A mutant counts as killed when it fails a scenario the unmodified brief passed in all three baseline runs.
 
-**None of the 11 mutants that ran was killed**; their pass rates fell between 72% and 84%, against 79% for the original. The twelfth, the emptied brief, could not run, since the API rejects an empty system prompt, so it is inconclusive. Read with the sweep results, the conclusion is about the suite more than the brief: no scenario depends on any single instruction, so the suite could not catch a regression in one. The next scenarios should each be built so that one rule (check what changed relative to the first errors; report no incident when nothing is wrong) decides the outcome.
+**0 of 12 mutants were killed: 11 survived and 1 was inconclusive.** The 11 survivors had pass rates between 72% and 84%, against 79% for the original. The inconclusive one is the emptied brief: all 25 of its runs errored, since the API rejects an empty system prompt. Read with the sweep results, the conclusion is about the suite more than the brief: no scenario depends on any single instruction, so the suite could not catch a regression in one. The next scenarios should each be built so that one rule (check what changed relative to the first errors; report no incident when nothing is wrong) decides the outcome.
 
 ### First run
 
