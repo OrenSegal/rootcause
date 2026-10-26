@@ -1,10 +1,23 @@
 # rootcause
 
+[![CI](https://github.com/OrenSegal/rootcause/actions/workflows/ci.yml/badge.svg)](https://github.com/OrenSegal/rootcause/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/license-MIT-black)](LICENSE)
+
 An agent that investigates incidents and failed CI runs, written to show how agents work underneath the frameworks: a hand-written loop, tools served over MCP, an approval gate, a crash-safe event log, an orchestrator with workers, retrieval over past postmortems, OpenTelemetry traces, and evals scored against known root causes, run repeatedly and reported with intervals and cost.
 
 It runs three ways: as a CLI with exit codes for CI, as an MCP server a coding agent can call, and as a GitHub Action.
 
-**What the measurements show** ([Results](#results)): across 525 runs on 25 incidents, seven model and effort settings all landed at 77-84% with overlapping intervals, while cost per solved incident varied 25x. In a separate 300-run comparison, an orchestrator with workers cost about three times as much for no measurable gain. Mutation-testing the brief killed none of 11 mutants, so the suite can't yet catch a regression in a single instruction.
+## Results at a glance
+
+Two different agent loops were measured. In the 525-run sweep, Claude Code's own agent loop did the investigating, and rootcause supplied the scenarios, the telemetry MCP tools and the grader. The hand-written loop in this repo was measured in the separate 300-run comparison against a LangGraph version of the same agent. Details and caveats are in [Results](#results).
+
+| measurement | agent loop | result |
+|---|---|---|
+| 7 model, effort and retrieval settings, 525 runs | Claude Code's own, over rootcause's MCP tools and grader | 77-84% pass rate, all intervals overlap; cost per solved incident $0.0033 to $0.081 (25x) |
+| hand-written loop vs LangGraph, 300 runs | rootcause's hand-written loop and its LangGraph port | indistinguishable on accuracy, cost, tokens and latency; orchestrator with workers cost about 3x for no measurable gain |
+| retrieval over 33 postmortems | none (retriever alone) | BM25 recall@5 0.94 vs 0.86 for a transformer model at roughly 1,000x the query latency |
+| mutation testing the brief, 300 runs | Claude Code's own | 0 of 11 mutants killed, so the suite can't yet catch a regression in a single instruction |
+
+**How it's evaluated.** 25 incidents with known root causes, each built around a mistake a responder could make, several with planted decoys; the "blame the last deploy" baseline gets three right. The grader checks category, service, that every cited id came from a tool, and that no rollback hit an innocent deploy. Each configuration runs every scenario three times and is reported with a Wilson interval, pass^k, and cost per solved incident including failed runs. Harness failures are retried and never counted as wrong answers. More under "Evals that can fail" and "Measurement before claims" in [What it shows](#what-it-shows).
 
 ## Quickstart
 
@@ -12,6 +25,11 @@ It runs three ways: as a CLI with exit codes for CI, as an MCP server a coding a
 uv sync                                                   # core only; extras below
 uv run rootcause eval --min-pass-rate 0.05                # every scenario, no API key needed
 uv run rootcause investigate scenarios/007-inventory-timeout-cascade
+```
+
+More, including the model-backed providers:
+
+```bash
 uv run rootcause ci-triage --raw scenarios/008-sous-shellcheck/raw
 uv run rootcause retrieval-eval --retrieval bm25 --query alert+log
 uv run rootcause eval --provider claude-code --min-pass-rate 0     # Claude Code runs its own loop
@@ -71,7 +89,7 @@ Every run below was made on 2026-10-15 through a Claude subscription. Costs are 
 
 ### Model tier, reasoning effort and retrieval
 
-`sweeps/models-and-retrieval.yaml`: seven configurations through Claude Code's own loop, every scenario three times, 525 runs (`results/sweeps/models-and-retrieval-2026-10-15/`).
+`sweeps/models-and-retrieval.yaml`: seven configurations, every scenario three times, 525 runs (`results/sweeps/models-and-retrieval-2026-10-15/`). Claude Code's own agent loop is the investigator here (`--provider claude-code`); rootcause supplies the scenarios, the telemetry MCP tools and the grader. The hand-written loop is measured in the [300-run comparison](#hand-written-loop-against-langgraph) below.
 
 | configuration | pass rate (95% CI) | pass^3 | cost per solved | p50 wall | searched |
 |---|---|---|---|---|---|

@@ -3,6 +3,8 @@ name = "rootcause"
 version = "0.1.0"
 description = "An incident-investigation agent with a hand-written loop, MCP tools, and known-answer evals"
 readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
 authors = [
     { name = "OrenSegal", email = "orenssegal@gmail.com" }
 ]
