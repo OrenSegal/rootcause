@@ -134,10 +134,6 @@ litmus's operators applied to the investigator brief: one broken copy per site (
 
 **0 of 12 mutants were killed: 11 survived and 1 was inconclusive.** The 11 survivors had pass rates between 72% and 84%, against 79% for the original. The inconclusive one is the emptied brief: all 25 of its runs errored, since the API rejects an empty system prompt. Read with the sweep results, the conclusion is about the suite more than the brief: no scenario depends on any single instruction, so the suite could not catch a regression in one. The next scenarios should each be built so that one rule (check what changed relative to the first errors; report no incident when nothing is wrong) decides the outcome.
 
-### First run
-
-An earlier single pass over 24 scenarios (`results/claude-code-opus-5-5-high.*`) scored 75% and surfaced the grader bug fixed as #21 in `docs/AUDIT.md`.
-
 ## Architecture
 
 ```
