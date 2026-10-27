@@ -100,7 +100,8 @@ forbidden_modules = [
     "langgraph",
 ]
 # The narrower rule "application may use anthropic.types but not the client" is
-# enforced by tests/test_architecture.py: import-linter can't name external subpackages.
+# enforced by tests/test_contracts.py (test_application_uses_sdk_data_types_but_never_the_client):
+# import-linter can't name external subpackages.
 
 [[tool.importlinter.contracts]]
 name = "Interfaces wire nothing themselves: adapters are reached through composition"
