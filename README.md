@@ -85,7 +85,7 @@ The Claude Code options need the `claude` CLI installed and signed in, and run o
 
 ## Results
 
-Every run below was made on 2026-10-15 through a Claude subscription. Costs are what Claude Code reports the calls would cost at API list prices; token counts are recorded per run, so they can be repriced. Per-scenario tables, grades and every diagnosis are in `results/`. The Wilson intervals treat each run as an independent trial; repeats of one scenario are correlated, and several scenarios pass or fail every time, so the true uncertainty is somewhat wider than shown and the per-scenario tables are the firmer view. That only strengthens the main finding, that nothing below separates the configurations on accuracy.
+Every run below was made on 2026-10-15 through a Claude subscription, except the Haiku loop sweep (2026-10-26). Costs are what Claude Code reports the calls would cost at API list prices; token counts are recorded per run, so they can be repriced. Per-scenario tables, grades and every diagnosis are in `results/`. The Wilson intervals treat each run as an independent trial; repeats of one scenario are correlated, and several scenarios pass or fail every time, so the true uncertainty is somewhat wider than shown and the per-scenario tables are the firmer view. That only strengthens the main finding, that nothing below separates the configurations on accuracy.
 
 ### Model tier, reasoning effort and retrieval
 
@@ -127,6 +127,22 @@ What it shows:
 - **Splitting the work did not pay.** Orchestrator plus workers costs about three times as much per solved incident and takes twice as long, for no measurable gain in either harness.
 - **Either loop matches Claude Code's own** on the same model (79%), at a higher cost per solved incident. Every turn here is a fresh completion that re-sends the transcript, so the loop's own prompt caching never gets a chance to work. Wall time includes starting a process per turn.
 - No harmful actions and no invented evidence in any of the 300 runs. The only path still untested on a live model is the Anthropic adapter's native one (`--provider anthropic`: real `tool_use`, cache control, refusal fallbacks), which needs an API key.
+
+### Hand-written loop on Haiku 5.5
+
+`sweeps/loop-haiku.yaml`: the hand-written loop, single agent, Haiku 5.5 at high effort, three runs per scenario, 75 runs, made on 2026-10-26 (`results/sweeps/loop-haiku-2026-10-26/`). One run timed out inside Claude Code and was retried, so no harness errors remain.
+
+| configuration | pass rate (95% CI) | pass^3 | cost per solved | p50 wall | output tokens |
+|---|---|---|---|---|---|
+| hand-written loop, Haiku 5.5, high, single | 75% (64% to 83%) | 68% | $0.0141 | 53.3s | 8735 |
+| hand-written loop, Opus 5.5, high, single (above) | 81% (71% to 89%) | 72% | $0.1149 | 36.8s | 2033 |
+| Claude Code's own loop, Haiku 5.5, high (models table) | 77% (67% to 85%) | 68% | $0.0033 | 15.3s | |
+
+- **Haiku in the hand-written loop is about as accurate as Opus in it, at about an eighth of the cost per solved incident.** The intervals overlap. It is slower and wordier: about four times the output tokens and 14 tool calls per run, against 8 for Opus.
+- **Against Claude Code's own loop on the same model, accuracy is the same and cost is about 4x.** As with Opus, every turn here is a fresh completion that re-sends the transcript.
+- Haiku never solved 009 (it blamed `cert-manager`), 014, 017 or 019. Opus in the same loop solved 009 every time. No harmful actions, no invented evidence and no refusals in the 75 runs.
+
+Caveats: this is Haiku 5.5 only. The loop is the hand-written one, but each turn goes through headless Claude Code as a structured completion, so this is not the native `--provider anthropic` `tool_use` path, which is still untested on a live model. Runs are not independent (see above). Costs are list prices, not billed spend: Claude Code reports the token counts, and rootcause's price table turns them into dollars. Haiku 5.5 was missing from that table, which made the loop price it at the most expensive listed model. It was added for this sweep, and its rates reproduce Claude Code's own cost figures for the 2026-10-15 Haiku runs to within 0.02%.
 
 ### Mutation testing the brief
 

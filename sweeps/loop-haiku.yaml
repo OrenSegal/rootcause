@@ -1,0 +1,8 @@
+# The hand-written loop on Haiku 5.5, single agent.
+# Each model turn goes through headless Claude Code as a structured completion.
+# Compare with loop-opus-5.5-high-single in loop.yaml and haiku-5.5-high in models-and-retrieval.
+name: loop-haiku-2026-10-26
+repeats: 3
+scenarios: scenarios
+configs:
+  - {name: loop-haiku-5.5-high-single, provider: claude-code-loop, model: claude-haiku-5-5, effort: high, mode: single}
