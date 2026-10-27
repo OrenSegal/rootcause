@@ -180,7 +180,7 @@ The first exposes `list_scenarios`, `investigate_incident` and `run_evals`. The 
 The eval gate, as a reusable action:
 
 ```yaml
-- uses: OrenSegal/rootcause@main
+- uses: OrenSegal/rootcause@v0.1.0
   with:
     provider: heuristic
     min-pass-rate: "0.05"
