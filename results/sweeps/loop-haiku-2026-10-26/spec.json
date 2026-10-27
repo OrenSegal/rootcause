@@ -1,0 +1,17 @@
+{
+  "name": "loop-haiku-2026-10-26",
+  "repeats": 3,
+  "scenarios": "scenarios",
+  "configs": [
+    {
+      "name": "loop-haiku-5.5-high-single",
+      "provider": "claude-code-loop",
+      "model": "claude-haiku-5-5",
+      "effort": "high",
+      "mode": "single",
+      "retrieval": "none",
+      "budget_usd": 1.0,
+      "brief": null
+    }
+  ]
+}
