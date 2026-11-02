@@ -150,9 +150,9 @@ def test_the_harness_keeps_rollback_visible_on_its_stdio_server(tmp_path):
     model as an error, as in the hand-written loop, or the runs stop being comparable."""
     cmd = claude_code.server_command(tmp_path)
     assert "--allow-rollback" in cmd
-    usage = CliRunner(env={"NO_COLOR": "1", "COLUMNS": "200"}).invoke(
-        app, ["telemetry-mcp", "--help"]
-    )
+    usage = CliRunner(
+        env={"NO_COLOR": "1", "FORCE_COLOR": None, "GITHUB_ACTIONS": None, "COLUMNS": "200"}
+    ).invoke(app, ["telemetry-mcp", "--help"])
     assert "--allow-rollback" in usage.output
 
 
