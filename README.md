@@ -17,7 +17,7 @@ Two different agent loops were measured. In the 525-run sweep, Claude Code's own
 | retrieval over 33 postmortems | none (retriever alone) | BM25 recall@5 0.94 vs 0.86 for a transformer model at roughly 1,000x the query latency |
 | mutation testing the brief, 12 mutants, 275 scored runs | Claude Code's own | 0 of 12 killed (11 survived, 1 inconclusive), so the suite can't yet catch a regression in a single instruction; two of the mutants touch a rule the harness already enforces, so they could not fail |
 
-**How it's evaluated.** 25 incidents with known root causes, each built around a mistake a responder could make, several with planted decoys; the "blame the last deploy" baseline gets three right. The grader checks category, service, that every cited id exists in the scenario's telemetry and at least one is the expected evidence, and that no rollback hit an innocent deploy. It does not read the written explanation, and it does not check that a tool returned the id during that run; only the hand-written loop's runtime check does that. Each configuration runs every scenario three times and is reported with a Wilson interval, pass^k, and cost per solved incident including failed runs. Harness failures are retried and never counted as wrong answers. More under "Evals that can fail" and "Measurement before claims" in [What it shows](#what-it-shows).
+**How it's evaluated.** 25 incidents with known root causes, each built around a mistake a responder could make, several with planted decoys; the "blame the last deploy" baseline gets three right. The grader checks category, service, that every cited id exists in the scenario's telemetry and at least one is the expected evidence, that no rollback hit an innocent deploy, and that the run made at least one tool call. It does not read the written explanation, and it does not check that a tool returned the id during that run; only the hand-written loop's runtime check does that. Each configuration runs every scenario three times and is reported with a Wilson interval, pass^k, and cost per solved incident including failed runs. Harness failures are retried and never counted as wrong answers. More under "Evals that can fail" and "Measurement before claims" in [What it shows](#what-it-shows).
 
 ## Quickstart
 
@@ -55,7 +55,7 @@ The Claude Code options need the `claude` CLI installed and signed in, and run o
 
 **The loop, by hand.** `application/agent.py` is the whole cycle: call the model, check the stop reason, run tools, append the results, repeat until the agent submits an answer or hits its step limit, its budget, or a refusal. History is append-only. Each assistant turn goes back exactly as it was logged, thinking blocks included.
 
-**Tools with delivery rules.** Telemetry tools are served by an MCP server (`adapters/mcp_telemetry.py`) and annotated as read-only or not. The executor (`application/executor.py`) turns that into behavior:
+**Tools with delivery rules.** Telemetry tools are served by an MCP server (`adapters/mcp_telemetry.py`). The caller names the tools it trusts as read-only; a server's `read_only_hint` counts for nothing, so anything unlisted is gated. The executor (`application/executor.py`) turns that into behavior:
 
 - Read-only and idempotent tools are retried with backoff and re-run after a crash (at least once).
 - Anything else runs at most once. An intent row is written before the call, so if the process dies between the side effect and its result, a resumed run tells the model the outcome is unknown instead of repeating it.
@@ -189,7 +189,7 @@ claude mcp add rootcause -- uv run --directory "$PWD" rootcause mcp
 claude mcp add incident-007 -- uv run --directory "$PWD" rootcause telemetry-mcp scenarios/007-inventory-timeout-cascade
 ```
 
-The first exposes `list_scenarios`, `investigate_incident` and `run_evals`. The second hands a coding agent the raw telemetry tools, so the agent itself can be scored as the investigator.
+The first exposes `list_scenarios`, `investigate_incident` and `run_evals`. The second hands a coding agent the raw telemetry tools, so the agent itself can be scored as the investigator. It is read-only by default, because no operator or approval policy runs on that path. `--allow-rollback` adds the rollback tool, and then the coding agent's own permission settings are the only gate. `--provider claude-code` passes that flag and gates with `--allowedTools`.
 
 ## Use it in CI
 
@@ -213,8 +213,8 @@ rootcause ci-triage --repo owner/name --run 123456789 --record scenarios/   # ke
 
 ## Not done yet
 
-- A human in the approval loop. The only policy is a static allow or deny, and the gate trusts a tool's `read_only_hint` (`adapters/mcp_tools.py:45`), so a server that mislabels a tool bypasses it. `telemetry-mcp` serves the fixture rollback without the gate.
-- A resume command. Crash recovery is a library call with no CLI, and its tests crash with an in-process exception. After a resume, evidence from recovered results can be rejected as ungrounded, and worker spend is dropped from the budget.
+- A human in the approval loop. The only policy is a static allow or deny.
+- A resume command. Crash recovery is a library call with no CLI: the log doesn't record a run's mode, retrieval or approval, which a command would need to rebuild it.
 - A live-model regression gate. The `--min-pass-rate 0.05` check in CI is a smoke test on the scripted provider.
 - The Anthropic adapter on a live model: native `tool_use`, cache control and refusal fallbacks are tested against a mocked transport only. Every live result here reaches the model through Claude Code. The sweep file format already takes `provider: anthropic`.
 - Scenarios that each hinge on one rule of the brief, so mutation testing can kill mutants (see above).

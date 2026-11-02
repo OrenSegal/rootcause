@@ -32,8 +32,7 @@ from rootcause.adapters.fixtures import (
 )
 from rootcause.adapters.github_actions import GhCli, RawRun, case_from_raw
 from rootcause.adapters.langgraph_engine import LangGraphEngine
-from rootcause.adapters.mcp_telemetry import build_telemetry_server
-from rootcause.adapters.mcp_tools import mcp_tools
+from rootcause.adapters.mcp_telemetry import build_telemetry_server, telemetry_tools
 from rootcause.adapters.sqlite_events import SqliteEventLog
 from rootcause.application.agent import AgentLoop, RunResult, TokenUsage
 from rootcause.application.approval import StaticApproval
@@ -166,9 +165,17 @@ def make_retriever(mode: Retrieval, corpus: Path = CORPUS) -> Retriever | None:
 
 
 def telemetry_server(
-    scenario_dir: Path, retrieval: Retrieval = Retrieval.NONE, corpus: Path = CORPUS
+    scenario_dir: Path,
+    retrieval: Retrieval = Retrieval.NONE,
+    corpus: Path = CORPUS,
+    *,
+    rollback: bool = False,
 ) -> MCPServer:
-    return build_telemetry_server(load_case(scenario_dir).store, make_retriever(retrieval, corpus))
+    """Served over stdio, where no gate of ours can run: the client is the only gate,
+    so rollback is left out unless the caller says its client enforces one."""
+    return build_telemetry_server(
+        load_case(scenario_dir).store, make_retriever(retrieval, corpus), rollback=rollback
+    )
 
 
 class Investigation(BaseModel):
@@ -233,8 +240,7 @@ async def _investigate(
     if not supports(loop.provider.name, mode):
         raise ValueError(UNSUPPORTED.format(provider=loop.provider.name))
     scenario = case.scenario
-    server = build_telemetry_server(case.store, make_retriever(retrieval))
-    async with mcp_tools(server) as tools:
+    async with telemetry_tools(case.store, make_retriever(retrieval)) as tools:
         if mode is Mode.SINGLE:
             spec, agent_tools = (
                 investigator_spec(retrieval=retrieval != Retrieval.NONE),
@@ -271,8 +277,7 @@ async def _run(
             brief=brief,
         )
     if isinstance(engine, LangGraphEngine):
-        server = build_telemetry_server(case.store, make_retriever(retrieval))
-        async with mcp_tools(server) as tools:
+        async with telemetry_tools(case.store, make_retriever(retrieval)) as tools:
             return await engine.investigate(
                 case.scenario.alert.render(),
                 list(tools),

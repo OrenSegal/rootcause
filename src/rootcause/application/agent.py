@@ -183,7 +183,7 @@ class AgentLoop:
         if any(e.kind == OUTCOME for e in events):
             raise ValueError(f"run {run_id} already finished")
         transcript = Transcript.from_events(events)
-        self.budget.spent_usd += transcript.spent_usd
+        self.budget.spent_usd += transcript.spent_usd + self._worker_spend(run_id)
         run = self._prepare(run_id, spec, spec.select(tools), transcript)
         recovery = Recovery()
         for e in events:
@@ -196,6 +196,16 @@ class AgentLoop:
                 recovery.intents.add(e.payload["tool_use_id"])
         recovery.intents -= set(recovery.results)
         return await self._drive(run, recovery)
+
+    def _worker_spend(self, run_id: str) -> float:
+        """What the runs this one started spent, turn by turn: a worker the crash
+        killed has logged its turns but no outcome."""
+        total = 0.0
+        for child in self.events.children(run_id):
+            events = self.events.events(child.run_id)
+            total += sum(e.payload["cost_usd"] for e in events if e.kind == ASSISTANT)
+            total += self._worker_spend(child.run_id)
+        return total
 
     def _prepare(
         self, run_id: str, spec: AgentSpec[Any], tools: list[Tool], transcript: Transcript

@@ -27,6 +27,7 @@ def render(result: CallToolResult) -> str:
 class McpTool:
     client: Client
     info: McpToolInfo
+    read_only: bool = False
 
     @property
     def name(self) -> str:
@@ -41,10 +42,6 @@ class McpTool:
         }
 
     @property
-    def read_only(self) -> bool:
-        return bool(self.info.annotations and self.info.annotations.read_only_hint)
-
-    @property
     def idempotent(self) -> bool:
         ann = self.info.annotations
         return self.read_only or bool(ann and ann.idempotent_hint)
@@ -55,9 +52,14 @@ class McpTool:
 
 
 @asynccontextmanager
-async def mcp_tools(target: Any) -> AsyncGenerator[list[McpTool]]:
+async def mcp_tools(
+    target: Any, *, read_only: frozenset[str] = frozenset()
+) -> AsyncGenerator[list[McpTool]]:
     """Connect to an MCP server (an in-process server object, a URL, or stdio
-    parameters) and yield its tools for the length of the block."""
+    parameters) and yield its tools for the length of the block.
+
+    `read_only` names the tools the caller vouches for. Everything else is gated: a
+    server's `read_only_hint` is its own claim, and the gate can't rest on that."""
     async with Client(target) as client:
         listing = await client.list_tools()
-        yield [McpTool(client, info) for info in listing.tools]
+        yield [McpTool(client, info, info.name in read_only) for info in listing.tools]

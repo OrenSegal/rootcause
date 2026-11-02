@@ -10,8 +10,7 @@ from typing import Any
 import pytest
 from conftest import Scripted, call, make_loop
 
-from rootcause.adapters.mcp_telemetry import build_telemetry_server
-from rootcause.adapters.mcp_tools import mcp_tools
+from rootcause.adapters.mcp_telemetry import telemetry_tools
 from rootcause.application.investigator import investigator_spec
 
 ANSWER = {
@@ -64,7 +63,7 @@ async def traced_run(case, tracer):
     )
     loop = make_loop(provider)
     loop.tracer = tracer
-    async with mcp_tools(build_telemetry_server(case.store)) as tools:
+    async with telemetry_tools(case.store) as tools:
         return await loop.run(
             investigator_spec(), case.scenario.alert.render(), tools, scenario_id="s"
         )

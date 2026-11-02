@@ -20,8 +20,11 @@ inputs:
     description: Hard spending cap per scenario run.
     default: "0.50"
   min-pass-rate:
-    description: Fail the job below this pass rate (0 to 1).
-    default: "1.0"
+    description: >-
+      Fail the job below this pass rate (0 to 1). The default only catches pipeline breakage:
+      the heuristic provider is meant to fail most scenarios (it passes 12%). Set your own
+      bar for a model-backed provider.
+    default: "0.05"
   anthropic-api-key:
     description: Required when provider is anthropic.
     required: false
@@ -42,17 +45,25 @@ runs:
       env:
         ANTHROPIC_API_KEY: ${{ inputs.anthropic-api-key }}
         SCENARIOS: ${{ inputs.scenarios }}
+        PROVIDER: ${{ inputs.provider }}
+        MODEL: ${{ inputs.model }}
+        EFFORT: ${{ inputs.effort }}
+        MODE: ${{ inputs.mode }}
+        BUDGET_USD: ${{ inputs.budget-usd }}
+        MIN_PASS_RATE: ${{ inputs.min-pass-rate }}
       run: |
         case "$SCENARIOS" in /*) dir="$SCENARIOS" ;; *) dir="$GITHUB_WORKSPACE/$SCENARIOS" ;; esac
         [ -d "$dir" ] || dir="$SCENARIOS"
         report="$RUNNER_TEMP/rootcause-report.json"
         echo "report=$report" >> "$GITHUB_OUTPUT"
-        uv run --locked rootcause eval "$dir" \
-          --provider "${{ inputs.provider }}" \
-          --model "${{ inputs.model }}" \
-          --effort "${{ inputs.effort }}" \
-          --mode "${{ inputs.mode }}" \
-          --budget-usd "${{ inputs.budget-usd }}" \
-          --min-pass-rate "${{ inputs.min-pass-rate }}" \
+        # Inputs arrive through env so they stay data; the CLI validates their values.
+        uv run --locked rootcause eval \
+          --provider "$PROVIDER" \
+          --model "$MODEL" \
+          --effort "$EFFORT" \
+          --mode "$MODE" \
+          --budget-usd "$BUDGET_USD" \
+          --min-pass-rate "$MIN_PASS_RATE" \
           --runlog "$RUNNER_TEMP/rootcause-runs.sqlite" \
-          --json-out "$report"
+          --json-out "$report" \
+          -- "$dir"
