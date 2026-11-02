@@ -8,8 +8,7 @@ from conftest import SCENARIOS
 
 from rootcause.adapters.corpus import load_corpus, load_qrels
 from rootcause.adapters.fixtures import discover, load_case
-from rootcause.adapters.mcp_telemetry import build_telemetry_server
-from rootcause.adapters.mcp_tools import mcp_tools
+from rootcause.adapters.mcp_telemetry import telemetry_tools
 from rootcause.adapters.retrieval import BM25Retriever, fuse
 from rootcause.application.retrieval_eval import mrr, ndcg_at_k, recall_at_k
 from rootcause.application.sweep import Retrieval
@@ -63,10 +62,10 @@ def test_every_label_points_at_a_real_document_and_scenario():
 
 
 async def test_search_tool_is_served_only_when_retrieval_is_on(case):
-    async with mcp_tools(build_telemetry_server(case.store)) as tools:
+    async with telemetry_tools(case.store) as tools:
         assert "search_postmortems" not in {t.name for t in tools}
     retriever = BM25Retriever(load_corpus(CORPUS))
-    async with mcp_tools(build_telemetry_server(case.store, retriever=retriever)) as tools:
+    async with telemetry_tools(case.store, retriever=retriever) as tools:
         search = next(t for t in tools if t.name == "search_postmortems")
         assert search.read_only
         result = await search.invoke({"query": "connection pool exhausted after config change"})

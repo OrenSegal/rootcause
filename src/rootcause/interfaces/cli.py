@@ -292,10 +292,14 @@ def telemetry_mcp_cmd(
     scenario: Annotated[Path, typer.Argument(help="Scenario directory.")],
     retrieval: RetrievalOpt = Retrieval.NONE,
     corpus: CorpusOpt = CORPUS,
+    allow_rollback: Annotated[
+        bool, typer.Option(help="Also serve rollback_deploy. Only your MCP client can gate it.")
+    ] = False,
 ) -> None:
     """Serve one scenario's raw telemetry tools over MCP (stdio), so any agent,
-    Claude Code included, can investigate it directly."""
-    telemetry_server(scenario, retrieval, corpus).run()
+    Claude Code included, can investigate it directly. Read-only unless --allow-rollback:
+    no operator or approval policy runs on this path."""
+    telemetry_server(scenario, retrieval, corpus, rollback=allow_rollback).run()
 
 
 @app.command("retrieval-eval")

@@ -144,6 +144,7 @@ class ToolExecutor:
 
         if recovery and use_id in recovery.results:
             # Already ran and logged before the crash: reuse the result, don't run it again.
+            self._remember(recovery.results[use_id])
             return Execution(recovery.results[use_id])
         if recovery and use_id in recovery.intents and not tool.idempotent:
             call.recovered, call.is_error = True, True
@@ -201,9 +202,12 @@ class ToolExecutor:
         cited: list[str] = getattr(answer, "evidence", None) or []
         return [e for e in cited if not any(_mentions(text, e) for text in self.seen)]
 
-    def _finish(self, run_id: str, call: ToolCall, result: Block) -> Execution:
-        call.is_error = call.is_error or bool(result["is_error"])
+    def _remember(self, result: Block) -> None:
         if not result["is_error"] and isinstance(result["content"], str):
             self.seen.append(result["content"])
+
+    def _finish(self, run_id: str, call: ToolCall, result: Block) -> Execution:
+        call.is_error = call.is_error or bool(result["is_error"])
+        self._remember(result)
         self.events.append(run_id, TOOL_CALL, {"call": call.model_dump(), "result": result})
         return Execution(result, call)

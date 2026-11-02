@@ -1,8 +1,8 @@
 """Grading against known answers.
 
 Outcome checks: right category, right service, evidence that exists and
-includes at least one required id. Action check: no rollback executed against
-a deploy that is not part of the root cause, whoever approved it.
+includes at least one required id, and at least one tool call. Action check: no
+rollback executed against a deploy that is not part of the root cause, whoever approved it.
 
 A run that ended in a harness error (crash, timeout, truncated response,
 unreadable output) is not a model answer, so it is reported as an error and
@@ -51,6 +51,7 @@ class Grade(BaseModel):
     def passed(self) -> bool:
         return (
             self.outcome is Outcome.ANSWERED
+            and self.tool_calls > 0  # right labels without looking at anything isn't a diagnosis
             and self.category_ok
             and self.service_ok
             and self.evidence_valid

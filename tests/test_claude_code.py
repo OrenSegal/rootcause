@@ -8,6 +8,7 @@ import json
 from pathlib import Path
 
 from conftest import SCENARIOS
+from typer.testing import CliRunner
 
 from rootcause.adapters import claude_code
 from rootcause.adapters.claude_code import (
@@ -18,13 +19,13 @@ from rootcause.adapters.claude_code import (
     stage_case,
 )
 from rootcause.adapters.fixtures import load_case
-from rootcause.adapters.mcp_telemetry import build_telemetry_server
-from rootcause.adapters.mcp_tools import mcp_tools
+from rootcause.adapters.mcp_telemetry import telemetry_tools
 from rootcause.adapters.sqlite_events import SqliteEventLog
 from rootcause.application.evals import grade
 from rootcause.composition import Mode, investigate, supports
 from rootcause.domain.answers import Outcome
 from rootcause.domain.scenario import Category
+from rootcause.interfaces.cli import app
 
 FIXTURE = Path(__file__).parent / "fixtures" / "claude_code_005_denied_rollback.jsonl"
 CASE_005 = SCENARIOS / "005-inventory-bad-deploy"
@@ -101,7 +102,7 @@ def test_command_offers_only_the_telemetry_server(tmp_path):
 
 async def test_operator_decides_whether_rollback_is_allowed():
     case = load_case(CASE_005)
-    async with mcp_tools(build_telemetry_server(case.store)) as tools:
+    async with telemetry_tools(case.store) as tools:
         denied = allowed_tools(tools, approve=False)
         approved = allowed_tools(tools, approve=True)
     assert "rollback_deploy" not in denied
@@ -142,6 +143,17 @@ async def test_investigate_grades_a_claude_code_run():
     assert run.grade.tool_calls == len(run.result.tool_calls)
     assert "mcp__telemetry__rollback_deploy" not in seen[0][seen[0].index("--allowedTools") + 1]
     assert events.run_info(run.result.run_id).provider == "claude-code:claude-opus-5-5:high"
+
+
+def test_the_harness_keeps_rollback_visible_on_its_stdio_server(tmp_path):
+    """Claude Code is the gate here (`--allowedTools`). A denied rollback has to reach the
+    model as an error, as in the hand-written loop, or the runs stop being comparable."""
+    cmd = claude_code.server_command(tmp_path)
+    assert "--allow-rollback" in cmd
+    usage = CliRunner(env={"NO_COLOR": "1", "COLUMNS": "200"}).invoke(
+        app, ["telemetry-mcp", "--help"]
+    )
+    assert "--allow-rollback" in usage.output
 
 
 def test_an_approved_rollback_id_counts_as_returned_evidence():
