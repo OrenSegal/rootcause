@@ -36,8 +36,7 @@ from typing import Any
 from pydantic import ValidationError
 
 from rootcause.adapters.fixtures import write_case
-from rootcause.adapters.mcp_telemetry import build_telemetry_server
-from rootcause.adapters.mcp_tools import mcp_tools
+from rootcause.adapters.mcp_telemetry import telemetry_tools
 from rootcause.application.agent import RunResult, TokenUsage
 from rootcause.application.executor import ToolCall
 from rootcause.application.investigator import SEARCH_POSTMORTEMS, investigator_prompt
@@ -130,9 +129,17 @@ def server_command(
     fixtures: Path, retrieval: str = "none", corpus: Path | None = None
 ) -> list[str]:
     """The `rootcause` entry point installed next to this interpreter. Paths are absolute:
-    Claude Code starts the server from an empty working directory."""
+    Claude Code starts the server from an empty working directory. Rollback is on because
+    the gate here is `--allowedTools`, which lets a denial reach the model as an error."""
     exe = shutil.which("rootcause", path=str(Path(sys.executable).parent)) or "rootcause"
-    cmd = [exe, "telemetry-mcp", str(fixtures.resolve()), "--retrieval", retrieval]
+    cmd = [
+        exe,
+        "telemetry-mcp",
+        str(fixtures.resolve()),
+        "--retrieval",
+        retrieval,
+        "--allow-rollback",
+    ]
     return cmd + (["--corpus", str(corpus.resolve())] if corpus else [])
 
 
@@ -322,7 +329,7 @@ class ClaudeCodeHarness:
         corpus: Path | None = None,
         brief: str | None = None,
     ) -> RunResult[Diagnosis]:
-        async with mcp_tools(build_telemetry_server(case.store)) as tools:
+        async with telemetry_tools(case.store) as tools:
             gated = frozenset(t.name for t in tools if not t.read_only)
             allowed = allowed_tools(tools, approve=approve)
         if retrieval != "none":  # served by the subprocess, not the in-process server above

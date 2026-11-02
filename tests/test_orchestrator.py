@@ -9,8 +9,7 @@ from typing import Any
 
 from conftest import Scripted, call, make_loop
 
-from rootcause.adapters.mcp_telemetry import build_telemetry_server
-from rootcause.adapters.mcp_tools import mcp_tools
+from rootcause.adapters.mcp_telemetry import telemetry_tools
 from rootcause.adapters.sqlite_events import SqliteEventLog
 from rootcause.application.orchestrator import (
     DispatchWorkers,
@@ -102,7 +101,7 @@ async def test_orchestrator_dispatches_workers_and_diagnoses(case):
     events = SqliteEventLog()
     loop = make_loop(Router(orchestrator=orchestrator, changes=changes, logs=logs), events=events)
 
-    async with mcp_tools(build_telemetry_server(case.store)) as tools:
+    async with telemetry_tools(case.store) as tools:
         dispatcher = DispatchWorkers(loop, tools, scenario_id=case.scenario.id)
         result = await loop.run(
             orchestrator_spec(), case.scenario.alert.render(), [*tools, dispatcher], scenario_id="s"
@@ -159,7 +158,7 @@ async def test_a_worker_cannot_call_a_gated_tool(case):
         ]
     )
     loop = make_loop(Router(changes=changes), approve=True)
-    async with mcp_tools(build_telemetry_server(case.store)) as tools:
+    async with telemetry_tools(case.store) as tools:
         await DispatchWorkers(loop, tools, scenario_id="s").invoke(
             {"tasks": [{"role": "changes", "question": "q"}]}
         )
@@ -178,7 +177,7 @@ async def test_workers_and_orchestrator_share_one_budget(case):
     )
     changes = Scripted([{"content": [call("submit_findings", FINDINGS, "f")], "usage": pricey}])
     loop = make_loop(Router(orchestrator=orchestrator, changes=changes), budget=1.0)
-    async with mcp_tools(build_telemetry_server(case.store)) as tools:
+    async with telemetry_tools(case.store) as tools:
         result = await loop.run(
             orchestrator_spec(),
             "ALERT",

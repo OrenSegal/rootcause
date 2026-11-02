@@ -1,8 +1,7 @@
 from conftest import Scripted, call, make_loop
 
 from rootcause.adapters.heuristic import HeuristicProvider
-from rootcause.adapters.mcp_telemetry import build_telemetry_server
-from rootcause.adapters.mcp_tools import mcp_tools
+from rootcause.adapters.mcp_telemetry import telemetry_tools
 from rootcause.application.evals import grade
 from rootcause.application.investigator import investigator_spec
 from rootcause.domain.answers import Outcome
@@ -18,7 +17,7 @@ DIAGNOSIS = {
 
 
 async def run(loop, case, max_steps=15):
-    async with mcp_tools(build_telemetry_server(case.store)) as tools:
+    async with telemetry_tools(case.store) as tools:
         return await loop.run(
             investigator_spec(max_steps),
             case.scenario.alert.render(),
