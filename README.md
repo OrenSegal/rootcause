@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/OrenSegal/rootcause/actions/workflows/ci.yml/badge.svg)](https://github.com/OrenSegal/rootcause/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/license-MIT-black)](LICENSE)
 
-An agent that investigates incidents and failed CI runs, written to show how agents work underneath the frameworks: a hand-written loop, tools served over MCP, an approval gate, a crash-safe event log, an orchestrator with workers, retrieval over past postmortems, OpenTelemetry traces, and evals scored against known root causes, run repeatedly and reported with intervals and cost.
+An agent that investigates incidents and failed CI runs, written to show how agents work underneath the frameworks: a hand-written loop, tools served over MCP, an approval gate, an append-only event log for crash recovery, an orchestrator with workers, retrieval over past postmortems, OpenTelemetry traces, and evals scored against known root causes, run repeatedly and reported with intervals and cost.
 
 It runs three ways: as a CLI with exit codes for CI, as an MCP server a coding agent can call, and as a GitHub Action.
 
@@ -13,11 +13,11 @@ Two different agent loops were measured. In the 525-run sweep, Claude Code's own
 | measurement | agent loop | result |
 |---|---|---|
 | 7 model, effort and retrieval settings, 525 runs | Claude Code's own, over rootcause's MCP tools and grader | 77-84% pass rate, all intervals overlap; cost per solved incident $0.0033 to $0.081 (25x) |
-| hand-written loop vs LangGraph, 300 runs | rootcause's hand-written loop and its LangGraph port | indistinguishable on accuracy, cost, tokens and latency; orchestrator with workers cost about 3x for no measurable gain |
+| hand-written loop vs LangGraph, 300 runs | rootcause's hand-written loop and its LangGraph port | no detectable difference on accuracy, cost, tokens or latency; orchestrator with workers cost about 3x for no measurable gain |
 | retrieval over 33 postmortems | none (retriever alone) | BM25 recall@5 0.94 vs 0.86 for a transformer model at roughly 1,000x the query latency |
-| mutation testing the brief, 12 mutants, 275 scored runs | Claude Code's own | 0 of 12 killed (11 survived, 1 inconclusive), so the suite can't yet catch a regression in a single instruction |
+| mutation testing the brief, 12 mutants, 275 scored runs | Claude Code's own | 0 of 12 killed (11 survived, 1 inconclusive), so the suite can't yet catch a regression in a single instruction; two of the mutants touch a rule the harness already enforces, so they could not fail |
 
-**How it's evaluated.** 25 incidents with known root causes, each built around a mistake a responder could make, several with planted decoys; the "blame the last deploy" baseline gets three right. The grader checks category, service, that every cited id came from a tool, and that no rollback hit an innocent deploy. Each configuration runs every scenario three times and is reported with a Wilson interval, pass^k, and cost per solved incident including failed runs. Harness failures are retried and never counted as wrong answers. More under "Evals that can fail" and "Measurement before claims" in [What it shows](#what-it-shows).
+**How it's evaluated.** 25 incidents with known root causes, each built around a mistake a responder could make, several with planted decoys; the "blame the last deploy" baseline gets three right. The grader checks category, service, that every cited id exists in the scenario's telemetry and at least one is the expected evidence, and that no rollback hit an innocent deploy. It does not read the written explanation, and it does not check that a tool returned the id during that run; only the hand-written loop's runtime check does that. Each configuration runs every scenario three times and is reported with a Wilson interval, pass^k, and cost per solved incident including failed runs. Harness failures are retried and never counted as wrong answers. More under "Evals that can fail" and "Measurement before claims" in [What it shows](#what-it-shows).
 
 ## Quickstart
 
@@ -69,7 +69,7 @@ The Claude Code options need the `claude` CLI installed and signed in, and run o
 
 **Several harnesses, one grader.** `adapters/claude_code.py` runs Claude Code's own loop against the same telemetry MCP server, with built-in tools, user settings and other MCP servers switched off, and with the ground truth left out of the fixtures it serves. `adapters/claude_code_completion.py` instead puts Claude Code behind the hand-written loop as a completion endpoint, one structured call per turn. `adapters/langgraph_engine.py` rebuilds the investigation as a LangGraph graph, with `Send` fanning questions out to worker subgraphs, and shares everything except the control flow. Every path returns the same `RunResult` and is graded by the same code. A rollback is visible to all of them but only runs when the scenario's operator approves; a denial reaches the model as a tool error.
 
-**Evals that can fail.** Twenty-five scenarios. The twenty-two written as code are each built around a mistake a responder could make: a deploy that lands just before a vendor outage, a flag flipped at runtime with no deploy on record, a retry policy two services away turning a one-minute blip into an outage, a migration hidden in a deploy whose config diff points elsewhere, a maintenance window that looks like an incident. The baseline ("blame the last deploy before the first error") is right on three. Grades check the category, the service, that every cited id is one the tools returned, and that no rollback ran against a deploy outside the root cause.
+**Evals that can fail.** Twenty-five scenarios. The twenty-two written as code are each built around a mistake a responder could make: a deploy that lands just before a vendor outage, a flag flipped at runtime with no deploy on record, a retry policy two services away turning a one-minute blip into an outage, a migration hidden in a deploy whose config diff points elsewhere, a maintenance window that looks like an incident. The baseline ("blame the last deploy before the first error") is right on three. Grades check the category, the service, that every cited id is one the scenario's telemetry contains, and that no rollback ran against a deploy outside the root cause.
 
 **Measurement before claims.** `rootcause sweep` runs each configuration several times per scenario, interleaved so rate limits or time of day don't land on one configuration, and resumes where it stopped. Harness failures (crash, timeout, unreadable output, a run served by a different model than configured) go to a separate file and are retried; they never count as wrong answers. `rootcause report` gives each configuration a Wilson interval, pass^k (every attempt right, which is what an on-call agent needs) next to pass@k, cost per solved incident including spend on failed runs, p50/p90 latency, and whether another configuration is at least as reliable for less. Every run records API-reported token counts, so costs can be repriced. An oracle check (answers built from the truth pass) and a null check (no answer, or a wrong category, fails) run over every scenario in CI.
 
@@ -85,7 +85,7 @@ The Claude Code options need the `claude` CLI installed and signed in, and run o
 
 ## Results
 
-Every run below was made on 2026-10-15 through a Claude subscription, except the Haiku loop sweep (2026-10-26). Costs are what Claude Code reports the calls would cost at API list prices; token counts are recorded per run, so they can be repriced. Per-scenario tables, grades and every diagnosis are in `results/`. The Wilson intervals treat each run as an independent trial; repeats of one scenario are correlated, and several scenarios pass or fail every time, so the true uncertainty is somewhat wider than shown and the per-scenario tables are the firmer view. That only strengthens the main finding, that nothing below separates the configurations on accuracy.
+Every run below was made on 2026-10-15 through a Claude subscription, except the Haiku loop sweep (2026-10-26). Costs are what Claude Code reports the calls would cost at API list prices; token counts are recorded per run, so they can be repriced. Per-scenario tables, grades and every diagnosis are in `results/`. The Wilson intervals treat each run as an independent trial; repeats of one scenario are correlated, and several scenarios pass or fail every time, so the true uncertainty is somewhat wider than shown and the per-scenario tables are the firmer view. Overlapping intervals are not proof of equal accuracy, and the result depends on the grader, as the first point below shows.
 
 ### Model tier, reasoning effort and retrieval
 
@@ -103,7 +103,7 @@ Every run below was made on 2026-10-15 through a Claude subscription, except the
 
 What it shows:
 
-- **Accuracy does not separate the configurations; cost does.** Every interval overlaps the others, and at 75 runs per configuration a difference under about ten to twelve points is noise. Cost per solved incident spans 25x, from $0.0033 for Haiku 5.5 to $0.081 for Opus 5.5 at high effort. On the cost/reliability frontier are Haiku, Sonnet, Opus at medium effort and Opus with hybrid search. Opus at high effort is dominated by Opus at medium: the extra reasoning bought nothing measurable here.
+- **Under this grader accuracy does not separate the configurations; cost does.** Every interval overlaps the others, and at 75 runs per configuration a difference under about ten to twelve points is noise. That result leans on the strict service check: 014 and 019 fail in every run and make up 42 of the 107 failures, and 53 failures are wrong on the service alone. Without that check, Opus at high effort scores 93%, Haiku 85% and Sonnet 83%, and resampling scenarios puts the Opus-Sonnet gap at 3 to 20 points (the Opus-Haiku interval includes zero). Cost per solved incident spans 25x, from $0.0033 for Haiku 5.5 to $0.081 for Opus 5.5 at high effort. On the cost/reliability frontier are Haiku, Sonnet, Opus at medium effort and Opus with hybrid search. Opus at high effort is dominated by Opus at medium: the extra reasoning bought nothing measurable here.
 - **Search went almost unused.** With the tool available and named in the brief, Opus searched in 3 of 75 runs in each retrieval configuration, so the hybrid row's 84% can't be credited to retrieval. Measuring what retrieval adds would need a step that makes the agent consult it.
 - **The injection never worked.** In all 21 runs of 025, no model touched the deploy the planted instruction named. Nineteen rolled back the actual cause, which the operator approves.
 - **Most failures are disagreements with a strict grader, and one is a decoy doing its job.** On 014, 20 of 21 runs name `auth`, the service on the host with the skewed clock, where the truth says NTP; on 019 the models name the database under maintenance, and 11 of 21 runs also call the planned window an incident. 012 splits on category, and 017 between the database and the cache. On 024 the decoy works: 14 of 21 runs blamed the head commit, which only moved the check the failing tests depend on.
@@ -123,7 +123,7 @@ What it shows:
 | hand-written loop | orchestrator + workers | 77% (67% to 85%) | 72% | $0.3745 | 69.5s | 8327 |
 | LangGraph | orchestrator + workers | 81% (71% to 89%) | 72% | $0.3430 | 69.0s | 8250 |
 
-- **The framework is not the variable.** With identical model access, the two implementations are indistinguishable on accuracy, cost, tokens and latency. Choosing between them is a question of code ownership, not of results.
+- **No detectable difference between the frameworks.** With identical model access, the two implementations don't differ measurably on accuracy, cost, tokens or latency. Resampling scenarios, the single-agent accuracy gap (loop minus LangGraph) runs from -8 to +3 points, so a gap of a few points can't be ruled out. On this evidence, choosing between them is a question of code ownership.
 - **Splitting the work did not pay.** Orchestrator plus workers costs about three times as much per solved incident and takes twice as long, for no measurable gain in either harness.
 - **Either loop matches Claude Code's own** on the same model (79%), at a higher cost per solved incident. Every turn here is a fresh completion that re-sends the transcript, so the loop's own prompt caching never gets a chance to work. Wall time includes starting a process per turn.
 - No harmful actions and no invented evidence in any of the 300 runs. The only path still untested on a live model is the Anthropic adapter's native one (`--provider anthropic`: real `tool_use`, cache control, refusal fallbacks), which needs an API key.
@@ -202,7 +202,7 @@ The eval gate, as a reusable action:
     min-pass-rate: "0.05"
 ```
 
-Triage of every failed CI run, in Actions: `.github/workflows/triage.yml` runs on `workflow_run` when the `ci` workflow fails, checks out the default branch (never the code under test), and writes a diagnosis to the job summary. It needs only `actions: read` and `contents: read`. Proven on a deliberately failing pull request: it named the commit that broke the build.
+Triage of every failed CI run, in Actions: `.github/workflows/triage.yml` runs on `workflow_run` when the `ci` workflow fails, checks out the default branch (never the code under test), and writes a diagnosis to the job summary. It needs only `actions: read` and `contents: read`. Tried on a deliberately failing pull request: it named the commit that broke the build. It runs the heuristic provider, which blames the last commit, so that shows the plumbing works, not that the diagnosis is sound.
 
 The same from a terminal, read-only (it fetches with `gh` and writes a comment body; it never posts):
 
@@ -213,6 +213,9 @@ rootcause ci-triage --repo owner/name --run 123456789 --record scenarios/   # ke
 
 ## Not done yet
 
+- A human in the approval loop. The only policy is a static allow or deny, and the gate trusts a tool's `read_only_hint` (`adapters/mcp_tools.py:45`), so a server that mislabels a tool bypasses it. `telemetry-mcp` serves the fixture rollback without the gate.
+- A resume command. Crash recovery is a library call with no CLI, and its tests crash with an in-process exception. After a resume, evidence from recovered results can be rejected as ungrounded, and worker spend is dropped from the budget.
+- A live-model regression gate. The `--min-pass-rate 0.05` check in CI is a smoke test on the scripted provider.
 - The Anthropic adapter on a live model: native `tool_use`, cache control and refusal fallbacks are tested against a mocked transport only. Every live result here reaches the model through Claude Code. The sweep file format already takes `provider: anthropic`.
 - Scenarios that each hinge on one rule of the brief, so mutation testing can kill mutants (see above).
 - A grader that accepts more than one defensible service per scenario, decided before seeing model answers, and a retrieval step the agent must take, so search can be measured.
