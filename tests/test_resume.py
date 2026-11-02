@@ -9,6 +9,7 @@ from conftest import Scripted, call, make_loop
 
 from rootcause.adapters.sqlite_events import SqliteEventLog
 from rootcause.application.investigator import investigator_spec
+from rootcause.application.orchestrator import DispatchWorkers, orchestrator_spec
 from rootcause.application.ports import ToolResult
 from rootcause.domain.answers import Outcome
 
@@ -33,6 +34,7 @@ class CountingTool:
     idempotent: bool = True
     crash_after_effect: bool = False
     calls: int = 0
+    text: str = "ok"
 
     @property
     def definition(self) -> dict[str, Any]:
@@ -42,7 +44,7 @@ class CountingTool:
         self.calls += 1
         if self.crash_after_effect and self.calls == 1:
             raise Crash
-        return ToolResult(f"{self.name} ok")
+        return ToolResult(f"{self.name} {self.text}")
 
 
 def spec():
@@ -146,6 +148,61 @@ async def test_resumed_run_counts_what_was_already_spent():
     assert len(second.seen) == 1
 
 
+async def test_evidence_from_a_recovered_result_is_grounded():
+    """The crash lands before the turn's results reach the transcript, so the logged
+    result is the only record of what the model may cite."""
+    events = SqliteEventLog()
+    logs = CountingTool("query_logs", text="saw d-1042")
+    page = CountingTool("page_oncall", read_only=False, idempotent=False, crash_after_effect=True)
+    grounded = investigator_spec(max_steps=10)
+    first = Scripted([{"content": [call("query_logs", {}, "a"), call("page_oncall", {}, "b")]}])
+    with pytest.raises(Crash):
+        await make_loop(first, approve=True, events=events).run(
+            grounded, "ALERT", [logs, page], scenario_id="s"
+        )
+    (run_id,) = _run_ids(events)
+
+    second = Scripted([{"content": [call("submit_diagnosis", DIAGNOSIS, "c")]}])
+    result = await make_loop(second, approve=True, events=events).resume(
+        run_id, grounded, [logs, page]
+    )
+    assert result.outcome is Outcome.ANSWERED
+    assert result.answer is not None and result.answer.evidence == ["d-1042"]
+
+
+FINDINGS = {"summary": "x", "evidence": [], "suspected_service": "x", "confidence": 0.5}
+PRICEY = {"input_tokens": 0, "output_tokens": 40_000}  # $0.80 on Opus 5.5
+
+
+@pytest.mark.parametrize(
+    "worker_turn",
+    [
+        pytest.param(call("submit_findings", FINDINGS, "w"), id="finished-worker"),
+        pytest.param(call("list_deploys", {}, "w"), id="worker-killed-before-its-outcome"),
+    ],
+)
+async def test_resumed_budget_counts_worker_spend(worker_turn):
+    events = SqliteEventLog()
+    deploys = CountingTool("list_deploys")
+    dispatch = call("dispatch_workers", {"tasks": [{"role": "changes", "question": "q"}]}, "d")
+    first = Scripted(
+        [{"content": [dispatch]}, {"content": [worker_turn], "usage": PRICEY}, Crash()]
+    )
+    loop = make_loop(first, events=events, budget=1.0)
+    tools = [deploys, DispatchWorkers(loop, [deploys], scenario_id="s")]
+    with pytest.raises(Crash):
+        await loop.run(orchestrator_spec(), "A", tools, scenario_id="s")
+    (run_id, _worker) = _run_ids(events)
+
+    second = Scripted([{"content": [call("submit_diagnosis", DIAGNOSIS, "x")]}])
+    again = make_loop(second, events=events, budget=0.5)
+    tools = [deploys, DispatchWorkers(again, [deploys], scenario_id="s")]
+    result = await again.resume(run_id, orchestrator_spec(), tools)
+    assert result.outcome is Outcome.BUDGET_EXCEEDED
+    assert again.budget.spent_usd > 0.8
+    assert second.seen == []
+
+
 async def test_a_finished_run_cannot_be_resumed():
     events = SqliteEventLog()
     done = Scripted([{"content": [call("submit_diagnosis", DIAGNOSIS, "a")]}])
@@ -155,4 +212,4 @@ async def test_a_finished_run_cannot_be_resumed():
 
 
 def _run_ids(events: SqliteEventLog) -> list[str]:
-    return [row[0] for row in events.db.execute("select run_id from runs").fetchall()]
+    return [row[0] for row in events.db.execute("select run_id from runs order by run_id")]

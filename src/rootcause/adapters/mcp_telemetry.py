@@ -1,10 +1,11 @@
 """MCP server exposing one scenario's telemetry as tools.
 
-The annotations matter: the agent loop reads them to decide which calls are
-safe to retry and which need a human. They are hints from the server, so the
-loop gates anything not explicitly read-only.
+The annotations are for other MCP clients. The loop gates on `READ_ONLY_TOOLS`,
+which `telemetry_tools` supplies, since a server's hints can't be what a gate rests
+on. Over stdio there is no gate of ours at all, so rollback stays off unless asked for.
 """
 
+from contextlib import AbstractAsyncContextManager
 from datetime import datetime
 
 from mcp.server import MCPServer
@@ -12,6 +13,7 @@ from mcp.server.mcpserver.exceptions import ToolError
 from mcp.types import ToolAnnotations
 from pydantic import BaseModel
 
+from rootcause.adapters.mcp_tools import McpTool, mcp_tools
 from rootcause.application.investigator import SEARCH_POSTMORTEMS
 from rootcause.application.ports import Retriever
 from rootcause.domain.postmortems import Hit
@@ -30,6 +32,17 @@ READ_ONLY = ToolAnnotations(read_only_hint=True, idempotent_hint=True, open_worl
 DESTRUCTIVE = ToolAnnotations(
     read_only_hint=False, destructive_hint=True, idempotent_hint=True, open_world_hint=False
 )
+READ_ONLY_TOOLS = frozenset(
+    {
+        "query_logs",
+        "query_metrics",
+        "search_traces",
+        "get_trace",
+        "list_deploys",
+        "diff_config",
+        SEARCH_POSTMORTEMS,
+    }
+)
 
 
 class RollbackResult(BaseModel):
@@ -38,7 +51,9 @@ class RollbackResult(BaseModel):
     already_rolled_back: bool
 
 
-def build_telemetry_server(store: TelemetryStore, retriever: Retriever | None = None) -> MCPServer:
+def build_telemetry_server(
+    store: TelemetryStore, retriever: Retriever | None = None, *, rollback: bool = True
+) -> MCPServer:
     mcp = MCPServer("rootcause-telemetry")
 
     def require_deploy(deploy_id: str) -> None:
@@ -94,15 +109,17 @@ def build_telemetry_server(store: TelemetryStore, retriever: Retriever | None = 
         require_deploy(deploy_id)
         return store.diff_config(deploy_id)
 
-    @mcp.tool(annotations=DESTRUCTIVE)
-    def rollback_deploy(deploy_id: str, reason: str) -> RollbackResult:
-        """Roll a deploy back to the previous version. This changes production and
-        requires operator approval. Calling it twice for the same deploy is a no-op."""
-        require_deploy(deploy_id)
-        action_id, created = store.rollback(deploy_id)
-        return RollbackResult(
-            action_id=action_id, deploy_id=deploy_id, already_rolled_back=not created
-        )
+    if rollback:
+
+        @mcp.tool(annotations=DESTRUCTIVE)
+        def rollback_deploy(deploy_id: str, reason: str) -> RollbackResult:
+            """Roll a deploy back to the previous version. This changes production and
+            requires operator approval. Calling it twice for the same deploy is a no-op."""
+            require_deploy(deploy_id)
+            action_id, created = store.rollback(deploy_id)
+            return RollbackResult(
+                action_id=action_id, deploy_id=deploy_id, already_rolled_back=not created
+            )
 
     if retriever is not None:
 
@@ -114,3 +131,10 @@ def build_telemetry_server(store: TelemetryStore, retriever: Retriever | None = 
             return retriever.search(query, min(k, 10))
 
     return mcp
+
+
+def telemetry_tools(
+    store: TelemetryStore, retriever: Retriever | None = None
+) -> AbstractAsyncContextManager[list[McpTool]]:
+    """Our own server, in process, with its read tools vouched for and rollback gated."""
+    return mcp_tools(build_telemetry_server(store, retriever), read_only=READ_ONLY_TOOLS)
