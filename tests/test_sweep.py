@@ -270,4 +270,4 @@ def test_report_svg_draws_one_labelled_point_per_config_and_lists_unsolved_ones(
     points = root.findall(f"{ns}g")
     assert [g.get("data-config") for g in points] == ["a<b", "cheap"]
     assert all(len(g.findall(f"{ns}circle")) == 1 for g in points)
-    assert "no solved incidents: none" in ElementTree.tostring(root, encoding="unicode")
+    assert "log scale: none" in ElementTree.tostring(root, encoding="unicode")
