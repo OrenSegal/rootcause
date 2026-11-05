@@ -28,6 +28,15 @@ def test_investigate_json_and_exit_code(scenario_dir, tmp_path):
     assert payload["result"]["answer"]["category"] == "config_change"
 
 
+def test_investigate_prints_why_a_run_errored(scenario_dir, tmp_path, monkeypatch):
+    for var in ("ANTHROPIC_API_KEY", "ANTHROPIC_AUTH_TOKEN"):
+        monkeypatch.delenv(var, raising=False)
+    args = ["investigate", str(scenario_dir), "--provider", "anthropic"]
+    out = runner.invoke(app, [*args, "--runlog", str(tmp_path / "r.sqlite")])
+    assert out.exit_code == 1, out.output
+    assert "note: model call failed" in out.output
+
+
 def test_eval_gate_writes_summary_and_fails_below_threshold(scenario_dir, tmp_path):
     summary = tmp_path / "summary.md"
     report = tmp_path / "report.json"
