@@ -2,7 +2,9 @@
 
 [![CI](https://github.com/OrenSegal/rootcause/actions/workflows/ci.yml/badge.svg)](https://github.com/OrenSegal/rootcause/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/license-MIT-black)](LICENSE)
 
-An agent that investigates incidents and failed CI runs, written to show how agents work underneath the frameworks: a hand-written loop, tools served over MCP, an approval gate, an append-only event log for crash recovery, an orchestrator with workers, retrieval over past postmortems, OpenTelemetry traces, and evals scored against known root causes, run repeatedly and reported with intervals and cost.
+When an alert fires or CI goes red, someone has to find the cause in logs, metrics, traces and the deploy history. rootcause is an agent that does that and returns a structured diagnosis, plus a harness that measures how often it is right: 25 incidents with known root causes, scored over repeated runs. Across 525 runs of seven model settings, 77% to 84% of runs passed with overlapping intervals, while cost per solved incident varied 25x.
+
+It is written to show how agents work underneath the frameworks: a hand-written loop, tools served over MCP, an approval gate, an append-only event log for crash recovery, an orchestrator with workers, retrieval over past postmortems, OpenTelemetry traces, and evals scored against known root causes, run repeatedly and reported with intervals and cost.
 
 It runs three ways: as a CLI with exit codes for CI, as an MCP server a coding agent can call, and as a GitHub Action.
 
@@ -24,6 +26,7 @@ Two different agent loops were measured. In the 525-run sweep, Claude Code's own
 ```bash
 uv sync                                                   # core only; extras below
 uv run rootcause eval --min-pass-rate 0.05                # every scenario, no API key needed
+# expect mostly failures: this is the scripted baseline (blame the last deploy), 3 of 25 right
 uv run rootcause investigate scenarios/007-inventory-timeout-cascade
 ```
 
