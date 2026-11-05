@@ -1,0 +1,13 @@
+{"id":"log-0001","ts":"2026-10-14T13:00:00Z","service":"cart","level":"info","message":"POST /cart/items 200 in 30ms","trace_id":null}
+{"id":"log-0002","ts":"2026-10-14T13:03:00Z","service":"cart","level":"info","message":"POST /cart/items 200 in 30ms","trace_id":null}
+{"id":"log-0003","ts":"2026-10-14T13:06:00Z","service":"cart","level":"info","message":"POST /cart/items 200 in 30ms","trace_id":null}
+{"id":"log-0004","ts":"2026-10-14T13:09:00Z","service":"cart","level":"info","message":"POST /cart/items 200 in 30ms","trace_id":null}
+{"id":"log-0005","ts":"2026-10-14T13:12:00Z","service":"cart","level":"info","message":"POST /cart/items 200 in 30ms","trace_id":null}
+{"id":"log-0006","ts":"2026-10-14T13:15:00Z","service":"cart","level":"info","message":"POST /cart/items 200 in 30ms","trace_id":null}
+{"id":"log-0007","ts":"2026-10-14T13:18:18Z","service":"cart","level":"info","message":"starting cart 5.1.0","trace_id":null}
+{"id":"log-0008","ts":"2026-10-14T13:18:30Z","service":"cart","level":"error","message":"ArithmeticError: rounding mode NONE is not valid for Decimal (cart/totals.py:77)","trace_id":null}
+{"id":"log-0009","ts":"2026-10-14T13:19:00Z","service":"cart","level":"error","message":"ArithmeticError: rounding mode NONE is not valid for Decimal (cart/totals.py:77)","trace_id":null}
+{"id":"log-0010","ts":"2026-10-14T13:20:00Z","service":"cart","level":"error","message":"ArithmeticError: rounding mode NONE is not valid for Decimal (cart/totals.py:77)","trace_id":null}
+{"id":"log-0011","ts":"2026-10-14T13:21:30Z","service":"cart","level":"error","message":"ArithmeticError: rounding mode NONE is not valid for Decimal (cart/totals.py:77)","trace_id":null}
+{"id":"log-0012","ts":"2026-10-14T13:24:00Z","service":"cart","level":"error","message":"ArithmeticError: rounding mode NONE is not valid for Decimal (cart/totals.py:77)","trace_id":null}
+{"id":"log-0013","ts":"2026-10-14T13:28:00Z","service":"cart","level":"error","message":"ArithmeticError: rounding mode NONE is not valid for Decimal (cart/totals.py:77)","trace_id":null}

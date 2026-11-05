@@ -1,0 +1,17 @@
+{"id":"log-0001","ts":"2026-10-14T13:00:00Z","service":"orders","level":"info","message":"order written in 14ms","trace_id":null}
+{"id":"log-0002","ts":"2026-10-14T13:03:00Z","service":"orders","level":"info","message":"order written in 14ms","trace_id":null}
+{"id":"log-0003","ts":"2026-10-14T13:06:00Z","service":"orders","level":"info","message":"order written in 14ms","trace_id":null}
+{"id":"log-0004","ts":"2026-10-14T13:09:00Z","service":"orders","level":"info","message":"order written in 14ms","trace_id":null}
+{"id":"log-0005","ts":"2026-10-14T13:12:00Z","service":"orders","level":"info","message":"order written in 14ms","trace_id":null}
+{"id":"log-0006","ts":"2026-10-14T13:15:00Z","service":"orders","level":"info","message":"order written in 14ms","trace_id":null}
+{"id":"log-0007","ts":"2026-10-14T13:18:00Z","service":"orders","level":"info","message":"order written in 14ms","trace_id":null}
+{"id":"log-0008","ts":"2026-10-14T13:19:12Z","service":"orders","level":"info","message":"starting orders 2.1.0 (pg client 5.0.0)","trace_id":null}
+{"id":"log-0009","ts":"2026-10-14T13:19:24Z","service":"orders","level":"error","message":"insert failed: pq: unsupported frontend protocol 3.2 requested by client 5.0.0 (server pg-1 supports 3.0)","trace_id":null}
+{"id":"log-0010","ts":"2026-10-14T13:19:48Z","service":"orders","level":"error","message":"insert failed: pq: unsupported frontend protocol 3.2 requested by client 5.0.0 (server pg-1 supports 3.0)","trace_id":null}
+{"id":"log-0011","ts":"2026-10-14T13:20:30Z","service":"orders","level":"error","message":"insert failed: pq: unsupported frontend protocol 3.2 requested by client 5.0.0 (server pg-1 supports 3.0)","trace_id":null}
+{"id":"log-0012","ts":"2026-10-14T13:21:00Z","service":"orders","level":"error","message":"insert failed: pq: unsupported frontend protocol 3.2 requested by client 5.0.0 (server pg-1 supports 3.0)","trace_id":null}
+{"id":"log-0017","ts":"2026-10-14T13:21:48Z","service":"orders","level":"info","message":"starting orders 2.1.1 (pool max=5)","trace_id":null}
+{"id":"log-0013","ts":"2026-10-14T13:22:00Z","service":"orders","level":"error","message":"insert failed: pq: unsupported frontend protocol 3.2 requested by client 5.0.0 (server pg-1 supports 3.0)","trace_id":null}
+{"id":"log-0014","ts":"2026-10-14T13:23:30Z","service":"orders","level":"error","message":"insert failed: pq: unsupported frontend protocol 3.2 requested by client 5.0.0 (server pg-1 supports 3.0)","trace_id":null}
+{"id":"log-0015","ts":"2026-10-14T13:26:00Z","service":"orders","level":"error","message":"insert failed: pq: unsupported frontend protocol 3.2 requested by client 5.0.0 (server pg-1 supports 3.0)","trace_id":null}
+{"id":"log-0016","ts":"2026-10-14T13:30:00Z","service":"orders","level":"error","message":"insert failed: pq: unsupported frontend protocol 3.2 requested by client 5.0.0 (server pg-1 supports 3.0)","trace_id":null}

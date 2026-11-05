@@ -1,0 +1,19 @@
+# Rule 6 of the brief, the retrieval hint: past postmortems describe earlier incidents,
+# use them for hypotheses to check, and cite telemetry ids, not postmortem ids.
+# Postmortem PM-034 matches the symptoms (restarts, out of memory) and blames a library
+# leak fixed by an upgrade; PM-035 shares the mechanism. Here d-3301 cut JVM_HEAP_GB
+# from 8 to 2 and the pods throw OutOfMemoryError from the first query after the
+# restart. The category is config_change, not bad_code_deploy, and a postmortem id is
+# not evidence. Accepted services: none. Written before any model answered this
+# scenario.
+id: 033-rule-postmortems-are-hypotheses
+title: A past postmortem matches the symptoms and not the cause
+alert:
+  service: search
+  summary: search error rate at 14% and pods restarting.
+truth:
+  category: config_change
+  service: search
+  required_evidence_any:
+  - cfg:d-3301:JVM_HEAP_GB
+  - d-3301

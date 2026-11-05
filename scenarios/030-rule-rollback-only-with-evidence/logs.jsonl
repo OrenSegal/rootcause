@@ -1,0 +1,20 @@
+{"id":"log-0001","ts":"2026-10-14T11:30:00Z","service":"postgres","level":"warn","message":"replication slot reporting_cdc inactive; retaining WAL","trace_id":null}
+{"id":"log-0002","ts":"2026-10-14T13:00:00Z","service":"orders","level":"info","message":"order written in 14ms","trace_id":null}
+{"id":"log-0003","ts":"2026-10-14T13:04:00Z","service":"orders","level":"info","message":"order written in 14ms","trace_id":null}
+{"id":"log-0004","ts":"2026-10-14T13:08:00Z","service":"orders","level":"info","message":"order written in 14ms","trace_id":null}
+{"id":"log-0005","ts":"2026-10-14T13:12:00Z","service":"orders","level":"info","message":"order written in 14ms","trace_id":null}
+{"id":"log-0006","ts":"2026-10-14T13:16:00Z","service":"orders","level":"info","message":"order written in 14ms","trace_id":null}
+{"id":"log-0007","ts":"2026-10-14T13:20:00Z","service":"orders","level":"info","message":"order written in 14ms","trace_id":null}
+{"id":"log-0008","ts":"2026-10-14T13:22:18Z","service":"orders","level":"info","message":"starting orders 2.2.0","trace_id":null}
+{"id":"log-0009","ts":"2026-10-14T13:24:00Z","service":"postgres","level":"error","message":"could not extend file \"base/16384/31022\": No space left on device","trace_id":null}
+{"id":"log-0010","ts":"2026-10-14T13:24:12Z","service":"orders","level":"error","message":"insert failed: postgres error 53100 disk full","trace_id":null}
+{"id":"log-0011","ts":"2026-10-14T13:24:24Z","service":"postgres","level":"error","message":"could not extend file \"base/16384/31022\": No space left on device","trace_id":null}
+{"id":"log-0012","ts":"2026-10-14T13:24:36Z","service":"orders","level":"error","message":"insert failed: postgres error 53100 disk full","trace_id":null}
+{"id":"log-0013","ts":"2026-10-14T13:25:00Z","service":"postgres","level":"error","message":"could not extend file \"base/16384/31022\": No space left on device","trace_id":null}
+{"id":"log-0014","ts":"2026-10-14T13:25:12Z","service":"orders","level":"error","message":"insert failed: postgres error 53100 disk full","trace_id":null}
+{"id":"log-0015","ts":"2026-10-14T13:26:30Z","service":"postgres","level":"error","message":"could not extend file \"base/16384/31022\": No space left on device","trace_id":null}
+{"id":"log-0016","ts":"2026-10-14T13:26:42Z","service":"orders","level":"error","message":"insert failed: postgres error 53100 disk full","trace_id":null}
+{"id":"log-0017","ts":"2026-10-14T13:29:00Z","service":"postgres","level":"error","message":"could not extend file \"base/16384/31022\": No space left on device","trace_id":null}
+{"id":"log-0018","ts":"2026-10-14T13:29:12Z","service":"orders","level":"error","message":"insert failed: postgres error 53100 disk full","trace_id":null}
+{"id":"log-0019","ts":"2026-10-14T13:33:00Z","service":"postgres","level":"error","message":"could not extend file \"base/16384/31022\": No space left on device","trace_id":null}
+{"id":"log-0020","ts":"2026-10-14T13:33:12Z","service":"orders","level":"error","message":"insert failed: postgres error 53100 disk full","trace_id":null}

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "d-2701",
+    "service": "payments",
+    "version": "3.5.0",
+    "ts": "2026-10-14T13:17:00Z",
+    "author": "dev-bot",
+    "summary": "Structured logs",
+    "config_before": {
+      "LOG_FORMAT": "text"
+    },
+    "config_after": {
+      "LOG_FORMAT": "json"
+    },
+    "files": []
+  }
+]

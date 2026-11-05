@@ -1,0 +1,13 @@
+[
+  {
+    "id": "d-2901",
+    "service": "payments",
+    "version": "3.6.0",
+    "ts": "2026-10-14T13:15:00Z",
+    "author": "maya",
+    "summary": "Rewrite card capture path",
+    "config_before": {},
+    "config_after": {},
+    "files": []
+  }
+]
