@@ -1,0 +1,18 @@
+# Rule 2 of the brief, second sentence: check what changed, and when, relative to the
+# first errors. d-2801 (a client-library upgrade, no config) landed at 13:19 and the
+# errors begin at 13:19:24; d-2802 cut DB_POOL_MAX from 50 to 5 at 13:21:30, after the
+# errors, and the error text names the protocol the new client speaks. Both deploys are
+# orders deploys, so the service check cannot tell them apart; the category
+# (bad_code_deploy, not config_change) and the cited deploy can. Accepted services:
+# none. Written before any model answered this scenario.
+id: 028-rule-check-what-changed-when
+title: The scary config diff landed after the errors began
+alert:
+  service: orders
+  summary: 'orders error rate at 35%: order writes failing.'
+truth:
+  category: bad_code_deploy
+  service: orders
+  required_evidence_any:
+  - d-2801
+  - log-0009

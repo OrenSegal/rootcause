@@ -1,0 +1,17 @@
+[
+  {
+    "id": "d-3201",
+    "service": "alerting",
+    "version": "1.4.0",
+    "ts": "2026-10-14T13:05:00Z",
+    "author": "sre-bot",
+    "summary": "Tighten checkout SLO alert",
+    "config_before": {
+      "CHECKOUT_ERROR_RATE_THRESHOLD": "0.05"
+    },
+    "config_after": {
+      "CHECKOUT_ERROR_RATE_THRESHOLD": "0.005"
+    },
+    "files": []
+  }
+]

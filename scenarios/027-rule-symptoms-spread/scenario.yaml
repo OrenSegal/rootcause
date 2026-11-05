@@ -1,0 +1,21 @@
+# Rule 2 of the brief, first sentence: symptoms spread, the paging service is not always
+# the cause. Payments deployed a logging change just before the errors and its logs show
+# a recovered panic in LedgerClient, so a timeline check alone points at payments. The
+# panic is a reaction to ledger's 500s, and ledger is failing because ledger-db has no
+# connection slots left. Accepted services: ledger (the dependency that failed) as well
+# as ledger-db (the exhausted resource); payments is not. Written before any model
+# answered this scenario.
+id: 027-rule-symptoms-spread
+title: Paging service looks guilty; its dependency's database is out of connections
+alert:
+  service: payments
+  summary: payment error rate at 28%; LedgerClient panics.
+truth:
+  category: resource_exhaustion
+  service: ledger-db
+  accepted_services:
+  - ledger
+  required_evidence_any:
+  - log-0014
+  - m-ledgerdb-conns
+  - log-0015

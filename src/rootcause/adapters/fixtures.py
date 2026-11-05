@@ -2,6 +2,7 @@
 `load_case`, and the only place the on-disk format is written."""
 
 import json
+import textwrap
 from pathlib import Path
 
 import yaml
@@ -53,7 +54,7 @@ def write_case(case: Case, out: Path, *, scenario_file: bool = True, note: str =
     out.mkdir(parents=True, exist_ok=True)
     if scenario_file:
         scenario = case.scenario.model_dump(mode="json", exclude_defaults=True)
-        header = "".join(f"# {line}".rstrip() + "\n" for line in note.splitlines())
+        header = "".join(f"# {line}\n" for line in textwrap.wrap(note, 86))
         (out / SCENARIO_FILE).write_text(
             header + yaml.safe_dump(scenario, sort_keys=False, width=88)
         )
