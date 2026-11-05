@@ -218,7 +218,7 @@ rootcause ci-triage --repo owner/name --run 123456789 --provider anthropic --com
 rootcause ci-triage --repo owner/name --run 123456789 --record scenarios/   # keep it as a new scenario
 ```
 
-An example comment body, produced offline from a recorded run by the heuristic provider (whose diagnosis there is wrong, as the file notes), is in [docs/examples/ci-triage-008-sous-shellcheck.md](docs/examples/ci-triage-008-sous-shellcheck.md).
+Example comment bodies, produced offline from recorded runs by the heuristic provider: [one it gets right](docs/examples/ci-triage-023-sous-readme-table.md) and [one where it falls for a planted decoy](docs/examples/ci-triage-008-sous-shellcheck.md).
 
 ## Not done yet
 

@@ -217,7 +217,8 @@ def report_markdown(
 def report_svg(spec: SweepSpec, summaries: Sequence[ConfigSummary]) -> str:
     """Cost per solved incident (log x) against pass rate with its Wilson interval (y),
     one labelled point per configuration. Hollow points are dominated. A configuration
-    that solved nothing has no cost per solved incident and is listed under the chart."""
+    that solved nothing, or cost nothing, has no point on a log scale and is listed under
+    the chart."""
     plotted = [(s, s.cost_per_pass) for s in summaries if s.cost_per_pass]
     missing = [escape(s.name) for s in summaries if not s.cost_per_pass]
     left, top, pw, ph = 60, 50, 440, 300
@@ -295,7 +296,8 @@ def report_svg(spec: SweepSpec, summaries: Sequence[ConfigSummary]) -> str:
     )
     if missing:
         out.append(
-            f'<text x="{left}" y="{foot + 16}" {font}>Not plotted, no solved incidents: '
+            f'<text x="{left}" y="{foot + 16}" {font}>'
+            "Not plotted, no cost per solved incident to place on a log scale: "
             f"{', '.join(missing)}</text>"
         )
     return "\n".join(out) + "\n</svg>\n"

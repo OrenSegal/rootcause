@@ -100,5 +100,5 @@
 <text x="512" y="277.3" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">invert-rule-0 72%, $0.0928</text>
 </g>
 <text x="60" y="388" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">cost per solved incident (log scale, includes spend on failed runs). Filled: on the frontier. Hollow: dominated.</text>
-<text x="60" y="404" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">Not plotted, no solved incidents: delete-body-0</text>
+<text x="60" y="404" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">Not plotted, no cost per solved incident to place on a log scale: delete-body-0</text>
 </svg>
