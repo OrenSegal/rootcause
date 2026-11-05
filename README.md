@@ -4,6 +4,10 @@
 
 When an alert fires or CI goes red, someone has to find the cause in logs, metrics, traces and the deploy history. rootcause is an agent that does that and returns a structured diagnosis, plus a harness that measures how often it is right: 25 incidents with known root causes, scored over repeated runs. Across 525 runs of seven model settings, 77% to 84% of runs passed with overlapping intervals, while cost per solved incident varied 25x.
 
+![Pass rate with 95% Wilson interval against cost per solved incident, log scale, one point per model setting](results/sweeps/models-and-retrieval-2026-10-15/report.svg)
+
+Pass rate with its 95% Wilson interval against cost per solved incident (log scale) for the seven settings of the 525-run sweep, drawn by `rootcause report` from the committed rows.
+
 It is written to show how agents work underneath the frameworks: a hand-written loop, tools served over MCP, an approval gate, an append-only event log for crash recovery, an orchestrator with workers, retrieval over past postmortems, OpenTelemetry traces, and evals scored against known root causes, run repeatedly and reported with intervals and cost.
 
 It runs three ways: as a CLI with exit codes for CI, as an MCP server a coding agent can call, and as a GitHub Action.
@@ -84,7 +88,7 @@ The Claude Code options need the `claude` CLI installed and signed in, and run o
 
 **Retrieval as a tool, measured on its own.** With `--retrieval`, the telemetry server also offers `search_postmortems` over a corpus of 33 past incident write-ups (`corpus/`), labelled per scenario with the postmortems that share its mechanism; some others share only its symptoms. Four retrievers, cheapest first: BM25 written out in `adapters/retrieval.py`, static embeddings (model2vec), a small transformer embedding model run locally (fastembed), and a reciprocal-rank-fusion hybrid. `rootcause retrieval-eval` scores them on recall@k, MRR and nDCG@5 with index and query latency, separately from any agent; the sweep then measures whether search changes the end result and how often the agent actually uses it.
 
-**Traces.** `--trace console|otlp` emits OpenTelemetry spans named after the GenAI semantic conventions: `invoke_agent` per run, `chat` per model call with token usage, `execute_tool` per call with its gate and approval. The Anthropic and MCP SDKs' own spans nest inside them, so one trace shows the agent's decisions, the model requests and the tool transport. Claude Code runs are traced from their stream after the fact and marked as reconstructed.
+**Traces.** `--trace console|otlp` emits OpenTelemetry spans named after the GenAI semantic conventions: `invoke_agent` per run, `chat` per model call with token usage, `execute_tool` per call with its gate and approval. The Anthropic and MCP SDKs' own spans nest inside them, so one trace shows the agent's decisions, the model requests and the tool transport. Claude Code runs are traced from their stream after the fact and marked as reconstructed. A trimmed console-exporter trace from a local run is in [docs/examples/otel-trace-025-log-injection.txt](docs/examples/otel-trace-025-log-injection.txt).
 
 ## Results
 
@@ -213,6 +217,8 @@ The same from a terminal, read-only (it fetches with `gh` and writes a comment b
 rootcause ci-triage --repo owner/name --run 123456789 --provider anthropic --comment-md comment.md
 rootcause ci-triage --repo owner/name --run 123456789 --record scenarios/   # keep it as a new scenario
 ```
+
+An example comment body, produced offline from a recorded run by the heuristic provider (whose diagnosis there is wrong, as the file notes), is in [docs/examples/ci-triage-008-sous-shellcheck.md](docs/examples/ci-triage-008-sous-shellcheck.md).
 
 ## Not done yet
 
