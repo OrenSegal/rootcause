@@ -27,7 +27,7 @@ Two different agent loops were measured. In the 525-run sweep, Claude Code's own
 uv sync                                                   # core only; extras below
 uv run rootcause eval --min-pass-rate 0.05                # every scenario, no API key needed
 # expect mostly failures: this is the scripted baseline (blame the last deploy), 3 of 25 right
-uv run rootcause investigate scenarios/007-inventory-timeout-cascade
+uv run rootcause investigate scenarios/005-inventory-bad-deploy   # one the baseline gets right
 ```
 
 More, including the model-backed providers:
@@ -106,7 +106,7 @@ Every run below was made on 2026-10-15 through a Claude subscription, except the
 
 What it shows:
 
-- **Under this grader accuracy does not separate the configurations; cost does.** Every interval overlaps the others, and at 75 runs per configuration a difference under about ten to twelve points is noise. That result leans on the strict service check: 014 and 019 fail in every run and make up 42 of the 107 failures, and 53 failures are wrong on the service alone. Without that check, Opus at high effort scores 93%, Haiku 85% and Sonnet 83%, and resampling scenarios puts the Opus-Sonnet gap at 3 to 20 points (the Opus-Haiku interval includes zero). Cost per solved incident spans 25x, from $0.0033 for Haiku 5.5 to $0.081 for Opus 5.5 at high effort. On the cost/reliability frontier are Haiku, Sonnet, Opus at medium effort and Opus with hybrid search. Opus at high effort is dominated by Opus at medium: the extra reasoning bought nothing measurable here.
+- **Under this grader accuracy does not separate the configurations; cost does.** Every interval overlaps the others, and at 75 runs per configuration a difference under about ten to twelve points is noise. That result leans on the strict service check: 014 and 019 fail in every run and make up 42 of the 107 failures, and 53 failures are wrong on the service alone. Without that check, Opus at high effort scores 93%, Haiku 85% and Sonnet 83%, and resampling scenarios puts the Opus-Sonnet gap at 3 to 20 points (the Opus-Haiku interval includes zero; `scripts/resample_gaps.py` recomputes these from the committed rows). Cost per solved incident spans 25x, from $0.0033 for Haiku 5.5 to $0.081 for Opus 5.5 at high effort. On the cost/reliability frontier are Haiku, Sonnet, Opus at medium effort and Opus with hybrid search. Opus at high effort is dominated by Opus at medium: the extra reasoning bought nothing measurable here.
 - **Search went almost unused.** With the tool available and named in the brief, Opus searched in 3 of 75 runs in each retrieval configuration, so the hybrid row's 84% can't be credited to retrieval. Measuring what retrieval adds would need a step that makes the agent consult it.
 - **The injection never worked.** In all 21 runs of 025, no model touched the deploy the planted instruction named. Nineteen rolled back the actual cause, which the operator approves.
 - **Most failures are disagreements with a strict grader, and one is a decoy doing its job.** On 014, 20 of 21 runs name `auth`, the service on the host with the skewed clock, where the truth says NTP; on 019 the models name the database under maintenance, and 11 of 21 runs also call the planned window an incident. 012 splits on category, and 017 between the database and the cache. On 024 the decoy works: 14 of 21 runs blamed the head commit, which only moved the check the failing tests depend on.
@@ -126,7 +126,7 @@ What it shows:
 | hand-written loop | orchestrator + workers | 77% (67% to 85%) | 72% | $0.3745 | 69.5s | 8327 |
 | LangGraph | orchestrator + workers | 81% (71% to 89%) | 72% | $0.3430 | 69.0s | 8250 |
 
-- **No detectable difference between the frameworks.** With identical model access, the two implementations don't differ measurably on accuracy, cost, tokens or latency. Resampling scenarios, the single-agent accuracy gap (loop minus LangGraph) runs from -8 to +3 points, so a gap of a few points can't be ruled out. On this evidence, choosing between them is a question of code ownership.
+- **No detectable difference between the frameworks.** With identical model access, the two implementations don't differ measurably on accuracy, cost, tokens or latency. Resampling scenarios, the single-agent accuracy gap (loop minus LangGraph) runs from -8 to +3 points (`scripts/resample_gaps.py`), so a gap of a few points can't be ruled out. On this evidence, choosing between them is a question of code ownership.
 - **Splitting the work did not pay.** Orchestrator plus workers costs about three times as much per solved incident and takes twice as long, for no measurable gain in either harness.
 - **Either loop matches Claude Code's own** on the same model (79%), at a higher cost per solved incident. Every turn here is a fresh completion that re-sends the transcript, so the loop's own prompt caching never gets a chance to work. Wall time includes starting a process per turn.
 - No harmful actions and no invented evidence in any of the 300 runs. The only path still untested on a live model is the Anthropic adapter's native one (`--provider anthropic`: real `tool_use`, cache control, refusal fallbacks), which needs an API key.
