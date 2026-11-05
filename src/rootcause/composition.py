@@ -6,7 +6,8 @@ themselves, so each wiring decision is made in one place.
 
 import asyncio
 import time
-from collections.abc import Callable
+from collections.abc import AsyncGenerator, Callable
+from contextlib import AsyncExitStack, asynccontextmanager
 from dataclasses import replace
 from enum import StrEnum
 from functools import cache
@@ -15,6 +16,10 @@ from typing import Literal
 
 from mcp.server import MCPServer
 from pydantic import BaseModel
+from starlette.applications import Starlette
+from starlette.requests import Request
+from starlette.responses import JSONResponse
+from starlette.routing import Mount, Route
 
 from rootcause.adapters import anthropic_provider, heuristic
 from rootcause.adapters.claude_code import ClaudeCodeHarness
@@ -176,6 +181,37 @@ def telemetry_server(
     so rollback is left out unless the caller says its client enforces one."""
     return build_telemetry_server(
         load_case(scenario_dir).store, make_retriever(retrieval, corpus), rollback=rollback
+    )
+
+
+def telemetry_http_app(scenarios_root: Path) -> Starlette:
+    """Every scenario's read-only telemetry tools over streamable HTTP, one MCP endpoint
+    per scenario at /scenarios/<dir>/mcp, plus /healthz. Stateless, so a replica that was
+    scaled to zero answers the first request. Rollback and retrieval stay off: this is
+    the public surface, and the fixtures are the only thing it can reach."""
+    servers = {p.name: telemetry_server(p) for p in discover(scenarios_root)}
+    apps = {
+        name: s.streamable_http_app(stateless_http=True, json_response=True, host="0.0.0.0")
+        for name, s in servers.items()
+    }
+
+    @asynccontextmanager
+    async def lifespan(app: Starlette) -> AsyncGenerator[None]:
+        # Mount does not run a sub-app's lifespan, and each session manager needs one.
+        async with AsyncExitStack() as stack:
+            for s in servers.values():
+                await stack.enter_async_context(s.session_manager.run())
+            yield
+
+    async def healthz(request: Request) -> JSONResponse:
+        return JSONResponse({"status": "ok", "scenarios": sorted(servers)})
+
+    return Starlette(
+        routes=[
+            Route("/healthz", healthz),
+            *(Mount(f"/scenarios/{name}", app=a) for name, a in apps.items()),
+        ],
+        lifespan=lifespan,
     )
 
 

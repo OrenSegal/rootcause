@@ -29,6 +29,7 @@ from rootcause.composition import (
     retrieval_eval,
     run_suite,
     run_sweep,
+    telemetry_http_app,
     telemetry_server,
     triage_ci,
     write_sweep_report,
@@ -302,6 +303,19 @@ def telemetry_mcp_cmd(
     Claude Code included, can investigate it directly. Read-only unless --allow-rollback:
     no operator or approval policy runs on this path."""
     telemetry_server(scenario, retrieval, corpus, rollback=allow_rollback).run()
+
+
+@app.command("telemetry-http")
+def telemetry_http_cmd(
+    scenarios: Annotated[Path, typer.Option(help="Directory of scenarios.")] = Path("scenarios"),
+    host: str = "0.0.0.0",
+    port: int = 8000,
+) -> None:
+    """Serve every scenario's read-only telemetry tools over streamable HTTP, for a public
+    deployment: /scenarios/<dir>/mcp per scenario and /healthz. Never serves rollback."""
+    import uvicorn
+
+    uvicorn.run(telemetry_http_app(scenarios.resolve()), host=host, port=port)
 
 
 @app.command("retrieval-eval")
