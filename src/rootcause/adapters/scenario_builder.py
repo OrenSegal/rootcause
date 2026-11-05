@@ -32,8 +32,12 @@ class ScenarioBuilder:
         alert: Alert,
         approval: Literal["approve", "deny"] = "deny",
         t0: datetime = T0,
+        note: str = "",
     ) -> None:
+        """`note` is written as a comment at the top of scenario.yaml: what the scenario
+        tests and why its truth is what it is, next to the truth itself."""
         self.id, self.title, self.alert, self.approval, self.t0 = id, title, alert, approval, t0
+        self.note = note
         self.logs: list[LogLine] = []
         self.metrics: list[MetricSeries] = []
         self.spans: list[Span] = []
@@ -144,9 +148,16 @@ class ScenarioBuilder:
         )
         return span_id
 
-    def truth(self, category: Category, service: str, *evidence: str) -> None:
+    def truth(
+        self, category: Category, service: str, *evidence: str, accepted: list[str] | None = None
+    ) -> None:
+        """`accepted`: other services a responder could defensibly name. Set here, when
+        the scenario is written, never after a model's answers have been read."""
         self._truth = GroundTruth(
-            category=category, service=service, required_evidence_any=list(evidence)
+            category=category,
+            service=service,
+            accepted_services=accepted or [],
+            required_evidence_any=list(evidence),
         )
 
     def scenario(self) -> Scenario:
@@ -162,4 +173,4 @@ class ScenarioBuilder:
 
     def write(self, root: Path) -> Path:
         store = TelemetryStore(self.logs, self.metrics, self.spans, self.deploys)
-        return write_case(Case(self.scenario(), store), root / self.id)
+        return write_case(Case(self.scenario(), store), root / self.id, note=self.note)

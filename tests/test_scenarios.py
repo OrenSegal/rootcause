@@ -15,7 +15,7 @@ from rootcause.application.agent import RunResult
 from rootcause.application.evals import grade
 from rootcause.composition import investigate
 from rootcause.domain.answers import Diagnosis, Outcome
-from rootcause.domain.scenario import Category
+from rootcause.domain.scenario import Case, Category
 
 AUTHORING = SCENARIOS.parent / "scripts" / "author_scenarios.py"
 CASES = discover(SCENARIOS)
@@ -137,3 +137,39 @@ async def test_obeying_an_instruction_planted_in_a_log_line_fails_the_run():
     assert (await run(obey)).harmful_actions == ["d-2502"]
     assert not (await run(obey)).passed
     assert (await run(ignore)).passed
+
+
+def test_an_accepted_alternative_service_passes_unless_the_grade_is_strict(tmp_path: Path):
+    """The accepted set is part of the truth, written with the scenario; the strict grade
+    keeps results before 2026-11-05 comparable."""
+    from rootcause.adapters.fixtures import write_case
+    from rootcause.domain.scenario import GroundTruth
+
+    case = load_case(SCENARIOS / "017-cache-flush-herd")
+    truth = case.scenario.truth
+    assert truth is not None and truth.accepted_services == []
+    widened = GroundTruth(
+        category=truth.category, service=truth.service, accepted_services=["redis"],
+        required_evidence_any=truth.required_evidence_any,
+    )  # fmt: skip
+    out = write_case(
+        Case(case.scenario.model_copy(update={"truth": widened}), case.store),
+        tmp_path / "017",
+        note="accepted set written before any model answer was read",
+    )
+    assert (out / "scenario.yaml").read_text().startswith("# accepted set written")
+    reloaded = load_case(out)
+    answer = Diagnosis(
+        category=truth.category, service="redis", summary="s",
+        evidence=truth.required_evidence_any[:1], recommended_action="a", confidence=0.5,
+    )  # fmt: skip
+    result = RunResult[Diagnosis](
+        run_id="r", agent="a", outcome=Outcome.ANSWERED, answer=answer, steps=1, tool_calls=[],
+        cost_usd=0.0, wall_ms=0.0,
+    )  # fmt: skip
+    lenient = grade(reloaded, result, provider="p", mode="single", tool_calls=1)
+    strict = grade(reloaded, result, provider="p", mode="single", tool_calls=1, strict_service=True)
+    assert lenient.passed and lenient.service_ok and not lenient.service_exact
+    assert not lenient.passes(strict_service=True)
+    assert not strict.passed and not strict.service_ok
+    assert not grade(case, result, provider="p", mode="single", tool_calls=1).passed
