@@ -112,6 +112,8 @@ def investigate_cmd(
     else:
         typer.echo(f"run {result.run_id}: {result.outcome} in {result.steps} step(s)")
         typer.echo(f"  cost ${result.cost_usd:.4f}, {result.wall_ms:.0f} ms")
+        if result.note:
+            typer.echo(f"  note: {result.note}")
         if d := result.answer:
             typer.echo(f"  {d.category} in {d.service} (confidence {d.confidence:.2f})")
             typer.echo(f"  {d.summary}")
