@@ -14,9 +14,11 @@ spent. A run served by a different model than the one configured is an error,
 since its grade says nothing about the configured model.
 """
 
+import math
 from collections import defaultdict
 from collections.abc import Iterable, Sequence
 from enum import StrEnum
+from html import escape
 from typing import Literal
 
 from pydantic import BaseModel, model_validator
@@ -210,3 +212,90 @@ def report_markdown(
         cells = [f"{sum(grid[sid][n])}/{len(grid[sid][n])}" for n in names]
         lines.append(f"| {sid} | " + " | ".join(cells) + " |")
     return "\n".join(lines) + "\n"
+
+
+def report_svg(spec: SweepSpec, summaries: Sequence[ConfigSummary]) -> str:
+    """Cost per solved incident (log x) against pass rate with its Wilson interval (y),
+    one labelled point per configuration. Hollow points are dominated. A configuration
+    that solved nothing has no cost per solved incident and is listed under the chart."""
+    plotted = [(s, s.cost_per_pass) for s in summaries if s.cost_per_pass]
+    missing = [escape(s.name) for s in summaries if not s.cost_per_pass]
+    left, top, pw, ph = 60, 50, 440, 300
+    width, height = left + pw + 280, top + ph + 70 + 16 * bool(missing)
+    xs = [math.log10(c) for _, c in plotted] or [0.0]
+    x0, x1 = min(xs) - 0.15, max(xs) + 0.15
+    y0 = math.floor(min((s.ci_low for s, _ in plotted), default=0.0) * 20) / 20
+    y1 = math.ceil(max((s.ci_high for s, _ in plotted), default=1.0) * 20) / 20
+    y1 = max(y1, y0 + 0.05)
+
+    def px(cost: float) -> float:
+        return left + (math.log10(cost) - x0) / (x1 - x0) * pw
+
+    def py(rate: float) -> float:
+        return top + (y1 - rate) / (y1 - y0) * ph
+
+    face = 'font-family="Helvetica, Arial, sans-serif" fill="#222"'
+    font = f'{face} font-size="12"'
+    out = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '
+        f'viewBox="0 0 {width} {height}" role="img">',
+        f"<title>Sweep {escape(spec.name)}: cost per solved incident vs pass rate</title>",
+        f'<rect width="{width}" height="{height}" fill="#fff"/>',
+        f'<text x="{left}" y="24" {face} font-size="14" font-weight="bold">'
+        f"{escape(spec.name)}: pass rate (95% Wilson interval) vs cost per solved incident</text>",
+        f'<rect x="{left}" y="{top}" width="{pw}" height="{ph}" fill="none" stroke="#999"/>',
+    ]
+    tick = y0
+    while tick <= y1 + 1e-9:
+        y = py(tick)
+        out += [
+            f'<line x1="{left}" y1="{y:.1f}" x2="{left + pw}" y2="{y:.1f}" stroke="#eee"/>',
+            f'<text x="{left - 6}" y="{y + 4:.1f}" {font} text-anchor="end">{tick:.0%}</text>',
+        ]
+        tick += 0.05
+    decades = range(math.floor(x0), math.ceil(x1) + 1)
+    ticks = [m * 10.0**d for d in decades for m in (1, 2, 5)]
+    if sum(x0 <= math.log10(c) <= x1 for c in ticks) < 3:  # narrow range: every digit
+        ticks = [m * 10.0**d for d in decades for m in range(1, 10)]
+    for cost in ticks:
+        if x0 <= math.log10(cost) <= x1:
+            x = px(cost)
+            out += [
+                f'<line x1="{x:.1f}" y1="{top}" x2="{x:.1f}" y2="{top + ph}" stroke="#eee"/>',
+                f'<text x="{x:.1f}" y="{top + ph + 16}" {font} text-anchor="middle">'
+                f"${cost:g}</text>",
+            ]
+    # Labels sit in a column right of the plot, spread so they never overlap, with a
+    # leader line to their point: nearby configurations are the common case.
+    placed = sorted(((py(s.pass_rate), s, cost) for s, cost in plotted), key=lambda p: p[0])
+    label_y: list[float] = []
+    for y, _, _ in placed:
+        label_y.append(max(y, label_y[-1] + 15) if label_y else y)
+    shift = max(0.0, (label_y[-1] if label_y else 0) - (top + ph))
+    label_y = [ly - shift for ly in label_y]
+    lx = left + pw + 12
+    for (y, s, cost), ly in zip(placed, label_y, strict=True):
+        name, x = escape(s.name), px(cost)
+        fill = "#fff" if s.dominated else "#1f5fa8"
+        out += [
+            f'<g data-config="{name}">',
+            f'<line x1="{x:.1f}" y1="{y:.1f}" x2="{lx - 2}" y2="{ly:.1f}" stroke="#ccc"/>',
+            f'<line x1="{x:.1f}" y1="{py(s.ci_low):.1f}" x2="{x:.1f}" y2="{py(s.ci_high):.1f}" '
+            'stroke="#1f5fa8" stroke-width="1.5"/>',
+            f'<circle cx="{x:.1f}" cy="{y:.1f}" r="4.5" fill="{fill}" stroke="#1f5fa8" '
+            'stroke-width="1.5"/>',
+            f'<text x="{lx}" y="{ly + 4:.1f}" {font}>{name} '
+            f"{_pct(s.pass_rate)}, ${cost:.4f}</text>",
+            "</g>",
+        ]
+    foot = top + ph + 38
+    out.append(
+        f'<text x="{left}" y="{foot}" {font}>cost per solved incident (log scale, includes '
+        "spend on failed runs). Filled: on the frontier. Hollow: dominated.</text>"
+    )
+    if missing:
+        out.append(
+            f'<text x="{left}" y="{foot + 16}" {font}>Not plotted, no solved incidents: '
+            f"{', '.join(missing)}</text>"
+        )
+    return "\n".join(out) + "\n</svg>\n"

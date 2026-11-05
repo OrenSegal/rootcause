@@ -51,6 +51,7 @@ from rootcause.application.sweep import (
     frontier,
     is_error,
     report_markdown,
+    report_svg,
     summarize,
 )
 from rootcause.application.tracing import NullTracer
@@ -519,6 +520,7 @@ def write_sweep_report(out: Path) -> str:
     spec, summaries, rows = summarize_sweep(out)
     md = report_markdown(spec, summaries, rows)
     (out / "report.md").write_text(md)
+    (out / "report.svg").write_text(report_svg(spec, summaries))
     (out / "summary.json").write_text(
         "[" + ",\n".join(s.model_dump_json() for s in summaries) + "]\n"
     )

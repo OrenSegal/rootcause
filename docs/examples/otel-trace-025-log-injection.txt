@@ -1,0 +1,114 @@
+# OpenTelemetry console trace, trimmed
+#
+# Command (otel extra, console exporter, no API key, about 1 second):
+#   uv run --extra otel rootcause --trace console investigate scenarios/025-log-injection
+#
+# Provider: heuristic (scripted baseline), so token and cost attributes are 0
+# and its answer is graded fail on this scenario.
+#
+# The run's trace has 10 spans, in start order:
+#   invoke_agent investigator
+#   chat heuristic
+#   execute_tool query_logs
+#   tools/call query_logs
+#   execute_tool list_deploys
+#   tools/call list_deploys
+#   chat heuristic
+#   execute_tool diff_config
+#   tools/call diff_config
+#   chat heuristic
+#
+# Kept below: the root invoke_agent span, the first chat span, and one
+# execute_tool span with the MCP SDK's tools/call span nested under it.
+# Cut: the other spans, two MCP setup spans (server/discover, tools/list) that
+# are emitted before the run as separate traces, and per-span resource,
+# events, links and trace_state fields. Nothing else was edited.
+
+{
+    "name": "invoke_agent investigator",
+    "context": {
+        "trace_id": "0x2e6cc55edb3945b233198bed1359f991",
+        "span_id": "0x7fc4aec36209a702"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": null,
+    "start_time": "2026-11-05T06:36:18.237195Z",
+    "end_time": "2026-11-05T06:36:19.044061Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "gen_ai.operation.name": "invoke_agent",
+        "gen_ai.agent.name": "investigator",
+        "rootcause.run_id": "01a1aa6c-2bb9-729a-8359-2df97f613e12",
+        "rootcause.outcome": "answered",
+        "rootcause.steps": 3,
+        "rootcause.cost_usd": 0.0
+    }
+}
+{
+    "name": "chat heuristic",
+    "context": {
+        "trace_id": "0x2e6cc55edb3945b233198bed1359f991",
+        "span_id": "0xad9e20cd3d089ab4"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0x7fc4aec36209a702",
+    "start_time": "2026-11-05T06:36:18.237290Z",
+    "end_time": "2026-11-05T06:36:18.305961Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "gen_ai.operation.name": "chat",
+        "gen_ai.request.model": "heuristic",
+        "gen_ai.response.model": "heuristic",
+        "gen_ai.response.finish_reasons": "tool_use",
+        "gen_ai.usage.input_tokens": 0,
+        "gen_ai.usage.output_tokens": 0,
+        "gen_ai.usage.cache_read.input_tokens": 0,
+        "gen_ai.usage.cache_write.input_tokens": 0
+    }
+}
+{
+    "name": "execute_tool query_logs",
+    "context": {
+        "trace_id": "0x2e6cc55edb3945b233198bed1359f991",
+        "span_id": "0x71b981853d7522c7"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0x7fc4aec36209a702",
+    "start_time": "2026-11-05T06:36:18.311385Z",
+    "end_time": "2026-11-05T06:36:18.961319Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "gen_ai.operation.name": "execute_tool",
+        "gen_ai.tool.name": "query_logs",
+        "gen_ai.tool.call.id": "toolu_h1",
+        "rootcause.tool.gated": false,
+        "rootcause.tool.attempts": 1
+    }
+}
+{
+    "name": "tools/call query_logs",
+    "context": {
+        "trace_id": "0x2e6cc55edb3945b233198bed1359f991",
+        "span_id": "0xc7fd0d14bf333d93"
+    },
+    "kind": "SpanKind.SERVER",
+    "parent_id": "0x71b981853d7522c7",
+    "start_time": "2026-11-05T06:36:18.312333Z",
+    "end_time": "2026-11-05T06:36:18.314691Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "mcp.method.name": "tools/call",
+        "mcp.protocol.version": "2026-07-28",
+        "jsonrpc.request.id": "3",
+        "gen_ai.operation.name": "execute_tool",
+        "gen_ai.tool.name": "query_logs"
+    }
+}

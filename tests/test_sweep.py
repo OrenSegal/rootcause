@@ -2,6 +2,7 @@
 
 import shutil
 from pathlib import Path
+from xml.etree import ElementTree
 
 import pytest
 from conftest import SCENARIOS
@@ -15,6 +16,7 @@ from rootcause.application.sweep import (
     SweepConfig,
     SweepSpec,
     frontier,
+    report_svg,
     summarize,
 )
 from rootcause.composition import read_sweep, run_sweep
@@ -141,6 +143,7 @@ def test_cli_plans_runs_a_sweep_and_reports_it(two_scenarios, tmp_path):
     assert report.exit_code == 0, report.output
     assert "| baseline | 4 / 0 | 100%" in report.output
     assert (out / "report.md").exists() and (out / "summary.json").exists()
+    assert (out / "report.svg").exists()
 
 
 def test_summary_reports_how_often_runs_used_postmortem_search():
@@ -250,3 +253,21 @@ async def test_a_crashed_run_leaves_an_error_row_with_the_reason(two_scenarios, 
     _, errors = read_sweep(tmp_path / "o")
     assert len(errors) == 2
     assert all("engine failed to start" in e.grade.note for e in errors)
+
+
+def test_report_svg_draws_one_labelled_point_per_config_and_lists_unsolved_ones():
+    configs = [SweepConfig(name=n, provider="claude-code") for n in ("a<b", "cheap", "none")]
+    summaries = frontier(
+        [
+            summarize(configs[0], rows("a<b", {"x": [True, True, False]})),
+            summarize(configs[1], rows("cheap", {"x": [True, False, False]})),
+            summarize(configs[2], rows("none", {"x": [False, False, False]})),
+        ]
+    )
+    spec = SweepSpec(name="s", configs=configs)
+    root = ElementTree.fromstring(report_svg(spec, summaries))  # well-formed, names escaped
+    ns = "{http://www.w3.org/2000/svg}"
+    points = root.findall(f"{ns}g")
+    assert [g.get("data-config") for g in points] == ["a<b", "cheap"]
+    assert all(len(g.findall(f"{ns}circle")) == 1 for g in points)
+    assert "no solved incidents: none" in ElementTree.tostring(root, encoding="unicode")
