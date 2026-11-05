@@ -107,7 +107,12 @@ def is_error(config: SweepConfig, row: Row) -> bool:
 
 
 def summarize(
-    config: SweepConfig, rows: Sequence[Row], errors: Sequence[Row] = (), *, k: int | None = None
+    config: SweepConfig,
+    rows: Sequence[Row],
+    errors: Sequence[Row] = (),
+    *,
+    k: int | None = None,
+    strict_service: bool = False,
 ) -> ConfigSummary:
     """`k` should be the same for every configuration being compared (the sweep's
     repeat count): a configuration that lost runs to errors must not get a smaller k
@@ -115,10 +120,10 @@ def summarize(
     not shown reliable for pass^k, and as passed for pass@k only if a run passed."""
     scored = [r for r in rows if not is_error(config, r)]
     failed = [*errors, *(r for r in rows if is_error(config, r))]
-    passes = sum(r.grade.passed for r in scored)
+    passes = sum(r.grade.passes(strict_service=strict_service) for r in scored)
     by_scenario: dict[str, list[bool]] = defaultdict(list)
     for r in scored:
-        by_scenario[r.scenario_id].append(r.grade.passed)
+        by_scenario[r.scenario_id].append(r.grade.passes(strict_service=strict_service))
     k = k or min((len(v) for v in by_scenario.values()), default=1)
     hat = [
         pass_hat_k(n=len(v), c=sum(v), k=k) if len(v) >= k else 0.0 for v in by_scenario.values()
@@ -176,11 +181,17 @@ def _pct(x: float) -> str:
 
 
 def report_markdown(
-    spec: SweepSpec, summaries: Sequence[ConfigSummary], rows: Sequence[Row]
+    spec: SweepSpec,
+    summaries: Sequence[ConfigSummary],
+    rows: Sequence[Row],
+    *,
+    strict_service: bool = False,
 ) -> str:
     k = min((s.k for s in summaries), default=1)
+    graded = "single-service grade" if strict_service else "accepted-service grade"
     lines = [
-        f"### Sweep `{spec.name}`: {len(summaries)} configurations, {spec.repeats} runs each",
+        f"### Sweep `{spec.name}`: {len(summaries)} configurations, {spec.repeats} runs each "
+        f"({graded})",
         "",
         f"| config | scored / errors | pass rate (95% CI) | pass^{k} | pass@{k} | mean cost "
         "| cost per solved | p50 / p90 wall | output tokens | tool calls | searched | frontier |",
@@ -206,7 +217,7 @@ def report_markdown(
     names = [s.name for s in summaries]
     grid: dict[str, dict[str, list[bool]]] = defaultdict(lambda: defaultdict(list))
     for r in rows:
-        grid[r.scenario_id][r.config].append(r.grade.passed)
+        grid[r.scenario_id][r.config].append(r.grade.passes(strict_service=strict_service))
     lines += ["", "| scenario | " + " | ".join(names) + " |", "|---" * (len(names) + 1) + "|"]
     for sid in sorted(grid):
         cells = [f"{sum(grid[sid][n])}/{len(grid[sid][n])}" for n in names]

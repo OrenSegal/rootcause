@@ -304,8 +304,10 @@ async def investigate(
     approve: bool | None = None,
     retrieval: Retrieval = Retrieval.NONE,
     brief: str | None = None,
+    strict_service: bool = False,
 ) -> Investigation:
-    """`brief` replaces the investigator's instructions, for testing variants of them."""
+    """`brief` replaces the investigator's instructions, for testing variants of them.
+    `strict_service` grades the way every result before 2026-11-05 was graded."""
     allow = case.scenario.approval == "approve" if approve is None else approve
     result = await _run(case, provider, events, budget_usd, mode, allow, retrieval, brief)
     graded = grade(
@@ -314,6 +316,7 @@ async def investigate(
         provider=provider.name,
         mode=mode.value,
         tool_calls=count_tool_calls(events, result.run_id),
+        strict_service=strict_service,
     )
     if mode is Mode.MULTI:
         cost, usage = worker_spend(events, result.run_id)
@@ -330,12 +333,18 @@ async def run_suite(
     events: EventLog,
     budget_usd: float,
     mode: Mode = Mode.SINGLE,
+    strict_service: bool = False,
 ) -> SuiteReport:
     grades: list[Grade] = []
     name = make_provider().name
     for path in discover(root):
         run = await investigate(
-            load_case(path), make_provider(), events=events, budget_usd=budget_usd, mode=mode
+            load_case(path),
+            make_provider(),
+            events=events,
+            budget_usd=budget_usd,
+            mode=mode,
+            strict_service=strict_service,
         )
         grades.append(run.grade)
     return SuiteReport(provider=name, mode=mode.value, grades=grades)
@@ -495,7 +504,9 @@ async def run_sweep(
     return counts
 
 
-def summarize_sweep(out: Path) -> tuple[SweepSpec, list[ConfigSummary], list[Row]]:
+def summarize_sweep(
+    out: Path, *, strict_service: bool = False
+) -> tuple[SweepSpec, list[ConfigSummary], list[Row]]:
     spec = SweepSpec.model_validate_json((out / SPEC).read_text())
     rows, errors = read_sweep(out)
     summaries = [
@@ -504,6 +515,7 @@ def summarize_sweep(out: Path) -> tuple[SweepSpec, list[ConfigSummary], list[Row
             [r for r in rows if r.config == c.name],
             [r for r in errors if r.config == c.name],
             k=spec.repeats,
+            strict_service=strict_service,
         )
         for c in spec.configs
     ]
@@ -516,9 +528,9 @@ def plan_sweep(spec: SweepSpec, out: Path) -> tuple[int, int]:
     return total, len(read_sweep(out)[0])
 
 
-def write_sweep_report(out: Path) -> str:
-    spec, summaries, rows = summarize_sweep(out)
-    md = report_markdown(spec, summaries, rows)
+def write_sweep_report(out: Path, *, strict_service: bool = False) -> str:
+    spec, summaries, rows = summarize_sweep(out, strict_service=strict_service)
+    md = report_markdown(spec, summaries, rows, strict_service=strict_service)
     (out / "report.md").write_text(md)
     (out / "report.svg").write_text(report_svg(spec, summaries))
     (out / "summary.json").write_text(

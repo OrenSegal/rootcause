@@ -45,8 +45,14 @@ class GroundTruth(BaseModel):
 
     category: Category
     service: str
+    # Other services a careful responder could defensibly name. Decided when the
+    # scenario is written, before any model answer is seen; never widened afterwards.
+    accepted_services: list[str] = []
     # A diagnosis must cite at least one of these to count as evidence-backed.
     required_evidence_any: list[str]
+
+    def accepts(self, service: str, *, strict: bool = False) -> bool:
+        return service == self.service or (not strict and service in self.accepted_services)
 
 
 class Scenario(BaseModel):

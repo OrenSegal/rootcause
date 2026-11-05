@@ -78,6 +78,13 @@ CorpusOpt = Annotated[Path, typer.Option(help="Postmortem corpus directory.")]
 ModeOpt = Annotated[Mode, typer.Option(help="single agent, or multi (orchestrator plus workers).")]
 
 DEFAULT_RUNLOG = Path(".rootcause/runs.sqlite")
+StrictService = Annotated[
+    bool,
+    typer.Option(
+        "--strict-service",
+        help="Count only the one service the truth names, as results before 2026-11-05 did.",
+    ),
+]
 
 
 @app.command("investigate")
@@ -137,6 +144,7 @@ def eval_cmd(
     summary_md: Annotated[
         Path | None, typer.Option(help="Append a markdown table (default $GITHUB_STEP_SUMMARY).")
     ] = None,
+    strict_service: StrictService = False,
 ) -> None:
     """Run every scenario, grade it, and exit 1 below --min-pass-rate."""
     report = asyncio.run(
@@ -146,6 +154,7 @@ def eval_cmd(
             events=open_events(runlog),
             budget_usd=budget_usd,
             mode=mode,
+            strict_service=strict_service,
         )
     )
     md = report.markdown()
@@ -211,10 +220,11 @@ def sweep_cmd(
 @app.command("report")
 def report_cmd(
     out: Annotated[Path, typer.Argument(help="A sweep results directory.")],
+    strict_service: StrictService = False,
 ) -> None:
     """Summarize a sweep: intervals, pass^k, cost per solved incident, frontier.
     Writes report.md and summary.json next to the rows."""
-    typer.echo(write_sweep_report(out))
+    typer.echo(write_sweep_report(out, strict_service=strict_service))
 
 
 @app.command("ci-triage")
