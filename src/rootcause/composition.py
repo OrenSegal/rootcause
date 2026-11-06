@@ -460,7 +460,7 @@ async def run_sweep(
     config. Errors go to errors.jsonl and are retried by the next call."""
     done, briefs = _start_sweep(spec, out)
     events = open_events(out / "runs.sqlite")
-    paths = discover(Path(spec.scenarios))
+    paths = sweep_paths(spec)
     by_name = {c.name: c for c in spec.configs}
     todo = [
         (rep, path, config)
@@ -522,9 +522,16 @@ def summarize_sweep(
     return spec, frontier(summaries), rows
 
 
+def sweep_paths(spec: SweepSpec) -> list[Path]:
+    paths = [p for p in discover(Path(spec.scenarios)) if spec.selects(p.name)]
+    if missing := sorted(set(spec.scenario_ids + spec.held_out) - {p.name for p in paths}):
+        raise ValueError(f"{spec.name}: scenarios not found: {', '.join(missing)}")
+    return paths
+
+
 def plan_sweep(spec: SweepSpec, out: Path) -> tuple[int, int]:
     """(runs planned, runs already done) without starting anything."""
-    total = spec.repeats * len(discover(Path(spec.scenarios))) * len(spec.configs)
+    total = spec.repeats * len(sweep_paths(spec)) * len(spec.configs)
     return total, len(read_sweep(out)[0])
 
 
