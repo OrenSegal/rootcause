@@ -60,6 +60,11 @@ class SweepSpec(BaseModel):
     name: str
     repeats: int = 3
     scenarios: str = "scenarios"
+    scenario_ids: list[str] = []  # run only these; empty means every scenario in the directory
+    # Scenarios whose results are reported apart and never used to change the brief, the
+    # grader or an accepted set. The split is a check on tuning, not on authorship: every
+    # scenario here has the same author.
+    held_out: list[str] = []
     configs: list[SweepConfig]
 
     @model_validator(mode="after")
@@ -68,6 +73,9 @@ class SweepSpec(BaseModel):
         if dupes := sorted({n for n in names if names.count(n) > 1}):
             raise ValueError(f"duplicate config names: {', '.join(dupes)}")
         return self
+
+    def selects(self, scenario_id: str) -> bool:
+        return not self.scenario_ids or scenario_id in self.scenario_ids
 
 
 class Row(BaseModel):
@@ -214,6 +222,23 @@ def report_markdown(
             + ", ".join(f"{s.name} {s.short_scenarios}" for s in short)
             + ".",
         ]
+    if spec.held_out:
+        lines += ["", "| config | in-sample pass rate (95% CI) | held-out pass rate (95% CI) |",
+                  "|---|---|---|"]  # fmt: skip
+        for c in spec.configs:
+            cells = []
+            for want in (False, True):
+                part = [r for r in rows if r.config == c.name
+                        and (r.scenario_id in spec.held_out) is want]  # fmt: skip
+                p = summarize(c, part, k=spec.repeats, strict_service=strict_service)
+                cells.append(
+                    f"{_pct(p.pass_rate)} ({_pct(p.ci_low)} to {_pct(p.ci_high)}), {p.scored} runs"
+                    if p.scored
+                    else "no runs"
+                )
+            lines.append(f"| {c.name} | {cells[0]} | {cells[1]} |")
+        lines += ["", "Held out: " + ", ".join(spec.held_out) + ". Results on these are never "
+                  "used to change the brief, the grader or an accepted set."]  # fmt: skip
     names = [s.name for s in summaries]
     grid: dict[str, dict[str, list[bool]]] = defaultdict(lambda: defaultdict(list))
     for r in rows:

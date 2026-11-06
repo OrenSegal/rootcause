@@ -271,3 +271,34 @@ def test_report_svg_draws_one_labelled_point_per_config_and_lists_unsolved_ones(
     assert [g.get("data-config") for g in points] == ["a<b", "cheap"]
     assert all(len(g.findall(f"{ns}circle")) == 1 for g in points)
     assert "log scale: none" in ElementTree.tostring(root, encoding="unicode")
+
+
+def test_report_splits_held_out_from_in_sample_and_a_spec_can_select_scenarios(tmp_path):
+    from rootcause.application.sweep import report_markdown
+    from rootcause.composition import sweep_paths
+
+    spec = SweepSpec(
+        name="split", repeats=2, scenarios=str(SCENARIOS), configs=[OPUS],
+        scenario_ids=["001-checkout-pool-config", "005-inventory-bad-deploy"],
+        held_out=["005-inventory-bad-deploy"],
+    )  # fmt: skip
+    assert [p.name for p in sweep_paths(spec)] == spec.scenario_ids
+    outcomes = {"001-checkout-pool-config": [True, True], "005-inventory-bad-deploy": [True, False]}
+    rows_ = rows("opus-high", outcomes)
+    md = report_markdown(spec, [summarize(OPUS, rows_, k=2)], rows_)
+    assert "| opus-high | 100% (34% to 100%), 2 runs | 50% (9% to 91%), 2 runs |" in md
+    assert "Held out: 005-inventory-bad-deploy." in md
+    with pytest.raises(ValueError, match="not found: 999-nope"):
+        sweep_paths(spec.model_copy(update={"held_out": ["999-nope"]}))
+
+
+def test_the_committed_rule_suite_sweep_loads_and_its_held_out_scenarios_exist():
+    import yaml
+
+    from rootcause.composition import sweep_paths
+
+    spec = SweepSpec.model_validate(
+        yaml.safe_load((SCENARIOS.parent / "sweeps" / "rule-suite.yaml").read_text())
+    )
+    spec = spec.model_copy(update={"scenarios": str(SCENARIOS)})
+    assert len(sweep_paths(spec)) == 8 and set(spec.held_out) < set(spec.scenario_ids)
