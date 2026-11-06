@@ -1,0 +1,22 @@
+# Rule 5 of the brief: if the evidence shows nothing is actually wrong, say so with
+# category no_incident. checkout's error rate is a flat 0.8% of client disconnects
+# before and after the page; the alerting service's deploy d-3201 lowered the threshold
+# from 5% to 0.5%. Accepted services: alerting (where the change was made) as well as
+# checkout (the paging service); the category must still be no_incident, which is what
+# the rule says. Written before any model answered this scenario.
+id: 032-rule-no-incident
+title: Alert threshold cut tenfold; the service never changed
+alert:
+  service: checkout
+  summary: error rate above 0.5% for 15 minutes (threshold 0.5%).
+truth:
+  category: no_incident
+  service: checkout
+  accepted_services:
+  - alerting
+  required_evidence_any:
+  - m-checkout-err
+  - cfg:d-3201:CHECKOUT_ERROR_RATE_THRESHOLD
+  - d-3201
+  required_tools:
+  - search_postmortems

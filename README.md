@@ -23,14 +23,15 @@ Two different agent loops were measured. In the 525-run sweep, Claude Code's own
 | retrieval over 33 postmortems | none (retriever alone) | BM25 recall@5 0.94 vs 0.86 for a transformer model at roughly 1,000x the query latency |
 | mutation testing the brief, 12 mutants, 275 scored runs | Claude Code's own | 0 of 12 killed (11 survived, 1 inconclusive), so the suite can't yet catch a regression in a single instruction; two of the mutants touch a rule the harness already enforces, so they could not fail |
 
-**How it's evaluated.** 25 incidents with known root causes, each built around a mistake a responder could make, several with planted decoys; the "blame the last deploy" baseline gets three right. The grader checks category, service, that every cited id exists in the scenario's telemetry and at least one is the expected evidence, that no rollback hit an innocent deploy, and that the run made at least one tool call. It does not read the written explanation, and it does not check that a tool returned the id during that run; only the hand-written loop's runtime check does that. Each configuration runs every scenario three times and is reported with a Wilson interval, pass^k, and cost per solved incident including failed runs. Harness failures are retried and never counted as wrong answers. More under "Evals that can fail" and "Measurement before claims" in [What it shows](#what-it-shows).
+**How it's evaluated.** The 525-run sweep used 25 incidents with known root causes; eight more, built around one rule of the brief each, have been added since, run once at three model tiers (72 runs) and mutation-tested (112 runs); the mutation result is mostly negative (see [The rule suite](#the-rule-suite)). The 25: each built around a mistake a responder could make, several with planted decoys; the "blame the last deploy" baseline gets three right (and four of the eight new ones). Every result below was graded by the single-service check; the grader now also takes a pre-registered set of accepted services per scenario, and `--strict-service` reproduces the old grade. The grader checks category, service, that every cited id exists in the scenario's telemetry and at least one is the expected evidence, that no rollback hit an innocent deploy, and that the run made at least one tool call. It does not read the written explanation, and it does not check that a tool returned the id during that run; only the hand-written loop's runtime check does that. Each configuration runs every scenario three times and is reported with a Wilson interval, pass^k, and cost per solved incident including failed runs. Harness failures are retried and never counted as wrong answers. More under "Evals that can fail" and "Measurement before claims" in [What it shows](#what-it-shows).
 
 ## Quickstart
 
 ```bash
 uv sync                                                   # core only; extras below
 uv run rootcause eval --min-pass-rate 0.05                # every scenario, no API key needed
-# expect mostly failures: this is the scripted baseline (blame the last deploy), 3 of 25 right
+# expect mostly failures: this is the scripted baseline (blame the last deploy), 7 of 33 right
+# (3 of the original 25, 4 of the 8 rule scenarios)
 uv run rootcause investigate scenarios/005-inventory-bad-deploy   # one the baseline gets right
 ```
 
@@ -76,7 +77,7 @@ The Claude Code options need the `claude` CLI installed and signed in, and run o
 
 **Several harnesses, one grader.** `adapters/claude_code.py` runs Claude Code's own loop against the same telemetry MCP server, with built-in tools, user settings and other MCP servers switched off, and with the ground truth left out of the fixtures it serves. `adapters/claude_code_completion.py` instead puts Claude Code behind the hand-written loop as a completion endpoint, one structured call per turn. `adapters/langgraph_engine.py` rebuilds the investigation as a LangGraph graph, with `Send` fanning questions out to worker subgraphs, and shares everything except the control flow. Every path returns the same `RunResult` and is graded by the same code. A rollback is visible to all of them but only runs when the scenario's operator approves; a denial reaches the model as a tool error.
 
-**Evals that can fail.** Twenty-five scenarios. The twenty-two written as code are each built around a mistake a responder could make: a deploy that lands just before a vendor outage, a flag flipped at runtime with no deploy on record, a retry policy two services away turning a one-minute blip into an outage, a migration hidden in a deploy whose config diff points elsewhere, a maintenance window that looks like an incident. The baseline ("blame the last deploy before the first error") is right on three. Grades check the category, the service, that every cited id is one the scenario's telemetry contains, and that no rollback ran against a deploy outside the root cause.
+**Evals that can fail.** Thirty-three scenarios, of which only the first twenty-five are in the 525-run sweep. The twenty-two written as code are each built around a mistake a responder could make: a deploy that lands just before a vendor outage, a flag flipped at runtime with no deploy on record, a retry policy two services away turning a one-minute blip into an outage, a migration hidden in a deploy whose config diff points elsewhere, a maintenance window that looks like an incident. The baseline ("blame the last deploy before the first error") is right on three of those. Grades check the category, the service, that every cited id is one the scenario's telemetry contains, and that no rollback ran against a deploy outside the root cause.
 
 **Measurement before claims.** `rootcause sweep` runs each configuration several times per scenario, interleaved so rate limits or time of day don't land on one configuration, and resumes where it stopped. Harness failures (crash, timeout, unreadable output, a run served by a different model than configured) go to a separate file and are retried; they never count as wrong answers. `rootcause report` gives each configuration a Wilson interval, pass^k (every attempt right, which is what an on-call agent needs) next to pass@k, cost per solved incident including spend on failed runs, p50/p90 latency, and whether another configuration is at least as reliable for less. Every run records API-reported token counts, so costs can be repriced. An oracle check (answers built from the truth pass) and a null check (no answer, or a wrong category, fails) run over every scenario in CI.
 
@@ -155,7 +156,54 @@ Caveats: this is Haiku 5.5 only. The loop is the hand-written one, but each turn
 
 litmus's operators applied to the investigator brief: one broken copy per site (an instruction deleted, a rule inverted, a fact made wrong, the brief truncated or emptied), each run once over the suite at Opus 5.5 high: 12 mutants, 275 scored runs (`results/litmus/2026-10-15.md`). A mutant counts as killed when it fails a scenario the unmodified brief passed in all three baseline runs.
 
-**0 of 12 mutants were killed: 11 survived and 1 was inconclusive.** The 11 survivors had pass rates between 72% and 84%, against 79% for the original. The inconclusive one is the emptied brief: all 25 of its runs errored, since the API rejects an empty system prompt. Read with the sweep results, the conclusion is about the suite more than the brief: no scenario depends on any single instruction, so the suite could not catch a regression in one. The next scenarios should each be built so that one rule (check what changed relative to the first errors; report no incident when nothing is wrong) decides the outcome.
+**0 of 12 mutants were killed: 11 survived and 1 was inconclusive.** The 11 survivors had pass rates between 72% and 84%, against 79% for the original. The inconclusive one is the emptied brief: all 25 of its runs errored, since the API rejects an empty system prompt. Read with the sweep results, the conclusion is about the suite more than the brief: no scenario depends on any single instruction, so the suite could not catch a regression in one. [The rule suite](#the-rule-suite) below is the attempt to fix that; the sweep and a mutation run of it are reported there: 2 of 14 mutants killed, neither for the reason it was built.
+
+### The rule suite
+
+Scenarios 026 to 033, added 2026-11-05, are the answer to the 0-of-12 result. Each is named for one rule of the investigator brief and built so that the rule decides the outcome. A 72-run sweep and a 112-run mutation run of them have been made (below). The mutation result is the one that matters, and it is mostly negative.
+
+| scenario | rule | what the tempting wrong answer is |
+|---|---|---|
+| 026-rule-gather-evidence | gather evidence before concluding | the alert text blames auth's deploy, which landed seconds before the errors |
+| 027-rule-symptoms-spread | the paging service is not always the cause | payments logs a panic of its own; ledger's database is out of connections |
+| 028-rule-check-what-changed-when | check what changed, and when | a scary pool shrink landed after the errors began; an earlier client upgrade is the cause |
+| 029-rule-cite-exact-ids | cite the exact ids the tools returned | the log text quotes look-alike ids for the guilty deploy |
+| 030-rule-rollback-only-with-evidence | only request a rollback the evidence supports | the operator approves and a fresh deploy is innocent; the disk is full |
+| 031-rule-finish-after-denial | finish the diagnosis if a rollback is denied | the right answer is a rollback, and the operator says no |
+| 032-rule-no-incident | say no_incident when nothing is wrong | an alert threshold was cut tenfold; the service never changed |
+| 033-rule-postmortems-are-hypotheses | past postmortems are hypotheses, not evidence | a postmortem matches the symptoms and blames a different cause |
+
+What changed in the harness to support them:
+
+- **Accepted services, written before any answer.** `accepted_services` in a scenario's truth lists other services a careful responder could defensibly name. It is set when the scenario is written and says so in the scenario file's header; only 027 (ledger beside ledger-db) and 032 (alerting beside checkout) have one. `--strict-service` on `rootcause eval` and `rootcause report` keeps the old single-service grade, so the 525-run rows read the same as before. 014 and 019 were not widened, and neither was 017: their models' answers are already in this README, so widening them now would be fitting the grader to the answers.
+- **A held-out split.** `held_out` in a sweep file names scenarios never used to change the brief, the grader or an accepted set, and `rootcause report` prints in-sample and held-out pass rates in separate columns. In `sweeps/rule-suite.yaml` these are 027, 030 and 033, chosen before any run. This controls for tuning against what was seen. Every scenario still has the same author, so it says nothing about generalization.
+- **A required retrieval step.** The truth of each rule scenario lists `search_postmortems` as a required tool; a run that was offered search and never called it fails. When search is not offered nothing is required, so the same scenarios work as a no-retrieval control. This makes search a measured step, but only because the search hint in the brief now says to search at least once before concluding, which is a different brief from the one used in the 2026-10-15 retrieval rows. 033 has a matching postmortem (PM-035) and a decoy (PM-034); the retrieval labels were re-scored with BM25 only (`results/retrieval/2026-11-05.md`: recall@5 0.98 on the alert plus first error line, 26 labels), and the embedding retrievers were not re-run.
+
+What was checked without a model: the oracle answer passes every scenario, no answer or a wrong category fails it, and the oracle fails when it skipped a required search that was offered; the last-deploy baseline solves 4 of the 8 (028, 029, 031, 033) because their traps are readings of the brief, not of the timeline, so it passes 7 of 33 overall.
+
+**The sweep** (`sweeps/rule-suite.yaml`, 72 runs on 2026-11-06 through a Claude subscription, `results/sweeps/rule-suite-2026-11-05/`; grader with accepted services, search offered and required, Claude Code's own loop as in the 525-run sweep, no harness errors; cost is list price, $2.63 in all):
+
+| configuration | pass rate (95% CI) | in-sample (15 runs) | held-out (9 runs) | cost per solved | searched |
+|---|---|---|---|---|---|
+| Opus 5.5, high, BM25 | 100% (86% to 100%) | 100% | 100% | $0.0756 | 100% |
+| Sonnet 5.5, high, BM25 | 100% (86% to 100%) | 100% | 100% | $0.0308 | 100% |
+| Haiku 5.5, high, BM25 | 88% (69% to 96%) | 93% | 78% | $0.0036 | 100% |
+
+- **It does not separate Opus from Sonnet.** Both passed all 24 runs, so the suite has a ceiling here. It separates Haiku only weakly: three failures in 24 runs, two on 030 and one on 032, all of them a wrong category with the right service and evidence, and the intervals overlap.
+- **Search is now used.** Every run called `search_postmortems`, against 3 of 75 before. That is the effect of the brief telling the agent to search and the grader requiring it, so it measures instruction-following, and the sweep says nothing about whether search helps accuracy. Without a no-search configuration there is no comparison for that.
+- **The baseline for mutation scoring is usable.** Opus at high effort passed every one of the eight scenarios in all three runs, so each can kill a mutant. The mutant run itself is what shows whether any does.
+- **Caveats.** Nine runs per configuration on the held-out side is little. The three tiers were run at one setting each, and a 100% pass rate on scenarios the same author wrote against the brief the same author wrote is a weak signal that the scenarios are easy for strong models, not that the suite is solved.
+
+Why a kill was possible at all, and what could still go wrong:
+
+- 029 may be unkillable: the grader already rejects any cited id no tool returned, whatever the brief says, which is why the cite-the-ids mutants survived before.
+- A mutant is only killed on a scenario the unmodified brief passes in every baseline run. If the baseline is unstable on a scenario, that scenario cannot kill anything.
+
+**The mutation run** (`sweeps/litmus-brief-rule-suite-2026-11-05.yaml`, 14 mutants of the search-on brief, 8 scenarios, one run each, 112 runs on 2026-11-06, `results/litmus/2026-11-06-rule-suite.md`): **2 of 14 mutants killed, 11 survived, 1 inconclusive** (the emptied brief, which the API rejects, as before). The baseline was the Opus run above.
+
+- **Both kills are the search requirement, not a rule.** Deleting the search-hint line fails all eight scenarios, and truncating the brief to its first five lines (which drops that line) fails seven. They fail because the grader requires a search the brief no longer asks for. That is a real regression the suite now catches, and the search hint changed in this same work, so it is the one rule the grader was made to enforce.
+- **None of the rules the scenarios were built around was caught.** Deleting or inverting gather evidence, symptoms spread, cite exact ids, rollback only with evidence, and no_incident, or finishing in plain text, all survived, as did making two facts wrong. The scenarios were designed so that each rule decides its scenario. On one run per scenario per mutant, with a strong model, they did not. A model that is good at the task does the right thing without being told the rule.
+- **So the original diagnosis is only half fixed.** The suite can now catch a brief that stops asking for search. It still cannot catch a regression in a single behavioural instruction, which is the 0-of-12 result's point. One run per scenario is also thin: a mutant that fails a scenario one time in three would usually survive.
 
 ## Architecture
 
@@ -185,7 +233,7 @@ A CI job installs the core alone and runs the tests, the baseline and BM25 retri
 
 ## Scenarios
 
-`scenarios/001` to `007`, `009` to `022` and `025` are written as code in `scripts/author_scenarios.py`, each with a docstring saying what makes it hard. A test regenerates them and fails if the committed fixtures drift, and another fails if the baseline solves more than half. A runtime flag flip or an operator's cache flush shows up as a log line, the way a flag service or a runbook audit log would record it, so neither needed a new tool.
+`scenarios/001` to `007`, `009` to `022`, `025` and `026` to `033` are written as code in `scripts/author_scenarios.py`, each with a docstring saying what makes it hard. A test regenerates them and fails if the committed fixtures drift, and another fails if the baseline solves more than half. A runtime flag flip or an operator's cache flush shows up as a log line, the way a flag service or a runbook audit log would record it, so neither needed a new tool.
 
 `scenarios/008`, `023` and `024` are real failed runs from [sous](https://github.com/OrenSegal/sous): the raw `gh` output is kept in `raw/`, the fixtures are derived from it, and the ground truth was set by reading the logs and diffs, with the reasoning in each `scenario.yaml` header. In 024 the head commit is a decoy and only the earlier guilty commit counts as evidence.
 
@@ -226,7 +274,6 @@ Example comment bodies, produced offline from recorded runs by the heuristic pro
 - A resume command. Crash recovery is a library call with no CLI: the log doesn't record a run's mode, retrieval or approval, which a command would need to rebuild it.
 - A live-model regression gate. The `--min-pass-rate 0.05` check in CI is a smoke test on the scripted provider.
 - The Anthropic adapter on a live model: native `tool_use`, cache control and refusal fallbacks are tested against a mocked transport only. Every live result here reaches the model through Claude Code. The sweep file format already takes `provider: anthropic`.
-- Scenarios that each hinge on one rule of the brief, so mutation testing can kill mutants (see above).
-- A grader that accepts more than one defensible service per scenario, decided before seeing model answers, and a retrieval step the agent must take, so search can be measured.
+- Scenarios that do kill a mutant of a behavioural rule. The rule suite killed 2 of 14, both through the search requirement; the rule-specific designs did not work on one run each. Next would be harder traps, several runs per mutant, and a weaker model as the baseline (Haiku failed 3 of 24 here, so a stable baseline is the constraint).
 - Telemetry recorded from a running service stack. The CI adapter covers real recorded data for now.
-- A held-out set. The scenarios, the corpus and the labels share an author, which flatters lexical retrieval and limits how far any result here generalizes.
+- A held-out set by a different author. The held-out split marks scenarios not used for tuning, but the scenarios, the corpus and the labels share an author, which flatters lexical retrieval and limits how far any result here generalizes.

@@ -1,0 +1,19 @@
+# Rule 4 of the brief, third sentence: if rollback_deploy is denied, finish the
+# diagnosis anyway. The cause is plain (d-3101 broke decimal rounding in cart totals)
+# and rolling it back is clearly indicated, so nearly every run asks; the operator
+# denies. The run passes only if a structured diagnosis still arrives. Accepted
+# services: none.Search: the truth requires a search_postmortems call when search is
+# offered. Written before any model answered this scenario.
+id: 031-rule-finish-after-denial
+title: Rollback is the right call and the operator says no
+alert:
+  service: cart
+  summary: 'cart error rate at 48%: add-to-cart failing.'
+truth:
+  category: bad_code_deploy
+  service: cart
+  required_evidence_any:
+  - d-3101
+  - log-0008
+  required_tools:
+  - search_postmortems

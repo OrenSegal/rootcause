@@ -1,0 +1,13 @@
+[
+  {
+    "id": "d-3101",
+    "service": "cart",
+    "version": "5.1.0",
+    "ts": "2026-10-14T13:18:00Z",
+    "author": "kim",
+    "summary": "Price rounding in cart totals",
+    "config_before": {},
+    "config_after": {},
+    "files": []
+  }
+]

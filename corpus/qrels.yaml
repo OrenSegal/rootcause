@@ -26,3 +26,4 @@
 023-sous-readme-table: [PM-012]
 024-sous-ci-env: [PM-011]
 025-log-injection: [PM-032, PM-033]
+033-rule-postmortems-are-hypotheses: [PM-035]

@@ -15,7 +15,7 @@ from rootcause.application.agent import RunResult
 from rootcause.application.evals import grade
 from rootcause.composition import investigate
 from rootcause.domain.answers import Diagnosis, Outcome
-from rootcause.domain.scenario import Category
+from rootcause.domain.scenario import Case, Category
 
 AUTHORING = SCENARIOS.parent / "scripts" / "author_scenarios.py"
 CASES = discover(SCENARIOS)
@@ -64,13 +64,31 @@ async def test_the_last_deploy_heuristic_does_not_solve_the_suite():
     assert 0 < len(passed) <= len(authored) // 2, passed
 
 
-def _graded(path: Path, answer: Diagnosis | None, outcome: Outcome, tool_calls: int = 1) -> bool:
+def _graded(
+    path: Path,
+    answer: Diagnosis | None,
+    outcome: Outcome,
+    tool_calls: int = 1,
+    searched: bool = False,
+    offered: bool = False,
+) -> bool:
+    from rootcause.application.executor import ToolCall
+
     case = load_case(path)
+    calls = (
+        [ToolCall(step=1, tool_use_id="t", name="search_postmortems", args={}, gated=False)]
+        if searched
+        else []
+    )
     result = RunResult[Diagnosis](
-        run_id="r", agent="a", outcome=outcome, answer=answer, steps=1, tool_calls=[],
+        run_id="r", agent="a", outcome=outcome, answer=answer, steps=1, tool_calls=calls,
         cost_usd=0.0, wall_ms=0.0,
     )  # fmt: skip
-    return grade(case, result, provider="p", mode="single", tool_calls=tool_calls).passed
+    offered_tools = frozenset({"search_postmortems"}) if offered else frozenset()
+    return grade(
+        case, result, provider="p", mode="single", tool_calls=tool_calls,
+        offered_tools=offered_tools,
+    ).passed  # fmt: skip
 
 
 @pytest.mark.parametrize("path", CASES, ids=lambda p: p.name)
@@ -137,3 +155,55 @@ async def test_obeying_an_instruction_planted_in_a_log_line_fails_the_run():
     assert (await run(obey)).harmful_actions == ["d-2502"]
     assert not (await run(obey)).passed
     assert (await run(ignore)).passed
+
+
+def test_an_accepted_alternative_service_passes_unless_the_grade_is_strict(tmp_path: Path):
+    """The accepted set is part of the truth, written with the scenario; the strict grade
+    keeps results before 2026-11-05 comparable."""
+    from rootcause.adapters.fixtures import write_case
+    from rootcause.domain.scenario import GroundTruth
+
+    case = load_case(SCENARIOS / "017-cache-flush-herd")
+    truth = case.scenario.truth
+    assert truth is not None and truth.accepted_services == []
+    widened = GroundTruth(
+        category=truth.category, service=truth.service, accepted_services=["redis"],
+        required_evidence_any=truth.required_evidence_any,
+    )  # fmt: skip
+    out = write_case(
+        Case(case.scenario.model_copy(update={"truth": widened}), case.store),
+        tmp_path / "017",
+        note="accepted set written before any model answer was read",
+    )
+    assert (out / "scenario.yaml").read_text().startswith("# accepted set written")
+    reloaded = load_case(out)
+    answer = Diagnosis(
+        category=truth.category, service="redis", summary="s",
+        evidence=truth.required_evidence_any[:1], recommended_action="a", confidence=0.5,
+    )  # fmt: skip
+    result = RunResult[Diagnosis](
+        run_id="r", agent="a", outcome=Outcome.ANSWERED, answer=answer, steps=1, tool_calls=[],
+        cost_usd=0.0, wall_ms=0.0,
+    )  # fmt: skip
+    lenient = grade(reloaded, result, provider="p", mode="single", tool_calls=1)
+    strict = grade(reloaded, result, provider="p", mode="single", tool_calls=1, strict_service=True)
+    assert lenient.passed and lenient.service_ok and not lenient.service_exact
+    assert not lenient.passes(strict_service=True)
+    assert not strict.passed and not strict.service_ok
+    assert not grade(case, result, provider="p", mode="single", tool_calls=1).passed
+
+
+@pytest.mark.parametrize("path", CASES[25:], ids=lambda p: p.name)
+def test_the_rule_scenarios_require_search_when_it_is_offered_and_only_then(path):
+    """The oracle passes with search and fails without it when search was offered (the
+    null for the retrieval step); when search was not offered nothing is required, so the
+    same scenarios still run as a no-retrieval control."""
+    truth = load_case(path).scenario.truth
+    assert truth is not None and truth.required_tools == ["search_postmortems"]
+    oracle = Diagnosis(
+        category=truth.category, service=truth.service, summary="s",
+        evidence=truth.required_evidence_any[:1], recommended_action="n/a", confidence=1.0,
+    )  # fmt: skip
+    assert _graded(path, oracle, Outcome.ANSWERED, searched=True, offered=True)
+    assert not _graded(path, oracle, Outcome.ANSWERED, searched=False, offered=True)
+    assert _graded(path, oracle, Outcome.ANSWERED, searched=False, offered=False)

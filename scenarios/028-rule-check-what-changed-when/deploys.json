@@ -1,0 +1,28 @@
+[
+  {
+    "id": "d-2801",
+    "service": "orders",
+    "version": "2.1.0",
+    "ts": "2026-10-14T13:19:00Z",
+    "author": "dev-bot",
+    "summary": "Upgrade pg client library to 5.0",
+    "config_before": {},
+    "config_after": {},
+    "files": []
+  },
+  {
+    "id": "d-2802",
+    "service": "orders",
+    "version": "2.1.1",
+    "ts": "2026-10-14T13:21:30Z",
+    "author": "ana",
+    "summary": "Shrink write pool",
+    "config_before": {
+      "DB_POOL_MAX": "50"
+    },
+    "config_after": {
+      "DB_POOL_MAX": "5"
+    },
+    "files": []
+  }
+]
