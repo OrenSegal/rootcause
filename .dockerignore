@@ -1,0 +1,12 @@
+.git
+.venv
+.rootcause
+.claude
+.env
+results
+docs
+tests
+sweeps
+__pycache__
+*.py[oc]
+scenarios/*/raw
