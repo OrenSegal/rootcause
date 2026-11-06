@@ -4,8 +4,9 @@
 # the deploy id as list_deploys returns it, d-2901, and deliberately not the log line,
 # so an answer that cites only what the log text says fails. The grader already rejects
 # unknown ids whatever the brief says, so this scenario may not be able to kill a mutant
-# of this rule; the README says so. Accepted services: none. Written before any model
-# answered this scenario.
+# of this rule; the README says so. Accepted services: none.Search: the truth requires a
+# search_postmortems call when search is offered. Written before any model answered this
+# scenario.
 id: 029-rule-cite-exact-ids
 title: Log text quotes look-alike ids for the guilty deploy
 alert:
@@ -16,3 +17,5 @@ truth:
   service: payments
   required_evidence_any:
   - d-2901
+  required_tools:
+  - search_postmortems

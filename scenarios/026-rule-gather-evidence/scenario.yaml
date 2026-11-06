@@ -15,3 +15,5 @@ truth:
   required_evidence_any:
   - cfg:d-2601:UPSTREAM_TIMEOUT_MS
   - d-2601
+  required_tools:
+  - search_postmortems
