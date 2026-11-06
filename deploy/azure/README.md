@@ -60,6 +60,43 @@ deploying: `az bicep build --file deploy/azure/main.bicep`.
 
 To remove everything: `az group delete --name rootcause-rg`.
 
+## Deploy from GitHub Actions
+
+`.github/workflows/deploy-azure.yml` is manual (`workflow_dispatch`). It builds the image,
+pushes it to GHCR, signs in to Azure with OIDC, deploys the Bicep and checks `/healthz`.
+No Azure secret is stored: the workflow gets a short-lived token, and the three values below
+are identifiers, not credentials.
+
+One-time setup, after the resource group exists. Replace the placeholders.
+
+```bash
+SUB=$(az account show --query id -o tsv)
+TENANT=$(az account show --query tenantId -o tsv)
+APP_ID=$(az ad app create --display-name rootcause-deploy --query appId -o tsv)
+az ad sp create --id "$APP_ID"
+az role assignment create --assignee "$APP_ID" --role Contributor \
+  --scope "/subscriptions/$SUB/resourceGroups/rootcause-rg"
+az ad app federated-credential create --id "$APP_ID" --parameters '{
+  "name": "rootcause-azure-env",
+  "issuer": "https://token.actions.githubusercontent.com",
+  "subject": "repo:OrenSegal/rootcause:environment:azure",
+  "audiences": ["api://AzureADTokenExchange"]
+}'
+```
+
+The role is scoped to the one resource group, not the subscription. Then in the GitHub
+repository, create an environment named `azure` and add three secrets to it (or to the
+repository):
+
+| Secret | Value |
+| --- | --- |
+| `AZURE_CLIENT_ID` | `$APP_ID` |
+| `AZURE_TENANT_ID` | `$TENANT` |
+| `AZURE_SUBSCRIPTION_ID` | `$SUB` |
+
+Run it from the Actions tab or with `gh workflow run deploy-azure.yml`. After the first
+push, set the new `rootcause-telemetry` package to Public (see above), or the deploy cannot pull it.
+
 ## Cold starts
 
 At zero replicas the first request waits for the replica to start. A local run limited to
