@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-- Eight rule scenarios (026 to 033), accepted services in the truth with `--strict-service` for the old grade, a held-out split in sweep files and the report, and a required search step. Built and tested with no model runs; no result exists for them yet.
+- Eight rule scenarios (026 to 033), accepted services in the truth with `--strict-service` for the old grade, a held-out split in sweep files and the report, and a required search step. A 72-run sweep of them is in `results/sweeps/rule-suite-2026-11-05/`; the mutants are generated and not run.
 
 ## 0.2.0 (2026-11-02)
 
