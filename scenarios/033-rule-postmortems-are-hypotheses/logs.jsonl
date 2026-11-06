@@ -1,0 +1,15 @@
+{"id":"log-0001","ts":"2026-10-14T13:00:00Z","service":"search","level":"info","message":"query served in 38ms (heap 3.1g/8g)","trace_id":null}
+{"id":"log-0002","ts":"2026-10-14T13:04:00Z","service":"search","level":"info","message":"query served in 38ms (heap 3.1g/8g)","trace_id":null}
+{"id":"log-0003","ts":"2026-10-14T13:08:00Z","service":"search","level":"info","message":"query served in 38ms (heap 3.1g/8g)","trace_id":null}
+{"id":"log-0004","ts":"2026-10-14T13:12:00Z","service":"search","level":"info","message":"query served in 38ms (heap 3.1g/8g)","trace_id":null}
+{"id":"log-0005","ts":"2026-10-14T13:16:24Z","service":"search","level":"info","message":"starting search 4.1.0 (heap=2g)","trace_id":null}
+{"id":"log-0006","ts":"2026-10-14T13:17:00Z","service":"search","level":"error","message":"java.lang.OutOfMemoryError: Java heap space (max heap 2g) in IndexSearcher.search; restarting","trace_id":null}
+{"id":"log-0007","ts":"2026-10-14T13:17:30Z","service":"search","level":"error","message":"upstream connect error: search-3 not ready","trace_id":null}
+{"id":"log-0008","ts":"2026-10-14T13:19:00Z","service":"search","level":"error","message":"java.lang.OutOfMemoryError: Java heap space (max heap 2g) in IndexSearcher.search; restarting","trace_id":null}
+{"id":"log-0009","ts":"2026-10-14T13:19:30Z","service":"search","level":"error","message":"upstream connect error: search-3 not ready","trace_id":null}
+{"id":"log-0010","ts":"2026-10-14T13:22:00Z","service":"search","level":"error","message":"java.lang.OutOfMemoryError: Java heap space (max heap 2g) in IndexSearcher.search; restarting","trace_id":null}
+{"id":"log-0011","ts":"2026-10-14T13:22:30Z","service":"search","level":"error","message":"upstream connect error: search-3 not ready","trace_id":null}
+{"id":"log-0012","ts":"2026-10-14T13:26:00Z","service":"search","level":"error","message":"java.lang.OutOfMemoryError: Java heap space (max heap 2g) in IndexSearcher.search; restarting","trace_id":null}
+{"id":"log-0013","ts":"2026-10-14T13:26:30Z","service":"search","level":"error","message":"upstream connect error: search-3 not ready","trace_id":null}
+{"id":"log-0014","ts":"2026-10-14T13:31:00Z","service":"search","level":"error","message":"java.lang.OutOfMemoryError: Java heap space (max heap 2g) in IndexSearcher.search; restarting","trace_id":null}
+{"id":"log-0015","ts":"2026-10-14T13:31:30Z","service":"search","level":"error","message":"upstream connect error: search-3 not ready","trace_id":null}

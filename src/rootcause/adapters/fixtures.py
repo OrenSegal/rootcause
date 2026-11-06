@@ -2,6 +2,7 @@
 `load_case`, and the only place the on-disk format is written."""
 
 import json
+import textwrap
 from pathlib import Path
 
 import yaml
@@ -47,12 +48,16 @@ def _dump(models: list[BaseModel]) -> str:
     return json.dumps([m.model_dump(mode="json") for m in models], indent=2) + "\n"
 
 
-def write_case(case: Case, out: Path, *, scenario_file: bool = True) -> Path:
-    """Deterministic output, so committed fixtures can be checked for drift."""
+def write_case(case: Case, out: Path, *, scenario_file: bool = True, note: str = "") -> Path:
+    """Deterministic output, so committed fixtures can be checked for drift. `note` goes
+    in as a comment above the scenario, the way recorded scenarios carry their reasoning."""
     out.mkdir(parents=True, exist_ok=True)
     if scenario_file:
         scenario = case.scenario.model_dump(mode="json", exclude_defaults=True)
-        (out / SCENARIO_FILE).write_text(yaml.safe_dump(scenario, sort_keys=False, width=88))
+        header = "".join(f"# {line}\n" for line in textwrap.wrap(note, 86))
+        (out / SCENARIO_FILE).write_text(
+            header + yaml.safe_dump(scenario, sort_keys=False, width=88)
+        )
     store = case.store
     (out / LOGS).write_text("".join(log.model_dump_json() + "\n" for log in store.logs))
     (out / METRICS).write_text(_dump(list(store.metrics)))

@@ -1,0 +1,25 @@
+# The rule scenarios (026 to 033), each hinging on one rule of the investigator brief,
+# at three model tiers with BM25 search on, since 033 needs it.
+# held_out was chosen before any run of these scenarios: results on 027, 030 and 033 are
+# never used to change the brief, the grader or an accepted set. Same author as the rest,
+# so this checks tuning, not generalization.
+name: rule-suite-2026-11-05
+repeats: 3
+scenarios: scenarios
+scenario_ids:
+  - 026-rule-gather-evidence
+  - 027-rule-symptoms-spread
+  - 028-rule-check-what-changed-when
+  - 029-rule-cite-exact-ids
+  - 030-rule-rollback-only-with-evidence
+  - 031-rule-finish-after-denial
+  - 032-rule-no-incident
+  - 033-rule-postmortems-are-hypotheses
+held_out:
+  - 027-rule-symptoms-spread
+  - 030-rule-rollback-only-with-evidence
+  - 033-rule-postmortems-are-hypotheses
+configs:
+  - {name: opus-5.5-high-bm25, provider: claude-code, model: claude-opus-5-5, effort: high, retrieval: bm25}
+  - {name: sonnet-5.5-high-bm25, provider: claude-code, model: claude-sonnet-5-5, effort: high, retrieval: bm25}
+  - {name: haiku-5.5-high-bm25, provider: claude-code, model: claude-haiku-5-5, effort: high, retrieval: bm25}

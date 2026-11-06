@@ -60,6 +60,11 @@ class SweepSpec(BaseModel):
     name: str
     repeats: int = 3
     scenarios: str = "scenarios"
+    scenario_ids: list[str] = []  # run only these; empty means every scenario in the directory
+    # Scenarios whose results are reported apart and never used to change the brief, the
+    # grader or an accepted set. The split is a check on tuning, not on authorship: every
+    # scenario here has the same author.
+    held_out: list[str] = []
     configs: list[SweepConfig]
 
     @model_validator(mode="after")
@@ -68,6 +73,9 @@ class SweepSpec(BaseModel):
         if dupes := sorted({n for n in names if names.count(n) > 1}):
             raise ValueError(f"duplicate config names: {', '.join(dupes)}")
         return self
+
+    def selects(self, scenario_id: str) -> bool:
+        return not self.scenario_ids or scenario_id in self.scenario_ids
 
 
 class Row(BaseModel):
@@ -107,7 +115,12 @@ def is_error(config: SweepConfig, row: Row) -> bool:
 
 
 def summarize(
-    config: SweepConfig, rows: Sequence[Row], errors: Sequence[Row] = (), *, k: int | None = None
+    config: SweepConfig,
+    rows: Sequence[Row],
+    errors: Sequence[Row] = (),
+    *,
+    k: int | None = None,
+    strict_service: bool = False,
 ) -> ConfigSummary:
     """`k` should be the same for every configuration being compared (the sweep's
     repeat count): a configuration that lost runs to errors must not get a smaller k
@@ -115,10 +128,10 @@ def summarize(
     not shown reliable for pass^k, and as passed for pass@k only if a run passed."""
     scored = [r for r in rows if not is_error(config, r)]
     failed = [*errors, *(r for r in rows if is_error(config, r))]
-    passes = sum(r.grade.passed for r in scored)
+    passes = sum(r.grade.passes(strict_service=strict_service) for r in scored)
     by_scenario: dict[str, list[bool]] = defaultdict(list)
     for r in scored:
-        by_scenario[r.scenario_id].append(r.grade.passed)
+        by_scenario[r.scenario_id].append(r.grade.passes(strict_service=strict_service))
     k = k or min((len(v) for v in by_scenario.values()), default=1)
     hat = [
         pass_hat_k(n=len(v), c=sum(v), k=k) if len(v) >= k else 0.0 for v in by_scenario.values()
@@ -176,11 +189,17 @@ def _pct(x: float) -> str:
 
 
 def report_markdown(
-    spec: SweepSpec, summaries: Sequence[ConfigSummary], rows: Sequence[Row]
+    spec: SweepSpec,
+    summaries: Sequence[ConfigSummary],
+    rows: Sequence[Row],
+    *,
+    strict_service: bool = False,
 ) -> str:
     k = min((s.k for s in summaries), default=1)
+    graded = "single-service grade" if strict_service else "accepted-service grade"
     lines = [
-        f"### Sweep `{spec.name}`: {len(summaries)} configurations, {spec.repeats} runs each",
+        f"### Sweep `{spec.name}`: {len(summaries)} configurations, {spec.repeats} runs each "
+        f"({graded})",
         "",
         f"| config | scored / errors | pass rate (95% CI) | pass^{k} | pass@{k} | mean cost "
         "| cost per solved | p50 / p90 wall | output tokens | tool calls | searched | frontier |",
@@ -203,10 +222,27 @@ def report_markdown(
             + ", ".join(f"{s.name} {s.short_scenarios}" for s in short)
             + ".",
         ]
+    if spec.held_out:
+        lines += ["", "| config | in-sample pass rate (95% CI) | held-out pass rate (95% CI) |",
+                  "|---|---|---|"]  # fmt: skip
+        for c in spec.configs:
+            cells = []
+            for want in (False, True):
+                part = [r for r in rows if r.config == c.name
+                        and (r.scenario_id in spec.held_out) is want]  # fmt: skip
+                p = summarize(c, part, k=spec.repeats, strict_service=strict_service)
+                cells.append(
+                    f"{_pct(p.pass_rate)} ({_pct(p.ci_low)} to {_pct(p.ci_high)}), {p.scored} runs"
+                    if p.scored
+                    else "no runs"
+                )
+            lines.append(f"| {c.name} | {cells[0]} | {cells[1]} |")
+        lines += ["", "Held out: " + ", ".join(spec.held_out) + ". Results on these are never "
+                  "used to change the brief, the grader or an accepted set."]  # fmt: skip
     names = [s.name for s in summaries]
     grid: dict[str, dict[str, list[bool]]] = defaultdict(lambda: defaultdict(list))
     for r in rows:
-        grid[r.scenario_id][r.config].append(r.grade.passed)
+        grid[r.scenario_id][r.config].append(r.grade.passes(strict_service=strict_service))
     lines += ["", "| scenario | " + " | ".join(names) + " |", "|---" * (len(names) + 1) + "|"]
     for sid in sorted(grid):
         cells = [f"{sum(grid[sid][n])}/{len(grid[sid][n])}" for n in names]

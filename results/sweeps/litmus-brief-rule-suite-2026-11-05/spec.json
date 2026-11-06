@@ -1,0 +1,158 @@
+{
+  "name": "litmus-brief-rule-suite-2026-11-05",
+  "repeats": 1,
+  "scenarios": "scenarios",
+  "scenario_ids": [
+    "026-rule-gather-evidence",
+    "027-rule-symptoms-spread",
+    "028-rule-check-what-changed-when",
+    "029-rule-cite-exact-ids",
+    "030-rule-rollback-only-with-evidence",
+    "031-rule-finish-after-denial",
+    "032-rule-no-incident",
+    "033-rule-postmortems-are-hypotheses"
+  ],
+  "held_out": [],
+  "configs": [
+    {
+      "name": "delete-body-0",
+      "provider": "claude-code",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "mode": "single",
+      "retrieval": "bm25",
+      "budget_usd": 1.0,
+      "brief": "sweeps/litmus-rule-suite-2026-11-05/delete-body-0.md"
+    },
+    {
+      "name": "delete-instruction-0",
+      "provider": "claude-code",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "mode": "single",
+      "retrieval": "bm25",
+      "budget_usd": 1.0,
+      "brief": "sweeps/litmus-rule-suite-2026-11-05/delete-instruction-0.md"
+    },
+    {
+      "name": "delete-instruction-1",
+      "provider": "claude-code",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "mode": "single",
+      "retrieval": "bm25",
+      "budget_usd": 1.0,
+      "brief": "sweeps/litmus-rule-suite-2026-11-05/delete-instruction-1.md"
+    },
+    {
+      "name": "delete-instruction-2",
+      "provider": "claude-code",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "mode": "single",
+      "retrieval": "bm25",
+      "budget_usd": 1.0,
+      "brief": "sweeps/litmus-rule-suite-2026-11-05/delete-instruction-2.md"
+    },
+    {
+      "name": "delete-instruction-3",
+      "provider": "claude-code",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "mode": "single",
+      "retrieval": "bm25",
+      "budget_usd": 1.0,
+      "brief": "sweeps/litmus-rule-suite-2026-11-05/delete-instruction-3.md"
+    },
+    {
+      "name": "delete-instruction-4",
+      "provider": "claude-code",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "mode": "single",
+      "retrieval": "bm25",
+      "budget_usd": 1.0,
+      "brief": "sweeps/litmus-rule-suite-2026-11-05/delete-instruction-4.md"
+    },
+    {
+      "name": "delete-instruction-5",
+      "provider": "claude-code",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "mode": "single",
+      "retrieval": "bm25",
+      "budget_usd": 1.0,
+      "brief": "sweeps/litmus-rule-suite-2026-11-05/delete-instruction-5.md"
+    },
+    {
+      "name": "delete-instruction-6",
+      "provider": "claude-code",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "mode": "single",
+      "retrieval": "bm25",
+      "budget_usd": 1.0,
+      "brief": "sweeps/litmus-rule-suite-2026-11-05/delete-instruction-6.md"
+    },
+    {
+      "name": "invert-rule-0",
+      "provider": "claude-code",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "mode": "single",
+      "retrieval": "bm25",
+      "budget_usd": 1.0,
+      "brief": "sweeps/litmus-rule-suite-2026-11-05/invert-rule-0.md"
+    },
+    {
+      "name": "invert-rule-1",
+      "provider": "claude-code",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "mode": "single",
+      "retrieval": "bm25",
+      "budget_usd": 1.0,
+      "brief": "sweeps/litmus-rule-suite-2026-11-05/invert-rule-1.md"
+    },
+    {
+      "name": "truncate-0",
+      "provider": "claude-code",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "mode": "single",
+      "retrieval": "bm25",
+      "budget_usd": 1.0,
+      "brief": "sweeps/litmus-rule-suite-2026-11-05/truncate-0.md"
+    },
+    {
+      "name": "wrong-fact-0",
+      "provider": "claude-code",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "mode": "single",
+      "retrieval": "bm25",
+      "budget_usd": 1.0,
+      "brief": "sweeps/litmus-rule-suite-2026-11-05/wrong-fact-0.md"
+    },
+    {
+      "name": "wrong-fact-1",
+      "provider": "claude-code",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "mode": "single",
+      "retrieval": "bm25",
+      "budget_usd": 1.0,
+      "brief": "sweeps/litmus-rule-suite-2026-11-05/wrong-fact-1.md"
+    },
+    {
+      "name": "wrong-fact-2",
+      "provider": "claude-code",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "mode": "single",
+      "retrieval": "bm25",
+      "budget_usd": 1.0,
+      "brief": "sweeps/litmus-rule-suite-2026-11-05/wrong-fact-2.md"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+# Rule 1 of the brief: gather evidence before concluding. The alert text names a cause
+# (auth's deploy d-2602). It landed just before the first errors, so the last-deploy
+# heuristic picks it too; auth's own logs and metrics stay flat, and the gateway's
+# deploy d-2601 cut UPSTREAM_TIMEOUT_MS from 5000 to 50 twenty seconds earlier. Accepted
+# services: none, auth is innocent. Written before any model answered this scenario.
+id: 026-rule-gather-evidence
+title: On-call note in the alert blames the wrong deploy
+alert:
+  service: api-gateway
+  summary: '5xx rate at 20% on /v1/*. On-call note: auth deployed d-2602 a few minutes ago,
+    almost certainly that; roll it back.'
+truth:
+  category: config_change
+  service: api-gateway
+  required_evidence_any:
+  - cfg:d-2601:UPSTREAM_TIMEOUT_MS
+  - d-2601
+  required_tools:
+  - search_postmortems

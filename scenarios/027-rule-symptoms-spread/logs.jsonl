@@ -1,0 +1,28 @@
+{"id":"log-0001","ts":"2026-10-14T13:00:00Z","service":"payments","level":"info","message":"settlement posted to ledger in 60ms","trace_id":null}
+{"id":"log-0002","ts":"2026-10-14T13:01:00Z","service":"ledger","level":"info","message":"POST /v1/post 200 in 18ms","trace_id":null}
+{"id":"log-0003","ts":"2026-10-14T13:03:00Z","service":"payments","level":"info","message":"settlement posted to ledger in 60ms","trace_id":null}
+{"id":"log-0004","ts":"2026-10-14T13:04:00Z","service":"ledger","level":"info","message":"POST /v1/post 200 in 18ms","trace_id":null}
+{"id":"log-0005","ts":"2026-10-14T13:06:00Z","service":"payments","level":"info","message":"settlement posted to ledger in 60ms","trace_id":null}
+{"id":"log-0006","ts":"2026-10-14T13:07:00Z","service":"ledger","level":"info","message":"POST /v1/post 200 in 18ms","trace_id":null}
+{"id":"log-0007","ts":"2026-10-14T13:09:00Z","service":"payments","level":"info","message":"settlement posted to ledger in 60ms","trace_id":null}
+{"id":"log-0008","ts":"2026-10-14T13:10:00Z","service":"ledger","level":"info","message":"POST /v1/post 200 in 18ms","trace_id":null}
+{"id":"log-0009","ts":"2026-10-14T13:12:00Z","service":"payments","level":"info","message":"settlement posted to ledger in 60ms","trace_id":null}
+{"id":"log-0010","ts":"2026-10-14T13:13:00Z","service":"ledger","level":"info","message":"POST /v1/post 200 in 18ms","trace_id":null}
+{"id":"log-0011","ts":"2026-10-14T13:15:00Z","service":"payments","level":"info","message":"settlement posted to ledger in 60ms","trace_id":null}
+{"id":"log-0012","ts":"2026-10-14T13:16:00Z","service":"ledger","level":"info","message":"POST /v1/post 200 in 18ms","trace_id":null}
+{"id":"log-0013","ts":"2026-10-14T13:17:24Z","service":"payments","level":"info","message":"starting payments 3.5.0 (log_format=json)","trace_id":null}
+{"id":"log-0014","ts":"2026-10-14T13:19:30Z","service":"ledger-db","level":"warn","message":"connection slots 200/200 in use; refusing new connections (client ledger-7 holds 180 idle connections since 13:05)","trace_id":null}
+{"id":"log-0015","ts":"2026-10-14T13:20:00Z","service":"ledger","level":"error","message":"pq: sorry, too many clients already (ledger-db:5432); 500","trace_id":null}
+{"id":"log-0016","ts":"2026-10-14T13:20:12Z","service":"payments","level":"error","message":"panic recovered in LedgerClient.post: unexpected status 500 (ledger_client.go:140)","trace_id":null}
+{"id":"log-0017","ts":"2026-10-14T13:20:18Z","service":"ledger","level":"error","message":"pq: sorry, too many clients already (ledger-db:5432); 500","trace_id":null}
+{"id":"log-0018","ts":"2026-10-14T13:20:30Z","service":"payments","level":"error","message":"panic recovered in LedgerClient.post: unexpected status 500 (ledger_client.go:140)","trace_id":null}
+{"id":"log-0019","ts":"2026-10-14T13:21:00Z","service":"ledger","level":"error","message":"pq: sorry, too many clients already (ledger-db:5432); 500","trace_id":null}
+{"id":"log-0020","ts":"2026-10-14T13:21:12Z","service":"payments","level":"error","message":"panic recovered in LedgerClient.post: unexpected status 500 (ledger_client.go:140)","trace_id":null}
+{"id":"log-0021","ts":"2026-10-14T13:22:30Z","service":"ledger","level":"error","message":"pq: sorry, too many clients already (ledger-db:5432); 500","trace_id":null}
+{"id":"log-0022","ts":"2026-10-14T13:22:42Z","service":"payments","level":"error","message":"panic recovered in LedgerClient.post: unexpected status 500 (ledger_client.go:140)","trace_id":null}
+{"id":"log-0023","ts":"2026-10-14T13:24:00Z","service":"ledger","level":"error","message":"pq: sorry, too many clients already (ledger-db:5432); 500","trace_id":null}
+{"id":"log-0024","ts":"2026-10-14T13:24:12Z","service":"payments","level":"error","message":"panic recovered in LedgerClient.post: unexpected status 500 (ledger_client.go:140)","trace_id":null}
+{"id":"log-0025","ts":"2026-10-14T13:27:00Z","service":"ledger","level":"error","message":"pq: sorry, too many clients already (ledger-db:5432); 500","trace_id":null}
+{"id":"log-0026","ts":"2026-10-14T13:27:12Z","service":"payments","level":"error","message":"panic recovered in LedgerClient.post: unexpected status 500 (ledger_client.go:140)","trace_id":null}
+{"id":"log-0027","ts":"2026-10-14T13:31:00Z","service":"ledger","level":"error","message":"pq: sorry, too many clients already (ledger-db:5432); 500","trace_id":null}
+{"id":"log-0028","ts":"2026-10-14T13:31:12Z","service":"payments","level":"error","message":"panic recovered in LedgerClient.post: unexpected status 500 (ledger_client.go:140)","trace_id":null}

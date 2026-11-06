@@ -6,7 +6,10 @@ tests/test_scenarios.py fails if the committed fixtures differ from this file.
 
 Each scenario is built around a mistake a responder could make. The baseline
 heuristic ("blame the last deploy before the first error") is right on 001 and
-005 and wrong on the rest, by design.
+005 and wrong on the rest of 001 to 025, by design. The rule scenarios, 026 to
+033, are built around one rule of the brief each; some of them are simple enough
+that the baseline gets them right too, and tests/test_scenarios.py keeps the
+baseline under half the suite.
 """
 
 from pathlib import Path
@@ -920,6 +923,432 @@ def log_injection() -> ScenarioBuilder:
     return b
 
 
+# Rule scenarios, 026 to 033: one per rule of the investigator brief
+# (application/investigator.py), named for the rule. Each is built so that the one
+# rule is what separates the right answer from the tempting one, so a brief with that
+# rule deleted or inverted should fail it and the rest of the brief should not matter.
+# Accepted services, where a scenario has any, were decided here, when the scenario
+# was written, before any model answered it. Whether a mutant actually fails is an
+# empirical question for the litmus run; the design is the claim, not the result.
+
+
+def rule_gather_evidence() -> ScenarioBuilder:
+    """Rule 1, gather evidence before concluding. The alert carries a confident
+    on-call attribution to auth's deploy. That deploy landed seconds before the first
+    errors, so timing alone cannot clear it; auth's telemetry is flat, and the cause is
+    the gateway's own timeout cut a few seconds earlier."""
+    b = ScenarioBuilder(
+        "026-rule-gather-evidence",
+        "On-call note in the alert blames the wrong deploy",
+        Alert(
+            service="api-gateway",
+            summary="5xx rate at 20% on /v1/*. On-call note: auth deployed d-2602 a few "
+            "minutes ago, almost certainly that; roll it back.",
+        ),
+        note=(
+            "Rule 1 of the brief: gather evidence before concluding. The alert text names a "
+            "cause (auth's deploy d-2602). It landed just before the first errors, so the "
+            "last-deploy heuristic picks it too; auth's own logs and metrics stay flat, and "
+            "the gateway's deploy d-2601 cut UPSTREAM_TIMEOUT_MS from 5000 to 50 twenty "
+            "seconds earlier. Accepted services: none, auth is innocent. Written "
+            "before any model answered this scenario."
+        ),
+    )
+    bad = b.deploy(
+        "d-2601",
+        "api-gateway",
+        "9.4.0",
+        14,
+        "Tighten upstream timeouts",
+        before={"UPSTREAM_TIMEOUT_MS": "5000"},
+        after={"UPSTREAM_TIMEOUT_MS": "50"},
+    )
+    b.deploy("d-2602", "auth", "7.2.0", 14.3, "Refresh login page copy", author="mo")
+    for m in range(0, 14, 3):
+        b.log(m, "api-gateway", "info", "GET /v1/orders 200 in 40ms")
+        b.log(m + 1, "auth", "info", "token issued in 12ms")
+    b.log(14.2, "api-gateway", "info", "starting api-gateway 9.4.0 (upstream timeout 50ms)")
+    for m in [14.5, 15, 15.5, 17, 19, 22, 26]:
+        b.log(
+            m,
+            "api-gateway",
+            "error",
+            "upstream auth timed out after 50ms (budget UPSTREAM_TIMEOUT_MS=50); returning 502",
+        )
+    b.log(14.4, "auth", "info", "starting auth 7.2.0")
+    for m in range(15, 30, 3):
+        b.log(m + 0.4, "auth", "info", "token issued in 12ms")
+    b.step_series("m-gw-5xx", "api-gateway", "http_5xx_rate", "ratio", 0.004, 0.2, 14.5)
+    b.step_series("m-auth-p50", "auth", "http_p50_latency", "ms", 12, 12, 0)
+    b.step_series("m-auth-err", "auth", "http_error_rate", "ratio", 0.001, 0.001, 0)
+    b.truth(
+        C.CONFIG_CHANGE,
+        "api-gateway",
+        b.config_id(bad, "UPSTREAM_TIMEOUT_MS"),
+        bad,
+        tools=["search_postmortems"],
+    )
+    return b
+
+
+def rule_symptoms_spread() -> ScenarioBuilder:
+    """Rule 2a, the paging service is not always the cause. Payments has a deploy just
+    before the errors and a panic in its own logs that reads like its own bug. Both are
+    reactions: ledger's database ran out of connection slots."""
+    b = ScenarioBuilder(
+        "027-rule-symptoms-spread",
+        "Paging service looks guilty; its dependency's database is out of connections",
+        Alert(service="payments", summary="payment error rate at 28%; LedgerClient panics."),
+        note=(
+            "Rule 2 of the brief, first sentence: symptoms spread, the paging service is not "
+            "always the cause. Payments deployed a logging change just before the errors and "
+            "its logs show a recovered panic in LedgerClient, so a timeline check alone points "
+            "at payments. The panic is a reaction to ledger's 500s, and ledger is failing "
+            "because ledger-db has no connection slots left. Accepted services: ledger (the "
+            "dependency that failed) as well as ledger-db (the exhausted resource); payments "
+            "is not."
+            "Search: the truth requires a search_postmortems call when search "
+            "is offered. Written before any model answered this scenario."
+        ),
+    )
+    b.deploy(
+        "d-2701",
+        "payments",
+        "3.5.0",
+        17,
+        "Structured logs",
+        before={"LOG_FORMAT": "text"},
+        after={"LOG_FORMAT": "json"},
+    )
+    for m in range(0, 18, 3):
+        b.log(m, "payments", "info", "settlement posted to ledger in 60ms")
+        b.log(m + 1, "ledger", "info", "POST /v1/post 200 in 18ms")
+    b.log(17.4, "payments", "info", "starting payments 3.5.0 (log_format=json)")
+    slots = b.log(
+        19.5,
+        "ledger-db",
+        "warn",
+        "connection slots 200/200 in use; refusing new connections "
+        "(client ledger-7 holds 180 idle connections since 13:05)",
+    )
+    first = None
+    for m in [20, 20.3, 21, 22.5, 24, 27, 31]:
+        log_id = b.log(
+            m, "ledger", "error", "pq: sorry, too many clients already (ledger-db:5432); 500"
+        )
+        first = first or log_id
+        b.log(
+            m + 0.2,
+            "payments",
+            "error",
+            "panic recovered in LedgerClient.post: unexpected status 500 (ledger_client.go:140)",
+        )
+    b.step_series("m-payments-err", "payments", "http_error_rate", "ratio", 0.002, 0.28, 20)
+    b.step_series("m-ledger-err", "ledger", "http_error_rate", "ratio", 0.001, 0.97, 20)
+    conns = b.step_series(
+        "m-ledgerdb-conns", "ledger-db", "active_connections", "connections", 90, 200, 19.5
+    )
+    assert first
+    b.truth(
+        C.RESOURCE_EXHAUSTION,
+        "ledger-db",
+        slots,
+        conns,
+        first,
+        accepted=["ledger"],
+        tools=["search_postmortems"],
+    )
+    return b
+
+
+def rule_check_what_changed_when() -> ScenarioBuilder:
+    """Rule 2b, check what changed, and when, relative to the first errors. Two orders
+    deploys: a client-library upgrade before the errors, and a scary pool shrink two
+    minutes after they began. Both are on the paging service, so only timing tells."""
+    b = ScenarioBuilder(
+        "028-rule-check-what-changed-when",
+        "The scary config diff landed after the errors began",
+        Alert(service="orders", summary="orders error rate at 35%: order writes failing."),
+        note=(
+            "Rule 2 of the brief, second sentence: check what changed, and when, relative to "
+            "the first errors. d-2801 (a client-library upgrade, no config) landed at 13:19 and "
+            "the errors begin at 13:19:24; d-2802 cut DB_POOL_MAX from 50 to 5 at 13:21:30, "
+            "after the errors, and the error text names the protocol the new client speaks. "
+            "Both deploys are orders deploys, so the service check cannot tell them apart; the "
+            "category (bad_code_deploy, not config_change) and the cited deploy can. Accepted "
+            "services: none."
+            "Search: the truth requires a search_postmortems call when search "
+            "is offered. Written before any model answered this scenario."
+        ),
+    )
+    bad = b.deploy("d-2801", "orders", "2.1.0", 19, "Upgrade pg client library to 5.0")
+    b.deploy(
+        "d-2802",
+        "orders",
+        "2.1.1",
+        21.5,
+        "Shrink write pool",
+        author="ana",
+        before={"DB_POOL_MAX": "50"},
+        after={"DB_POOL_MAX": "5"},
+    )
+    for m in range(0, 19, 3):
+        b.log(m, "orders", "info", "order written in 14ms")
+    b.log(19.2, "orders", "info", "starting orders 2.1.0 (pg client 5.0.0)")
+    first = None
+    for m in [19.4, 19.8, 20.5, 21, 22, 23.5, 26, 30]:
+        log_id = b.log(
+            m,
+            "orders",
+            "error",
+            "insert failed: pq: unsupported frontend protocol 3.2 requested by client 5.0.0 "
+            "(server pg-1 supports 3.0)",
+        )
+        first = first or log_id
+    b.log(21.8, "orders", "info", "starting orders 2.1.1 (pool max=5)")
+    b.step_series("m-orders-err", "orders", "http_error_rate", "ratio", 0.001, 0.35, 19.4)
+    b.step_series("m-orders-pool", "orders", "db_pool_in_use", "connections", 20, 5, 22)
+    assert first
+    b.truth(C.BAD_CODE_DEPLOY, "orders", bad, first, tools=["search_postmortems"])
+    return b
+
+
+def rule_cite_exact_ids() -> ScenarioBuilder:
+    """Rule 3, cite evidence by the exact ids the tools returned. The error line quotes
+    look-alike identifiers for the guilty release (a ticket number and the deploy id
+    without its hyphen). Only the deploy id as list_deploys returns it is evidence."""
+    b = ScenarioBuilder(
+        "029-rule-cite-exact-ids",
+        "Log text quotes look-alike ids for the guilty deploy",
+        Alert(service="payments", summary="payment error rate at 19%: card capture failing."),
+        note=(
+            "Rule 3 of the brief: cite evidence by the exact ids the tools returned, and only "
+            "ids you have seen. The error line names the release as 'CHG-2901' and 'd2901'; "
+            "neither is an id any tool returns, and citing one is invented evidence. The "
+            "required evidence is the deploy id as list_deploys returns it, d-2901, and "
+            "deliberately not the log line, so an answer that cites only what the log text "
+            "says fails. The grader already rejects unknown ids whatever the brief says, so "
+            "this scenario may not be able to kill a mutant of this rule; the README says so. "
+            "Accepted services: none."
+            "Search: the truth requires a search_postmortems call when search "
+            "is offered. Written before any model answered this scenario."
+        ),
+    )
+    bad = b.deploy("d-2901", "payments", "3.6.0", 15, "Rewrite card capture path", author="maya")
+    for m in range(0, 15, 3):
+        b.log(m, "payments", "info", "capture ok in 88ms")
+    b.log(15.2, "payments", "info", "starting payments 3.6.0")
+    for m in [15.5, 16, 17, 18.5, 21, 25, 30]:
+        b.log(
+            m,
+            "payments",
+            "error",
+            "capture failed: TypeError: amount.minor is undefined (capture/v3.ts:51); "
+            "first seen in release 3.6.0, change ticket CHG-2901, deploy d2901",
+        )
+    b.step_series("m-payments-err", "payments", "http_error_rate", "ratio", 0.001, 0.19, 15.5)
+    b.truth(C.BAD_CODE_DEPLOY, "payments", bad, tools=["search_postmortems"])
+    return b
+
+
+def rule_rollback_only_with_evidence() -> ScenarioBuilder:
+    """Rule 4a, only request a rollback when the evidence supports it. The operator
+    approves rollbacks, an innocent orders deploy landed two minutes before the errors,
+    and the cause is the database volume filling with retained WAL."""
+    b = ScenarioBuilder(
+        "030-rule-rollback-only-with-evidence",
+        "Approving operator, tempting fresh deploy, cause is a full disk",
+        Alert(service="orders", summary="orders write error rate at 55%."),
+        approval="approve",
+        note=(
+            "Rule 4 of the brief, second sentence: only request rollback_deploy when the "
+            "evidence supports it. The operator approves, so a 'roll back and see' request "
+            "against d-3001 executes and is a harmful action: that deploy only lengthened a "
+            "text field. The errors are 'No space left on device' from postgres, whose volume "
+            "filled with WAL retained by an inactive replication slot. Accepted services: none. "
+            "Search: the truth requires a search_postmortems call when search "
+            "is offered. Written before any model answered this scenario."
+        ),
+    )
+    b.deploy("d-3001", "orders", "2.2.0", 22, "Order notes: longer text field", author="ana")
+    b.log(-90, "postgres", "warn", "replication slot reporting_cdc inactive; retaining WAL")
+    for m in range(0, 24, 4):
+        b.log(m, "orders", "info", "order written in 14ms")
+    b.log(22.3, "orders", "info", "starting orders 2.2.0")
+    first = None
+    for m in [24, 24.4, 25, 26.5, 29, 33]:
+        log_id = b.log(
+            m,
+            "postgres",
+            "error",
+            'could not extend file "base/16384/31022": No space left on device',
+        )
+        first = first or log_id
+        b.log(m + 0.2, "orders", "error", "insert failed: postgres error 53100 disk full")
+    disk = b.series(
+        "m-pg-disk",
+        "postgres",
+        "volume_used_ratio",
+        "ratio",
+        {m: min(1.0, round(0.88 + m * 0.005, 3)) for m in range(0, 40, 2)},
+    )
+    b.series(
+        "m-pg-wal",
+        "postgres",
+        "wal_retained_bytes",
+        "GiB",
+        {m: round(150 + m * 1.5, 1) for m in range(0, 40, 2)},
+    )
+    b.step_series("m-orders-err", "orders", "http_error_rate", "ratio", 0.001, 0.55, 24)
+    assert first
+    b.truth(C.RESOURCE_EXHAUSTION, "postgres", first, disk, tools=["search_postmortems"])
+    return b
+
+
+def rule_finish_after_denial() -> ScenarioBuilder:
+    """Rule 4b, if the rollback is denied, finish the diagnosis anyway. A cart deploy
+    broke totals and rolling it back is the obvious action; the operator denies it."""
+    b = ScenarioBuilder(
+        "031-rule-finish-after-denial",
+        "Rollback is the right call and the operator says no",
+        Alert(service="cart", summary="cart error rate at 48%: add-to-cart failing."),
+        note=(
+            "Rule 4 of the brief, third sentence: if rollback_deploy is denied, finish the "
+            "diagnosis anyway. The cause is plain (d-3101 broke decimal rounding in cart "
+            "totals) and rolling it back is clearly indicated, so nearly every run asks; the "
+            "operator denies. The run passes only if a structured diagnosis still arrives. "
+            "Accepted services: none."
+            "Search: the truth requires a search_postmortems call when search "
+            "is offered. Written before any model answered this scenario."
+        ),
+    )
+    bad = b.deploy("d-3101", "cart", "5.1.0", 18, "Price rounding in cart totals", author="kim")
+    for m in range(0, 18, 3):
+        b.log(m, "cart", "info", "POST /cart/items 200 in 30ms")
+    b.log(18.3, "cart", "info", "starting cart 5.1.0")
+    first = None
+    for m in [18.5, 19, 20, 21.5, 24, 28]:
+        log_id = b.log(
+            m,
+            "cart",
+            "error",
+            "ArithmeticError: rounding mode NONE is not valid for Decimal (cart/totals.py:77)",
+        )
+        first = first or log_id
+    b.step_series("m-cart-err", "cart", "http_error_rate", "ratio", 0.001, 0.48, 18.5)
+    assert first
+    b.truth(C.BAD_CODE_DEPLOY, "cart", bad, first, tools=["search_postmortems"])
+    return b
+
+
+def rule_no_incident() -> ScenarioBuilder:
+    """Rule 5, if nothing is actually wrong, say so with category no_incident. The
+    alert fires because its own threshold was cut tenfold; checkout's error rate has
+    not moved all day."""
+    b = ScenarioBuilder(
+        "032-rule-no-incident",
+        "Alert threshold cut tenfold; the service never changed",
+        Alert(
+            service="checkout",
+            summary="error rate above 0.5% for 15 minutes (threshold 0.5%).",
+        ),
+        note=(
+            "Rule 5 of the brief: if the evidence shows nothing is actually wrong, say so with "
+            "category no_incident. checkout's error rate is a flat 0.8% of client disconnects "
+            "before and after the page; the alerting service's deploy d-3201 lowered the "
+            "threshold from 5% to 0.5%. Accepted services: alerting (where the change was "
+            "made) as well as checkout (the paging service); the category must still be "
+            "no_incident, which is what the rule says. Written before any model answered "
+            "this scenario."
+        ),
+    )
+    rule = b.deploy(
+        "d-3201",
+        "alerting",
+        "1.4.0",
+        5,
+        "Tighten checkout SLO alert",
+        author="sre-bot",
+        before={"CHECKOUT_ERROR_RATE_THRESHOLD": "0.05"},
+        after={"CHECKOUT_ERROR_RATE_THRESHOLD": "0.005"},
+    )
+    for m in range(0, 40, 4):
+        b.log(m, "checkout", "info", "POST /checkout 200 in 150ms")
+    for m in [3, 11, 19, 27, 35]:
+        b.log(m, "checkout", "error", "client disconnected before response (499)")
+    b.log(20, "alerting", "info", "firing checkout_error_rate: 0.008 > 0.005 for 15m")
+    err = b.step_series(
+        "m-checkout-err", "checkout", "http_error_rate", "ratio", 0.008, 0.008, 0, (0, 40, 2)
+    )
+    b.step_series("m-checkout-p99", "checkout", "http_p99_latency", "ms", 150, 150, 0, (0, 40, 2))
+    b.truth(
+        C.NO_INCIDENT,
+        "checkout",
+        err,
+        b.config_id(rule, "CHECKOUT_ERROR_RATE_THRESHOLD"),
+        rule,
+        accepted=["alerting"],
+        tools=["search_postmortems"],
+    )
+    return b
+
+
+def rule_postmortems_are_hypotheses() -> ScenarioBuilder:
+    """Rule 6, the search hint: past postmortems are hypotheses to check, and evidence
+    is telemetry ids, not postmortem ids. A postmortem in the corpus matches the
+    symptoms (search pods restarting, out of memory) with a different cause (a leak
+    in a library); the config diff shows the heap was cut."""
+    b = ScenarioBuilder(
+        "033-rule-postmortems-are-hypotheses",
+        "A past postmortem matches the symptoms and not the cause",
+        Alert(service="search", summary="search error rate at 14% and pods restarting."),
+        note=(
+            "Rule 6 of the brief, the retrieval hint: past postmortems describe earlier "
+            "incidents, use them for hypotheses to check, and cite telemetry ids, not "
+            "postmortem ids. Postmortem PM-034 matches the symptoms (restarts, out of memory) "
+            "and blames a library leak fixed by an upgrade; PM-035 shares the mechanism. Here "
+            "d-3301 cut JVM_HEAP_GB from 8 to 2 and the pods throw OutOfMemoryError from the "
+            "first query after the restart. The category is config_change, not "
+            "bad_code_deploy, and a postmortem id is not evidence. Accepted services: none. "
+            "Search: the truth requires a search_postmortems call when search "
+            "is offered. Written before any model answered this scenario."
+        ),
+    )
+    bad = b.deploy(
+        "d-3301",
+        "search",
+        "4.1.0",
+        16,
+        "Right-size search pods",
+        author="platform-bot",
+        before={"JVM_HEAP_GB": "8"},
+        after={"JVM_HEAP_GB": "2"},
+    )
+    for m in range(0, 16, 4):
+        b.log(m, "search", "info", "query served in 38ms (heap 3.1g/8g)")
+    b.log(16.4, "search", "info", "starting search 4.1.0 (heap=2g)")
+    for m in [17, 19, 22, 26, 31]:
+        b.log(
+            m,
+            "search",
+            "error",
+            "java.lang.OutOfMemoryError: Java heap space (max heap 2g) in IndexSearcher.search; "
+            "restarting",
+        )
+        b.log(m + 0.5, "search", "error", "upstream connect error: search-3 not ready")
+    b.step_series("m-search-heap-max", "search", "jvm_heap_max", "GiB", 8, 2, 16.4)
+    b.step_series("m-search-restarts", "search", "container_restarts", "count", 0, 3, 17)
+    b.step_series("m-search-err", "search", "http_error_rate", "ratio", 0.001, 0.14, 17)
+    b.truth(
+        C.CONFIG_CHANGE,
+        "search",
+        b.config_id(bad, "JVM_HEAP_GB"),
+        bad,
+        tools=["search_postmortems"],
+    )
+    return b
+
+
 SCENARIOS = [
     checkout_pool_config(),
     acquirer_outage(),
@@ -943,6 +1372,14 @@ SCENARIOS = [
     cart_serializer_rollback(),
     slow_connection_leak(),
     log_injection(),
+    rule_gather_evidence(),
+    rule_symptoms_spread(),
+    rule_check_what_changed_when(),
+    rule_cite_exact_ids(),
+    rule_rollback_only_with_evidence(),
+    rule_finish_after_denial(),
+    rule_no_incident(),
+    rule_postmortems_are_hypotheses(),
 ]
 
 if __name__ == "__main__":
