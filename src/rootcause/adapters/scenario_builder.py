@@ -149,7 +149,12 @@ class ScenarioBuilder:
         return span_id
 
     def truth(
-        self, category: Category, service: str, *evidence: str, accepted: list[str] | None = None
+        self,
+        category: Category,
+        service: str,
+        *evidence: str,
+        accepted: list[str] | None = None,
+        tools: list[str] | None = None,
     ) -> None:
         """`accepted`: other services a responder could defensibly name. Set here, when
         the scenario is written, never after a model's answers have been read."""
@@ -158,6 +163,7 @@ class ScenarioBuilder:
             service=service,
             accepted_services=accepted or [],
             required_evidence_any=list(evidence),
+            required_tools=tools or [],
         )
 
     def scenario(self) -> Scenario:

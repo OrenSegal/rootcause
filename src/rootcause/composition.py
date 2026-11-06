@@ -38,7 +38,7 @@ from rootcause.application.agent import AgentLoop, RunResult, TokenUsage
 from rootcause.application.approval import StaticApproval
 from rootcause.application.budget import Budget
 from rootcause.application.evals import Grade, SuiteReport, crash_grade, grade
-from rootcause.application.investigator import investigator_spec
+from rootcause.application.investigator import SEARCH_POSTMORTEMS, investigator_spec
 from rootcause.application.orchestrator import DispatchWorkers, orchestrator_spec
 from rootcause.application.ports import EventLog, LLMProvider, Retriever, Tracer
 from rootcause.application.retrieval_eval import RetrievalReport, evaluate
@@ -317,6 +317,9 @@ async def investigate(
         mode=mode.value,
         tool_calls=count_tool_calls(events, result.run_id),
         strict_service=strict_service,
+        offered_tools=frozenset({SEARCH_POSTMORTEMS})
+        if retrieval != Retrieval.NONE
+        else frozenset(),
     )
     if mode is Mode.MULTI:
         cost, usage = worker_spend(events, result.run_id)

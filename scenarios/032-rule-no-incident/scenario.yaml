@@ -18,3 +18,5 @@ truth:
   - m-checkout-err
   - cfg:d-3201:CHECKOUT_ERROR_RATE_THRESHOLD
   - d-3201
+  required_tools:
+  - search_postmortems

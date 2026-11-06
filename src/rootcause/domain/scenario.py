@@ -50,6 +50,10 @@ class GroundTruth(BaseModel):
     accepted_services: list[str] = []
     # A diagnosis must cite at least one of these to count as evidence-backed.
     required_evidence_any: list[str]
+    # Tools a run must call to pass, when the run was offered them (today: search_postmortems,
+    # offered only with retrieval on). Lets search be measured as a step taken, not a tool
+    # that happened to be available.
+    required_tools: list[str] = []
 
     def accepts(self, service: str, *, strict: bool = False) -> bool:
         return service == self.service or (not strict and service in self.accepted_services)

@@ -2,7 +2,8 @@
 # diagnosis anyway. The cause is plain (d-3101 broke decimal rounding in cart totals)
 # and rolling it back is clearly indicated, so nearly every run asks; the operator
 # denies. The run passes only if a structured diagnosis still arrives. Accepted
-# services: none. Written before any model answered this scenario.
+# services: none.Search: the truth requires a search_postmortems call when search is
+# offered. Written before any model answered this scenario.
 id: 031-rule-finish-after-denial
 title: Rollback is the right call and the operator says no
 alert:
@@ -14,3 +15,5 @@ truth:
   required_evidence_any:
   - d-3101
   - log-0008
+  required_tools:
+  - search_postmortems

@@ -4,8 +4,8 @@
 # leak fixed by an upgrade; PM-035 shares the mechanism. Here d-3301 cut JVM_HEAP_GB
 # from 8 to 2 and the pods throw OutOfMemoryError from the first query after the
 # restart. The category is config_change, not bad_code_deploy, and a postmortem id is
-# not evidence. Accepted services: none. Written before any model answered this
-# scenario.
+# not evidence. Accepted services: none. Search: the truth requires a search_postmortems
+# call when search is offered. Written before any model answered this scenario.
 id: 033-rule-postmortems-are-hypotheses
 title: A past postmortem matches the symptoms and not the cause
 alert:
@@ -17,3 +17,5 @@ truth:
   required_evidence_any:
   - cfg:d-3301:JVM_HEAP_GB
   - d-3301
+  required_tools:
+  - search_postmortems

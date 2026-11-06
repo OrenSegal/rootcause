@@ -8,8 +8,8 @@ SUBMIT_DIAGNOSIS = TerminalTool("submit_diagnosis", Diagnosis)
 SEARCH_POSTMORTEMS = "search_postmortems"
 SEARCH_HINT = (
     f"- Past postmortems are searchable with {SEARCH_POSTMORTEMS}. They describe earlier "
-    "incidents, not this one: use them for hypotheses to check, and cite telemetry ids, "
-    "not postmortem ids.\n"
+    "incidents, not this one: search them at least once before you conclude, use them for "
+    "hypotheses to check, and cite telemetry ids, not postmortem ids.\n"
 )
 
 

@@ -4,7 +4,8 @@
 # errors, and the error text names the protocol the new client speaks. Both deploys are
 # orders deploys, so the service check cannot tell them apart; the category
 # (bad_code_deploy, not config_change) and the cited deploy can. Accepted services:
-# none. Written before any model answered this scenario.
+# none.Search: the truth requires a search_postmortems call when search is offered.
+# Written before any model answered this scenario.
 id: 028-rule-check-what-changed-when
 title: The scary config diff landed after the errors began
 alert:
@@ -16,3 +17,5 @@ truth:
   required_evidence_any:
   - d-2801
   - log-0009
+  required_tools:
+  - search_postmortems
