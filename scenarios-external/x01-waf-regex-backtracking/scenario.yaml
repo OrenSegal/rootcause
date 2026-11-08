@@ -2,9 +2,9 @@
 # catastrophically; it went to every site at once and exhausted CPU on the edge proxies,
 # which returned 502s. The change is a ruleset version in the WAF's config, so the
 # category is config_change. Source: https://blog.cloudflare.com/details-of-the-
-# cloudflare-outage-on-july-2-2019/ (Cloudflare, 2019-07-02). Licence: no licence or
-# copyright notice on the page. Facts are paraphrased, no text is reproduced, and the
-# telemetry is original. Runner-up reading: bad_code_deploy (a rule is code-like);
+# cloudflare-outage-on-july-2-2019/ (Cloudflare, 2019-07-02). Licence: copyright notice
+# (© Cloudflare), no licence granted. Facts are paraphrased, no text is reproduced, and
+# the telemetry is original. Runner-up reading: bad_code_deploy (a rule is code-like);
 # resource_exhaustion (CPU is the symptom). Accepted services: none (the rule lives in
 # the waf service, which has its own deploy and logs). Names, dates and scale changed;
 # timeline compressed. Truth frozen 2026-11-07, before any run on this set, the
