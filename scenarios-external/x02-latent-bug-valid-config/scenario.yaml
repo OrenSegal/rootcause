@@ -4,11 +4,12 @@
 # the software bug as the root cause and the config as the trigger, so the category is
 # bad_code_deploy and the service edge. The real gap was 27 days; here it is 3 days.
 # Source: https://www.fastly.com/blog/summary-of-june-8-outage (Fastly, 2021-06-08).
-# Licence: none stated on the source page. Facts are paraphrased, no text is reproduced,
-# and the telemetry is original. Runner-up reading: config_change (blaming the trigger,
-# d-E202). Accepted services: none (edge is both where the bug runs and where the config
-# is applied). Names, dates and scale changed; timeline compressed. Truth frozen
-# 2026-11-07, before any run on this set, the heuristic included.
+# Licence: copyright notice (© Fastly), no licence granted. Facts are paraphrased, no
+# text is reproduced, and the telemetry is original. Runner-up reading: config_change
+# (blaming the trigger, d-E202). Accepted services: none (edge is both where the bug
+# runs and where the config is applied). Names, dates and scale changed; timeline
+# compressed. Truth frozen 2026-11-07, before any run on this set, the heuristic
+# included.
 id: x02-latent-bug-valid-config
 title: A valid tenant config trips a bug shipped days earlier
 alert:

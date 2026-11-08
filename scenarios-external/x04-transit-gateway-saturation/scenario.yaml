@@ -4,11 +4,12 @@
 # hit its open-files limit. The gateway is a managed dependency the team does not
 # operate, so the category is dependency_failure. Source:
 # https://slack.engineering/slacks-outage-on-january-4th-2021/ (Slack, 2021-01-04).
-# Licence: none stated on the source page. Facts are paraphrased, no text is reproduced,
-# and the telemetry is original. Runner-up reading: resource_exhaustion (the gateway's
-# capacity ran out); provision-service (a visible but secondary limit). Accepted
-# services: none. Names, dates and scale changed; timeline compressed. Truth frozen
-# 2026-11-07, before any run on this set, the heuristic included.
+# Licence: copyright, all rights reserved, no licence granted. Facts are paraphrased, no
+# text is reproduced, and the telemetry is original. Runner-up reading:
+# resource_exhaustion (the gateway's capacity ran out); provision-service (a visible but
+# secondary limit). Accepted services: none. Names, dates and scale changed; timeline
+# compressed. Truth frozen 2026-11-07, before any run on this set, the heuristic
+# included.
 id: x04-transit-gateway-saturation
 title: The cloud network hop between tiers drops packets under a traffic surge
 alert:

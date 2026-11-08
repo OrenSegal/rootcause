@@ -20,16 +20,25 @@ from rootcause.adapters.scenario_builder import ScenarioBuilder
 from rootcause.domain.scenario import Alert, Category
 
 C = Category
-LICENCE = (
-    "Licence: none stated on the source page. Facts are paraphrased, no text is "
-    "reproduced, and the telemetry is original."
-)
+# What each source page states, checked 2026-11-07. None grants an open licence.
+LICENCES = {
+    "Cloudflare": "no licence or copyright notice on the page",
+    "Fastly": "copyright notice (\u00a9 Fastly), no licence granted",
+    "Mailchimp/Mandrill": "copyright, all rights reserved, no licence granted",
+    "Slack": "copyright, all rights reserved, no licence granted",
+    "Datadog": "copyright notice (\u00a9 Datadog), no licence granted",
+    "GitHub": "copyright notice (\u00a9 GitHub, Inc.), no licence granted",
+    "Amazon Web Services": "copyright, all rights reserved, no licence granted",
+}
 FROZEN = "Truth frozen 2026-11-07, before any run on this set, the heuristic included."
 
 
 def note(what: str, source: str, runner_up: str, accepted: str) -> str:
     return (
-        f"{what} Source: {source}. {LICENCE} Runner-up reading: {runner_up}. "
+        f"{what} Source: {source}. Licence: "
+        f"{next(v for k, v in LICENCES.items() if f'({k},' in source)}. Facts are "
+        "paraphrased, no text is reproduced, and the telemetry is original. "
+        f"Runner-up reading: {runner_up}. "
         f"Accepted services: {accepted}. Names, dates and scale changed; timeline "
         f"compressed. {FROZEN}"
     )

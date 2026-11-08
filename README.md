@@ -208,7 +208,7 @@ Why a kill was possible at all, and what could still go wrong:
 
 ### Held-out (externally sourced)
 
-`scenarios-external/`: eight incidents adapted from public postmortems, written as code in `scripts/author_external.py`. Each `scenario.yaml` header gives the source URL, its licence status (none of the eight source pages states a licence, so facts are paraphrased, no text is reproduced, and the telemetry is original), the category a reader could argue for instead, and the accepted services. Truths, accepted services, the sweep file and the interval method were committed in f5417b1 and pushed with a draft PR before anything ran on the set, the heuristic included. Nothing here has been used to change the brief, the grader or an accepted set.
+`scenarios-external/`: eight incidents adapted from public postmortems, written as code in `scripts/author_external.py`. Each `scenario.yaml` header gives the source URL, its licence status (none of the eight pages grants an open licence; six carry a copyright notice, the two Cloudflare posts carry none; so facts are paraphrased, no text is reproduced, and the telemetry is original), the category a reader could argue for instead, and the accepted services. Truths, accepted services, the sweep file and the interval method were committed in f5417b1 and pushed with a draft PR before anything ran on the set, the heuristic included. Nothing here has been used to change the brief, the grader or an accepted set.
 
 | scenario | source |
 |---|---|
@@ -221,7 +221,7 @@ Why a kill was possible at all, and what could still go wrong:
 | x07 reordered BGP policy withdraws prefixes in the busiest sites | [Cloudflare, 2022-06-21](https://blog.cloudflare.com/cloudflare-outage-on-june-21-2022/) |
 | x08 mistyped runbook command removes most of the object index | [AWS, 2017-02-28](https://aws.amazon.com/message/41926/) |
 
-`sweeps/external-heldout.yaml`, three runs per scenario, run on 2026-11-07 (`results/sweeps/external-heldout-2026-11-07/`). Intervals here are a cluster bootstrap over scenarios (all of a scenario's runs resampled together, 10,000 draws), from `scripts/resample_gaps.py`, and the main-suite row is recomputed the same way from the committed 2026-10-15 rows so the two compare.
+`sweeps/external-heldout.yaml`, three runs per scenario, run on 2026-11-07 (`results/sweeps/external-heldout-2026-11-07/`). Intervals here are a cluster bootstrap over scenarios (all of a scenario's runs resampled together, 10,000 draws), from `scripts/resample_gaps.py`, and the main-suite row is recomputed the same way from the committed 2026-10-15 rows so the two compare. Those rows were graded on the single service; here the single-service and accepted-service grades give the same numbers, since no pass relied on an accepted alternative.
 
 | configuration | held-out, 8 scenarios | main suite, 25 scenarios |
 |---|---|---|
