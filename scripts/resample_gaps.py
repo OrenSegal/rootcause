@@ -233,6 +233,19 @@ def main() -> None:
             f"Holm {p_holm:.3f}{excludes}"
         )
 
+    external = SWEEPS / "external-heldout-2026-11-07"
+    if not external.exists():
+        print("external held-out set: no runs yet")
+        return
+    held, _ = read_sweep(external)
+    print("Held-out (externally sourced), pass rate with cluster-bootstrap 95% CI:")
+    sets = [(held, c, "held-out") for c in sorted({r.config for r in held})]
+    sets.append((models, "haiku-5.5-high", "main suite"))
+    for rows, c, where in sets:
+        runs = by_scenario(rows, c, passed)
+        point, lo, hi = cluster_ci(runs)
+        print(f"  {where:10} {c:16} {point:5.1f}% ({lo:.1f} to {hi:.1f}), {len(runs)} scenarios")
+
 
 if __name__ == "__main__":
     sys.exit(main())

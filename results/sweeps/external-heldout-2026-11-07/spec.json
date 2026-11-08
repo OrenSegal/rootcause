@@ -1,0 +1,29 @@
+{
+  "name": "external-heldout-2026-11-07",
+  "repeats": 3,
+  "scenarios": "scenarios-external",
+  "scenario_ids": [],
+  "held_out": [],
+  "configs": [
+    {
+      "name": "heuristic",
+      "provider": "heuristic",
+      "model": "heuristic",
+      "effort": "high",
+      "mode": "single",
+      "retrieval": "none",
+      "budget_usd": 1.0,
+      "brief": null
+    },
+    {
+      "name": "haiku-5.5-high",
+      "provider": "claude-code",
+      "model": "claude-haiku-5-5",
+      "effort": "high",
+      "mode": "single",
+      "retrieval": "none",
+      "budget_usd": 1.0,
+      "brief": null
+    }
+  ]
+}

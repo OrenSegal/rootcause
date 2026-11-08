@@ -1,0 +1,32 @@
+[
+  {
+    "id": "d-E700",
+    "service": "load-balancer",
+    "version": "5.2.1",
+    "ts": "2026-10-14T13:12:00Z",
+    "author": "ravi",
+    "summary": "Health check interval 5s to 3s",
+    "config_before": {
+      "HEALTH_CHECK_INTERVAL_S": "5"
+    },
+    "config_after": {
+      "HEALTH_CHECK_INTERVAL_S": "3"
+    },
+    "files": []
+  },
+  {
+    "id": "d-E701",
+    "service": "spine-routers",
+    "version": "policy-v42",
+    "ts": "2026-10-14T13:20:00Z",
+    "author": "neteng",
+    "summary": "Standardize site-local community tags on large sites",
+    "config_before": {
+      "BGP_EXPORT_POLICY": "v41: site-local terms, then reject"
+    },
+    "config_after": {
+      "BGP_EXPORT_POLICY": "v42: reject term, then site-local terms"
+    },
+    "files": []
+  }
+]

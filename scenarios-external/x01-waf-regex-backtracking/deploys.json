@@ -1,0 +1,28 @@
+[
+  {
+    "id": "d-E100",
+    "service": "dashboard",
+    "version": "3.8.0",
+    "ts": "2026-10-14T12:30:00Z",
+    "author": "ines",
+    "summary": "Analytics tab: new filters",
+    "config_before": {},
+    "config_after": {},
+    "files": []
+  },
+  {
+    "id": "d-E101",
+    "service": "waf",
+    "version": "rules-2026.10.14.1",
+    "ts": "2026-10-14T13:20:00Z",
+    "author": "rules-ci",
+    "summary": "Managed rules: improved XSS detection (simulate mode), global push",
+    "config_before": {
+      "WAF_MANAGED_RULESET": "2026.10.13.4"
+    },
+    "config_after": {
+      "WAF_MANAGED_RULESET": "2026.10.14.1"
+    },
+    "files": []
+  }
+]

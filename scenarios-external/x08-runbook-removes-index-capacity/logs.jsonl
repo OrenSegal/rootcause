@@ -1,0 +1,26 @@
+{"id":"log-0001","ts":"2026-10-14T13:00:00Z","service":"functions","level":"info","message":"invocation ok in 120ms","trace_id":null}
+{"id":"log-0002","ts":"2026-10-14T13:04:00Z","service":"functions","level":"info","message":"invocation ok in 120ms","trace_id":null}
+{"id":"log-0003","ts":"2026-10-14T13:08:00Z","service":"functions","level":"info","message":"invocation ok in 120ms","trace_id":null}
+{"id":"log-0004","ts":"2026-10-14T13:12:00Z","service":"functions","level":"info","message":"invocation ok in 120ms","trace_id":null}
+{"id":"log-0005","ts":"2026-10-14T13:16:00Z","service":"functions","level":"info","message":"invocation ok in 120ms","trace_id":null}
+{"id":"log-0006","ts":"2026-10-14T13:20:00Z","service":"object-index","level":"warn","message":"412 hosts removed from pool by runbook remove-capacity (requested target: billing)","trace_id":null}
+{"id":"log-0007","ts":"2026-10-14T13:20:24Z","service":"object-index","level":"error","message":"below minimum capacity; restarting with integrity check","trace_id":null}
+{"id":"log-0008","ts":"2026-10-14T13:20:36Z","service":"object-placement","level":"error","message":"index unavailable; cannot allocate new objects","trace_id":null}
+{"id":"log-0009","ts":"2026-10-14T13:20:48Z","service":"object-store","level":"error","message":"GET failed: index unavailable","trace_id":null}
+{"id":"log-0010","ts":"2026-10-14T13:20:54Z","service":"functions","level":"error","message":"failed to fetch code package from object-store","trace_id":null}
+{"id":"log-0011","ts":"2026-10-14T13:21:00Z","service":"vm-launch","level":"error","message":"image fetch from object-store failed","trace_id":null}
+{"id":"log-0012","ts":"2026-10-14T13:21:00Z","service":"object-store","level":"error","message":"GET failed: index unavailable","trace_id":null}
+{"id":"log-0013","ts":"2026-10-14T13:21:06Z","service":"functions","level":"error","message":"failed to fetch code package from object-store","trace_id":null}
+{"id":"log-0014","ts":"2026-10-14T13:21:12Z","service":"vm-launch","level":"error","message":"image fetch from object-store failed","trace_id":null}
+{"id":"log-0015","ts":"2026-10-14T13:22:00Z","service":"object-store","level":"error","message":"GET failed: index unavailable","trace_id":null}
+{"id":"log-0016","ts":"2026-10-14T13:22:06Z","service":"functions","level":"error","message":"failed to fetch code package from object-store","trace_id":null}
+{"id":"log-0017","ts":"2026-10-14T13:22:12Z","service":"vm-launch","level":"error","message":"image fetch from object-store failed","trace_id":null}
+{"id":"log-0018","ts":"2026-10-14T13:24:00Z","service":"object-store","level":"error","message":"GET failed: index unavailable","trace_id":null}
+{"id":"log-0019","ts":"2026-10-14T13:24:06Z","service":"functions","level":"error","message":"failed to fetch code package from object-store","trace_id":null}
+{"id":"log-0020","ts":"2026-10-14T13:24:12Z","service":"vm-launch","level":"error","message":"image fetch from object-store failed","trace_id":null}
+{"id":"log-0021","ts":"2026-10-14T13:27:00Z","service":"object-store","level":"error","message":"GET failed: index unavailable","trace_id":null}
+{"id":"log-0022","ts":"2026-10-14T13:27:06Z","service":"functions","level":"error","message":"failed to fetch code package from object-store","trace_id":null}
+{"id":"log-0023","ts":"2026-10-14T13:27:12Z","service":"vm-launch","level":"error","message":"image fetch from object-store failed","trace_id":null}
+{"id":"log-0024","ts":"2026-10-14T13:31:00Z","service":"object-store","level":"error","message":"GET failed: index unavailable","trace_id":null}
+{"id":"log-0025","ts":"2026-10-14T13:31:06Z","service":"functions","level":"error","message":"failed to fetch code package from object-store","trace_id":null}
+{"id":"log-0026","ts":"2026-10-14T13:31:12Z","service":"vm-launch","level":"error","message":"image fetch from object-store failed","trace_id":null}
