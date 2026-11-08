@@ -1,9 +1,9 @@
-### Sweep `langgraph-2026-10-15`: 2 configurations, 3 runs each
+### Sweep `langgraph-2026-10-15`: 2 configurations, 3 runs each (single-service grade)
 
 | config | scored / errors | pass rate (95% CI) | pass^3 | pass@3 | mean cost | cost per solved | p50 / p90 wall | output tokens | tool calls | searched | frontier |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| langgraph-opus-5.5-high-single | 75 / 0 | 84% (74% to 91%) | 84% | 84% | $0.0936 | $0.1114 | 34.9s / 48.7s | 2056 | 8.4 | 0% | yes |
-| langgraph-opus-5.5-high-multi | 75 / 0 | 81% (71% to 89%) | 72% | 92% | $0.2789 | $0.3430 | 69.0s / 120.7s | 8250 | 20.0 | 0% | dominated |
+| langgraph-opus-5.5-high-single | 75 / 0 | 84% (68% to 96%) | 84% | 84% | $0.0936 | $0.1114 | 34.9s / 48.7s | 2056 | 8.4 | 0% | yes |
+| langgraph-opus-5.5-high-multi | 75 / 0 | 81% (68% to 93%) | 72% | 92% | $0.2789 | $0.3430 | 69.0s / 120.7s | 8250 | 20.0 | 0% | dominated |
 
 | scenario | langgraph-opus-5.5-high-single | langgraph-opus-5.5-high-multi |
 |---|---|---|

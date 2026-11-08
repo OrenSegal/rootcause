@@ -2,7 +2,8 @@
 
 A single pass over the suite gives one pass rate with no error bar. A sweep
 repeats every (configuration, scenario) pair and summarizes each configuration
-with what a cost/accuracy decision needs: pass rate with a Wilson interval,
+with what a cost/accuracy decision needs: pass rate with an interval that resamples
+scenarios (repeats of one scenario are correlated, so runs are not independent),
 pass^k (every attempt right) and pass@k (any attempt right), cost per solved
 incident, and latency percentiles. A configuration is dominated when another
 one is at least as reliable (pass^k) for no more money and better on one of
@@ -25,7 +26,7 @@ from pydantic import BaseModel, model_validator
 
 from rootcause.application.evals import Grade
 from rootcause.application.investigator import SEARCH_POSTMORTEMS
-from rootcause.application.stats import pass_at_k, pass_hat_k, percentile, wilson
+from rootcause.application.stats import cluster_bootstrap, pass_at_k, pass_hat_k, percentile
 
 
 class Retrieval(StrEnum):
@@ -144,7 +145,7 @@ def summarize(
     spent_scored = sum(r.grade.cost_usd for r in scored)
     spent = spent_scored + sum(r.grade.cost_usd for r in failed)
     walls = [r.grade.wall_ms / 1000 for r in scored]
-    lo, hi = wilson(passes, len(scored))
+    lo, hi = cluster_bootstrap([by_scenario[s] for s in sorted(by_scenario)])
     n = len(scored) or 1
     return ConfigSummary(
         name=config.name,
@@ -251,10 +252,10 @@ def report_markdown(
 
 
 def report_svg(spec: SweepSpec, summaries: Sequence[ConfigSummary]) -> str:
-    """Cost per solved incident (log x) against pass rate with its Wilson interval (y),
-    one labelled point per configuration. Hollow points are dominated. A configuration
-    that solved nothing, or cost nothing, has no point on a log scale and is listed under
-    the chart."""
+    """Cost per solved incident (log x) against pass rate with its interval from
+    resampling scenarios (y), one labelled point per configuration. Hollow points are
+    dominated. A configuration that solved nothing, or cost nothing, has no point on a
+    log scale and is listed under the chart."""
     plotted = [(s, s.cost_per_pass) for s in summaries if s.cost_per_pass]
     missing = [escape(s.name) for s in summaries if not s.cost_per_pass]
     left, top, pw, ph = 60, 50, 440, 300
@@ -279,7 +280,8 @@ def report_svg(spec: SweepSpec, summaries: Sequence[ConfigSummary]) -> str:
         f"<title>Sweep {escape(spec.name)}: cost per solved incident vs pass rate</title>",
         f'<rect width="{width}" height="{height}" fill="#fff"/>',
         f'<text x="{left}" y="24" {face} font-size="14" font-weight="bold">'
-        f"{escape(spec.name)}: pass rate (95% Wilson interval) vs cost per solved incident</text>",
+        f"{escape(spec.name)}: pass rate (95% CI, scenarios resampled) "
+        "vs cost per solved incident</text>",
         f'<rect x="{left}" y="{top}" width="{pw}" height="{ph}" fill="none" stroke="#999"/>',
     ]
     tick = y0

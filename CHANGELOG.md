@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- `scripts/resample_gaps.py` prints each model setting's intraclass correlation, effective number of runs and interval width against Wilson, and gives loop minus LangGraph its minimum detectable effect. README gains a Limitations section and a mermaid component diagram; `docs/decisions.md` records five design decisions with evidence. The Azure deploy README says it has never been run.
+- Sweep intervals resample scenarios (cluster bootstrap, seeded) instead of a Wilson interval over runs, which treated repeats of one scenario as independent; committed reports regenerated, only the intervals changed. `scripts/resample_gaps.py` adds strict-grader paired gaps with sd, minimum detectable effect, sign tests and Holm correction, and the README now states accuracy differences as unresolved below about 13 to 19 points.
 - Eight rule scenarios (026 to 033), accepted services in the truth with `--strict-service` for the old grade, a held-out split in sweep files and the report, and a required search step. A 72-run sweep of them is in `results/sweeps/rule-suite-2026-11-05/`; mutation-testing the retrieval brief with them killed 2 of 14 mutants, both through the search requirement (`results/litmus/2026-11-06-rule-suite.md`).
 
 ## 0.2.0 (2026-11-02)

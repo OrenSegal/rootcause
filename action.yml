@@ -22,7 +22,7 @@ inputs:
   min-pass-rate:
     description: >-
       Fail the job below this pass rate (0 to 1). The default only catches pipeline breakage:
-      the heuristic provider is meant to fail most scenarios (it passes 12%). Set your own
+      the heuristic provider is meant to fail most scenarios (it passes 7 of 33). Set your own
       bar for a model-backed provider.
     default: "0.05"
   anthropic-api-key:
