@@ -1,0 +1,24 @@
+# Maintenance on optical equipment cut the link between the east hub and the east data
+# center for 43 seconds. The orchestrator's quorum (west plus cloud-east) promoted west
+# primaries, so writes crossed the country and some east writes were never replicated.
+# The postmortem's root cause is the partition; the orchestrator's cross-region
+# promotion is what made it long. The real incident lasted 24 hours; here, minutes.
+# Source: https://github.blog/2018-10-30-oct21-post-incident-analysis/ (GitHub,
+# 2018-10-21). Licence: none stated on the source page. Facts are paraphrased, no text
+# is reproduced, and the telemetry is original. Runner-up reading: mysql (where the
+# stale reads show up). Accepted services: orchestrator (its cross-region promotion is
+# the amplifier the follow-ups target). Names, dates and scale changed; timeline
+# compressed. Truth frozen 2026-11-07, before any run on this set, the heuristic
+# included.
+id: x06-partition-cross-region-failover
+title: A 43-second link cut moves database primaries across the country
+alert:
+  service: git-web
+  summary: pages showing stale data, webhooks delayed, write latency up tenfold.
+truth:
+  category: infrastructure
+  service: network
+  accepted_services:
+  - orchestrator
+  required_evidence_any:
+  - log-0006

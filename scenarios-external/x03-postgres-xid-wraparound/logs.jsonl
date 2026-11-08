@@ -1,0 +1,22 @@
+{"id":"log-0001","ts":"2026-10-14T10:00:00Z","service":"kv-shard4","level":"warn","message":"database \"kv\" must be vacuumed within 11000000 transactions","trace_id":null}
+{"id":"log-0002","ts":"2026-10-14T12:00:00Z","service":"kv-shard4","level":"warn","message":"database \"kv\" must be vacuumed within 1900000 transactions","trace_id":null}
+{"id":"log-0003","ts":"2026-10-14T13:00:00Z","service":"mail-sender","level":"info","message":"batch persisted: 5000 messages in 210ms","trace_id":null}
+{"id":"log-0004","ts":"2026-10-14T13:04:00Z","service":"mail-sender","level":"info","message":"batch persisted: 5000 messages in 210ms","trace_id":null}
+{"id":"log-0005","ts":"2026-10-14T13:08:00Z","service":"mail-sender","level":"info","message":"batch persisted: 5000 messages in 210ms","trace_id":null}
+{"id":"log-0006","ts":"2026-10-14T13:12:00Z","service":"mail-sender","level":"info","message":"batch persisted: 5000 messages in 210ms","trace_id":null}
+{"id":"log-0007","ts":"2026-10-14T13:16:00Z","service":"mail-sender","level":"info","message":"batch persisted: 5000 messages in 210ms","trace_id":null}
+{"id":"log-0008","ts":"2026-10-14T13:20:00Z","service":"mail-sender","level":"info","message":"batch persisted: 5000 messages in 210ms","trace_id":null}
+{"id":"log-0009","ts":"2026-10-14T13:24:00Z","service":"mail-sender","level":"info","message":"batch persisted: 5000 messages in 210ms","trace_id":null}
+{"id":"log-0010","ts":"2026-10-14T13:25:00Z","service":"kv-shard4","level":"error","message":"database is not accepting commands to avoid wraparound data loss in database \"kv\"","trace_id":null}
+{"id":"log-0011","ts":"2026-10-14T13:25:06Z","service":"mail-sender","level":"error","message":"write to shard4 failed; spooling job to local disk","trace_id":null}
+{"id":"log-0012","ts":"2026-10-14T13:25:30Z","service":"kv-shard4","level":"error","message":"database is not accepting commands to avoid wraparound data loss in database \"kv\"","trace_id":null}
+{"id":"log-0013","ts":"2026-10-14T13:25:36Z","service":"mail-sender","level":"error","message":"write to shard4 failed; spooling job to local disk","trace_id":null}
+{"id":"log-0014","ts":"2026-10-14T13:26:00Z","service":"kv-shard4","level":"error","message":"database is not accepting commands to avoid wraparound data loss in database \"kv\"","trace_id":null}
+{"id":"log-0015","ts":"2026-10-14T13:26:06Z","service":"mail-sender","level":"error","message":"write to shard4 failed; spooling job to local disk","trace_id":null}
+{"id":"log-0016","ts":"2026-10-14T13:27:30Z","service":"kv-shard4","level":"error","message":"database is not accepting commands to avoid wraparound data loss in database \"kv\"","trace_id":null}
+{"id":"log-0017","ts":"2026-10-14T13:27:36Z","service":"mail-sender","level":"error","message":"write to shard4 failed; spooling job to local disk","trace_id":null}
+{"id":"log-0018","ts":"2026-10-14T13:30:00Z","service":"kv-shard4","level":"error","message":"database is not accepting commands to avoid wraparound data loss in database \"kv\"","trace_id":null}
+{"id":"log-0019","ts":"2026-10-14T13:30:06Z","service":"mail-sender","level":"error","message":"write to shard4 failed; spooling job to local disk","trace_id":null}
+{"id":"log-0020","ts":"2026-10-14T13:34:00Z","service":"kv-shard4","level":"error","message":"database is not accepting commands to avoid wraparound data loss in database \"kv\"","trace_id":null}
+{"id":"log-0021","ts":"2026-10-14T13:34:06Z","service":"mail-sender","level":"error","message":"write to shard4 failed; spooling job to local disk","trace_id":null}
+{"id":"log-0022","ts":"2026-10-14T13:36:00Z","service":"mail-sender","level":"warn","message":"local spool disk 91% full","trace_id":null}

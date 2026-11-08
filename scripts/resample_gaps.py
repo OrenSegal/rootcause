@@ -7,6 +7,11 @@ then a paired bootstrap over scenarios for two gaps: Opus high minus Sonnet (ser
 check dropped) and the single-agent loop minus LangGraph (grader as is). Each draw
 resamples the 25 scenarios with replacement and keeps all of a scenario's runs, the
 same draw for both sides of a gap.
+
+Then the externally sourced held-out set (T14): each configuration's pass rate with a
+cluster-bootstrap 95% interval (resample scenarios, keep all of a scenario's runs),
+next to the same interval for the matching configuration on the main suite. With 8
+clusters the percentile interval is coarse; read it as a rough range, not a test.
 """
 
 import random
@@ -56,6 +61,17 @@ def paired_gap(
     return 100 * (rate(a, ids) - rate(b, ids)), 100 * lo, 100 * hi
 
 
+def cluster_ci(
+    runs: dict[str, list[bool]], draws: int = DRAWS, seed: int = SEED
+) -> tuple[float, float, float]:
+    """Pass rate and its 95% percentile interval, resampling scenarios, in points."""
+    ids = sorted(runs)
+    rng = random.Random(seed)
+    rates = sorted(rate(runs, rng.choices(ids, k=len(ids))) for _ in range(draws))
+    lo, hi = rates[int(0.025 * draws)], rates[int(0.975 * draws) - 1]
+    return 100 * rate(runs, ids), 100 * lo, 100 * hi
+
+
 def self_check() -> None:
     a = {"x": [True, True], "y": [True, False]}
     b = {"x": [False, False], "y": [True, False]}
@@ -63,6 +79,9 @@ def self_check() -> None:
     assert point == 50.0 and 0.0 <= lo <= point <= hi <= 100.0, (point, lo, hi)
     same = paired_gap(a, a, draws=200)
     assert same == (0.0, 0.0, 0.0), same
+    point, lo, hi = cluster_ci(a, draws=2000)
+    assert point == 75.0 and 50.0 <= lo <= point <= hi <= 100.0, (point, lo, hi)
+    assert cluster_ci({"x": [True], "y": [True]}, draws=50) == (100.0, 100.0, 100.0)
 
 
 def main() -> None:
@@ -89,6 +108,19 @@ def main() -> None:
         by_scenario(graph, "langgraph-opus-5.5-high-single", passed),
     )
     print(f"loop minus LangGraph, single agent: {point:+.1f} ({lo:+.1f} to {hi:+.1f})")
+
+    external = SWEEPS / "external-heldout-2026-11-07"
+    if not external.exists():
+        print("external held-out set: no runs yet")
+        return
+    held, _ = read_sweep(external)
+    print("Held-out (externally sourced), pass rate with cluster-bootstrap 95% CI:")
+    sets = [(held, c, "held-out") for c in sorted({r.config for r in held})]
+    sets.append((models, "haiku-5.5-high", "main suite"))
+    for rows, c, where in sets:
+        runs = by_scenario(rows, c, passed)
+        point, lo, hi = cluster_ci(runs)
+        print(f"  {where:10} {c:16} {point:5.1f}% ({lo:.1f} to {hi:.1f}), {len(runs)} scenarios")
 
 
 if __name__ == "__main__":
