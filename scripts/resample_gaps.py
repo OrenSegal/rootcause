@@ -19,7 +19,8 @@ orchestrator per harness and pooled. For each: the per-scenario differences d_i,
 sd, the minimum detectable effect at 80% power, an exact sign test on the scenarios
 that differ, and Holm-adjusted p-values across the pairs printed. Last, every pair of
 the seven model-sweep settings (21 comparisons), Holm-adjusted together, since that is
-how many the table invites.
+how many the table invites. Finally, the externally sourced held-out set: each
+config's pass rate with a scenario-resampled 95% interval, beside Haiku on the main suite.
 """
 
 import itertools
@@ -154,6 +155,10 @@ def self_check() -> None:
     assert sign_test(d) == (5, 0, 0.0625)
     assert sign_test([1.0, -1.0, 0.0]) == (1, 1, 1.0)
     assert holm([0.01, 0.04, 0.03]) == [0.03, 0.06, 0.06]
+    # all pass: every resample is 100%, so cluster_bootstrap counts scenarios as trials
+    assert cluster_bootstrap([[True] * 3] * 8) == wilson(8, 8)
+    lo, hi = cluster_bootstrap([[True] * 3, [False] * 3] * 4)
+    assert 0.0 < lo < 0.5 < hi < 1.0, (lo, hi)
 
 
 def main() -> None:
@@ -238,13 +243,18 @@ def main() -> None:
         print("external held-out set: no runs yet")
         return
     held, _ = read_sweep(external)
-    print("Held-out (externally sourced), pass rate with cluster-bootstrap 95% CI:")
+    print("\nHeld-out (externally sourced), pass rate with cluster-bootstrap 95% CI:")
     sets = [(held, c, "held-out") for c in sorted({r.config for r in held})]
     sets.append((models, "haiku-5.5-high", "main suite"))
     for rows, c, where in sets:
         runs = by_scenario(rows, c, passed)
-        point, lo, hi = cluster_ci(runs)
-        print(f"  {where:10} {c:16} {point:5.1f}% ({lo:.1f} to {hi:.1f}), {len(runs)} scenarios")
+        clusters = [runs[s] for s in sorted(runs)]
+        lo, hi = cluster_bootstrap(clusters)
+        point = 100 * rate(runs, sorted(runs))
+        print(
+            f"  {where:10} {c:16} {point:5.1f}% ({100 * lo:.1f} to {100 * hi:.1f}), "
+            f"{len(runs)} scenarios"
+        )
 
 
 if __name__ == "__main__":

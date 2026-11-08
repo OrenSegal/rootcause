@@ -3,7 +3,7 @@
 # The prefixes were withdrawn, the internal load balancer lost its spread and small
 # clusters overloaded. Reverting the policy fixed it. Source:
 # https://blog.cloudflare.com/cloudflare-outage-on-june-21-2022/ (Cloudflare,
-# 2022-06-21). Licence: no licence or copyright notice on the page. Facts are
+# 2022-06-21). Licence: copyright notice (© Cloudflare), no licence granted. Facts are
 # paraphrased, no text is reproduced, and the telemetry is original. Runner-up reading:
 # load-balancer (overloaded downstream of the withdrawal). Accepted services: none.
 # Names, dates and scale changed; timeline compressed. Truth frozen 2026-11-07, before
