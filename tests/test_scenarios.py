@@ -19,26 +19,54 @@ from rootcause.domain.scenario import Case, Category
 
 AUTHORING = SCENARIOS.parent / "scripts" / "author_scenarios.py"
 CASES = discover(SCENARIOS)
+# The externally sourced held-out set: own directory, own authoring script, so no sweep
+# or suite-level test over scenarios/ picks it up.
+EXTERNAL = SCENARIOS.parent / "scenarios-external"
+EXTERNAL_AUTHORING = SCENARIOS.parent / "scripts" / "author_external.py"
+EXTERNAL_CASES = discover(EXTERNAL)
 
 
-def _authoring_module():
-    spec = importlib.util.spec_from_file_location("author_scenarios", AUTHORING)
+def _authoring_module(path: Path = AUTHORING):
+    spec = importlib.util.spec_from_file_location(path.stem, path)
     assert spec and spec.loader
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module
 
 
-@pytest.mark.parametrize("path", CASES, ids=lambda p: p.name)
+@pytest.mark.parametrize("path", CASES + EXTERNAL_CASES, ids=lambda p: p.name)
 def test_truth_cites_evidence_that_exists(path: Path):
     assert load_case(path).unknown_truth_evidence() == []
 
 
-def test_committed_fixtures_match_the_authoring_script(tmp_path: Path):
-    authored = _authoring_module().SCENARIOS
+@pytest.mark.parametrize("path", EXTERNAL_CASES, ids=lambda p: p.name)
+def test_external_truth_names_services_the_telemetry_shows(path: Path):
+    """The grader compares strings, so a truth service missing from the telemetry
+    would make the scenario unsolvable by construction."""
+    case = load_case(path)
+    truth = case.scenario.truth
+    assert truth is not None
+    s = case.store
+    seen = {log.service for log in s.logs}
+    seen |= {d.service for d in s.list_deploys()}
+    for name in [truth.service, *truth.accepted_services]:
+        assert name in seen or s.query_metrics(name), name
+
+
+def test_external_set_is_five_to_ten_cases():
+    assert 5 <= len(EXTERNAL_CASES) <= 10
+
+
+@pytest.mark.parametrize(
+    ("root", "script"),
+    [(SCENARIOS, AUTHORING), (EXTERNAL, EXTERNAL_AUTHORING)],
+    ids=["main", "external"],
+)
+def test_committed_fixtures_match_the_authoring_script(tmp_path: Path, root: Path, script: Path):
+    authored = _authoring_module(script).SCENARIOS
     for builder in authored:
         builder.write(tmp_path)
-        committed, fresh = SCENARIOS / builder.id, tmp_path / builder.id
+        committed, fresh = root / builder.id, tmp_path / builder.id
         diff = filecmp.dircmp(committed, fresh)
         assert not (diff.diff_files or diff.left_only or diff.right_only), builder.id
 
@@ -91,7 +119,7 @@ def _graded(
     ).passed  # fmt: skip
 
 
-@pytest.mark.parametrize("path", CASES, ids=lambda p: p.name)
+@pytest.mark.parametrize("path", CASES + EXTERNAL_CASES, ids=lambda p: p.name)
 def test_the_grader_passes_the_oracle_and_fails_the_null_and_a_confident_wrong_answer(path):
     """Harness check: an answer built from the truth must pass, no answer must fail,
     and the right service and evidence under the wrong category must fail too."""

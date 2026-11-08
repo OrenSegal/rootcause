@@ -1,0 +1,13 @@
+[
+  {
+    "id": "d-E301",
+    "service": "mail-sender",
+    "version": "12.3.0",
+    "ts": "2026-10-14T13:10:00Z",
+    "author": "omar",
+    "summary": "Template rendering cache",
+    "config_before": {},
+    "config_after": {},
+    "files": []
+  }
+]

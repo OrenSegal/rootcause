@@ -1,0 +1,18 @@
+{"id":"log-0001","ts":"2026-10-14T13:00:00Z","service":"edge","level":"info","message":"served 1.2M req/s, p99 41ms","trace_id":null}
+{"id":"log-0002","ts":"2026-10-14T13:04:00Z","service":"edge","level":"info","message":"served 1.2M req/s, p99 41ms","trace_id":null}
+{"id":"log-0003","ts":"2026-10-14T13:08:00Z","service":"edge","level":"info","message":"served 1.2M req/s, p99 41ms","trace_id":null}
+{"id":"log-0004","ts":"2026-10-14T13:12:00Z","service":"edge","level":"info","message":"served 1.2M req/s, p99 41ms","trace_id":null}
+{"id":"log-0005","ts":"2026-10-14T13:16:00Z","service":"edge","level":"info","message":"served 1.2M req/s, p99 41ms","trace_id":null}
+{"id":"log-0006","ts":"2026-10-14T13:20:06Z","service":"waf","level":"info","message":"loaded managed ruleset 2026.10.14.1 (412 rules, mode=simulate)","trace_id":null}
+{"id":"log-0007","ts":"2026-10-14T13:20:18Z","service":"waf","level":"warn","message":"rule 100035 evaluation took 1840ms on one request (limit 50ms); pcre backtracking","trace_id":null}
+{"id":"log-0008","ts":"2026-10-14T13:20:24Z","service":"edge","level":"error","message":"worker CPU saturated, request timed out; returned 502","trace_id":null}
+{"id":"log-0009","ts":"2026-10-14T13:20:54Z","service":"waf","level":"warn","message":"rule 100035 evaluation took 1840ms on one request (limit 50ms); pcre backtracking","trace_id":null}
+{"id":"log-0010","ts":"2026-10-14T13:21:00Z","service":"edge","level":"error","message":"worker CPU saturated, request timed out; returned 502","trace_id":null}
+{"id":"log-0011","ts":"2026-10-14T13:21:54Z","service":"waf","level":"warn","message":"rule 100035 evaluation took 1840ms on one request (limit 50ms); pcre backtracking","trace_id":null}
+{"id":"log-0012","ts":"2026-10-14T13:22:00Z","service":"edge","level":"error","message":"worker CPU saturated, request timed out; returned 502","trace_id":null}
+{"id":"log-0013","ts":"2026-10-14T13:23:54Z","service":"waf","level":"warn","message":"rule 100035 evaluation took 1840ms on one request (limit 50ms); pcre backtracking","trace_id":null}
+{"id":"log-0014","ts":"2026-10-14T13:24:00Z","service":"edge","level":"error","message":"worker CPU saturated, request timed out; returned 502","trace_id":null}
+{"id":"log-0015","ts":"2026-10-14T13:26:54Z","service":"waf","level":"warn","message":"rule 100035 evaluation took 1840ms on one request (limit 50ms); pcre backtracking","trace_id":null}
+{"id":"log-0016","ts":"2026-10-14T13:27:00Z","service":"edge","level":"error","message":"worker CPU saturated, request timed out; returned 502","trace_id":null}
+{"id":"log-0017","ts":"2026-10-14T13:30:54Z","service":"waf","level":"warn","message":"rule 100035 evaluation took 1840ms on one request (limit 50ms); pcre backtracking","trace_id":null}
+{"id":"log-0018","ts":"2026-10-14T13:31:00Z","service":"edge","level":"error","message":"worker CPU saturated, request timed out; returned 502","trace_id":null}

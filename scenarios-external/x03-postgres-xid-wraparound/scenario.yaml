@@ -1,0 +1,21 @@
+# The busiest Postgres shard (kv-shard4) fell behind on vacuum, its transaction ID age
+# reached the wraparound limit and it refused writes. mail-sender's failed writes
+# spooled to local disk, which then filled: a second resource running out, downstream of
+# the first. Source: https://mailchimp.com/what-we-learned-from-the-recent-mandrill-
+# outage/ (Mailchimp/Mandrill, 2019-02-04). Licence: copyright, all rights reserved, no
+# licence granted. Facts are paraphrased, no text is reproduced, and the telemetry is
+# original. Runner-up reading: mail-sender (blaming the filling spool disk). Accepted
+# services: none. Names, dates and scale changed; timeline compressed. Truth frozen
+# 2026-11-07, before any run on this set, the heuristic included.
+id: x03-postgres-xid-wraparound
+title: One shard stops taking writes at transaction ID wraparound
+alert:
+  service: mail-sender
+  summary: send queue growing; 20% of messages failing to persist. Spool disks on sender hosts
+    are filling.
+truth:
+  category: resource_exhaustion
+  service: kv-shard4
+  required_evidence_any:
+  - log-0010
+  - m-shard4-xid-age

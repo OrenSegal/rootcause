@@ -1,0 +1,26 @@
+# A security update to systemd arrived through an automatic OS update channel, outside
+# the deploy pipeline, in the same window in every region. Restarting systemd-networkd
+# on running nodes removed the routes cilium had installed, so the nodes dropped off the
+# network. The node OS is the platform the team runs on, so the category is
+# infrastructure. Source: https://www.datadoghq.com/blog/2023-03-08-multiregion-
+# infrastructure-connectivity-issue/ (Datadog, 2023-03-08). Licence: copyright notice (©
+# Datadog), no licence granted. Facts are paraphrased, no text is reproduced, and the
+# telemetry is original. Runner-up reading: config_change or bad_code_deploy (a package
+# update is a change, just not one in the deploy log). Accepted services: cilium (its
+# routes are what disappeared and its logs report it). Names, dates and scale changed;
+# timeline compressed. Truth frozen 2026-11-07, before any run on this set, the
+# heuristic included.
+id: x05-os-update-drops-routes
+title: An automatic OS update restarts the network daemon and deletes pod routes
+alert:
+  service: api
+  summary: API unreachable in five regions; monitors not evaluating.
+truth:
+  category: infrastructure
+  service: k8s-nodes
+  accepted_services:
+  - cilium
+  required_evidence_any:
+  - log-0007
+  - log-0006
+  - m-nodes-ready
