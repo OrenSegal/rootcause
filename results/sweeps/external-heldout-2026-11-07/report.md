@@ -2,8 +2,8 @@
 
 | config | scored / errors | pass rate (95% CI) | pass^3 | pass@3 | mean cost | cost per solved | p50 / p90 wall | output tokens | tool calls | searched | frontier |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| heuristic | 24 / 0 | 25% (12% to 45%) | 25% | 25% | $0.0000 | $0.0000 | 0.1s / 0.1s | 0 | 3.0 | 0% | yes |
-| haiku-5.5-high | 24 / 0 | 50% (31% to 69%) | 38% | 62% | $0.0030 | $0.0059 | 13.2s / 18.7s | 2498 | 9.2 | 0% | yes |
+| heuristic | 24 / 0 | 25% (0% to 62%) | 25% | 25% | $0.0000 | $0.0000 | 0.1s / 0.1s | 0 | 3.0 | 0% | yes |
+| haiku-5.5-high | 24 / 0 | 50% (21% to 79%) | 38% | 62% | $0.0030 | $0.0059 | 13.2s / 18.7s | 2498 | 9.2 | 0% | yes |
 
 | scenario | heuristic | haiku-5.5-high |
 |---|---|---|

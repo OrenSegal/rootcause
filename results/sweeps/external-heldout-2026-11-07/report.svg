@@ -1,26 +1,34 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="780" height="436" viewBox="0 0 780 436" role="img">
 <title>Sweep external-heldout-2026-11-07: cost per solved incident vs pass rate</title>
 <rect width="780" height="436" fill="#fff"/>
-<text x="60" y="24" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="14" font-weight="bold">external-heldout-2026-11-07: pass rate (95% Wilson interval) vs cost per solved incident</text>
+<text x="60" y="24" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="14" font-weight="bold">external-heldout-2026-11-07: pass rate (95% CI, scenarios resampled) vs cost per solved incident</text>
 <rect x="60" y="50" width="440" height="300" fill="none" stroke="#999"/>
 <line x1="60" y1="350.0" x2="500" y2="350.0" stroke="#eee"/>
-<text x="54" y="354.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">30%</text>
-<line x1="60" y1="312.5" x2="500" y2="312.5" stroke="#eee"/>
-<text x="54" y="316.5" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">35%</text>
+<text x="54" y="354.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">20%</text>
+<line x1="60" y1="325.0" x2="500" y2="325.0" stroke="#eee"/>
+<text x="54" y="329.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">25%</text>
+<line x1="60" y1="300.0" x2="500" y2="300.0" stroke="#eee"/>
+<text x="54" y="304.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">30%</text>
 <line x1="60" y1="275.0" x2="500" y2="275.0" stroke="#eee"/>
-<text x="54" y="279.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">40%</text>
-<line x1="60" y1="237.5" x2="500" y2="237.5" stroke="#eee"/>
-<text x="54" y="241.5" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">45%</text>
+<text x="54" y="279.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">35%</text>
+<line x1="60" y1="250.0" x2="500" y2="250.0" stroke="#eee"/>
+<text x="54" y="254.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">40%</text>
+<line x1="60" y1="225.0" x2="500" y2="225.0" stroke="#eee"/>
+<text x="54" y="229.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">45%</text>
 <line x1="60" y1="200.0" x2="500" y2="200.0" stroke="#eee"/>
 <text x="54" y="204.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">50%</text>
-<line x1="60" y1="162.5" x2="500" y2="162.5" stroke="#eee"/>
-<text x="54" y="166.5" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">55%</text>
+<line x1="60" y1="175.0" x2="500" y2="175.0" stroke="#eee"/>
+<text x="54" y="179.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">55%</text>
+<line x1="60" y1="150.0" x2="500" y2="150.0" stroke="#eee"/>
+<text x="54" y="154.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">60%</text>
 <line x1="60" y1="125.0" x2="500" y2="125.0" stroke="#eee"/>
-<text x="54" y="129.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">60%</text>
-<line x1="60" y1="87.5" x2="500" y2="87.5" stroke="#eee"/>
-<text x="54" y="91.5" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">65%</text>
+<text x="54" y="129.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">65%</text>
+<line x1="60" y1="100.0" x2="500" y2="100.0" stroke="#eee"/>
+<text x="54" y="104.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">70%</text>
+<line x1="60" y1="75.0" x2="500" y2="75.0" stroke="#eee"/>
+<text x="54" y="79.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">75%</text>
 <line x1="60" y1="50.0" x2="500" y2="50.0" stroke="#eee"/>
-<text x="54" y="54.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">70%</text>
+<text x="54" y="54.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">80%</text>
 <line x1="170.5" y1="50" x2="170.5" y2="350" stroke="#eee"/>
 <text x="170.5" y="366" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="middle">$0.005</text>
 <line x1="286.7" y1="50" x2="286.7" y2="350" stroke="#eee"/>
@@ -31,7 +39,7 @@
 <text x="469.9" y="366" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="middle">$0.008</text>
 <g data-config="haiku-5.5-high">
 <line x1="280.0" y1="200.0" x2="510" y2="200.0" stroke="#ccc"/>
-<line x1="280.0" y1="339.3" x2="280.0" y2="60.7" stroke="#1f5fa8" stroke-width="1.5"/>
+<line x1="280.0" y1="345.8" x2="280.0" y2="54.2" stroke="#1f5fa8" stroke-width="1.5"/>
 <circle cx="280.0" cy="200.0" r="4.5" fill="#1f5fa8" stroke="#1f5fa8" stroke-width="1.5"/>
 <text x="512" y="204.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">haiku-5.5-high 50%, $0.0059</text>
 </g>
