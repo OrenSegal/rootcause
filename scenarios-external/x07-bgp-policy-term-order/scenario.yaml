@@ -3,11 +3,11 @@
 # The prefixes were withdrawn, the internal load balancer lost its spread and small
 # clusters overloaded. Reverting the policy fixed it. Source:
 # https://blog.cloudflare.com/cloudflare-outage-on-june-21-2022/ (Cloudflare,
-# 2022-06-21). Licence: none stated on the source page. Facts are paraphrased, no text
-# is reproduced, and the telemetry is original. Runner-up reading: load-balancer
-# (overloaded downstream of the withdrawal). Accepted services: none. Names, dates and
-# scale changed; timeline compressed. Truth frozen 2026-11-07, before any run on this
-# set, the heuristic included.
+# 2022-06-21). Licence: no licence or copyright notice on the page. Facts are
+# paraphrased, no text is reproduced, and the telemetry is original. Runner-up reading:
+# load-balancer (overloaded downstream of the withdrawal). Accepted services: none.
+# Names, dates and scale changed; timeline compressed. Truth frozen 2026-11-07, before
+# any run on this set, the heuristic included.
 id: x07-bgp-policy-term-order
 title: A reordered routing policy withdraws prefixes in the busiest sites
 alert:
