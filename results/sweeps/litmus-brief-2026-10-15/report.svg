@@ -1,28 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="780" height="436" viewBox="0 0 780 436" role="img">
 <title>Sweep litmus-brief-2026-10-15: cost per solved incident vs pass rate</title>
 <rect width="780" height="436" fill="#fff"/>
-<text x="60" y="24" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="14" font-weight="bold">litmus-brief-2026-10-15: pass rate (95% Wilson interval) vs cost per solved incident</text>
+<text x="60" y="24" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="14" font-weight="bold">litmus-brief-2026-10-15: pass rate (95% CI, scenarios resampled) vs cost per solved incident</text>
 <rect x="60" y="50" width="440" height="300" fill="none" stroke="#999"/>
 <line x1="60" y1="350.0" x2="500" y2="350.0" stroke="#eee"/>
-<text x="54" y="354.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">50%</text>
+<text x="54" y="354.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">55%</text>
 <line x1="60" y1="316.7" x2="500" y2="316.7" stroke="#eee"/>
-<text x="54" y="320.7" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">55%</text>
+<text x="54" y="320.7" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">60%</text>
 <line x1="60" y1="283.3" x2="500" y2="283.3" stroke="#eee"/>
-<text x="54" y="287.3" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">60%</text>
+<text x="54" y="287.3" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">65%</text>
 <line x1="60" y1="250.0" x2="500" y2="250.0" stroke="#eee"/>
-<text x="54" y="254.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">65%</text>
+<text x="54" y="254.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">70%</text>
 <line x1="60" y1="216.7" x2="500" y2="216.7" stroke="#eee"/>
-<text x="54" y="220.7" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">70%</text>
+<text x="54" y="220.7" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">75%</text>
 <line x1="60" y1="183.3" x2="500" y2="183.3" stroke="#eee"/>
-<text x="54" y="187.3" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">75%</text>
+<text x="54" y="187.3" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">80%</text>
 <line x1="60" y1="150.0" x2="500" y2="150.0" stroke="#eee"/>
-<text x="54" y="154.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">80%</text>
+<text x="54" y="154.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">85%</text>
 <line x1="60" y1="116.7" x2="500" y2="116.7" stroke="#eee"/>
-<text x="54" y="120.7" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">85%</text>
+<text x="54" y="120.7" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">90%</text>
 <line x1="60" y1="83.3" x2="500" y2="83.3" stroke="#eee"/>
-<text x="54" y="87.3" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">90%</text>
+<text x="54" y="87.3" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">95%</text>
 <line x1="60" y1="50.0" x2="500" y2="50.0" stroke="#eee"/>
-<text x="54" y="54.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">95%</text>
+<text x="54" y="54.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">100%</text>
 <line x1="125.5" y1="50" x2="125.5" y2="350" stroke="#eee"/>
 <text x="125.5" y="366" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="middle">$0.06</text>
 <line x1="197.2" y1="50" x2="197.2" y2="350" stroke="#eee"/>
@@ -34,70 +34,70 @@
 <line x1="363.3" y1="50" x2="363.3" y2="350" stroke="#eee"/>
 <text x="363.3" y="366" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="middle">$0.1</text>
 <g data-config="delete-instruction-3">
-<line x1="220.8" y1="123.3" x2="510" y2="123.3" stroke="#ccc"/>
-<line x1="220.8" y1="247.7" x2="220.8" y2="59.4" stroke="#1f5fa8" stroke-width="1.5"/>
-<circle cx="220.8" cy="123.3" r="4.5" fill="#1f5fa8" stroke="#1f5fa8" stroke-width="1.5"/>
-<text x="512" y="127.3" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">delete-instruction-3 84%, $0.0736</text>
+<line x1="220.8" y1="156.7" x2="510" y2="156.7" stroke="#ccc"/>
+<line x1="220.8" y1="263.3" x2="220.8" y2="76.7" stroke="#1f5fa8" stroke-width="1.5"/>
+<circle cx="220.8" cy="156.7" r="4.5" fill="#1f5fa8" stroke="#1f5fa8" stroke-width="1.5"/>
+<text x="512" y="160.7" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">delete-instruction-3 84%, $0.0736</text>
 </g>
 <g data-config="delete-instruction-4">
-<line x1="265.4" y1="123.3" x2="510" y2="138.3" stroke="#ccc"/>
-<line x1="265.4" y1="247.7" x2="265.4" y2="59.4" stroke="#1f5fa8" stroke-width="1.5"/>
-<circle cx="265.4" cy="123.3" r="4.5" fill="#fff" stroke="#1f5fa8" stroke-width="1.5"/>
-<text x="512" y="142.3" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">delete-instruction-4 84%, $0.0810</text>
+<line x1="265.4" y1="156.7" x2="510" y2="171.7" stroke="#ccc"/>
+<line x1="265.4" y1="263.3" x2="265.4" y2="76.7" stroke="#1f5fa8" stroke-width="1.5"/>
+<circle cx="265.4" cy="156.7" r="4.5" fill="#fff" stroke="#1f5fa8" stroke-width="1.5"/>
+<text x="512" y="175.7" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">delete-instruction-4 84%, $0.0810</text>
 </g>
 <g data-config="delete-instruction-5">
-<line x1="256.6" y1="123.3" x2="510" y2="153.3" stroke="#ccc"/>
-<line x1="256.6" y1="247.7" x2="256.6" y2="59.4" stroke="#1f5fa8" stroke-width="1.5"/>
-<circle cx="256.6" cy="123.3" r="4.5" fill="#fff" stroke="#1f5fa8" stroke-width="1.5"/>
-<text x="512" y="157.3" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">delete-instruction-5 84%, $0.0795</text>
+<line x1="256.6" y1="156.7" x2="510" y2="186.7" stroke="#ccc"/>
+<line x1="256.6" y1="263.3" x2="256.6" y2="76.7" stroke="#1f5fa8" stroke-width="1.5"/>
+<circle cx="256.6" cy="156.7" r="4.5" fill="#fff" stroke="#1f5fa8" stroke-width="1.5"/>
+<text x="512" y="190.7" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">delete-instruction-5 84%, $0.0795</text>
 </g>
 <g data-config="delete-instruction-0">
-<line x1="255.3" y1="150.0" x2="510" y2="168.3" stroke="#ccc"/>
-<line x1="255.3" y1="277.5" x2="255.3" y2="75.7" stroke="#1f5fa8" stroke-width="1.5"/>
-<circle cx="255.3" cy="150.0" r="4.5" fill="#fff" stroke="#1f5fa8" stroke-width="1.5"/>
-<text x="512" y="172.3" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">delete-instruction-0 80%, $0.0793</text>
+<line x1="255.3" y1="183.3" x2="510" y2="201.7" stroke="#ccc"/>
+<line x1="255.3" y1="290.0" x2="255.3" y2="76.7" stroke="#1f5fa8" stroke-width="1.5"/>
+<circle cx="255.3" cy="183.3" r="4.5" fill="#fff" stroke="#1f5fa8" stroke-width="1.5"/>
+<text x="512" y="205.7" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">delete-instruction-0 80%, $0.0793</text>
 </g>
 <g data-config="delete-instruction-1">
-<line x1="266.7" y1="150.0" x2="510" y2="183.3" stroke="#ccc"/>
-<line x1="266.7" y1="277.5" x2="266.7" y2="75.7" stroke="#1f5fa8" stroke-width="1.5"/>
-<circle cx="266.7" cy="150.0" r="4.5" fill="#fff" stroke="#1f5fa8" stroke-width="1.5"/>
-<text x="512" y="187.3" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">delete-instruction-1 80%, $0.0813</text>
+<line x1="266.7" y1="183.3" x2="510" y2="216.7" stroke="#ccc"/>
+<line x1="266.7" y1="290.0" x2="266.7" y2="76.7" stroke="#1f5fa8" stroke-width="1.5"/>
+<circle cx="266.7" cy="183.3" r="4.5" fill="#fff" stroke="#1f5fa8" stroke-width="1.5"/>
+<text x="512" y="220.7" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">delete-instruction-1 80%, $0.0813</text>
 </g>
 <g data-config="invert-rule-1">
-<line x1="339.2" y1="150.0" x2="510" y2="198.3" stroke="#ccc"/>
-<line x1="339.2" y1="277.5" x2="339.2" y2="75.7" stroke="#1f5fa8" stroke-width="1.5"/>
-<circle cx="339.2" cy="150.0" r="4.5" fill="#fff" stroke="#1f5fa8" stroke-width="1.5"/>
-<text x="512" y="202.3" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">invert-rule-1 80%, $0.0949</text>
+<line x1="339.2" y1="183.3" x2="510" y2="231.7" stroke="#ccc"/>
+<line x1="339.2" y1="290.0" x2="339.2" y2="76.7" stroke="#1f5fa8" stroke-width="1.5"/>
+<circle cx="339.2" cy="183.3" r="4.5" fill="#fff" stroke="#1f5fa8" stroke-width="1.5"/>
+<text x="512" y="235.7" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">invert-rule-1 80%, $0.0949</text>
 </g>
 <g data-config="truncate-0">
-<line x1="248.4" y1="150.0" x2="510" y2="213.3" stroke="#ccc"/>
-<line x1="248.4" y1="277.5" x2="248.4" y2="75.7" stroke="#1f5fa8" stroke-width="1.5"/>
-<circle cx="248.4" cy="150.0" r="4.5" fill="#fff" stroke="#1f5fa8" stroke-width="1.5"/>
-<text x="512" y="217.3" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">truncate-0 80%, $0.0781</text>
+<line x1="248.4" y1="183.3" x2="510" y2="246.7" stroke="#ccc"/>
+<line x1="248.4" y1="290.0" x2="248.4" y2="76.7" stroke="#1f5fa8" stroke-width="1.5"/>
+<circle cx="248.4" cy="183.3" r="4.5" fill="#fff" stroke="#1f5fa8" stroke-width="1.5"/>
+<text x="512" y="250.7" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">truncate-0 80%, $0.0781</text>
 </g>
 <g data-config="wrong-fact-1">
-<line x1="275.5" y1="150.0" x2="510" y2="228.3" stroke="#ccc"/>
-<line x1="275.5" y1="277.5" x2="275.5" y2="75.7" stroke="#1f5fa8" stroke-width="1.5"/>
-<circle cx="275.5" cy="150.0" r="4.5" fill="#fff" stroke="#1f5fa8" stroke-width="1.5"/>
-<text x="512" y="232.3" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">wrong-fact-1 80%, $0.0828</text>
+<line x1="275.5" y1="183.3" x2="510" y2="261.7" stroke="#ccc"/>
+<line x1="275.5" y1="290.0" x2="275.5" y2="76.7" stroke="#1f5fa8" stroke-width="1.5"/>
+<circle cx="275.5" cy="183.3" r="4.5" fill="#fff" stroke="#1f5fa8" stroke-width="1.5"/>
+<text x="512" y="265.7" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">wrong-fact-1 80%, $0.0828</text>
 </g>
 <g data-config="delete-instruction-2">
-<line x1="284.3" y1="176.7" x2="510" y2="243.3" stroke="#ccc"/>
-<line x1="284.3" y1="306.2" x2="284.3" y2="93.3" stroke="#1f5fa8" stroke-width="1.5"/>
-<circle cx="284.3" cy="176.7" r="4.5" fill="#fff" stroke="#1f5fa8" stroke-width="1.5"/>
-<text x="512" y="247.3" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">delete-instruction-2 76%, $0.0844</text>
+<line x1="284.3" y1="210.0" x2="510" y2="276.7" stroke="#ccc"/>
+<line x1="284.3" y1="316.7" x2="284.3" y2="103.3" stroke="#1f5fa8" stroke-width="1.5"/>
+<circle cx="284.3" cy="210.0" r="4.5" fill="#fff" stroke="#1f5fa8" stroke-width="1.5"/>
+<text x="512" y="280.7" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">delete-instruction-2 76%, $0.0844</text>
 </g>
 <g data-config="wrong-fact-0">
-<line x1="303.5" y1="176.7" x2="510" y2="258.3" stroke="#ccc"/>
-<line x1="303.5" y1="306.2" x2="303.5" y2="93.3" stroke="#1f5fa8" stroke-width="1.5"/>
-<circle cx="303.5" cy="176.7" r="4.5" fill="#fff" stroke="#1f5fa8" stroke-width="1.5"/>
-<text x="512" y="262.3" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">wrong-fact-0 76%, $0.0880</text>
+<line x1="303.5" y1="210.0" x2="510" y2="291.7" stroke="#ccc"/>
+<line x1="303.5" y1="316.7" x2="303.5" y2="103.3" stroke="#1f5fa8" stroke-width="1.5"/>
+<circle cx="303.5" cy="210.0" r="4.5" fill="#fff" stroke="#1f5fa8" stroke-width="1.5"/>
+<text x="512" y="295.7" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">wrong-fact-0 76%, $0.0880</text>
 </g>
 <g data-config="invert-rule-0">
-<line x1="328.7" y1="203.3" x2="510" y2="273.3" stroke="#ccc"/>
-<line x1="328.7" y1="333.8" x2="328.7" y2="111.9" stroke="#1f5fa8" stroke-width="1.5"/>
-<circle cx="328.7" cy="203.3" r="4.5" fill="#fff" stroke="#1f5fa8" stroke-width="1.5"/>
-<text x="512" y="277.3" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">invert-rule-0 72%, $0.0928</text>
+<line x1="328.7" y1="236.7" x2="510" y2="306.7" stroke="#ccc"/>
+<line x1="328.7" y1="343.3" x2="328.7" y2="130.0" stroke="#1f5fa8" stroke-width="1.5"/>
+<circle cx="328.7" cy="236.7" r="4.5" fill="#fff" stroke="#1f5fa8" stroke-width="1.5"/>
+<text x="512" y="310.7" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">invert-rule-0 72%, $0.0928</text>
 </g>
 <text x="60" y="388" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">cost per solved incident (log scale, includes spend on failed runs). Filled: on the frontier. Hollow: dominated.</text>
 <text x="60" y="404" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">Not plotted, no cost per solved incident to place on a log scale: delete-body-0</text>

@@ -1,8 +1,8 @@
-### Sweep `loop-haiku-2026-10-26`: 1 configurations, 3 runs each
+### Sweep `loop-haiku-2026-10-26`: 1 configurations, 3 runs each (single-service grade)
 
 | config | scored / errors | pass rate (95% CI) | pass^3 | pass@3 | mean cost | cost per solved | p50 / p90 wall | output tokens | tool calls | searched | frontier |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| loop-haiku-5.5-high-single | 75 / 0 | 75% (64% to 83%) | 68% | 84% | $0.0105 | $0.0141 | 53.3s / 114.1s | 8735 | 14.3 | 0% | yes |
+| loop-haiku-5.5-high-single | 75 / 0 | 75% (59% to 89%) | 68% | 84% | $0.0105 | $0.0141 | 53.3s / 114.1s | 8735 | 14.3 | 0% | yes |
 
 | scenario | loop-haiku-5.5-high-single |
 |---|---|
