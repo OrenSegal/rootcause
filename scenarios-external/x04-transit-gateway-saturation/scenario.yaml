@@ -1,0 +1,22 @@
+# The provider-managed transit-gateway between the web tier and its backends hit its
+# packet rate limit during the first-morning-back surge and dropped packets. Backend
+# calls timed out, web hosts went unhealthy, autoscaling churned and provision-service
+# hit its open-files limit. The gateway is a managed dependency the team does not
+# operate, so the category is dependency_failure. Source:
+# https://slack.engineering/slacks-outage-on-january-4th-2021/ (Slack, 2021-01-04).
+# Licence: none stated on the source page. Facts are paraphrased, no text is reproduced,
+# and the telemetry is original. Runner-up reading: resource_exhaustion (the gateway's
+# capacity ran out); provision-service (a visible but secondary limit). Accepted
+# services: none. Names, dates and scale changed; timeline compressed. Truth frozen
+# 2026-11-07, before any run on this set, the heuristic included.
+id: x04-transit-gateway-saturation
+title: The cloud network hop between tiers drops packets under a traffic surge
+alert:
+  service: chat-web
+  summary: message send success at 99% and falling; web tier saturated.
+truth:
+  category: dependency_failure
+  service: transit-gateway
+  required_evidence_any:
+  - log-0006
+  - m-tgw-drops

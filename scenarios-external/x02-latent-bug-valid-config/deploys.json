@@ -1,0 +1,28 @@
+[
+  {
+    "id": "d-E201",
+    "service": "edge",
+    "version": "7.4.0",
+    "ts": "2026-10-11T13:00:00Z",
+    "author": "edge-release",
+    "summary": "Edge runtime 7.4.0: request routing for tenant-defined path rules",
+    "config_before": {},
+    "config_after": {},
+    "files": []
+  },
+  {
+    "id": "d-E202",
+    "service": "edge",
+    "version": "tenant-cfg-4417-v13",
+    "ts": "2026-10-14T13:19:00Z",
+    "author": "tenant-api",
+    "summary": "Tenant 4417: update path routing rules",
+    "config_before": {
+      "TENANT_4417_PATH_RULES": "v12"
+    },
+    "config_after": {
+      "TENANT_4417_PATH_RULES": "v13"
+    },
+    "files": []
+  }
+]

@@ -1,0 +1,14 @@
+# T14: the externally sourced held-out set. Eight incidents adapted from public
+# postmortems (scripts/author_external.py names each source). The whole set is held
+# out: truths, accepted services, this file and the CI method in
+# scripts/resample_gaps.py were committed before anything ran on it, and no result
+# here is used to change the brief, the grader or an accepted set.
+# One cheap model config, to keep spend small: Haiku 5.5 at high effort with no search,
+# the same config as haiku-5.5-high in models-and-retrieval.yaml, so the two compare.
+# The heuristic is deterministic; it runs three times only to share the table.
+name: external-heldout-2026-11-07
+repeats: 3
+scenarios: scenarios-external
+configs:
+  - {name: heuristic, provider: heuristic, model: heuristic}
+  - {name: haiku-5.5-high, provider: claude-code, model: claude-haiku-5-5, effort: high}
