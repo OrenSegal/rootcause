@@ -1,9 +1,9 @@
-### Sweep `loop-2026-10-15`: 2 configurations, 3 runs each
+### Sweep `loop-2026-10-15`: 2 configurations, 3 runs each (single-service grade)
 
 | config | scored / errors | pass rate (95% CI) | pass^3 | pass@3 | mean cost | cost per solved | p50 / p90 wall | output tokens | tool calls | searched | frontier |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| loop-opus-5.5-high-single | 75 / 0 | 81% (71% to 89%) | 72% | 88% | $0.0934 | $0.1149 | 36.8s / 60.2s | 2033 | 8.3 | 0% | yes |
-| loop-opus-5.5-high-multi | 75 / 0 | 77% (67% to 85%) | 72% | 88% | $0.2896 | $0.3745 | 69.5s / 122.4s | 8327 | 22.2 | 0% | dominated |
+| loop-opus-5.5-high-single | 75 / 0 | 81% (67% to 93%) | 72% | 88% | $0.0934 | $0.1149 | 36.8s / 60.2s | 2033 | 8.3 | 0% | yes |
+| loop-opus-5.5-high-multi | 75 / 0 | 77% (61% to 91%) | 72% | 88% | $0.2896 | $0.3745 | 69.5s / 122.4s | 8327 | 22.2 | 0% | dominated |
 
 | scenario | loop-opus-5.5-high-single | loop-opus-5.5-high-multi |
 |---|---|---|

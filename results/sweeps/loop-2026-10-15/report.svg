@@ -1,20 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="780" height="420" viewBox="0 0 780 420" role="img">
 <title>Sweep loop-2026-10-15: cost per solved incident vs pass rate</title>
 <rect width="780" height="420" fill="#fff"/>
-<text x="60" y="24" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="14" font-weight="bold">loop-2026-10-15: pass rate (95% Wilson interval) vs cost per solved incident</text>
+<text x="60" y="24" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="14" font-weight="bold">loop-2026-10-15: pass rate (95% CI, scenarios resampled) vs cost per solved incident</text>
 <rect x="60" y="50" width="440" height="300" fill="none" stroke="#999"/>
 <line x1="60" y1="350.0" x2="500" y2="350.0" stroke="#eee"/>
-<text x="54" y="354.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">65%</text>
-<line x1="60" y1="290.0" x2="500" y2="290.0" stroke="#eee"/>
-<text x="54" y="294.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">70%</text>
-<line x1="60" y1="230.0" x2="500" y2="230.0" stroke="#eee"/>
-<text x="54" y="234.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">75%</text>
-<line x1="60" y1="170.0" x2="500" y2="170.0" stroke="#eee"/>
-<text x="54" y="174.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">80%</text>
-<line x1="60" y1="110.0" x2="500" y2="110.0" stroke="#eee"/>
-<text x="54" y="114.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">85%</text>
+<text x="54" y="354.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">60%</text>
+<line x1="60" y1="307.1" x2="500" y2="307.1" stroke="#eee"/>
+<text x="54" y="311.1" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">65%</text>
+<line x1="60" y1="264.3" x2="500" y2="264.3" stroke="#eee"/>
+<text x="54" y="268.3" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">70%</text>
+<line x1="60" y1="221.4" x2="500" y2="221.4" stroke="#eee"/>
+<text x="54" y="225.4" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">75%</text>
+<line x1="60" y1="178.6" x2="500" y2="178.6" stroke="#eee"/>
+<text x="54" y="182.6" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">80%</text>
+<line x1="60" y1="135.7" x2="500" y2="135.7" stroke="#eee"/>
+<text x="54" y="139.7" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">85%</text>
+<line x1="60" y1="92.9" x2="500" y2="92.9" stroke="#eee"/>
+<text x="54" y="96.9" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">90%</text>
 <line x1="60" y1="50.0" x2="500" y2="50.0" stroke="#eee"/>
-<text x="54" y="54.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">90%</text>
+<text x="54" y="54.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">95%</text>
 <line x1="108.6" y1="50" x2="108.6" y2="350" stroke="#eee"/>
 <text x="108.6" y="366" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="middle">$0.1</text>
 <line x1="271.5" y1="50" x2="271.5" y2="350" stroke="#eee"/>
@@ -22,16 +26,16 @@
 <line x1="486.8" y1="50" x2="486.8" y2="350" stroke="#eee"/>
 <text x="486.8" y="366" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="middle">$0.5</text>
 <g data-config="loop-opus-5.5-high-single">
-<line x1="141.2" y1="154.0" x2="510" y2="154.0" stroke="#ccc"/>
-<line x1="141.2" y1="277.1" x2="141.2" y2="67.5" stroke="#1f5fa8" stroke-width="1.5"/>
-<circle cx="141.2" cy="154.0" r="4.5" fill="#1f5fa8" stroke="#1f5fa8" stroke-width="1.5"/>
-<text x="512" y="158.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">loop-opus-5.5-high-single 81%, $0.1149</text>
+<line x1="141.2" y1="167.1" x2="510" y2="167.1" stroke="#ccc"/>
+<line x1="141.2" y1="292.9" x2="141.2" y2="64.3" stroke="#1f5fa8" stroke-width="1.5"/>
+<circle cx="141.2" cy="167.1" r="4.5" fill="#1f5fa8" stroke="#1f5fa8" stroke-width="1.5"/>
+<text x="512" y="171.1" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">loop-opus-5.5-high-single 81%, $0.1149</text>
 </g>
 <g data-config="loop-opus-5.5-high-multi">
-<line x1="418.8" y1="202.0" x2="510" y2="202.0" stroke="#ccc"/>
-<line x1="418.8" y1="330.0" x2="418.8" y2="105.9" stroke="#1f5fa8" stroke-width="1.5"/>
-<circle cx="418.8" cy="202.0" r="4.5" fill="#fff" stroke="#1f5fa8" stroke-width="1.5"/>
-<text x="512" y="206.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">loop-opus-5.5-high-multi 77%, $0.3745</text>
+<line x1="418.8" y1="201.4" x2="510" y2="201.4" stroke="#ccc"/>
+<line x1="418.8" y1="338.6" x2="418.8" y2="87.1" stroke="#1f5fa8" stroke-width="1.5"/>
+<circle cx="418.8" cy="201.4" r="4.5" fill="#fff" stroke="#1f5fa8" stroke-width="1.5"/>
+<text x="512" y="205.4" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">loop-opus-5.5-high-multi 77%, $0.3745</text>
 </g>
 <text x="60" y="388" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">cost per solved incident (log scale, includes spend on failed runs). Filled: on the frontier. Hollow: dominated.</text>
 </svg>

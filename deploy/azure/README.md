@@ -1,8 +1,11 @@
 # Deploy the telemetry MCP server to Azure Container Apps
 
-Serves the 25 committed scenario fixtures, read-only, over streamable HTTP. One MCP endpoint
+Serves the committed scenario fixtures (33 today), read-only, over streamable HTTP. One MCP endpoint
 per scenario at `/scenarios/<dir>/mcp`, health at `/healthz`. No credentials, no outbound
 calls, no data other than the fixtures in `scenarios/`. `rollback_deploy` is not exposed.
+
+Status: not deployed. The `deploy-azure` workflow has never been dispatched and no Azure
+endpoint exists. The cold-start figure below is from a local Docker run.
 
 What `main.bicep` creates: a Log Analytics workspace (30-day retention, 0.1 GB/day ingestion
 cap), a Container Apps environment, and one container app (0.25 vCPU, 0.5 GiB, 0 to 1
