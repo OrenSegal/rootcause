@@ -21,6 +21,7 @@ Two different agent loops were measured. In the 525-run sweep, Claude Code's own
 | 7 model, effort and retrieval settings, 525 runs | Claude Code's own, over rootcause's MCP tools and grader | 77-84% pass rate, all intervals overlap; cost per solved incident $0.0033 to $0.081 (25x) |
 | hand-written loop vs LangGraph, 300 runs | rootcause's hand-written loop and its LangGraph port | no detectable difference on accuracy, cost, tokens or latency; orchestrator with workers cost about 3x for no measurable gain |
 | retrieval over 33 postmortems | none (retriever alone) | BM25 recall@5 0.94 vs 0.86 for a transformer model at roughly 1,000x the query latency |
+| held-out set adapted from 8 public postmortems, pre-registered, 24 runs | Claude Code's own, Haiku 5.5 | 50% (cluster CI 21% to 79%) against 77% on the main suite; the misses are the category, the service is right in 22 of 24 |
 | mutation testing the brief, 12 mutants, 275 scored runs | Claude Code's own | 0 of 12 killed (11 survived, 1 inconclusive), so the suite can't yet catch a regression in a single instruction; two of the mutants touch a rule the harness already enforces, so they could not fail |
 
 **How it's evaluated.** The 525-run sweep used 25 incidents with known root causes; eight more, built around one rule of the brief each, have been added since, run once at three model tiers (72 runs) and mutation-tested (112 runs); the mutation result is mostly negative (see [The rule suite](#the-rule-suite)). The 25: each built around a mistake a responder could make, several with planted decoys; the "blame the last deploy" baseline gets three right (and four of the eight new ones). Every result below was graded by the single-service check; the grader now also takes a pre-registered set of accepted services per scenario, and `--strict-service` reproduces the old grade. The grader checks category, service, that every cited id exists in the scenario's telemetry and at least one is the expected evidence, that no rollback hit an innocent deploy, and that the run made at least one tool call. It does not read the written explanation, and it does not check that a tool returned the id during that run; only the hand-written loop's runtime check does that. Each configuration runs every scenario three times and is reported with a Wilson interval, pass^k, and cost per solved incident including failed runs. Harness failures are retried and never counted as wrong answers. More under "Evals that can fail" and "Measurement before claims" in [What it shows](#what-it-shows).
@@ -205,6 +206,35 @@ Why a kill was possible at all, and what could still go wrong:
 - **None of the rules the scenarios were built around was caught.** Deleting or inverting gather evidence, symptoms spread, cite exact ids, rollback only with evidence, and no_incident, or finishing in plain text, all survived, as did making two facts wrong. The scenarios were designed so that each rule decides its scenario. On one run per scenario per mutant, with a strong model, they did not. A model that is good at the task does the right thing without being told the rule.
 - **So the original diagnosis is only half fixed.** The suite can now catch a brief that stops asking for search. It still cannot catch a regression in a single behavioural instruction, which is the 0-of-12 result's point. One run per scenario is also thin: a mutant that fails a scenario one time in three would usually survive.
 
+### Held-out (externally sourced)
+
+`scenarios-external/`: eight incidents adapted from public postmortems, written as code in `scripts/author_external.py`. Each `scenario.yaml` header gives the source URL, its licence status (none of the eight source pages states a licence, so facts are paraphrased, no text is reproduced, and the telemetry is original), the category a reader could argue for instead, and the accepted services. Truths, accepted services, the sweep file and the interval method were committed in f5417b1 and pushed with a draft PR before anything ran on the set, the heuristic included. Nothing here has been used to change the brief, the grader or an accepted set.
+
+| scenario | source |
+|---|---|
+| x01 WAF rule with a backtracking regex, pushed globally | [Cloudflare, 2019-07-02](https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/) |
+| x02 valid tenant config trips a bug shipped days earlier | [Fastly, 2021-06-08](https://www.fastly.com/blog/summary-of-june-8-outage) |
+| x03 Postgres shard stops writes at transaction ID wraparound | [Mandrill, 2019-02-04](https://mailchimp.com/what-we-learned-from-the-recent-mandrill-outage/) |
+| x04 cloud transit gateway drops packets under a traffic surge | [Slack, 2021-01-04](https://slack.engineering/slacks-outage-on-january-4th-2021/) |
+| x05 automatic OS update restarts networkd and deletes pod routes | [Datadog, 2023-03-08](https://www.datadoghq.com/blog/2023-03-08-multiregion-infrastructure-connectivity-issue/) |
+| x06 43-second partition moves database primaries across the country | [GitHub, 2018-10-21](https://github.blog/2018-10-30-oct21-post-incident-analysis/) |
+| x07 reordered BGP policy withdraws prefixes in the busiest sites | [Cloudflare, 2022-06-21](https://blog.cloudflare.com/cloudflare-outage-on-june-21-2022/) |
+| x08 mistyped runbook command removes most of the object index | [AWS, 2017-02-28](https://aws.amazon.com/message/41926/) |
+
+`sweeps/external-heldout.yaml`, three runs per scenario, run on 2026-11-07 (`results/sweeps/external-heldout-2026-11-07/`). Intervals here are a cluster bootstrap over scenarios (all of a scenario's runs resampled together, 10,000 draws), from `scripts/resample_gaps.py`, and the main-suite row is recomputed the same way from the committed 2026-10-15 rows so the two compare.
+
+| configuration | held-out, 8 scenarios | main suite, 25 scenarios |
+|---|---|---|
+| Haiku 5.5, high, no search | 50% (21% to 79%), 24 runs | 77% (63% to 91%), 75 runs |
+| "blame the last deploy" heuristic | 25% (0% to 63%), 24 runs | 12% (3 of 25) |
+
+- **Haiku drops from 77% to 50%, and the intervals overlap.** With eight clusters the held-out interval is 58 points wide, so this is a rough range, not a test of a difference. Cost was $0.0030 per run at list price, $0.072 for the 24 runs, through a Claude subscription.
+- **The misses are almost all the category, not the culprit.** Haiku named the truth's service (or an accepted one) in 22 of 24 runs and cited valid expected evidence in all of those. Ten of its twelve failures are the category alone: x02 it called config_change every time (blaming the trigger, which the postmortem calls a trigger, not the cause), x04 infrastructure every time (the cloud gateway, which the truth calls dependency_failure), x03 infrastructure or dependency_failure (the truth is resource_exhaustion), and x08 config_change once. The other two are x06 naming mysql, where the stale reads show up, instead of the network partition. With the category check dropped, 22 of 24 runs would pass; that figure was computed after seeing the results and is not the pre-registered measure.
+- **So on outside incidents the six-way category is the weak point.** Three of these cases do not map cleanly onto the categories, and the header of each names the runner-up that was considered; Haiku picked the named runner-up on x02 and x08, and an unlisted one on x03 and x04. Whether that is a model error or a taxonomy problem is a judgement this set cannot settle.
+- **The heuristic passes x01 and x07**, both cases where the last deploy before the errors really is the cause, which is how real config pushes often look.
+
+Caveats: the causes are external, but the telemetry that renders them is written by the same author as the main suite, so the "written by someone else" half of the criticism is not met, only the "adapted from public incidents" half. Names, dates and scale were changed and timelines compressed so a model cannot match an incident by name, but all eight are well-known outages and recognition from training data is possible. One model configuration, three runs each, 24 runs.
+
 ## Architecture
 
 ```
@@ -236,6 +266,8 @@ A CI job installs the core alone and runs the tests, the baseline and BM25 retri
 `scenarios/001` to `007`, `009` to `022`, `025` and `026` to `033` are written as code in `scripts/author_scenarios.py`, each with a docstring saying what makes it hard. A test regenerates them and fails if the committed fixtures drift, and another fails if the baseline solves more than half. A runtime flag flip or an operator's cache flush shows up as a log line, the way a flag service or a runbook audit log would record it, so neither needed a new tool.
 
 `scenarios/008`, `023` and `024` are real failed runs from [sous](https://github.com/OrenSegal/sous): the raw `gh` output is kept in `raw/`, the fixtures are derived from it, and the ground truth was set by reading the logs and diffs, with the reasoning in each `scenario.yaml` header. In 024 the head commit is a decoy and only the earlier guilty commit counts as evidence.
+
+`scenarios-external/x01` to `x08` adapt public postmortems and are kept out of `scenarios/` so no main-suite sweep picks them up; see [Held-out (externally sourced)](#held-out-externally-sourced).
 
 ## Use it from a coding agent
 
@@ -276,4 +308,4 @@ Example comment bodies, produced offline from recorded runs by the heuristic pro
 - The Anthropic adapter on a live model: native `tool_use`, cache control and refusal fallbacks are tested against a mocked transport only. Every live result here reaches the model through Claude Code. The sweep file format already takes `provider: anthropic`.
 - Scenarios that do kill a mutant of a behavioural rule. The rule suite killed 2 of 14, both through the search requirement; the rule-specific designs did not work on one run each. Next would be harder traps, several runs per mutant, and a weaker model as the baseline (Haiku failed 3 of 24 here, so a stable baseline is the constraint).
 - Telemetry recorded from a running service stack. The CI adapter covers real recorded data for now.
-- A held-out set by a different author. The held-out split marks scenarios not used for tuning, but the scenarios, the corpus and the labels share an author, which flatters lexical retrieval and limits how far any result here generalizes.
+- A held-out set by a different author. The held-out split marks scenarios not used for tuning, and the [externally sourced set](#held-out-externally-sourced) takes its causes from public postmortems, but the telemetry, the corpus and the labels share an author, which flatters lexical retrieval and limits how far any result here generalizes.
