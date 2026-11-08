@@ -3,17 +3,23 @@
     uv run python scripts/resample_gaps.py
 
 Prints each configuration's pass rate with the service check dropped (models sweep),
-then a paired bootstrap over scenarios for two gaps: Opus high minus Sonnet (service
-check dropped) and the single-agent loop minus LangGraph (grader as is). Each draw
+then a paired bootstrap over scenarios for Opus high minus Sonnet and minus Haiku, with
+the service check dropped (a post-hoc grade, not corrected for other pairs). Each draw
 resamples the 25 scenarios with replacement and keeps all of a scenario's runs, the
 same draw for both sides of a gap.
 
+Next, how much the repeats of one scenario agree, per model-sweep setting: the
+intraclass correlation (one-way ANOVA, 3 runs per scenario), the effective number of
+independent runs it implies, and how much wider the scenario-resampled interval is than a
+Wilson interval over all 75 runs.
+
 Then the same gaps under the strict grader (the grade as recorded) for the comparisons
-the README draws: Opus high minus Haiku, and single agent minus orchestrator per harness
-and pooled. For each: the per-scenario differences d_i, their sd, the minimum detectable
-effect at 80% power, an exact sign test on the scenarios that differ, and Holm-adjusted
-p-values across the pairs printed. Last, every pair of the seven model-sweep settings
-(21 comparisons), Holm-adjusted together, since that is how many the table invites.
+the README draws: Opus high minus Haiku, loop minus LangGraph, and single agent minus
+orchestrator per harness and pooled. For each: the per-scenario differences d_i, their
+sd, the minimum detectable effect at 80% power, an exact sign test on the scenarios
+that differ, and Holm-adjusted p-values across the pairs printed. Last, every pair of
+the seven model-sweep settings (21 comparisons), Holm-adjusted together, since that is
+how many the table invites.
 """
 
 import itertools
@@ -24,6 +30,7 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
+from rootcause.application.stats import cluster_bootstrap, wilson
 from rootcause.application.sweep import Row
 from rootcause.composition import read_sweep
 
@@ -107,7 +114,34 @@ def holm(ps: list[float]) -> list[float]:
     return out
 
 
+def icc(clusters: list[list[bool]]) -> float:
+    """One-way ANOVA intraclass correlation for equal-size clusters, clamped at 0."""
+    k, m = len(clusters[0]), len(clusters)
+    assert all(len(c) == k for c in clusters), "equal runs per scenario"
+    means = [sum(c) / k for c in clusters]
+    grand = sum(means) / m
+    msb = k * sum((x - grand) ** 2 for x in means) / (m - 1)
+    msw = sum((x - mu) ** 2 for c, mu in zip(clusters, means, strict=True) for x in c) / (
+        m * (k - 1)
+    )
+    if msb + (k - 1) * msw == 0:
+        return 0.0
+    return max(0.0, (msb - msw) / (msb + (k - 1) * msw))
+
+
+def width_ratio(clusters: list[list[bool]]) -> float:
+    """Scenario-resampled interval width over the Wilson-over-runs width."""
+    runs = [x for c in clusters for x in c]
+    assert 0 < sum(runs) < len(runs), "cluster_bootstrap falls back to Wilson at 0% or 100%"
+    lo, hi = cluster_bootstrap(clusters)
+    wlo, whi = wilson(sum(runs), len(runs))
+    return (hi - lo) / (whi - wlo)
+
+
 def self_check() -> None:
+    unanimous = [[True] * 3, [False] * 3] * 2
+    assert icc(unanimous) == 1.0
+    assert icc([[True, False, True], [False, True, True]]) == 0.0
     a = {"x": [True, True], "y": [True, False]}
     b = {"x": [False, False], "y": [True, False]}
     point, lo, hi = paired_gap(a, b, draws=2000)
@@ -141,13 +175,17 @@ def main() -> None:
     loop, _ = read_sweep(SWEEPS / "loop-2026-10-15")
     graph, _ = read_sweep(SWEEPS / "langgraph-2026-10-15")
     passed = lambda r: r.grade.passed  # noqa: E731
-    point, lo, hi = paired_gap(
-        by_scenario(loop, "loop-opus-5.5-high-single", passed),
-        by_scenario(graph, "langgraph-opus-5.5-high-single", passed),
-    )
-    print(f"loop minus LangGraph, single agent: {point:+.1f} ({lo:+.1f} to {hi:+.1f})")
-
     strict = {c: by_scenario(models, c, passed) for c in configs}
+
+    print("\nRepeats of one scenario, strict grader (75 runs = 25 scenarios x 3):")
+    for c in configs:
+        clusters = [strict[c][s] for s in sorted(strict[c])]
+        rho = icc(clusters)
+        n_runs = sum(map(len, clusters))
+        print(
+            f"  {c:24} ICC {rho:.2f}, effective n {n_runs / (1 + 2 * rho):4.1f}, "
+            f"interval width vs Wilson over runs {width_ratio(clusters):.2f}x"
+        )
     single = {
         h: by_scenario(rows, f"{h}-opus-5.5-high-single", passed)
         for h, rows in (("loop", loop), ("langgraph", graph))
@@ -159,6 +197,7 @@ def main() -> None:
     pooled = [{s: x["loop"][s] + x["langgraph"][s] for s in x["loop"]} for x in (single, multi)]
     pairs = {
         "Opus high minus Haiku": (strict["opus-5.5-high"], strict["haiku-5.5-high"]),
+        "loop minus LangGraph, single agent": (single["loop"], single["langgraph"]),
         "single minus orchestrator, loop": (single["loop"], multi["loop"]),
         "single minus orchestrator, LangGraph": (single["langgraph"], multi["langgraph"]),
         "single minus orchestrator, pooled": (pooled[0], pooled[1]),
