@@ -1,22 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="780" height="420" viewBox="0 0 780 420" role="img">
 <title>Sweep models-and-retrieval-2026-10-15: cost per solved incident vs pass rate</title>
 <rect width="780" height="420" fill="#fff"/>
-<text x="60" y="24" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="14" font-weight="bold">models-and-retrieval-2026-10-15: pass rate (95% Wilson interval) vs cost per solved incident</text>
+<text x="60" y="24" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="14" font-weight="bold">models-and-retrieval-2026-10-15: pass rate (95% CI, scenarios resampled) vs cost per solved incident</text>
 <rect x="60" y="50" width="440" height="300" fill="none" stroke="#999"/>
 <line x1="60" y1="350.0" x2="500" y2="350.0" stroke="#eee"/>
-<text x="54" y="354.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">65%</text>
-<line x1="60" y1="300.0" x2="500" y2="300.0" stroke="#eee"/>
-<text x="54" y="304.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">70%</text>
-<line x1="60" y1="250.0" x2="500" y2="250.0" stroke="#eee"/>
-<text x="54" y="254.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">75%</text>
+<text x="54" y="354.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">60%</text>
+<line x1="60" y1="312.5" x2="500" y2="312.5" stroke="#eee"/>
+<text x="54" y="316.5" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">65%</text>
+<line x1="60" y1="275.0" x2="500" y2="275.0" stroke="#eee"/>
+<text x="54" y="279.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">70%</text>
+<line x1="60" y1="237.5" x2="500" y2="237.5" stroke="#eee"/>
+<text x="54" y="241.5" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">75%</text>
 <line x1="60" y1="200.0" x2="500" y2="200.0" stroke="#eee"/>
 <text x="54" y="204.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">80%</text>
-<line x1="60" y1="150.0" x2="500" y2="150.0" stroke="#eee"/>
-<text x="54" y="154.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">85%</text>
-<line x1="60" y1="100.0" x2="500" y2="100.0" stroke="#eee"/>
-<text x="54" y="104.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">90%</text>
+<line x1="60" y1="162.5" x2="500" y2="162.5" stroke="#eee"/>
+<text x="54" y="166.5" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">85%</text>
+<line x1="60" y1="125.0" x2="500" y2="125.0" stroke="#eee"/>
+<text x="54" y="129.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">90%</text>
+<line x1="60" y1="87.5" x2="500" y2="87.5" stroke="#eee"/>
+<text x="54" y="91.5" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">95%</text>
 <line x1="60" y1="50.0" x2="500" y2="50.0" stroke="#eee"/>
-<text x="54" y="54.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">95%</text>
+<text x="54" y="54.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="end">100%</text>
 <line x1="146.5" y1="50" x2="146.5" y2="350" stroke="#eee"/>
 <text x="146.5" y="366" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="middle">$0.005</text>
 <line x1="224.4" y1="50" x2="224.4" y2="350" stroke="#eee"/>
@@ -28,46 +32,46 @@
 <line x1="483.3" y1="50" x2="483.3" y2="350" stroke="#eee"/>
 <text x="483.3" y="366" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12" text-anchor="middle">$0.1</text>
 <g data-config="opus-5.5-high-hybrid">
-<line x1="450.8" y1="160.0" x2="510" y2="160.0" stroke="#ccc"/>
-<line x1="450.8" y1="259.2" x2="450.8" y2="94.0" stroke="#1f5fa8" stroke-width="1.5"/>
-<circle cx="450.8" cy="160.0" r="4.5" fill="#1f5fa8" stroke="#1f5fa8" stroke-width="1.5"/>
-<text x="512" y="164.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">opus-5.5-high-hybrid 84%, $0.0750</text>
+<line x1="450.8" y1="170.0" x2="510" y2="170.0" stroke="#ccc"/>
+<line x1="450.8" y1="270.0" x2="450.8" y2="80.0" stroke="#1f5fa8" stroke-width="1.5"/>
+<circle cx="450.8" cy="170.0" r="4.5" fill="#1f5fa8" stroke="#1f5fa8" stroke-width="1.5"/>
+<text x="512" y="174.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">opus-5.5-high-hybrid 84%, $0.0750</text>
 </g>
 <g data-config="opus-5.5-medium">
-<line x1="440.9" y1="186.7" x2="510" y2="186.7" stroke="#ccc"/>
-<line x1="440.9" y1="289.3" x2="440.9" y2="114.6" stroke="#1f5fa8" stroke-width="1.5"/>
-<circle cx="440.9" cy="186.7" r="4.5" fill="#1f5fa8" stroke="#1f5fa8" stroke-width="1.5"/>
-<text x="512" y="190.7" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">opus-5.5-medium 81%, $0.0686</text>
+<line x1="440.9" y1="190.0" x2="510" y2="190.0" stroke="#ccc"/>
+<line x1="440.9" y1="300.0" x2="440.9" y2="90.0" stroke="#1f5fa8" stroke-width="1.5"/>
+<circle cx="440.9" cy="190.0" r="4.5" fill="#1f5fa8" stroke="#1f5fa8" stroke-width="1.5"/>
+<text x="512" y="194.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">opus-5.5-medium 81%, $0.0686</text>
 </g>
 <g data-config="sonnet-5.5-high">
-<line x1="357.0" y1="200.0" x2="510" y2="201.7" stroke="#ccc"/>
-<line x1="357.0" y1="304.1" x2="357.0" y2="125.1" stroke="#1f5fa8" stroke-width="1.5"/>
+<line x1="357.0" y1="200.0" x2="510" y2="205.0" stroke="#ccc"/>
+<line x1="357.0" y1="310.0" x2="357.0" y2="100.0" stroke="#1f5fa8" stroke-width="1.5"/>
 <circle cx="357.0" cy="200.0" r="4.5" fill="#1f5fa8" stroke="#1f5fa8" stroke-width="1.5"/>
-<text x="512" y="205.7" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">sonnet-5.5-high 80%, $0.0325</text>
+<text x="512" y="209.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">sonnet-5.5-high 80%, $0.0325</text>
 </g>
 <g data-config="opus-5.5-high">
-<line x1="459.5" y1="213.3" x2="510" y2="216.7" stroke="#ccc"/>
-<line x1="459.5" y1="318.8" x2="459.5" y2="135.8" stroke="#1f5fa8" stroke-width="1.5"/>
-<circle cx="459.5" cy="213.3" r="4.5" fill="#fff" stroke="#1f5fa8" stroke-width="1.5"/>
-<text x="512" y="220.7" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">opus-5.5-high 79%, $0.0810</text>
+<line x1="459.5" y1="210.0" x2="510" y2="220.0" stroke="#ccc"/>
+<line x1="459.5" y1="330.0" x2="459.5" y2="110.0" stroke="#1f5fa8" stroke-width="1.5"/>
+<circle cx="459.5" cy="210.0" r="4.5" fill="#fff" stroke="#1f5fa8" stroke-width="1.5"/>
+<text x="512" y="224.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">opus-5.5-high 79%, $0.0810</text>
 </g>
 <g data-config="opus-5.5-low">
-<line x1="397.9" y1="213.3" x2="510" y2="231.7" stroke="#ccc"/>
-<line x1="397.9" y1="318.8" x2="397.9" y2="135.8" stroke="#1f5fa8" stroke-width="1.5"/>
-<circle cx="397.9" cy="213.3" r="4.5" fill="#fff" stroke="#1f5fa8" stroke-width="1.5"/>
-<text x="512" y="235.7" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">opus-5.5-low 79%, $0.0468</text>
+<line x1="397.9" y1="210.0" x2="510" y2="235.0" stroke="#ccc"/>
+<line x1="397.9" y1="320.0" x2="397.9" y2="110.0" stroke="#1f5fa8" stroke-width="1.5"/>
+<circle cx="397.9" cy="210.0" r="4.5" fill="#fff" stroke="#1f5fa8" stroke-width="1.5"/>
+<text x="512" y="239.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">opus-5.5-low 79%, $0.0468</text>
 </g>
 <g data-config="haiku-5.5-high">
-<line x1="98.8" y1="226.7" x2="510" y2="246.7" stroke="#ccc"/>
-<line x1="98.8" y1="333.4" x2="98.8" y2="146.6" stroke="#1f5fa8" stroke-width="1.5"/>
-<circle cx="98.8" cy="226.7" r="4.5" fill="#1f5fa8" stroke="#1f5fa8" stroke-width="1.5"/>
-<text x="512" y="250.7" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">haiku-5.5-high 77%, $0.0033</text>
+<line x1="98.8" y1="220.0" x2="510" y2="250.0" stroke="#ccc"/>
+<line x1="98.8" y1="330.0" x2="98.8" y2="120.0" stroke="#1f5fa8" stroke-width="1.5"/>
+<circle cx="98.8" cy="220.0" r="4.5" fill="#1f5fa8" stroke="#1f5fa8" stroke-width="1.5"/>
+<text x="512" y="254.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">haiku-5.5-high 77%, $0.0033</text>
 </g>
 <g data-config="opus-5.5-high-bm25">
-<line x1="461.2" y1="226.7" x2="510" y2="261.7" stroke="#ccc"/>
-<line x1="461.2" y1="333.4" x2="461.2" y2="146.6" stroke="#1f5fa8" stroke-width="1.5"/>
-<circle cx="461.2" cy="226.7" r="4.5" fill="#fff" stroke="#1f5fa8" stroke-width="1.5"/>
-<text x="512" y="265.7" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">opus-5.5-high-bm25 77%, $0.0822</text>
+<line x1="461.2" y1="220.0" x2="510" y2="265.0" stroke="#ccc"/>
+<line x1="461.2" y1="340.0" x2="461.2" y2="120.0" stroke="#1f5fa8" stroke-width="1.5"/>
+<circle cx="461.2" cy="220.0" r="4.5" fill="#fff" stroke="#1f5fa8" stroke-width="1.5"/>
+<text x="512" y="269.0" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">opus-5.5-high-bm25 77%, $0.0822</text>
 </g>
 <text x="60" y="388" font-family="Helvetica, Arial, sans-serif" fill="#222" font-size="12">cost per solved incident (log scale, includes spend on failed runs). Filled: on the frontier. Hollow: dominated.</text>
 </svg>

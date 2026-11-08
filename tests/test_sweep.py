@@ -286,7 +286,7 @@ def test_report_splits_held_out_from_in_sample_and_a_spec_can_select_scenarios(t
     outcomes = {"001-checkout-pool-config": [True, True], "005-inventory-bad-deploy": [True, False]}
     rows_ = rows("opus-high", outcomes)
     md = report_markdown(spec, [summarize(OPUS, rows_, k=2)], rows_)
-    assert "| opus-high | 100% (34% to 100%), 2 runs | 50% (9% to 91%), 2 runs |" in md
+    assert "| opus-high | 100% (0% to 100%), 2 runs | 50% (0% to 100%), 2 runs |" in md
     assert "Held out: 005-inventory-bad-deploy." in md
     with pytest.raises(ValueError, match="not found: 999-nope"):
         sweep_paths(spec.model_copy(update={"held_out": ["999-nope"]}))

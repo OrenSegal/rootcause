@@ -2,7 +2,13 @@
 
 import pytest
 
-from rootcause.application.stats import pass_at_k, pass_hat_k, percentile, wilson
+from rootcause.application.stats import (
+    cluster_bootstrap,
+    pass_at_k,
+    pass_hat_k,
+    percentile,
+    wilson,
+)
 
 
 def test_wilson_interval_matches_the_closed_form():
@@ -12,6 +18,17 @@ def test_wilson_interval_matches_the_closed_form():
     assert wilson(0, 24)[0] == 0.0
     assert wilson(24, 24)[1] == pytest.approx(1.0)
     assert wilson(0, 0) == (0.0, 1.0)
+
+
+def test_cluster_bootstrap_resamples_whole_scenarios():
+    # Two scenarios of three runs: a draw is (a, a) 3/3, (a, b) 4/6 or (b, b) 1/3.
+    assert cluster_bootstrap([[True] * 3, [True, False, False]]) == (1 / 3, 1.0)
+    # Repeats that always agree give no extra information: same interval at 1 run or 30.
+    one = [[True], [False], [True], [True]]
+    assert cluster_bootstrap(one) == cluster_bootstrap([c * 30 for c in one])
+    # All passing: no resample can show a miss, so it falls back to Wilson over scenarios.
+    assert cluster_bootstrap([[True] * 3] * 8) == wilson(8, 8)
+    assert cluster_bootstrap([]) == cluster_bootstrap([[True, True]]) == (0.0, 1.0)
 
 
 def test_pass_at_k_is_any_success_and_pass_hat_k_is_every_success():
