@@ -7,9 +7,19 @@ then a paired bootstrap over scenarios for two gaps: Opus high minus Sonnet (ser
 check dropped) and the single-agent loop minus LangGraph (grader as is). Each draw
 resamples the 25 scenarios with replacement and keeps all of a scenario's runs, the
 same draw for both sides of a gap.
+
+Then the same gaps under the strict grader (the grade as recorded) for the comparisons
+the README draws: Opus high minus Haiku, and single agent minus orchestrator per harness
+and pooled. For each: the per-scenario differences d_i, their sd, the minimum detectable
+effect at 80% power, an exact sign test on the scenarios that differ, and Holm-adjusted
+p-values across the pairs printed. Last, every pair of the seven model-sweep settings
+(21 comparisons), Holm-adjusted together, since that is how many the table invites.
 """
 
+import itertools
+import math
 import random
+import statistics
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -56,6 +66,47 @@ def paired_gap(
     return 100 * (rate(a, ids) - rate(b, ids)), 100 * lo, 100 * hi
 
 
+# t quantiles at 24 df (25 scenarios): two-sided 5% and one-sided 20%.
+# shortcut: fixed to 25 scenarios, look the quantiles up again if the suite changes size.
+T_24 = 2.064 + 0.857
+
+
+def diffs(a: dict[str, list[bool]], b: dict[str, list[bool]]) -> list[float]:
+    """Per-scenario pass-rate difference a - b, the paired unit."""
+    assert sorted(a) == sorted(b), "both sides need the same scenarios"
+    return [rate(a, [s]) - rate(b, [s]) for s in sorted(a)]
+
+
+def mde80(d: list[float]) -> float:
+    """Smallest true gap (points) a paired t-test at 5% detects 80% of the time.
+    Approximate: many d_i are exactly zero, so the d_i are far from normal."""
+    assert len(d) == 25, "T_24 assumes 25 scenarios"
+    return 100 * T_24 * statistics.stdev(d) / math.sqrt(len(d))
+
+
+def n_for_mde(d: list[float], gap: float) -> int:
+    """Scenarios needed for an MDE80 of `gap` at this sd (normal quantiles, approximate)."""
+    return math.ceil(((1.960 + 0.842) * statistics.stdev(d) / gap) ** 2)
+
+
+def sign_test(d: list[float]) -> tuple[int, int, float]:
+    """Exact two-sided sign test on the scenarios that differ: (positive, negative, p)."""
+    pos, neg = sum(x > 0 for x in d), sum(x < 0 for x in d)
+    n = pos + neg
+    tail = sum(math.comb(n, i) for i in range(min(pos, neg) + 1)) / 2**n
+    return pos, neg, min(1.0, 2 * tail)
+
+
+def holm(ps: list[float]) -> list[float]:
+    """Holm step-down adjusted p-values, in the input order."""
+    order = sorted(range(len(ps)), key=ps.__getitem__)
+    out, running = [0.0] * len(ps), 0.0
+    for rank, i in enumerate(order):
+        running = max(running, (len(ps) - rank) * ps[i])
+        out[i] = min(1.0, running)
+    return out
+
+
 def self_check() -> None:
     a = {"x": [True, True], "y": [True, False]}
     b = {"x": [False, False], "y": [True, False]}
@@ -63,6 +114,12 @@ def self_check() -> None:
     assert point == 50.0 and 0.0 <= lo <= point <= hi <= 100.0, (point, lo, hi)
     same = paired_gap(a, a, draws=200)
     assert same == (0.0, 0.0, 0.0), same
+    # 5 of 25 scenarios differ by a full point: sd = sqrt(0.16 * 25 / 24), MDE 23.85 points
+    d = [1.0] * 5 + [0.0] * 20
+    assert abs(mde80(d) - 23.85) < 0.01, mde80(d)
+    assert sign_test(d) == (5, 0, 0.0625)
+    assert sign_test([1.0, -1.0, 0.0]) == (1, 1, 1.0)
+    assert holm([0.01, 0.04, 0.03]) == [0.03, 0.06, 0.06]
 
 
 def main() -> None:
@@ -89,6 +146,53 @@ def main() -> None:
         by_scenario(graph, "langgraph-opus-5.5-high-single", passed),
     )
     print(f"loop minus LangGraph, single agent: {point:+.1f} ({lo:+.1f} to {hi:+.1f})")
+
+    strict = {c: by_scenario(models, c, passed) for c in configs}
+    single = {
+        h: by_scenario(rows, f"{h}-opus-5.5-high-single", passed)
+        for h, rows in (("loop", loop), ("langgraph", graph))
+    }
+    multi = {
+        h: by_scenario(rows, f"{h}-opus-5.5-high-multi", passed)
+        for h, rows in (("loop", loop), ("langgraph", graph))
+    }
+    pooled = [{s: x["loop"][s] + x["langgraph"][s] for s in x["loop"]} for x in (single, multi)]
+    pairs = {
+        "Opus high minus Haiku": (strict["opus-5.5-high"], strict["haiku-5.5-high"]),
+        "single minus orchestrator, loop": (single["loop"], multi["loop"]),
+        "single minus orchestrator, LangGraph": (single["langgraph"], multi["langgraph"]),
+        "single minus orchestrator, pooled": (pooled[0], pooled[1]),
+        "hybrid minus BM25 search": (strict["opus-5.5-high-hybrid"], strict["opus-5.5-high-bm25"]),
+    }
+    print(
+        "\nStrict grader, paired by scenario. MDE80 is t-based and approximate (most d_i are 0);"
+        f"\nsign test on scenarios that differ; Holm across these {len(pairs)} pairs:"
+    )
+    tests = {name: sign_test(diffs(a, b)) for name, (a, b) in pairs.items()}
+    adjusted = holm([p for _, _, p in tests.values()])
+    for (name, (a, b)), (pos, neg, p), p_holm in zip(
+        pairs.items(), tests.values(), adjusted, strict=True
+    ):
+        point, lo, hi = paired_gap(a, b)
+        d = diffs(a, b)
+        print(
+            f"  {name}: {point:+.1f} ({lo:+.1f} to {hi:+.1f}), sd(d_i) "
+            f"{100 * statistics.stdev(d):.1f}, MDE80 {mde80(d):.1f}, "
+            f"differ {pos}+/{neg}-, sign p {p:.3f}, Holm {p_holm:.3f}, "
+            f"scenarios for a 10-point MDE80 ~{n_for_mde(d, 0.10)}"
+        )
+
+    every = list(itertools.combinations(configs, 2))
+    ps = [sign_test(diffs(strict[a], strict[b]))[2] for a, b in every]
+    print(f"\nAll {len(every)} pairs of the models sweep, strict grader, Holm across all of them:")
+    for (a, b), p, p_holm in zip(every, ps, holm(ps), strict=True):
+        point, lo, hi = paired_gap(strict[a], strict[b])
+        excludes = "  interval excludes 0" if lo > 0 or hi < 0 else ""
+        print(
+            f"  {a} minus {b}: {point:+.1f} ({lo:+.1f} to {hi:+.1f}), "
+            f"MDE80 {mde80(diffs(strict[a], strict[b])):.1f}, sign p {p:.3f}, "
+            f"Holm {p_holm:.3f}{excludes}"
+        )
 
 
 if __name__ == "__main__":

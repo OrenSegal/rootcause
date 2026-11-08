@@ -1,19 +1,19 @@
-### Sweep `litmus-brief-2026-10-15`: 12 configurations, 1 runs each
+### Sweep `litmus-brief-2026-10-15`: 12 configurations, 1 runs each (single-service grade)
 
 | config | scored / errors | pass rate (95% CI) | pass^1 | pass@1 | mean cost | cost per solved | p50 / p90 wall | output tokens | tool calls | searched | frontier |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | delete-body-0 | 0 / 25 | 0% (0% to 100%) | 0% | 0% | $0.0000 | n/a | 0.0s / 0.0s | 0 | 0.0 | 0% | yes |
-| delete-instruction-0 | 25 / 0 | 80% (61% to 91%) | 80% | 80% | $0.0634 | $0.0793 | 14.1s / 19.7s | 1171 | 5.8 | 0% | dominated |
-| delete-instruction-1 | 25 / 0 | 80% (61% to 91%) | 80% | 80% | $0.0650 | $0.0813 | 14.8s / 17.5s | 1212 | 6.2 | 0% | dominated |
-| delete-instruction-2 | 25 / 0 | 76% (57% to 89%) | 76% | 76% | $0.0641 | $0.0844 | 13.9s / 18.8s | 1202 | 6.0 | 0% | dominated |
-| delete-instruction-3 | 25 / 0 | 84% (65% to 94%) | 84% | 84% | $0.0619 | $0.0736 | 12.6s / 20.2s | 1139 | 5.7 | 0% | yes |
-| delete-instruction-4 | 25 / 0 | 84% (65% to 94%) | 84% | 84% | $0.0681 | $0.0810 | 14.4s / 20.2s | 1298 | 6.4 | 0% | dominated |
-| delete-instruction-5 | 25 / 0 | 84% (65% to 94%) | 84% | 84% | $0.0668 | $0.0795 | 15.8s / 20.7s | 1269 | 6.3 | 0% | dominated |
-| invert-rule-0 | 25 / 0 | 72% (52% to 86%) | 72% | 72% | $0.0668 | $0.0928 | 16.1s / 22.4s | 1254 | 6.3 | 0% | dominated |
-| invert-rule-1 | 25 / 0 | 80% (61% to 91%) | 80% | 80% | $0.0760 | $0.0949 | 18.8s / 25.3s | 1707 | 6.3 | 0% | dominated |
-| truncate-0 | 25 / 0 | 80% (61% to 91%) | 80% | 80% | $0.0625 | $0.0781 | 14.6s / 23.4s | 1212 | 5.6 | 0% | dominated |
-| wrong-fact-0 | 25 / 0 | 76% (57% to 89%) | 76% | 76% | $0.0668 | $0.0880 | 14.9s / 20.2s | 1264 | 6.4 | 0% | dominated |
-| wrong-fact-1 | 25 / 0 | 80% (61% to 91%) | 80% | 80% | $0.0662 | $0.0828 | 14.1s / 20.0s | 1235 | 6.2 | 0% | dominated |
+| delete-instruction-0 | 25 / 0 | 80% (64% to 96%) | 80% | 80% | $0.0634 | $0.0793 | 14.1s / 19.7s | 1171 | 5.8 | 0% | dominated |
+| delete-instruction-1 | 25 / 0 | 80% (64% to 96%) | 80% | 80% | $0.0650 | $0.0813 | 14.8s / 17.5s | 1212 | 6.2 | 0% | dominated |
+| delete-instruction-2 | 25 / 0 | 76% (60% to 92%) | 76% | 76% | $0.0641 | $0.0844 | 13.9s / 18.8s | 1202 | 6.0 | 0% | dominated |
+| delete-instruction-3 | 25 / 0 | 84% (68% to 96%) | 84% | 84% | $0.0619 | $0.0736 | 12.6s / 20.2s | 1139 | 5.7 | 0% | yes |
+| delete-instruction-4 | 25 / 0 | 84% (68% to 96%) | 84% | 84% | $0.0681 | $0.0810 | 14.4s / 20.2s | 1298 | 6.4 | 0% | dominated |
+| delete-instruction-5 | 25 / 0 | 84% (68% to 96%) | 84% | 84% | $0.0668 | $0.0795 | 15.8s / 20.7s | 1269 | 6.3 | 0% | dominated |
+| invert-rule-0 | 25 / 0 | 72% (56% to 88%) | 72% | 72% | $0.0668 | $0.0928 | 16.1s / 22.4s | 1254 | 6.3 | 0% | dominated |
+| invert-rule-1 | 25 / 0 | 80% (64% to 96%) | 80% | 80% | $0.0760 | $0.0949 | 18.8s / 25.3s | 1707 | 6.3 | 0% | dominated |
+| truncate-0 | 25 / 0 | 80% (64% to 96%) | 80% | 80% | $0.0625 | $0.0781 | 14.6s / 23.4s | 1212 | 5.6 | 0% | dominated |
+| wrong-fact-0 | 25 / 0 | 76% (60% to 92%) | 76% | 76% | $0.0668 | $0.0880 | 14.9s / 20.2s | 1264 | 6.4 | 0% | dominated |
+| wrong-fact-1 | 25 / 0 | 80% (64% to 96%) | 80% | 80% | $0.0662 | $0.0828 | 14.1s / 20.0s | 1235 | 6.2 | 0% | dominated |
 
 | scenario | delete-body-0 | delete-instruction-0 | delete-instruction-1 | delete-instruction-2 | delete-instruction-3 | delete-instruction-4 | delete-instruction-5 | invert-rule-0 | invert-rule-1 | truncate-0 | wrong-fact-0 | wrong-fact-1 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
