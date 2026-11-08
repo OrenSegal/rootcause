@@ -22,7 +22,7 @@ from rootcause.domain.scenario import Alert, Category
 C = Category
 # What each source page states, checked 2026-11-07. None grants an open licence.
 LICENCES = {
-    "Cloudflare": "no licence or copyright notice on the page",
+    "Cloudflare": "copyright notice (\u00a9 Cloudflare), no licence granted",
     "Fastly": "copyright notice (\u00a9 Fastly), no licence granted",
     "Mailchimp/Mandrill": "copyright, all rights reserved, no licence granted",
     "Slack": "copyright, all rights reserved, no licence granted",

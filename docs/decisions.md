@@ -12,7 +12,7 @@ Five design decisions, each with the evidence that backs it. Where the reasoning
 
 **Consequences.** Every behaviour (append-only history, thinking blocks sent back as logged, nudges, budget) is visible and tested in this repo. The cost is owning that code. The LangGraph port shares everything except control flow, including the executor and its approval gate, so the two can be compared directly.
 
-**Evidence.** Loop first run on a live model in 11367f6 (PR #5); LangGraph port in 2511fed (PR #6). 300 runs, Opus 5.5 at high effort, same model access and grader (`results/sweeps/loop-2026-10-15/`, `results/sweeps/langgraph-2026-10-15/`): single-agent loop minus LangGraph is -2.7 points (-8.0 to +2.7), with only 4 of 25 scenarios differing, and the design detects gaps above about 8 points; cost per solved incident, output tokens and p50 latency are within 5% (gaps from `uv run python scripts/resample_gaps.py`, the rest from each sweep's `report.md`). The tests that drove the port are listed in `docs/AUDIT.md`.
+**Evidence.** Loop first run on a live model in 11367f6 (PR #5); LangGraph port in 2511fed (PR #6). 300 runs, Opus 5.5 at high effort, same model access and grader (`results/sweeps/loop-2026-10-15/`, `results/sweeps/langgraph-2026-10-15/`): single-agent loop minus LangGraph is -2.7 points (-8.0 to +2.7), with only 4 of 25 scenarios differing, and the design detects gaps above about 8 points; cost per solved incident, output tokens and p50 latency are within 6% (gaps from `uv run python scripts/resample_gaps.py`, the rest from each sweep's `report.md`). The tests that drove the port are listed in `docs/AUDIT.md`.
 
 ## 2. Telemetry tools served over MCP
 
@@ -24,7 +24,7 @@ Five design decisions, each with the evidence that backs it. Where the reasoning
 
 **Consequences.** One grader scores every harness against the same tool surface. The MCP transport adds a hop and its own spans in traces. Trusting server hints was a bug, found and fixed (below).
 
-**Evidence.** MCP server in the first commit (925eed8); Claude Code as a second harness over it in fca33c6. PR #10 (d3c2545) removed trust in `read_only_hint` in favor of a caller-side `READ_ONLY_TOOLS` list and made `telemetry-mcp` read-only unless started with `--allow-rollback`. Still open from that PR: `McpTool.idempotent` still trusts the server hint.
+**Evidence.** MCP server in the first non-empty commit (925eed8; d1a526b before it is an empty initial commit); Claude Code as a second harness over it in fca33c6. PR #10 (d3c2545) removed trust in `read_only_hint` in favor of a caller-side `READ_ONLY_TOOLS` list and made `telemetry-mcp` read-only unless started with `--allow-rollback`. Still open from that PR: `McpTool.idempotent` still trusts the server hint.
 
 ## 3. An append-only event log for crash recovery
 
