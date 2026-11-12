@@ -18,13 +18,13 @@ Five design decisions, each with the evidence that backs it. Where the reasoning
 
 **Context.** The same tools had to serve three investigators: the hand-written loop, Claude Code's own loop, and any coding agent a user points at a scenario.
 
-**Decision.** The telemetry tools are an MCP server (`adapters/mcp_telemetry.py`). The hand-written loop reaches it in process through an MCP client (`adapters/mcp_tools.py`); Claude Code and coding agents reach it over stdio (`rootcause telemetry-mcp`). The caller names which tools it trusts as read-only, and a server's `read_only_hint` counts for nothing.
+**Decision.** The telemetry tools are an MCP server (`adapters/mcp_telemetry.py`). The hand-written loop reaches it in process through an MCP client (`adapters/mcp_tools.py`); Claude Code and coding agents reach it over stdio (`rootcause telemetry-mcp`). The caller names which tools it trusts as read-only, and a server's `read_only_hint` and `idempotent_hint` count for nothing.
 
 **Alternatives considered.** Plain in-process Python tools. Why they were rejected is not recorded beyond the reuse above; the second harness (Claude Code's own loop) could only be added against the same tools because they were already behind MCP.
 
 **Consequences.** One grader scores every harness against the same tool surface. The MCP transport adds a hop and its own spans in traces. Trusting server hints was a bug, found and fixed (below).
 
-**Evidence.** MCP server in the first non-empty commit (925eed8; d1a526b before it is an empty initial commit); Claude Code as a second harness over it in fca33c6. PR #10 (d3c2545) removed trust in `read_only_hint` in favor of a caller-side `READ_ONLY_TOOLS` list and made `telemetry-mcp` read-only unless started with `--allow-rollback`. Still open from that PR: `McpTool.idempotent` still trusts the server hint.
+**Evidence.** MCP server in the first non-empty commit (925eed8; d1a526b before it is an empty initial commit); Claude Code as a second harness over it in fca33c6. PR #10 (d3c2545) removed trust in `read_only_hint` in favor of a caller-side `READ_ONLY_TOOLS` list and made `telemetry-mcp` read-only unless started with `--allow-rollback`. `McpTool.idempotent` went on trusting the server's `idempotent_hint` after that PR, so `rollback_deploy` was retried and re-run on resume; it is now a caller-side list too (`mcp_tools(idempotent=...)`), empty for the telemetry tools, and `tests/test_resume.py::test_the_shipped_rollback_is_not_repeated_after_a_crash` covers it.
 
 ## 3. An append-only event log for crash recovery
 

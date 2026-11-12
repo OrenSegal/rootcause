@@ -70,10 +70,10 @@ The Claude Code options need the `claude` CLI installed and signed in, and run o
 
 **The loop, by hand.** `application/agent.py` is the whole cycle: call the model, check the stop reason, run tools, append the results, repeat until the agent submits an answer or hits its step limit, its budget, or a refusal. History is append-only. Each assistant turn goes back exactly as it was logged, thinking blocks included.
 
-**Tools with delivery rules.** Telemetry tools are served by an MCP server (`adapters/mcp_telemetry.py`). The caller names the tools it trusts as read-only; a server's `read_only_hint` counts for nothing, so anything unlisted is gated. The executor (`application/executor.py`) turns that into behavior:
+**Tools with delivery rules.** Telemetry tools are served by an MCP server (`adapters/mcp_telemetry.py`). The caller names the tools it trusts as read-only; a server's `read_only_hint` and `idempotent_hint` count for nothing, so anything unlisted is gated and runs at most once. The executor (`application/executor.py`) turns that into behavior:
 
-- Read-only and idempotent tools are retried with backoff and re-run after a crash (at least once).
-- Anything else runs at most once. An intent row is written before the call, so if the process dies between the side effect and its result, a resumed run tells the model the outcome is unknown instead of repeating it.
+- Read-only tools, and gated tools the caller lists as idempotent, are retried with backoff and re-run after a crash (at least once).
+- Anything else runs at most once, `rollback_deploy` included. An intent row is written before the call, so if the process dies between the side effect and its result, a resumed run tells the model the outcome is unknown instead of repeating it.
 - A tool that can change production needs operator approval. The gate is in the loop, not the MCP server, because the 2026-07-28 MCP protocol removed server-initiated requests.
 
 **Answers as contracts.** An agent finishes by calling a terminal tool whose schema is generated from a pydantic model (`domain/answers.py`). Strict tool use guarantees the shape; pydantic enforces the bounds the strict schema can't express, and a bad answer goes back to the model to fix.
