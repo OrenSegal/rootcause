@@ -143,6 +143,9 @@ def list_scenarios(root: Path) -> list[Scenario]:
 
 def find_case(root: Path, scenario_id: str) -> Case | None:
     path = root / scenario_id
+    # The id can come from a calling agent: only a directory directly under the root counts.
+    if path.name != scenario_id or path.parent != root:
+        return None
     return load_case(path) if (path / SCENARIO_FILE).exists() else None
 
 
