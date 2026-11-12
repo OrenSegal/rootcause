@@ -120,6 +120,21 @@ def _graded(
 
 
 @pytest.mark.parametrize("path", CASES + EXTERNAL_CASES, ids=lambda p: p.name)
+def test_the_grader_does_not_penalise_citing_every_id(path):
+    """A known limit, pinned so it can't change unnoticed: the right labels with every id
+    in the telemetry cited pass. `scripts/regrade_evidence.py` measures what a precision
+    floor would do to the committed runs."""
+    case = load_case(path)
+    truth = case.scenario.truth
+    assert truth is not None
+    shotgun = Diagnosis(
+        category=truth.category, service=truth.service, summary="x",
+        evidence=sorted(case.store.evidence_ids()), recommended_action="x", confidence=1.0,
+    )  # fmt: skip
+    assert _graded(path, shotgun, Outcome.ANSWERED)
+
+
+@pytest.mark.parametrize("path", CASES + EXTERNAL_CASES, ids=lambda p: p.name)
 def test_the_grader_passes_the_oracle_and_fails_the_null_and_a_confident_wrong_answer(path):
     """Harness check: an answer built from the truth must pass, no answer must fail,
     and the right service and evidence under the wrong category must fail too."""
