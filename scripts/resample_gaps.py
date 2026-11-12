@@ -19,11 +19,7 @@ orchestrator per harness and pooled. For each: the per-scenario differences d_i,
 sd, the minimum detectable effect at 80% power, an exact sign test on the scenarios
 that differ, and Holm-adjusted p-values across the pairs printed. Last, every pair of
 the seven model-sweep settings (21 comparisons), Holm-adjusted together, since that is
-how many the table invites. Then the gaps the README draws across sweeps (each loop against
-Claude Code's own on the same model, Haiku against Opus in the loop), and what the decision
-rule used for the 21 pairs, an exact sign test with Holm correction, could have detected:
-computed exactly under a model where a scenario either scores the same under both settings
-or flips on all three runs. Finally, the externally sourced held-out set: each
+how many the table invites. Finally, the externally sourced held-out set: each
 config's pass rate with a scenario-resampled 95% interval, beside Haiku on the main suite.
 """
 
@@ -119,21 +115,6 @@ def holm(ps: list[float]) -> list[float]:
     return out
 
 
-def flips_needed(alpha: float) -> int:
-    """Fewest scenarios, all differing the same way, for a two-sided sign test below alpha."""
-    return next(n for n in range(1, 64) if 2 / 2**n <= alpha)
-
-
-def sign_power(scenarios: int, differ: float, alpha: float) -> float:
-    """Chance a two-sided sign test falls below alpha when each scenario differs with
-    probability `differ`, always in the same direction (the most favourable case)."""
-    need = flips_needed(alpha)
-    return sum(
-        math.comb(scenarios, k) * differ**k * (1 - differ) ** (scenarios - k)
-        for k in range(need, scenarios + 1)
-    )
-
-
 def icc(clusters: list[list[bool]]) -> float:
     """One-way ANOVA intraclass correlation for equal-size clusters, clamped at 0."""
     k, m = len(clusters[0]), len(clusters)
@@ -174,8 +155,6 @@ def self_check() -> None:
     assert sign_test(d) == (5, 0, 0.0625)
     assert sign_test([1.0, -1.0, 0.0]) == (1, 1, 1.0)
     assert holm([0.01, 0.04, 0.03]) == [0.03, 0.06, 0.06]
-    assert (flips_needed(0.05), flips_needed(0.05 / 21)) == (6, 10)
-    assert sign_power(25, 1.0, 0.05 / 21) == 1.0 and sign_power(9, 1.0, 0.05 / 21) == 0.0
     # all pass: every resample is 100%, so cluster_bootstrap counts scenarios as trials
     assert cluster_bootstrap([[True] * 3] * 8) == wilson(8, 8)
     lo, hi = cluster_bootstrap([[True] * 3, [False] * 3] * 4)
@@ -258,45 +237,6 @@ def main() -> None:
             f"MDE80 {mde80(diffs(strict[a], strict[b])):.1f}, sign p {p:.3f}, "
             f"Holm {p_holm:.3f}{excludes}"
         )
-
-    haiku_loop, _ = read_sweep(SWEEPS / "loop-haiku-2026-10-26")
-    loop_haiku = by_scenario(haiku_loop, "loop-haiku-5.5-high-single", passed)
-    across = {
-        "loop minus Claude Code's own, Opus high": (single["loop"], strict["opus-5.5-high"]),
-        "LangGraph minus Claude Code's own, Opus high": (
-            single["langgraph"],
-            strict["opus-5.5-high"],
-        ),
-        "loop: Opus high minus Haiku": (single["loop"], loop_haiku),
-        "loop minus Claude Code's own, Haiku": (loop_haiku, strict["haiku-5.5-high"]),
-    }
-    print("\nAcross sweeps, strict grader, paired by scenario (runs made at different times):")
-    for name, (a, b) in across.items():
-        point, lo, hi = paired_gap(a, b)
-        d = diffs(a, b)
-        pos, neg, p = sign_test(d)
-        print(
-            f"  {name}: {point:+.1f} ({lo:+.1f} to {hi:+.1f}), MDE80 {mde80(d):.1f}, "
-            f"differ {pos}+/{neg}-, sign p {p:.3f}"
-        )
-
-    most = max(sum(x != 0 for x in diffs(strict[a], strict[b])) for a, b in every)
-    print(
-        "\nWhat the sign test could have detected with 25 scenarios, if a scenario either "
-        "scores the\nsame under both settings or flips on all three runs, always the same way:"
-    )
-    for label, alpha in (
-        ("one pair, 5%", 0.05),
-        (f"Holm over {len(every)} pairs", 0.05 / len(every)),
-    ):
-        need = flips_needed(alpha)
-        share = next(s / 100 for s in range(1, 101) if sign_power(25, s / 100, alpha) >= 0.8)
-        print(
-            f"  {label}: needs {need} scenarios differing the same way; a true gap of 19 points "
-            f"is detected {sign_power(25, 0.19, alpha):.0%} of the time; 80% power needs a gap "
-            f"of about {100 * share:.0f} points"
-        )
-    print(f"  most scenarios differing in any of the {len(every)} pairs, either way: {most}")
 
     external = SWEEPS / "external-heldout-2026-11-07"
     if not external.exists():
