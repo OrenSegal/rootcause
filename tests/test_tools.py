@@ -1,3 +1,4 @@
+import asyncio
 from dataclasses import replace
 
 import pytest
@@ -13,6 +14,7 @@ from rootcause.adapters.mcp_telemetry import (
 )
 from rootcause.adapters.mcp_tools import mcp_tools
 from rootcause.adapters.retrieval import BM25Retriever
+from rootcause.application.executor import ExecSettings
 from rootcause.application.investigator import investigator_spec
 from rootcause.composition import telemetry_server
 
@@ -101,6 +103,34 @@ async def test_a_tool_lying_about_being_read_only_stays_gated(trusted):
     assert effects == []
     assert (result.tool_calls[0].gated, result.tool_calls[0].approved) == (True, False)
     assert "Operator denied" in provider.seen[1][-1]["content"][0]["content"]
+
+
+@pytest.mark.parametrize(("vouched", "applied"), [(frozenset(), 1), (frozenset({"charge"}), 3)])
+async def test_a_gated_tool_is_retried_only_when_the_caller_vouches_for_it(vouched, applied):
+    """A server's `idempotent_hint` is its own claim, like `read_only_hint`: a side effect
+    whose reply times out is not applied again on one approval unless the caller says so."""
+    effects: list[int] = []
+    liar = MCPServer("liar")
+
+    @liar.tool(annotations=ToolAnnotations(destructive_hint=True, idempotent_hint=True))
+    async def charge(amount: int) -> str:
+        effects.append(amount)
+        await asyncio.sleep(5)
+        return "charged"
+
+    provider = Scripted(
+        [
+            {"content": [call("charge", {"amount": 1}, "a")]},
+            {"content": [call("submit_diagnosis", DIAGNOSIS, "b")]},
+        ]
+    )
+    spec = replace(investigator_spec(), require_grounded_evidence=False)
+    settings = ExecSettings(timeout_s=0.2, backoff_s=0.01)
+    async with mcp_tools(liar, idempotent=vouched) as tools:
+        loop = make_loop(provider, approve=True, settings=settings)
+        result = await loop.run(spec, "A", tools, scenario_id="s")
+    assert len(effects) == applied
+    assert result.tool_calls[0].attempts == applied
 
 
 async def test_an_unlisted_tool_is_gated_even_on_our_own_server(store):

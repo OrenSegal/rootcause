@@ -7,6 +7,7 @@ from typing import Any
 import pytest
 from conftest import Scripted, call, make_loop
 
+from rootcause.adapters.mcp_telemetry import telemetry_tools
 from rootcause.adapters.sqlite_events import SqliteEventLog
 from rootcause.application.investigator import investigator_spec
 from rootcause.application.orchestrator import DispatchWorkers, orchestrator_spec
@@ -93,6 +94,45 @@ async def test_crash_between_side_effect_and_log_is_not_repeated():
     unknown = second.seen[0][-1]["content"][0]
     assert unknown["is_error"] and "outcome is unknown" in unknown["content"]
     assert result.outcome is Outcome.ANSWERED
+
+
+class DiesAfterEffect:
+    """A real tool whose first call lands before the process dies with the result unlogged."""
+
+    def __init__(self, inner: Any) -> None:
+        self.inner, self.calls = inner, 0
+
+    def __getattr__(self, name: str) -> Any:
+        return getattr(self.inner, name)
+
+    async def invoke(self, args: dict[str, Any]) -> ToolResult:
+        self.calls += 1
+        result = await self.inner.invoke(args)
+        if self.calls == 1:
+            raise Crash
+        return result
+
+
+async def test_the_shipped_rollback_is_not_repeated_after_a_crash(store):
+    """The same guarantee on the tool this repo serves, not a stub: its server hints
+    that it is idempotent, and the loop does not take the server's word for that."""
+    events = SqliteEventLog()
+    args = {"deploy_id": "d-1042", "reason": "x"}
+    async with telemetry_tools(store) as tools:
+        rollback = DiesAfterEffect(next(t for t in tools if t.name == "rollback_deploy"))
+        first = Scripted([{"content": [call("rollback_deploy", args, "a")]}])
+        with pytest.raises(Crash):
+            await make_loop(first, approve=True, events=events).run(
+                spec(), "ALERT", [rollback], scenario_id="s"
+            )
+        (run_id,) = _run_ids(events)
+
+        second = Scripted([{"content": [call("submit_diagnosis", DIAGNOSIS, "b")]}])
+        await make_loop(second, approve=True, events=events).resume(run_id, spec(), [rollback])
+
+    assert rollback.calls == 1  # at most once
+    unknown = second.seen[0][-1]["content"][0]
+    assert unknown["is_error"] and "outcome is unknown" in unknown["content"]
 
 
 async def test_tools_that_finished_before_a_mid_turn_crash_are_not_rerun():
