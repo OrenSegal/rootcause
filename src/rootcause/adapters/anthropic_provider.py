@@ -14,6 +14,9 @@ Effort = Literal["low", "medium", "high", "xhigh", "max"]
 FALLBACK_BETA = "server-side-fallback-2026-07-01"
 
 # USD per million tokens, Anthropic first-party rates (cached 2026-10-06).
+# Opus and Sonnet cache writes are the 1.25x-input rate. Claude Code's own cost reports use
+# 2x input for cache writes (and $0.10 for Sonnet cache reads), so they do not match this
+# table for those two models: see scripts/cost_breakdown.py.
 PRICES: dict[str, Price] = {
     "claude-opus-5-5": Price(input=4.00, output=20.00, cache_read=0.20, cache_write=5.00),
     "claude-sonnet-5-5": Price(input=2.00, output=10.00, cache_read=0.20, cache_write=2.50),
