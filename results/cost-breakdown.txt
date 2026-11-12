@@ -1,0 +1,28 @@
+Recorded cost against the price table. Rates are USD per million tokens:
+input, output, cache read, cache write.
+  external-heldout-2026-11-07          claude-haiku-5-5    24 runs  price table reproduces every run (max miss 2e-16)
+  langgraph-2026-10-15                 claude-opus-5-5    150 runs  price table reproduces every run (max miss 1e-05)
+  litmus-brief-2026-10-15              claude-opus-5-5    275 runs  implied 4.00 20.00 0.20 8.00 (max miss 3e-16); price table 4.00 20.00 0.20 5.00 is off by up to 28%
+  litmus-brief-rule-suite-2026-11-05   claude-opus-5-5    104 runs  implied 4.00 20.00 0.20 8.00 (max miss 2e-16); price table 4.00 20.00 0.20 5.00 is off by up to 26%
+  loop-2026-10-15                      claude-opus-5-5    150 runs  price table reproduces every run (max miss 1e-05)
+  loop-haiku-2026-10-26                claude-haiku-5-5    75 runs  price table reproduces every run (max miss 2e-04)
+  models-and-retrieval-2026-10-15      claude-haiku-5-5    75 runs  price table reproduces every run (max miss 2e-16)
+  models-and-retrieval-2026-10-15      claude-opus-5-5    375 runs  implied 4.00 20.00 0.20 8.00 (max miss 3e-14); price table 4.00 20.00 0.20 5.00 is off by up to 28%
+  models-and-retrieval-2026-10-15      claude-sonnet-5-5   75 runs  implied 2.00 10.00 0.10 4.00 (max miss 1e-15); price table 2.00 10.00 0.20 2.50 is off by up to 28%
+  rule-suite-2026-11-05                claude-haiku-5-5    24 runs  price table reproduces every run (max miss 2e-16)
+  rule-suite-2026-11-05                claude-opus-5-5     24 runs  implied 4.00 20.00 0.20 8.00 (max miss 8e-16); price table 4.00 20.00 0.20 5.00 is off by up to 26%
+  rule-suite-2026-11-05                claude-sonnet-5-5   24 runs  implied 2.00 10.00 0.10 4.00 (max miss 1e-15); price table 2.00 10.00 0.20 2.50 is off by up to 23%
+
+Loop and LangGraph sweeps, cost per solved incident as recorded and at the rates
+Claude Code reported for the same model in the models sweep:
+  loop-opus-5.5-high-single        recorded $0.1149  repriced $0.1525  (1.33x)
+  loop-opus-5.5-high-multi         recorded $0.3745  repriced $0.4670  (1.25x)
+  langgraph-opus-5.5-high-single   recorded $0.1114  repriced $0.1476  (1.33x)
+  langgraph-opus-5.5-high-multi    recorded $0.3430  repriced $0.4242  (1.24x)
+  loop-haiku-5.5-high-single       recorded $0.0141  repriced $0.0141  (1.00x)
+
+Cost per solved incident, Opus high over Haiku, models sweep:
+  price per token (all token kinds blended)  31.47x
+  tokens per run                              0.80x
+  runs per solved incident (1 / pass rate)    0.98x
+  product                                    24.76x
