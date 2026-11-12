@@ -70,6 +70,19 @@ async def test_agent_server_runs_an_investigation(scenario_dir):
     assert missing.is_error
 
 
+async def test_agent_server_only_investigates_scenarios_under_its_root(scenario_dir):
+    """The id comes from the calling agent, so it must name a directory the server was
+    given, not a path out of it."""
+    external = scenario_dir.parent.parent / "scenarios-external" / "x01-waf-regex-backtracking"
+    server = build_agent_server(
+        scenario_dir.parent, HeuristicProvider, SqliteEventLog(), budget_usd=1.0
+    )
+    async with Client(server) as client:
+        for outside in (f"../scenarios-external/{external.name}", str(external), "."):
+            run = await client.call_tool("investigate_incident", {"scenario_id": outside})
+            assert run.is_error, outside
+
+
 def test_ci_triage_from_recorded_raw_writes_a_pr_comment(tmp_path):
     raw = SCENARIOS / "008-sous-shellcheck" / "raw"
     comment = tmp_path / "comment.md"
