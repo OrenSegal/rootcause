@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- `scripts/resample_gaps.py` adds the cross-sweep pairs the README compares and what a sign test with Holm correction over 21 pairs could have detected. README sentences that read as equal accuracy now give the paired gap and the detectable gap; the retrieval comparison states its size; the frontier labels are marked as point estimates.
 - `scripts/cost_breakdown.py` shows which rates each sweep's recorded costs imply and splits the 25x cost spread into price per token, tokens per run and pass rate. The README now says that Claude Code's own cost reports and rootcause's price table use different cache-write rates for Opus and Sonnet, and gives the loop's Opus cost on both.
 - An externally sourced held-out set: eight incidents adapted from public postmortems (`scenarios-external/`, `scripts/author_external.py`), truths pre-registered in f5417b1 before any run. Haiku 5.5 passes 50% (cluster-bootstrap CI 21% to 79%) against 77% on the main suite; 24 Haiku runs (48 with the heuristic) in `results/sweeps/external-heldout-2026-11-07/`.
 - `scripts/resample_gaps.py` prints each model setting's intraclass correlation, effective number of runs and interval width against Wilson, and gives loop minus LangGraph its minimum detectable effect. README gains a Limitations section and a mermaid component diagram; `docs/decisions.md` records five design decisions with evidence. The Azure deploy README says it has never been run.
