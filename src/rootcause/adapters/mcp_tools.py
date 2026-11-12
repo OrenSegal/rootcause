@@ -28,6 +28,7 @@ class McpTool:
     client: Client
     info: McpToolInfo
     read_only: bool = False
+    idempotent: bool = False
 
     @property
     def name(self) -> str:
@@ -41,11 +42,6 @@ class McpTool:
             "input_schema": self.info.input_schema,
         }
 
-    @property
-    def idempotent(self) -> bool:
-        ann = self.info.annotations
-        return self.read_only or bool(ann and ann.idempotent_hint)
-
     async def invoke(self, args: dict[str, Any]) -> ToolResult:
         result = await self.client.call_tool(self.name, args)
         return ToolResult(render(result), is_error=result.is_error)
@@ -53,13 +49,22 @@ class McpTool:
 
 @asynccontextmanager
 async def mcp_tools(
-    target: Any, *, read_only: frozenset[str] = frozenset()
+    target: Any,
+    *,
+    read_only: frozenset[str] = frozenset(),
+    idempotent: frozenset[str] = frozenset(),
 ) -> AsyncGenerator[list[McpTool]]:
     """Connect to an MCP server (an in-process server object, a URL, or stdio
     parameters) and yield its tools for the length of the block.
 
     `read_only` names the tools the caller vouches for. Everything else is gated: a
-    server's `read_only_hint` is its own claim, and the gate can't rest on that."""
+    server's `read_only_hint` is its own claim, and the gate can't rest on that.
+    `idempotent` names gated tools the caller says are safe to run twice; the rest run
+    at most once, whatever the server's `idempotent_hint` says. Read-only tools always are."""
     async with Client(target) as client:
         listing = await client.list_tools()
-        yield [McpTool(client, info, info.name in read_only) for info in listing.tools]
+        safe = read_only | idempotent
+        yield [
+            McpTool(client, info, info.name in read_only, info.name in safe)
+            for info in listing.tools
+        ]
