@@ -14,3 +14,6 @@ wheels/
 
 # Local secrets
 .env
+
+# Agent scratch: ledgers, experiment candidates, audits
+.scratch/
