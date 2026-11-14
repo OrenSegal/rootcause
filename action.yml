@@ -1,5 +1,8 @@
 name: rootcause eval
 description: Run the rootcause incident-investigation evals and fail the job below a pass rate.
+branding:
+  icon: search
+  color: gray-dark
 inputs:
   scenarios:
     description: Directory of scenario directories.
