@@ -4,6 +4,7 @@ from pathlib import Path
 _spec = importlib.util.spec_from_file_location(
     "microagent", Path(__file__).parent.parent / "micro" / "microagent.py"
 )
+assert _spec and _spec.loader
 m = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(m)
 
