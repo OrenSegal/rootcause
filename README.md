@@ -2,37 +2,44 @@
 
 [![CI](https://github.com/OrenSegal/rootcause/actions/workflows/ci.yml/badge.svg)](https://github.com/OrenSegal/rootcause/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/license-MIT-black)](LICENSE)
 
-An agent that reads an incident's logs, metrics, traces and deploy history (or a failed CI run) and returns a structured root-cause diagnosis, plus a harness that scores it against incidents with known causes. It is for engineers who want to see an agent loop, an approval gate and an eval with honest error bars built without a framework.
+An incident agent that reads logs, metrics, traces and deploy history (or a failed CI run) and names the root cause, plus a benchmark that grades it against 33 incidents with known causes.
 
-**Cost per solved incident varied 25x** across 525 graded runs of seven model settings, from $0.0033 (Haiku 5.5) to $0.081 (Opus 5.5, high effort). Accuracy did not separate them (77% to 84% of runs passed), and with 25 incidents the design could only have detected gaps above about 13 to 19 points, so model accuracy differences are unresolved. An orchestrator with workers cost about 3x a single agent in a separate 300-run comparison.
+**Switching models moved cost per solved incident 25x, from $0.0033 to $0.081. It moved accuracy by less than this benchmark can detect.**
 
 ```bash
-uv sync && uv run rootcause eval --min-pass-rate 0.05   # all 33 scenarios, scripted baseline: no API key, no spend
+git clone --depth 1 https://github.com/OrenSegal/rootcause && cd rootcause
+uv run rootcause eval --min-pass-rate 0.05   # scripted baseline over all 33 incidents: no API key, no spend
 ```
-
-New to agent evals? [`micro/microagent.py`](micro/microagent.py) is the same idea in 247 lines of stdlib Python: loop, approval gate, grader, interval.
 
 ![Pass rate with 95% interval from resampling incidents against cost per solved incident, log scale, one point per model setting](results/sweeps/models-and-retrieval-2026-10-15/report.svg)
 
-Pass rate with its 95% interval (incidents resampled, each incident's runs kept together) against cost per solved incident (log scale) for the seven settings of the 525-run sweep, drawn by `rootcause report` from the committed rows.
+<sub>Seven settings from the 525-run sweep: pass rate with a 95% interval (incidents resampled, runs kept together) against cost per solved incident, log scale. Drawn by `rootcause report` from the committed rows.</sub>
 
-It is written to show how agents work underneath the frameworks: a hand-written loop, tools served over MCP, an approval gate, an append-only event log for crash recovery, an orchestrator with workers, retrieval over past postmortems, OpenTelemetry traces, and evals scored against known root causes, run repeatedly and reported with intervals and cost.
-
-It runs three ways: as a CLI with exit codes for CI, as an MCP server a coding agent can call, and as a GitHub Action.
+No framework: a hand-written tool loop, tools served over MCP, an approval gate on production actions, an append-only log for crash recovery, and OpenTelemetry traces. It runs as a CLI with CI exit codes, as an MCP server, and as a GitHub Action. New to agent evals? [`micro/microagent.py`](micro/microagent.py) is the same idea in 247 lines of standard-library Python.
 
 ## Results at a glance
 
-Two different agent loops were measured. In the 525-run sweep, Claude Code's own agent loop did the investigating, and rootcause supplied the scenarios, the telemetry MCP tools and the grader. The hand-written loop in this repo was measured in the separate 300-run comparison against a LangGraph version of the same agent. Details and caveats are in [Results](#results).
+| measurement | result |
+|---|---|
+| 525 runs, 7 model, effort and retrieval settings | cost per solved incident $0.0033 to $0.081 (25x); pass rates 77-84%, no pair separable, and gaps under 13-19 points were undetectable |
+| 300 runs, hand-written loop vs LangGraph | orchestrator with workers cost about 3x a single agent with no accuracy gain detected; the two frameworks were indistinguishable |
+| retrieval alone, 33 postmortems | BM25 recall@5 0.94, against 0.86 for a transformer model at about 1,000x the latency |
+| 8 incidents from public postmortems, answers committed before any run | Haiku 5.5 passed 50% (95% CI 21-79%), against 77% on the main suite |
+| mutation testing the brief, 12 mutants | 0 killed: the suite cannot yet catch a regression in a single instruction |
 
-| measurement | agent loop | result |
-|---|---|---|
-| 7 model, effort and retrieval settings, 525 runs | Claude Code's own, over rootcause's MCP tools and grader | cost per solved incident $0.0033 to $0.081 (25x); 77-84% pass rate, no pair differed detectably after Holm correction, and the design detects only gaps above about 13-19 points between model tiers (paired by incident), so model accuracy differences are unresolved |
-| hand-written loop vs LangGraph, 300 runs | rootcause's hand-written loop and its LangGraph port | orchestrator with workers cost about 3x per solved incident; its accuracy did not differ detectably from a single agent, but only gaps above about 12-15 points were detectable; loop and LangGraph showed no detectable difference on accuracy (gaps above about 8 points were detectable), cost, tokens or latency |
-| retrieval over 33 postmortems | none (retriever alone) | BM25 recall@5 0.94 vs 0.86 for a transformer model at roughly 1,000x the query latency |
-| held-out set adapted from 8 public postmortems, pre-registered, 24 Haiku runs (48 total) | Claude Code's own, Haiku 5.5 | 50% (cluster CI 21% to 79%) against 77% on the main suite; the misses are the category, the service is right in 22 of 24 |
-| mutation testing the brief, 12 mutants, 275 scored runs | Claude Code's own | 0 of 12 killed (11 survived, 1 inconclusive), so the suite can't yet catch a regression in a single instruction; two of the mutants touch a rule the harness already enforces, so they could not fail |
+The 525-run sweep used Claude Code's agent loop over rootcause's tools and grader; the 300-run comparison used the hand-written loop in this repo. Intervals, corrections and what each result does not show are in [Results](#results) and [Limitations](#limitations).
 
-**How it's evaluated.** The 525-run sweep used 25 incidents with known root causes; eight more, built around one rule of the brief each, have been added since, run once at three model tiers (72 runs) and mutation-tested (112 runs); the mutation result is mostly negative (see [The rule suite](#the-rule-suite)). The 25: each built around a mistake a responder could make, several with planted decoys; the "blame the last deploy" baseline gets three right (and four of the eight new ones). Every result below was graded by the single-service check. The grader now also takes a set of accepted services per scenario; it was added after the 525-run results, and only two later scenarios (027 and 032) have one, written with the scenario before any run of it. `--strict-service` reproduces the old grade. The grader checks category, service, that every cited id exists in the scenario's telemetry and at least one is the expected evidence, that no rollback hit an innocent deploy, and that the run made at least one tool call. It does not read the written explanation, and it does not check that a tool returned the id during that run; only the hand-written loop's runtime check does that. Each configuration runs every scenario three times and is reported with a 95% interval from resampling incidents, pass^k, and cost per solved incident including failed runs. Harness failures are retried and never counted as wrong answers. More under "Evals that can fail" and "Measurement before claims" in [What it shows](#what-it-shows).
+### How it's evaluated
+
+The 525-run sweep used 25 incidents with known root causes; eight more, built around one rule of the brief each, have been added since, run once at three model tiers (72 runs) and mutation-tested (112 runs); the mutation result is mostly negative (see [The rule suite](#the-rule-suite)).
+
+The 25: each built around a mistake a responder could make, several with planted decoys; the "blame the last deploy" baseline gets three right (and four of the eight new ones).
+
+Every result below was graded by the single-service check. The grader now also takes a set of accepted services per scenario; it was added after the 525-run results, and only two later scenarios (027 and 032) have one, written with the scenario before any run of it. `--strict-service` reproduces the old grade.
+
+The grader checks category, service, that every cited id exists in the scenario's telemetry and at least one is the expected evidence, that no rollback hit an innocent deploy, and that the run made at least one tool call. It does not read the written explanation, and it does not check that a tool returned the id during that run; only the hand-written loop's runtime check does that.
+
+Each configuration runs every scenario three times and is reported with a 95% interval from resampling incidents, pass^k, and cost per solved incident including failed runs. Harness failures are retried and never counted as wrong answers. More under "Evals that can fail" and "Measurement before claims" in [What it shows](#what-it-shows).
 
 ## Quickstart
 
