@@ -18,6 +18,7 @@ from rootcause.composition import (
     TraceExporter,
     compare,
     configure_tracing,
+    discover,
     fetch_ci_case,
     investigate,
     load_case,
@@ -59,6 +60,17 @@ EXIT_CODES: dict[Outcome, int] = {
     Outcome.REFUSED: 4,
 }
 EVAL_BELOW_THRESHOLD = 1
+
+
+def _require_scenarios(root: Path) -> None:
+    """An empty suite would print a 0% table and exit 0, which reads as a broken tool."""
+    if not discover(root):
+        raise typer.BadParameter(
+            f"no scenarios in {root.resolve()}. Run from a clone of the repo, or pass a "
+            "directory of scenario directories.",
+            param_hint="SCENARIOS",
+        )
+
 
 Provider = Annotated[
     ProviderName,
@@ -148,6 +160,7 @@ def eval_cmd(
     strict_service: StrictService = False,
 ) -> None:
     """Run every scenario, grade it, and exit 1 below --min-pass-rate."""
+    _require_scenarios(scenarios)
     report = asyncio.run(
         run_suite(
             scenarios,
@@ -184,6 +197,7 @@ def compare_cmd(
     runlog: EventsPath = DEFAULT_RUNLOG,
 ) -> None:
     """Run the same scenarios under each provider and mode and print one table."""
+    _require_scenarios(scenarios)
     reports, notes = asyncio.run(
         compare(
             scenarios,

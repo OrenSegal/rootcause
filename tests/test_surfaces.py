@@ -54,6 +54,13 @@ def test_eval_gate_writes_summary_and_fails_below_threshold(scenario_dir, tmp_pa
     assert strict.exit_code == 1
 
 
+def test_eval_and_compare_refuse_an_empty_scenarios_dir(tmp_path):
+    for command in ("eval", "compare"):
+        out = runner.invoke(app, [command, str(tmp_path), "--runlog", str(tmp_path / "r.sqlite")])
+        assert out.exit_code == 2, out.output
+        assert "no scenarios in" in out.output
+
+
 async def test_agent_server_runs_an_investigation(scenario_dir):
     server = build_agent_server(
         scenario_dir.parent, HeuristicProvider, SqliteEventLog(), budget_usd=1.0
