@@ -10,6 +10,8 @@ An agent that reads an incident's logs, metrics, traces and deploy history (or a
 uv sync && uv run rootcause eval --min-pass-rate 0.05   # all 33 scenarios, scripted baseline: no API key, no spend
 ```
 
+New to agent evals? [`micro/microagent.py`](micro/microagent.py) is the same idea in 247 lines of stdlib Python: loop, approval gate, grader, interval.
+
 ![Pass rate with 95% interval from resampling incidents against cost per solved incident, log scale, one point per model setting](results/sweeps/models-and-retrieval-2026-10-15/report.svg)
 
 Pass rate with its 95% interval (incidents resampled, each incident's runs kept together) against cost per solved incident (log scale) for the seven settings of the 525-run sweep, drawn by `rootcause report` from the committed rows.
