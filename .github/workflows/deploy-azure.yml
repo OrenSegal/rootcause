@@ -59,16 +59,21 @@ jobs:
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
       - name: Deploy
+        # The input reaches the shell through env, so it stays data and cannot become script.
+        env:
+          RESOURCE_GROUP: ${{ inputs.resource_group }}
         run: |
           az deployment group create \
-            --resource-group "${{ inputs.resource_group }}" \
+            --resource-group "$RESOURCE_GROUP" \
             --template-file deploy/azure/main.bicep \
             --parameters image="$IMAGE" imageTag="$TAG" \
             --query properties.outputs
 
       - name: Smoke test
+        env:
+          RESOURCE_GROUP: ${{ inputs.resource_group }}
         run: |
-          url=$(az deployment group show --resource-group "${{ inputs.resource_group }}" \
+          url=$(az deployment group show --resource-group "$RESOURCE_GROUP" \
             --name main --query properties.outputs.url.value -o tsv)
           # A cold start can take a while: retry for up to two minutes.
           curl -fsS --retry 12 --retry-delay 10 --retry-all-errors "$url/healthz"
