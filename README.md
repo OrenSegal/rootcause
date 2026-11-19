@@ -53,7 +53,7 @@ uv run rootcause eval --provider claude-code --min-pass-rate 0     # Claude Code
 uv run rootcause investigate scenarios/007-inventory-timeout-cascade --provider claude-code-loop --mode multi
 uv run rootcause investigate scenarios/007-inventory-timeout-cascade --provider langgraph  # langgraph extra
 uv run rootcause sweep sweeps/models-and-retrieval.yaml --dry-run  # run count before spending
-uv run rootcause report results/sweeps/models-and-retrieval-2026-10-15
+uv run rootcause report results/sweeps/models-and-retrieval-2026-10-15 --strict-service  # as committed
 uv run rootcause --trace console investigate scenarios/025-log-injection  # needs the otel extra
 ```
 
@@ -234,7 +234,7 @@ Why a kill was possible at all, and what could still go wrong:
 | configuration | held-out, 8 scenarios | main suite, 25 scenarios |
 |---|---|---|
 | Haiku 5.5, high, no search | 50% (21% to 79%), 24 runs | 77% (63% to 91%), 75 runs |
-| "blame the last deploy" heuristic | 25% (0% to 62%), 24 runs | 12% (3 of 24, one run each; `results/heuristic.md`) |
+| "blame the last deploy" heuristic | 25% (0% to 62%), 24 runs | 12% (3 of 25, one run each; `results/heuristic.md` holds the first 24, and it fails 025 too) |
 
 - **Haiku drops from 77% to 50%, and the intervals overlap.** With eight clusters the held-out interval is 58 points wide, so this is a rough range, not a test of a difference. Cost was $0.0030 per run at list price, $0.072 for the 24 Haiku runs, through a Claude subscription.
 - **The misses are almost all the category, not the culprit.** Haiku named the truth's service (or an accepted one) in 22 of 24 runs and cited valid expected evidence in all of those. Ten of its twelve failures are the category alone: x02 it called config_change every time (blaming the trigger, which the postmortem calls a trigger, not the cause), x04 infrastructure every time (the cloud gateway, which the truth calls dependency_failure), x03 infrastructure or dependency_failure (the truth is resource_exhaustion), and x08 config_change once. The other two are x06 naming mysql, where the stale reads show up, instead of the network partition. With the category check dropped, 22 of 24 runs would pass; that figure was computed after seeing the results and is not the pre-registered measure.

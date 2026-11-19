@@ -324,3 +324,16 @@ def test_a_committed_sweep_file_plans_exactly_the_runs_its_committed_results_hol
     planned, done = plan_sweep(spec, out)
     assert done == len(rows)
     assert planned == len(rows) + len(unresolved_errors)
+
+
+@pytest.mark.parametrize("out", sorted(RESULTS.glob("*/report.md")), ids=lambda p: p.parent.name)
+def test_a_committed_sweep_report_is_what_the_committed_rows_produce(out):
+    """The README's tables are copied from these reports, so each must be reproducible
+    from the rows next to it, under the grade its own first line names."""
+    from rootcause.application.sweep import report_markdown
+    from rootcause.composition import summarize_sweep
+
+    committed = out.read_text()
+    strict = "(single-service grade)" in committed.splitlines()[0]
+    spec, summaries, rows = summarize_sweep(out.parent, strict_service=strict)
+    assert report_markdown(spec, summaries, rows, strict_service=strict) == committed
