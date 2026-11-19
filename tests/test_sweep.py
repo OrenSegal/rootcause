@@ -302,3 +302,25 @@ def test_the_committed_rule_suite_sweep_loads_and_its_held_out_scenarios_exist()
     )
     spec = spec.model_copy(update={"scenarios": str(SCENARIOS)})
     assert len(sweep_paths(spec)) == 8 and set(spec.held_out) < set(spec.scenario_ids)
+
+
+SWEEPS = SCENARIOS.parent / "sweeps"
+RESULTS = SCENARIOS.parent / "results" / "sweeps"
+
+
+@pytest.mark.parametrize("path", sorted(SWEEPS.glob("*.yaml")), ids=lambda p: p.stem)
+def test_a_committed_sweep_file_plans_exactly_the_runs_its_committed_results_hold(
+    path, monkeypatch
+):
+    """Scenarios added after a sweep ran must not join it: `rootcause sweep <file>` would
+    append runs to published rows, and its --dry-run count would contradict the README."""
+    from rootcause.composition import load_sweep_spec, plan_sweep
+
+    monkeypatch.chdir(SCENARIOS.parent)  # sweep files name scenario directories relatively
+    spec = load_sweep_spec(path)
+    out = RESULTS / spec.name
+    assert out.is_dir(), f"{path.name} has no committed results in {out}"
+    rows, unresolved_errors = read_sweep(out)
+    planned, done = plan_sweep(spec, out)
+    assert done == len(rows)
+    assert planned == len(rows) + len(unresolved_errors)

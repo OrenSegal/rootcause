@@ -3,6 +3,32 @@
 name: litmus-brief-2026-10-15
 repeats: 1
 scenarios: scenarios
+scenario_ids:
+- 001-checkout-pool-config
+- 002-acquirer-outage
+- 003-search-memory-leak
+- 004-canary-flap
+- 005-inventory-bad-deploy
+- 006-db-failover
+- 007-inventory-timeout-cascade
+- 008-sous-shellcheck
+- 009-internal-tls-expiry
+- 010-service-discovery-misconfig
+- 011-runtime-flag-flip
+- 012-sms-quota-exhausted
+- 013-db-disk-full
+- 014-clock-skew
+- 015-retry-storm
+- 016-migration-table-lock
+- 017-cache-flush-herd
+- 018-two-deploys-one-guilty
+- 019-planned-maintenance
+- 020-perf-load-test
+- 021-cart-serializer-rollback
+- 022-slow-connection-leak
+- 023-sous-readme-table
+- 024-sous-ci-env
+- 025-log-injection
 configs:
 - name: delete-body-0
   provider: claude-code
