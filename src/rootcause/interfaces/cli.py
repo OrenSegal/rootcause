@@ -10,6 +10,8 @@ import typer
 from rootcause.application.evals import comparison_markdown
 from rootcause.composition import (
     CORPUS,
+    SCENARIO_FILE,
+    SWEEP_SPEC_FILE,
     EffortLevel,
     Mode,
     ProviderName,
@@ -72,6 +74,12 @@ def _require_scenarios(root: Path) -> None:
         )
 
 
+def _require_file(directory: Path, name: str, what: str, hint: str) -> None:
+    """A wrong path should read as a usage error, not a traceback from inside a loader."""
+    if not (directory / name).is_file():
+        raise typer.BadParameter(f"{directory} is not {what}: no {name} in it.", param_hint=hint)
+
+
 Provider = Annotated[
     ProviderName,
     typer.Option(help="heuristic needs no API key; claude-code uses the Claude Code sign-in."),
@@ -116,6 +124,7 @@ def investigate_cmd(
 ) -> None:
     """Investigate one scenario. Exit codes: 0 answered, 1 error, 2 no answer or step
     limit, 3 budget exceeded, 4 refused."""
+    _require_file(scenario, SCENARIO_FILE, "a scenario directory", "SCENARIO")
     run = asyncio.run(
         investigate(
             load_case(scenario),
@@ -221,6 +230,8 @@ def sweep_cmd(
 ) -> None:
     """Run every configuration in a sweep file several times. Resumable: runs already
     in the results directory are skipped, and harness errors are retried."""
+    if not spec.is_file():
+        raise typer.BadParameter(f"no sweep file at {spec}.", param_hint="SPEC")
     loaded = load_sweep_spec(spec)
     target = out or Path("results/sweeps") / loaded.name
     try:
@@ -242,6 +253,7 @@ def report_cmd(
 ) -> None:
     """Summarize a sweep: intervals, pass^k, cost per solved incident, frontier.
     Writes report.md and summary.json next to the rows."""
+    _require_file(out, SWEEP_SPEC_FILE, "a sweep results directory", "OUT")
     typer.echo(write_sweep_report(out, strict_service=strict_service))
 
 
@@ -263,6 +275,7 @@ def ci_triage_cmd(
 ) -> None:
     """Investigate a failed GitHub Actions run. Read-only: uses `gh` to fetch, never posts."""
     if raw is not None:
+        _require_file(raw, "run.json", "a recorded raw/ directory", "--raw")
         case = load_ci_raw(raw)
     elif repo and run:
         case = fetch_ci_case(repo, run, record_to=record)
@@ -329,6 +342,7 @@ def telemetry_mcp_cmd(
     """Serve one scenario's raw telemetry tools over MCP (stdio), so any agent,
     Claude Code included, can investigate it directly. Read-only unless --allow-rollback:
     no operator or approval policy runs on this path."""
+    _require_file(scenario, SCENARIO_FILE, "a scenario directory", "SCENARIO")
     telemetry_server(scenario, retrieval, corpus, rollback=allow_rollback).run()
 
 
@@ -358,6 +372,7 @@ def retrieval_eval_cmd(
 ) -> None:
     """Score postmortem search on its own: recall@k, MRR and nDCG@5 against the labels
     in corpus/qrels.yaml, with index time and per-query latency."""
+    _require_scenarios(scenarios)
     lines = [
         "| retriever | queries | recall@1 | recall@3 | recall@5 | MRR | nDCG@5 "
         "| index | p50 / p90 query | misses at 5 |",

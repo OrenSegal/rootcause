@@ -447,6 +447,7 @@ def fetch_ci_case(repo: str, run_id: int, record_to: Path | None = None) -> Case
 
 
 ROWS, ERRORS, SPEC = "rows.jsonl", "errors.jsonl", "spec.json"
+SWEEP_SPEC_FILE = SPEC  # what marks a directory as a sweep's results
 EngineFactory = Callable[[SweepConfig], Engine]
 
 

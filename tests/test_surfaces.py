@@ -128,3 +128,21 @@ async def test_agent_server_does_not_investigate_the_directory_above_its_root(
     async with Client(server) as client:
         run = await client.call_tool("investigate_incident", {"scenario_id": ".."})
     assert run.is_error
+
+
+def test_commands_name_a_missing_input_instead_of_printing_a_traceback(tmp_path):
+    """A mistyped path is the first thing a new user hits: it should read as a usage
+    error (exit 2, the path named), not a FileNotFoundError from inside the loader."""
+    missing = str(tmp_path / "nope")
+    log = ["--runlog", str(tmp_path / "r.sqlite")]
+    for args in (
+        ["investigate", missing, *log],
+        ["telemetry-mcp", missing],
+        ["report", missing],
+        ["sweep", missing + ".yaml", "--dry-run"],
+        ["ci-triage", "--raw", missing, *log],
+        ["retrieval-eval", missing],
+    ):
+        out = runner.invoke(app, args)
+        assert out.exit_code == 2, (args, out.output, out.exception)
+        assert "nope" in out.output, (args, out.output)
