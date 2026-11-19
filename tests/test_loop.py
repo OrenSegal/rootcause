@@ -174,6 +174,9 @@ async def test_run_records_token_usage_and_the_model_that_served_it(case):
 async def test_a_harness_error_is_not_scored_as_a_wrong_answer(case):
     provider = Scripted([{"content": [], "stop_reason": "max_tokens"}])
     result = await run(make_loop(provider), case)
+    # Stopped on the truncated turn itself, for that reason, not by a later failure.
+    assert result.outcome is Outcome.ERROR and "max_tokens" in result.note
+    assert result.steps == 1
     graded = grade(case, result, provider="p", mode="single", tool_calls=0)
     assert graded.status == "error"
     assert not graded.passed

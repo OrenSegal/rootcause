@@ -77,6 +77,12 @@ def test_workers_see_only_their_read_only_tools(store):
     assert seen[WorkerRole.LOGS] == {"query_logs", "search_traces", "get_trace"}
     assert seen[WorkerRole.METRICS] == {"query_metrics"}
     assert all("rollback_deploy" not in s for s in seen.values())
+    # The role lists above already leave rollback out. `allow_gated=False` is the second
+    # lock: a worker whose list did name a gated tool still must not be shown it.
+    from dataclasses import replace
+
+    widened = replace(worker_spec(WorkerRole.CHANGES), allowed_tools=frozenset(names))
+    assert {t.name for t in widened.select(tools)} == names - {"rollback_deploy"}
 
 
 async def test_orchestrator_dispatches_workers_and_diagnoses(case):
