@@ -112,3 +112,19 @@ def test_ci_triage_needs_a_run_or_raw_input(tmp_path):
     out = runner.invoke(app, ["ci-triage", "--runlog", str(tmp_path / "r.sqlite")])
     assert out.exit_code != 0
     assert "--repo and --run, or --raw" in out.output
+
+
+async def test_agent_server_does_not_investigate_the_directory_above_its_root(
+    scenario_dir, tmp_path
+):
+    """ ".." has itself as a name and the root as its parent, so a check on the spelling
+    alone lets it through; what counts is where the path lands."""
+    import shutil
+
+    outer = shutil.copytree(scenario_dir, tmp_path / "outer")  # a scenario directory...
+    root = outer / "served"  # ...that holds the directory the server was given
+    root.mkdir()
+    server = build_agent_server(root, HeuristicProvider, SqliteEventLog(), budget_usd=1.0)
+    async with Client(server) as client:
+        run = await client.call_tool("investigate_incident", {"scenario_id": ".."})
+    assert run.is_error
