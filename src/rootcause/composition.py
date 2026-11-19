@@ -572,8 +572,30 @@ def sweep_paths(spec: SweepSpec) -> list[Path]:
     return paths
 
 
+def check_sweep(spec: SweepSpec) -> None:
+    """Every provider and effort a sweep file names, checked before anything runs. Left
+    to `sweep_engine`, a typo is found once per run and recorded as a crash of each."""
+    providers, efforts = {p.value for p in ProviderName}, {e.value for e in EffortLevel}
+    unknown = [
+        f"{c.name}: {field} {value!r}"
+        for c in spec.configs
+        for field, value, known in (
+            ("provider", c.provider, providers),
+            ("effort", c.effort, efforts),
+        )
+        if value not in known
+    ]
+    if unknown:
+        raise ValueError(
+            f"{spec.name}: {'; '.join(unknown)}. Providers: {', '.join(sorted(providers))}. "
+            f"Efforts: {', '.join(e.value for e in EffortLevel)}."
+        )
+
+
 def plan_sweep(spec: SweepSpec, out: Path) -> tuple[int, int]:
-    """(runs planned, runs already done) without starting anything."""
+    """(runs planned, runs already done) without starting anything. Raises ValueError
+    for a sweep that could not run as written."""
+    check_sweep(spec)
     total = spec.repeats * len(sweep_paths(spec)) * len(spec.configs)
     return total, len(read_sweep(out)[0])
 

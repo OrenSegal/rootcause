@@ -223,7 +223,10 @@ def sweep_cmd(
     in the results directory are skipped, and harness errors are retried."""
     loaded = load_sweep_spec(spec)
     target = out or Path("results/sweeps") / loaded.name
-    total, done = plan_sweep(loaded, target)
+    try:
+        total, done = plan_sweep(loaded, target)
+    except ValueError as e:  # an unknown provider, effort or scenario id: nothing has run
+        raise typer.BadParameter(str(e), param_hint="SPEC") from e
     typer.echo(f"{total} runs planned, {done} done, {total - done} to run")
     if dry_run:
         return

@@ -337,3 +337,27 @@ def test_a_committed_sweep_report_is_what_the_committed_rows_produce(out):
     strict = "(single-service grade)" in committed.splitlines()[0]
     spec, summaries, rows = summarize_sweep(out.parent, strict_service=strict)
     assert report_markdown(spec, summaries, rows, strict_service=strict) == committed
+
+
+def test_cli_refuses_a_sweep_naming_an_unknown_provider_or_effort_before_running(
+    two_scenarios, tmp_path
+):
+    """A typo must stop the sweep at the plan, --dry-run included: found per run, it is
+    logged as a crash of every run of that configuration while the others spend money."""
+    from typer.testing import CliRunner
+
+    from rootcause.interfaces.cli import app
+
+    out = tmp_path / "out"
+    for field, value in (("provider", "heuristc"), ("effort", "hihg")):
+        spec = tmp_path / f"{field}.yaml"
+        config = {"name": "a", "provider": "heuristic", "model": "heuristic", field: value}
+        spec.write_text(
+            f"name: typo\nrepeats: 1\nscenarios: {two_scenarios}\nconfigs:\n  - {config}\n"
+        )
+        for extra in (["--dry-run"], []):
+            runner = CliRunner(env={"NO_COLOR": "1", "COLUMNS": "200"})
+            result = runner.invoke(app, ["sweep", str(spec), "--out", str(out), *extra])
+            assert result.exit_code == 2, result.output
+            assert value in result.output
+    assert not out.exists()
