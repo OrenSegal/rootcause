@@ -1,4 +1,4 @@
-"""Multi-agent mode end to end, and the comparison table the README's results come from."""
+"""Multi-agent mode end to end, and the comparison tables in docs/results.md."""
 
 import pytest
 from conftest import Scripted, call
