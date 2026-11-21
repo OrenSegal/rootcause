@@ -147,3 +147,7 @@ Two cases from the first PR pass that were wrong (pytest 43079052021, an unrelat
 **Caveats.** The rules were fixed on these same cases, so 11 of 12 is dev-set accuracy, not a measurement. The next batch must come from repositories the rules have not seen, and its hand check is the real test. Yield is about 1 in 4 breaks, so 150 cases needs roughly 600 breaks: about 25 repositories at this cap, or fewer with a higher one. The category set needs a decision for lint and coverage failures before milestone 2.
 
 The snapshots are in `scenarios-ci/pr/` (13 MB) and `scenarios-ci/main/`, not committed.
+
+## Validation on unseen repositories (registered before mining, 2026-11-21)
+
+The rules are frozen at this commit; nothing in `adapters/github_actions.py` changes until every kept case below has been checked by hand. Repositories, chosen for permissive licences and active pull requests, none seen by the rules: encode/starlette, pallets/click, python-attrs/attrs, psf/requests, tox-dev/tox, pypa/pip, Textualize/rich, aio-libs/aiohttp, scrapy/scrapy, marshmallow-code/marshmallow. Same window (since 2026-08-25), pull-request runs, at most 12 breaks each. The measure is the share of kept cases whose label (category and guilty commit) is right by hand.
