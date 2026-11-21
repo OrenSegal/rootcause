@@ -1,6 +1,6 @@
 # Scope: a benchmark of real CI failures
 
-Status: milestone 1 done on 2026-11-21 (see the two result sections at the end). Next: validate the rules on repositories they have not seen, then milestone 2.
+Status: milestone 1 done and validated once on 2026-11-21 (74% of labels right on unseen repositories; see the end). Next: two rule fixes, then a second validation, then milestone 2.
 
 ## Why
 
@@ -151,3 +151,26 @@ The snapshots are in `scenarios-ci/pr/` (13 MB) and `scenarios-ci/main/`, not co
 ## Validation on unseen repositories (registered before mining, 2026-11-21)
 
 The rules are frozen at this commit; nothing in `adapters/github_actions.py` changes until every kept case below has been checked by hand. Repositories, chosen for permissive licences and active pull requests, none seen by the rules: encode/starlette, pallets/click, python-attrs/attrs, psf/requests, tox-dev/tox, pypa/pip, Textualize/rich, aio-libs/aiohttp, scrapy/scrapy, marshmallow-code/marshmallow. Same window (since 2026-08-25), pull-request runs, at most 12 breaks each. The measure is the share of kept cases whose label (category and guilty commit) is right by hand.
+
+### Validation result
+
+**86 breaks, 27 kept. By hand, 20 of 27 labels are right (74%, Wilson 95% interval 55% to 87%), 2 are arguable and 5 are wrong.** Rules were not changed between registering the repositories and finishing this check.
+
+| verdict | cases |
+|---|---|
+| right (20) | attrs 33951423062, 38477282538, 39835343871 and all 10 starlette cases (new code dropped coverage below 100%; the fix added tests or code); click 33887414469 (a test assertion), 34144555748 (mypy on the changed file); scrapy 42324865667 (the new test failed; the fix changed it); pip 42454330481 and scrapy 42512822031, 42716259868, 44441939033 (failed, then passed on a re-run; flaky) |
+| arguable (2) | pip 42223885293, 44045555196: a "Check PR template" job that fails until the PR description is filled in, then passes on a re-run. No guilty commit is right; calling it infrastructure is a stretch |
+| wrong (5) | click 33496785933 and pip 40913919882, 40929906813, 43157410626: the environment pattern matched `ENOTFOUND` inside `ModuleNotFoundError` and `FileNotFoundError`; the click case is a real bug (a test imported the POSIX-only `resource` module, and Windows failed). scrapy 43506370153: a mypy error that "passed on a re-run", because a pull-request re-run tests a fresh merge with the base branch, which had been fixed in between |
+
+**Both failure sources are rule bugs, and both are fixable:**
+
+1. `ENOTFOUND` was added to the environment pattern after the dev-set check, case-insensitively and without word boundaries. It should match `getaddrinfo ENOTFOUND` only.
+2. For pull-request runs, "a re-run passed" does not mean flaky: the re-run tests a new merge commit. The rule needs the base branch to be unchanged between the two attempts, or should apply only to push runs.
+
+**Other findings:**
+
+- **Duplicates.** Six of the ten starlette cases are competing PRs fixing the same `URL.replace` bug. The labels are right, but a benchmark needs one per underlying change. Without starlette, 10 of 17 are right (59%, 36% to 78%).
+- **Coverage gates are the most common real failure** (13 of 20 right cases), and the six categories have no place for them; they are filed as `bad_code_deploy`.
+- **Yield** was 27 of 86 (31%). Approval-gated first attempts (23) and force-pushes (18) are the biggest drops.
+
+**Verdict.** The pull-request approach works, and the remaining errors have specific causes, but 74% is not good enough for ground truth. After the two fixes, the next check needs another set of unseen repositories, with the target set before mining: at least 90% right on 30 or more kept cases, with duplicates collapsed.
