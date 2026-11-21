@@ -1,6 +1,6 @@
 # Scope: a benchmark of real CI failures
 
-Status: milestone 1 run on 2026-11-21; it hit the stop condition (see the end). Milestones 2 to 5 wait on the changes proposed there.
+Status: milestone 1 done on 2026-11-21 (see the two result sections at the end). Next: validate the rules on repositories they have not seen, then milestone 2.
 
 ## Why
 
@@ -121,3 +121,29 @@ Small, because most of the path exists:
 4. **Step names.** `gh run view --log-failed` now prints `UNKNOWN STEP` for every line, so logs lose their step. Take step names from the run's job and step timings instead.
 
 The raw snapshots from this run are kept locally in `scenarios-ci/` (not committed: the labels are wrong, but the logs expire after 90 days).
+
+## Milestone 1, second pass: pull requests (2026-11-21)
+
+The miner now reads pull-request runs, with each PR branch as its own timeline (`--event pull_request`, the default). Same five repositories and window, at most 12 breaks each.
+
+Rules added, each prompted by a case that was mislabelled, each with a test:
+
+- **Environment errors come before the fix rule** (`ENVIRONMENT`): a missing Python build on the runner, `socket hang up`, `ENOTFOUND`, a failed artifact upload and similar label infrastructure with no guilty commit.
+- **A lone failing matrix job is dropped**, not labelled. If one job failed while two or more jobs of the same matrix passed, it is a flake or a platform bug, and the rules cannot tell which. Gate jobs (`check`, `*-alls-green`) are ignored when counting.
+- **"Rerun passed" now checks the first attempt's jobs.** A first-time contributor's run waits for approval and then passes, which looked like a flaky failure. GitHub also overwrites an attempt's own conclusion when its failed jobs are re-run, so the check counts failed jobs in that attempt.
+- **Force-pushes are dropped.** If the red commit is not an ancestor of the green one, the diff between them is not a fix.
+- **Step names are recovered** from the run's step timings when `gh` prints `UNKNOWN STEP`.
+
+**Result: 49 breaks, 12 kept.** Each was checked by hand against the failed log and both diffs:
+
+| verdict | cases |
+|---|---|
+| right | fastapi 43088004454, 43612164925, 44138170508 (new code dropped coverage below the gate; the fix added tests); fastapi 43418818964 (a workflow lockfile commit broke pre-commit; config); pydantic 44617804639 (a new streaming test failed on four jobs; the fix changed that test); pydantic 44623649807 (artifact upload failed on DNS; infrastructure); pydantic 44749339872, 44767659644 and pytest 42785732184, 43162181446 (failed, then passed on a re-run of the same commit; flaky) |
+| right commit, arguable category | fastapi 44694893735: a docs commit failed the formatter. Labelled `bad_code_deploy`; the six categories have no place for a lint failure |
+| uncertain | flask 33236247623: one change split into four commits, and the label blames the commit that edited the test; the source edits are equally plausible |
+
+Two cases from the first PR pass that were wrong (pytest 43079052021, an unrelated PyPy refcount test; pydantic 44609527725, one Windows PyPy job) are now dropped by the matrix rule.
+
+**Caveats.** The rules were fixed on these same cases, so 11 of 12 is dev-set accuracy, not a measurement. The next batch must come from repositories the rules have not seen, and its hand check is the real test. Yield is about 1 in 4 breaks, so 150 cases needs roughly 600 breaks: about 25 repositories at this cap, or fewer with a higher one. The category set needs a decision for lint and coverage failures before milestone 2.
+
+The snapshots are in `scenarios-ci/pr/` (13 MB) and `scenarios-ci/main/`, not committed.

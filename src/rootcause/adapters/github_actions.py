@@ -100,26 +100,31 @@ class GhCli:
                     "api",
                     f"repos/{repo}/compare/{failed_sha}...{fixed_sha}",
                     "--jq",
-                    "{commits: [.commits[].sha], files: [.files[].filename]}",
+                    "{status, commits: [.commits[].sha], files: [.files[].filename]}",
                 ]
             )
         )
-        return {"commits": out["commits"], "files": sorted(set(out["files"]))}
+        # "diverged" means the branch was force-pushed or rebased: the diff is not a fix.
+        return out | {"files": sorted(set(out["files"]))}
 
     def _compare(self, repo: str, base: str, head: str) -> list[dict[str, Any]]:
-        listed = json.loads(
+        """Commits after `base` up to `head`. `base` is a branch name (a PR's first run:
+        everything since the merge base) or the last green sha, which must be an ancestor."""
+        out = json.loads(
             self.gh(
                 [
                     "api",
                     f"repos/{repo}/compare/{base}...{head}",
                     "--jq",
-                    "[.commits[] | {oid: .sha, committedDate: .commit.committer.date, "
-                    'messageHeadline: (.commit.message | split("\\n")[0]), '
-                    'author: (.author.login // "")}]',
+                    "{status, commits: [.commits[] | {oid: .sha, committedDate: "
+                    '.commit.committer.date, messageHeadline: (.commit.message | split("\\n")[0]), '
+                    'author: (.author.login // "")}]}',
                 ]
             )
         )
-        return [c | {"files": self._files(repo, c["oid"])} for c in listed]
+        if re.fullmatch(r"[0-9a-f]{40}", base) and out["status"] not in ("ahead", "identical"):
+            raise ValueError(f"history {out['status']} since the last green run (force-push)")
+        return [c | {"files": self._files(repo, c["oid"])} for c in out["commits"]]
 
     def _files(self, repo: str, sha: str) -> list[dict[str, str]]:
         return json.loads(
@@ -174,7 +179,20 @@ def _ts(raw: str) -> datetime:
     return datetime.fromisoformat(raw.replace("Z", "+00:00"))
 
 
-def _logs(failed_log: str) -> list[LogLine]:
+def _step_at(run: dict[str, Any], job: str, ts: datetime) -> str | None:
+    """`gh run view --log-failed` can print UNKNOWN STEP for every line; the run's step
+    timings (whole seconds) say which step was running."""
+    for j in run.get("jobs", []):
+        if j["name"] != job:
+            continue
+        for step in j["steps"]:
+            start, end = step.get("startedAt"), step.get("completedAt")
+            if start and end and _ts(start) <= ts.replace(microsecond=0) <= _ts(end):
+                return step["name"]
+    return None
+
+
+def _logs(failed_log: str, run: dict[str, Any] | None = None) -> list[LogLine]:
     out: list[LogLine] = []
     for line in failed_log.splitlines():
         parts = line.split("\t", 2)
@@ -194,10 +212,13 @@ def _logs(failed_log: str) -> list[LogLine]:
             level = "warn"
         text = re.sub(r"^##\[(error|warning|group)\]", "", text)
         frac = (match["frac"] or "0")[:6].ljust(6, "0")
+        ts = _ts(f"{match['ts']}.{frac}Z")
+        if step == "UNKNOWN STEP" and run is not None:
+            step = _step_at(run, job, ts) or step
         out.append(
             LogLine(
                 id=f"log-{len(out) + 1:04d}",
-                ts=_ts(f"{match['ts']}.{frac}Z"),
+                ts=ts,
                 service=slug(job),
                 level=level,
                 message=f"{step}: {text}",
@@ -309,7 +330,7 @@ def case_from_raw(raw: RawRun) -> Case:
         provenance="recorded",
     )
     store = TelemetryStore(
-        logs=_logs(raw.failed_log),
+        logs=_logs(raw.failed_log, run),
         metrics=[],
         spans=_spans(run),
         deploys=_deploys(run, raw.commits),
@@ -348,13 +369,15 @@ class Candidate:
 
 
 def candidates(runs: list[dict[str, Any]]) -> list[Candidate]:
-    """`runs` as the REST API lists them (completed push runs on one branch, latest attempt
-    each). Only the first red run of a streak is a case: later reds share its cause."""
+    """`runs` as the REST API lists them (completed runs, latest attempt each), grouped by
+    workflow and branch, so each pull request's branch is its own timeline. Only the first
+    red run of a streak is a case: later reds share its cause."""
     out: list[Candidate] = []
-    by_workflow: dict[int, list[dict[str, Any]]] = {}
+    by_workflow: dict[tuple[Any, ...], list[dict[str, Any]]] = {}
     for run in runs:
         if run["conclusion"] in ("success", "failure"):
-            by_workflow.setdefault(run["workflow_id"], []).append(run)
+            key = (run["workflow_id"], run.get("head_repository"), run.get("head_branch"))
+            by_workflow.setdefault(key, []).append(run)
     for wf_runs in by_workflow.values():
         wf_runs.sort(key=lambda r: r["created_at"])
         last_green: dict[str, Any] | None = None
@@ -397,16 +420,56 @@ def is_note(path: str) -> bool:
     return any(part.lower().startswith(NOTE_PREFIXES) for part in path.split("/"))
 
 
-def label(candidate: Candidate, commits: list[dict[str, Any]], fix: list[str]) -> Label | str:
+# Error shapes that mean the environment failed, not the code under test.
+ENVIRONMENT = re.compile(
+    r"version '?[\w.]+'? with architecture '?\w+'? was not found|socket hang up|ECONNRESET"
+    r"|Connection reset by peer|Could not resolve host|rate limit exceeded|API rate limit"
+    r"|TLS handshake timeout|503 Service Unavailable|502 Bad Gateway"
+    r"|runner has received a shutdown signal|lost communication with the server"
+    r"|ENOTFOUND|Failed to CreateArtifact|Unable to make request",
+    re.IGNORECASE,
+)
+
+
+# Jobs that only report whether the others passed ("check", "test-alls-green").
+GATE_JOB = re.compile(r"^checks?$|alls?-green", re.IGNORECASE)
+
+
+def _matrix_sibling_passes(jobs: list[dict[str, Any]]) -> int:
+    """With exactly one failed job (gate jobs aside), how many jobs of its matrix passed."""
+    failed = [j for j in jobs if j["conclusion"] == "failure" and not GATE_JOB.search(j["name"])]
+    if len(failed) != 1:
+        return 0
+    # Matrix names vary ("test (3.13, windows)", "Test windows-latest / pypy3.11"); the
+    # first word is the part they share.
+    stem = failed[0]["name"].split()[0]
+    return sum(
+        1
+        for j in jobs
+        if j["conclusion"] == "success" and j["name"] != failed[0]["name"]
+        and j["name"].split()[0] == stem
+    )  # fmt: skip
+
+
+def label(candidate: Candidate, raw: RawRun, fix: list[str]) -> Label | str:
     """The rules of docs/ci-benchmark-scope.md, first match wins. A string drops the case
     and says why, so drop rates can be reported per reason."""
     if candidate.flaky:
         return Label("infrastructure", None, "a rerun of the same commit passed")
+    env = ENVIRONMENT.search(ANSI.sub("", raw.failed_log))
+    if env:
+        return Label(
+            "infrastructure", None, f"the failed log shows an environment error: {env[0]!r}"
+        )
+    siblings = _matrix_sibling_passes(raw.run.get("jobs", []))
+    if siblings >= 2:
+        return f"one matrix job failed while {siblings} siblings passed (flaky or platform bug)"
     fix_set = {f for f in fix if not is_note(f)}
     if not fix_set:
         return "the fix changed only changelogs or nothing"
     touched = {
-        c["oid"]: {f["filename"] for f in c["files"] if not is_note(f["filename"])} for c in commits
+        c["oid"]: {f["filename"] for f in c["files"] if not is_note(f["filename"])}
+        for c in raw.commits
     }
     hits = [sha for sha, files in touched.items() if files & fix_set]
     if all(is_pin(f) for f in fix_set):

@@ -1,8 +1,9 @@
 """Mine labelled CI-failure cases from public repositories (docs/ci-benchmark-scope.md).
 
-For each repo: list completed push runs on the default branch since a date, find each
-break (first red run after a green one, and the next green run), snapshot what `gh`
-returns, label it with the rules in `adapters/github_actions.label`, and write a scenario.
+For each repo: list completed pull-request runs (or push runs on the default branch) since
+a date, find each break (first red run after a green one on the same branch, and the next
+green run there), snapshot what `gh` returns, label it with the rules in
+`adapters/github_actions.label`, and write a scenario.
 Dropped breaks go to dropped.jsonl with the reason, so the drop rate can be reported.
 
     uv run python scripts/mine_ci.py pallets/flask pytest-dev/pytest --since 2026-08-25
@@ -20,16 +21,17 @@ from rootcause.adapters.github_actions import Candidate, GhCli, candidates, case
 from rootcause.domain.scenario import GroundTruth
 
 
-def push_runs(gh: GhCli, repo: str, branch: str, since: str) -> list[dict[str, Any]]:
+def list_runs(gh: GhCli, repo: str, event: str, branch: str, since: str) -> list[dict[str, Any]]:
+    on_branch = f"&branch={branch}" if event == "push" else ""
     out = gh.gh(
         [
             "api",
             "--paginate",
-            f"repos/{repo}/actions/runs?branch={branch}&event=push&status=completed"
+            f"repos/{repo}/actions/runs?event={event}{on_branch}&status=completed"
             f"&created=>={since}&per_page=100",
             "--jq",
-            ".workflow_runs[] | {id, name, workflow_id, conclusion, head_sha, created_at, "
-            "run_attempt, html_url}",
+            ".workflow_runs[] | {id, name, workflow_id, conclusion, head_sha, head_branch, "
+            "head_repository: .head_repository.full_name, created_at, run_attempt, html_url}",
         ]
     )
     return [json.loads(line) for line in out.splitlines() if line.strip()]
@@ -39,20 +41,40 @@ def mine_one(
     gh: GhCli, repo: str, meta: dict[str, Any], c: Candidate, out: Path, max_commits: int
 ) -> str | None:
     """Writes the case and returns None, or returns why it was dropped."""
-    if c.green is None and not c.flaky:
+    if c.rerun:
+        # The attempt's own conclusion is overwritten when failed jobs are re-run; its jobs
+        # are not. An attempt awaiting approval has no jobs at all.
+        failed_jobs = gh.gh(
+            [
+                "api",
+                f"repos/{repo}/actions/runs/{c.red['id']}/attempts/1/jobs?per_page=100",
+                "--jq",
+                '[.jobs[] | select(.conclusion == "failure")] | length',
+            ]
+        ).strip()
+        if failed_jobs == "0":
+            return "first attempt had no failed job (awaiting approval or cancelled)"
+    if c.green is not None:
+        base = c.green["head_sha"]
+    elif c.red.get("head_branch") != meta["branch"]:
+        base = meta["branch"]  # a PR's first run: everything since it left the default branch
+    elif c.flaky:
+        base = None
+    else:
         return "no green run before the break inside the window"
-    base = c.green["head_sha"] if c.green else None
     raw = gh.fetch(repo, c.red["id"], base_sha=base, attempt=1 if c.rerun else None)
     if not raw.failed_log.strip():
         return "no failed-step log (expired or job never ran)"
     if len(raw.commits) > max_commits:
         return f"{len(raw.commits)} commits under test (max {max_commits})"
     fix = (
-        {"commits": [], "files": []}
+        {"status": "rerun", "commits": [], "files": []}
         if c.flaky
         else gh.fix_files(repo, c.red["head_sha"], c.fixed["head_sha"])
     )
-    found = label(c, raw.commits, fix["files"])
+    if fix["status"] not in ("ahead", "rerun"):
+        return f"history {fix['status']} between the red and green runs (force-push)"
+    found = label(c, raw, fix["files"])
     if isinstance(found, str):
         return found
     case = case_from_raw(raw)
@@ -95,6 +117,7 @@ def main() -> None:
     ap.add_argument("--out", type=Path, default=Path("scenarios-ci"))
     ap.add_argument("--max-commits", type=int, default=15)
     ap.add_argument("--max-per-repo", type=int, default=20)
+    ap.add_argument("--event", choices=["pull_request", "push"], default="pull_request")
     args = ap.parse_args()
     gh = GhCli()
     args.out.mkdir(parents=True, exist_ok=True)
@@ -107,7 +130,7 @@ def main() -> None:
             )
         )  # fmt: skip
         found = sorted(
-            candidates(push_runs(gh, repo, meta["branch"], args.since)),
+            candidates(list_runs(gh, repo, args.event, meta["branch"], args.since)),
             key=lambda c: c.red["created_at"],
             reverse=True,
         )[: args.max_per_repo]

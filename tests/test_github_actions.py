@@ -155,6 +155,10 @@ def _commit(sha: str, *files: str) -> dict:
     return {"oid": sha, "files": [{"filename": f, "status": "modified"} for f in files]}
 
 
+def _raw(*commits: dict, log: str = "", jobs: list | None = None) -> RawRun:
+    return RawRun(run={"jobs": jobs or []}, failed_log=log, commits=list(commits))
+
+
 def _case(red_sha: str = "r", fixed_sha: str = "f") -> Candidate:
     return Candidate(
         green=None, red=_run(1, "failure", red_sha), fixed=_run(2, "success", fixed_sha)
@@ -163,35 +167,108 @@ def _case(red_sha: str = "r", fixed_sha: str = "f") -> Candidate:
 
 def test_label_rules_first_match_wins():
     commits = [_commit("c1", "src/a.py"), _commit("c2", "src/b.py", ".github/workflows/ci.yml")]
-    assert label(_case("same", "same"), commits, ["src/a.py"]) == Label(
+    assert label(_case("same", "same"), _raw(*commits), ["src/a.py"]) == Label(
         "infrastructure", None, "a rerun of the same commit passed"
     )
-    dep = label(_case(), commits, ["uv.lock", "requirements/dev.txt"])
+    dep = label(_case(), _raw(*commits), ["uv.lock", "requirements/dev.txt"])
     assert isinstance(dep, Label) and dep.category == "dependency_failure" and dep.guilty is None
-    cfg = label(_case(), commits, [".github/workflows/ci.yml"])
+    cfg = label(_case(), _raw(*commits), [".github/workflows/ci.yml"])
     assert isinstance(cfg, Label) and (cfg.category, cfg.guilty) == ("config_change", "c2")
-    code = label(_case(), commits, ["src/a.py", "tests/test_a.py"])
+    code = label(_case(), _raw(*commits), ["src/a.py", "tests/test_a.py"])
     assert isinstance(code, Label) and (code.category, code.guilty) == ("bad_code_deploy", "c1")
 
 
 def test_label_drops_what_the_rules_cannot_decide():
     commits = [_commit("c1", "src/a.py", "CHANGES.md"), _commit("c2", "src/a.py", "uv.lock")]
     assert (
-        label(_case(), commits, ["src/a.py"])
+        label(_case(), _raw(*commits), ["src/a.py"])
         == "2 tested commits touched the files the fix changed"
     )
     assert (
-        label(_case(), commits, ["src/z.py"])
+        label(_case(), _raw(*commits), ["src/z.py"])
         == "0 tested commits touched the files the fix changed"
     )
     assert (
-        label(_case(), commits, ["uv.lock"]) == "a tested commit changed the pins the fix changed"
+        label(_case(), _raw(*commits), ["uv.lock"])
+        == "a tested commit changed the pins the fix changed"
     )
-    assert label(_case(), commits, []) == "the fix changed only changelogs or nothing"
+    assert label(_case(), _raw(*commits), []) == "the fix changed only changelogs or nothing"
 
 
 def test_sharing_a_changelog_is_not_evidence():
     commits = [_commit("c1", "src/a.py", "CHANGES.md"), _commit("c2", "docs/release-notes.md")]
-    assert isinstance(label(_case(), commits, ["CHANGES.md", "src/b.py"]), str)
-    code = label(_case(), commits, ["changelog/1.bugfix.rst", "src/a.py"])
+    assert isinstance(label(_case(), _raw(*commits), ["CHANGES.md", "src/b.py"]), str)
+    code = label(_case(), _raw(*commits), ["changelog/1.bugfix.rst", "src/a.py"])
     assert isinstance(code, Label) and code.guilty == "c1"
+
+
+def test_environment_errors_and_lone_matrix_failures_come_before_the_fix_rule():
+    commits = [_commit("c1", "src/a.py")]
+    env = label(
+        _case(),
+        _raw(*commits, log="##[error]The version '3.12.10' with architecture 'x64' was not found"),
+        ["src/a.py"],
+    )
+    assert isinstance(env, Label) and (env.category, env.guilty) == ("infrastructure", None)
+    jobs = [
+        {"name": "test (3.13, windows-11-arm)", "conclusion": "failure"},
+        {"name": "test (3.13, ubuntu-latest)", "conclusion": "success"},
+        {"name": "test (3.13, macos-latest)", "conclusion": "success"},
+        {"name": "lint", "conclusion": "success"},
+    ]
+    lone = label(_case(), _raw(*commits, jobs=jobs), ["src/a.py"])
+    assert lone == "one matrix job failed while 2 siblings passed (flaky or platform bug)"
+    slashed = [
+        {"name": "Test windows-latest / pypy3.11", "conclusion": "failure"},
+        {"name": "Test macos-latest / 3.13", "conclusion": "success"},
+        {"name": "Test ubuntu-latest / 3.14", "conclusion": "success"},
+    ]
+    assert label(_case(), _raw(*commits, jobs=slashed), ["src/a.py"]) == lone
+    gated = [*jobs, {"name": "check", "conclusion": "failure"}]
+    assert label(_case(), _raw(*commits, jobs=gated), ["src/a.py"]) == lone
+
+
+def test_each_pull_request_branch_is_its_own_timeline():
+    runs = [
+        _run(1, "success", "a") | {"head_branch": "pr-1"},
+        _run(2, "failure", "b") | {"head_branch": "pr-2"},
+        _run(3, "failure", "c") | {"head_branch": "pr-1"},
+        _run(4, "success", "d") | {"head_branch": "pr-2"},
+        _run(5, "success", "e") | {"head_branch": "pr-1"},
+    ]
+    found = {c.red["id"]: (c.green and c.green["id"], c.fixed["id"]) for c in candidates(runs)}
+    assert found == {2: (None, 4), 3: (1, 5)}
+
+
+def test_unknown_step_names_are_recovered_from_step_timings():
+    run = {
+        "jobs": [
+            {
+                "name": "test",
+                "steps": [
+                    {"name": "setup", "startedAt": "2026-11-01T00:00:00Z",
+                     "completedAt": "2026-11-01T00:00:04Z"},
+                    {"name": "pytest", "startedAt": "2026-11-01T00:00:05Z",
+                     "completedAt": "2026-11-01T00:00:09Z"},
+                ],
+            }
+        ]
+    }  # fmt: skip
+    log = "test\tUNKNOWN STEP\t2026-11-01T00:00:06.5Z ##[error]boom\n"
+    logs = case_from_raw(RawRun(run=_full_run(run), failed_log=log, commits=[])).store.logs
+    assert [entry.message for entry in logs] == ["pytest: boom"]
+
+
+def _full_run(run: dict) -> dict:
+    job = run["jobs"][0] | {
+        "databaseId": 1, "conclusion": "failure",
+        "startedAt": "2026-11-01T00:00:00Z", "completedAt": "2026-11-01T00:00:09Z",
+    }  # fmt: skip
+    job["steps"] = [
+        st | {"number": n, "conclusion": "success"} for n, st in enumerate(job["steps"])
+    ]
+    return {
+        "databaseId": 9, "name": "ci", "displayTitle": "t", "headBranch": "b",
+        "headSha": "0" * 40, "conclusion": "failure", "createdAt": "2026-11-01T00:00:00Z",
+        "updatedAt": "2026-11-01T00:00:09Z", "jobs": [job],
+    }  # fmt: skip
