@@ -25,7 +25,8 @@ from rootcause.domain.store import TelemetryStore
 from rootcause.domain.telemetry import Deploy, LogLevel, LogLine, Span, SpanStatus
 
 RUN_FIELDS = (
-    "databaseId,name,displayTitle,headBranch,headSha,event,conclusion,createdAt,updatedAt,jobs"
+    "databaseId,name,displayTitle,headBranch,headSha,event,conclusion,createdAt,updatedAt,jobs,"
+    "attempt"
 )
 CONFIG_NAMES = {"Dockerfile", "Makefile", "package.json", "pyproject.toml", "uv.lock", "setup.cfg"}
 CONFIG_SUFFIXES = (".yml", ".yaml", ".toml", ".ini", ".cfg", ".lock")
@@ -75,13 +76,57 @@ class GhCli:
     def __init__(self, runner: Runner = _gh) -> None:
         self.gh = runner
 
-    def fetch(self, repo: str, run_id: int) -> RawRun:
-        run = json.loads(
-            self.gh(["run", "view", str(run_id), "--repo", repo, "--json", RUN_FIELDS])
-        )
+    def fetch(
+        self, repo: str, run_id: int, *, base_sha: str | None = None, attempt: int | None = None
+    ) -> RawRun:
+        """`base_sha` is the last green commit: the commits under test are then everything
+        after it, from the compare API. `attempt` reads an earlier attempt of a rerun run."""
+        view = ["run", "view", str(run_id), "--repo", repo]
+        if attempt is not None:
+            view += ["--attempt", str(attempt)]
+        run = json.loads(self.gh([*view, "--json", RUN_FIELDS]))
         run["repository"] = repo
-        failed_log = self.gh(["run", "view", str(run_id), "--repo", repo, "--log-failed"])
-        return RawRun(run=run, failed_log=failed_log, commits=self._commits(repo, run))
+        failed_log = self.gh([*view, "--log-failed"])
+        commits = (
+            self._compare(repo, base_sha, run["headSha"]) if base_sha else self._commits(repo, run)
+        )
+        return RawRun(run=run, failed_log=failed_log, commits=commits)
+
+    def fix_files(self, repo: str, failed_sha: str, fixed_sha: str) -> dict[str, Any]:
+        """What changed between the failed commit and the next green one: the fix."""
+        out = json.loads(
+            self.gh(
+                [
+                    "api",
+                    f"repos/{repo}/compare/{failed_sha}...{fixed_sha}",
+                    "--jq",
+                    "{commits: [.commits[].sha], files: [.files[].filename]}",
+                ]
+            )
+        )
+        return {"commits": out["commits"], "files": sorted(set(out["files"]))}
+
+    def _compare(self, repo: str, base: str, head: str) -> list[dict[str, Any]]:
+        listed = json.loads(
+            self.gh(
+                [
+                    "api",
+                    f"repos/{repo}/compare/{base}...{head}",
+                    "--jq",
+                    "[.commits[] | {oid: .sha, committedDate: .commit.committer.date, "
+                    'messageHeadline: (.commit.message | split("\\n")[0]), '
+                    'author: (.author.login // "")}]',
+                ]
+            )
+        )
+        return [c | {"files": self._files(repo, c["oid"])} for c in listed]
+
+    def _files(self, repo: str, sha: str) -> list[dict[str, str]]:
+        return json.loads(
+            self.gh(
+                ["api", f"repos/{repo}/commits/{sha}", "--jq", "[.files[] | {status, filename}]"]
+            )
+        )
 
     def _commits(self, repo: str, run: dict[str, Any]) -> list[dict[str, Any]]:
         if run["event"] == "pull_request":
@@ -105,7 +150,7 @@ class GhCli:
                 self.gh(["pr", "view", str(prs[0]["number"]), "--repo", repo, "--json", "commits"])
             )["commits"]
         else:
-            listed = [
+            listed: list[dict[str, Any]] = [
                 {
                     "oid": run["headSha"],
                     "committedDate": run["createdAt"],
@@ -119,16 +164,7 @@ class GhCli:
                 "committedDate": c["committedDate"],
                 "messageHeadline": c["messageHeadline"],
                 "author": c["authors"][0]["login"] if c.get("authors") else "",
-                "files": json.loads(
-                    self.gh(
-                        [
-                            "api",
-                            f"repos/{repo}/commits/{c['oid']}",
-                            "--jq",
-                            "[.files[] | {status, filename}]",
-                        ]
-                    )
-                ),
+                "files": self._files(repo, c["oid"]),
             }
             for c in listed
         ]
@@ -279,3 +315,112 @@ def case_from_raw(raw: RawRun) -> Case:
         deploys=_deploys(run, raw.commits),
     )
     return Case(scenario=scenario, store=store)
+
+
+# --- Mining labelled cases from red-to-green pairs (scripts/mine_ci.py, docs/ci-benchmark-scope.md)
+
+PIN_NAMES = {
+    "uv.lock", "poetry.lock", "Pipfile.lock", "pdm.lock", "package-lock.json", "yarn.lock",
+    "pnpm-lock.yaml", "Cargo.lock", "go.sum",
+}  # fmt: skip
+PIN_PREFIXES = ("requirements", "constraints")
+
+
+def is_pin(path: str) -> bool:
+    name = path.rsplit("/", 1)[-1]
+    in_pin_file = any(part.startswith(PIN_PREFIXES) for part in path.split("/"))
+    return name in PIN_NAMES or (in_pin_file and name.endswith(".txt"))
+
+
+@dataclass(frozen=True)
+class Candidate:
+    """A break on one workflow and branch: the last green run before it, the first red run,
+    and the next green run. `rerun` means the red run's own later attempt went green."""
+
+    green: dict[str, Any] | None
+    red: dict[str, Any]
+    fixed: dict[str, Any]
+    rerun: bool = False
+
+    @property
+    def flaky(self) -> bool:
+        return self.rerun or self.red["head_sha"] == self.fixed["head_sha"]
+
+
+def candidates(runs: list[dict[str, Any]]) -> list[Candidate]:
+    """`runs` as the REST API lists them (completed push runs on one branch, latest attempt
+    each). Only the first red run of a streak is a case: later reds share its cause."""
+    out: list[Candidate] = []
+    by_workflow: dict[int, list[dict[str, Any]]] = {}
+    for run in runs:
+        if run["conclusion"] in ("success", "failure"):
+            by_workflow.setdefault(run["workflow_id"], []).append(run)
+    for wf_runs in by_workflow.values():
+        wf_runs.sort(key=lambda r: r["created_at"])
+        last_green: dict[str, Any] | None = None
+        red: dict[str, Any] | None = None
+        for run in wf_runs:
+            if run["conclusion"] == "failure":
+                red = red or run
+                continue
+            if red is not None:
+                out.append(Candidate(green=last_green, red=red, fixed=run))
+                red = None
+            elif run.get("run_attempt", 1) > 1:
+                # Its first attempt failed and a rerun of the same commit passed.
+                out.append(Candidate(green=last_green, red=run, fixed=run, rerun=True))
+            last_green = run
+    return out
+
+
+@dataclass(frozen=True)
+class Label:
+    category: str
+    guilty: str | None  # full sha of the commit under test that broke the build
+    reason: str
+
+
+NOTE_PREFIXES = (
+    "changes",
+    "changelog",
+    "history",
+    "news",
+    "authors",
+    "release-notes",
+    "contributors",
+)
+
+
+def is_note(path: str) -> bool:
+    """Changelogs and author lists: nearly every commit edits them, so sharing one proves
+    nothing about which commit a fix repairs."""
+    return any(part.lower().startswith(NOTE_PREFIXES) for part in path.split("/"))
+
+
+def label(candidate: Candidate, commits: list[dict[str, Any]], fix: list[str]) -> Label | str:
+    """The rules of docs/ci-benchmark-scope.md, first match wins. A string drops the case
+    and says why, so drop rates can be reported per reason."""
+    if candidate.flaky:
+        return Label("infrastructure", None, "a rerun of the same commit passed")
+    fix_set = {f for f in fix if not is_note(f)}
+    if not fix_set:
+        return "the fix changed only changelogs or nothing"
+    touched = {
+        c["oid"]: {f["filename"] for f in c["files"] if not is_note(f["filename"])} for c in commits
+    }
+    hits = [sha for sha, files in touched.items() if files & fix_set]
+    if all(is_pin(f) for f in fix_set):
+        if hits:
+            return "a tested commit changed the pins the fix changed"
+        return Label(
+            "dependency_failure", None, "the fix only changed pins no tested commit touched"
+        )
+    if len(hits) != 1:
+        return f"{len(hits)} tested commits touched the files the fix changed"
+    if all(is_config(f) for f in fix_set):
+        return Label(
+            "config_change", hits[0], "the fix only changed config one tested commit touched"
+        )
+    return Label(
+        "bad_code_deploy", hits[0], "the fix changed files exactly one tested commit touched"
+    )

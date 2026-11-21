@@ -1,6 +1,6 @@
 # Scope: a benchmark of real CI failures
 
-Status: proposal, 2026-11-21. Nothing here is built yet.
+Status: milestone 1 run on 2026-11-21; it hit the stop condition (see the end). Milestones 2 to 5 wait on the changes proposed there.
 
 ## Why
 
@@ -93,3 +93,31 @@ Small, because most of the path exists:
 - **Logs too long.** `query_logs` caps at 200 lines per call, so long logs cost more calls rather than failing. Watch cost per run in milestone 1.
 - **The grep baseline wins.** Then the write-up says so. It would be a useful result for anyone building CI triage.
 - **Repos change licence or delete history.** The `raw/` snapshot keeps every case reproducible, and each header records the licence at mining time.
+
+## Milestone 1 result (2026-11-21)
+
+`scripts/mine_ci.py` on five repositories (pallets/flask, pytest-dev/pytest, pydantic/pydantic, psf/black, fastapi/fastapi), push runs on the default branch since 2026-08-25, at most 10 breaks per repository: **31 breaks, 8 kept, 23 dropped.** Every kept case was checked by hand against the failed log and both diffs.
+
+**The first run had a rule bug.** Most "guilty commit" labels rested on the fix and the suspect both editing `CHANGES.md`, `AUTHORS` or release notes. Changelog-type files are now ignored when matching (`is_note`), with a test.
+
+**After that fix, the labels are still mostly wrong.** Of the 8 kept cases:
+
+| case | automatic label | by hand |
+|---|---|---|
+| fastapi 37688429128, 43475880790, 44310583790 | infrastructure (rerun passed) | plausible, but the only error line is the aggregator job's exit code |
+| black 40142167378, 40259878945 | bad code, guilty commit named | wrong: one Windows ARM job of 31 failed a cache test with a file error, a flaky test |
+| black 41256375361, 41256375403 | bad code, a docs-typo commit | wrong: the runner image moved to Ubuntu 26.04, which has no Python 3.12.10; infrastructure |
+| pydantic 37828953430 | bad code, an action bump | wrong: `socket hang up` while building one wheel of 111 jobs; a network flake |
+
+21 of the 23 drops are "no tested commit touched the files the fix changed": the next green commit was unrelated, so the failure most likely went away by itself.
+
+**What this says.** On a protected default branch, failures are mostly flakes and environment changes, and "the next green commit is the fix" does not hold. The rules as written would have produced a benchmark with wrong answers. This is the stop condition in milestone 1.
+
+**Proposed changes before milestone 2:**
+
+1. **Mine pull requests, not the default branch.** On a PR, a red commit followed by a green commit on the same branch is usually the author fixing what they broke, so the fix signal is far stronger. Main-branch breaks become a separate infrastructure-and-flake set.
+2. **Flake rules ahead of the fix rule.** One failing job out of a matrix where the same tests passed elsewhere, or the same failing test name recurring across unrelated breaks, labels the case flaky.
+3. **Environment rule.** Known error shapes (`version ... was not found`, `socket hang up`, rate limits, runner timeouts) label infrastructure with no guilty commit.
+4. **Step names.** `gh run view --log-failed` now prints `UNKNOWN STEP` for every line, so logs lose their step. Take step names from the run's job and step timings instead.
+
+The raw snapshots from this run are kept locally in `scenarios-ci/` (not committed: the labels are wrong, but the logs expire after 90 days).

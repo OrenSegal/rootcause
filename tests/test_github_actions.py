@@ -9,7 +9,15 @@ import pytest
 from conftest import SCENARIOS
 
 from rootcause.adapters.fixtures import write_case
-from rootcause.adapters.github_actions import GhCli, RawRun, case_from_raw
+from rootcause.adapters.github_actions import (
+    Candidate,
+    GhCli,
+    Label,
+    RawRun,
+    candidates,
+    case_from_raw,
+    label,
+)
 from rootcause.adapters.heuristic import HeuristicProvider
 from rootcause.adapters.sqlite_events import SqliteEventLog
 from rootcause.composition import triage_ci
@@ -112,3 +120,78 @@ async def test_triage_runs_an_investigation_without_ground_truth(raw):
     assert run.answer is not None
     # The baseline blames the workflow edit; the real cause is the new test script.
     assert run.answer.category == "config_change"
+
+
+def _run(n: int, conclusion: str, sha: str, wf: int = 1, attempt: int = 1) -> dict:
+    return {
+        "id": n,
+        "workflow_id": wf,
+        "conclusion": conclusion,
+        "head_sha": sha,
+        "created_at": f"2026-11-01T00:00:{n:02d}Z",
+        "run_attempt": attempt,
+    }
+
+
+def test_only_the_first_red_run_of_a_streak_is_a_case():
+    runs = [
+        _run(1, "success", "a"),
+        _run(2, "failure", "b"),
+        _run(3, "failure", "c"),
+        _run(4, "cancelled", "d"),
+        _run(5, "success", "e"),
+        _run(6, "failure", "f"),  # still red at the end of the window: no fix yet
+        _run(7, "success", "x", wf=2, attempt=2),
+    ]
+    found = candidates(runs)
+    pair = next(c for c in found if not c.rerun)
+    assert pair.green and (pair.green["id"], pair.red["id"], pair.fixed["id"]) == (1, 2, 5)
+    rerun = next(c for c in found if c.rerun)
+    assert rerun.red["id"] == 7 and rerun.flaky
+    assert len(found) == 2
+
+
+def _commit(sha: str, *files: str) -> dict:
+    return {"oid": sha, "files": [{"filename": f, "status": "modified"} for f in files]}
+
+
+def _case(red_sha: str = "r", fixed_sha: str = "f") -> Candidate:
+    return Candidate(
+        green=None, red=_run(1, "failure", red_sha), fixed=_run(2, "success", fixed_sha)
+    )
+
+
+def test_label_rules_first_match_wins():
+    commits = [_commit("c1", "src/a.py"), _commit("c2", "src/b.py", ".github/workflows/ci.yml")]
+    assert label(_case("same", "same"), commits, ["src/a.py"]) == Label(
+        "infrastructure", None, "a rerun of the same commit passed"
+    )
+    dep = label(_case(), commits, ["uv.lock", "requirements/dev.txt"])
+    assert isinstance(dep, Label) and dep.category == "dependency_failure" and dep.guilty is None
+    cfg = label(_case(), commits, [".github/workflows/ci.yml"])
+    assert isinstance(cfg, Label) and (cfg.category, cfg.guilty) == ("config_change", "c2")
+    code = label(_case(), commits, ["src/a.py", "tests/test_a.py"])
+    assert isinstance(code, Label) and (code.category, code.guilty) == ("bad_code_deploy", "c1")
+
+
+def test_label_drops_what_the_rules_cannot_decide():
+    commits = [_commit("c1", "src/a.py", "CHANGES.md"), _commit("c2", "src/a.py", "uv.lock")]
+    assert (
+        label(_case(), commits, ["src/a.py"])
+        == "2 tested commits touched the files the fix changed"
+    )
+    assert (
+        label(_case(), commits, ["src/z.py"])
+        == "0 tested commits touched the files the fix changed"
+    )
+    assert (
+        label(_case(), commits, ["uv.lock"]) == "a tested commit changed the pins the fix changed"
+    )
+    assert label(_case(), commits, []) == "the fix changed only changelogs or nothing"
+
+
+def test_sharing_a_changelog_is_not_evidence():
+    commits = [_commit("c1", "src/a.py", "CHANGES.md"), _commit("c2", "docs/release-notes.md")]
+    assert isinstance(label(_case(), commits, ["CHANGES.md", "src/b.py"]), str)
+    code = label(_case(), commits, ["changelog/1.bugfix.rst", "src/a.py"])
+    assert isinstance(code, Label) and code.guilty == "c1"
