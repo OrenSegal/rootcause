@@ -30,7 +30,7 @@ def list_runs(gh: GhCli, repo: str, event: str, branch: str, since: str) -> list
             f"repos/{repo}/actions/runs?event={event}{on_branch}&status=completed"
             f"&created=>={since}&per_page=100",
             "--jq",
-            ".workflow_runs[] | {id, name, workflow_id, conclusion, head_sha, head_branch, "
+            ".workflow_runs[] | {id, name, event, workflow_id, conclusion, head_sha, head_branch, "
             "head_repository: .head_repository.full_name, created_at, run_attempt, html_url}",
         ]
     )

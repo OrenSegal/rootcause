@@ -174,3 +174,11 @@ The rules are frozen at this commit; nothing in `adapters/github_actions.py` cha
 - **Yield** was 27 of 86 (31%). Approval-gated first attempts (23) and force-pushes (18) are the biggest drops.
 
 **Verdict.** The pull-request approach works, and the remaining errors have specific causes, but 74% is not good enough for ground truth. After the two fixes, the next check needs another set of unseen repositories, with the target set before mining: at least 90% right on 30 or more kept cases, with duplicates collapsed.
+
+## Second validation (registered before mining, 2026-11-21)
+
+Rule fixes since the first validation: Node error codes (`ENOTFOUND` and the like) match only as whole, case-sensitive words; "a rerun passed" labels flaky only for push runs, and pull-request reruns are dropped. Rules are frozen at this commit until the hand check is done.
+
+Repositories, none seen before: pallets/werkzeug, pallets/jinja, encode/uvicorn, agronholm/anyio, python-trio/trio, pypa/packaging, pypa/setuptools, aio-libs/yarl, sphinx-doc/sphinx, ipython/ipython, pydata/xarray, networkx/networkx. Pull-request runs since 2026-08-25, at most 15 breaks each.
+
+Target, set now: **at least 90% of labels right by hand, on at least 30 kept cases after collapsing duplicates** (competing PRs for one underlying change count once, keeping the earliest). Below that, the rules are not ready to produce ground truth.

@@ -422,11 +422,13 @@ def is_note(path: str) -> bool:
 
 # Error shapes that mean the environment failed, not the code under test.
 ENVIRONMENT = re.compile(
-    r"version '?[\w.]+'? with architecture '?\w+'? was not found|socket hang up|ECONNRESET"
+    r"version '?[\w.]+'? with architecture '?\w+'? was not found|socket hang up"
     r"|Connection reset by peer|Could not resolve host|rate limit exceeded|API rate limit"
     r"|TLS handshake timeout|503 Service Unavailable|502 Bad Gateway"
     r"|runner has received a shutdown signal|lost communication with the server"
-    r"|ENOTFOUND|Failed to CreateArtifact|Unable to make request",
+    r"|Failed to CreateArtifact|Unable to make request"
+    # Node's error codes, case-sensitive and whole: "ModuleNotFoundError" is not one.
+    r"|(?-i:\bE(?:NOTFOUND|CONNRESET|CONNREFUSED|TIMEDOUT|AI_AGAIN)\b)",
     re.IGNORECASE,
 )
 
@@ -455,6 +457,10 @@ def label(candidate: Candidate, raw: RawRun, fix: list[str]) -> Label | str:
     """The rules of docs/ci-benchmark-scope.md, first match wins. A string drops the case
     and says why, so drop rates can be reported per reason."""
     if candidate.flaky:
+        if candidate.red.get("event") == "pull_request":
+            # A pull-request run tests a merge with the base branch, so a later run of the
+            # same head can pass because the base was fixed, not because the failure was flaky.
+            return "a pull-request rerun passed, but it tested a new merge with the base"
         return Label("infrastructure", None, "a rerun of the same commit passed")
     env = ENVIRONMENT.search(ANSI.sub("", raw.failed_log))
     if env:

@@ -272,3 +272,22 @@ def _full_run(run: dict) -> dict:
         "headSha": "0" * 40, "conclusion": "failure", "createdAt": "2026-11-01T00:00:00Z",
         "updatedAt": "2026-11-01T00:00:09Z", "jobs": [job],
     }  # fmt: skip
+
+
+def test_not_found_errors_in_test_output_are_not_network_errors():
+    commits = [_commit("c1", "src/a.py")]
+    for text in ("E   ModuleNotFoundError: No module named 'resource'", "FileNotFoundError: x"):
+        found = label(_case(), _raw(*commits, log=text), ["src/a.py"])
+        assert isinstance(found, Label) and found.category == "bad_code_deploy", text
+    net = label(_case(), _raw(*commits, log="getaddrinfo ENOTFOUND api.github.com"), ["src/a.py"])
+    assert isinstance(net, Label) and net.category == "infrastructure"
+
+
+def test_a_pull_request_rerun_is_not_evidence_of_a_flake():
+    red = _run(1, "failure", "s") | {"event": "pull_request"}
+    pr = Candidate(green=None, red=red, fixed=_run(2, "success", "s"))
+    assert label(pr, _raw(), []) == (
+        "a pull-request rerun passed, but it tested a new merge with the base"
+    )
+    push = Candidate(green=None, red=red | {"event": "push"}, fixed=_run(2, "success", "s"))
+    assert isinstance(label(push, _raw(), []), Label)
