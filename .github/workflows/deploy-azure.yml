@@ -18,6 +18,7 @@ permissions:
 
 jobs:
   deploy:
+    timeout-minutes: 30
     runs-on: ubuntu-latest
     # The federated credential's subject is repo:<owner>/<repo>:environment:azure, so
     # it holds from any branch this workflow is dispatched on.
@@ -29,7 +30,7 @@ jobs:
     env:
       TAG: ${{ inputs.image_tag || github.sha }}
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
 
       - name: Name the image
         # GHCR names must be lowercase and the owner may not be.
