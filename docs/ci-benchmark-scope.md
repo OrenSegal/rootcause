@@ -214,3 +214,27 @@ Repositories, none seen before: encode/httpx, matplotlib/matplotlib, sympy/sympy
 Target, unchanged: **at least 90% of labels right by hand, on at least 30 kept cases after collapsing duplicates.**
 
 **Top-up (registered 2026-11-21, after mining and before any hand check).** The 14 repositories gave 191 breaks but only 26 kept cases, under the 30-case floor (approval-gated first attempts and force-pushes took most of them). Labels were not inspected. Seven more unseen repositories, same window, cap and frozen rules: python/mypy, pandas-dev/pandas, scikit-learn/scikit-learn, aio-libs/frozenlist, aio-libs/propcache, pypa/build, mkdocs/mkdocs.
+
+### Third validation result
+
+**21 repositories, about 260 breaks, 41 kept. Two duplicate groups (one matplotlib commit failing three workflows, one numpy commit failing five) collapse to 35 unique cases. By hand, 25 of 35 labels are right (71%, Wilson 95% interval 55% to 84%), 3 are arguable, 1 is uncertain and 6 are wrong. This misses the 90% target by a wide margin; counting every arguable and uncertain case as right still gives only 29 of 35 (83%).** Rules were not changed between registering and finishing the check.
+
+| verdict | cases |
+|---|---|
+| right (25) | build 37202076420, 40533998006, 44219314063; django 44346380931; matplotlib 43908764069 (a workflow edit broke macOS jobs; config), 43926514982, 757845f1 (three workflows), 44933573494, 44944357599; multidict 37421469197, 37614237594, 37647784094, 37666235108, 37738480921, 37771426628, 38127829739; mypy 42514756929; numpy e1a3a616 (five workflows); pandas 44418822180, 44420380546, 44446651122, 44578641860; poetry 41204881585; propcache 36747921661 (metadata moved to `pyproject.toml` broke the build; config); scikit-learn 44788374900 |
+| arguable (3) | mkdocs 44414107169: the commit needed formatting fixes, but the job failed when the auto-fix action could not upload them. multidict 38134575629: an inlining regression, but the fix range is 13 commits merged from the base branch. sympy 44931840961: a "Check Authors" job that passes once `.mailmap` lists the new author |
+| uncertain (1) | pandas 44721698218: the saved log stops before the failing step |
+| wrong (6) | **Base-branch breakage fixed by merging the base:** scikit-learn 44703893474 and 44711150450 (the base added a workflow with unpinned actions; the fix is a merge of main, 25 commits in one case), poetry 39765933980 (Python 3.15 changed `CalledProcessError`'s message; a 26-commit merge of main fixed it). **Environment errors the pattern does not know:** sympy 44524099951 (apt `Connection failed` while installing docs tools), scipy 44520410829 (pytest workers crashed on one Windows job). **Right commit, wrong category:** build 38002299563 (the commit switched CI to Python 3.15, which the runner did not have; labelled infrastructure because the environment rule fires first, but it is a config change) |
+
+The pre-release rule fired once (a scipy case) and did not drop any case that should have been kept.
+
+**What this round shows.** These repositories are bigger, and contributors merge the base branch into their PRs. Two new failure modes follow from that, and neither appeared in earlier rounds:
+
+1. **The fix is a merge of the base branch.** Then "the files the fix changed" includes everything that landed on main, and overlapping one tested commit proves nothing. A rule can detect this: drop the case when the fix range contains commits that are on the base branch (or when the green head is a merge commit whose second parent is the base).
+2. **A tested commit edited the workflow and the environment rule fired.** The environment rule should yield to a tested commit that changed the workflow file in the failing job.
+
+Plus two more patterns for the environment rule (`Connection failed`, `Failed to fetch`, and pytest-xdist `worker ... crashed`).
+
+**Across three validations**, with the rules as they stood each time: 88 of 110 right (80%). The second round's 89.6% did not hold on a new population. The rules fit the repositories they were tuned on; the miss sources keep changing as the population changes.
+
+**Verdict.** Commit-overlap labelling gets roughly 70% to 90% depending on how a project's contributors work. That is not good enough for unreviewed ground truth. The realistic path is labelling with rules plus a human review pass: the rules do the mining and propose a label, and every kept case gets a check like the ones above (about two minutes each with the digest script). Adding more rules and running a fourth validation is possible, but each round so far has found new failure modes.
