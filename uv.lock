@@ -1708,7 +1708,7 @@ wheels = [
 ]
 
 [[package]]
-name = "rootcause"
+name = "rootcause-agent"
 version = "0.2.0"
 source = { editable = "." }
 dependencies = [
