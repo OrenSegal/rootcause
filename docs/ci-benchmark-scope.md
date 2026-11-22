@@ -212,3 +212,5 @@ Rule added since the second validation: **a case is dropped when every failed jo
 Repositories, none seen before: encode/httpx, matplotlib/matplotlib, sympy/sympy, astropy/astropy, python-poetry/poetry, pypa/hatch, pypa/virtualenv, pre-commit/pre-commit, celery/celery, django/django, numpy/numpy, scipy/scipy, aio-libs/multidict, pytest-dev/pluggy. Pull-request runs since 2026-08-25, at most 15 breaks each.
 
 Target, unchanged: **at least 90% of labels right by hand, on at least 30 kept cases after collapsing duplicates.**
+
+**Top-up (registered 2026-11-21, after mining and before any hand check).** The 14 repositories gave 191 breaks but only 26 kept cases, under the 30-case floor (approval-gated first attempts and force-pushes took most of them). Labels were not inspected. Seven more unseen repositories, same window, cap and frozen rules: python/mypy, pandas-dev/pandas, scikit-learn/scikit-learn, aio-libs/frozenlist, aio-libs/propcache, pypa/build, mkdocs/mkdocs.
