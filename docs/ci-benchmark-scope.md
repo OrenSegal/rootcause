@@ -204,3 +204,11 @@ The two bugs fixed after the first validation did not recur: `ModuleNotFoundErro
 With the pre-release rule, this set would score 43 of 45 (96%), but that figure is fitted on the set it is measured on. A third set of unseen repositories is the only honest way to claim it.
 
 **Across both validations**, with the rules as they stood each time: 63 of 75 right (84%). The error causes changed between rounds, from rule bugs to one missing rule, which is the trend that matters.
+
+## Third validation (registered before mining, 2026-11-21)
+
+Rule added since the second validation: **a case is dropped when every failed job (gate jobs aside) tests an unreleased upstream**, judged by the job name (`HEAD`, `master`, `nightly`, `dev`, `pre-release`, `upstream`, `3.15-dev`, `3.16a1`). On every case mined so far it fires on exactly two, both wrong labels in the second validation (sphinx 40744679692, yarl 40324913764). Rules are frozen at this commit until the hand check is done.
+
+Repositories, none seen before: encode/httpx, matplotlib/matplotlib, sympy/sympy, astropy/astropy, python-poetry/poetry, pypa/hatch, pypa/virtualenv, pre-commit/pre-commit, celery/celery, django/django, numpy/numpy, scipy/scipy, aio-libs/multidict, pytest-dev/pluggy. Pull-request runs since 2026-08-25, at most 15 breaks each.
+
+Target, unchanged: **at least 90% of labels right by hand, on at least 30 kept cases after collapsing duplicates.**

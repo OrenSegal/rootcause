@@ -437,6 +437,21 @@ ENVIRONMENT = re.compile(
 GATE_JOB = re.compile(r"^checks?$|alls?-green", re.IGNORECASE)
 
 
+# Jobs that test against an unreleased upstream ("Docutils HEAD", "Aiohttp tests (master)",
+# "3.15-dev"): they break when upstream changes, with no commit under test to blame.
+UPSTREAM_JOB = re.compile(
+    r"\b(?:HEAD|master|nightly|dev|devel|pre-?release|upstream)\b|\d\.\d+-dev|\b\d\.\d+(?:a|b|rc)\d",
+    re.IGNORECASE,
+)
+
+
+def _only_upstream_jobs_failed(jobs: list[dict[str, Any]]) -> bool:
+    failed = [
+        j["name"] for j in jobs if j["conclusion"] == "failure" and not GATE_JOB.search(j["name"])
+    ]
+    return bool(failed) and all(UPSTREAM_JOB.search(n) for n in failed)
+
+
 def _matrix_sibling_passes(jobs: list[dict[str, Any]]) -> int:
     """With exactly one failed job (gate jobs aside), how many jobs of its matrix passed."""
     failed = [j for j in jobs if j["conclusion"] == "failure" and not GATE_JOB.search(j["name"])]
@@ -467,6 +482,8 @@ def label(candidate: Candidate, raw: RawRun, fix: list[str]) -> Label | str:
         return Label(
             "infrastructure", None, f"the failed log shows an environment error: {env[0]!r}"
         )
+    if _only_upstream_jobs_failed(raw.run.get("jobs", [])):
+        return "only jobs testing an unreleased upstream failed"
     siblings = _matrix_sibling_passes(raw.run.get("jobs", []))
     if siblings >= 2:
         return f"one matrix job failed while {siblings} siblings passed (flaky or platform bug)"

@@ -228,6 +228,25 @@ def test_environment_errors_and_lone_matrix_failures_come_before_the_fix_rule():
     assert label(_case(), _raw(*commits, jobs=gated), ["src/a.py"]) == lone
 
 
+def test_failures_only_in_unreleased_upstream_jobs_are_dropped():
+    commits = [_commit("c1", "src/a.py")]
+    upstream = [
+        {"name": "Docutils HEAD", "conclusion": "failure"},
+        {"name": "Aiohttp tests (master)", "conclusion": "failure"},
+        {"name": "check", "conclusion": "failure"},
+        {"name": "Python 3.13", "conclusion": "success"},
+    ]
+    assert label(_case(), _raw(*commits, jobs=upstream), ["src/a.py"]) == (
+        "only jobs testing an unreleased upstream failed"
+    )
+    mixed = [*upstream, {"name": "Python 3.14", "conclusion": "failure"}]
+    code = label(_case(), _raw(*commits, jobs=mixed), ["src/a.py"])
+    assert isinstance(code, Label) and code.guilty == "c1"
+    # "Headers" and "development docs" must not read as HEAD or dev.
+    named = [{"name": "Headers lint", "conclusion": "failure"}]
+    assert isinstance(label(_case(), _raw(*commits, jobs=named), ["src/a.py"]), Label)
+
+
 def test_each_pull_request_branch_is_its_own_timeline():
     runs = [
         _run(1, "success", "a") | {"head_branch": "pr-1"},
