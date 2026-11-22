@@ -1,6 +1,6 @@
 # Scope: a benchmark of real CI failures
 
-Status: milestone 1 done; three validations on unseen repositories reached 74%, 89.6% and 69% (87 of 110 overall), short of the 90% target each time. Rule labels need a human review pass before they count as ground truth (see the end).
+Status: milestone 1 done; four validations on unseen repositories reached 74%, 89.6%, 69% and 85.7% (123 of 152 overall), short of the 90% target each time. Rule labels need a human review pass before they count as ground truth (see the end).
 
 ## Why
 
@@ -253,3 +253,24 @@ Re-labelling the 110 stored cases from the three validations with these rules ch
 Repositories, none seen before: python-pillow/Pillow, bokeh/bokeh, dask/dask, dask/distributed, pypa/twine, pypa/pipx, pyca/cryptography, urllib3/urllib3, nedbat/coveragepy, pytest-dev/pytest-asyncio, pytest-dev/pytest-xdist, python-jsonschema/jsonschema, holoviz/panel, encode/django-rest-framework, wagtail/wagtail, statsmodels/statsmodels, scikit-image/scikit-image. Pull-request runs since 2026-08-25, at most 15 breaks each.
 
 Target, unchanged: **at least 90% of labels right by hand, on at least 30 unique cases.** Duplicates are counted once: one commit failing several workflows, and competing PRs for one change. If fewer than 30 unique cases come out, more unseen repositories are registered before any label is inspected, as in round 3.
+
+### Fourth validation result
+
+**17 repositories, 239 breaks, 45 kept. Three duplicate groups (two bokeh commits and one urllib3 commit, each failing two workflows) leave 42 unique cases. By hand, 36 of 42 labels are right (85.7%, Wilson 95% interval 72% to 93%), 2 are arguable and 4 are wrong. That misses the 90% target again, by less than round 3 did. Counting both arguable cases as right gives 38 of 42 (90.5%).** Rules were not changed between registering and finishing the check. Every verdict below was checked against the error in the failed log, not just file overlap.
+
+| verdict | cases |
+|---|---|
+| right (36) | bokeh 9205686b (two workflows; a TypeScript error in the file the commit changed), 44361105539, 44680865048; coveragepy 43388470319 (pylint on the new stub), 43433858292, 43588543793; cryptography 43610216850 (coverage under 100%; the fix added a test vector); dask 43344036689, 43458367591, 44742477660 (mypy), 43545992148, 44522384834, 44864445442 (the commit's tests failed); distributed 36320289935; django-rest-framework 34093601968, 34686783870, 37662850565; panel 44339476406, 44383896934, 44397232490 (isort on a test file the commit touched); pipx 44001139987, 44661741143; pytest-asyncio 40571601184, 42167883825, 42619161278, 43909716468 (a new test used `asyncio.DefaultEventLoopPolicy`, gone in Python 3.16), 44882498211; pytest-xdist 40166502013, 42131392843, 43066656851 (the runner image dropped Python 3.9; infrastructure); scikit-image 44555313166; urllib3 44317305240, 44317333658, 20374a9e (two workflows), 44346684679, 44754535247 |
+| arguable (2) | bokeh 7ea407f3 (two workflows): the PR's `pan_tool.ts` used an API the base branch had just removed, and a merge brought the two together; the label blames the PR commit, which the fix edited. dask 44533673971: a strict xfail the commit kept started passing on upstream nightlies; the commit is right, but the trigger was upstream |
+| wrong (4) | **Flaky browser tests on one OS:** panel 43759376300 and 43954653640 (docs-only commits; Playwright UI tests failed on Windows or macOS), panel 44356789031 (unrelated Tabulator and notebook UI tests failed on macOS). The matrix rule should have dropped them, but the job names (`ui:test-ui:windows-latest`) have no space, so the "first word" was the whole name and no siblings matched. **Mixed failure:** pytest-xdist 40093733658: the commit's new test failed on Windows, while Python 3.9 jobs failed setup on a runner without 3.9; the environment rule fires on one match anywhere in the log, so it labelled infrastructure |
+
+**The new rules.** The merge rule dropped 10 cases and the worker-crash rule 4; whether those drops were right was not checked. The workflow-edit rule did not fire. Three pytest-xdist PRs hit the same runner change (Python 3.9 removed); they count as three cases, not one, because they are not competing fixes for one change.
+
+**Both wrong-label causes are rule bugs with a clear fix:**
+
+1. Matrix siblings should be grouped by the job name up to the first space, colon, slash or parenthesis, not up to the first space.
+2. The environment rule should require an environment error in every failed job's log, not just somewhere in the combined log.
+
+**Across four validations**, with the rules as they stood each time: 123 of 152 right (81%). Per round: 74%, 89.6%, 69%, 85.7%.
+
+**Verdict.** The target has not been met in four rounds, but the last round came within one case of it if the arguable ones count, and its errors are two specific rule bugs rather than a new failure mode. The rules-plus-review recommendation stands: with a review pass, these 42 cases yield 36 confirmed labels after about an hour of checking. A fifth round would test the two fixes, but at this point the honest claim is "about 85% on unseen repositories, reviewed by hand", not "90% automatic".
