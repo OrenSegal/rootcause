@@ -279,3 +279,18 @@ Panel 43759376300 (two UI jobs failing on different OSes after a docs-only commi
 **Across four validations**, with the rules as they stood each time: 123 of 152 right (81%). Per round: 74%, 89.6%, 69%, 85.7%. The pooled figure mixes duplicate conventions (see round 3). The three pytest-xdist cases are one runner event; counted once, round 4 is 34 of 40 (85%), still a miss.
 
 **Verdict.** The target has not been met in four rounds, but the last round would reach it if both arguable cases count as right, but its errors are not all fixable by rules: the replay above removes at most 3 of 4, one of them at the cost of 3 right cases. The rules-plus-review recommendation stands: with a review pass, these 42 cases yield 36 confirmed labels plus 2 to adjudicate. A fifth round would test the two fixes, but at this point the honest claim is "about 85% on unseen repositories, reviewed by hand", not "90% automatic".
+
+## Fifth validation (registered before mining, 2026-11-22)
+
+Rules added since the fourth validation, each with a test:
+
+- **Matrix job names are grouped up to the first space, parenthesis or slash, and up to the last colon** (`ui:test-ui:windows-latest` → `ui:test-ui`).
+- **More gate jobs are recognised:** names starting with `result`, ending in `/ result` or `status`, or containing `required checks`.
+- **An environment error must appear in every failed job's log**, not just somewhere in the combined log.
+- **When the fix shares only documentation files with the guilty commit and no docs, lint or link job failed, the case is dropped.** The workflow name counts as a job name, so a workflow called "Build docs" with a `build` job is still treated as a docs job.
+
+Re-labelling the 152 stored cases from four validations: all 4 round-4 wrong labels are dropped, as are the earlier known misses. The cost: 3 round-3 cases recorded as right are dropped (multidict 37614237594, 37738480921, 37771426628, real platform-specific bugs now treated as lone matrix failures). Also, the arguable sphinx 42373832605 is relabelled `bad_code_deploy` on commit ba2feb93c6, not checked. These numbers are fitted on stored data. Rules are frozen at this commit until the hand check is done.
+
+Repositories, none seen before: altair-viz/altair, plotly/plotly.py, huggingface/datasets, huggingface/huggingface_hub, fastapi/sqlmodel, fastapi/typer, python-attrs/cattrs, hynek/structlog, Delgan/loguru, more-itertools/more-itertools, jazzband/pip-tools, python-poetry/poetry-core, arrow-py/arrow, mwaskom/seaborn, joblib/joblib, zarr-developers/zarr-python, pymc-devs/pymc, dateutil/dateutil. Pull-request runs since 2026-08-25, at most 15 breaks each.
+
+Target, unchanged: **at least 90% of labels right by hand, on at least 30 unique cases** (one commit failing several workflows counts once, as do competing PRs for one change; one runner or upstream event hitting several PRs is reported both ways). If fewer than 30 unique cases come out, more unseen repositories are registered before any label is inspected.

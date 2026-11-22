@@ -262,6 +262,36 @@ def test_rules_added_after_the_third_validation():
     assert merged == "the fix merged another branch, so its diff is not only the fix"
 
 
+def test_rules_added_after_the_fourth_validation():
+    commits = [_commit("c1", "src/a.py", "docs/a.md")]
+    colon = [
+        {"name": "ui:test-ui:windows-latest", "conclusion": "failure"},
+        {"name": "ui:test-ui:macos-latest", "conclusion": "success"},
+        {"name": "ui:test-ui:ubuntu-latest", "conclusion": "success"},
+        {"name": "result:test", "conclusion": "failure"},
+    ]
+    assert label(_case(), _raw(*commits, jobs=colon), ["src/a.py"]) == (
+        "one matrix job failed while 2 siblings passed (flaky or platform bug)"
+    )
+    mixed = [
+        {"name": "test (py39)", "conclusion": "failure"},
+        {"name": "test (py310, windows)", "conclusion": "failure"},
+    ]
+    log = (
+        "test (py39)\tsetup\tZ The version '3.9' with architecture 'x64' was not found\n"
+        "test (py310, windows)\tpytest\t2026Z E   AssertionError: assert 0 == 1\n"
+    )
+    code = label(_case(), _raw(*commits, log=log, jobs=mixed), ["src/a.py"])
+    assert isinstance(code, Label) and code.guilty == "c1"
+    tests_only = [{"name": "test (3.13)", "conclusion": "failure"}]
+    docs = label(_case(), _raw(*commits, jobs=tests_only), ["docs/a.md"])
+    assert (
+        docs == "the fix shares only documentation with the tested commit, and no docs job failed"
+    )
+    docs_job = [{"name": "Build docs", "conclusion": "failure"}]
+    assert isinstance(label(_case(), _raw(*commits, jobs=docs_job), ["docs/a.md"]), Label)
+
+
 def test_each_pull_request_branch_is_its_own_timeline():
     runs = [
         _run(1, "success", "a") | {"head_branch": "pr-1"},

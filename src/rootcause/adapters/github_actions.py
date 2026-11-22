@@ -439,7 +439,9 @@ WORKER_CRASH = re.compile(r"worker '[^']+' crashed while running")
 
 
 # Jobs that only report whether the others passed ("check", "test-alls-green").
-GATE_JOB = re.compile(r"^checks?$|alls?-green", re.IGNORECASE)
+GATE_JOB = re.compile(
+    r"^checks?$|alls?-green|^result\b|/ result$|status$|required checks", re.IGNORECASE
+)
 
 
 # Jobs that test against an unreleased upstream ("Docutils HEAD", "Aiohttp tests (master)",
@@ -462,15 +464,45 @@ def _matrix_sibling_passes(jobs: list[dict[str, Any]]) -> int:
     failed = [j for j in jobs if j["conclusion"] == "failure" and not GATE_JOB.search(j["name"])]
     if len(failed) != 1:
         return 0
-    # Matrix names vary ("test (3.13, windows)", "Test windows-latest / pypy3.11"); the
-    # first word is the part they share.
-    stem = failed[0]["name"].split()[0]
+    stem = _matrix_stem(failed[0]["name"])
     return sum(
         1
         for j in jobs
         if j["conclusion"] == "success" and j["name"] != failed[0]["name"]
-        and j["name"].split()[0] == stem
+        and _matrix_stem(j["name"]) == stem
     )  # fmt: skip
+
+
+def _matrix_stem(name: str) -> str:
+    """The part of a job name a matrix shares: "test (3.13, windows)" -> "test",
+    "Test windows-latest / pypy3.11" -> "Test", "ui:test-ui:windows-latest" -> "ui:test-ui"."""
+    head = re.split(r"[\s(/]", name)[0]
+    return head.rsplit(":", 1)[0] if ":" in head else head
+
+
+def _environment_error(raw: RawRun) -> str | None:
+    """An environment error that every failed job shows. One job failing setup while
+    another fails a real test is not an environment failure."""
+    failed = [
+        j["name"] for j in raw.run.get("jobs", [])
+        if j["conclusion"] == "failure" and not GATE_JOB.search(j["name"])
+    ]  # fmt: skip
+    if not failed:
+        found = ENVIRONMENT.search(ANSI.sub("", raw.failed_log))
+        return found[0] if found else None
+    by_job: dict[str, list[str]] = {}
+    for line in ANSI.sub("", raw.failed_log).splitlines():
+        by_job.setdefault(line.split("\t", 1)[0], []).append(line)
+    hits = [ENVIRONMENT.search("\n".join(by_job.get(name, []))) for name in failed]
+    first = hits[0]
+    return first[0] if first is not None and all(hits) else None
+
+
+DOC_JOB = re.compile(r"doc|sphinx|lint|pre-commit|style|spell|link", re.IGNORECASE)
+
+
+def is_doc(path: str) -> bool:
+    return path.startswith(("doc/", "docs/")) or path.endswith((".md", ".rst"))
 
 
 def _workflow_commit(raw: RawRun, fix: list[str]) -> str | None:
@@ -493,7 +525,7 @@ def label(
             # same head can pass because the base was fixed, not because the failure was flaky.
             return "a pull-request rerun passed, but it tested a new merge with the base"
         return Label("infrastructure", None, "a rerun of the same commit passed")
-    env = ENVIRONMENT.search(ANSI.sub("", raw.failed_log))
+    env = _environment_error(raw)
     if env:
         # A tested commit that edited the workflow the fix edits back caused the "environment"
         # error (asking for a Python the runner lacks, say).
@@ -502,11 +534,9 @@ def label(
             return Label(
                 "config_change",
                 guilty,
-                f"a tested workflow edit caused {env[0]!r}; the fix edits it",
+                f"a tested workflow edit caused {env!r}; the fix edits it",
             )
-        return Label(
-            "infrastructure", None, f"the failed log shows an environment error: {env[0]!r}"
-        )
+        return Label("infrastructure", None, f"the failed log shows an environment error: {env!r}")
     if _only_upstream_jobs_failed(raw.run.get("jobs", [])):
         return "only jobs testing an unreleased upstream failed"
     if WORKER_CRASH.search(raw.failed_log):
@@ -533,6 +563,14 @@ def label(
         )
     if len(hits) != 1:
         return f"{len(hits)} tested commits touched the files the fix changed"
+    shared = touched[hits[0]] & fix_set
+    # The workflow name counts too: "Build docs" runs a job called just "build".
+    failed_jobs = [raw.run.get("name", "")] + [
+        j["name"] for j in raw.run.get("jobs", []) if j["conclusion"] == "failure"
+    ]
+    if all(is_doc(f) for f in shared) and not any(DOC_JOB.search(n) for n in failed_jobs):
+        # A docs edit does not break a test job; the overlap is a coincidence.
+        return "the fix shares only documentation with the tested commit, and no docs job failed"
     if all(is_config(f) for f in fix_set):
         return Label(
             "config_change", hits[0], "the fix only changed config one tested commit touched"
