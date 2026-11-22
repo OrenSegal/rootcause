@@ -195,6 +195,12 @@ Target, set now: **at least 90% of labels right by hand, on at least 30 kept cas
 
 The two bugs fixed after the first validation did not recur: `ModuleNotFoundError` no longer reads as a network error (ipython 42229657590 is labelled correctly as a Windows-only import in a test), and 11 pull-request reruns were dropped instead of being labelled flaky.
 
-**What is left is one failure mode: environment failures the pattern list does not know.** Adding more patterns would chase it. A structural rule fits it better: if every failed step is a setup, install, download or upload step (no step that runs the project's tests, linters or builds), label infrastructure. All four wrong cases fail that way, and none of the 43 right ones does. That rule would be fitted on this set, so it needs a third set of unseen repositories before its accuracy can be claimed.
+**What is left is one failure mode: environment failures the rules do not recognise**, labelled as code because the author kept pushing until CI went green. No single rule covers all four. Checked against this set after the fact:
+
+- **A pre-release rule** (drop the case when every failed job runs a pre-release Python, an upstream HEAD or a `master` dependency) would catch sphinx 40744679692 and yarl 40324913764, plus the arguable sphinx 42373832605, and none of the 43 right cases.
+- **A setup-step rule** (every failed step is a setup, install, download or upload step) would catch only sphinx 40744679692.
+- anyio 42467640327 and sphinx 44293155460 fail in setup and test steps across stable and pre-release jobs at once. Nothing short of reading the log catches them.
+
+With the pre-release rule, this set would score 43 of 45 (96%), but that figure is fitted on the set it is measured on. A third set of unseen repositories is the only honest way to claim it.
 
 **Across both validations**, with the rules as they stood each time: 63 of 75 right (84%). The error causes changed between rounds, from rule bugs to one missing rule, which is the trend that matters.
