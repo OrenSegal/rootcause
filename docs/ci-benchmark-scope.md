@@ -1,6 +1,6 @@
 # Scope: a benchmark of real CI failures
 
-Status: milestone 1 done and validated once on 2026-11-21 (74% of labels right on unseen repositories; see the end). Next: two rule fixes, then a second validation, then milestone 2.
+Status: milestone 1 done; second validation on 2026-11-21 reached 89.6% (43 of 48), just under the 90% target. Next: a step-based environment rule and a third validation (see the end).
 
 ## Why
 
@@ -182,3 +182,19 @@ Rule fixes since the first validation: Node error codes (`ENOTFOUND` and the lik
 Repositories, none seen before: pallets/werkzeug, pallets/jinja, encode/uvicorn, agronholm/anyio, python-trio/trio, pypa/packaging, pypa/setuptools, aio-libs/yarl, sphinx-doc/sphinx, ipython/ipython, pydata/xarray, networkx/networkx. Pull-request runs since 2026-08-25, at most 15 breaks each.
 
 Target, set now: **at least 90% of labels right by hand, on at least 30 kept cases after collapsing duplicates** (competing PRs for one underlying change count once, keeping the earliest). Below that, the rules are not ready to produce ground truth.
+
+### Second validation result
+
+**165 breaks, 48 kept, no competing-PR duplicates. By hand, 43 of 48 labels are right (89.6%, Wilson 95% interval 78% to 95%), 1 is arguable and 4 are wrong. That misses the registered target of 90%, narrowly.** Rules were not changed between registering and finishing the check.
+
+| verdict | cases |
+|---|---|
+| right (43) | jinja (6), networkx (7), xarray (6), uvicorn (6), ipython (6), most of sphinx (8 of 12), anyio (2 of 3), yarl 44958570609. Lint and format failures on the files a commit touched, type-checker errors, coverage gates, failing tests, broken docs builds and benchmarks, each fixed in the files the guilty commit touched; workflow edits labelled config; two flaky linkcheck runs on one free-threaded job |
+| arguable (1) | sphinx 42373832605: tests failed on pre-release Python 3.15, 3.16 and Docutils HEAD; the label says infrastructure because a test printed `Connection reset by peer`. Pre-release breakage is an environment change, but the rule fired for the wrong reason |
+| wrong (4) | all four are environment failures labelled as code, because the author pushed more commits before CI went green: anyio 42467640327 (every test passed; the Coveralls upload step failed), sphinx 40744679692 (downloading Docutils from its git host failed), sphinx 44293155460 (pre-release Python setup failed, plus `SSLEOFError`), yarl 40324913764 (`DNSError` in the aiohttp integration job) |
+
+The two bugs fixed after the first validation did not recur: `ModuleNotFoundError` no longer reads as a network error (ipython 42229657590 is labelled correctly as a Windows-only import in a test), and 11 pull-request reruns were dropped instead of being labelled flaky.
+
+**What is left is one failure mode: environment failures the pattern list does not know.** Adding more patterns would chase it. A structural rule fits it better: if every failed step is a setup, install, download or upload step (no step that runs the project's tests, linters or builds), label infrastructure. All four wrong cases fail that way, and none of the 43 right ones does. That rule would be fitted on this set, so it needs a third set of unseen repositories before its accuracy can be claimed.
+
+**Across both validations**, with the rules as they stood each time: 63 of 75 right (84%). The error causes changed between rounds, from rule bugs to one missing rule, which is the trend that matters.
