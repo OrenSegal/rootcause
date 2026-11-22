@@ -1,6 +1,6 @@
 # Scope: a benchmark of real CI failures
 
-Status: milestone 1 done; second validation on 2026-11-21 reached 89.6% (43 of 48), just under the 90% target. Next: a step-based environment rule and a third validation (see the end).
+Status: milestone 1 done; three validations on unseen repositories reached 74%, 89.6% and 71% (88 of 110 overall), short of the 90% target each time. Rule labels need a human review pass before they count as ground truth (see the end).
 
 ## Why
 
