@@ -100,7 +100,8 @@ class GhCli:
                     "api",
                     f"repos/{repo}/compare/{failed_sha}...{fixed_sha}",
                     "--jq",
-                    "{status, commits: [.commits[].sha], files: [.files[].filename]}",
+                    "{status, commits: [.commits[].sha], files: [.files[].filename], "
+                    "merges: [.commits[] | select((.parents | length) > 1) | .sha]}",
                 ]
             )
         )
@@ -426,11 +427,15 @@ ENVIRONMENT = re.compile(
     r"|Connection reset by peer|Could not resolve host|rate limit exceeded|API rate limit"
     r"|TLS handshake timeout|503 Service Unavailable|502 Bad Gateway"
     r"|runner has received a shutdown signal|lost communication with the server"
-    r"|Failed to CreateArtifact|Unable to make request"
+    r"|Failed to CreateArtifact|Unable to make request|Connection failed \[IP|Failed to fetch http"
     # Node's error codes, case-sensitive and whole: "ModuleNotFoundError" is not one.
     r"|(?-i:\bE(?:NOTFOUND|CONNRESET|CONNREFUSED|TIMEDOUT|AI_AGAIN)\b)",
     re.IGNORECASE,
 )
+
+
+# pytest-xdist lost a worker: a segfault in the code under test or a starved runner.
+WORKER_CRASH = re.compile(r"worker '[^']+' crashed while running")
 
 
 # Jobs that only report whether the others passed ("check", "test-alls-green").
@@ -468,7 +473,18 @@ def _matrix_sibling_passes(jobs: list[dict[str, Any]]) -> int:
     )  # fmt: skip
 
 
-def label(candidate: Candidate, raw: RawRun, fix: list[str]) -> Label | str:
+def _workflow_commit(raw: RawRun, fix: list[str]) -> str | None:
+    """The one tested commit that changed a workflow file the fix also changed."""
+    fixed = {f for f in fix if f.startswith(".github/")}
+    hits = [
+        c["oid"] for c in raw.commits if fixed & {f["filename"] for f in c["files"]}
+    ]  # fmt: skip
+    return hits[0] if len(hits) == 1 else None
+
+
+def label(
+    candidate: Candidate, raw: RawRun, fix: list[str], *, fix_merged: bool = False
+) -> Label | str:
     """The rules of docs/ci-benchmark-scope.md, first match wins. A string drops the case
     and says why, so drop rates can be reported per reason."""
     if candidate.flaky:
@@ -479,14 +495,28 @@ def label(candidate: Candidate, raw: RawRun, fix: list[str]) -> Label | str:
         return Label("infrastructure", None, "a rerun of the same commit passed")
     env = ENVIRONMENT.search(ANSI.sub("", raw.failed_log))
     if env:
+        # A tested commit that edited the workflow the fix edits back caused the "environment"
+        # error (asking for a Python the runner lacks, say).
+        guilty = _workflow_commit(raw, fix)
+        if guilty:
+            return Label(
+                "config_change",
+                guilty,
+                f"a tested workflow edit caused {env[0]!r}; the fix edits it",
+            )
         return Label(
             "infrastructure", None, f"the failed log shows an environment error: {env[0]!r}"
         )
     if _only_upstream_jobs_failed(raw.run.get("jobs", [])):
         return "only jobs testing an unreleased upstream failed"
+    if WORKER_CRASH.search(raw.failed_log):
+        return "test workers crashed (a segfault or the runner; the rules cannot tell)"
     siblings = _matrix_sibling_passes(raw.run.get("jobs", []))
     if siblings >= 2:
         return f"one matrix job failed while {siblings} siblings passed (flaky or platform bug)"
+    if fix_merged:
+        # Merging the base brings in everything that landed there, so the diff is not the fix.
+        return "the fix merged another branch, so its diff is not only the fix"
     fix_set = {f for f in fix if not is_note(f)}
     if not fix_set:
         return "the fix changed only changelogs or nothing"

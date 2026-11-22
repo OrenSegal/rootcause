@@ -238,3 +238,18 @@ Plus two more patterns for the environment rule (`Connection failed`, `Failed to
 **Across three validations**, with the rules as they stood each time: 87 of 110 right (79%). That pools figures under different duplicate conventions: round 3 collapses one commit failing several workflows, rounds 1 and 2 only collapsed competing PRs. Round 2 had two such commits (sphinx 40744679692/40744679694 and 44293155379/44293155460), each with one right and one wrong workflow. The second round's 89.6% did not hold on a new population. Each new set of repositories brings failure modes the earlier ones did not have, because how contributors work (merging the base, approval gates, pre-release jobs) varies by project.
 
 **Verdict.** Commit-overlap labelling gets roughly 70% to 90% depending on how a project's contributors work. That is not good enough for unreviewed ground truth. The realistic path is labelling with rules plus a human review pass: the rules do the mining and propose a label,, and every kept case gets a check like the ones above against the failed log and both diffs. Adding more rules and running a fourth validation is possible, but each round so far has found new failure modes.
+
+## Fourth validation (registered before mining, 2026-11-22)
+
+Rules added since the third validation, each with a test:
+
+- **The fix range contains a merge commit** (the author merged the base branch): drop, since the diff carries everything that landed on the base.
+- **An environment error, but exactly one tested commit changed a workflow file the fix also changed:** `config_change` on that commit, not infrastructure.
+- **`Failed to fetch http…` and apt's `Connection failed [IP…]`** join the environment pattern.
+- **pytest-xdist reports a crashed worker:** drop (a segfault in the code and a starved runner look the same).
+
+Re-labelling the 110 stored cases from the three validations with these rules changes only the cases already marked wrong (build 38002299563, sympy 44524099951, scipy 44520410829, plus the earlier fixes). The merge rule could not be replayed, because stored fix records lack parent counts. Its effect on earlier cases is unknown. Rules are frozen at this commit until the hand check is done.
+
+Repositories, none seen before: python-pillow/Pillow, bokeh/bokeh, dask/dask, dask/distributed, pypa/twine, pypa/pipx, pyca/cryptography, urllib3/urllib3, nedbat/coveragepy, pytest-dev/pytest-asyncio, pytest-dev/pytest-xdist, python-jsonschema/jsonschema, holoviz/panel, encode/django-rest-framework, wagtail/wagtail, statsmodels/statsmodels, scikit-image/scikit-image. Pull-request runs since 2026-08-25, at most 15 breaks each.
+
+Target, unchanged: **at least 90% of labels right by hand, on at least 30 unique cases.** Duplicates are counted once: one commit failing several workflows, and competing PRs for one change. If fewer than 30 unique cases come out, more unseen repositories are registered before any label is inspected, as in round 3.

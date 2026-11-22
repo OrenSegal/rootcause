@@ -247,6 +247,21 @@ def test_failures_only_in_unreleased_upstream_jobs_are_dropped():
     assert isinstance(label(_case(), _raw(*commits, jobs=named), ["src/a.py"]), Label)
 
 
+def test_rules_added_after_the_third_validation():
+    commits = [_commit("c1", ".github/workflows/test.yml"), _commit("c2", "src/a.py")]
+    missing = "##[error]The version '3.15' with architecture 'x64' was not found"
+    cfg = label(_case(), _raw(*commits, log=missing), [".github/workflows/test.yml"])
+    assert isinstance(cfg, Label) and (cfg.category, cfg.guilty) == ("config_change", "c1")
+    env = label(_case(), _raw(*commits, log=missing), ["src/a.py"])
+    assert isinstance(env, Label) and (env.category, env.guilty) == ("infrastructure", None)
+    apt = "E: Failed to fetch http://archive.ubuntu.com/x.deb  Connection failed [IP: 1.2.3.4 80]"
+    assert label(_case(), _raw(*commits, log=apt), ["src/a.py"]).category == "infrastructure"
+    crash = "FAILED t.py::test_x - worker 'gw3' crashed while running 't.py::test_x'"
+    assert label(_case(), _raw(*commits, log=crash), ["src/a.py"]).startswith("test workers")
+    merged = label(_case(), _raw(*commits), ["src/a.py"], fix_merged=True)
+    assert merged == "the fix merged another branch, so its diff is not only the fix"
+
+
 def test_each_pull_request_branch_is_its_own_timeline():
     runs = [
         _run(1, "success", "a") | {"head_branch": "pr-1"},

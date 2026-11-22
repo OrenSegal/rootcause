@@ -74,7 +74,7 @@ def mine_one(
     )
     if fix["status"] not in ("ahead", "rerun"):
         return f"history {fix['status']} between the red and green runs (force-push)"
-    found = label(c, raw, fix["files"])
+    found = label(c, raw, fix["files"], fix_merged=bool(fix.get("merges")))
     if isinstance(found, str):
         return found
     case = case_from_raw(raw)
