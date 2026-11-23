@@ -10,10 +10,11 @@ permissions:
 
 jobs:
   check:
+    timeout-minutes: 15
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
-      - uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884 # v10.3.0
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: astral-sh/setup-uv@1db35dd8eee11c5894872e0b383ae6c406cf738d # v10.4.0
         with:
           python-version: "3.14"
           version: "0.13.1"
@@ -30,10 +31,11 @@ jobs:
 
   # The optional extras (rag, otel) stay optional: the core installs and passes without them.
   base-install:
+    timeout-minutes: 15
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
-      - uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884 # v10.3.0
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: astral-sh/setup-uv@1db35dd8eee11c5894872e0b383ae6c406cf738d # v10.4.0
         with:
           python-version: "3.14"
           version: "0.13.1"
@@ -45,9 +47,10 @@ jobs:
 
   eval:
     needs: check
+    timeout-minutes: 15
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       # Dogfoods the action this repo ships. The heuristic provider needs no API key.
       # The baseline is meant to fail most scenarios; the low bar here only catches pipeline
       # breakage. The real baseline assertion is test_the_last_deploy_heuristic_does_not_solve_the_suite.
