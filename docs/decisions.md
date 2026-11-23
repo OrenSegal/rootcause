@@ -1,6 +1,6 @@
 # Decisions
 
-Five design decisions, each with the evidence that backs it. Where the reasoning at the time was not written down, this says "not recorded" rather than reconstructing it.
+Six design decisions, each with the evidence that backs it. Where the reasoning at the time was not written down, this says "not recorded" rather than reconstructing it.
 
 ## 1. A hand-written agent loop, not a framework
 
@@ -12,7 +12,7 @@ Five design decisions, each with the evidence that backs it. Where the reasoning
 
 **Consequences.** Every behaviour (append-only history, thinking blocks sent back as logged, nudges, budget) is visible and tested in this repo. The cost is owning that code. The LangGraph port shares everything except control flow, including the executor and its approval gate, so the two can be compared directly.
 
-**Evidence.** Loop first run on a live model in 11367f6 (PR #5); LangGraph port in 2511fed (PR #6). 300 runs, Opus 5.5 at high effort, same model access and grader (`results/sweeps/loop-2026-10-15/`, `results/sweeps/langgraph-2026-10-15/`): single-agent loop minus LangGraph is -2.7 points (-8.0 to +2.7), with only 4 of 25 scenarios differing, and the design detects gaps above about 8 points; cost per solved incident, output tokens and p50 latency are within 6% (gaps from `uv run python scripts/resample_gaps.py`, the rest from each sweep's `report.md`). The tests that drove the port are listed in `docs/AUDIT.md`.
+**Evidence.** Loop first run on a live model in 11367f6 (PR #5); LangGraph port in 2511fed (PR #6). 300 runs, Opus 5.5 at high effort, same model access and grader (`results/sweeps/loop-2026-10-15/`, `results/sweeps/langgraph-2026-10-15/`): single-agent loop minus LangGraph is -2.7 points (-8.0 to +2.7), with only 4 of 25 scenarios differing, and the design detects gaps above about 8 points; cost per solved incident, output tokens and p50 latency are within 6% (gaps from `uv run python scripts/resample_gaps.py`, the rest from each sweep's `report.md`).
 
 ## 2. Telemetry tools served over MCP
 
@@ -61,3 +61,11 @@ Five design decisions, each with the evidence that backs it. Where the reasoning
 **Consequences.** Intervals widened 1.50 to 1.60x (intraclass correlation 0.69 to 0.78, about 30 effective runs per setting of 75), and the README's accuracy claims changed from "flat" to "unresolved below about 13 to 19 points". Cost is now the headline.
 
 **Evidence.** 60c0f40 (PR #19); `tests/test_stats.py::test_cluster_bootstrap_resamples_whole_scenarios`; the ICC, effective n and width ratio are printed by `uv run python scripts/resample_gaps.py`.
+
+## 6. The application layer uses `anthropic.types`, and nothing else from the SDK
+
+**Context.** Layering is enforced by `import-linter`: the application layer may not import MCP, SQLite, YAML, Typer or any ML library.
+
+**Decision.** One exception. The loop speaks the Messages API's content-block format (tool_use, tool_result, thinking), so it uses the SDK's data types rather than re-declaring them, which would copy the SDK. It may not import the client or its resources.
+
+**Consequences.** `import-linter` can't name subpackages of an external package, so the narrower rule is checked by `tests/test_contracts.py::test_application_uses_sdk_data_types_but_never_the_client`.

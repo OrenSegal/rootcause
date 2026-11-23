@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- README cut to the findings, how grading works and how the agent is built; the full results and limitations moved verbatim to `docs/results.md`. Removed the never-dispatched Azure deploy (`deploy/azure/`, its workflow) and the week-1 `docs/AUDIT.md`; its one standing rule is decision 6 in `docs/decisions.md`.
 - The distribution is named `rootcause-agent` (the PyPI name `rootcause` belongs to another project). The import package and the `rootcause` command are unchanged; `[tool.uv.build-backend] module-name` tells `uv_build` so. A built wheel is `rootcause_agent-0.2.0` with the `rootcause/` package inside.
 - An externally sourced held-out set: eight incidents adapted from public postmortems (`scenarios-external/`, `scripts/author_external.py`), truths pre-registered in f5417b1 before any run. Haiku 5.5 passes 50% (cluster-bootstrap CI 21% to 79%) against 77% on the main suite; 24 Haiku runs (48 with the heuristic) in `results/sweeps/external-heldout-2026-11-07/`.
 - `scripts/resample_gaps.py` prints each model setting's intraclass correlation, effective number of runs and interval width against Wilson, and gives loop minus LangGraph its minimum detectable effect. README gains a Limitations section and a mermaid component diagram; `docs/decisions.md` records five design decisions with evidence. The Azure deploy README says it has never been run.

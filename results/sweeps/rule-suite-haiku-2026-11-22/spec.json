@@ -1,0 +1,28 @@
+{
+  "name": "rule-suite-haiku-2026-11-22",
+  "repeats": 3,
+  "scenarios": "scenarios",
+  "scenario_ids": [
+    "026-rule-gather-evidence",
+    "027-rule-symptoms-spread",
+    "028-rule-check-what-changed-when",
+    "029-rule-cite-exact-ids",
+    "030-rule-rollback-only-with-evidence",
+    "031-rule-finish-after-denial",
+    "032-rule-no-incident",
+    "033-rule-postmortems-are-hypotheses"
+  ],
+  "held_out": [],
+  "configs": [
+    {
+      "name": "haiku-5.5-high-bm25",
+      "provider": "claude-code",
+      "model": "claude-haiku-5-5",
+      "effort": "high",
+      "mode": "single",
+      "retrieval": "bm25",
+      "budget_usd": 1.0,
+      "brief": null
+    }
+  ]
+}

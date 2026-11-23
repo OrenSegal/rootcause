@@ -1,4 +1,4 @@
-"""Reproduce the README's lenient pass rates and resampled gaps from committed sweep rows.
+"""Reproduce the lenient pass rates and resampled gaps from committed sweep rows.
 
     uv run python scripts/resample_gaps.py
 
@@ -14,7 +14,7 @@ independent runs it implies, and how much wider the scenario-resampled interval 
 Wilson interval over all 75 runs.
 
 Then the same gaps under the strict grader (the grade as recorded) for the comparisons
-the README draws: Opus high minus Haiku, loop minus LangGraph, and single agent minus
+docs/results.md draws: Opus high minus Haiku, loop minus LangGraph, and single agent minus
 orchestrator per harness and pooled. For each: the per-scenario differences d_i, their
 sd, the minimum detectable effect at 80% power, an exact sign test on the scenarios
 that differ, and Holm-adjusted p-values across the pairs printed. Last, every pair of

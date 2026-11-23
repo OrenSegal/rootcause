@@ -1,7 +1,7 @@
 """The interfaces the application depends on. Adapters implement them.
 
 The loop speaks the Messages API's content-block format, so responses are the
-SDK's `BetaMessage` data type (see docs/AUDIT.md, "Deliberate exceptions").
+SDK's `BetaMessage` data type (docs/decisions.md, decision 6).
 """
 
 from collections.abc import Mapping
