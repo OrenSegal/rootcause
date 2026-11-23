@@ -12,6 +12,8 @@ The rule scenarios (026 to 033) need the search brief and a baseline of their ow
 sweeps/litmus-rule-suite-2026-11-05/ and a sweep file for only those scenarios, at
 bm25 retrieval, and `score --tag ...` scores them against `--baseline-dir` and
 `--baseline-config` (a sweep of the unmodified retrieval brief, e.g. sweeps/rule-suite.yaml).
+`--results` scores another sweep of the same mutants, e.g. the Haiku copy
+litmus-brief-rule-suite-haiku-2026-11-22.
 Without --tag nothing changes, so the 2026-10-15 files are untouched.
 
 litmus (github.com/OrenSegal/litmus) mutates the text that steers an agent and asks
@@ -86,9 +88,14 @@ def generate(litmus: Path, tag: str | None = None) -> None:
 
 
 def score(
-    out: Path, tag: str | None = None, baseline_dir: Path = BASELINE, config: str = BASELINE_CONFIG
+    out: Path,
+    tag: str | None = None,
+    baseline_dir: Path = BASELINE,
+    config: str = BASELINE_CONFIG,
+    results: str | None = None,
 ) -> None:
     briefs, _, name_ = paths(tag)
+    name_ = results or name_
     manifest = json.loads((briefs / "mutants.json").read_text())
     baseline = [r for r in read_sweep(baseline_dir)[0] if r.config == config]
     rows, errors = read_sweep(ROOT / "results" / "sweeps" / name_)
@@ -130,8 +137,9 @@ if __name__ == "__main__":
     sc.add_argument("--tag")
     sc.add_argument("--baseline-dir", type=Path, default=BASELINE)
     sc.add_argument("--baseline-config", default=BASELINE_CONFIG)
+    sc.add_argument("--results", help="Mutant sweep name, when it differs from the tag's.")
     args = parser.parse_args()
     if args.command == "generate":
         generate(args.litmus, args.tag)
     else:
-        score(args.out, args.tag, args.baseline_dir, args.baseline_config)
+        score(args.out, args.tag, args.baseline_dir, args.baseline_config, args.results)
