@@ -2,11 +2,32 @@
 
 [![CI](https://github.com/OrenSegal/rootcause/actions/workflows/ci.yml/badge.svg)](https://github.com/OrenSegal/rootcause/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/license-MIT-black)](LICENSE)
 
-An incident-investigation agent and the eval harness that grades it. The agent reads an incident's logs, metrics, traces and deploy history, or a failed CI run, and returns a typed root-cause diagnosis. The harness scores that diagnosis against incidents whose cause is known, runs every configuration several times, and reports accuracy with intervals that respect how few incidents there are, next to what each correct answer cost.
+An eval harness for agents that diagnose failures, and a benchmark of real CI failures to run it on. Given a failed CI run, or an incident's logs, metrics, traces and deploy history, the agent returns a typed root-cause answer. The harness grades that answer against a known truth, runs every configuration several times, and reports accuracy with intervals that respect how few cases there are, next to what each correct answer cost.
 
 The loop, tool gating, crash recovery and grader are written by hand, without an agent framework, so every behaviour is visible and tested.
 
-## What the evals found
+## Did the change break the build?
+
+<!-- DRAFT: held-out numbers are TODO until results/sweeps/ci-test-2026-11-23/ is committed. -->
+
+[`benchmarks/ci/`](benchmarks/ci/README.md) holds 168 failed pull-request runs from 55 public Python repositories. Each case asks whether the change under test caused the failure and, if it did, which commit. 108 cases were caused by the change and 60 were not (flaky tests, network errors, runner faults, upstream releases). The split is by repository: 51 dev cases from 16 repositories, and 117 held-out cases from 39 others. The full write-up is [docs/ci-benchmark.md](docs/ci-benchmark.md).
+
+- **The obvious answer is a trap.** Blaming the head commit finds the guilty commit in 94% of change cases and fails every case the change did not cause. Accuracy on each class is reported separately, with their mean.
+- **The data leaks the class through the commit count.** Cases not caused by the change more often have several commits under test, and a rule that uses only that count scores 75% on the held-out set. Every comparison is also read on single-commit cases.
+- **Model results on the held-out set:** TODO.
+- **The triage ladder against the strongest model alone:** TODO. Free rules answer first, a cheap model takes what they leave, and the strong model runs only when a lint flags the cheap answer.
+
+```bash
+uv run rootcause eval benchmarks/ci/dev --provider rules --min-pass-rate 0
+uv run rootcause diff results/sweeps/ci-test-2026-11-23:haiku-5.5-high-cite results/sweeps/ci-test-2026-11-23:opus-5.5-high-cite
+uv run rootcause ladder results/sweeps/ci-test-2026-11-23 --cheap haiku-5.5-high-cite --strong opus-5.5-high-cite --out ladder.jsonl
+```
+
+The first runs the free rules on the dev cases; they abstain when no rule fires. The second asks whether Opus beat Haiku on the held-out set or the gap is noise: it pairs the runs by case and reports the gap, an interval, a sign test and the smallest gap this many cases could detect. The third replays the ladder from the finished sweep without calling a model.
+
+The same rules run on your own repository as a GitHub Action. When CI fails, `OrenSegal/rootcause/triage` writes a verdict to the job summary: what failed, whether the change likely caused it, and the log lines behind it. It reads the run through a read-only token and never checks out the pull request. `OrenSegal/rootcause/diff` fails a job when a candidate eval result is a real regression against a baseline. Both are described in [docs/actions.md](docs/actions.md).
+
+## What the incident evals found
 
 - **Cost separated the models; accuracy did not.** Across 525 graded runs of seven settings, from Haiku 5.5 to Opus 5.5 at high effort, pass rates sat between 77% and 84% with overlapping intervals, while cost per solved incident ranged from $0.0033 to $0.081. With 25 incidents the design can only detect gaps above about 13 to 19 points, so smaller accuracy differences are unresolved, not zero.
 - **Splitting the work tripled the cost.** An orchestrator with three workers cost about 3x a single agent per solved incident, with no detectable accuracy gain. The hand-written loop and a LangGraph port of it were indistinguishable on accuracy, cost and latency.
@@ -51,6 +72,8 @@ uv run rootcause sweep sweeps/models-and-retrieval.yaml --dry-run
 ## How grading works
 
 Each scenario carries its ground truth: the category (bad deploy, config change, dependency failure, resource exhaustion, infrastructure, or no incident), the guilty service, and the telemetry ids that prove it. A run passes when it gets the category and service right, cites only ids that exist in the scenario with at least one being the expected evidence, rolled back nothing outside the root cause, and made at least one tool call. The grader does not read the written explanation.
+
+A CI case is graded on class instead: caused by the change or not, plus the guilty commit for a change case. The report gives accuracy on each class and their mean, since the classes are unequal.
 
 A sweep runs each configuration on every scenario several times, interleaved so rate limits or time of day do not land on one configuration, and resumes where it stopped. The report gives:
 
@@ -123,7 +146,7 @@ The first exposes `list_scenarios`, `investigate_incident` and `run_evals`. The 
 In CI, as an eval gate:
 
 ```yaml
-- uses: OrenSegal/rootcause@v0.2.0
+- uses: OrenSegal/rootcause@v0.3.0
   with:
     provider: heuristic
     min-pass-rate: "0.05"
@@ -134,6 +157,17 @@ In CI, as an eval gate:
 The `Dockerfile` serves every scenario's telemetry over streamable HTTP (`rootcause telemetry-http`), one MCP endpoint per scenario.
 
 ## Limitations
+
+CI benchmark:
+
+- **Labels were reviewed, not blind.** The same author's rules proposed every rule label, and the review judged the proposed label. No agreement figure exists.
+- **One person's rules proposed the labels**, so their blind spots are the benchmark's.
+- **Most not-caused cases are one kind.** 37 of 60 are runs whose re-run passed.
+- **Not-caused cases more often have several commits under test**, which is why every comparison is also read on single-commit cases.
+- **The `environment` rule's precision is inflated by how cases were mined.** It uses the same error patterns the miner used to propose labels.
+- **The rules and the escalating lint were tuned on dev.** Nothing was changed after seeing the held-out set, and dev numbers are not reported as results.
+
+Incident suite:
 
 - **Small n.** 25 incidents in the main sweep. "No detectable difference" here is a power limit, not a tie; a 10-point gap between Opus and Haiku would need about 84 incidents.
 - **One author.** The same person wrote the scenarios, the retrieval corpus, its labels and the ground truth. The external set borrows its causes from public postmortems, but its telemetry has the same author.
