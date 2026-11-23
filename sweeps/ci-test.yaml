@@ -1,13 +1,28 @@
-# The held-out split of benchmarks/ci. Truths, the split, the grader and this file are
-# committed before any model runs on these cases, and no result here is used to change
-# the brief, the tools or the grader.
-# The heuristic blames the head commit. It is deterministic and runs three times only
-# to share the table and to be the A side of `rootcause diff`.
+# The held-out split of benchmarks/ci: 117 cases from 39 repositories, none of them in dev.
+# Truths, the split, the grader, the rules, the escalation lint and this file are committed
+# before any model runs on these cases, and no result here is used to change any of them.
+#
+# Decided on dev (results/sweeps/ci-dev-pilot-2026-11-23, ci-dev-brief-2026-11-23):
+# - the grade: class, plus the guilty commit for a change case;
+# - the brief line asking for the guilty commit's id (sweeps/briefs/ci-cite-commit.txt),
+#   used for every model here. haiku-5.5-high keeps the original brief as the before side;
+# - the rules (application/triage.py) and the lint that escalates (change_without_commit).
+#
+# Comparisons to read, each with `rootcause diff`:
+# 1. each model against heuristic (blame the head commit), overall and on not_change;
+# 2. haiku-5.5-high against haiku-5.5-high-cite (does the brief line hold on unseen repos);
+# 3. haiku-5.5-high-cite against opus-5.5-high-cite;
+# 4. the ladder (rules, then haiku-cite, then opus-cite on a lint) against opus-5.5-high-cite,
+#    replayed with `rootcause ladder`.
+# Known shortcut: not_change cases more often have several commits under test. Each
+# comparison is also read on single-commit cases only.
 name: ci-test-2026-11-23
 repeats: 3
 scenarios: benchmarks/ci/test
 configs:
   - {name: heuristic, provider: heuristic, model: heuristic}
+  - {name: rules, provider: rules, model: rules}
   - {name: haiku-5.5-high, provider: claude-code, model: claude-haiku-5-5, effort: high}
-  - {name: sonnet-5.5-high, provider: claude-code, model: claude-sonnet-5-5, effort: high}
-  - {name: opus-5.5-high, provider: claude-code, model: claude-opus-5-5, effort: high}
+  - {name: haiku-5.5-high-cite, provider: claude-code, model: claude-haiku-5-5, effort: high, brief: sweeps/briefs/ci-cite-commit.txt}
+  - {name: sonnet-5.5-high-cite, provider: claude-code, model: claude-sonnet-5-5, effort: high, brief: sweeps/briefs/ci-cite-commit.txt}
+  - {name: opus-5.5-high-cite, provider: claude-code, model: claude-opus-5-5, effort: high, brief: sweeps/briefs/ci-cite-commit.txt}
