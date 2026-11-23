@@ -1,0 +1,39 @@
+{
+  "name": "ci-dev-pilot-2026-11-23",
+  "repeats": 1,
+  "scenarios": "benchmarks/ci/dev",
+  "scenario_ids": [],
+  "held_out": [],
+  "configs": [
+    {
+      "name": "heuristic",
+      "provider": "heuristic",
+      "model": "heuristic",
+      "effort": "high",
+      "mode": "single",
+      "retrieval": "none",
+      "budget_usd": 1.0,
+      "brief": null
+    },
+    {
+      "name": "haiku-5.5-high",
+      "provider": "claude-code",
+      "model": "claude-haiku-5-5",
+      "effort": "high",
+      "mode": "single",
+      "retrieval": "none",
+      "budget_usd": 1.0,
+      "brief": null
+    },
+    {
+      "name": "opus-5.5-high",
+      "provider": "claude-code",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "mode": "single",
+      "retrieval": "none",
+      "budget_usd": 1.0,
+      "brief": null
+    }
+  ]
+}

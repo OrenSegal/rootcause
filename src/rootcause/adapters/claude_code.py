@@ -62,6 +62,9 @@ ANSWER_TOOL = "StructuredOutput"
 SPAWN_ERROR = "rootcause_spawn_error"
 AGENT = "claude-code"
 TIMEOUT_S = 900
+# One stream-json line carries a whole tool result. asyncio's default reader limit is
+# 64 KB, which 200 lines of a real CI log exceed, and the read then raises.
+STREAM_LIMIT = 32 * 1024 * 1024
 # The telemetry server builds its search index at startup; with embeddings on a busy
 # machine that can outlast Claude Code's default MCP startup wait.
 SPAWN_ENV = {"MCP_TIMEOUT": "120000"}
@@ -268,6 +271,7 @@ async def spawn_claude(cmd: list[str], cwd: Path) -> list[str]:
             *cmd,
             cwd=cwd,
             env={**os.environ, **SPAWN_ENV},
+            limit=STREAM_LIMIT,
             stdin=asyncio.subprocess.DEVNULL,
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.PIPE,

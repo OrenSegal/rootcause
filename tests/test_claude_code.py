@@ -5,6 +5,7 @@ The fixture is a scrubbed `claude -p --output-format stream-json` run of scenari
 """
 
 import json
+import sys
 from pathlib import Path
 
 from conftest import SCENARIOS
@@ -256,3 +257,9 @@ def test_a_telemetry_server_that_failed_to_start_is_a_harness_error():
 
 def test_spawn_gives_mcp_servers_time_to_start():
     assert int(claude_code.SPAWN_ENV["MCP_TIMEOUT"]) >= 60_000
+
+
+async def test_spawn_reads_a_line_longer_than_the_default_stream_limit(tmp_path):
+    # A tool result with 200 lines of a real CI log is one stream-json line over 64 KB.
+    out = await claude_code.spawn_claude([sys.executable, "-c", "print('x' * 200_000)"], tmp_path)
+    assert out == ["x" * 200_000]
