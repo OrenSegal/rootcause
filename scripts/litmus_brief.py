@@ -99,8 +99,8 @@ def score(
     manifest = json.loads((briefs / "mutants.json").read_text())
     baseline = [r for r in read_sweep(baseline_dir)[0] if r.config == config]
     rows, errors = read_sweep(ROOT / "results" / "sweeps" / name_)
-    results = verdicts(baseline, rows, errors, [m["name"] for m in manifest])
-    ran = [r for r in results.values() if r.verdict != "not run"]
+    by_mutant = verdicts(baseline, rows, errors, [m["name"] for m in manifest])
+    ran = [r for r in by_mutant.values() if r.verdict != "not run"]
     killed = sum(r.verdict == "killed" for r in ran)
     lines = [
         f"# Mutation testing of the investigator brief, {name_}",
@@ -115,7 +115,7 @@ def score(
         "|---|---|---|---|---|---|",
     ]
     for m in manifest:
-        r = results[m["name"]]
+        r = by_mutant[m["name"]]
         site = m["site"].replace("|", "\\|")[:90]
         lines.append(
             f"| {m['name']} | {site} | {r.verdict} | {', '.join(r.killed_by) or '-'} "
