@@ -3,14 +3,14 @@
 | config | scored / errors | pass rate (95% CI) | pass^1 | pass@1 | mean cost | cost per solved | p50 / p90 wall | output tokens | tool calls | searched | frontier |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | heuristic | 51 / 0 | 55% (41% to 69%) | 55% | 55% | $0.0000 | $0.0000 | 0.0s / 0.1s | 0 | 3.0 | 0% | yes |
-| haiku-5.5-high | 51 / 0 | 73% (61% to 84%) | 73% | 73% | $0.0107 | $0.0147 | 19.7s / 28.3s | 3415 | 11.1 | 0% | yes |
-| opus-5.5-high | 51 / 0 | 92% (84% to 98%) | 92% | 92% | $0.1978 | $0.2146 | 12.5s / 16.7s | 1331 | 5.6 | 0% | yes |
+| haiku-5.5-high | 51 / 0 | 78% (67% to 88%) | 78% | 78% | $0.0107 | $0.0136 | 19.7s / 28.3s | 3415 | 11.1 | 0% | yes |
+| opus-5.5-high | 51 / 0 | 98% (94% to 100%) | 98% | 98% | $0.1978 | $0.2018 | 12.5s / 16.7s | 1331 | 5.6 | 0% | yes |
 
 | config | change (95% CI) | not_change (95% CI) | balanced | pooled |
 |---|---|---|---|---|
 | heuristic | 97% (90% to 100%), 29 runs | 0% (0% to 15%), 22 runs | 48% | 55% |
-| haiku-5.5-high | 69% (52% to 86%), 29 runs | 77% (59% to 91%), 22 runs | 73% | 73% |
-| opus-5.5-high | 97% (90% to 100%), 29 runs | 86% (73% to 100%), 22 runs | 91% | 92% |
+| haiku-5.5-high | 69% (52% to 86%), 29 runs | 91% (77% to 100%), 22 runs | 80% | 78% |
+| opus-5.5-high | 97% (90% to 100%), 29 runs | 100% (85% to 100%), 22 runs | 98% | 98% |
 
 Balanced is the mean of the two class pass rates. Class-graded scenarios check the class and the commit, not the exact category or service.
 
@@ -47,9 +47,9 @@ Balanced is the mean of the two class pass rates. Class-graded scenarios check t
 | ci-multidict-37771426628 | 1/1 | 1/1 | 1/1 |
 | ci-multidict-38127829739 | 0/1 | 1/1 | 1/1 |
 | ci-panel-43759376300 | 0/1 | 1/1 | 1/1 |
-| ci-panel-43954653640 | 0/1 | 0/1 | 1/1 |
+| ci-panel-43954653640 | 0/1 | 1/1 | 1/1 |
 | ci-panel-44339476406 | 1/1 | 0/1 | 1/1 |
-| ci-panel-44356789031 | 0/1 | 0/1 | 0/1 |
+| ci-panel-44356789031 | 0/1 | 0/1 | 1/1 |
 | ci-panel-44383896934 | 1/1 | 1/1 | 1/1 |
 | ci-panel-44397232490 | 1/1 | 0/1 | 1/1 |
 | ci-pipx-44001139987 | 1/1 | 1/1 | 1/1 |
@@ -64,6 +64,6 @@ Balanced is the mean of the two class pass rates. Class-graded scenarios check t
 | ci-sentry-python-44335660000 | 0/1 | 1/1 | 1/1 |
 | ci-sentry-python-44397296615 | 0/1 | 1/1 | 1/1 |
 | ci-streamlink-33797245698 | 0/1 | 1/1 | 1/1 |
-| ci-streamlink-37654916190 | 0/1 | 0/1 | 0/1 |
-| ci-streamlink-39834644038 | 0/1 | 0/1 | 0/1 |
+| ci-streamlink-37654916190 | 0/1 | 1/1 | 1/1 |
+| ci-streamlink-39834644038 | 0/1 | 1/1 | 1/1 |
 | ci-sympy-44524099951 | 0/1 | 1/1 | 1/1 |

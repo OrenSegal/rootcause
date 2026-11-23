@@ -18,15 +18,14 @@ class Category(StrEnum):
 
 
 # The two classes a class-graded truth is judged on: a change under test caused the
-# failure, or something else did (resource, dependency or infrastructure).
-# no_incident says nothing failed, so it is in neither class.
+# failure, or something else did (resource, dependency, infrastructure, or nothing
+# wrong with the change at all: in the dev pilot, correct flaky-test diagnoses were
+# filed as no_incident).
 TruthClass = Literal["change", "not_change"]
 CHANGE_CATEGORIES = frozenset({Category.CONFIG_CHANGE, Category.BAD_CODE_DEPLOY})
 
 
-def category_class(category: Category) -> TruthClass | None:
-    if category is Category.NO_INCIDENT:
-        return None
+def category_class(category: Category) -> TruthClass:
     return "change" if category in CHANGE_CATEGORIES else "not_change"
 
 

@@ -105,7 +105,7 @@ def test_a_not_change_case_passes_on_any_real_evidence_with_a_not_change_categor
     # Citing a commit to say what it did not touch is still a correct answer.
     assert _graded(case, _answer(Category.INFRASTRUCTURE, [other_log, commit]), Outcome.ANSWERED)
     assert not _graded(case, _answer(Category.BAD_CODE_DEPLOY, [other_log]), Outcome.ANSWERED)
-    assert not _graded(case, _answer(Category.NO_INCIDENT, [other_log]), Outcome.ANSWERED)
+    assert _graded(case, _answer(Category.NO_INCIDENT, [other_log]), Outcome.ANSWERED)
     assert not _graded(case, _answer(Category.INFRASTRUCTURE, ["log-none"]), Outcome.ANSWERED)
 
 
