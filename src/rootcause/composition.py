@@ -12,7 +12,7 @@ from dataclasses import replace
 from enum import StrEnum
 from functools import cache
 from pathlib import Path
-from typing import Literal
+from typing import Any, Literal
 
 from mcp.server import MCPServer
 from pydantic import BaseModel
@@ -38,15 +38,19 @@ from rootcause.adapters.fixtures import (
 from rootcause.adapters.github_actions import GhCli, RawRun, case_from_raw
 from rootcause.adapters.langgraph_engine import LangGraphEngine
 from rootcause.adapters.mcp_telemetry import build_telemetry_server, telemetry_tools
-from rootcause.adapters.sqlite_events import SqliteEventLog
+from rootcause.adapters.rules import RulesEngine
+from rootcause.adapters.sqlite_events import SqliteEventLog, read_outcomes
 from rootcause.application.agent import AgentLoop, RunResult, TokenUsage
 from rootcause.application.approval import StaticApproval
 from rootcause.application.budget import Budget
 from rootcause.application.diff import RunRecord
 from rootcause.application.evals import Grade, SuiteReport, crash_grade, grade
+from rootcause.application.executor import ToolCall
 from rootcause.application.investigator import SEARCH_POSTMORTEMS, investigator_spec
+from rootcause.application.ladder import Attempt, Replay, replay
+from rootcause.application.lints import LintRow, flags, lint_rows
 from rootcause.application.orchestrator import DispatchWorkers, orchestrator_spec
-from rootcause.application.ports import EventLog, LLMProvider, Retriever, Tracer
+from rootcause.application.ports import EventLog, LLMProvider, Retriever, RunInfo, Tracer
 from rootcause.application.retrieval_eval import RetrievalReport, evaluate
 from rootcause.application.sweep import (
     ConfigSummary,
@@ -62,8 +66,9 @@ from rootcause.application.sweep import (
 )
 from rootcause.application.tracing import NullTracer
 from rootcause.application.transcript import OUTCOME, TOOL_CALL
-from rootcause.domain.answers import Diagnosis
-from rootcause.domain.scenario import Case, Scenario
+from rootcause.application.triage import rule_of as triage_rule
+from rootcause.domain.answers import Diagnosis, Outcome
+from rootcause.domain.scenario import Case, Scenario, TruthClass
 
 PRICES = {**anthropic_provider.PRICES, **heuristic.PRICES}
 
@@ -95,6 +100,7 @@ def configure_tracing(exporter: TraceExporter) -> None:
 
 class ProviderName(StrEnum):
     HEURISTIC = "heuristic"
+    RULES = "rules"  # deterministic CI triage that abstains unless a rule fires
     ANTHROPIC = "anthropic"
     CLAUDE_CODE = "claude-code"  # Claude Code runs the loop; single agent only
     CLAUDE_CODE_LOOP = "claude-code-loop"  # the hand-written loop, each turn through Claude Code
@@ -111,7 +117,7 @@ class EffortLevel(StrEnum):
 
 # What runs an investigation: a model behind the hand-written loop, or a harness
 # that brings its own loop.
-Engine = LLMProvider | ClaudeCodeHarness | LangGraphEngine
+Engine = LLMProvider | ClaudeCodeHarness | LangGraphEngine | RulesEngine
 ProviderFactory = Callable[[], Engine]
 
 
@@ -119,6 +125,8 @@ def provider_factory(name: ProviderName, model: str, effort: EffortLevel) -> Pro
     def make() -> Engine:
         if name is ProviderName.HEURISTIC:
             return heuristic.HeuristicProvider()
+        if name is ProviderName.RULES:
+            return RulesEngine()
         if name is ProviderName.LANGGRAPH:
             return LangGraphEngine(ClaudeCodeCompletion(model=model, effort=effort.value))
         if name is ProviderName.CLAUDE_CODE_LOOP:
@@ -232,7 +240,7 @@ class Mode(StrEnum):
 UNSUPPORTED = "{provider} has no multi-agent mode; it only speaks the single-agent tools."
 
 
-SINGLE_AGENT_ONLY = {ProviderName.HEURISTIC, ProviderName.CLAUDE_CODE}
+SINGLE_AGENT_ONLY = {ProviderName.HEURISTIC, ProviderName.CLAUDE_CODE, ProviderName.RULES}
 
 
 def supports(provider_name: str, mode: Mode) -> bool:
@@ -317,6 +325,10 @@ async def _run(
             corpus=CORPUS,
             brief=brief,
         )
+    if isinstance(engine, RulesEngine):
+        if not supports(engine.name, mode):
+            raise ValueError(UNSUPPORTED.format(provider=engine.name))
+        return await engine.investigate(case, events=events)
     if isinstance(engine, LangGraphEngine):
         async with telemetry_tools(case.store, make_retriever(retrieval)) as tools:
             return await engine.investigate(
@@ -647,3 +659,105 @@ def retrieval_eval(
         raise ValueError("retrieval mode 'none' has nothing to evaluate")
     qrels = load_qrels(corpus)
     return evaluate(retriever, retrieval_queries(scenarios, query), qrels, index_ms=index_ms)
+
+
+def join_runs(
+    rows: list[Row], outcomes: list[tuple[RunInfo, dict[str, Any]]]
+) -> dict[int, dict[str, Any]]:
+    """Row index -> the logged outcome of the run that produced it. A row carries no run
+    id, so it is matched on scenario and provider (the engine name the grade records)
+    and then on cost, wall time and step count, which the grade copies from the outcome.
+    Each run matches at most one row; a row with no single match is an error."""
+    by_key: dict[tuple[str, str], list[tuple[str, dict[str, Any]]]] = {}
+    for info, payload in outcomes:
+        by_key.setdefault((info.scenario_id, info.provider), []).append((info.run_id, payload))
+    used: set[str] = set()
+    out: dict[int, dict[str, Any]] = {}
+    for i, row in enumerate(rows):
+        g = row.grade
+        found = [
+            (run_id, p)
+            for run_id, p in by_key.get((row.scenario_id, g.provider), [])
+            if run_id not in used
+            and p["cost_usd"] == g.cost_usd
+            and p["wall_ms"] == g.wall_ms
+            and p["steps"] == g.steps
+        ]
+        if len(found) != 1:
+            raise ValueError(
+                f"{row.config} {row.scenario_id} rep {row.rep}: {len(found)} logged runs match"
+            )
+        used.add(found[0][0])
+        out[i] = found[0][1]
+    return out
+
+
+class LadderReplay(BaseModel):
+    replay: Replay
+    lints: list[LintRow]  # every scored answer of the two models
+    lints_after_rules: list[LintRow]  # answers on runs the rules abstained on
+    rules: list[tuple[str, str, bool]]  # (case, rule or "abstain", passed)
+
+
+async def ladder_replay(sweep_dir: Path, cheap: str, strong: str) -> LadderReplay:
+    """Replays a finished sweep as a ladder. Reads rows.jsonl and runs.sqlite read-only
+    and writes nothing; the rules run in memory on the sweep's scenarios."""
+    spec = SweepSpec.model_validate_json((sweep_dir / SPEC).read_text())
+    configs = {c.name: c for c in spec.configs}
+    for name in (cheap, strong):
+        if name not in configs:
+            raise ValueError(f"no config {name!r} in this sweep; it has {', '.join(configs)}")
+        if configs[name].mode != Mode.SINGLE:
+            raise ValueError(f"{name}: the replay reads single-agent runs only")
+    rows = [
+        r for r in read_sweep(sweep_dir)[0]
+        if r.config in (cheap, strong) and not is_error(configs[r.config], r)
+    ]  # fmt: skip
+    joined = join_runs(rows, read_outcomes(sweep_dir / "runs.sqlite"))
+    cases: dict[str, Case] = {}
+    rules: dict[str, Attempt] = {}
+    rule_answers: dict[str, Diagnosis | None] = {}
+    rule_table: list[tuple[str, str, bool]] = []
+    classes: dict[str, TruthClass | None] = {}
+    for path in sweep_paths(spec):
+        case = load_case(path)
+        sid = case.scenario.id
+        run = await investigate(case, RulesEngine(), events=open_events(), budget_usd=0.0)
+        cases[sid], rule_answers[sid] = case, run.result.answer
+        classes[sid] = run.grade.truth_class
+        answered = run.result.outcome is Outcome.ANSWERED
+        rules[sid] = Attempt(passed=run.grade.passed, cost=0.0, answered=answered)
+        rule = triage_rule(run.result.answer.summary) if run.result.answer else None
+        rule_table.append((sid, rule or "abstain", run.grade.passed))
+    attempts: dict[str, dict[tuple[str, int], Attempt]] = {cheap: {}, strong: {}}
+    for i, row in enumerate(rows):
+        payload = joined[i]
+        answer = Diagnosis.model_validate(payload["answer"]) if payload.get("answer") else None
+        calls = [ToolCall.model_validate(c) for c in payload.get("tool_calls", [])]
+        case = cases.get(row.scenario_id)
+        if case is None:
+            continue
+        attempts[row.config][(row.scenario_id, row.rep)] = Attempt(
+            passed=row.grade.passes(),
+            cost=row.grade.cost_usd,
+            answered=row.grade.outcome is Outcome.ANSWERED,
+            flags=flags(case.store, answer, calls, rule_answers[row.scenario_id]),
+        )
+    result = replay(cheap, strong, classes, rules, attempts[cheap], attempts[strong], spec.repeats)
+    kept = {(s.case, s.rep) for s in result.steps}
+
+    def table(only_abstained: bool) -> list[LintRow]:
+        out: list[LintRow] = []
+        for name in (cheap, strong):
+            answers = [
+                (a.passed, a.flags)
+                for key, a in attempts[name].items()
+                if key in kept and a.answered
+                and not (only_abstained and rules[key[0]].answered)
+            ]  # fmt: skip
+            out += lint_rows(name, answers)
+        return out
+
+    return LadderReplay(
+        replay=result, lints=table(False), lints_after_rules=table(True), rules=rule_table
+    )

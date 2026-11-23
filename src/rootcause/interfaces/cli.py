@@ -10,6 +10,7 @@ import typer
 from rootcause.application.diff import compare as compare_results
 from rootcause.application.diff import diff_markdown, restrict
 from rootcause.application.evals import comparison_markdown
+from rootcause.application.lints import lint_markdown
 from rootcause.composition import (
     CORPUS,
     EffortLevel,
@@ -23,6 +24,7 @@ from rootcause.composition import (
     discover,
     fetch_ci_case,
     investigate,
+    ladder_replay,
     load_case,
     load_ci_raw,
     load_sweep_spec,
@@ -287,6 +289,39 @@ def diff_cmd(
     typer.echo(report.model_dump_json(indent=2) if json_out else diff_markdown(report))
     if fail_on_regression and report.verdict == "a_better":
         raise typer.Exit(DIFF_REGRESSION)
+
+
+@app.command("ladder")
+def ladder_cmd(
+    sweep_dir: Annotated[Path, typer.Argument(help="A finished sweep results directory.")],
+    cheap: Annotated[str, typer.Option(help="Config answering what the rules leave.")],
+    strong: Annotated[str, typer.Option(help="Config for answers a lint flags.")],
+    out: Annotated[
+        Path | None,
+        typer.Option(help="Write the ladder's runs here as JSONL, for `rootcause diff`."),
+    ] = None,
+) -> None:
+    """Replay a finished sweep as a triage ladder, with no model calls: the rules
+    first, the cheap config where they abstain, the strong config where a lint flags
+    the cheap answer. Reads the sweep without writing to it."""
+    try:
+        result = asyncio.run(ladder_replay(sweep_dir, cheap, strong))
+    except ValueError as e:
+        raise typer.BadParameter(str(e)) from e
+    lines = [result.replay.markdown(), "| rule | answered | passed |", "|---|---|---|"]
+    for rule in sorted({r for _, r, _ in result.rules}):
+        hits = [ok for _, r, ok in result.rules if r == rule]
+        lines.append(f"| {rule} | {len(hits)} | {sum(hits)} |")
+    lines += [
+        "",
+        lint_markdown(result.lints, "Lints on every answer"),
+        lint_markdown(result.lints_after_rules, "Lints on answers where the rules abstained"),
+    ]
+    typer.echo("\n".join(lines))
+    if out is not None:
+        records = [s.record() for s in result.replay.steps]
+        out.write_text("".join(r.model_dump_json(exclude={"error"}) + "\n" for r in records))
+        typer.echo(f"wrote {len(records)} runs to {out}")
 
 
 @app.command("ci-triage")

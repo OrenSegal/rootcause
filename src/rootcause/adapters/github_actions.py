@@ -20,6 +20,8 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
+from rootcause.application.triage import DOC_JOB, ENVIRONMENT, GATE_JOB, is_doc
+from rootcause.application.triage import matrix_stem as _matrix_stem
 from rootcause.domain.scenario import Alert, Case, Scenario
 from rootcause.domain.store import TelemetryStore
 from rootcause.domain.telemetry import Deploy, LogLevel, LogLine, Span, SpanStatus
@@ -421,27 +423,8 @@ def is_note(path: str) -> bool:
     return any(part.lower().startswith(NOTE_PREFIXES) for part in path.split("/"))
 
 
-# Error shapes that mean the environment failed, not the code under test.
-ENVIRONMENT = re.compile(
-    r"version '?[\w.]+'? with architecture '?\w+'? was not found|socket hang up"
-    r"|Connection reset by peer|Could not resolve host|rate limit exceeded|API rate limit"
-    r"|TLS handshake timeout|503 Service Unavailable|502 Bad Gateway"
-    r"|runner has received a shutdown signal|lost communication with the server"
-    r"|Failed to CreateArtifact|Unable to make request|Connection failed \[IP|Failed to fetch http"
-    # Node's error codes, case-sensitive and whole: "ModuleNotFoundError" is not one.
-    r"|(?-i:\bE(?:NOTFOUND|CONNRESET|CONNREFUSED|TIMEDOUT|AI_AGAIN)\b)",
-    re.IGNORECASE,
-)
-
-
 # pytest-xdist lost a worker: a segfault in the code under test or a starved runner.
 WORKER_CRASH = re.compile(r"worker '[^']+' crashed while running")
-
-
-# Jobs that only report whether the others passed ("check", "test-alls-green").
-GATE_JOB = re.compile(
-    r"^checks?$|alls?-green|^result\b|/ result$|status$|required checks", re.IGNORECASE
-)
 
 
 # Jobs that test against an unreleased upstream ("Docutils HEAD", "Aiohttp tests (master)",
@@ -473,13 +456,6 @@ def _matrix_sibling_passes(jobs: list[dict[str, Any]]) -> int:
     )  # fmt: skip
 
 
-def _matrix_stem(name: str) -> str:
-    """The part of a job name a matrix shares: "test (3.13, windows)" -> "test",
-    "Test windows-latest / pypy3.11" -> "Test", "ui:test-ui:windows-latest" -> "ui:test-ui"."""
-    head = re.split(r"[\s(/]", name)[0]
-    return head.rsplit(":", 1)[0] if ":" in head else head
-
-
 def _environment_error(raw: RawRun) -> str | None:
     """An environment error that every failed job shows. One job failing setup while
     another fails a real test is not an environment failure."""
@@ -496,13 +472,6 @@ def _environment_error(raw: RawRun) -> str | None:
     hits = [ENVIRONMENT.search("\n".join(by_job.get(name, []))) for name in failed]
     first = hits[0]
     return first[0] if first is not None and all(hits) else None
-
-
-DOC_JOB = re.compile(r"doc|sphinx|lint|pre-commit|style|spell|link", re.IGNORECASE)
-
-
-def is_doc(path: str) -> bool:
-    return path.startswith(("doc/", "docs/")) or path.endswith((".md", ".rst"))
 
 
 def _workflow_commit(raw: RawRun, fix: list[str]) -> str | None:
