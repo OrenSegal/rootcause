@@ -7,6 +7,8 @@ from typing import Annotated
 
 import typer
 
+from rootcause.application.diff import compare as compare_results
+from rootcause.application.diff import diff_markdown
 from rootcause.application.evals import comparison_markdown
 from rootcause.composition import (
     CORPUS,
@@ -27,6 +29,7 @@ from rootcause.composition import (
     open_events,
     plan_sweep,
     provider_factory,
+    read_results,
     retrieval_eval,
     run_suite,
     run_sweep,
@@ -60,6 +63,7 @@ EXIT_CODES: dict[Outcome, int] = {
     Outcome.REFUSED: 4,
 }
 EVAL_BELOW_THRESHOLD = 1
+DIFF_REGRESSION = 1
 
 
 def _require_scenarios(root: Path) -> None:
@@ -240,6 +244,34 @@ def report_cmd(
     """Summarize a sweep: intervals, pass^k, cost per solved incident, frontier.
     Writes report.md and summary.json next to the rows."""
     typer.echo(write_sweep_report(out, strict_service=strict_service))
+
+
+@app.command("diff")
+def diff_cmd(
+    a: Annotated[
+        str, typer.Argument(metavar="A", help="Baseline: a JSONL file, or SWEEP_DIR:CONFIG.")
+    ],
+    b: Annotated[str, typer.Argument(metavar="B", help="Candidate, in either form.")],
+    intersect: Annotated[
+        bool, typer.Option("--intersect", help="Drop cases present on one side only.")
+    ] = False,
+    fail_on_regression: Annotated[
+        bool, typer.Option("--fail-on-regression", help="Exit 1 when A is better than B.")
+    ] = False,
+    strict_service: StrictService = False,
+    json_out: Annotated[bool, typer.Option("--json", help="Print the result as JSON.")] = False,
+) -> None:
+    """Did B beat A, or is the gap noise? Pairs the two result sets by case. A JSONL file
+    has one run per line: {"case": str, "passed": bool, "cost": float, "error": bool},
+    cost and error optional. Runs marked as errors count toward cost, not the pass rate."""
+    try:
+        sides = [(s, read_results(s, strict_service=strict_service)) for s in (a, b)]
+        report = compare_results(sides[0], sides[1], intersect=intersect)
+    except ValueError as e:
+        raise typer.BadParameter(str(e)) from e
+    typer.echo(report.model_dump_json(indent=2) if json_out else diff_markdown(report))
+    if fail_on_regression and report.verdict == "a_better":
+        raise typer.Exit(DIFF_REGRESSION)
 
 
 @app.command("ci-triage")

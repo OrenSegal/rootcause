@@ -24,20 +24,25 @@ config's pass rate with a scenario-resampled 95% interval, beside Haiku on the m
 """
 
 import itertools
-import math
-import random
 import statistics
 import sys
 from collections import defaultdict
 from pathlib import Path
 
-from rootcause.application.stats import cluster_bootstrap, wilson
+from rootcause.application.stats import (
+    cluster_bootstrap,
+    diffs,
+    mde80,
+    n_for_mde,
+    paired_gap,
+    rate,
+    sign_test,
+    wilson,
+)
 from rootcause.application.sweep import Row
 from rootcause.composition import read_sweep
 
 SWEEPS = Path(__file__).resolve().parent.parent / "results" / "sweeps"
-DRAWS = 10_000
-SEED = 0
 
 
 def lenient(row: Row) -> bool:
@@ -51,58 +56,6 @@ def by_scenario(rows: list[Row], config: str, ok) -> dict[str, list[bool]]:
         if r.config == config:
             out[r.scenario_id].append(ok(r))
     return out
-
-
-def rate(runs: dict[str, list[bool]], ids: list[str]) -> float:
-    hits = [x for s in ids for x in runs[s]]
-    return sum(hits) / len(hits)
-
-
-def paired_gap(
-    a: dict[str, list[bool]], b: dict[str, list[bool]], draws: int = DRAWS, seed: int = SEED
-) -> tuple[float, float, float]:
-    """Point gap a - b and its 95% percentile interval, in points."""
-    ids = sorted(a)
-    assert ids == sorted(b), "both sides need the same scenarios"
-    rng = random.Random(seed)
-    gaps = []
-    for _ in range(draws):
-        pick = rng.choices(ids, k=len(ids))
-        gaps.append(rate(a, pick) - rate(b, pick))
-    gaps.sort()
-    lo, hi = gaps[int(0.025 * draws)], gaps[int(0.975 * draws) - 1]
-    return 100 * (rate(a, ids) - rate(b, ids)), 100 * lo, 100 * hi
-
-
-# t quantiles at 24 df (25 scenarios): two-sided 5% and one-sided 20%.
-# shortcut: fixed to 25 scenarios, look the quantiles up again if the suite changes size.
-T_24 = 2.064 + 0.857
-
-
-def diffs(a: dict[str, list[bool]], b: dict[str, list[bool]]) -> list[float]:
-    """Per-scenario pass-rate difference a - b, the paired unit."""
-    assert sorted(a) == sorted(b), "both sides need the same scenarios"
-    return [rate(a, [s]) - rate(b, [s]) for s in sorted(a)]
-
-
-def mde80(d: list[float]) -> float:
-    """Smallest true gap (points) a paired t-test at 5% detects 80% of the time.
-    Approximate: many d_i are exactly zero, so the d_i are far from normal."""
-    assert len(d) == 25, "T_24 assumes 25 scenarios"
-    return 100 * T_24 * statistics.stdev(d) / math.sqrt(len(d))
-
-
-def n_for_mde(d: list[float], gap: float) -> int:
-    """Scenarios needed for an MDE80 of `gap` at this sd (normal quantiles, approximate)."""
-    return math.ceil(((1.960 + 0.842) * statistics.stdev(d) / gap) ** 2)
-
-
-def sign_test(d: list[float]) -> tuple[int, int, float]:
-    """Exact two-sided sign test on the scenarios that differ: (positive, negative, p)."""
-    pos, neg = sum(x > 0 for x in d), sum(x < 0 for x in d)
-    n = pos + neg
-    tail = sum(math.comb(n, i) for i in range(min(pos, neg) + 1)) / 2**n
-    return pos, neg, min(1.0, 2 * tail)
 
 
 def holm(ps: list[float]) -> list[float]:

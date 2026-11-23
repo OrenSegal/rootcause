@@ -42,6 +42,7 @@ from rootcause.adapters.sqlite_events import SqliteEventLog
 from rootcause.application.agent import AgentLoop, RunResult, TokenUsage
 from rootcause.application.approval import StaticApproval
 from rootcause.application.budget import Budget
+from rootcause.application.diff import RunRecord
 from rootcause.application.evals import Grade, SuiteReport, crash_grade, grade
 from rootcause.application.investigator import SEARCH_POSTMORTEMS, investigator_spec
 from rootcause.application.orchestrator import DispatchWorkers, orchestrator_spec
@@ -475,6 +476,35 @@ def read_sweep(out: Path) -> tuple[list[Row], list[Row]]:
     rows = load(ROWS)
     done = {(r.config, r.scenario_id, r.rep) for r in rows}
     return rows, [e for e in load(ERRORS) if (e.config, e.scenario_id, e.rep) not in done]
+
+
+def read_results(source: str, *, strict_service: bool = False) -> list[RunRecord]:
+    """A JSONL file with one run per line (case, passed, optional cost and error), or
+    SWEEP_DIR:CONFIG for one configuration of a sweep results directory."""
+    path = Path(source)
+    if path.is_file():
+        lines = path.read_text().splitlines()
+        return [RunRecord.model_validate_json(line) for line in lines if line.strip()]
+    folder, _, name = source.rpartition(":")
+    if not folder or not (Path(folder) / SPEC).is_file():
+        raise ValueError(f"{source}: not a JSONL file, and not SWEEP_DIR:CONFIG")
+    spec = SweepSpec.model_validate_json((Path(folder) / SPEC).read_text())
+    config = next((c for c in spec.configs if c.name == name), None)
+    if config is None:
+        known = ", ".join(c.name for c in spec.configs)
+        raise ValueError(f"{source}: no config {name!r} in this sweep; it has {known}")
+    rows, errors = read_sweep(Path(folder))
+    tagged = [(r, is_error(config, r)) for r in rows] + [(e, True) for e in errors]
+    return [
+        RunRecord(
+            case=r.scenario_id,
+            passed=r.grade.passes(strict_service=strict_service),
+            cost=r.grade.cost_usd,
+            error=err,
+        )
+        for r, err in tagged
+        if r.config == name
+    ]
 
 
 def _start_sweep(spec: SweepSpec, out: Path) -> tuple[set[tuple[str, str, int]], dict[str, str]]:
