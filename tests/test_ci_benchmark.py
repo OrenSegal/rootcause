@@ -92,7 +92,7 @@ def test_every_case_is_class_graded(path: Path):
     assert truth is not None and truth.grading == "class"
 
 
-def test_a_not_change_case_passes_on_any_real_log_line_and_no_commit():
+def test_a_not_change_case_passes_on_any_real_evidence_with_a_not_change_category():
     case = _first("not_change")
     truth = case.scenario.truth
     assert truth is not None
@@ -102,8 +102,8 @@ def test_a_not_change_case_passes_on_any_real_log_line_and_no_commit():
     assert _graded(case, flake, Outcome.ANSWERED)
     assert _graded(case, flake.model_copy(update={"category": Category.DEPENDENCY_FAILURE}),
                    Outcome.ANSWERED)  # fmt: skip
-    assert not _graded(case, _answer(Category.INFRASTRUCTURE, [other_log, commit]),
-                       Outcome.ANSWERED)  # fmt: skip
+    # Citing a commit to say what it did not touch is still a correct answer.
+    assert _graded(case, _answer(Category.INFRASTRUCTURE, [other_log, commit]), Outcome.ANSWERED)
     assert not _graded(case, _answer(Category.BAD_CODE_DEPLOY, [other_log]), Outcome.ANSWERED)
     assert not _graded(case, _answer(Category.NO_INCIDENT, [other_log]), Outcome.ANSWERED)
     assert not _graded(case, _answer(Category.INFRASTRUCTURE, ["log-none"]), Outcome.ANSWERED)

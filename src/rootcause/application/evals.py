@@ -18,8 +18,8 @@ under test cause the failure, and if so which one. A run passes when it answered
 made a tool call, cited at least one id and every cited id exists, its category is
 in the truth's class (`domain.scenario.category_class`), and the commit check holds.
 For a `change` truth the commit check is the evidence hit: it cites a required
-deploy. For a `not_change` truth it cites no deploy id of the case; a config-change
-id derived from a deploy does not count as citing that deploy. Service, exact
+deploy. For a `not_change` truth there is no commit check: the class is the verdict,
+and an answer may cite a commit to say what it did not touch. Service, exact
 category and required tools are not checked; they are still recorded. The action
 and path checks still apply. The grade records the truth's class and both checks,
 so reports can split by class without the scenario files.
@@ -130,11 +130,9 @@ def grade(
     ]
     evidence_hit = any(e in truth.required_evidence_any for e in cited)
     truth_class = category_class(truth.category) if truth.grading == "class" else None
-    if truth_class == "change":
-        commit_ok = evidence_hit
-    else:
-        deploys = {dep.id for dep in case.store.deploys}
-        commit_ok = not any(e in deploys for e in cited)
+    # A not_change answer may cite a commit: in the dev pilot, correct diagnoses cited the
+    # head commit to say what it did not touch. The class carries the verdict there.
+    commit_ok = evidence_hit if truth_class == "change" else True
     return Grade(
         scenario_id=case.scenario.id,
         provider=provider,

@@ -12,7 +12,7 @@ A case is one failed workflow run, recorded as a scenario directory that `rootca
 - `deploys.json`: the commits under test, with the files each one changed.
 - `metrics.json`: empty.
 
-The truth is either `bad_code_deploy` or `config_change` citing the guilty commit (class `change`), or `infrastructure` citing failed log lines and no commit (class `not_change`). The service is always the repository name.
+The truth is either `bad_code_deploy` or `config_change` citing the guilty commit (class `change`), or `infrastructure` (class `not_change`). A `change` answer must cite the guilty commit. A `not_change` answer must give a category of that class and cite real evidence; it may mention a commit. The service is always the repository name.
 
 `provenance/<case>/` keeps the mined `scenario.yaml` with its comment header (run URL, fix run, label rule), and `run.json.gz`, `commits.json` and `fix.json` from the mining. No telemetry tool reads this directory. The raw failed log is not kept; the fixtures were built from it.
 
