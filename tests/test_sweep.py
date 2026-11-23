@@ -305,18 +305,19 @@ def test_the_committed_rule_suite_sweep_loads_and_its_held_out_scenarios_exist()
 
 
 def test_committed_rows_load_and_grade_as_they_were_recorded():
-    """Every committed sweep row recomputes to the pass it was stored with, and none
-    is class-graded: the class grade changed no existing number."""
+    """Every committed sweep row recomputes to the pass it was stored with. Only the
+    sweeps over benchmarks/ci (named ci-*) are class-graded: the class grade changed
+    no earlier number."""
     import json
 
     files = sorted((SCENARIOS.parent / "results" / "sweeps").glob("*/*.jsonl"))
-    lines = [line for f in files if f.name in ("rows.jsonl", "errors.jsonl")
+    lines = [(f.parent.name, line) for f in files if f.name in ("rows.jsonl", "errors.jsonl")
              for line in f.read_text().splitlines() if line.strip()]  # fmt: skip
     assert lines
-    for line in lines:
+    for sweep, line in lines:
         row = Row.model_validate_json(line)
         assert row.grade.passed == json.loads(line)["grade"]["passed"]
-        assert row.grade.truth_class is None
+        assert sweep.startswith("ci-") or row.grade.truth_class is None
 
 
 def test_authored_scenarios_keep_the_exact_grade():
