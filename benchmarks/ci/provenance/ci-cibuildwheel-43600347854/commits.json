@@ -1,0 +1,18 @@
+[
+  {
+    "author": "dependabot[bot]",
+    "committedDate": "2026-11-14T13:33:07Z",
+    "messageHeadline": "chore(deps): bump the actions group with 2 updates",
+    "oid": "44df2f193529ff0ef3d395338a1c4abe8abc5556",
+    "files": [
+      {
+        "filename": ".github/workflows/update-dependencies.yml",
+        "status": "modified"
+      },
+      {
+        "filename": ".github/workflows/zizmor.yml",
+        "status": "modified"
+      }
+    ]
+  }
+]

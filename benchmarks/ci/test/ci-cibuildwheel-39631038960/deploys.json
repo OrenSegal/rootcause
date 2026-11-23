@@ -1,0 +1,40 @@
+[
+  {
+    "id": "8067e01987",
+    "service": "cibuildwheel",
+    "version": "8067e01987",
+    "ts": "2026-10-21T15:49:11Z",
+    "author": "henryiii",
+    "summary": "fix: use cibuildwheel's CA bundle for pip in cross venvs",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "cibuildwheel/platforms/android.py",
+      "cibuildwheel/platforms/ios.py",
+      "cibuildwheel/platforms/pyodide.py",
+      "test/test_android.py",
+      "test/test_ios.py",
+      "test/test_pyodide.py",
+      "test/utils.py"
+    ]
+  },
+  {
+    "id": "5a649f44e2",
+    "service": "cibuildwheel",
+    "version": "5a649f44e2",
+    "ts": "2026-10-21T16:01:41Z",
+    "author": "henryiii",
+    "summary": "fix: also set SSL_CERT_FILE in cross venvs",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "cibuildwheel/platforms/android.py",
+      "cibuildwheel/platforms/ios.py",
+      "cibuildwheel/platforms/pyodide.py",
+      "test/test_android.py",
+      "test/test_ios.py",
+      "test/test_pyodide.py",
+      "test/utils.py"
+    ]
+  }
+]

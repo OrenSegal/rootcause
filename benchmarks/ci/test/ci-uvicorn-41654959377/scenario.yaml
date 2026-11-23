@@ -6,6 +6,7 @@ alert:
   summary: 'workflow Test Suite failed on fix/issue-1151-async-context-manager-app-factory
     at 10986fad5f: step ''Enforce coverage'' in job ''Python 3.11 windows-latest'' failed.'
 truth:
+  grading: class
   category: bad_code_deploy
   service: uvicorn
   required_evidence_any:

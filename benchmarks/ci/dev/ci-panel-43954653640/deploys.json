@@ -1,0 +1,16 @@
+[
+  {
+    "id": "84a0031e23",
+    "service": "panel",
+    "version": "84a0031e23",
+    "ts": "2026-11-16T20:54:42Z",
+    "author": "philippjfr",
+    "summary": "docs: Update the 1.11.0 release notes",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "CHANGELOG.md",
+      "doc/about/releases.md"
+    ]
+  }
+]

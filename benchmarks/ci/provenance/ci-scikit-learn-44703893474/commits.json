@@ -1,0 +1,14 @@
+[
+  {
+    "author": "lorentzenchr",
+    "committedDate": "2026-11-20T08:36:10Z",
+    "messageHeadline": "DOC revision of linear models section",
+    "oid": "1fd1de3e12859852c90cc8c4a45a5953ce972b7f",
+    "files": [
+      {
+        "filename": "examples/release_highlights/plot_release_highlights_1_10_0.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

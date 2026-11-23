@@ -8,7 +8,7 @@ from typing import Annotated
 import typer
 
 from rootcause.application.diff import compare as compare_results
-from rootcause.application.diff import diff_markdown
+from rootcause.application.diff import diff_markdown, restrict
 from rootcause.application.evals import comparison_markdown
 from rootcause.composition import (
     CORPUS,
@@ -39,6 +39,7 @@ from rootcause.composition import (
     write_sweep_report,
 )
 from rootcause.domain.answers import Diagnosis, Outcome
+from rootcause.domain.scenario import TruthClass
 
 app = typer.Typer(no_args_is_help=True, add_completion=False)
 
@@ -259,6 +260,18 @@ def diff_cmd(
         bool, typer.Option("--fail-on-regression", help="Exit 1 when A is better than B.")
     ] = False,
     strict_service: StrictService = False,
+    class_: Annotated[
+        TruthClass | None,
+        typer.Option(
+            "--class",
+            help="Only cases of this truth class (change or not_change). The class comes "
+            "from class-graded sweep rows, or a truth_class field in a JSONL file.",
+        ),
+    ] = None,
+    cases: Annotated[
+        Path | None,
+        typer.Option(help="Only the case ids listed in this file, one per line."),
+    ] = None,
     json_out: Annotated[bool, typer.Option("--json", help="Print the result as JSON.")] = False,
 ) -> None:
     """Did B beat A, or is the gap noise? Pairs the two result sets by case. A JSONL file
@@ -266,6 +279,8 @@ def diff_cmd(
     cost and error optional. Runs marked as errors count toward cost, not the pass rate."""
     try:
         sides = [(s, read_results(s, strict_service=strict_service)) for s in (a, b)]
+        ids = cases.read_text().split() if cases else None
+        sides = restrict(sides, truth_class=class_, cases=ids)
         report = compare_results(sides[0], sides[1], intersect=intersect)
     except ValueError as e:
         raise typer.BadParameter(str(e)) from e

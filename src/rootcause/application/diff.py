@@ -8,7 +8,7 @@ which only counts cases, cannot.
 """
 
 from collections import defaultdict
-from collections.abc import Sequence
+from collections.abc import Collection, Sequence
 from statistics import stdev
 from typing import Literal
 
@@ -24,17 +24,47 @@ from rootcause.application.stats import (
     rate,
     sign_test,
 )
+from rootcause.domain.scenario import TruthClass
 
 Verdict = Literal["b_better", "a_better", "no_difference"]
 
 
 class RunRecord(BaseModel):
-    """One run of one case. Harness errors count toward spend, not the pass rate."""
+    """One run of one case. Harness errors count toward spend, not the pass rate.
+    `truth_class` is set for class-graded cases (see application/evals.py)."""
 
     case: str
     passed: bool
     cost: float | None = None
     error: bool = False
+    truth_class: TruthClass | None = None
+
+
+Side = tuple[str, Sequence[RunRecord]]
+
+
+def restrict(
+    sides: Sequence[Side],
+    *,
+    truth_class: TruthClass | None = None,
+    cases: Collection[str] | None = None,
+) -> list[Side]:
+    """Keep only the listed cases, the cases of one truth class, or both. A case's class
+    comes from any record on either side that has one, so a harness error, which has
+    no class, stays with its case."""
+    keep = set(cases) if cases is not None else None
+    if truth_class is not None:
+        classes = {r.case: r.truth_class for _, recs in sides for r in recs if r.truth_class}
+        if not classes:
+            raise ValueError(
+                "no result carries a truth class. A sweep side graded by class has one; "
+                "for other results pass --cases FILE instead of --class."
+            )
+        wanted = {c for c, k in classes.items() if k == truth_class}
+        keep = wanted if keep is None else keep & wanted
+    if keep is None:
+        return list(sides)
+    return [(label, [r for r in recs if r.case in keep]) for label, recs in sides]
 
 
 class SideSummary(BaseModel):

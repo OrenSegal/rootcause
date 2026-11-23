@@ -1,0 +1,16 @@
+id: ci-joblib-38570297050
+title: FIX failling `test_auto_scatter`
+alert:
+  severity: ci
+  service: testing-default-backend-threading-ubuntu-latest-oldest-supported-threading
+  summary: 'workflow CI failed on FIX-test-auto-scatter at 2a3b0d818e: step ''Run tests''
+    in job ''Testing (default-backend-threading, ubuntu-latest, oldest_supported, threading)''
+    failed.'
+truth:
+  grading: class
+  category: infrastructure
+  service: joblib
+  required_evidence_any:
+  - log-3854
+  - log-10890
+provenance: recorded

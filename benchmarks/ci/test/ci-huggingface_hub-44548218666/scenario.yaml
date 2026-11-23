@@ -1,0 +1,14 @@
+id: ci-huggingface_hub-44548218666
+title: '[Cache] Fix concurrent downloads without symlinks'
+alert:
+  severity: ci
+  service: build-windows-3-15-transfer-hf-xet
+  summary: 'workflow Python tests failed on Wauplin/same-https-github-com-50549bdc at 61425a1e24:
+    step ''Run tests'' in job ''build-windows (3.15, transfer (hf_xet))'' failed.'
+truth:
+  grading: class
+  category: infrastructure
+  service: huggingface_hub
+  required_evidence_any:
+  - log-3796
+provenance: recorded

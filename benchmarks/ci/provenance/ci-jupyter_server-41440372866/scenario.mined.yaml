@@ -1,0 +1,18 @@
+# Mined from https://github.com/jupyter-server/jupyter_server/actions/runs/41440372866
+# (jupyter-server/jupyter_server, licence BSD-3-Clause). Fixed by run
+# https://github.com/jupyter-server/jupyter_server/actions/runs/41440372866. Label rule:
+# the first attempt failed and a re-run of the same pull-request run passed. Fix
+# touched: nothing (rerun).
+id: ci-jupyter_server-41440372866
+title: Scrub URL secrets from tornado's exception logs
+alert:
+  severity: ci
+  service: build-windows-latest-3-12
+  summary: 'workflow Jupyter Server Tests failed on scrub-exception-log-uri at 7a4284ffe4:
+    step ''Run the tests on windows'' in job ''build (windows-latest, 3.12)'' failed.'
+truth:
+  category: infrastructure
+  service: jupyter_server
+  required_evidence_any:
+  - log-7903
+provenance: recorded

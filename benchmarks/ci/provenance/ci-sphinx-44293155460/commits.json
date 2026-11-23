@@ -1,0 +1,22 @@
+[
+  {
+    "author": "safaeelm1-rgb",
+    "committedDate": "2026-11-18T11:10:58Z",
+    "messageHeadline": "Fix fallback for empty plural translations",
+    "oid": "2ef376198cd7e92abd0918a872bdc9e605ab7280",
+    "files": [
+      {
+        "filename": "CHANGES.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "sphinx/themes/basic/static/doctools.js",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/js/doctools.spec.js",
+        "status": "added"
+      }
+    ]
+  }
+]

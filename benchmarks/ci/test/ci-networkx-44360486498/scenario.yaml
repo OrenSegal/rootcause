@@ -7,6 +7,7 @@ alert:
   summary: 'workflow style failed on first-fix at e14db0e50e: step ''Lint'' in job ''format''
     failed.'
 truth:
+  grading: class
   category: bad_code_deploy
   service: networkx
   required_evidence_any:

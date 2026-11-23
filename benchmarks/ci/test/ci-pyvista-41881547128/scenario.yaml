@@ -1,0 +1,16 @@
+id: ci-pyvista-41881547128
+title: Support Python 3.15 on 0.49
+alert:
+  severity: ci
+  service: codspeed-simulation
+  summary: 'workflow Benchmarks failed on backport/py315-release-0.49 at e6eb611671: step
+    ''Run CodSpeedHQ/action@373d6868929f444bc08d901fd0eb0ad52a8875ea'' in job ''CodSpeed (simulation)''
+    failed.'
+truth:
+  grading: class
+  category: infrastructure
+  service: pyvista
+  required_evidence_any:
+  - log-0624
+  - log-0625
+provenance: recorded

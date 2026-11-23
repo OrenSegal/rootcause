@@ -6,6 +6,7 @@ alert:
   summary: 'workflow test suite failed on add-lowlevel-run-sync-soon at a22b2a86fc: step ''Build
     documentation'' in job ''docs'' failed.'
 truth:
+  grading: class
   category: bad_code_deploy
   service: anyio
   required_evidence_any:

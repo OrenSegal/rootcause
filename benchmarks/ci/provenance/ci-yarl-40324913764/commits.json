@@ -1,0 +1,34 @@
+[
+  {
+    "author": "asvetlov",
+    "committedDate": "2026-10-26T12:44:25Z",
+    "messageHeadline": "Read the host after the slashes of a hostless join reference",
+    "oid": "2b481c37ebddb0b06475dd7b0359454fd10e22fb",
+    "files": [
+      {
+        "filename": "CHANGES/1996.bugfix.rst",
+        "status": "added"
+      },
+      {
+        "filename": "docs/api.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_url_empty_components.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_url_join_empty_authority.py",
+        "status": "added"
+      },
+      {
+        "filename": "tools/conformance/REPORT.md",
+        "status": "modified"
+      },
+      {
+        "filename": "yarl/_url.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

@@ -1,0 +1,18 @@
+# Mined from https://github.com/tornadoweb/tornado/actions/runs/40355373959
+# (tornadoweb/tornado, licence Apache-2.0). Fixed by run
+# https://github.com/tornadoweb/tornado/actions/runs/40355373959. Label rule: the first
+# attempt failed and a re-run of the same pull-request run passed. Fix touched: nothing
+# (rerun).
+id: ci-tornado-40355373959
+title: 'build(deps): bump filelock from 3.32.7 to 4.2.1'
+alert:
+  severity: ci
+  service: run-full-tests-pypy-3-12-v8-x-pypy3
+  summary: 'workflow Test failed on dependabot/pip/filelock-4.2.1 at 86d0323fcb: step ''Run
+    test suite'' in job ''Run full tests (pypy-3.12-v8.x, pypy3)'' failed.'
+truth:
+  category: infrastructure
+  service: tornado
+  required_evidence_any:
+  - log-0362
+provenance: recorded

@@ -7,6 +7,7 @@ alert:
     \ envs: `build-docs`' in job '\U0001F9F9 Linters / build-docs@\U0001F40D3.14@\U0001F4BB\
     ubuntu-latest' failed."
 truth:
+  grading: class
   category: bad_code_deploy
   service: yarl
   required_evidence_any:

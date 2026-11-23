@@ -6,6 +6,7 @@ alert:
   summary: 'workflow CI failed on fix-preserve-declared-slots-1637 at 2751a66ea8: step ''Combine
     coverage & fail if it''s <100%.'' in job ''Combine & check coverage'' failed.'
 truth:
+  grading: class
   category: bad_code_deploy
   service: attrs
   required_evidence_any:

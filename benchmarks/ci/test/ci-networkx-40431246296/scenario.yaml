@@ -6,6 +6,7 @@ alert:
   summary: 'workflow style failed on emSign at 6d68381c78: step ''Lint'' in job ''format''
     failed.'
 truth:
+  grading: class
   category: config_change
   service: networkx
   required_evidence_any:

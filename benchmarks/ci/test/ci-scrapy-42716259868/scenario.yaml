@@ -6,6 +6,7 @@ alert:
   summary: 'workflow CI failed on logstats-skip-first-line at 9902ebb9da: step ''Run tests''
     in job ''tests (windows, 3.11.9, min-extra-deps)'' failed.'
 truth:
+  grading: class
   category: infrastructure
   service: scrapy
   required_evidence_any:

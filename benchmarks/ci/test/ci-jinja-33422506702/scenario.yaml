@@ -1,0 +1,15 @@
+id: ci-jinja-33422506702
+title: '[rejected AI] indent filter ignoring blank=False when first=True'
+alert:
+  severity: ci
+  service: main
+  summary: 'workflow pre-commit failed on fix/indent-filter-blank at 3af7cff3da: step ''Run
+    uv run --locked --group pre-commit pre-commit run --show-diff-on-failure --color=always
+    --all-files'' in job ''main'' failed.'
+truth:
+  grading: class
+  category: bad_code_deploy
+  service: jinja
+  required_evidence_any:
+  - 3af7cff3da
+provenance: recorded

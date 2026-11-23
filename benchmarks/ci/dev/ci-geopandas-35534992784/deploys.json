@@ -1,0 +1,124 @@
+[
+  {
+    "id": "9b463e6c35",
+    "service": "geopandas",
+    "version": "9b463e6c35",
+    "ts": "2026-08-31T10:30:21Z",
+    "author": "martinfleis",
+    "summary": "add deprecation for tools.collect",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "geopandas/tools/util.py"
+    ]
+  },
+  {
+    "id": "61d58912e7",
+    "service": "geopandas",
+    "version": "61d58912e7",
+    "ts": "2026-08-31T13:51:34Z",
+    "author": "martinfleis",
+    "summary": "expose collect within dissolve",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "geopandas/geodataframe.py",
+      "geopandas/tools/tests/test_tools.py",
+      "geopandas/tools/util.py"
+    ]
+  },
+  {
+    "id": "638e84665b",
+    "service": "geopandas",
+    "version": "638e84665b",
+    "ts": "2026-09-01T11:57:20Z",
+    "author": "martinfleis",
+    "summary": "fix deprecation",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "geopandas/tools/tests/test_tools.py",
+      "geopandas/tools/util.py"
+    ]
+  },
+  {
+    "id": "6bdbaf890d",
+    "service": "geopandas",
+    "version": "6bdbaf890d",
+    "ts": "2026-09-01T13:22:44Z",
+    "author": "martinfleis",
+    "summary": "Update util.py",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "geopandas/tools/util.py"
+    ]
+  },
+  {
+    "id": "43324ce63e",
+    "service": "geopandas",
+    "version": "43324ce63e",
+    "ts": "2026-09-16T08:02:06Z",
+    "author": "martinfleis",
+    "summary": "tests and docs",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "CHANGELOG.md",
+      "doc/source/docs/user_guide/aggregation_with_dissolve.rst",
+      "geopandas/geodataframe.py",
+      "geopandas/tests/test_dissolve.py"
+    ]
+  },
+  {
+    "id": "dbcd60efab",
+    "service": "geopandas",
+    "version": "dbcd60efab",
+    "ts": "2026-09-20T20:15:59Z",
+    "author": "martinfleis",
+    "summary": "Merge remote-tracking branch 'upstream/main' into collect",
+    "config_before": {
+      "ci/envs/313-latest.yaml": "previous",
+      "pyproject.toml": "previous"
+    },
+    "config_after": {
+      "ci/envs/313-latest.yaml": "modified in dbcd60efab",
+      "pyproject.toml": "modified in dbcd60efab"
+    },
+    "files": [
+      "CHANGELOG.md",
+      "CONTRIBUTING.md",
+      "ci/envs/313-latest.yaml",
+      "doc/source/_static/code/make_grid.py",
+      "doc/source/_static/code/make_grid_types.py",
+      "doc/source/community/contributing.md",
+      "doc/source/community/contributing.rst",
+      "doc/source/community/ecosystem.md",
+      "doc/source/docs/reference/geoseries.rst",
+      "doc/source/docs/reference/tools.rst",
+      "doc/source/docs/user_guide/geocoding.rst",
+      "doc/source/docs/user_guide/interactive_mapping.ipynb",
+      "doc/source/gallery/plotting_basemap_background.ipynb",
+      "doc/source/gallery/plotting_with_folium.ipynb",
+      "doc/source/gallery/polygon_plotting_with_folium.ipynb",
+      "geopandas/__init__.py",
+      "geopandas/_compat.py",
+      "geopandas/base.py",
+      "geopandas/explore.py",
+      "geopandas/geodataframe.py",
+      "geopandas/io/arrow.py",
+      "geopandas/io/tests/test_arrow.py",
+      "geopandas/tests/test_explore.py",
+      "geopandas/tests/test_geocode.py",
+      "geopandas/tests/test_geom_methods.py",
+      "geopandas/tests/test_plotting.py",
+      "geopandas/tools/__init__.py",
+      "geopandas/tools/_random.py",
+      "geopandas/tools/geocoding.py",
+      "geopandas/tools/make_grid.py",
+      "geopandas/tools/tests/test_make_grid.py",
+      "geopandas/tools/tests/test_random.py",
+      "pyproject.toml"
+    ]
+  }
+]

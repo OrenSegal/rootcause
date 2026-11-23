@@ -1,0 +1,14 @@
+id: ci-ipykernel-34840027961
+title: 'MAINT: Autotype methods + manual fixes'
+alert:
+  severity: ci
+  service: build-ubuntu-latest-qt6-pypy-3-11
+  summary: 'workflow ipykernel tests failed on autotyping at 72e89d177f: step ''Run the tests
+    on pypy'' in job ''build (ubuntu-latest, qt6, pypy-3.11)'' failed.'
+truth:
+  grading: class
+  category: infrastructure
+  service: ipykernel
+  required_evidence_any:
+  - log-0871
+provenance: recorded

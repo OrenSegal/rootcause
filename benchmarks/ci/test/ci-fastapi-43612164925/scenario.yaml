@@ -6,6 +6,7 @@ alert:
   summary: 'workflow Test failed on codex/depends-max-concurrency at b0608a7331: step ''Run
     uv run coverage report --fail-under=100'' in job ''coverage-combine'' failed.'
 truth:
+  grading: class
   category: bad_code_deploy
   service: fastapi
   required_evidence_any:

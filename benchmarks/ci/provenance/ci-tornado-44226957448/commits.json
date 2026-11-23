@@ -1,0 +1,198 @@
+[
+  {
+    "author": "mmporong",
+    "committedDate": "2026-11-07T01:46:46Z",
+    "messageHeadline": "httpserver: Accept bracketed IPv6 addresses in xheaders",
+    "oid": "8da16cf86dd80dfcd43e77e6aeb1b048fb93514b",
+    "files": [
+      {
+        "filename": "tornado/httpserver.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tornado/test/httpserver_test.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "mmporong",
+    "committedDate": "2026-11-18T02:57:03Z",
+    "messageHeadline": "Merge remote-tracking branch 'upstream/master' into fix-xheaders-bracketed-ipv6",
+    "oid": "a429ba30a64a705df60e93a3b54a04ae5888dc2b",
+    "files": [
+      {
+        "filename": ".github/workflows/test.yml",
+        "status": "modified"
+      },
+      {
+        "filename": ".gitignore",
+        "status": "modified"
+      },
+      {
+        "filename": "SECURITY.md",
+        "status": "modified"
+      },
+      {
+        "filename": "docs/conf.py",
+        "status": "modified"
+      },
+      {
+        "filename": "docs/httpserver.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "docs/index.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "docs/releases.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "docs/releases/v6.6.1.rst",
+        "status": "added"
+      },
+      {
+        "filename": "maint/fuzz/README.md",
+        "status": "added"
+      },
+      {
+        "filename": "maint/fuzz/common.py",
+        "status": "added"
+      },
+      {
+        "filename": "maint/fuzz/fuzz_http_client.py",
+        "status": "added"
+      },
+      {
+        "filename": "maint/fuzz/fuzz_http_server.py",
+        "status": "added"
+      },
+      {
+        "filename": "maint/fuzz/fuzz_httputil.py",
+        "status": "added"
+      },
+      {
+        "filename": "maint/fuzz/requirements.txt",
+        "status": "added"
+      },
+      {
+        "filename": "tornado/auth.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tornado/curl_httpclient.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tornado/escape.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tornado/http1connection.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tornado/httpclient.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tornado/httpserver.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tornado/httputil.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tornado/netutil.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tornado/platform/asyncio.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tornado/simple_httpclient.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tornado/test/api.txt",
+        "status": "modified"
+      },
+      {
+        "filename": "tornado/test/asyncio_test.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tornado/test/circlerefs_test.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tornado/test/curl_httpclient_test.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tornado/test/escape_test.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tornado/test/http1connection_test.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tornado/test/httpclient_test.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tornado/test/httpserver_test.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tornado/test/httputil_test.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tornado/test/iostream_test.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tornado/test/property_test.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tornado/test/security_corpus_test.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tornado/test/simple_httpclient_test.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tornado/test/util.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tornado/test/web_test.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tornado/test/websocket_test.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tornado/test/wsgi_test.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tornado/web.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tornado/wsgi.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

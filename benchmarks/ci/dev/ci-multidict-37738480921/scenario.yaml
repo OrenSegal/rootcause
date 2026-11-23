@@ -1,0 +1,14 @@
+id: ci-multidict-37738480921
+title: Drop the extra key and value references in md_update_from_dict()
+alert:
+  severity: ci
+  service: test-pypy-3-10
+  summary: 'workflow CI/CD failed on claude/dict-update-drop-owned at d523f7ab7d: step ''Run
+    unittests'' in job ''Test pypy-3.10'' failed.'
+truth:
+  grading: class
+  category: bad_code_deploy
+  service: multidict
+  required_evidence_any:
+  - d523f7ab7d
+provenance: recorded

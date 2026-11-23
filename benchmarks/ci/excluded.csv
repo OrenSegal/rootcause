@@ -1,7 +1,6 @@
 case_id,round,reason
 ci-fastapi-44694893735,m1-pr,verdict arguable
 ci-flask-33236247623,m1-pr,verdict uncertain
-ci-pytest-42785732184,m1-pr,leak: trace root span status is 'ok'
 ci-black-40142167378,main,default-branch run (excluded)
 ci-black-40259878945,main,default-branch run (excluded)
 ci-black-41256375361,main,default-branch run (excluded)
@@ -10,22 +9,42 @@ ci-fastapi-37688429128,main,default-branch run (excluded)
 ci-fastapi-43475880790,main,default-branch run (excluded)
 ci-fastapi-44310583790,main,default-branch run (excluded)
 ci-pydantic-37828953430,main,default-branch run (excluded)
-ci-click-33496785933,v1,verdict wrong
+ci-beets-42023625800,rerun,verdict uncertain
+ci-beets-42356357550,rerun,verdict uncertain
+ci-beets-43585709116,rerun,verdict uncertain
+ci-cibuildwheel-39835022532,rerun,verdict uncertain
+ci-huggingface_hub-37602711356,rerun,verdict uncertain
+ci-huggingface_hub-41473687733,rerun,verdict wrong
+ci-huggingface_hub-43403156991,rerun,verdict uncertain
+ci-ipykernel-33754574742,rerun,verdict uncertain
+ci-ipykernel-34841936815,rerun,verdict uncertain
+ci-joblib-41634904724,rerun,over the cap of 4 per repository
+ci-loguru-36411461280,rerun,duplicate of ci-loguru-36411461201
+ci-mitmproxy-37372784071,rerun,verdict uncertain
+ci-pip-tools-34495788813,rerun,verdict uncertain
+ci-pip-tools-37354477302,rerun,verdict uncertain
+ci-pip-tools-38449405196,rerun,verdict uncertain
+ci-pip-tools-43100599407,rerun,verdict uncertain
+ci-pip-tools-43729343639,rerun,verdict uncertain
+ci-pyvista-41881547109,rerun,verdict uncertain
+ci-pyvista-41881547265,rerun,verdict uncertain
+ci-pyvista-41912793680,rerun,verdict uncertain
+ci-pyvista-42875446730,rerun,verdict uncertain
+ci-sentry-python-43851909053,rerun,verdict uncertain
+ci-sentry-python-44420766729,rerun,verdict uncertain
+ci-typer-41852343678,rerun,verdict uncertain
 ci-pip-40913919882,v1,verdict wrong
 ci-pip-40929906813,v1,verdict wrong
 ci-pip-42223885293,v1,verdict arguable
 ci-pip-43157410626,v1,verdict wrong
 ci-pip-44045555196,v1,verdict arguable
-ci-scrapy-43506370153,v1,verdict wrong
 ci-starlette-40128596053,v1,duplicate of ci-starlette-39807406334
 ci-starlette-40132230591,v1,duplicate of ci-starlette-39807406334
 ci-starlette-40324648385,v1,duplicate of ci-starlette-39807406334
 ci-starlette-40861908438,v1,duplicate of ci-starlette-39807406334
 ci-starlette-41171429575,v1,duplicate of ci-starlette-39807406334
-ci-anyio-42467640327,v2,verdict wrong
 ci-sphinx-40389205348,v2,verdict unmatched
 ci-sphinx-40621575115,v2,verdict unmatched
-ci-sphinx-40744679692,v2,verdict wrong
 ci-sphinx-40744679694,v2,verdict unmatched
 ci-sphinx-41576711926,v2,verdict unmatched
 ci-sphinx-41763721208,v2,verdict unmatched
@@ -34,9 +53,6 @@ ci-sphinx-42492348058,v2,verdict unmatched
 ci-sphinx-42786935114,v2,verdict unmatched
 ci-sphinx-42915734813,v2,verdict unmatched
 ci-sphinx-44293155379,v2,verdict unmatched
-ci-sphinx-44293155460,v2,verdict wrong
-ci-yarl-40324913764,v2,verdict wrong
-ci-build-38002299563,v3,verdict wrong
 ci-matplotlib-43938180225,v3,duplicate of ci-matplotlib-43938180211
 ci-matplotlib-43938180240,v3,duplicate of ci-matplotlib-43938180211
 ci-matplotlib-44944357599,v3,verdict uncertain
@@ -47,20 +63,14 @@ ci-numpy-44969244266,v3,duplicate of ci-numpy-44969244228
 ci-numpy-44969244380,v3,duplicate of ci-numpy-44969244228
 ci-numpy-44969244439,v3,duplicate of ci-numpy-44969244228
 ci-pandas-44721698218,v3,verdict uncertain
-ci-poetry-39765933980,v3,verdict wrong
-ci-scikit-learn-44703893474,v3,verdict wrong
-ci-scikit-learn-44711150450,v3,verdict wrong
+ci-scikit-learn-44711150450,v3,leak: fix commit 0ab59f9bdc
 ci-scipy-44520410829,v3,verdict wrong
-ci-sympy-44524099951,v3,verdict wrong
 ci-sympy-44931840961,v3,verdict arguable
 ci-bokeh-43981079745,v4,duplicate of ci-bokeh-43981079637
 ci-bokeh-44518389819,v4,verdict arguable
 ci-bokeh-44518389846,v4,verdict arguable
 ci-dask-44522384834,v4,oversized: logs.jsonl is 108576422 bytes
 ci-dask-44533673971,v4,verdict arguable
-ci-panel-43759376300,v4,verdict wrong
-ci-panel-43954653640,v4,verdict wrong
-ci-panel-44356789031,v4,verdict wrong
 ci-pytest-xdist-40093733658,v4,verdict wrong
 ci-urllib3-44317367138,v4,duplicate of ci-urllib3-44317366923
 ci-plotly.py-44556032814,validate5,never reviewed

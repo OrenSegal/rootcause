@@ -1,0 +1,58 @@
+[
+  {
+    "author": "Viranshul-P",
+    "committedDate": "2026-11-19T10:22:00Z",
+    "messageHeadline": "printing: parenthesize Relational operands in code printers",
+    "oid": "37007a4167ab92508f1d715f666ff10c677560cb",
+    "files": [
+      {
+        "filename": "sympy/printing/c.py",
+        "status": "modified"
+      },
+      {
+        "filename": "sympy/printing/codeprinter.py",
+        "status": "modified"
+      },
+      {
+        "filename": "sympy/printing/fortran.py",
+        "status": "modified"
+      },
+      {
+        "filename": "sympy/printing/glsl.py",
+        "status": "modified"
+      },
+      {
+        "filename": "sympy/printing/jscode.py",
+        "status": "modified"
+      },
+      {
+        "filename": "sympy/printing/julia.py",
+        "status": "modified"
+      },
+      {
+        "filename": "sympy/printing/mathematica.py",
+        "status": "modified"
+      },
+      {
+        "filename": "sympy/printing/octave.py",
+        "status": "modified"
+      },
+      {
+        "filename": "sympy/printing/pycode.py",
+        "status": "modified"
+      },
+      {
+        "filename": "sympy/printing/rcode.py",
+        "status": "modified"
+      },
+      {
+        "filename": "sympy/printing/rust.py",
+        "status": "modified"
+      },
+      {
+        "filename": "sympy/printing/tests/test_codeprinter.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

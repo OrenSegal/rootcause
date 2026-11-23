@@ -6,6 +6,7 @@ alert:
   summary: 'workflow lint failed on fix-1999-url-userinfo-auth at 80f53aa5d3: step ''Lint
     code'' in job ''lint'' failed.'
 truth:
+  grading: class
   category: bad_code_deploy
   service: urllib3
   required_evidence_any:

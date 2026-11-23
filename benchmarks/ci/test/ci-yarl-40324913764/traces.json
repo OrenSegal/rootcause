@@ -1,0 +1,382 @@
+[
+  {
+    "span_id": "run-40324913764",
+    "trace_id": "run-40324913764",
+    "parent_id": null,
+    "service": "aiohttp",
+    "name": "Aiohttp",
+    "start": "2026-10-26T12:44:57Z",
+    "duration_ms": 257000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-121579022550",
+    "trace_id": "run-40324913764",
+    "parent_id": "run-40324913764",
+    "service": "aiohttp-tests-3-14",
+    "name": "Aiohttp tests (3.14)",
+    "start": "2026-10-26T12:46:04Z",
+    "duration_ms": 167000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121579022550-step-1",
+    "trace_id": "run-40324913764",
+    "parent_id": "job-121579022550",
+    "service": "aiohttp-tests-3-14",
+    "name": "Set up job",
+    "start": "2026-10-26T12:46:05Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121579022550-step-2",
+    "trace_id": "run-40324913764",
+    "parent_id": "job-121579022550",
+    "service": "aiohttp-tests-3-14",
+    "name": "Checkout aiohttp",
+    "start": "2026-10-26T12:46:07Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121579022550-step-3",
+    "trace_id": "run-40324913764",
+    "parent_id": "job-121579022550",
+    "service": "aiohttp-tests-3-14",
+    "name": "Checkout yarl",
+    "start": "2026-10-26T12:46:11Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121579022550-step-4",
+    "trace_id": "run-40324913764",
+    "parent_id": "job-121579022550",
+    "service": "aiohttp-tests-3-14",
+    "name": "Setup Python",
+    "start": "2026-10-26T12:46:12Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121579022550-step-5",
+    "trace_id": "run-40324913764",
+    "parent_id": "job-121579022550",
+    "service": "aiohttp-tests-3-14",
+    "name": "Update pip, wheel, setuptools",
+    "start": "2026-10-26T12:46:16Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121579022550-step-6",
+    "trace_id": "run-40324913764",
+    "parent_id": "job-121579022550",
+    "service": "aiohttp-tests-3-14",
+    "name": "Provision the dev env",
+    "start": "2026-10-26T12:46:17Z",
+    "duration_ms": 31000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121579022550-step-7",
+    "trace_id": "run-40324913764",
+    "parent_id": "job-121579022550",
+    "service": "aiohttp-tests-3-14",
+    "name": "Cythonize yarl",
+    "start": "2026-10-26T12:46:48Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121579022550-step-8",
+    "trace_id": "run-40324913764",
+    "parent_id": "job-121579022550",
+    "service": "aiohttp-tests-3-14",
+    "name": "Install yarl",
+    "start": "2026-10-26T12:46:51Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121579022550-step-17",
+    "trace_id": "run-40324913764",
+    "parent_id": "job-121579022550",
+    "service": "aiohttp-tests-3-14",
+    "name": "Post Checkout yarl",
+    "start": "2026-10-26T12:48:47Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121579022550-step-18",
+    "trace_id": "run-40324913764",
+    "parent_id": "job-121579022550",
+    "service": "aiohttp-tests-3-14",
+    "name": "Post Checkout aiohttp",
+    "start": "2026-10-26T12:48:48Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121579022550-step-19",
+    "trace_id": "run-40324913764",
+    "parent_id": "job-121579022550",
+    "service": "aiohttp-tests-3-14",
+    "name": "Complete job",
+    "start": "2026-10-26T12:48:49Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121579022920",
+    "trace_id": "run-40324913764",
+    "parent_id": "run-40324913764",
+    "service": "aiohttp-tests-master",
+    "name": "Aiohttp tests (master)",
+    "start": "2026-10-26T12:46:18Z",
+    "duration_ms": 124000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-121579022920-step-1",
+    "trace_id": "run-40324913764",
+    "parent_id": "job-121579022920",
+    "service": "aiohttp-tests-master",
+    "name": "Set up job",
+    "start": "2026-10-26T12:46:18Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121579022920-step-2",
+    "trace_id": "run-40324913764",
+    "parent_id": "job-121579022920",
+    "service": "aiohttp-tests-master",
+    "name": "Checkout aiohttp",
+    "start": "2026-10-26T12:46:19Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121579022920-step-3",
+    "trace_id": "run-40324913764",
+    "parent_id": "job-121579022920",
+    "service": "aiohttp-tests-master",
+    "name": "Checkout yarl",
+    "start": "2026-10-26T12:46:21Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121579022920-step-4",
+    "trace_id": "run-40324913764",
+    "parent_id": "job-121579022920",
+    "service": "aiohttp-tests-master",
+    "name": "Setup Python",
+    "start": "2026-10-26T12:46:22Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121579022920-step-5",
+    "trace_id": "run-40324913764",
+    "parent_id": "job-121579022920",
+    "service": "aiohttp-tests-master",
+    "name": "Update pip, wheel, setuptools",
+    "start": "2026-10-26T12:46:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121579022920-step-6",
+    "trace_id": "run-40324913764",
+    "parent_id": "job-121579022920",
+    "service": "aiohttp-tests-master",
+    "name": "Provision the dev env",
+    "start": "2026-10-26T12:46:24Z",
+    "duration_ms": 29000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121579022920-step-7",
+    "trace_id": "run-40324913764",
+    "parent_id": "job-121579022920",
+    "service": "aiohttp-tests-master",
+    "name": "Cythonize yarl",
+    "start": "2026-10-26T12:46:53Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121579022920-step-8",
+    "trace_id": "run-40324913764",
+    "parent_id": "job-121579022920",
+    "service": "aiohttp-tests-master",
+    "name": "Install yarl",
+    "start": "2026-10-26T12:46:56Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121579022920-step-9",
+    "trace_id": "run-40324913764",
+    "parent_id": "job-121579022920",
+    "service": "aiohttp-tests-master",
+    "name": "Run tests",
+    "start": "2026-10-26T12:47:00Z",
+    "duration_ms": 80000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-121579022920-step-17",
+    "trace_id": "run-40324913764",
+    "parent_id": "job-121579022920",
+    "service": "aiohttp-tests-master",
+    "name": "Post Checkout yarl",
+    "start": "2026-10-26T12:48:20Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121579022920-step-18",
+    "trace_id": "run-40324913764",
+    "parent_id": "job-121579022920",
+    "service": "aiohttp-tests-master",
+    "name": "Post Checkout aiohttp",
+    "start": "2026-10-26T12:48:21Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121579022920-step-19",
+    "trace_id": "run-40324913764",
+    "parent_id": "job-121579022920",
+    "service": "aiohttp-tests-master",
+    "name": "Complete job",
+    "start": "2026-10-26T12:48:21Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121579022972",
+    "trace_id": "run-40324913764",
+    "parent_id": "run-40324913764",
+    "service": "aiohttp-tests-3-15",
+    "name": "Aiohttp tests (3.15)",
+    "start": "2026-10-26T12:46:27Z",
+    "duration_ms": 166000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121579022972-step-1",
+    "trace_id": "run-40324913764",
+    "parent_id": "job-121579022972",
+    "service": "aiohttp-tests-3-15",
+    "name": "Set up job",
+    "start": "2026-10-26T12:46:27Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121579022972-step-2",
+    "trace_id": "run-40324913764",
+    "parent_id": "job-121579022972",
+    "service": "aiohttp-tests-3-15",
+    "name": "Checkout aiohttp",
+    "start": "2026-10-26T12:46:29Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121579022972-step-3",
+    "trace_id": "run-40324913764",
+    "parent_id": "job-121579022972",
+    "service": "aiohttp-tests-3-15",
+    "name": "Checkout yarl",
+    "start": "2026-10-26T12:46:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121579022972-step-4",
+    "trace_id": "run-40324913764",
+    "parent_id": "job-121579022972",
+    "service": "aiohttp-tests-3-15",
+    "name": "Setup Python",
+    "start": "2026-10-26T12:46:34Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121579022972-step-5",
+    "trace_id": "run-40324913764",
+    "parent_id": "job-121579022972",
+    "service": "aiohttp-tests-3-15",
+    "name": "Update pip, wheel, setuptools",
+    "start": "2026-10-26T12:46:36Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121579022972-step-6",
+    "trace_id": "run-40324913764",
+    "parent_id": "job-121579022972",
+    "service": "aiohttp-tests-3-15",
+    "name": "Provision the dev env",
+    "start": "2026-10-26T12:46:37Z",
+    "duration_ms": 19000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121579022972-step-7",
+    "trace_id": "run-40324913764",
+    "parent_id": "job-121579022972",
+    "service": "aiohttp-tests-3-15",
+    "name": "Cythonize yarl",
+    "start": "2026-10-26T12:46:56Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121579022972-step-8",
+    "trace_id": "run-40324913764",
+    "parent_id": "job-121579022972",
+    "service": "aiohttp-tests-3-15",
+    "name": "Install yarl",
+    "start": "2026-10-26T12:46:58Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121579022972-step-17",
+    "trace_id": "run-40324913764",
+    "parent_id": "job-121579022972",
+    "service": "aiohttp-tests-3-15",
+    "name": "Post Checkout yarl",
+    "start": "2026-10-26T12:49:10Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121579022972-step-18",
+    "trace_id": "run-40324913764",
+    "parent_id": "job-121579022972",
+    "service": "aiohttp-tests-3-15",
+    "name": "Post Checkout aiohttp",
+    "start": "2026-10-26T12:49:10Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121579022972-step-19",
+    "trace_id": "run-40324913764",
+    "parent_id": "job-121579022972",
+    "service": "aiohttp-tests-3-15",
+    "name": "Complete job",
+    "start": "2026-10-26T12:49:11Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

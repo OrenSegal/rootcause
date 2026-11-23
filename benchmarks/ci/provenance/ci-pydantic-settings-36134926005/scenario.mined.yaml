@@ -1,0 +1,19 @@
+# Mined from https://github.com/pydantic/pydantic-settings/actions/runs/36134926005
+# (pydantic/pydantic-settings, licence MIT). Fixed by run
+# https://github.com/pydantic/pydantic-settings/actions/runs/36134926005. Label rule:
+# the first attempt failed and a re-run of the same pull-request run passed. Fix
+# touched: nothing (rerun).
+id: ci-pydantic-settings-36134926005
+title: Preserve CliSubCommand alias case with case_sensitive=False
+alert:
+  severity: ci
+  service: test-py3-10-on-macos-latest
+  summary: 'workflow CI failed on fix-clisubcommand-case-20260924 at b1c42c1776: step ''store
+    coverage files'' in job ''test py3.10 on macos-latest'' failed.'
+truth:
+  category: infrastructure
+  service: pydantic-settings
+  required_evidence_any:
+  - log-0428
+  - log-0494
+provenance: recorded

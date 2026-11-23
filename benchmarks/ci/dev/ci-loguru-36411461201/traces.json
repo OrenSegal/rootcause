@@ -1,0 +1,92 @@
+[
+  {
+    "span_id": "run-36411461201",
+    "trace_id": "run-36411461201",
+    "parent_id": null,
+    "service": "docs",
+    "name": "Docs",
+    "start": "2026-09-28T10:44:13Z",
+    "duration_ms": 114000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-108892398326",
+    "trace_id": "run-36411461201",
+    "parent_id": "run-36411461201",
+    "service": "docs",
+    "name": "docs",
+    "start": "2026-09-28T10:44:15Z",
+    "duration_ms": 112000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-108892398326-step-1",
+    "trace_id": "run-36411461201",
+    "parent_id": "job-108892398326",
+    "service": "docs",
+    "name": "Set up job",
+    "start": "2026-09-28T10:44:16Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-108892398326-step-2",
+    "trace_id": "run-36411461201",
+    "parent_id": "job-108892398326",
+    "service": "docs",
+    "name": "Checkout repository",
+    "start": "2026-09-28T10:44:17Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-108892398326-step-3",
+    "trace_id": "run-36411461201",
+    "parent_id": "job-108892398326",
+    "service": "docs",
+    "name": "Set up Python",
+    "start": "2026-09-28T10:44:17Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-108892398326-step-4",
+    "trace_id": "run-36411461201",
+    "parent_id": "job-108892398326",
+    "service": "docs",
+    "name": "Install dependencies",
+    "start": "2026-09-28T10:44:18Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-108892398326-step-5",
+    "trace_id": "run-36411461201",
+    "parent_id": "job-108892398326",
+    "service": "docs",
+    "name": "Build documentation",
+    "start": "2026-09-28T10:44:22Z",
+    "duration_ms": 102000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-108892398326-step-10",
+    "trace_id": "run-36411461201",
+    "parent_id": "job-108892398326",
+    "service": "docs",
+    "name": "Post Checkout repository",
+    "start": "2026-09-28T10:46:04Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-108892398326-step-11",
+    "trace_id": "run-36411461201",
+    "parent_id": "job-108892398326",
+    "service": "docs",
+    "name": "Complete job",
+    "start": "2026-09-28T10:46:05Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

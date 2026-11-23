@@ -1,0 +1,34 @@
+[
+  {
+    "author": "philippjfr",
+    "committedDate": "2026-11-15T20:39:41Z",
+    "messageHeadline": "docs: Add 1.11.0 release notes",
+    "oid": "4a225abe2a361cbe3c8522e95f447f8499be55f5",
+    "files": [
+      {
+        "filename": "CHANGELOG.md",
+        "status": "modified"
+      },
+      {
+        "filename": "doc/about/releases.md",
+        "status": "modified"
+      },
+      {
+        "filename": "doc/how_to/authentication/configuration.md",
+        "status": "modified"
+      },
+      {
+        "filename": "doc/how_to/authentication/trouble_shooting.md",
+        "status": "modified"
+      },
+      {
+        "filename": "doc/how_to/server/proxy.md",
+        "status": "modified"
+      },
+      {
+        "filename": "doc/upgrade.md",
+        "status": "modified"
+      }
+    ]
+  }
+]

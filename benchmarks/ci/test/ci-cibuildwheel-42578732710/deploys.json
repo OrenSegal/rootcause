@@ -1,0 +1,35 @@
+[
+  {
+    "id": "d7e33c2ca1",
+    "service": "cibuildwheel",
+    "version": "d7e33c2ca1",
+    "ts": "2026-11-09T07:20:31Z",
+    "author": "cibuildwheel-bot[bot]",
+    "summary": "Update dependencies",
+    "config_before": {
+      "cibuildwheel/resources/pinned_docker_images.cfg": "previous",
+      "cibuildwheel/resources/virtualenv.toml": "previous"
+    },
+    "config_after": {
+      "cibuildwheel/resources/pinned_docker_images.cfg": "modified in d7e33c2ca1",
+      "cibuildwheel/resources/virtualenv.toml": "modified in d7e33c2ca1"
+    },
+    "files": [
+      "cibuildwheel/resources/constraints-pyodide312.txt",
+      "cibuildwheel/resources/constraints-pyodide313.txt",
+      "cibuildwheel/resources/constraints-pyodide314.txt",
+      "cibuildwheel/resources/constraints-pyodide315.txt",
+      "cibuildwheel/resources/constraints-python310.txt",
+      "cibuildwheel/resources/constraints-python311.txt",
+      "cibuildwheel/resources/constraints-python312.txt",
+      "cibuildwheel/resources/constraints-python313.txt",
+      "cibuildwheel/resources/constraints-python314.txt",
+      "cibuildwheel/resources/constraints-python315.txt",
+      "cibuildwheel/resources/constraints-python39.txt",
+      "cibuildwheel/resources/constraints.txt",
+      "cibuildwheel/resources/pinned_docker_images.cfg",
+      "cibuildwheel/resources/virtualenv.toml",
+      "docs/working-examples.md"
+    ]
+  }
+]

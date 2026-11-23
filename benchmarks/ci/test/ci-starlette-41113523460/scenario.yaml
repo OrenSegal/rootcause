@@ -6,6 +6,7 @@ alert:
   summary: 'workflow Test Suite failed on fix/request-url-path-for-843 at 7acdf700fb: step
     ''Run linting checks'' in job ''Python 3.15'' failed.'
 truth:
+  grading: class
   category: bad_code_deploy
   service: starlette
   required_evidence_any:

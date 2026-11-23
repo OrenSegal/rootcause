@@ -6,6 +6,7 @@ import csv
 import gzip
 import importlib.util
 import json
+from collections import Counter
 from functools import cache
 from pathlib import Path
 
@@ -16,7 +17,7 @@ from rootcause.adapters.fixtures import discover, load_case, write_case
 from rootcause.application.agent import RunResult
 from rootcause.application.evals import grade
 from rootcause.domain.answers import Diagnosis, Outcome
-from rootcause.domain.scenario import Case, Category
+from rootcause.domain.scenario import Case, Category, category_class
 
 ROOT = SCENARIOS.parent
 BENCH = ROOT / "benchmarks" / "ci"
@@ -60,11 +61,85 @@ def test_the_grader_passes_the_oracle_and_fails_no_answer_and_a_wrong_category(p
         category=truth.category, service=truth.service, summary="Oracle answer.",
         evidence=truth.required_evidence_any[:1], recommended_action="n/a", confidence=1.0,
     )  # fmt: skip
-    wrong = oracle.model_copy(update={"category": next(c for c in Category if c != truth.category)})
+    other_class = next(c for c in Category if category_class(c) not in (_class(case), None))
+    wrong = oracle.model_copy(update={"category": other_class})
     assert _graded(case, oracle, Outcome.ANSWERED)
     assert not _graded(case, oracle, Outcome.ANSWERED, tool_calls=0)
     assert not _graded(case, None, Outcome.NO_ANSWER)
     assert not _graded(case, wrong, Outcome.ANSWERED)
+
+
+def _class(case: Case) -> str | None:
+    truth = case.scenario.truth
+    return category_class(truth.category) if truth else None
+
+
+def _first(truth_class: str) -> Case:
+    """The first case of a class, chosen at run time: the directories get regenerated."""
+    return next(c for c in map(_case, CASES) if _class(c) == truth_class)
+
+
+def _answer(category: Category, evidence: list[str]) -> Diagnosis:
+    return Diagnosis(
+        category=category, service="wrong-service", summary="s", evidence=evidence,
+        recommended_action="n/a", confidence=0.5,
+    )  # fmt: skip
+
+
+@pytest.mark.parametrize("path", CASES, ids=lambda p: p.name)
+def test_every_case_is_class_graded(path: Path):
+    truth = _case(path).scenario.truth
+    assert truth is not None and truth.grading == "class"
+
+
+def test_a_not_change_case_passes_on_any_real_log_line_and_no_commit():
+    case = _first("not_change")
+    truth = case.scenario.truth
+    assert truth is not None
+    other_log = next(x.id for x in case.store.logs if x.id not in truth.required_evidence_any)
+    commit = case.store.deploys[0].id
+    flake = _answer(Category.INFRASTRUCTURE, [other_log])
+    assert _graded(case, flake, Outcome.ANSWERED)
+    assert _graded(case, flake.model_copy(update={"category": Category.DEPENDENCY_FAILURE}),
+                   Outcome.ANSWERED)  # fmt: skip
+    assert not _graded(case, _answer(Category.INFRASTRUCTURE, [other_log, commit]),
+                       Outcome.ANSWERED)  # fmt: skip
+    assert not _graded(case, _answer(Category.BAD_CODE_DEPLOY, [other_log]), Outcome.ANSWERED)
+    assert not _graded(case, _answer(Category.NO_INCIDENT, [other_log]), Outcome.ANSWERED)
+    assert not _graded(case, _answer(Category.INFRASTRUCTURE, ["log-none"]), Outcome.ANSWERED)
+
+
+def test_a_change_case_passes_with_either_change_category_and_fails_on_the_wrong_commit():
+    case = _first("change")
+    truth = case.scenario.truth
+    assert truth is not None
+    guilty = truth.required_evidence_any[0]
+    for category in (Category.CONFIG_CHANGE, Category.BAD_CODE_DEPLOY):
+        assert _graded(case, _answer(category, [guilty]), Outcome.ANSWERED)
+    assert not _graded(case, _answer(Category.INFRASTRUCTURE, [guilty]), Outcome.ANSWERED)
+    log = case.store.logs[0].id
+    assert not _graded(case, _answer(Category.BAD_CODE_DEPLOY, [log]), Outcome.ANSWERED)
+    multi = next(c for c in map(_case, CASES) if _class(c) == "change" and len(c.store.deploys) > 1)
+    multi_truth = multi.scenario.truth
+    assert multi_truth is not None
+    innocent = next(
+        d.id for d in multi.store.deploys if d.id not in multi_truth.required_evidence_any
+    )
+    assert not _graded(multi, _answer(Category.BAD_CODE_DEPLOY, [innocent]), Outcome.ANSWERED)
+
+
+def test_the_class_grade_records_what_a_report_needs():
+    case = _first("not_change")
+    log = case.store.logs[0].id
+    result = RunResult[Diagnosis](
+        run_id="r", agent="a", outcome=Outcome.ANSWERED,
+        answer=_answer(Category.RESOURCE_EXHAUSTION, [log]), steps=1, tool_calls=[],
+        cost_usd=0.0, wall_ms=0.0,
+    )  # fmt: skip
+    g = grade(case, result, provider="p", mode="single", tool_calls=1, strict_service=True)
+    assert (g.truth_class, g.class_ok, g.commit_ok) == ("not_change", True, True)
+    assert not g.category_ok and not g.service_ok
+    assert g.passed and g.passes(strict_service=True)
 
 
 def test_dev_and_test_share_no_repository():
@@ -99,14 +174,67 @@ def test_labels_csv_matches_the_directories():
             assert not set(truth.required_evidence_any) & set(deploy_ids)
 
 
-def test_the_split_is_the_seeded_one():
-    """The freeze script's split, rerun on labels.csv, gives the committed split."""
+@cache
+def _freeze():
     path = ROOT / "scripts" / "freeze_ci_benchmark.py"
     spec = importlib.util.spec_from_file_location(path.stem, path)
     assert spec and spec.loader
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
-    assert module.split(LABELS) == {r["repo"]: r["split"] for r in LABELS}
+    return module
+
+
+def test_the_split_is_the_seeded_one():
+    """The freeze script's split, rerun on labels.csv, gives the committed split."""
+    assert _freeze().split(LABELS) == {r["repo"]: r["split"] for r in LABELS}
+
+
+def test_dev_holds_about_a_third_of_not_change_and_a_quarter_of_change():
+    freeze = _freeze()
+    for c, share in freeze.DEV_SHARE.items():
+        total = sum(r["class"] == c for r in LABELS)
+        dev = sum(r["class"] == c and r["split"] == "dev" for r in LABELS)
+        assert abs(dev - total * share) <= freeze.DEV_SLACK, c
+
+
+def test_every_label_has_a_source_that_verdicts_csv_backs():
+    """rule: the review recorded the rule's label as right. review: it recorded the rule's
+    label as wrong and verdicts.csv holds the label the scope document states. rerun: a
+    re-run of the same pull-request run passed, and the review confirmed the log."""
+    verdicts = {r["case_id"]: r for r in csv.DictReader((BENCH / "verdicts.csv").open())}
+    for row in LABELS:
+        v = verdicts[row["id"]]
+        assert row["label_source"] == v["label_source"]
+        assert row["class"] == v["table_class"] or v["table_class"] == ""
+        if row["label_source"] == "review":
+            assert v["verdict"] == "wrong" and v["note"]
+            assert row["category"] == v["table_category"]
+            assert row["guilty_commit"] == v["table_commit"]
+        else:
+            assert v["verdict"] == "right"
+        if row["label_source"] == "rerun":
+            assert row["round"] == "rerun" and row["class"] == "not_change" and v["note"]
+
+
+def test_rerun_cases_come_from_repositories_no_other_case_does_and_at_most_four_each():
+    rerun = Counter(r["repo"] for r in LABELS if r["label_source"] == "rerun")
+    others = {r["repo"] for r in LABELS if r["label_source"] != "rerun"}
+    assert rerun and not set(rerun) & others
+    assert max(rerun.values()) <= _freeze().MAX_RERUN_PER_REPO
+
+
+def test_a_rerun_trace_gets_the_failed_attempt_root_status_back():
+    """GitHub can rewrite a failed attempt's conclusion to success once a re-run passes;
+    its jobs keep theirs. The freeze sets the root span back to error for re-run cases."""
+    repaired = _freeze().repaired_traces
+    root = {"span_id": "run-1", "parent_id": None, "status": "ok"}
+    job = {"span_id": "job-2", "parent_id": "run-1", "status": "error"}
+    step = {"span_id": "job-2-step-1", "parent_id": "job-2", "status": "error"}
+    rerun, red_to_green = {"status": "rerun"}, {"status": "ahead"}
+    assert repaired([root, job, step], rerun)[0]["status"] == "error"
+    assert repaired([root, job, step], red_to_green)[0]["status"] == "ok"
+    passed = job | {"status": "ok"}
+    assert repaired([root, passed, step], rerun)[0]["status"] == "ok"
 
 
 def _visible_text(case: Case) -> str:
@@ -127,7 +255,7 @@ def test_nothing_the_agent_reads_reveals_the_fix_or_the_green_run(path: Path):
     run failed: GitHub rewrites it to success when a rerun passes."""
     case = _case(path)
     fix = json.loads((PROVENANCE / path.name / "fix.json").read_text())
-    run = json.loads((PROVENANCE / path.name / "run.json").read_text())
+    run = json.loads(gzip.decompress((PROVENANCE / path.name / "run.json.gz").read_bytes()))
     text = _visible_text(case)
     if fix.get("status") != "rerun":
         for sha in {fix["fixed_sha"], *fix["commits"]}:
@@ -137,6 +265,14 @@ def test_nothing_the_agent_reads_reveals_the_fix_or_the_green_run(path: Path):
         assert green_run not in text
     root = [span for span in case.store.spans if span.parent_id is None]
     assert len(root) == 1 and root[0].status == "error"
+    if fix.get("status") == "rerun":
+        # The run's final (passing) attempt must not show: the trace is attempt 1's, so
+        # it ends when attempt 1's last job did, and no span says the run passed.
+        jobs = [span for span in case.store.spans if span.parent_id == root[0].span_id]
+        assert any(span.status == "error" for span in jobs)
+        end = max(span.start.timestamp() * 1000 + span.duration_ms for span in jobs)
+        root_end = root[0].start.timestamp() * 1000 + root[0].duration_ms
+        assert root_end <= end + 60_000
 
 
 def test_provenance_is_out_of_reach_of_the_loader():

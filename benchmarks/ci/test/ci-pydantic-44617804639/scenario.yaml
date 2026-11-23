@@ -6,6 +6,7 @@ alert:
   summary: 'workflow CI failed on codex/json-narrow-expanded at 52a98fcea4: step ''Run uv
     run --no-sync pytest'' in job ''core / Test with debug build (3.14, stream-verify)'' failed.'
 truth:
+  grading: class
   category: bad_code_deploy
   service: pydantic
   required_evidence_any:

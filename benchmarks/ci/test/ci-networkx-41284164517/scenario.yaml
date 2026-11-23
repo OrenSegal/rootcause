@@ -6,6 +6,7 @@ alert:
   summary: 'workflow style failed on fix/current-flow-betweenness-small-graphs at 3c1969356f:
     step ''Lint'' in job ''format'' failed.'
 truth:
+  grading: class
   category: bad_code_deploy
   service: networkx
   required_evidence_any:

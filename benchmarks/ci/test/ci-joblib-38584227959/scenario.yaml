@@ -1,0 +1,14 @@
+id: ci-joblib-38584227959
+title: FIX race condition in accessing _FUNCTION_HASHES
+alert:
+  severity: ci
+  service: testing-distributed-latest-ubuntu-latest-latest-supported-true
+  summary: 'workflow CI failed on 1885-fix-cache-thread-race at 282771718f: step ''Run tests''
+    in job ''Testing (distributed-latest, ubuntu-latest, latest_supported, true)'' failed.'
+truth:
+  grading: class
+  category: infrastructure
+  service: joblib
+  required_evidence_any:
+  - log-3933
+provenance: recorded

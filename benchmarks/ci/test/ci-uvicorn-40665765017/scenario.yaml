@@ -6,6 +6,7 @@ alert:
   summary: 'workflow Test Suite failed on sansio-close-on-oversize-frame at 64ea25d66b: step
     ''Run tests'' in job ''Python 3.11 ubuntu-latest'' failed.'
 truth:
+  grading: class
   category: bad_code_deploy
   service: uvicorn
   required_evidence_any:

@@ -1,0 +1,26 @@
+[
+  {
+    "author": "bastimeyer",
+    "committedDate": "2026-10-22T18:46:17Z",
+    "messageHeadline": "build: bump brotli to 1.2.1",
+    "oid": "dac747c3974eebaed7ca29b4ea6401f1ff1075f3",
+    "files": [
+      {
+        "filename": "uv.lock",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "bastimeyer",
+    "committedDate": "2026-10-22T18:46:32Z",
+    "messageHeadline": "ci.github: bump brotli 3.14t temp wheels to 1.2.1",
+    "oid": "83bf4bcbc41425b1d53abfc91333d373993b80e8",
+    "files": [
+      {
+        "filename": ".github/workflows/scripts/install-temp-dependencies.sh",
+        "status": "modified"
+      }
+    ]
+  }
+]

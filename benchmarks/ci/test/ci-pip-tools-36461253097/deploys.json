@@ -1,0 +1,19 @@
+[
+  {
+    "id": "58854f545a",
+    "service": "pip-tools",
+    "version": "58854f545a",
+    "ts": "2026-09-28T17:52:39Z",
+    "author": "pre-commit-ci[bot]",
+    "summary": "[pre-commit.ci] pre-commit autoupdate",
+    "config_before": {
+      ".pre-commit-config.yaml": "previous"
+    },
+    "config_after": {
+      ".pre-commit-config.yaml": "modified in 58854f545a"
+    },
+    "files": [
+      ".pre-commit-config.yaml"
+    ]
+  }
+]

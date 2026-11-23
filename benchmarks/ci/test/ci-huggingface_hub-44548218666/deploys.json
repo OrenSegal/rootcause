@@ -1,0 +1,30 @@
+[
+  {
+    "id": "cb346b6207",
+    "service": "huggingface_hub",
+    "version": "cb346b6207",
+    "ts": "2026-11-13T09:55:49Z",
+    "author": "Wauplin",
+    "summary": "[Cache] Fix concurrent downloads without symlinks",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "src/huggingface_hub/file_download.py",
+      "tests/test_file_download.py"
+    ]
+  },
+  {
+    "id": "61425a1e24",
+    "service": "huggingface_hub",
+    "version": "61425a1e24",
+    "ts": "2026-11-19T14:50:55Z",
+    "author": "Wauplin",
+    "summary": "Republish snapshot on force_download without symlinks, drop new tests",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "src/huggingface_hub/file_download.py",
+      "tests/test_file_download.py"
+    ]
+  }
+]

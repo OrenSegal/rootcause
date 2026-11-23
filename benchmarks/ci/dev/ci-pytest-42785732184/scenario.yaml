@@ -1,0 +1,14 @@
+id: ci-pytest-42785732184
+title: Fix startup crash on Python 3.10.0 caused by missing NodeId cache
+alert:
+  severity: ci
+  service: build-ubuntu-py310-pluggy
+  summary: 'workflow test failed on fix-nodeid-str-cache-3.10.0 at bef6274aca: step ''Test
+    without coverage'' in job ''build (ubuntu-py310-pluggy)'' failed.'
+truth:
+  grading: class
+  category: infrastructure
+  service: pytest
+  required_evidence_any:
+  - log-0828
+provenance: recorded

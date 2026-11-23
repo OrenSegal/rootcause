@@ -1,0 +1,18 @@
+id: ci-sphinx-44293155460
+title: Fix fallback for empty plural translations
+alert:
+  severity: ci
+  service: python-3-16-docutils-0-22
+  summary: 'workflow CI failed on fix-14167-empty-plural-translation at 2ef376198c: step ''Set
+    up Python 3.16 (deadsnakes)'' in job ''Python 3.16 (Docutils 0.22)'' failed.'
+truth:
+  grading: class
+  category: infrastructure
+  service: sphinx
+  required_evidence_any:
+  - log-31093
+  - log-31094
+  - log-20027
+  - log-20028
+  - log-0733
+provenance: recorded

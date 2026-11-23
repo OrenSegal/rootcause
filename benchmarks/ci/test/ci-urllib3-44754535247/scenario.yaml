@@ -6,6 +6,7 @@ alert:
   summary: 'workflow CI failed on fix/read-chunked-decode-mode-switch at 37ad69262e: step
     ''Combine & check coverage'' in job ''coverage'' failed.'
 truth:
+  grading: class
   category: bad_code_deploy
   service: urllib3
   required_evidence_any:

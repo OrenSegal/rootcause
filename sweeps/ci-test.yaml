@@ -1,0 +1,13 @@
+# The held-out split of benchmarks/ci. Truths, the split, the grader and this file are
+# committed before any model runs on these cases, and no result here is used to change
+# the brief, the tools or the grader.
+# The heuristic blames the head commit. It is deterministic and runs three times only
+# to share the table and to be the A side of `rootcause diff`.
+name: ci-test-2026-11-23
+repeats: 3
+scenarios: benchmarks/ci/test
+configs:
+  - {name: heuristic, provider: heuristic, model: heuristic}
+  - {name: haiku-5.5-high, provider: claude-code, model: claude-haiku-5-5, effort: high}
+  - {name: sonnet-5.5-high, provider: claude-code, model: claude-sonnet-5-5, effort: high}
+  - {name: opus-5.5-high, provider: claude-code, model: claude-opus-5-5, effort: high}

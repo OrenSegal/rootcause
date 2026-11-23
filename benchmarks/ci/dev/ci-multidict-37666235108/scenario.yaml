@@ -1,0 +1,14 @@
+id: ci-multidict-37666235108
+title: Rewrite md_repr() on top of md_walk_all()
+alert:
+  severity: ci
+  service: inlining
+  summary: 'workflow CI/CD failed on claude/md-repr-md-walk-all-bd3f0d at 862acaf16a: step
+    ''Check that the hot paths keep their helpers inlined'' in job ''Inlining'' failed.'
+truth:
+  grading: class
+  category: bad_code_deploy
+  service: multidict
+  required_evidence_any:
+  - 862acaf16a
+provenance: recorded

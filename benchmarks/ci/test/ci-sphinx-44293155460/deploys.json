@@ -1,0 +1,17 @@
+[
+  {
+    "id": "2ef376198c",
+    "service": "sphinx",
+    "version": "2ef376198c",
+    "ts": "2026-11-18T11:10:58Z",
+    "author": "safaeelm1-rgb",
+    "summary": "Fix fallback for empty plural translations",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "CHANGES.rst",
+      "sphinx/themes/basic/static/doctools.js",
+      "tests/js/doctools.spec.js"
+    ]
+  }
+]

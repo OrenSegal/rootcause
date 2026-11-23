@@ -1,0 +1,122 @@
+[
+  {
+    "span_id": "run-35669720079",
+    "trace_id": "run-35669720079",
+    "parent_id": null,
+    "service": "docs",
+    "name": "Docs",
+    "start": "2026-09-21T23:55:19Z",
+    "duration_ms": 307000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-106563225122",
+    "trace_id": "run-35669720079",
+    "parent_id": "run-35669720079",
+    "service": "build-docs",
+    "name": "Build docs",
+    "start": "2026-09-21T23:55:22Z",
+    "duration_ms": 293000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-106563225122-step-1",
+    "trace_id": "run-35669720079",
+    "parent_id": "job-106563225122",
+    "service": "build-docs",
+    "name": "Set up job",
+    "start": "2026-09-21T23:55:23Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-106563225122-step-2",
+    "trace_id": "run-35669720079",
+    "parent_id": "job-106563225122",
+    "service": "build-docs",
+    "name": "Run actions/checkout@v7",
+    "start": "2026-09-21T23:55:24Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-106563225122-step-3",
+    "trace_id": "run-35669720079",
+    "parent_id": "job-106563225122",
+    "service": "build-docs",
+    "name": "Set up Python 3.14",
+    "start": "2026-09-21T23:55:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-106563225122-step-4",
+    "trace_id": "run-35669720079",
+    "parent_id": "job-106563225122",
+    "service": "build-docs",
+    "name": "Install uv",
+    "start": "2026-09-21T23:55:32Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-106563225122-step-5",
+    "trace_id": "run-35669720079",
+    "parent_id": "job-106563225122",
+    "service": "build-docs",
+    "name": "Install dependencies",
+    "start": "2026-09-21T23:55:34Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-106563225122-step-6",
+    "trace_id": "run-35669720079",
+    "parent_id": "job-106563225122",
+    "service": "build-docs",
+    "name": "Build docs",
+    "start": "2026-09-21T23:55:37Z",
+    "duration_ms": 271000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-106563225122-step-7",
+    "trace_id": "run-35669720079",
+    "parent_id": "job-106563225122",
+    "service": "build-docs",
+    "name": "Check examples index is up to date",
+    "start": "2026-09-22T00:00:08Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-106563225122-step-8",
+    "trace_id": "run-35669720079",
+    "parent_id": "job-106563225122",
+    "service": "build-docs",
+    "name": "Upload docs preview artifact",
+    "start": "2026-09-22T00:00:08Z",
+    "duration_ms": 6000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-106563225122-step-18",
+    "trace_id": "run-35669720079",
+    "parent_id": "job-106563225122",
+    "service": "build-docs",
+    "name": "Post Run actions/checkout@v7",
+    "start": "2026-09-22T00:00:14Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-106563225122-step-19",
+    "trace_id": "run-35669720079",
+    "parent_id": "job-106563225122",
+    "service": "build-docs",
+    "name": "Complete job",
+    "start": "2026-09-22T00:00:14Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

@@ -1,0 +1,18 @@
+# Mined from https://github.com/ipython/ipykernel/actions/runs/40696432425
+# (ipython/ipykernel, licence BSD-3-Clause). Fixed by run
+# https://github.com/ipython/ipykernel/actions/runs/40696432425. Label rule: the first
+# attempt failed and a re-run of the same pull-request run passed. Fix touched: nothing
+# (rerun).
+id: ci-ipykernel-40696432425
+title: Fix recent test failre to to new version of pytest.
+alert:
+  severity: ci
+  service: build-windows-latest-qt5-pypy-3-11
+  summary: 'workflow ipykernel tests failed on new-pytest at 88d025a63a: step ''Run the tests
+    on pypy'' in job ''build (windows-latest, qt5, pypy-3.11)'' failed.'
+truth:
+  category: infrastructure
+  service: ipykernel
+  required_evidence_any:
+  - log-0806
+provenance: recorded

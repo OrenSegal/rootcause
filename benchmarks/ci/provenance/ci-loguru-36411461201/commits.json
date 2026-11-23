@@ -1,0 +1,278 @@
+[
+  {
+    "author": "blockersiontko",
+    "committedDate": "2026-09-24T13:35:00Z",
+    "messageHeadline": "Reformatted docs to .md",
+    "oid": "bf507b02c57aaa30a8dcbc9ec4683c07332969f7",
+    "files": [
+      {
+        "filename": "docs/api.md",
+        "status": "added"
+      },
+      {
+        "filename": "docs/api.rst",
+        "status": "removed"
+      },
+      {
+        "filename": "docs/api/logger.md",
+        "status": "added"
+      },
+      {
+        "filename": "docs/api/logger.rst",
+        "status": "removed"
+      },
+      {
+        "filename": "docs/api/type_hints.md",
+        "status": "added"
+      },
+      {
+        "filename": "docs/api/type_hints.rst",
+        "status": "removed"
+      },
+      {
+        "filename": "docs/api/type_hints_source.md",
+        "status": "added"
+      },
+      {
+        "filename": "docs/api/type_hints_source.rst",
+        "status": "removed"
+      },
+      {
+        "filename": "docs/index.md",
+        "status": "added"
+      },
+      {
+        "filename": "docs/index.rst",
+        "status": "removed"
+      },
+      {
+        "filename": "docs/overview.md",
+        "status": "added"
+      },
+      {
+        "filename": "docs/overview.rst",
+        "status": "removed"
+      },
+      {
+        "filename": "docs/project.md",
+        "status": "added"
+      },
+      {
+        "filename": "docs/project.rst",
+        "status": "removed"
+      },
+      {
+        "filename": "docs/project/changelog.md",
+        "status": "added"
+      },
+      {
+        "filename": "docs/project/changelog.rst",
+        "status": "removed"
+      },
+      {
+        "filename": "docs/project/contributing.md",
+        "status": "added"
+      },
+      {
+        "filename": "docs/project/contributing.rst",
+        "status": "removed"
+      },
+      {
+        "filename": "docs/project/license.md",
+        "status": "added"
+      },
+      {
+        "filename": "docs/project/license.rst",
+        "status": "removed"
+      },
+      {
+        "filename": "docs/resources.md",
+        "status": "added"
+      },
+      {
+        "filename": "docs/resources.rst",
+        "status": "removed"
+      },
+      {
+        "filename": "docs/resources/migration.md",
+        "status": "added"
+      },
+      {
+        "filename": "docs/resources/migration.rst",
+        "status": "removed"
+      },
+      {
+        "filename": "docs/resources/recipes.md",
+        "status": "added"
+      },
+      {
+        "filename": "docs/resources/recipes.rst",
+        "status": "removed"
+      },
+      {
+        "filename": "docs/resources/troubleshooting.md",
+        "status": "renamed"
+      }
+    ]
+  },
+  {
+    "author": "blockersiontko",
+    "committedDate": "2026-09-24T14:14:41Z",
+    "messageHeadline": "WIP - fix documentation",
+    "oid": "cd4efa89f3dd5c9aaece844e74abed32ccdfcb1f",
+    "files": [
+      {
+        "filename": "docs/api.md",
+        "status": "removed"
+      },
+      {
+        "filename": "docs/api.rst",
+        "status": "added"
+      },
+      {
+        "filename": "docs/api/logger.md",
+        "status": "removed"
+      },
+      {
+        "filename": "docs/api/logger.rst",
+        "status": "added"
+      },
+      {
+        "filename": "docs/api/type_hints.md",
+        "status": "removed"
+      },
+      {
+        "filename": "docs/api/type_hints.rst",
+        "status": "added"
+      },
+      {
+        "filename": "docs/conf.py",
+        "status": "modified"
+      },
+      {
+        "filename": "docs/index.md",
+        "status": "modified"
+      },
+      {
+        "filename": "docs/overview.md",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "blockersiontko",
+    "committedDate": "2026-09-28T10:29:30Z",
+    "messageHeadline": "Migrate remaining docs from reStructuredText to Markdown",
+    "oid": "ac6b3fabab495c2c628dcb013af25a1de1570aec",
+    "files": [
+      {
+        "filename": "CHANGELOG.md",
+        "status": "added"
+      },
+      {
+        "filename": "CHANGELOG.rst",
+        "status": "removed"
+      },
+      {
+        "filename": "CONTRIBUTING.md",
+        "status": "added"
+      },
+      {
+        "filename": "CONTRIBUTING.rst",
+        "status": "removed"
+      },
+      {
+        "filename": "docs/api.md",
+        "status": "added"
+      },
+      {
+        "filename": "docs/api.rst",
+        "status": "removed"
+      },
+      {
+        "filename": "docs/api/type_hints.md",
+        "status": "added"
+      },
+      {
+        "filename": "docs/api/type_hints.rst",
+        "status": "removed"
+      },
+      {
+        "filename": "docs/project/changelog.md",
+        "status": "modified"
+      },
+      {
+        "filename": "docs/project/contributing.md",
+        "status": "modified"
+      },
+      {
+        "filename": "docs/resources/troubleshooting.md",
+        "status": "modified"
+      },
+      {
+        "filename": "pyproject.toml",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "blockersiontko",
+    "committedDate": "2026-09-28T10:44:12Z",
+    "messageHeadline": "Fix end-of-file newlines and remove parser option from includes",
+    "oid": "44012d87545360b4406a49922505e850b1fd3ac9",
+    "files": [
+      {
+        "filename": "docs/api/logger.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "docs/api/type_hints_source.md",
+        "status": "modified"
+      },
+      {
+        "filename": "docs/conf.py",
+        "status": "modified"
+      },
+      {
+        "filename": "docs/index.md",
+        "status": "modified"
+      },
+      {
+        "filename": "docs/overview.md",
+        "status": "modified"
+      },
+      {
+        "filename": "docs/project.md",
+        "status": "modified"
+      },
+      {
+        "filename": "docs/project/changelog.md",
+        "status": "modified"
+      },
+      {
+        "filename": "docs/project/contributing.md",
+        "status": "modified"
+      },
+      {
+        "filename": "docs/project/license.md",
+        "status": "modified"
+      },
+      {
+        "filename": "docs/resources.md",
+        "status": "modified"
+      },
+      {
+        "filename": "docs/resources/migration.md",
+        "status": "modified"
+      },
+      {
+        "filename": "docs/resources/recipes.md",
+        "status": "modified"
+      },
+      {
+        "filename": "docs/resources/troubleshooting.md",
+        "status": "modified"
+      }
+    ]
+  }
+]

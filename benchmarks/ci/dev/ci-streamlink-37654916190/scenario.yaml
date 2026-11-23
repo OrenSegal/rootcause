@@ -1,0 +1,14 @@
+id: ci-streamlink-37654916190
+title: 'build: bump pycryptodome to 3.24.0'
+alert:
+  severity: ci
+  service: test-macos-latest-3-13
+  summary: 'workflow Test failed on deps/pycryptodome-3.24.0 at 5b4f3b26d1: step ''Test''
+    in job ''Test (macos-latest, 3.13)'' failed.'
+truth:
+  grading: class
+  category: infrastructure
+  service: streamlink
+  required_evidence_any:
+  - log-0712
+provenance: recorded

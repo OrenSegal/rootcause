@@ -1,0 +1,14 @@
+[
+  {
+    "author": "Nanored4498",
+    "committedDate": "2026-10-14T12:59:54Z",
+    "messageHeadline": "wait for Parallel to finish",
+    "oid": "2a3b0d818ed811de461849ee38333db9505102e3",
+    "files": [
+      {
+        "filename": "joblib/test/test_dask.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

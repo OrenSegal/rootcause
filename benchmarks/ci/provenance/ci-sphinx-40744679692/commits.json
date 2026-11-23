@@ -1,0 +1,18 @@
+[
+  {
+    "author": "jdillard",
+    "committedDate": "2026-10-28T18:23:22Z",
+    "messageHeadline": "Avoid duplicate-label warnings during incremental parallel builds",
+    "oid": "129123633fad4a613dcb17663d7efbdf40084845",
+    "files": [
+      {
+        "filename": "sphinx/domains/std/__init__.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_domains/test_domain_std.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

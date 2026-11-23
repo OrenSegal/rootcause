@@ -1,0 +1,98 @@
+[
+  {
+    "author": "alec-bike",
+    "committedDate": "2026-09-21T23:55:10Z",
+    "messageHeadline": "Update ty version",
+    "oid": "4a40d1a21874b3f0eabd3a59c82cef34c67220c2",
+    "files": [
+      {
+        "filename": "uv.lock",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "alec-bike",
+    "committedDate": "2026-09-21T23:55:10Z",
+    "messageHeadline": "Update ruff version",
+    "oid": "79a49792ed8eedc646d516b9ffe5740faa6ba9db",
+    "files": [
+      {
+        "filename": "uv.lock",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "alec-bike",
+    "committedDate": "2026-09-21T23:55:10Z",
+    "messageHeadline": "Cleanup and annotate pyproject.toml",
+    "oid": "51de44a7601c996cc13972057a4f80ac5b2e9aa0",
+    "files": [
+      {
+        "filename": "pyproject.toml",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "alec-bike",
+    "committedDate": "2026-09-21T23:55:10Z",
+    "messageHeadline": "Add type to method mixins",
+    "oid": "453613887c20c0c7be420e11c66661f9f45b61ed",
+    "files": [
+      {
+        "filename": "altair/vegalite/v6/api.py",
+        "status": "modified"
+      },
+      {
+        "filename": "altair/vegalite/v6/schema/mixins.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tools/generate_schema_wrapper.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "alec-bike",
+    "committedDate": "2026-09-21T23:55:10Z",
+    "messageHeadline": "Add type to channels mixins",
+    "oid": "1f3851510ae7ae83bf84c213c58057849297da20",
+    "files": [
+      {
+        "filename": "altair/utils/core.py",
+        "status": "modified"
+      },
+      {
+        "filename": "altair/vegalite/v6/schema/channels.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tools/generate_api_docs.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tools/generate_schema_wrapper.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "alec-bike",
+    "committedDate": "2026-09-21T23:55:10Z",
+    "messageHeadline": "Change annotation to suppress mypy error",
+    "oid": "2cb3c4f6025db7aa4c1d28608f674b8d82f15230",
+    "files": [
+      {
+        "filename": "altair/utils/schemapi.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tools/schemapi/schemapi.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

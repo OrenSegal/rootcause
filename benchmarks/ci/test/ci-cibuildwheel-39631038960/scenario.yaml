@@ -1,0 +1,15 @@
+id: ci-cibuildwheel-39631038960
+title: 'fix: use cibuildwheel''s CA bundle in cross venvs'
+alert:
+  severity: ci
+  service: test-on-windows-latest-3-13
+  summary: 'workflow Test failed on fix/cross-venv-pip-cert at 5a649f44e2: step ''Run a sample
+    build (GitHub Action)'' in job ''Test on windows-latest (3.13)'' failed.'
+truth:
+  grading: class
+  category: infrastructure
+  service: cibuildwheel
+  required_evidence_any:
+  - log-1558
+  - log-1560
+provenance: recorded

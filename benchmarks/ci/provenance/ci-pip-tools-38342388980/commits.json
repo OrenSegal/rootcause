@@ -1,0 +1,34 @@
+[
+  {
+    "author": "sirosen",
+    "committedDate": "2026-10-12T20:39:15Z",
+    "messageHeadline": "Remove support for Python 3.9",
+    "oid": "9cad2748cefe162d11edcb3c1536d2c20884ddef",
+    "files": [
+      {
+        "filename": ".github/workflows/ci.yml",
+        "status": "modified"
+      },
+      {
+        "filename": ".pre-commit-config.yaml",
+        "status": "modified"
+      },
+      {
+        "filename": "changelog.d/2439.packaging.md",
+        "status": "added"
+      },
+      {
+        "filename": "piptools/build.py",
+        "status": "modified"
+      },
+      {
+        "filename": "pyproject.toml",
+        "status": "modified"
+      },
+      {
+        "filename": "tox.ini",
+        "status": "modified"
+      }
+    ]
+  }
+]

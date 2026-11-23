@@ -1,0 +1,9 @@
+# Pilot on the dev split of benchmarks/ci: one pass per case, to find harness errors,
+# cost per run and what the failures look like before anything runs on the held-out split.
+name: ci-dev-pilot-2026-11-23
+repeats: 1
+scenarios: benchmarks/ci/dev
+configs:
+  - {name: heuristic, provider: heuristic, model: heuristic}
+  - {name: haiku-5.5-high, provider: claude-code, model: claude-haiku-5-5, effort: high}
+  - {name: opus-5.5-high, provider: claude-code, model: claude-opus-5-5, effort: high}

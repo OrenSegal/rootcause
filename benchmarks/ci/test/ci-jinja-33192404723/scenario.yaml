@@ -1,0 +1,15 @@
+id: ci-jinja-33192404723
+title: AI junk
+alert:
+  severity: ci
+  service: main
+  summary: 'workflow pre-commit failed on fix/urlize-trailing-punctuation at 088afb5f67: step
+    ''Run uv run --locked --group pre-commit pre-commit run --show-diff-on-failure --color=always
+    --all-files'' in job ''main'' failed.'
+truth:
+  grading: class
+  category: bad_code_deploy
+  service: jinja
+  required_evidence_any:
+  - 088afb5f67
+provenance: recorded

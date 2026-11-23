@@ -1,0 +1,17 @@
+[
+  {
+    "id": "c5cf158f7d",
+    "service": "anyio",
+    "version": "c5cf158f7d",
+    "ts": "2026-11-08T09:32:40Z",
+    "author": "Mrun25",
+    "summary": "Fixed buffered TCP receives after explicit closure on asyncio",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "changelog.d/1466.fixed.rst",
+      "src/anyio/_backends/_asyncio.py",
+      "tests/test_sockets.py"
+    ]
+  }
+]

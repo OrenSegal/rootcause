@@ -1,0 +1,18 @@
+# Mined from https://github.com/jupyter-server/jupyter_server/actions/runs/40778021485
+# (jupyter-server/jupyter_server, licence BSD-3-Clause). Fixed by run
+# https://github.com/jupyter-server/jupyter_server/actions/runs/40778021485. Label rule:
+# the first attempt failed and a re-run of the same pull-request run passed. Fix
+# touched: nothing (rerun).
+id: ci-jupyter_server-40778021485
+title: Fix test failures from Tornado 6.6 and newer runners
+alert:
+  severity: ci
+  service: test-prereleases
+  summary: 'workflow Jupyter Server Tests failed on tornado-start-lines at 761f79c3a4: step
+    ''Run the tests'' in job ''Test Prereleases'' failed.'
+truth:
+  category: infrastructure
+  service: jupyter_server
+  required_evidence_any:
+  - log-0783
+provenance: recorded

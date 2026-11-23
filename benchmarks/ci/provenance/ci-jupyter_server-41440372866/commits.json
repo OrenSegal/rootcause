@@ -1,0 +1,18 @@
+[
+  {
+    "author": "mrdevel2002-ui",
+    "committedDate": "2026-11-02T11:53:39Z",
+    "messageHeadline": "scrub url secrets from tornado exception logs",
+    "oid": "7a4284ffe4acf8cdab90cf2a15c647443ed3fa34",
+    "files": [
+      {
+        "filename": "jupyter_server/base/handlers.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/base/test_handlers.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

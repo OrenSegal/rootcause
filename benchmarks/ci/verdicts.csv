@@ -1,174 +1,235 @@
-case_id,repo,round,verdict,duplicate_of,table_class,table_category,table_commit
-ci-fastapi-43088004454,fastapi/fastapi,m1-pr,right,,change,,
-ci-fastapi-43418818964,fastapi/fastapi,m1-pr,right,,change,config_change,
-ci-fastapi-43612164925,fastapi/fastapi,m1-pr,right,,change,,
-ci-fastapi-44138170508,fastapi/fastapi,m1-pr,right,,change,,
-ci-fastapi-44694893735,fastapi/fastapi,m1-pr,arguable,,,,
-ci-flask-33236247623,pallets/flask,m1-pr,uncertain,,,,
-ci-pydantic-44617804639,pydantic/pydantic,m1-pr,right,,change,,
-ci-pydantic-44623649807,pydantic/pydantic,m1-pr,right,,not_change,infrastructure,
-ci-pydantic-44749339872,pydantic/pydantic,m1-pr,right,,not_change,infrastructure,
-ci-pydantic-44767659644,pydantic/pydantic,m1-pr,right,,not_change,infrastructure,
-ci-pytest-42785732184,pytest-dev/pytest,m1-pr,right,,not_change,infrastructure,
-ci-pytest-43162181446,pytest-dev/pytest,m1-pr,right,,not_change,infrastructure,
-ci-attrs-33951423062,python-attrs/attrs,v1,right,,change,,
-ci-attrs-38477282538,python-attrs/attrs,v1,right,,change,,
-ci-attrs-39835343871,python-attrs/attrs,v1,right,,change,,
-ci-click-33496785933,pallets/click,v1,wrong,,,,
-ci-click-33887414469,pallets/click,v1,right,,change,,
-ci-click-34144555748,pallets/click,v1,right,,change,,
-ci-pip-40913919882,pypa/pip,v1,wrong,,,,
-ci-pip-40929906813,pypa/pip,v1,wrong,,,,
-ci-pip-42223885293,pypa/pip,v1,arguable,,,,
-ci-pip-42454330481,pypa/pip,v1,right,,not_change,infrastructure,
-ci-pip-43157410626,pypa/pip,v1,wrong,,,,
-ci-pip-44045555196,pypa/pip,v1,arguable,,,,
-ci-scrapy-42324865667,scrapy/scrapy,v1,right,,change,,
-ci-scrapy-42512822031,scrapy/scrapy,v1,right,,not_change,infrastructure,
-ci-scrapy-42716259868,scrapy/scrapy,v1,right,,not_change,infrastructure,
-ci-scrapy-43506370153,scrapy/scrapy,v1,wrong,,,,
-ci-scrapy-44441939033,scrapy/scrapy,v1,right,,not_change,infrastructure,
-ci-starlette-39538037810,encode/starlette,v1,right,,change,,
-ci-starlette-39717936532,encode/starlette,v1,right,,change,,
-ci-starlette-39807406334,encode/starlette,v1,right,,change,,
-ci-starlette-40128596053,encode/starlette,v1,right,ci-starlette-39807406334,change,,
-ci-starlette-40132230591,encode/starlette,v1,right,ci-starlette-39807406334,change,,
-ci-starlette-40324648385,encode/starlette,v1,right,ci-starlette-39807406334,change,,
-ci-starlette-40861908438,encode/starlette,v1,right,ci-starlette-39807406334,change,,
-ci-starlette-40941239627,encode/starlette,v1,right,,change,,
-ci-starlette-41113523460,encode/starlette,v1,right,,change,,
-ci-starlette-41171429575,encode/starlette,v1,right,ci-starlette-39807406334,change,,
-ci-anyio-42467640327,agronholm/anyio,v2,wrong,,,,
-ci-anyio-43887039806,agronholm/anyio,v2,right,,change,,
-ci-anyio-43968540363,agronholm/anyio,v2,right,,change,,
-ci-ipython-39596261587,ipython/ipython,v2,right,,change,,
-ci-ipython-39596535293,ipython/ipython,v2,right,,change,,
-ci-ipython-39866796179,ipython/ipython,v2,right,,change,,
-ci-ipython-40254609405,ipython/ipython,v2,right,,change,,
-ci-ipython-41062158624,ipython/ipython,v2,right,,change,,
-ci-ipython-42229657590,ipython/ipython,v2,right,,change,,
-ci-jinja-33192404723,pallets/jinja,v2,right,,change,,
-ci-jinja-33386024559,pallets/jinja,v2,right,,change,,
-ci-jinja-33422506702,pallets/jinja,v2,right,,change,,
-ci-jinja-34727220107,pallets/jinja,v2,right,,change,,
-ci-jinja-35077114029,pallets/jinja,v2,right,,change,,
-ci-jinja-35172585654,pallets/jinja,v2,right,,change,,
-ci-networkx-40431246296,networkx/networkx,v2,right,,change,,
-ci-networkx-41284164517,networkx/networkx,v2,right,,change,,
-ci-networkx-41302259157,networkx/networkx,v2,right,,change,,
-ci-networkx-42599643490,networkx/networkx,v2,right,,change,,
-ci-networkx-44360486498,networkx/networkx,v2,right,,change,,
-ci-networkx-44477578648,networkx/networkx,v2,right,,change,,
-ci-networkx-44563841167,networkx/networkx,v2,right,,change,,
-ci-sphinx-40389205348,sphinx-doc/sphinx,v2,unmatched,,,,
-ci-sphinx-40621575115,sphinx-doc/sphinx,v2,unmatched,,,,
-ci-sphinx-40744679692,sphinx-doc/sphinx,v2,wrong,,,,
-ci-sphinx-40744679694,sphinx-doc/sphinx,v2,unmatched,ci-sphinx-40744679692,,,
-ci-sphinx-41576711926,sphinx-doc/sphinx,v2,unmatched,,,,
-ci-sphinx-41763721208,sphinx-doc/sphinx,v2,unmatched,,,,
-ci-sphinx-42373832605,sphinx-doc/sphinx,v2,arguable,,,,
-ci-sphinx-42492348058,sphinx-doc/sphinx,v2,unmatched,,,,
-ci-sphinx-42786935114,sphinx-doc/sphinx,v2,unmatched,,,,
-ci-sphinx-42915734813,sphinx-doc/sphinx,v2,unmatched,,,,
-ci-sphinx-44293155379,sphinx-doc/sphinx,v2,unmatched,,,,
-ci-sphinx-44293155460,sphinx-doc/sphinx,v2,wrong,ci-sphinx-44293155379,,,
-ci-uvicorn-40130698328,encode/uvicorn,v2,right,,change,,
-ci-uvicorn-40171032192,encode/uvicorn,v2,right,,change,,
-ci-uvicorn-40665765017,encode/uvicorn,v2,right,,change,,
-ci-uvicorn-40673038906,encode/uvicorn,v2,right,,change,,
-ci-uvicorn-41654959377,encode/uvicorn,v2,right,,change,,
-ci-uvicorn-41758966132,encode/uvicorn,v2,right,,change,,
-ci-xarray-43547579503,pydata/xarray,v2,right,,change,,
-ci-xarray-43596240958,pydata/xarray,v2,right,,change,,
-ci-xarray-43753183483,pydata/xarray,v2,right,,change,,
-ci-xarray-44129709519,pydata/xarray,v2,right,,change,,
-ci-xarray-44138224736,pydata/xarray,v2,right,,change,,
-ci-xarray-44377732566,pydata/xarray,v2,right,,change,,
-ci-yarl-40324913764,aio-libs/yarl,v2,wrong,,,,
-ci-yarl-44958570609,aio-libs/yarl,v2,right,,change,,
-ci-build-37202076420,pypa/build,v3,right,,change,,
-ci-build-38002299563,pypa/build,v3,wrong,,,,
-ci-build-40533998006,pypa/build,v3,right,,change,,
-ci-build-44219314063,pypa/build,v3,right,,change,,
-ci-django-44346380931,django/django,v3,right,,change,,
-ci-matplotlib-43908764069,matplotlib/matplotlib,v3,right,,change,config_change,
-ci-matplotlib-43926514982,matplotlib/matplotlib,v3,right,,change,,
-ci-matplotlib-43938180211,matplotlib/matplotlib,v3,right,,change,,757845f1
-ci-matplotlib-43938180225,matplotlib/matplotlib,v3,right,ci-matplotlib-43938180211,change,,757845f1
-ci-matplotlib-43938180240,matplotlib/matplotlib,v3,right,ci-matplotlib-43938180211,change,,757845f1
-ci-matplotlib-44933573494,matplotlib/matplotlib,v3,right,,change,,
-ci-matplotlib-44944357599,matplotlib/matplotlib,v3,uncertain,,,,
-ci-mkdocs-44414107169,mkdocs/mkdocs,v3,arguable,,,,
-ci-multidict-37421469197,aio-libs/multidict,v3,right,,change,,
-ci-multidict-37614237594,aio-libs/multidict,v3,right,,change,,
-ci-multidict-37647784094,aio-libs/multidict,v3,right,,change,,
-ci-multidict-37666235108,aio-libs/multidict,v3,right,,change,,
-ci-multidict-37738480921,aio-libs/multidict,v3,right,,change,,
-ci-multidict-37771426628,aio-libs/multidict,v3,right,,change,,
-ci-multidict-38127829739,aio-libs/multidict,v3,right,,change,,
-ci-multidict-38134575629,aio-libs/multidict,v3,arguable,,,,
-ci-mypy-42514756929,python/mypy,v3,right,,change,,
-ci-numpy-44969244228,numpy/numpy,v3,right,,change,,e1a3a616
-ci-numpy-44969244234,numpy/numpy,v3,right,ci-numpy-44969244228,change,,e1a3a616
-ci-numpy-44969244266,numpy/numpy,v3,right,ci-numpy-44969244228,change,,e1a3a616
-ci-numpy-44969244380,numpy/numpy,v3,right,ci-numpy-44969244228,change,,e1a3a616
-ci-numpy-44969244439,numpy/numpy,v3,right,ci-numpy-44969244228,change,,e1a3a616
-ci-pandas-44418822180,pandas-dev/pandas,v3,right,,change,,
-ci-pandas-44420380546,pandas-dev/pandas,v3,right,,change,,
-ci-pandas-44446651122,pandas-dev/pandas,v3,right,,change,,
-ci-pandas-44578641860,pandas-dev/pandas,v3,right,,change,,
-ci-pandas-44721698218,pandas-dev/pandas,v3,uncertain,,,,
-ci-poetry-39765933980,python-poetry/poetry,v3,wrong,,,,
-ci-poetry-41204881585,python-poetry/poetry,v3,right,,change,,
-ci-propcache-36747921661,aio-libs/propcache,v3,right,,change,config_change,
-ci-scikit-learn-44703893474,scikit-learn/scikit-learn,v3,wrong,,,,
-ci-scikit-learn-44711150450,scikit-learn/scikit-learn,v3,wrong,,,,
-ci-scikit-learn-44788374900,scikit-learn/scikit-learn,v3,right,,change,,
-ci-scipy-44520410829,scipy/scipy,v3,wrong,,,,
-ci-sympy-44524099951,sympy/sympy,v3,wrong,,,,
-ci-sympy-44931840961,sympy/sympy,v3,arguable,,,,
-ci-bokeh-43981079637,bokeh/bokeh,v4,right,,change,,9205686b
-ci-bokeh-43981079745,bokeh/bokeh,v4,right,ci-bokeh-43981079637,change,,9205686b
-ci-bokeh-44361105539,bokeh/bokeh,v4,right,,change,,
-ci-bokeh-44518389819,bokeh/bokeh,v4,arguable,,,,
-ci-bokeh-44518389846,bokeh/bokeh,v4,arguable,ci-bokeh-44518389819,,,
-ci-bokeh-44680865048,bokeh/bokeh,v4,right,,change,,
-ci-coveragepy-43388470319,nedbat/coveragepy,v4,right,,change,,
-ci-coveragepy-43433858292,nedbat/coveragepy,v4,right,,change,,
-ci-coveragepy-43588543793,nedbat/coveragepy,v4,right,,change,,
-ci-cryptography-43610216850,pyca/cryptography,v4,right,,change,,
-ci-dask-43344036689,dask/dask,v4,right,,change,,
-ci-dask-43458367591,dask/dask,v4,right,,change,,
-ci-dask-43545992148,dask/dask,v4,right,,change,,
-ci-dask-44522384834,dask/dask,v4,right,,change,,
-ci-dask-44533673971,dask/dask,v4,arguable,,,,
-ci-dask-44742477660,dask/dask,v4,right,,change,,
-ci-dask-44864445442,dask/dask,v4,right,,change,,
-ci-distributed-36320289935,dask/distributed,v4,right,,change,,
-ci-django-rest-framework-34093601968,encode/django-rest-framework,v4,right,,change,,
-ci-django-rest-framework-34686783870,encode/django-rest-framework,v4,right,,change,,
-ci-django-rest-framework-37662850565,encode/django-rest-framework,v4,right,,change,,
-ci-panel-43759376300,holoviz/panel,v4,wrong,,,,
-ci-panel-43954653640,holoviz/panel,v4,wrong,,,,
-ci-panel-44339476406,holoviz/panel,v4,right,,change,,
-ci-panel-44356789031,holoviz/panel,v4,wrong,,,,
-ci-panel-44383896934,holoviz/panel,v4,right,,change,,
-ci-panel-44397232490,holoviz/panel,v4,right,,change,,
-ci-pipx-44001139987,pypa/pipx,v4,right,,change,,
-ci-pipx-44661741143,pypa/pipx,v4,right,,change,,
-ci-pytest-asyncio-40571601184,pytest-dev/pytest-asyncio,v4,right,,change,,
-ci-pytest-asyncio-42167883825,pytest-dev/pytest-asyncio,v4,right,,change,,
-ci-pytest-asyncio-42619161278,pytest-dev/pytest-asyncio,v4,right,,change,,
-ci-pytest-asyncio-43909716468,pytest-dev/pytest-asyncio,v4,right,,change,,
-ci-pytest-asyncio-44882498211,pytest-dev/pytest-asyncio,v4,right,,change,,
-ci-pytest-xdist-40093733658,pytest-dev/pytest-xdist,v4,wrong,,,,
-ci-pytest-xdist-40166502013,pytest-dev/pytest-xdist,v4,right,,not_change,infrastructure,
-ci-pytest-xdist-42131392843,pytest-dev/pytest-xdist,v4,right,,not_change,infrastructure,
-ci-pytest-xdist-43066656851,pytest-dev/pytest-xdist,v4,right,,not_change,infrastructure,
-ci-scikit-image-44555313166,scikit-image/scikit-image,v4,right,,change,,
-ci-urllib3-44317305240,urllib3/urllib3,v4,right,,change,,
-ci-urllib3-44317333658,urllib3/urllib3,v4,right,,change,,
-ci-urllib3-44317366923,urllib3/urllib3,v4,right,,change,,20374a9e
-ci-urllib3-44317367138,urllib3/urllib3,v4,right,ci-urllib3-44317366923,change,,20374a9e
-ci-urllib3-44346684679,urllib3/urllib3,v4,right,,change,,
-ci-urllib3-44754535247,urllib3/urllib3,v4,right,,change,,
+case_id,repo,round,verdict,duplicate_of,table_class,table_category,table_commit,label_source,note
+ci-fastapi-43088004454,fastapi/fastapi,m1-pr,right,,change,,,rule,
+ci-fastapi-43418818964,fastapi/fastapi,m1-pr,right,,change,config_change,,rule,
+ci-fastapi-43612164925,fastapi/fastapi,m1-pr,right,,change,,,rule,
+ci-fastapi-44138170508,fastapi/fastapi,m1-pr,right,,change,,,rule,
+ci-fastapi-44694893735,fastapi/fastapi,m1-pr,arguable,,,,,rule,
+ci-flask-33236247623,pallets/flask,m1-pr,uncertain,,,,,rule,
+ci-pydantic-44617804639,pydantic/pydantic,m1-pr,right,,change,,,rule,
+ci-pydantic-44623649807,pydantic/pydantic,m1-pr,right,,not_change,infrastructure,,rule,
+ci-pydantic-44749339872,pydantic/pydantic,m1-pr,right,,not_change,infrastructure,,rule,
+ci-pydantic-44767659644,pydantic/pydantic,m1-pr,right,,not_change,infrastructure,,rule,
+ci-pytest-42785732184,pytest-dev/pytest,m1-pr,right,,not_change,infrastructure,,rule,first excluded because the trace root span said the run passed; the freeze now sets it back to error for re-run cases
+ci-pytest-43162181446,pytest-dev/pytest,m1-pr,right,,not_change,infrastructure,,rule,
+ci-attrs-33951423062,python-attrs/attrs,v1,right,,change,,,rule,
+ci-attrs-38477282538,python-attrs/attrs,v1,right,,change,,,rule,
+ci-attrs-39835343871,python-attrs/attrs,v1,right,,change,,,rule,
+ci-click-33496785933,pallets/click,v1,wrong,,change,bad_code_deploy,0891cde540,review,"a test imported the POSIX-only resource module and Windows failed; one tested commit, which added it"
+ci-click-33887414469,pallets/click,v1,right,,change,,,rule,
+ci-click-34144555748,pallets/click,v1,right,,change,,,rule,
+ci-pip-40913919882,pypa/pip,v1,wrong,,,,,rule,"not recovered: the review says why the rule misfired, not what the label is"
+ci-pip-40929906813,pypa/pip,v1,wrong,,,,,rule,"not recovered: the review says why the rule misfired, not what the label is"
+ci-pip-42223885293,pypa/pip,v1,arguable,,,,,rule,
+ci-pip-42454330481,pypa/pip,v1,right,,not_change,infrastructure,,rule,
+ci-pip-43157410626,pypa/pip,v1,wrong,,,,,rule,"not recovered: the review says why the rule misfired, not what the label is"
+ci-pip-44045555196,pypa/pip,v1,arguable,,,,,rule,
+ci-scrapy-42324865667,scrapy/scrapy,v1,right,,change,,,rule,
+ci-scrapy-42512822031,scrapy/scrapy,v1,right,,not_change,infrastructure,,rule,
+ci-scrapy-42716259868,scrapy/scrapy,v1,right,,not_change,infrastructure,,rule,
+ci-scrapy-43506370153,scrapy/scrapy,v1,wrong,,not_change,infrastructure,,review,"a mypy error from the base branch, fixed there before a later run of the same head passed"
+ci-scrapy-44441939033,scrapy/scrapy,v1,right,,not_change,infrastructure,,rule,
+ci-starlette-39538037810,encode/starlette,v1,right,,change,,,rule,
+ci-starlette-39717936532,encode/starlette,v1,right,,change,,,rule,
+ci-starlette-39807406334,encode/starlette,v1,right,,change,,,rule,
+ci-starlette-40128596053,encode/starlette,v1,right,ci-starlette-39807406334,change,,,rule,
+ci-starlette-40132230591,encode/starlette,v1,right,ci-starlette-39807406334,change,,,rule,
+ci-starlette-40324648385,encode/starlette,v1,right,ci-starlette-39807406334,change,,,rule,
+ci-starlette-40861908438,encode/starlette,v1,right,ci-starlette-39807406334,change,,,rule,
+ci-starlette-40941239627,encode/starlette,v1,right,,change,,,rule,
+ci-starlette-41113523460,encode/starlette,v1,right,,change,,,rule,
+ci-starlette-41171429575,encode/starlette,v1,right,ci-starlette-39807406334,change,,,rule,
+ci-anyio-42467640327,agronholm/anyio,v2,wrong,,not_change,infrastructure,,review,every test passed; the Coveralls upload step failed
+ci-anyio-43887039806,agronholm/anyio,v2,right,,change,,,rule,
+ci-anyio-43968540363,agronholm/anyio,v2,right,,change,,,rule,
+ci-ipython-39596261587,ipython/ipython,v2,right,,change,,,rule,
+ci-ipython-39596535293,ipython/ipython,v2,right,,change,,,rule,
+ci-ipython-39866796179,ipython/ipython,v2,right,,change,,,rule,
+ci-ipython-40254609405,ipython/ipython,v2,right,,change,,,rule,
+ci-ipython-41062158624,ipython/ipython,v2,right,,change,,,rule,
+ci-ipython-42229657590,ipython/ipython,v2,right,,change,,,rule,
+ci-jinja-33192404723,pallets/jinja,v2,right,,change,,,rule,
+ci-jinja-33386024559,pallets/jinja,v2,right,,change,,,rule,
+ci-jinja-33422506702,pallets/jinja,v2,right,,change,,,rule,
+ci-jinja-34727220107,pallets/jinja,v2,right,,change,,,rule,
+ci-jinja-35077114029,pallets/jinja,v2,right,,change,,,rule,
+ci-jinja-35172585654,pallets/jinja,v2,right,,change,,,rule,
+ci-networkx-40431246296,networkx/networkx,v2,right,,change,,,rule,
+ci-networkx-41284164517,networkx/networkx,v2,right,,change,,,rule,
+ci-networkx-41302259157,networkx/networkx,v2,right,,change,,,rule,
+ci-networkx-42599643490,networkx/networkx,v2,right,,change,,,rule,
+ci-networkx-44360486498,networkx/networkx,v2,right,,change,,,rule,
+ci-networkx-44477578648,networkx/networkx,v2,right,,change,,,rule,
+ci-networkx-44563841167,networkx/networkx,v2,right,,change,,,rule,
+ci-sphinx-40389205348,sphinx-doc/sphinx,v2,unmatched,,,,,rule,
+ci-sphinx-40621575115,sphinx-doc/sphinx,v2,unmatched,,,,,rule,
+ci-sphinx-40744679692,sphinx-doc/sphinx,v2,wrong,,not_change,infrastructure,,review,downloading Docutils from its git host failed
+ci-sphinx-40744679694,sphinx-doc/sphinx,v2,unmatched,ci-sphinx-40744679692,,,,rule,
+ci-sphinx-41576711926,sphinx-doc/sphinx,v2,unmatched,,,,,rule,
+ci-sphinx-41763721208,sphinx-doc/sphinx,v2,unmatched,,,,,rule,
+ci-sphinx-42373832605,sphinx-doc/sphinx,v2,arguable,,,,,rule,
+ci-sphinx-42492348058,sphinx-doc/sphinx,v2,unmatched,,,,,rule,
+ci-sphinx-42786935114,sphinx-doc/sphinx,v2,unmatched,,,,,rule,
+ci-sphinx-42915734813,sphinx-doc/sphinx,v2,unmatched,,,,,rule,
+ci-sphinx-44293155379,sphinx-doc/sphinx,v2,unmatched,,,,,rule,
+ci-sphinx-44293155460,sphinx-doc/sphinx,v2,wrong,ci-sphinx-44293155379,not_change,infrastructure,,review,"pre-release Python setup failed, plus SSLEOFError"
+ci-uvicorn-40130698328,encode/uvicorn,v2,right,,change,,,rule,
+ci-uvicorn-40171032192,encode/uvicorn,v2,right,,change,,,rule,
+ci-uvicorn-40665765017,encode/uvicorn,v2,right,,change,,,rule,
+ci-uvicorn-40673038906,encode/uvicorn,v2,right,,change,,,rule,
+ci-uvicorn-41654959377,encode/uvicorn,v2,right,,change,,,rule,
+ci-uvicorn-41758966132,encode/uvicorn,v2,right,,change,,,rule,
+ci-xarray-43547579503,pydata/xarray,v2,right,,change,,,rule,
+ci-xarray-43596240958,pydata/xarray,v2,right,,change,,,rule,
+ci-xarray-43753183483,pydata/xarray,v2,right,,change,,,rule,
+ci-xarray-44129709519,pydata/xarray,v2,right,,change,,,rule,
+ci-xarray-44138224736,pydata/xarray,v2,right,,change,,,rule,
+ci-xarray-44377732566,pydata/xarray,v2,right,,change,,,rule,
+ci-yarl-40324913764,aio-libs/yarl,v2,wrong,,not_change,infrastructure,,review,DNSError in the aiohttp integration job
+ci-yarl-44958570609,aio-libs/yarl,v2,right,,change,,,rule,
+ci-build-37202076420,pypa/build,v3,right,,change,,,rule,
+ci-build-38002299563,pypa/build,v3,wrong,,change,config_change,dccc7837b5,review,"the commit switched CI to Python 3.15, which the runner did not have"
+ci-build-40533998006,pypa/build,v3,right,,change,,,rule,
+ci-build-44219314063,pypa/build,v3,right,,change,,,rule,
+ci-django-44346380931,django/django,v3,right,,change,,,rule,
+ci-matplotlib-43908764069,matplotlib/matplotlib,v3,right,,change,config_change,,rule,
+ci-matplotlib-43926514982,matplotlib/matplotlib,v3,right,,change,,,rule,
+ci-matplotlib-43938180211,matplotlib/matplotlib,v3,right,,change,,757845f1,rule,
+ci-matplotlib-43938180225,matplotlib/matplotlib,v3,right,ci-matplotlib-43938180211,change,,757845f1,rule,
+ci-matplotlib-43938180240,matplotlib/matplotlib,v3,right,ci-matplotlib-43938180211,change,,757845f1,rule,
+ci-matplotlib-44933573494,matplotlib/matplotlib,v3,right,,change,,,rule,
+ci-matplotlib-44944357599,matplotlib/matplotlib,v3,uncertain,,,,,rule,
+ci-mkdocs-44414107169,mkdocs/mkdocs,v3,arguable,,,,,rule,
+ci-multidict-37421469197,aio-libs/multidict,v3,right,,change,,,rule,
+ci-multidict-37614237594,aio-libs/multidict,v3,right,,change,,,rule,
+ci-multidict-37647784094,aio-libs/multidict,v3,right,,change,,,rule,
+ci-multidict-37666235108,aio-libs/multidict,v3,right,,change,,,rule,
+ci-multidict-37738480921,aio-libs/multidict,v3,right,,change,,,rule,
+ci-multidict-37771426628,aio-libs/multidict,v3,right,,change,,,rule,
+ci-multidict-38127829739,aio-libs/multidict,v3,right,,change,,,rule,
+ci-multidict-38134575629,aio-libs/multidict,v3,arguable,,,,,rule,
+ci-mypy-42514756929,python/mypy,v3,right,,change,,,rule,
+ci-numpy-44969244228,numpy/numpy,v3,right,,change,,e1a3a616,rule,
+ci-numpy-44969244234,numpy/numpy,v3,right,ci-numpy-44969244228,change,,e1a3a616,rule,
+ci-numpy-44969244266,numpy/numpy,v3,right,ci-numpy-44969244228,change,,e1a3a616,rule,
+ci-numpy-44969244380,numpy/numpy,v3,right,ci-numpy-44969244228,change,,e1a3a616,rule,
+ci-numpy-44969244439,numpy/numpy,v3,right,ci-numpy-44969244228,change,,e1a3a616,rule,
+ci-pandas-44418822180,pandas-dev/pandas,v3,right,,change,,,rule,
+ci-pandas-44420380546,pandas-dev/pandas,v3,right,,change,,,rule,
+ci-pandas-44446651122,pandas-dev/pandas,v3,right,,change,,,rule,
+ci-pandas-44578641860,pandas-dev/pandas,v3,right,,change,,,rule,
+ci-pandas-44721698218,pandas-dev/pandas,v3,uncertain,,,,,rule,
+ci-poetry-39765933980,python-poetry/poetry,v3,wrong,,not_change,infrastructure,,review,Python 3.15 changed CalledProcessError's message; a merge of main fixed it
+ci-poetry-41204881585,python-poetry/poetry,v3,right,,change,,,rule,
+ci-propcache-36747921661,aio-libs/propcache,v3,right,,change,config_change,,rule,
+ci-scikit-learn-44703893474,scikit-learn/scikit-learn,v3,wrong,,not_change,infrastructure,,review,the base branch added a workflow with unpinned actions; the tested commit only edited an example
+ci-scikit-learn-44711150450,scikit-learn/scikit-learn,v3,wrong,,change,config_change,36a288fbfe,review,the tested commit added agentscan.yml with an unpinned action
+ci-scikit-learn-44788374900,scikit-learn/scikit-learn,v3,right,,change,,,rule,
+ci-scipy-44520410829,scipy/scipy,v3,wrong,,,,,rule,not recovered: crashed pytest workers; the scope doc says a segfault and a starved runner look the same
+ci-sympy-44524099951,sympy/sympy,v3,wrong,,not_change,infrastructure,,review,apt Connection failed while installing docs tools
+ci-sympy-44931840961,sympy/sympy,v3,arguable,,,,,rule,
+ci-bokeh-43981079637,bokeh/bokeh,v4,right,,change,,9205686b,rule,
+ci-bokeh-43981079745,bokeh/bokeh,v4,right,ci-bokeh-43981079637,change,,9205686b,rule,
+ci-bokeh-44361105539,bokeh/bokeh,v4,right,,change,,,rule,
+ci-bokeh-44518389819,bokeh/bokeh,v4,arguable,,,,,rule,
+ci-bokeh-44518389846,bokeh/bokeh,v4,arguable,ci-bokeh-44518389819,,,,rule,
+ci-bokeh-44680865048,bokeh/bokeh,v4,right,,change,,,rule,
+ci-coveragepy-43388470319,nedbat/coveragepy,v4,right,,change,,,rule,
+ci-coveragepy-43433858292,nedbat/coveragepy,v4,right,,change,,,rule,
+ci-coveragepy-43588543793,nedbat/coveragepy,v4,right,,change,,,rule,
+ci-cryptography-43610216850,pyca/cryptography,v4,right,,change,,,rule,
+ci-dask-43344036689,dask/dask,v4,right,,change,,,rule,
+ci-dask-43458367591,dask/dask,v4,right,,change,,,rule,
+ci-dask-43545992148,dask/dask,v4,right,,change,,,rule,
+ci-dask-44522384834,dask/dask,v4,right,,change,,,rule,
+ci-dask-44533673971,dask/dask,v4,arguable,,,,,rule,
+ci-dask-44742477660,dask/dask,v4,right,,change,,,rule,
+ci-dask-44864445442,dask/dask,v4,right,,change,,,rule,
+ci-distributed-36320289935,dask/distributed,v4,right,,change,,,rule,
+ci-django-rest-framework-34093601968,encode/django-rest-framework,v4,right,,change,,,rule,
+ci-django-rest-framework-34686783870,encode/django-rest-framework,v4,right,,change,,,rule,
+ci-django-rest-framework-37662850565,encode/django-rest-framework,v4,right,,change,,,rule,
+ci-panel-43759376300,holoviz/panel,v4,wrong,,not_change,infrastructure,,review,docs-only commit; Playwright UI tests failed on Windows and macOS
+ci-panel-43954653640,holoviz/panel,v4,wrong,,not_change,infrastructure,,review,docs-only commit; a Playwright UI test failed on Windows
+ci-panel-44339476406,holoviz/panel,v4,right,,change,,,rule,
+ci-panel-44356789031,holoviz/panel,v4,wrong,,not_change,infrastructure,,review,unrelated Tabulator and notebook UI tests failed on macOS
+ci-panel-44383896934,holoviz/panel,v4,right,,change,,,rule,
+ci-panel-44397232490,holoviz/panel,v4,right,,change,,,rule,
+ci-pipx-44001139987,pypa/pipx,v4,right,,change,,,rule,
+ci-pipx-44661741143,pypa/pipx,v4,right,,change,,,rule,
+ci-pytest-asyncio-40571601184,pytest-dev/pytest-asyncio,v4,right,,change,,,rule,
+ci-pytest-asyncio-42167883825,pytest-dev/pytest-asyncio,v4,right,,change,,,rule,
+ci-pytest-asyncio-42619161278,pytest-dev/pytest-asyncio,v4,right,,change,,,rule,
+ci-pytest-asyncio-43909716468,pytest-dev/pytest-asyncio,v4,right,,change,,,rule,
+ci-pytest-asyncio-44882498211,pytest-dev/pytest-asyncio,v4,right,,change,,,rule,
+ci-pytest-xdist-40093733658,pytest-dev/pytest-xdist,v4,wrong,,,,,rule,"not recovered: mixed failure (the commit's test on Windows, a missing Python 3.9 elsewhere)"
+ci-pytest-xdist-40166502013,pytest-dev/pytest-xdist,v4,right,,not_change,infrastructure,,rule,
+ci-pytest-xdist-42131392843,pytest-dev/pytest-xdist,v4,right,,not_change,infrastructure,,rule,
+ci-pytest-xdist-43066656851,pytest-dev/pytest-xdist,v4,right,,not_change,infrastructure,,rule,
+ci-scikit-image-44555313166,scikit-image/scikit-image,v4,right,,change,,,rule,
+ci-urllib3-44317305240,urllib3/urllib3,v4,right,,change,,,rule,
+ci-urllib3-44317333658,urllib3/urllib3,v4,right,,change,,,rule,
+ci-urllib3-44317366923,urllib3/urllib3,v4,right,,change,,20374a9e,rule,
+ci-urllib3-44317367138,urllib3/urllib3,v4,right,ci-urllib3-44317366923,change,,20374a9e,rule,
+ci-urllib3-44346684679,urllib3/urllib3,v4,right,,change,,,rule,
+ci-urllib3-44754535247,urllib3/urllib3,v4,right,,change,,,rule,
+ci-altair-35669720079,vega/altair,rerun,right,,not_change,infrastructure,,rerun,the docs built; the artifact upload failed with HTTP 403 at finalize
+ci-altair-35775942017,vega/altair,rerun,right,,not_change,infrastructure,,rerun,one test failed on a remote fetch (Content-Length header missing) in 1 of 9 jobs
+ci-beets-39011669390,beetbox/beets,rerun,right,,not_change,infrastructure,,rerun,installing mp3gain through Chocolatey failed on 3 Windows jobs (the package source asked for credentials); the PR changed the lastgenre plugin
+ci-beets-42023625800,beetbox/beets,rerun,uncertain,,,,,rerun,tests failed with confuse NotFoundError for empty_component_replace on 2 of 12 jobs; the log does not show why a config key went missing
+ci-beets-42356357550,beetbox/beets,rerun,uncertain,,,,,rerun,one art-fetch test returned None on 1 of 12 jobs; the log does not show why
+ci-beets-42869142781,beetbox/beets,rerun,right,,not_change,infrastructure,,rerun,the msys2 mirror was too slow to download package databases on 2 Windows jobs; the PR changed database migrations
+ci-beets-43585709116,beetbox/beets,rerun,uncertain,,,,,rerun,tests failed with confuse NotFoundError for empty_component_replace on 1 of 12 jobs; the log does not show why a config key went missing
+ci-cibuildwheel-39631038960,pypa/cibuildwheel,rerun,right,,not_change,infrastructure,,rerun,"nuget could not retrieve package metadata from nuget.org for a Windows Python install, 1 of 29 jobs; the PR changed CA bundles for Android, iOS and Pyodide only"
+ci-cibuildwheel-39835022532,pypa/cibuildwheel,rerun,uncertain,,,,,rerun,"virtualenv seeding failed to download pip on Windows ARM, 1 of 29, but the PR changed how pip certificates reach the host virtualenv"
+ci-cibuildwheel-40098659152,pypa/cibuildwheel,rerun,right,,not_change,infrastructure,,rerun,"virtualenv seeding failed to download pip on Windows ARM, 1 of 29 jobs; the PR only bumped workflow actions"
+ci-cibuildwheel-42578732710,pypa/cibuildwheel,rerun,right,,not_change,infrastructure,,rerun,"the linters job got ""Unexpected HTTP response: 504""; the PR only updated dependency pins"
+ci-cibuildwheel-43600347854,pypa/cibuildwheel,rerun,right,,not_change,infrastructure,,rerun,"virtualenv seeding failed to download pip on Windows ARM, 1 of 29 jobs; the PR only bumped workflow actions"
+ci-geopandas-34034858084,geopandas/geopandas,rerun,right,,not_change,infrastructure,,rerun,"explore-test fixtures failed to parse a truncated GeoJSON download (""Unterminated object"") on 2 of 14 jobs; the PR changed a plotting test's tile source"
+ci-geopandas-35534992784,geopandas/geopandas,rerun,right,,not_change,infrastructure,,rerun,"explore-test fixtures failed to parse a truncated GeoJSON download (""Unterminated array"") on 1 of 14 jobs; the PR changed dissolve"
+ci-geopandas-41035651082,geopandas/geopandas,rerun,right,,not_change,infrastructure,,rerun,"installing the dev environment failed when git got HTTP 403 cloning folium from GitHub, 1 of 14 jobs; the PR changed only the release workflow"
+ci-huggingface_hub-37602711356,huggingface/huggingface_hub,rerun,uncertain,,,,,rerun,"two download tests failed on Windows 3.14 only, but the PR changed file_download.py, the module they test; an intermittent bug the PR added cannot be ruled out"
+ci-huggingface_hub-41473687733,huggingface/huggingface_hub,rerun,wrong,,,,,rerun,"the PR added a visibility expand value that the live Hub API did not yet accept; the re-run passed once the server did, so the PR's change is involved"
+ci-huggingface_hub-43403156991,huggingface/huggingface_hub,rerun,uncertain,,,,,rerun,"a bucket sync test against the live Hub found no files on 1 of 20 jobs, but the PR changed the Xet upload pipeline that the test exercises"
+ci-huggingface_hub-44548218666,huggingface/huggingface_hub,rerun,right,,not_change,infrastructure,,rerun,"a bucket copy test got ""File not found in Xet storage"" from the live service on 1 of 20 jobs; the PR changed only the download cache"
+ci-ipykernel-33754574742,ipython/ipykernel,rerun,uncertain,,,,,rerun,"a CurveZMQ socket test got ""Resource temporarily unavailable"" on macOS PyPy, 1 of 28, but the PR changed kernelbase.py, which handles the messages the test sends"
+ci-ipykernel-34840027961,ipython/ipykernel,rerun,right,,not_change,infrastructure,,rerun,"a concurrent subshell test saw an unexpected IOPub message on Ubuntu PyPy, 1 of 28; the PR only added type annotations"
+ci-ipykernel-34841936815,ipython/ipykernel,rerun,uncertain,,,,,rerun,"a subshell test timed out on Windows PyPy, 1 of 28, but the PR changed kernel start-up (deferred debugpy import), which the test exercises"
+ci-ipykernel-39336960026,ipython/ipykernel,rerun,right,,not_change,infrastructure,,rerun,"an in-process pylab test hit the 30-second pytest-timeout on macOS, 1 of 28; the PR only bumped a release action"
+ci-ipykernel-40696432425,ipython/ipykernel,rerun,right,,not_change,infrastructure,,rerun,"the kernel died on a cffi OVERLAPPED type error on Windows PyPy, 1 of 28; the PR changed only pytest settings"
+ci-joblib-38347266020,joblib/joblib,rerun,right,,not_change,infrastructure,,rerun,"the dask test_auto_scatter test failed on the distributed job, 1 of 30; the PR changed the store backend"
+ci-joblib-38570297050,joblib/joblib,rerun,right,,not_change,infrastructure,,rerun,"process-pool tests (child exit, nested pool size) failed on 2 of 30 jobs; the PR changed only test_dask.py"
+ci-joblib-38584227959,joblib/joblib,rerun,right,,not_change,infrastructure,,rerun,"the dask test_auto_scatter test failed on the distributed-latest job, 1 of 30; the PR changed memory.py"
+ci-joblib-39606219075,joblib/joblib,rerun,right,,not_change,infrastructure,,rerun,"a nested-pool size test failed under pytest-run-parallel on the free-threaded job, 1 of 30; the PR changed hashing"
+ci-joblib-41634904724,joblib/joblib,rerun,right,,not_change,infrastructure,,rerun,"a multiprocessing test hit the 120-second pytest-timeout on the one-CPU job, 1 of 30; the PR changed hashing"
+ci-jupyter_server-40778021485,jupyter-server/jupyter_server,rerun,right,,not_change,infrastructure,,rerun,"the prerelease-dependencies job crashed with exit code 139 (segmentation fault), 1 of 29; the PR changed only tests"
+ci-jupyter_server-41440372866,jupyter-server/jupyter_server,rerun,right,,not_change,infrastructure,,rerun,"on Windows, 1 of 29 jobs, a test timed out and later tests failed with ""Event loop is closed""; the PR changed exception log scrubbing"
+ci-loguru-36411461201,Delgan/loguru,rerun,right,,not_change,infrastructure,,rerun,pip timed out reading from pypi.org and could not install python-dateutil; the PR changed only docs
+ci-loguru-36411461280,Delgan/loguru,rerun,right,ci-loguru-36411461201,not_change,infrastructure,,rerun,the same pypi.org read timeouts on 4 of 14 jobs; same commit and event as the Docs run
+ci-mitmproxy-37372784071,mitmproxy/mitmproxy,rerun,uncertain,,,,,rerun,only the gate job failed: several test and build jobs were cancelled and the log does not say why
+ci-pip-tools-34495788813,pypa/pip-tools,rerun,uncertain,,,,,rerun,"two direct-reference install tests failed on one macOS job, 1 of 69, and the log does not show why"
+ci-pip-tools-36461253097,pypa/pip-tools,rerun,right,,not_change,infrastructure,,rerun,"pip could not install packages (""Connection broken: IncompleteRead"") on 13 Windows jobs; the PR only updated pre-commit hook versions"
+ci-pip-tools-37354477302,pypa/pip-tools,rerun,uncertain,,,,,rerun,only the gate job failed: a needed test job was cancelled and the log does not say why
+ci-pip-tools-38342388980,pypa/pip-tools,rerun,right,,not_change,infrastructure,,rerun,the tests passed; the downloaded Codecov uploader failed its checksum check on 1 of 61 jobs
+ci-pip-tools-38449405196,pypa/pip-tools,rerun,uncertain,,,,,rerun,only the gate job failed: the pypy job was cancelled mid-test and the log does not say why
+ci-pip-tools-43100599407,pypa/pip-tools,rerun,uncertain,,,,,rerun,only the gate job failed: the pypy job was cancelled and the log does not say why
+ci-pip-tools-43729343639,pypa/pip-tools,rerun,uncertain,,,,,rerun,"linkcheck got a 404 for an external blog post linked from the changelog this PR edits; it passed later, but whether the PR added the link before the page existed is not clear"
+ci-poetry-core-33070303884,python-poetry/poetry-core,rerun,right,,not_change,infrastructure,,rerun,"the pypy-3.11 interpreter reported an invalid EXT_SUFFIX while installing dependencies, before any test ran; 1 of 16 jobs"
+ci-poetry-core-33894335120,python-poetry/poetry-core,rerun,right,,not_change,infrastructure,,rerun,"the pypy-3.11 interpreter reported an invalid EXT_SUFFIX while installing dependencies, before any test ran; 1 of 16 jobs"
+ci-pydantic-settings-36134926005,pydantic/pydantic-settings,rerun,right,,not_change,infrastructure,,rerun,"the coverage artifact upload failed with ""Unable to make request: ENOTFOUND"" on one macOS job, 1 of 19; the tests passed"
+ci-pyvista-41881547109,pyvista/pyvista,rerun,uncertain,,,,,rerun,"uv found no solution for the Python 3.15 macOS job, and the PR itself added Python 3.15 testing; it passed later, perhaps once a wheel was published"
+ci-pyvista-41881547128,pyvista/pyvista,rerun,right,,not_change,infrastructure,,rerun,"the CodSpeed runner stopped with ""Unsupported system"" before any benchmark ran"
+ci-pyvista-41881547265,pyvista/pyvista,rerun,uncertain,,,,,rerun,the docs build produced no pages and the log does not say why; same commit and event as the CodSpeed run
+ci-pyvista-41912793680,pyvista/pyvista,rerun,uncertain,,,,,rerun,"two VRML example images differed from the cache, and the PR changed core cell-extraction filters"
+ci-pyvista-42875446730,pyvista/pyvista,rerun,uncertain,,,,,rerun,a doctest for a dataset download errored at teardown and the log does not show why; the PR changed VTK threading settings
+ci-sentry-python-43851909053,getsentry/sentry-python,rerun,uncertain,,,,,rerun,"a span profiler test collected no samples on the 3.15t job, 1 of 156, but the PR moved imports in sentry_sdk/tracing.py, which the test exercises"
+ci-sentry-python-44335660000,getsentry/sentry-python,rerun,right,,not_change,infrastructure,,rerun,"pytest stopped with an INTERNALERROR (sqlite3 UNIQUE constraint on its own cache database) in the Python 3.6 DB job, 1 of 167; the PR changed the anthropic integration"
+ci-sentry-python-44397296615,getsentry/sentry-python,rerun,right,,not_change,infrastructure,,rerun,"the same pytest INTERNALERROR (sqlite3 UNIQUE constraint on its cache database) in the Python 3.6 DB job, 1 of 167; the PR changed client start-up hints"
+ci-sentry-python-44420766729,getsentry/sentry-python,rerun,uncertain,,,,,rerun,"a threaded feature-flag test read a stale flag value on the free-threaded 3.14t job, 1 of 167, but the PR changed tests/conftest.py, which every test loads"
+ci-streamlink-33797245698,streamlink/streamlink,rerun,right,,not_change,infrastructure,,rerun,uv could not connect to pypi.org on one macOS job
+ci-streamlink-37654916190,streamlink/streamlink,rerun,right,,not_change,infrastructure,,rerun,one timing-sensitive HLS test hit its handshake timeout on 1 of 23 jobs (macOS)
+ci-streamlink-39834644038,streamlink/streamlink,rerun,right,,not_change,infrastructure,,rerun,one HLS test's 5-second thread wait timed out on 1 of 23 jobs (Windows)
+ci-tornado-38280843819,tornadoweb/tornado,rerun,right,,not_change,infrastructure,,rerun,"an SSL error-logging test missed its expected log line on Windows, 1 of 16 jobs; the PR changed only workflow files"
+ci-tornado-39497096691,tornadoweb/tornado,rerun,right,,not_change,infrastructure,,rerun,"a timing test measured a 20.7 ratio against a limit of 20 on one PyPy job, 1 of 19; the PR bumped certifi"
+ci-tornado-40355373959,tornadoweb/tornado,rerun,right,,not_change,infrastructure,,rerun,"the same timing test measured 21.2 against a limit of 20 on one PyPy job, 1 of 19; the PR bumped filelock"
+ci-tornado-44226957448,tornadoweb/tornado,rerun,right,,not_change,infrastructure,,rerun,"an SSL iostream test did not see the expected socket error on macOS, 1 of 20 jobs; the PR changed httpserver xheaders"
+ci-typer-41852343678,fastapi/typer,rerun,uncertain,,,,,rerun,only the gate job failed: three macOS test jobs were cancelled after 15 minutes and the log does not say why

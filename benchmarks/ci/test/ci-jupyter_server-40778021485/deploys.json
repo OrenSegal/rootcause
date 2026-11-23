@@ -1,0 +1,33 @@
+[
+  {
+    "id": "2c6cc7e774",
+    "service": "jupyter_server",
+    "version": "2c6cc7e774",
+    "ts": "2026-10-28T21:04:21Z",
+    "author": "Zsailer",
+    "summary": "Build test requests with an explicit start line",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "tests/base/test_allow_origin_pat.py",
+      "tests/base/test_handlers.py",
+      "tests/base/test_websocket.py",
+      "tests/services/kernels/test_connection.py",
+      "tests/test_gateway.py",
+      "tests/utils.py"
+    ]
+  },
+  {
+    "id": "761f79c3a4",
+    "service": "jupyter_server",
+    "version": "761f79c3a4",
+    "ts": "2026-10-28T22:11:19Z",
+    "author": "Zsailer",
+    "summary": "Don't expect an error when trashing a folder across filesystems",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "tests/services/contents/test_manager.py"
+    ]
+  }
+]

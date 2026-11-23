@@ -1,0 +1,18 @@
+# Mined from https://github.com/streamlink/streamlink/actions/runs/37654916190
+# (streamlink/streamlink, licence BSD-2-Clause). Fixed by run
+# https://github.com/streamlink/streamlink/actions/runs/37654916190. Label rule: the
+# first attempt failed and a re-run of the same pull-request run passed. Fix touched:
+# nothing (rerun).
+id: ci-streamlink-37654916190
+title: 'build: bump pycryptodome to 3.24.0'
+alert:
+  severity: ci
+  service: test-macos-latest-3-13
+  summary: 'workflow Test failed on deps/pycryptodome-3.24.0 at 5b4f3b26d1: step ''Test''
+    in job ''Test (macos-latest, 3.13)'' failed.'
+truth:
+  category: infrastructure
+  service: streamlink
+  required_evidence_any:
+  - log-0712
+provenance: recorded

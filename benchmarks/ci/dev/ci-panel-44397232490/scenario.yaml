@@ -1,0 +1,15 @@
+id: ci-panel-44397232490
+title: 'fix: Do not sync the design parameter onto wrapped Bokeh models'
+alert:
+  severity: ci
+  service: run-pre-commit
+  summary: 'workflow tests failed on fix/bokeh-pane-design-passthrough at a2ea8cbb01: step
+    ''Run holoviz-dev/holoviz_tasks/pre-commit@11eb638302f76ec64217e2eeddfb11df1f788b54''
+    in job ''Run pre-commit'' failed.'
+truth:
+  grading: class
+  category: bad_code_deploy
+  service: panel
+  required_evidence_any:
+  - a2ea8cbb01
+provenance: recorded

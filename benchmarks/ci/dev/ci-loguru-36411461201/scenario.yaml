@@ -1,0 +1,14 @@
+id: ci-loguru-36411461201
+title: Migrate docs to markdown
+alert:
+  severity: ci
+  service: docs
+  summary: 'workflow Docs failed on migrate-docs-to-markdown at 44012d8754: step ''Build documentation''
+    in job ''docs'' failed.'
+truth:
+  grading: class
+  category: infrastructure
+  service: loguru
+  required_evidence_any:
+  - log-0298
+provenance: recorded

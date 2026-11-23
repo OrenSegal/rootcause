@@ -1,0 +1,11 @@
+{
+  "fixed_run": "https://github.com/agronholm/anyio/actions/runs/42843999210",
+  "fixed_sha": "f2e8d6f809a2c170b03b0313c5d586b512149a6a",
+  "commits": [
+    "f2e8d6f809a2c170b03b0313c5d586b512149a6a"
+  ],
+  "files": [
+    "src/anyio/_backends/_asyncio.py"
+  ],
+  "status": "ahead"
+}

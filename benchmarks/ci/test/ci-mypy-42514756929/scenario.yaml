@@ -6,6 +6,7 @@ alert:
   summary: 'workflow Tests failed on fix/22326-placeholder-qualified-name at 1a8ca7e293: step
     ''Test'' in job ''Test suite with py314-windows-64'' failed.'
 truth:
+  grading: class
   category: bad_code_deploy
   service: mypy
   required_evidence_any:

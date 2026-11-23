@@ -1,0 +1,15 @@
+id: ci-beets-42869142781
+title: Fix empty db migration backup
+alert:
+  severity: ci
+  service: run-tests-windows-latest-3-13
+  summary: 'workflow Test failed on fix-empty-db-migration-backup at 9dab2ca8b9: step ''Set
+    up MSYS2 with bash-completion'' in job ''Run tests (windows-latest, 3.13)'' failed.'
+truth:
+  grading: class
+  category: infrastructure
+  service: beets
+  required_evidence_any:
+  - log-0357
+  - log-0794
+provenance: recorded

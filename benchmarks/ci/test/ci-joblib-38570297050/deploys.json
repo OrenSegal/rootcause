@@ -1,0 +1,15 @@
+[
+  {
+    "id": "2a3b0d818e",
+    "service": "joblib",
+    "version": "2a3b0d818e",
+    "ts": "2026-10-14T12:59:54Z",
+    "author": "Nanored4498",
+    "summary": "wait for Parallel to finish",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "joblib/test/test_dask.py"
+    ]
+  }
+]

@@ -1,0 +1,14 @@
+id: ci-ipython-39596535293
+title: Clean docs
+alert:
+  severity: ci
+  service: build
+  summary: 'workflow Build docs failed on clean-docs at dcd1daacbd: step ''Build docs'' in
+    job ''build'' failed.'
+truth:
+  grading: class
+  category: bad_code_deploy
+  service: ipython
+  required_evidence_any:
+  - dcd1daacbd
+provenance: recorded

@@ -1,0 +1,14 @@
+id: ci-sympy-44524099951
+title: "\U0001F916 printing: parenthesize Relational operands in code printers"
+alert:
+  severity: ci
+  service: build-docs
+  summary: 'workflow test failed on fix/codeprinter-relational-parens at 37007a4167: step
+    ''Run doc/aptinstall.sh'' in job ''Build Docs'' failed.'
+truth:
+  grading: class
+  category: infrastructure
+  service: sympy
+  required_evidence_any:
+  - log-0932
+provenance: recorded

@@ -1,0 +1,15 @@
+id: ci-cibuildwheel-43600347854
+title: 'chore(deps): bump the actions group with 2 updates'
+alert:
+  severity: ci
+  service: test-on-windows-11-arm-3-13
+  summary: 'workflow Test failed on dependabot/github_actions/actions-6a4ad27e07 at 44df2f1935:
+    step ''Test cibuildwheel'' in job ''Test on windows-11-arm (3.13)'' failed.'
+truth:
+  grading: class
+  category: infrastructure
+  service: cibuildwheel
+  required_evidence_any:
+  - log-3384
+  - log-3572
+provenance: recorded

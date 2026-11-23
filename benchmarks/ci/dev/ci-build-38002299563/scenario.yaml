@@ -1,0 +1,14 @@
+id: ci-build-38002299563
+title: 'feat(python): require 3.11 and default to 3.15'
+alert:
+  severity: ci
+  service: check-docs-build-docs
+  summary: 'workflow test failed on feat/python315-default at dccc7837b5: step ''Setup Python
+    3.15'' in job ''check-docs / Build docs'' failed.'
+truth:
+  grading: class
+  category: config_change
+  service: build
+  required_evidence_any:
+  - dccc7837b5
+provenance: recorded

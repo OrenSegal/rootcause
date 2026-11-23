@@ -6,6 +6,7 @@ alert:
   summary: 'workflow test failed on feat/public-subrequest at 8a95e68427: step ''Set up Python
     3.10'' in job ''build (doctesting)'' failed.'
 truth:
+  grading: class
   category: infrastructure
   service: pytest
   required_evidence_any:

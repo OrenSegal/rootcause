@@ -1,0 +1,46 @@
+[
+  {
+    "author": "Nanored4498",
+    "committedDate": "2026-10-21T12:15:31Z",
+    "messageHeadline": "fix frozenset hash",
+    "oid": "07453cac083f33601573b6f82cfc3260b7aef58a",
+    "files": [
+      {
+        "filename": "joblib/func_inspect.py",
+        "status": "modified"
+      },
+      {
+        "filename": "joblib/hashing.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "Nanored4498",
+    "committedDate": "2026-10-21T12:45:43Z",
+    "messageHeadline": "changelog + test",
+    "oid": "e6a3861aae2f251bd03a744df11333d898e3c163",
+    "files": [
+      {
+        "filename": "CHANGES.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "joblib/test/test_memory.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "Nanored4498",
+    "committedDate": "2026-10-21T13:14:02Z",
+    "messageHeadline": "test hash of frozenset != hash of set",
+    "oid": "0619edd2ab4a69f0dae0d1dc73cd35796b59be9a",
+    "files": [
+      {
+        "filename": "joblib/test/test_hashing.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

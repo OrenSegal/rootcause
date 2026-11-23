@@ -501,6 +501,7 @@ def read_results(source: str, *, strict_service: bool = False) -> list[RunRecord
             passed=r.grade.passes(strict_service=strict_service),
             cost=r.grade.cost_usd,
             error=err,
+            truth_class=r.grade.truth_class,
         )
         for r, err in tagged
         if r.config == name

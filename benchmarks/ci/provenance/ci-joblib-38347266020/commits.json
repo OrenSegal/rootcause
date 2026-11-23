@@ -1,0 +1,22 @@
+[
+  {
+    "author": "linjiaye929",
+    "committedDate": "2026-10-13T04:35:58Z",
+    "messageHeadline": "FIX publish cache layout metadata atomically",
+    "oid": "43f09e2b71ebc4433d7d63da2cab3aa2e76efa56",
+    "files": [
+      {
+        "filename": "CHANGES.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "joblib/_store_backends.py",
+        "status": "modified"
+      },
+      {
+        "filename": "joblib/test/test_store_backends.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

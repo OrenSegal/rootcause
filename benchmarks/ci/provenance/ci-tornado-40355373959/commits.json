@@ -1,0 +1,14 @@
+[
+  {
+    "author": "dependabot[bot]",
+    "committedDate": "2026-10-26T16:03:12Z",
+    "messageHeadline": "build(deps): bump filelock from 3.32.7 to 4.2.1",
+    "oid": "86d0323fcbf4ddb7dbcc1fdc5137b65964c02244",
+    "files": [
+      {
+        "filename": "requirements.txt",
+        "status": "modified"
+      }
+    ]
+  }
+]

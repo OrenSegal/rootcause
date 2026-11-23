@@ -1,0 +1,14 @@
+id: ci-streamlink-33797245698
+title: 'ci: ensure git fetch depth on all CI services'
+alert:
+  severity: ci
+  service: test-macos-latest-3-11
+  summary: 'workflow Test failed on ci/deepen-fetch-depth at 2f4bcfad9c: step ''Install Python
+    dependencies'' in job ''Test (macos-latest, 3.11)'' failed.'
+truth:
+  grading: class
+  category: infrastructure
+  service: streamlink
+  required_evidence_any:
+  - log-0216
+provenance: recorded

@@ -1,0 +1,16 @@
+id: ci-sphinx-40744679692
+title: Fix missed warnings about duplicate labels in parallel builds
+alert:
+  severity: ci
+  service: docutils-head
+  summary: 'workflow CI failed on fix-4459 at 129123633f: step ''Install Docutils'' HEAD''
+    in job ''Docutils HEAD'' failed.'
+truth:
+  grading: class
+  category: infrastructure
+  service: sphinx
+  required_evidence_any:
+  - log-0168
+  - log-0169
+  - log-0464
+provenance: recorded

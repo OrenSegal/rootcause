@@ -6,6 +6,7 @@ alert:
   summary: 'workflow style failed on fix-dfs-depth-limit-zero at b9500b54de: step ''Lint''
     in job ''format'' failed.'
 truth:
+  grading: class
   category: bad_code_deploy
   service: networkx
   required_evidence_any:

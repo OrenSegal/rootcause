@@ -1,0 +1,18 @@
+# Mined from https://github.com/streamlink/streamlink/actions/runs/39834644038
+# (streamlink/streamlink, licence BSD-2-Clause). Fixed by run
+# https://github.com/streamlink/streamlink/actions/runs/39834644038. Label rule: the
+# first attempt failed and a re-run of the same pull-request run passed. Fix touched:
+# nothing (rerun).
+id: ci-streamlink-39834644038
+title: 'build: bump brotli to 1.2.1'
+alert:
+  severity: ci
+  service: test-windows-latest-3-10
+  summary: 'workflow Test failed on build/brotli-1.2.1 at 83bf4bcbc4: step ''Test'' in job
+    ''Test (windows-latest, 3.10)'' failed.'
+truth:
+  category: infrastructure
+  service: streamlink
+  required_evidence_any:
+  - log-0759
+provenance: recorded

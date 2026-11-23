@@ -6,6 +6,7 @@ alert:
   summary: 'workflow CI failed on fix-unique-for-date-partial-update at b5c3cbe896: step ''Run
     j178/prek-action@v3.0.0'' in job ''pre-commit'' failed.'
 truth:
+  grading: class
   category: bad_code_deploy
   service: django-rest-framework
   required_evidence_any:

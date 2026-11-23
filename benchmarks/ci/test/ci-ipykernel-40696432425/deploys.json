@@ -1,0 +1,19 @@
+[
+  {
+    "id": "88d025a63a",
+    "service": "ipykernel",
+    "version": "88d025a63a",
+    "ts": "2026-10-28T13:16:53Z",
+    "author": "Carreau",
+    "summary": "Fix recent test failre to to new version of pytest.",
+    "config_before": {
+      "pyproject.toml": "previous"
+    },
+    "config_after": {
+      "pyproject.toml": "modified in 88d025a63a"
+    },
+    "files": [
+      "pyproject.toml"
+    ]
+  }
+]

@@ -1,0 +1,662 @@
+[
+  {
+    "span_id": "run-43759376300",
+    "trace_id": "run-43759376300",
+    "parent_id": null,
+    "service": "tests",
+    "name": "tests",
+    "start": "2026-11-15T20:40:17Z",
+    "duration_ms": 2246000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-132950503653",
+    "trace_id": "run-43759376300",
+    "parent_id": "run-43759376300",
+    "service": "setup-workflow",
+    "name": "Setup workflow",
+    "start": "2026-11-15T20:40:19Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950503653-step-1",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950503653",
+    "service": "setup-workflow",
+    "name": "Set up job",
+    "start": "2026-11-15T20:40:19Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950503653-step-3",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950503653",
+    "service": "setup-workflow",
+    "name": "Check for code changes",
+    "start": "2026-11-15T20:40:20Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950503653-step-4",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950503653",
+    "service": "setup-workflow",
+    "name": "Set matrix option",
+    "start": "2026-11-15T20:40:21Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950503653-step-5",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950503653",
+    "service": "setup-workflow",
+    "name": "Set test matrix with 'default' option",
+    "start": "2026-11-15T20:40:21Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950503653-step-8",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950503653",
+    "service": "setup-workflow",
+    "name": "Complete job",
+    "start": "2026-11-15T20:40:21Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950503794",
+    "trace_id": "run-43759376300",
+    "parent_id": "run-43759376300",
+    "service": "pixi-lock",
+    "name": "Pixi lock",
+    "start": "2026-11-15T20:40:19Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950503794-step-1",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950503794",
+    "service": "pixi-lock",
+    "name": "Set up job",
+    "start": "2026-11-15T20:40:19Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950503794-step-2",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950503794",
+    "service": "pixi-lock",
+    "name": "Run holoviz-dev/holoviz_tasks/pixi-lock@11eb638302f76ec64217e2eeddfb11df1f788b54",
+    "start": "2026-11-15T20:40:20Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950503794-step-4",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950503794",
+    "service": "pixi-lock",
+    "name": "Post Run holoviz-dev/holoviz_tasks/pixi-lock@11eb638302f76ec64217e2eeddfb11df1f788b54",
+    "start": "2026-11-15T20:40:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950503794-step-5",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950503794",
+    "service": "pixi-lock",
+    "name": "Complete job",
+    "start": "2026-11-15T20:40:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950503806",
+    "trace_id": "run-43759376300",
+    "parent_id": "run-43759376300",
+    "service": "optimize-png",
+    "name": "optimize-png",
+    "start": "2026-11-15T20:40:19Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950503806-step-1",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950503806",
+    "service": "optimize-png",
+    "name": "Set up job",
+    "start": "2026-11-15T20:40:19Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950503806-step-2",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950503806",
+    "service": "optimize-png",
+    "name": "Run holoviz-dev/holoviz_tasks/optimize-png@e9aaca7738db5d27bf34d0f69e25990b74a85eaf",
+    "start": "2026-11-15T20:40:21Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950503806-step-4",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950503806",
+    "service": "optimize-png",
+    "name": "Post Run holoviz-dev/holoviz_tasks/optimize-png@e9aaca7738db5d27bf34d0f69e25990b74a85eaf",
+    "start": "2026-11-15T20:40:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950503806-step-5",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950503806",
+    "service": "optimize-png",
+    "name": "Complete job",
+    "start": "2026-11-15T20:40:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950528463",
+    "trace_id": "run-43759376300",
+    "parent_id": "run-43759376300",
+    "service": "run-pre-commit",
+    "name": "Run pre-commit",
+    "start": "2026-11-15T20:40:24Z",
+    "duration_ms": 31000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950528463-step-1",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950528463",
+    "service": "run-pre-commit",
+    "name": "Set up job",
+    "start": "2026-11-15T20:40:25Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950528463-step-2",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950528463",
+    "service": "run-pre-commit",
+    "name": "Run holoviz-dev/holoviz_tasks/pre-commit@11eb638302f76ec64217e2eeddfb11df1f788b54",
+    "start": "2026-11-15T20:40:26Z",
+    "duration_ms": 27000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950528463-step-4",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950528463",
+    "service": "run-pre-commit",
+    "name": "Post Run holoviz-dev/holoviz_tasks/pre-commit@11eb638302f76ec64217e2eeddfb11df1f788b54",
+    "start": "2026-11-15T20:40:53Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950528463-step-5",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950528463",
+    "service": "run-pre-commit",
+    "name": "Complete job",
+    "start": "2026-11-15T20:40:53Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950683667",
+    "trace_id": "run-43759376300",
+    "parent_id": "run-43759376300",
+    "service": "ui-test-ui-windows-latest",
+    "name": "ui:test-ui:windows-latest",
+    "start": "2026-11-15T20:40:57Z",
+    "duration_ms": 2198000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-132950683667-step-1",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950683667",
+    "service": "ui-test-ui-windows-latest",
+    "name": "Set up job",
+    "start": "2026-11-15T20:40:58Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950683667-step-2",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950683667",
+    "service": "ui-test-ui-windows-latest",
+    "name": "Run holoviz-dev/holoviz_tasks/pixi-install@0d2b48d28d94714bf566148cd050233ec875a92d",
+    "start": "2026-11-15T20:41:02Z",
+    "duration_ms": 335000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950683667-step-3",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950683667",
+    "service": "ui-test-ui-windows-latest",
+    "name": "Build pyodide wheels",
+    "start": "2026-11-15T20:46:37Z",
+    "duration_ms": 22000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950683667-step-4",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950683667",
+    "service": "ui-test-ui-windows-latest",
+    "name": "Launch JupyterLab",
+    "start": "2026-11-15T20:46:59Z",
+    "duration_ms": 17000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950683667-step-5",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950683667",
+    "service": "ui-test-ui-windows-latest",
+    "name": "Build JupyterLite",
+    "start": "2026-11-15T20:47:16Z",
+    "duration_ms": 67000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950683667-step-6",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950683667",
+    "service": "ui-test-ui-windows-latest",
+    "name": "Check if auth should run",
+    "start": "2026-11-15T20:48:23Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950683667-step-7",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950683667",
+    "service": "ui-test-ui-windows-latest",
+    "name": "Test UI",
+    "start": "2026-11-15T20:48:23Z",
+    "duration_ms": 1736000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-132950683667-step-8",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950683667",
+    "service": "ui-test-ui-windows-latest",
+    "name": "Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+    "start": "2026-11-15T21:17:19Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950683667-step-9",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950683667",
+    "service": "ui-test-ui-windows-latest",
+    "name": "Stop JupyterLab",
+    "start": "2026-11-15T21:17:21Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950683667-step-20",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950683667",
+    "service": "ui-test-ui-windows-latest",
+    "name": "Post Run holoviz-dev/holoviz_tasks/pixi-install@0d2b48d28d94714bf566148cd050233ec875a92d",
+    "start": "2026-11-15T21:17:30Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950683667-step-21",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950683667",
+    "service": "ui-test-ui-windows-latest",
+    "name": "Complete job",
+    "start": "2026-11-15T21:17:33Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950683677",
+    "trace_id": "run-43759376300",
+    "parent_id": "run-43759376300",
+    "service": "ui-test-ui-macos-latest",
+    "name": "ui:test-ui:macos-latest",
+    "start": "2026-11-15T20:40:57Z",
+    "duration_ms": 1049000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-132950683677-step-1",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950683677",
+    "service": "ui-test-ui-macos-latest",
+    "name": "Set up job",
+    "start": "2026-11-15T20:40:57Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950683677-step-2",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950683677",
+    "service": "ui-test-ui-macos-latest",
+    "name": "Run holoviz-dev/holoviz_tasks/pixi-install@0d2b48d28d94714bf566148cd050233ec875a92d",
+    "start": "2026-11-15T20:41:02Z",
+    "duration_ms": 119000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950683677-step-3",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950683677",
+    "service": "ui-test-ui-macos-latest",
+    "name": "Build pyodide wheels",
+    "start": "2026-11-15T20:43:01Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950683677-step-4",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950683677",
+    "service": "ui-test-ui-macos-latest",
+    "name": "Launch JupyterLab",
+    "start": "2026-11-15T20:43:10Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950683677-step-5",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950683677",
+    "service": "ui-test-ui-macos-latest",
+    "name": "Build JupyterLite",
+    "start": "2026-11-15T20:43:18Z",
+    "duration_ms": 30000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950683677-step-6",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950683677",
+    "service": "ui-test-ui-macos-latest",
+    "name": "Check if auth should run",
+    "start": "2026-11-15T20:43:48Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950683677-step-7",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950683677",
+    "service": "ui-test-ui-macos-latest",
+    "name": "Test UI",
+    "start": "2026-11-15T20:43:48Z",
+    "duration_ms": 867000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-132950683677-step-8",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950683677",
+    "service": "ui-test-ui-macos-latest",
+    "name": "Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+    "start": "2026-11-15T20:58:15Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950683677-step-9",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950683677",
+    "service": "ui-test-ui-macos-latest",
+    "name": "Stop JupyterLab",
+    "start": "2026-11-15T20:58:17Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950683677-step-20",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950683677",
+    "service": "ui-test-ui-macos-latest",
+    "name": "Post Run holoviz-dev/holoviz_tasks/pixi-install@0d2b48d28d94714bf566148cd050233ec875a92d",
+    "start": "2026-11-15T20:58:20Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950683677-step-21",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950683677",
+    "service": "ui-test-ui-macos-latest",
+    "name": "Complete job",
+    "start": "2026-11-15T20:58:21Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950683711",
+    "trace_id": "run-43759376300",
+    "parent_id": "run-43759376300",
+    "service": "ui-test-ui-ubuntu-latest",
+    "name": "ui:test-ui:ubuntu-latest",
+    "start": "2026-11-15T20:40:57Z",
+    "duration_ms": 949000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950683711-step-1",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950683711",
+    "service": "ui-test-ui-ubuntu-latest",
+    "name": "Set up job",
+    "start": "2026-11-15T20:40:57Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950683711-step-2",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950683711",
+    "service": "ui-test-ui-ubuntu-latest",
+    "name": "Run holoviz-dev/holoviz_tasks/pixi-install@0d2b48d28d94714bf566148cd050233ec875a92d",
+    "start": "2026-11-15T20:41:00Z",
+    "duration_ms": 89000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950683711-step-3",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950683711",
+    "service": "ui-test-ui-ubuntu-latest",
+    "name": "Build pyodide wheels",
+    "start": "2026-11-15T20:42:29Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950683711-step-4",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950683711",
+    "service": "ui-test-ui-ubuntu-latest",
+    "name": "Launch JupyterLab",
+    "start": "2026-11-15T20:42:38Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950683711-step-5",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950683711",
+    "service": "ui-test-ui-ubuntu-latest",
+    "name": "Build JupyterLite",
+    "start": "2026-11-15T20:42:43Z",
+    "duration_ms": 22000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950683711-step-6",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950683711",
+    "service": "ui-test-ui-ubuntu-latest",
+    "name": "Check if auth should run",
+    "start": "2026-11-15T20:43:05Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950683711-step-7",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950683711",
+    "service": "ui-test-ui-ubuntu-latest",
+    "name": "Test UI",
+    "start": "2026-11-15T20:43:05Z",
+    "duration_ms": 813000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950683711-step-8",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950683711",
+    "service": "ui-test-ui-ubuntu-latest",
+    "name": "Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+    "start": "2026-11-15T20:56:38Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950683711-step-9",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950683711",
+    "service": "ui-test-ui-ubuntu-latest",
+    "name": "Stop JupyterLab",
+    "start": "2026-11-15T20:56:39Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950683711-step-10",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950683711",
+    "service": "ui-test-ui-ubuntu-latest",
+    "name": "Run codecov/codecov-action@fb8b3582c8e4def4969c97caa2f19720cb33a72f",
+    "start": "2026-11-15T20:56:41Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950683711-step-20",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950683711",
+    "service": "ui-test-ui-ubuntu-latest",
+    "name": "Post Run holoviz-dev/holoviz_tasks/pixi-install@0d2b48d28d94714bf566148cd050233ec875a92d",
+    "start": "2026-11-15T20:56:44Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950683711-step-21",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132950683711",
+    "service": "ui-test-ui-ubuntu-latest",
+    "name": "Complete job",
+    "start": "2026-11-15T20:56:44Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950685212",
+    "trace_id": "run-43759376300",
+    "parent_id": "run-43759376300",
+    "service": "core-matrix-environment-matrix-os",
+    "name": "core:${{ matrix.environment }}:${{ matrix.os }}",
+    "start": "2026-11-15T20:40:55Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950685669",
+    "trace_id": "run-43759376300",
+    "parent_id": "run-43759376300",
+    "service": "unit-matrix-environment-matrix-os",
+    "name": "unit:${{ matrix.environment }}:${{ matrix.os }}",
+    "start": "2026-11-15T20:40:55Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132950685772",
+    "trace_id": "run-43759376300",
+    "parent_id": "run-43759376300",
+    "service": "type-matrix-environment-matrix-os",
+    "name": "type:${{ matrix.environment }}:${{ matrix.os }}",
+    "start": "2026-11-15T20:40:55Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132961324845",
+    "trace_id": "run-43759376300",
+    "parent_id": "run-43759376300",
+    "service": "result-test",
+    "name": "result:test",
+    "start": "2026-11-15T21:17:37Z",
+    "duration_ms": 6000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-132961324845-step-1",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132961324845",
+    "service": "result-test",
+    "name": "Set up job",
+    "start": "2026-11-15T21:17:39Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132961324845-step-2",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132961324845",
+    "service": "result-test",
+    "name": "check for failures",
+    "start": "2026-11-15T21:17:39Z",
+    "duration_ms": 0.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-132961324845-step-3",
+    "trace_id": "run-43759376300",
+    "parent_id": "job-132961324845",
+    "service": "result-test",
+    "name": "Complete job",
+    "start": "2026-11-15T21:17:39Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

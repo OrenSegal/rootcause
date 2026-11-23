@@ -1,0 +1,18 @@
+# Mined from https://github.com/tornadoweb/tornado/actions/runs/38280843819
+# (tornadoweb/tornado, licence Apache-2.0). Fixed by run
+# https://github.com/tornadoweb/tornado/actions/runs/38280843819. Label rule: the first
+# attempt failed and a re-run of the same pull-request run passed. Fix touched: nothing
+# (rerun).
+id: ci-tornado-38280843819
+title: 'ci: Move downstream CI out of build job'
+alert:
+  severity: ci
+  service: run-windows-tests
+  summary: 'workflow Test failed on move-downstream-ci at 421444ad2a: step ''Run test suite''
+    in job ''Run windows tests'' failed.'
+truth:
+  category: infrastructure
+  service: tornado
+  required_evidence_any:
+  - log-0169
+provenance: recorded

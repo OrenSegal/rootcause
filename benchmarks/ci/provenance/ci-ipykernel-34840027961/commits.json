@@ -1,0 +1,178 @@
+[
+  {
+    "author": "Carreau",
+    "committedDate": "2026-09-14T11:25:25Z",
+    "messageHeadline": "MAINT: Autotype methods",
+    "oid": "199f674ca45878bd25496df638594d9893398a5a",
+    "files": [
+      {
+        "filename": "ipykernel/_eventloop_macos.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/comm/comm.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/comm/manager.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/compiler.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/control.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/debugger.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/displayhook.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/embed.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/eventloops.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/gui/gtk3embed.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/gui/gtkembed.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/heartbeat.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/inprocess/blocking.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/inprocess/channels.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/inprocess/client.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/inprocess/ipkernel.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/inprocess/manager.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/inprocess/socket.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/iostream.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/ipkernel.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/kernelapp.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/kernelbase.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/log.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/parentpoller.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/shellchannel.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/socket_pair.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/subshell.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/subshell_manager.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/thread.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/trio_runner.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/utils.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/zmqshell.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "Carreau",
+    "committedDate": "2026-09-14T11:44:27Z",
+    "messageHeadline": "Annotate the news items that are trigered by autotyping.",
+    "oid": "72e89d177fed389972fc6389205bd13a9ed05f76",
+    "files": [
+      {
+        "filename": "ipykernel/debugger.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/displayhook.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/gui/gtk3embed.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/gui/gtkembed.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/iostream.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/trio_runner.py",
+        "status": "modified"
+      },
+      {
+        "filename": "ipykernel/zmqshell.py",
+        "status": "modified"
+      },
+      {
+        "filename": "pyproject.toml",
+        "status": "modified"
+      }
+    ]
+  }
+]

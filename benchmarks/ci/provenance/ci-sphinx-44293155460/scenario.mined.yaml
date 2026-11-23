@@ -1,0 +1,20 @@
+# Mined from https://github.com/sphinx-doc/sphinx/actions/runs/44293155460 (sphinx-
+# doc/sphinx, licence NOASSERTION). Fixed by run https://github.com/sphinx-
+# doc/sphinx/actions/runs/44398838985. Label rule: the fix changed files exactly one
+# tested commit touched. Fix touched: .github/workflows/main.yml,
+# tests/js/doctools.spec.js, tests/test_builders/test_build_html_5_output.py,
+# tests/test_builders/test_build_latex.py, tests/test_builders/test_build_manpage.py,
+# tests/test_builders/test_build_texinfo.py.
+id: ci-sphinx-44293155460
+title: Fix fallback for empty plural translations
+alert:
+  severity: ci
+  service: python-3-16-docutils-0-22
+  summary: 'workflow CI failed on fix-14167-empty-plural-translation at 2ef376198c: step ''Set
+    up Python 3.16 (deadsnakes)'' in job ''Python 3.16 (Docutils 0.22)'' failed.'
+truth:
+  category: bad_code_deploy
+  service: sphinx
+  required_evidence_any:
+  - 2ef376198c
+provenance: recorded

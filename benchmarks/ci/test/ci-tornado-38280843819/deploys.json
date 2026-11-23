@@ -1,0 +1,21 @@
+[
+  {
+    "id": "421444ad2a",
+    "service": "tornado",
+    "version": "421444ad2a",
+    "ts": "2026-10-12T16:55:46Z",
+    "author": "bdarnell",
+    "summary": "ci: Move downstream CI out of build job",
+    "config_before": {
+      ".github/workflows/build.yml": "previous"
+    },
+    "config_after": {
+      ".github/workflows/build.yml": "modified in 421444ad2a",
+      ".github/workflows/downstream.yml": "added in 421444ad2a"
+    },
+    "files": [
+      ".github/workflows/build.yml",
+      ".github/workflows/downstream.yml"
+    ]
+  }
+]

@@ -6,7 +6,7 @@ from pathlib import Path
 import pytest
 from typer.testing import CliRunner
 
-from rootcause.application.diff import RunRecord, compare
+from rootcause.application.diff import RunRecord, compare, restrict
 from rootcause.application.stats import mde80, paired_gap, sign_test, t_quantile
 from rootcause.interfaces.cli import app
 
@@ -111,3 +111,26 @@ def test_sweep_configs_reproduce_the_script_and_name_unknown_ones():
     assert "no detectable difference" in out.output
     bad = runner.invoke(app, ["diff", f"{SWEEP}:haiku-5.5-high", f"{SWEEP}:nope"])
     assert bad.exit_code == 2 and "opus-5.5-high" in bad.output
+
+
+def test_restrict_by_class_keeps_error_runs_with_their_case_and_by_listed_cases():
+    a = ("a", [RunRecord(case="x", passed=True, truth_class="change"),
+               RunRecord(case="y", passed=False, truth_class="not_change"),
+               RunRecord(case="y", passed=False, error=True, cost=0.5)])  # fmt: skip
+    b = ("b", [RunRecord(case="x", passed=True), RunRecord(case="y", passed=True)])
+    kept = restrict([a, b], truth_class="not_change")
+    assert [[r.case for r in recs] for _, recs in kept] == [["y", "y"], ["y"]]
+    assert [[r.case for r in recs] for _, recs in restrict([a, b], cases=["x"])] == [["x"], ["x"]]
+    assert restrict([a, b], truth_class="change", cases=["y"]) == [("a", []), ("b", [])]
+    with pytest.raises(ValueError, match="--cases FILE"):
+        restrict([b, b], truth_class="change")
+
+
+def test_class_and_cases_options_from_the_command_line(tmp_path):
+    out = runner.invoke(app, ["diff", A, B, "--class", "change"])
+    assert out.exit_code == 2 and "--cases FILE" in out.output
+    ids = tmp_path / "ids.txt"
+    ids.write_text("c01\nc02\nc03\n")
+    out = runner.invoke(app, ["diff", A, B, "--cases", str(ids), "--json"])
+    assert out.exit_code == 0, out.output
+    assert json.loads(out.output)["cases"] == 3

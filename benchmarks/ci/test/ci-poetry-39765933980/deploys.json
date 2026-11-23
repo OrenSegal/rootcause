@@ -1,0 +1,15 @@
+[
+  {
+    "id": "decddbe25d",
+    "service": "poetry",
+    "version": "decddbe25d",
+    "ts": "2026-10-22T07:11:42Z",
+    "author": "Csq57",
+    "summary": "test: reuse init_basic_toml fixture in new project expectations",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "tests/console/commands/conftest.py"
+    ]
+  }
+]

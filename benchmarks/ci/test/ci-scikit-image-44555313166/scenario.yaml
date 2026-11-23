@@ -6,6 +6,7 @@ alert:
   summary: 'workflow Typing failed on frangi-fixes at 99df232ff5: step ''Create skimage-stubs
     with docstub'' in job ''Test docstub'' failed.'
 truth:
+  grading: class
   category: bad_code_deploy
   service: scikit-image
   required_evidence_any:

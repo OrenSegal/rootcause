@@ -1,0 +1,18 @@
+# Mined from https://github.com/holoviz/panel/actions/runs/43759376300 (holoviz/panel,
+# licence BSD-3-Clause). Fixed by run
+# https://github.com/holoviz/panel/actions/runs/43778862996. Label rule: the fix changed
+# files exactly one tested commit touched. Fix touched: CHANGELOG.md,
+# doc/about/releases.md.
+id: ci-panel-43759376300
+title: 'docs: Add 1.11.0 release notes'
+alert:
+  severity: ci
+  service: ui-test-ui-windows-latest
+  summary: 'workflow tests failed on docs/release-notes-1.11.0 at 4a225abe2a: step ''Test
+    UI'' in job ''ui:test-ui:windows-latest'' failed.'
+truth:
+  category: bad_code_deploy
+  service: panel
+  required_evidence_any:
+  - 4a225abe2a
+provenance: recorded

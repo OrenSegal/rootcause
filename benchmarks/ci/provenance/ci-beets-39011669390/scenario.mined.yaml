@@ -1,0 +1,20 @@
+# Mined from https://github.com/beetbox/beets/actions/runs/39011669390 (beetbox/beets,
+# licence MIT). Fixed by run https://github.com/beetbox/beets/actions/runs/39011669390.
+# Label rule: the first attempt failed and a re-run of the same pull-request run passed.
+# Fix touched: nothing (rerun).
+id: ci-beets-39011669390
+title: 'lastgenre: Album stage fall back to multi-valued albumartists'
+alert:
+  severity: ci
+  service: run-tests-windows-latest-3-12
+  summary: 'workflow Test failed on lastgenre_album_albumartists_fallback at 71475b9f48: step
+    ''Install system dependencies on Windows'' in job ''Run tests (windows-latest, 3.12)''
+    failed.'
+truth:
+  category: infrastructure
+  service: beets
+  required_evidence_any:
+  - log-0938
+  - log-0275
+  - log-0607
+provenance: recorded

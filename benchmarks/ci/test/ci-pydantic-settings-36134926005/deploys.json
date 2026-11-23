@@ -1,0 +1,48 @@
+[
+  {
+    "id": "85de179c17",
+    "service": "pydantic-settings",
+    "version": "85de179c17",
+    "ts": "2026-09-24T23:37:15Z",
+    "author": "glaziermag",
+    "summary": "Preserve CliSubCommand alias case with case_sensitive=False",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "pydantic_settings/sources/providers/cli.py",
+      "tests/test_source_cli.py"
+    ]
+  },
+  {
+    "id": "2c54634497",
+    "service": "pydantic-settings",
+    "version": "2c54634497",
+    "ts": "2026-09-25T12:17:52Z",
+    "author": "hramezani",
+    "summary": "Merge branch 'main' into fix-clisubcommand-case-20260924",
+    "config_before": {
+      "uv.lock": "previous"
+    },
+    "config_after": {
+      "uv.lock": "modified in 2c54634497"
+    },
+    "files": [
+      "pydantic_settings/sources/providers/cli.py",
+      "tests/test_source_cli.py",
+      "uv.lock"
+    ]
+  },
+  {
+    "id": "b1c42c1776",
+    "service": "pydantic-settings",
+    "version": "b1c42c1776",
+    "ts": "2026-09-25T12:26:17Z",
+    "author": "hramezani",
+    "summary": "Cache case-sensitive subcommand alias on _CliArg",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "pydantic_settings/sources/providers/cli.py"
+    ]
+  }
+]

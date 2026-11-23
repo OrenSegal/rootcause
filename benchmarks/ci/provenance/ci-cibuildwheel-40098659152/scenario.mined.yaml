@@ -1,0 +1,19 @@
+# Mined from https://github.com/pypa/cibuildwheel/actions/runs/40098659152
+# (pypa/cibuildwheel, licence BSD-2-Clause). Fixed by run
+# https://github.com/pypa/cibuildwheel/actions/runs/40098659152. Label rule: the first
+# attempt failed and a re-run of the same pull-request run passed. Fix touched: nothing
+# (rerun).
+id: ci-cibuildwheel-40098659152
+title: 'chore(deps): bump the actions group with 2 updates'
+alert:
+  severity: ci
+  service: test-on-windows-11-arm-3-13
+  summary: 'workflow Test failed on dependabot/github_actions/actions-4b9dfc589c at 7476c9c61b:
+    step ''Test cibuildwheel'' in job ''Test on windows-11-arm (3.13)'' failed.'
+truth:
+  category: infrastructure
+  service: cibuildwheel
+  required_evidence_any:
+  - log-3382
+  - log-3570
+provenance: recorded

@@ -1,0 +1,50 @@
+[
+  {
+    "author": "glaziermag",
+    "committedDate": "2026-09-24T23:37:15Z",
+    "messageHeadline": "Preserve CliSubCommand alias case with case_sensitive=False",
+    "oid": "85de179c17a890219c6214d8e067801f1065ebfa",
+    "files": [
+      {
+        "filename": "pydantic_settings/sources/providers/cli.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_source_cli.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "hramezani",
+    "committedDate": "2026-09-25T12:17:52Z",
+    "messageHeadline": "Merge branch 'main' into fix-clisubcommand-case-20260924",
+    "oid": "2c54634497d4866eb9eb3d89ba7a402c9b8b2b71",
+    "files": [
+      {
+        "filename": "pydantic_settings/sources/providers/cli.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_source_cli.py",
+        "status": "modified"
+      },
+      {
+        "filename": "uv.lock",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "hramezani",
+    "committedDate": "2026-09-25T12:26:17Z",
+    "messageHeadline": "Cache case-sensitive subcommand alias on _CliArg",
+    "oid": "b1c42c17762d566420c4016753aa99273e6eed02",
+    "files": [
+      {
+        "filename": "pydantic_settings/sources/providers/cli.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

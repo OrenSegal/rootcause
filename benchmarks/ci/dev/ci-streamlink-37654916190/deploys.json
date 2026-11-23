@@ -1,0 +1,19 @@
+[
+  {
+    "id": "5b4f3b26d1",
+    "service": "streamlink",
+    "version": "5b4f3b26d1",
+    "ts": "2026-10-07T16:47:41Z",
+    "author": "bastimeyer",
+    "summary": "build: bump pycryptodome to 3.24.0",
+    "config_before": {
+      "uv.lock": "previous"
+    },
+    "config_after": {
+      "uv.lock": "modified in 5b4f3b26d1"
+    },
+    "files": [
+      "uv.lock"
+    ]
+  }
+]

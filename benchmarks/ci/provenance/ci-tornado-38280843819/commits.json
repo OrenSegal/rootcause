@@ -1,0 +1,18 @@
+[
+  {
+    "author": "bdarnell",
+    "committedDate": "2026-10-12T16:55:46Z",
+    "messageHeadline": "ci: Move downstream CI out of build job",
+    "oid": "421444ad2a89b4fd2d193790f546523c7c3f8cd4",
+    "files": [
+      {
+        "filename": ".github/workflows/build.yml",
+        "status": "modified"
+      },
+      {
+        "filename": ".github/workflows/downstream.yml",
+        "status": "added"
+      }
+    ]
+  }
+]

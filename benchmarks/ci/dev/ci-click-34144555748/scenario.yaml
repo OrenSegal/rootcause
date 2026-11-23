@@ -7,6 +7,7 @@ alert:
     ''Run uv run --locked --no-default-groups --group dev tox run -e typing'' in job ''typing''
     failed.'
 truth:
+  grading: class
   category: bad_code_deploy
   service: click
   required_evidence_any:

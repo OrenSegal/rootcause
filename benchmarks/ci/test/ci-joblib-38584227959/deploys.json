@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1be1df87ba",
+    "service": "joblib",
+    "version": "1be1df87ba",
+    "ts": "2026-10-14T14:44:12Z",
+    "author": "itamarst",
+    "summary": "Fix race condition in accessing _FUNCTION_HASHES",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "CHANGES.rst",
+      "joblib/memory.py"
+    ]
+  },
+  {
+    "id": "625137e279",
+    "service": "joblib",
+    "version": "625137e279",
+    "ts": "2026-10-14T14:46:58Z",
+    "author": "itamarst",
+    "summary": "Correct PR",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "CHANGES.rst"
+    ]
+  },
+  {
+    "id": "282771718f",
+    "service": "joblib",
+    "version": "282771718f",
+    "ts": "2026-10-14T14:51:08Z",
+    "author": "itamarst",
+    "summary": "Restore comment",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "joblib/memory.py"
+    ]
+  }
+]

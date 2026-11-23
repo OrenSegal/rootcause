@@ -1,0 +1,18 @@
+# Mined from https://github.com/agronholm/anyio/actions/runs/42467640327
+# (agronholm/anyio, licence MIT). Fixed by run
+# https://github.com/agronholm/anyio/actions/runs/42843999210. Label rule: the fix
+# changed files exactly one tested commit touched. Fix touched:
+# src/anyio/_backends/_asyncio.py.
+id: ci-anyio-42467640327
+title: Fixed buffered TCP receives after explicit closure on asyncio
+alert:
+  severity: ci
+  service: test-ubuntu-latest-3-12-trio-false
+  summary: 'workflow test suite failed on fix/tcp-buffered-receive-after-close at c5cf158f7d:
+    step ''Upload Coverage'' in job ''test (ubuntu-latest, 3.12, [trio], false)'' failed.'
+truth:
+  category: bad_code_deploy
+  service: anyio
+  required_evidence_any:
+  - c5cf158f7d
+provenance: recorded

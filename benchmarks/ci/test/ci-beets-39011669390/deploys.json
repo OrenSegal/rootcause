@@ -1,0 +1,68 @@
+[
+  {
+    "id": "9f4172f1f4",
+    "service": "beets",
+    "version": "9f4172f1f4",
+    "ts": "2026-10-15T05:49:31Z",
+    "author": "JOJ0",
+    "summary": "lastgenre: Album stage albumartists fall back",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "beetsplug/lastgenre/__init__.py"
+    ]
+  },
+  {
+    "id": "1714c7ade1",
+    "service": "beets",
+    "version": "1714c7ade1",
+    "ts": "2026-10-15T05:49:31Z",
+    "author": "JOJ0",
+    "summary": "lastgenre: Docs for album stage albumartists fallback",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "docs/plugins/lastgenre.rst"
+    ]
+  },
+  {
+    "id": "427ac8d5d5",
+    "service": "beets",
+    "version": "427ac8d5d5",
+    "ts": "2026-10-15T05:54:01Z",
+    "author": "JOJ0",
+    "summary": "Changelog #6893 lastgenre album stage fallback",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "docs/changelog.rst"
+    ]
+  },
+  {
+    "id": "6ec4b83c8c",
+    "service": "beets",
+    "version": "6ec4b83c8c",
+    "ts": "2026-10-15T05:54:07Z",
+    "author": "JOJ0",
+    "summary": "lastgenre: Streamline log label wording: albumartist",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "beetsplug/lastgenre/__init__.py",
+      "test/plugins/test_lastgenre.py"
+    ]
+  },
+  {
+    "id": "71475b9f48",
+    "service": "beets",
+    "version": "71475b9f48",
+    "ts": "2026-10-17T06:54:47Z",
+    "author": "JOJ0",
+    "summary": "lastgenre: Test multi-valued albumartists fallback",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "test/plugins/test_lastgenre.py"
+    ]
+  }
+]

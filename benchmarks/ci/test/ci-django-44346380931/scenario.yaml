@@ -6,6 +6,7 @@ alert:
   summary: 'workflow Linters failed on 27514 at 15f1bdfc1f: step ''black'' in job ''black''
     failed.'
 truth:
+  grading: class
   category: bad_code_deploy
   service: django
   required_evidence_any:

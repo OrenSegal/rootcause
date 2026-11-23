@@ -6,6 +6,7 @@ alert:
   summary: 'workflow CI failed on fix/9179-choice-field-mapping at 2832c2ed2e: step ''Run
     tox targets for 3.10'' in job ''Python 3.10'' failed.'
 truth:
+  grading: class
   category: bad_code_deploy
   service: django-rest-framework
   required_evidence_any:

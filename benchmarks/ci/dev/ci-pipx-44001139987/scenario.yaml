@@ -1,0 +1,14 @@
+id: ci-pipx-44001139987
+title: "\U0001F41B fix(fanout): never hang when Ctrl-C lands during a parallel run"
+alert:
+  severity: ci
+  service: test-3-14-ubuntu-26-04
+  summary: "workflow \U0001F9EA tests failed on fix/fanout-deferred-interrupts at 9e15af1ef8:\
+    \ step '\U0001F9EA Run test suite' in job '\U0001F9EA test 3.14 - ubuntu-26.04' failed."
+truth:
+  grading: class
+  category: bad_code_deploy
+  service: pipx
+  required_evidence_any:
+  - 9e15af1ef8
+provenance: recorded

@@ -1,0 +1,14 @@
+id: ci-ipython-41062158624
+title: Close cells the pseudo-sync runner cannot finish
+alert:
+  severity: ci
+  service: oldest-deps-ubuntu-latest
+  summary: 'workflow Run tests failed on fix_generator_exit at 6fdda9f958: step ''pytest''
+    in job ''oldest-deps (ubuntu-latest)'' failed.'
+truth:
+  grading: class
+  category: bad_code_deploy
+  service: ipython
+  required_evidence_any:
+  - 6fdda9f958
+provenance: recorded

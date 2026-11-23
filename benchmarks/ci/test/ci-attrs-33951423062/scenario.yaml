@@ -6,6 +6,7 @@ alert:
   summary: 'workflow CI failed on codex/attrs-1596 at a636abe97f: step ''Run uv run --only-group
     tox tox run -f lint'' in job ''Run linters'' failed.'
 truth:
+  grading: class
   category: bad_code_deploy
   service: attrs
   required_evidence_any:

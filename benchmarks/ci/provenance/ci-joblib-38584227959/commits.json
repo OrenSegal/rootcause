@@ -1,0 +1,42 @@
+[
+  {
+    "author": "itamarst",
+    "committedDate": "2026-10-14T14:44:12Z",
+    "messageHeadline": "Fix race condition in accessing _FUNCTION_HASHES",
+    "oid": "1be1df87ba8db5e977377389eba2b7906449f9b1",
+    "files": [
+      {
+        "filename": "CHANGES.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "joblib/memory.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "itamarst",
+    "committedDate": "2026-10-14T14:46:58Z",
+    "messageHeadline": "Correct PR",
+    "oid": "625137e2790ac0caae337848a84f475f983e793f",
+    "files": [
+      {
+        "filename": "CHANGES.rst",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "itamarst",
+    "committedDate": "2026-10-14T14:51:08Z",
+    "messageHeadline": "Restore comment",
+    "oid": "282771718f6fcf051c6591267603cf3265618c22",
+    "files": [
+      {
+        "filename": "joblib/memory.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

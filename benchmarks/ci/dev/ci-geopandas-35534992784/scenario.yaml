@@ -1,0 +1,14 @@
+id: ci-geopandas-35534992784
+title: 'ENH: add "collect" method to dissolve, deprecate tools.collect'
+alert:
+  severity: ci
+  service: ubuntu-latest-ci-envs-312-latest-yaml
+  summary: 'workflow Tests failed on collect at dbcd60efab: step ''Test'' in job ''ubuntu-latest,
+    ci/envs/312-latest.yaml'' failed.'
+truth:
+  grading: class
+  category: infrastructure
+  service: geopandas
+  required_evidence_any:
+  - log-8896
+provenance: recorded

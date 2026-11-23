@@ -6,6 +6,7 @@ alert:
   summary: 'workflow pre-commit failed on gh-actions-lockfile at 8c59d8c7c5: step ''Error
     out on pre-commit errors'' in job ''pre-commit'' failed.'
 truth:
+  grading: class
   category: config_change
   service: fastapi
   required_evidence_any:

@@ -6,6 +6,7 @@ alert:
   summary: 'workflow style failed on zizmor at c537b78f1e: step ''Lint'' in job ''format''
     failed.'
 truth:
+  grading: class
   category: config_change
   service: networkx
   required_evidence_any:

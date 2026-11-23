@@ -6,6 +6,7 @@ alert:
   summary: 'workflow Test failed on codex/fix-sync-dependency-cancellation at c31ee07649:
     step ''Run uv run coverage report --fail-under=100'' in job ''coverage-combine'' failed.'
 truth:
+  grading: class
   category: bad_code_deploy
   service: fastapi
   required_evidence_any:

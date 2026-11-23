@@ -6,6 +6,7 @@ alert:
   summary: 'workflow Linting failed on add-has-scheduler-plugin at 2926d28f4e: step ''Run
     pre-commit/action@v3.0.1'' in job ''pre-commit hooks'' failed.'
 truth:
+  grading: class
   category: bad_code_deploy
   service: distributed
   required_evidence_any:

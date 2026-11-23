@@ -1,0 +1,102 @@
+[
+  {
+    "span_id": "run-41881547128",
+    "trace_id": "run-41881547128",
+    "parent_id": null,
+    "service": "benchmarks",
+    "name": "Benchmarks",
+    "start": "2026-11-04T17:54:01Z",
+    "duration_ms": 25000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-126754999310",
+    "trace_id": "run-41881547128",
+    "parent_id": "run-41881547128",
+    "service": "codspeed-simulation",
+    "name": "CodSpeed (simulation)",
+    "start": "2026-11-04T17:54:08Z",
+    "duration_ms": 17000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-126754999310-step-1",
+    "trace_id": "run-41881547128",
+    "parent_id": "job-126754999310",
+    "service": "codspeed-simulation",
+    "name": "Set up job",
+    "start": "2026-11-04T17:54:09Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-126754999310-step-2",
+    "trace_id": "run-41881547128",
+    "parent_id": "job-126754999310",
+    "service": "codspeed-simulation",
+    "name": "Run actions/checkout@v7",
+    "start": "2026-11-04T17:54:10Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-126754999310-step-3",
+    "trace_id": "run-41881547128",
+    "parent_id": "job-126754999310",
+    "service": "codspeed-simulation",
+    "name": "Run actions/setup-python@v7",
+    "start": "2026-11-04T17:54:14Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-126754999310-step-4",
+    "trace_id": "run-41881547128",
+    "parent_id": "job-126754999310",
+    "service": "codspeed-simulation",
+    "name": "Install",
+    "start": "2026-11-04T17:54:14Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-126754999310-step-5",
+    "trace_id": "run-41881547128",
+    "parent_id": "job-126754999310",
+    "service": "codspeed-simulation",
+    "name": "Run CodSpeedHQ/action@373d6868929f444bc08d901fd0eb0ad52a8875ea",
+    "start": "2026-11-04T17:54:21Z",
+    "duration_ms": 1000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-126754999310-step-8",
+    "trace_id": "run-41881547128",
+    "parent_id": "job-126754999310",
+    "service": "codspeed-simulation",
+    "name": "Post Run CodSpeedHQ/action@373d6868929f444bc08d901fd0eb0ad52a8875ea",
+    "start": "2026-11-04T17:54:23Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-126754999310-step-10",
+    "trace_id": "run-41881547128",
+    "parent_id": "job-126754999310",
+    "service": "codspeed-simulation",
+    "name": "Post Run actions/checkout@v7",
+    "start": "2026-11-04T17:54:23Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-126754999310-step-11",
+    "trace_id": "run-41881547128",
+    "parent_id": "job-126754999310",
+    "service": "codspeed-simulation",
+    "name": "Complete job",
+    "start": "2026-11-04T17:54:23Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

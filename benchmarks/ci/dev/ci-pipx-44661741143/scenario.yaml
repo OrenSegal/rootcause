@@ -1,0 +1,14 @@
+id: ci-pipx-44661741143
+title: "\U0001F41B fix(upgrade): keep --suffix in local-source reinstall hint"
+alert:
+  severity: ci
+  service: test-3-11-ubuntu-26-04
+  summary: "workflow \U0001F9EA tests failed on fix/upgrade-suffix-remedy at c7c42d09c3: step\
+    \ '\U0001F9EA Run test suite' in job '\U0001F9EA test 3.11 - ubuntu-26.04' failed."
+truth:
+  grading: class
+  category: bad_code_deploy
+  service: pipx
+  required_evidence_any:
+  - c7c42d09c3
+provenance: recorded

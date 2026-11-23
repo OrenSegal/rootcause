@@ -1,0 +1,14 @@
+id: ci-dask-43458367591
+title: Use numeric gufunc core dimensions for dtype inference
+alert:
+  severity: ci
+  service: pre-commit-hooks
+  summary: 'workflow Linting failed on fix/gufunc-fixed-core-inference at 23f2677287: step
+    ''Run pre-commit/action@v3.0.1'' in job ''pre-commit hooks'' failed.'
+truth:
+  grading: class
+  category: bad_code_deploy
+  service: dask
+  required_evidence_any:
+  - 23f2677287
+provenance: recorded

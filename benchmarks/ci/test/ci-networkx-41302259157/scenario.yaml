@@ -6,6 +6,7 @@ alert:
   summary: 'workflow style failed on fix/katz-centrality-numpy-single-node at 5a57813d4e:
     step ''Lint'' in job ''format'' failed.'
 truth:
+  grading: class
   category: bad_code_deploy
   service: networkx
   required_evidence_any:

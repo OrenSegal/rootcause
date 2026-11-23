@@ -6,6 +6,7 @@ alert:
   summary: 'workflow Test Suite failed on fix/config-quote-stripping at 93d4eb9385: step ''Run
     linting checks'' in job ''Python 3.12'' failed.'
 truth:
+  grading: class
   category: bad_code_deploy
   service: starlette
   required_evidence_any:

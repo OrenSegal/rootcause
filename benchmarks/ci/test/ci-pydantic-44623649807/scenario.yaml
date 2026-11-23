@@ -6,6 +6,7 @@ alert:
   summary: 'workflow CI failed on codex/json-cursor-prototype at 051023fad1: step ''Store
     coverage files'' in job ''Test macos-15-intel / 3.15t'' failed.'
 truth:
+  grading: class
   category: infrastructure
   service: pydantic
   required_evidence_any:

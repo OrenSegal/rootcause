@@ -1,0 +1,14 @@
+id: ci-jupyter_server-41440372866
+title: Scrub URL secrets from tornado's exception logs
+alert:
+  severity: ci
+  service: build-windows-latest-3-12
+  summary: 'workflow Jupyter Server Tests failed on scrub-exception-log-uri at 7a4284ffe4:
+    step ''Run the tests on windows'' in job ''build (windows-latest, 3.12)'' failed.'
+truth:
+  grading: class
+  category: infrastructure
+  service: jupyter_server
+  required_evidence_any:
+  - log-7903
+provenance: recorded

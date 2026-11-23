@@ -1,0 +1,11 @@
+{
+  "fixed_run": "https://github.com/scikit-learn/scikit-learn/actions/runs/44977405414",
+  "fixed_sha": "7825bbe1214defdcd54876126895aa3585d6f492",
+  "commits": [
+    "7825bbe1214defdcd54876126895aa3585d6f492"
+  ],
+  "files": [
+    "examples/release_highlights/plot_release_highlights_1_10_0.py"
+  ],
+  "status": "ahead"
+}

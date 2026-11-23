@@ -1,0 +1,2922 @@
+[
+  {
+    "span_id": "run-40696432425",
+    "trace_id": "run-40696432425",
+    "parent_id": null,
+    "service": "ipykernel-tests",
+    "name": "ipykernel tests",
+    "start": "2026-10-28T13:26:27Z",
+    "duration_ms": 428000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-122844326368",
+    "trace_id": "run-40696432425",
+    "parent_id": "run-40696432425",
+    "service": "check-release",
+    "name": "check_release",
+    "start": "2026-10-28T13:26:30Z",
+    "duration_ms": 95000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326368-step-1",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326368",
+    "service": "check-release",
+    "name": "Set up job",
+    "start": "2026-10-28T13:26:31Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326368-step-2",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326368",
+    "service": "check-release",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T13:26:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326368-step-3",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326368",
+    "service": "check-release",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/base-setup@925e40fa6066f4533e0c40803bd4b6d0d2f4a781",
+    "start": "2026-10-28T13:26:34Z",
+    "duration_ms": 19000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326368-step-4",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326368",
+    "service": "check-release",
+    "name": "Run jupyter-server/jupyter_releaser/.github/actions/check-release@70e58c50c736ad496cca11fe4f2446033b68b027",
+    "start": "2026-10-28T13:26:53Z",
+    "duration_ms": 67000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326368-step-7",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326368",
+    "service": "check-release",
+    "name": "Post Run jupyterlab/maintainer-tools/.github/actions/base-setup@925e40fa6066f4533e0c40803bd4b6d0d2f4a781",
+    "start": "2026-10-28T13:28:00Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326368-step-8",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326368",
+    "service": "check-release",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T13:28:03Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326368-step-9",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326368",
+    "service": "check-release",
+    "name": "Complete job",
+    "start": "2026-10-28T13:28:03Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326844",
+    "trace_id": "run-40696432425",
+    "parent_id": "run-40696432425",
+    "service": "test-prereleases",
+    "name": "Test Prereleases",
+    "start": "2026-10-28T13:26:31Z",
+    "duration_ms": 164000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326844-step-1",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326844",
+    "service": "test-prereleases",
+    "name": "Set up job",
+    "start": "2026-10-28T13:26:32Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326844-step-2",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326844",
+    "service": "test-prereleases",
+    "name": "Checkout",
+    "start": "2026-10-28T13:26:33Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326844-step-3",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326844",
+    "service": "test-prereleases",
+    "name": "Base Setup",
+    "start": "2026-10-28T13:26:35Z",
+    "duration_ms": 19000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326844-step-4",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326844",
+    "service": "test-prereleases",
+    "name": "Run the tests",
+    "start": "2026-10-28T13:26:54Z",
+    "duration_ms": 135000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326844-step-7",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326844",
+    "service": "test-prereleases",
+    "name": "Post Base Setup",
+    "start": "2026-10-28T13:29:09Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326844-step-8",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326844",
+    "service": "test-prereleases",
+    "name": "Post Checkout",
+    "start": "2026-10-28T13:29:13Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326844-step-9",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326844",
+    "service": "test-prereleases",
+    "name": "Complete job",
+    "start": "2026-10-28T13:29:13Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326909",
+    "trace_id": "run-40696432425",
+    "parent_id": "run-40696432425",
+    "service": "build-macos-latest-qt6-3-11",
+    "name": "build (macos-latest, qt6, 3.11)",
+    "start": "2026-10-28T13:26:31Z",
+    "duration_ms": 158000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326909-step-1",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326909",
+    "service": "build-macos-latest-qt6-3-11",
+    "name": "Set up job",
+    "start": "2026-10-28T13:26:31Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326909-step-2",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326909",
+    "service": "build-macos-latest-qt6-3-11",
+    "name": "Checkout",
+    "start": "2026-10-28T13:26:32Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326909-step-3",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326909",
+    "service": "build-macos-latest-qt6-3-11",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:26:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326909-step-4",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326909",
+    "service": "build-macos-latest-qt6-3-11",
+    "name": "set qt env",
+    "start": "2026-10-28T13:26:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326909-step-5",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326909",
+    "service": "build-macos-latest-qt6-3-11",
+    "name": "Install hatch",
+    "start": "2026-10-28T13:26:34Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326909-step-6",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326909",
+    "service": "build-macos-latest-qt6-3-11",
+    "name": "Run the tests",
+    "start": "2026-10-28T13:26:37Z",
+    "duration_ms": 142000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326909-step-9",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326909",
+    "service": "build-macos-latest-qt6-3-11",
+    "name": "Check Launcher",
+    "start": "2026-10-28T13:28:59Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326909-step-10",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326909",
+    "service": "build-macos-latest-qt6-3-11",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/upload-coverage@925e40fa6066f4533e0c40803bd4b6d0d2f4a781",
+    "start": "2026-10-28T13:29:04Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326909-step-19",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326909",
+    "service": "build-macos-latest-qt6-3-11",
+    "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:29:05Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326909-step-20",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326909",
+    "service": "build-macos-latest-qt6-3-11",
+    "name": "Post Checkout",
+    "start": "2026-10-28T13:29:06Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326909-step-21",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326909",
+    "service": "build-macos-latest-qt6-3-11",
+    "name": "Complete job",
+    "start": "2026-10-28T13:29:06Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326958",
+    "trace_id": "run-40696432425",
+    "parent_id": "run-40696432425",
+    "service": "test-lint",
+    "name": "Test Lint",
+    "start": "2026-10-28T13:26:31Z",
+    "duration_ms": 59000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326958-step-1",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326958",
+    "service": "test-lint",
+    "name": "Set up job",
+    "start": "2026-10-28T13:26:31Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326958-step-2",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326958",
+    "service": "test-lint",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T13:26:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326958-step-3",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326958",
+    "service": "test-lint",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/base-setup@925e40fa6066f4533e0c40803bd4b6d0d2f4a781",
+    "start": "2026-10-28T13:26:35Z",
+    "duration_ms": 13000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326958-step-4",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326958",
+    "service": "test-lint",
+    "name": "Check mypy deps are in sync with project deps",
+    "start": "2026-10-28T13:26:48Z",
+    "duration_ms": 15000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326958-step-5",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326958",
+    "service": "test-lint",
+    "name": "Run Linters",
+    "start": "2026-10-28T13:27:03Z",
+    "duration_ms": 21000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326958-step-9",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326958",
+    "service": "test-lint",
+    "name": "Post Run jupyterlab/maintainer-tools/.github/actions/base-setup@925e40fa6066f4533e0c40803bd4b6d0d2f4a781",
+    "start": "2026-10-28T13:27:24Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326958-step-10",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326958",
+    "service": "test-lint",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T13:27:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326958-step-11",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326958",
+    "service": "test-lint",
+    "name": "Complete job",
+    "start": "2026-10-28T13:27:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326978",
+    "trace_id": "run-40696432425",
+    "parent_id": "run-40696432425",
+    "service": "make-sdist",
+    "name": "Make SDist",
+    "start": "2026-10-28T13:26:30Z",
+    "duration_ms": 28000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326978-step-1",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326978",
+    "service": "make-sdist",
+    "name": "Set up job",
+    "start": "2026-10-28T13:26:31Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326978-step-2",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326978",
+    "service": "make-sdist",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T13:26:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326978-step-3",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326978",
+    "service": "make-sdist",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/base-setup@925e40fa6066f4533e0c40803bd4b6d0d2f4a781",
+    "start": "2026-10-28T13:26:34Z",
+    "duration_ms": 16000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326978-step-4",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326978",
+    "service": "make-sdist",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/make-sdist@925e40fa6066f4533e0c40803bd4b6d0d2f4a781",
+    "start": "2026-10-28T13:26:50Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326978-step-7",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326978",
+    "service": "make-sdist",
+    "name": "Post Run jupyterlab/maintainer-tools/.github/actions/base-setup@925e40fa6066f4533e0c40803bd4b6d0d2f4a781",
+    "start": "2026-10-28T13:26:54Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326978-step-8",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326978",
+    "service": "make-sdist",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T13:26:56Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326978-step-9",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326978",
+    "service": "make-sdist",
+    "name": "Complete job",
+    "start": "2026-10-28T13:26:57Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326997",
+    "trace_id": "run-40696432425",
+    "parent_id": "run-40696432425",
+    "service": "test-docs",
+    "name": "test_docs",
+    "start": "2026-10-28T13:26:31Z",
+    "duration_ms": 48000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326997-step-1",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326997",
+    "service": "test-docs",
+    "name": "Set up job",
+    "start": "2026-10-28T13:26:32Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326997-step-2",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326997",
+    "service": "test-docs",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T13:26:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326997-step-3",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326997",
+    "service": "test-docs",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/base-setup@925e40fa6066f4533e0c40803bd4b6d0d2f4a781",
+    "start": "2026-10-28T13:26:35Z",
+    "duration_ms": 11000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326997-step-4",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326997",
+    "service": "test-docs",
+    "name": "Build API docs",
+    "start": "2026-10-28T13:26:46Z",
+    "duration_ms": 19000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326997-step-5",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326997",
+    "service": "test-docs",
+    "name": "Run hatch run docs:build",
+    "start": "2026-10-28T13:27:05Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326997-step-9",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326997",
+    "service": "test-docs",
+    "name": "Post Run jupyterlab/maintainer-tools/.github/actions/base-setup@925e40fa6066f4533e0c40803bd4b6d0d2f4a781",
+    "start": "2026-10-28T13:27:14Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326997-step-10",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326997",
+    "service": "test-docs",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T13:27:17Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844326997-step-11",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844326997",
+    "service": "test-docs",
+    "name": "Complete job",
+    "start": "2026-10-28T13:27:17Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327051",
+    "trace_id": "run-40696432425",
+    "parent_id": "run-40696432425",
+    "service": "test-without-debugpy-ubuntu-latest-3-11",
+    "name": "test_without_debugpy (ubuntu-latest, 3.11)",
+    "start": "2026-10-28T13:26:30Z",
+    "duration_ms": 123000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327051-step-1",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327051",
+    "service": "test-without-debugpy-ubuntu-latest-3-11",
+    "name": "Set up job",
+    "start": "2026-10-28T13:26:31Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327051-step-2",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327051",
+    "service": "test-without-debugpy-ubuntu-latest-3-11",
+    "name": "Checkout",
+    "start": "2026-10-28T13:26:32Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327051-step-3",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327051",
+    "service": "test-without-debugpy-ubuntu-latest-3-11",
+    "name": "Base Setup",
+    "start": "2026-10-28T13:26:33Z",
+    "duration_ms": 12000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327051-step-4",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327051",
+    "service": "test-without-debugpy-ubuntu-latest-3-11",
+    "name": "Install the Python dependencies without debugpy",
+    "start": "2026-10-28T13:26:45Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327051-step-5",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327051",
+    "service": "test-without-debugpy-ubuntu-latest-3-11",
+    "name": "List installed packages",
+    "start": "2026-10-28T13:26:54Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327051-step-6",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327051",
+    "service": "test-without-debugpy-ubuntu-latest-3-11",
+    "name": "Run the tests",
+    "start": "2026-10-28T13:26:54Z",
+    "duration_ms": 96000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327051-step-11",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327051",
+    "service": "test-without-debugpy-ubuntu-latest-3-11",
+    "name": "Post Base Setup",
+    "start": "2026-10-28T13:28:30Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327051-step-12",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327051",
+    "service": "test-without-debugpy-ubuntu-latest-3-11",
+    "name": "Post Checkout",
+    "start": "2026-10-28T13:28:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327051-step-13",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327051",
+    "service": "test-without-debugpy-ubuntu-latest-3-11",
+    "name": "Complete job",
+    "start": "2026-10-28T13:28:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327060",
+    "trace_id": "run-40696432425",
+    "parent_id": "run-40696432425",
+    "service": "test-minimum-versions",
+    "name": "Test Minimum Versions",
+    "start": "2026-10-28T13:26:30Z",
+    "duration_ms": 186000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327060-step-1",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327060",
+    "service": "test-minimum-versions",
+    "name": "Set up job",
+    "start": "2026-10-28T13:26:31Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327060-step-2",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327060",
+    "service": "test-minimum-versions",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T13:26:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327060-step-3",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327060",
+    "service": "test-minimum-versions",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:26:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327060-step-4",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327060",
+    "service": "test-minimum-versions",
+    "name": "Base Setup",
+    "start": "2026-10-28T13:26:34Z",
+    "duration_ms": 27000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327060-step-5",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327060",
+    "service": "test-minimum-versions",
+    "name": "List installed packages",
+    "start": "2026-10-28T13:27:01Z",
+    "duration_ms": 23000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327060-step-6",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327060",
+    "service": "test-minimum-versions",
+    "name": "Run the unit tests",
+    "start": "2026-10-28T13:27:24Z",
+    "duration_ms": 126000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327060-step-10",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327060",
+    "service": "test-minimum-versions",
+    "name": "Post Base Setup",
+    "start": "2026-10-28T13:29:30Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327060-step-11",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327060",
+    "service": "test-minimum-versions",
+    "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:29:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327060-step-12",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327060",
+    "service": "test-minimum-versions",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T13:29:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327060-step-13",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327060",
+    "service": "test-minimum-versions",
+    "name": "Complete job",
+    "start": "2026-10-28T13:29:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327135",
+    "trace_id": "run-40696432425",
+    "parent_id": "run-40696432425",
+    "service": "build-windows-latest-qt5-3-14",
+    "name": "build (windows-latest, qt5, 3.14)",
+    "start": "2026-10-28T13:26:31Z",
+    "duration_ms": 222000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327135-step-1",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327135",
+    "service": "build-windows-latest-qt5-3-14",
+    "name": "Set up job",
+    "start": "2026-10-28T13:26:32Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327135-step-2",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327135",
+    "service": "build-windows-latest-qt5-3-14",
+    "name": "Checkout",
+    "start": "2026-10-28T13:26:33Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327135-step-3",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327135",
+    "service": "build-windows-latest-qt5-3-14",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:26:40Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327135-step-4",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327135",
+    "service": "build-windows-latest-qt5-3-14",
+    "name": "set qt env",
+    "start": "2026-10-28T13:26:40Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327135-step-5",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327135",
+    "service": "build-windows-latest-qt5-3-14",
+    "name": "Install hatch",
+    "start": "2026-10-28T13:26:41Z",
+    "duration_ms": 19000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327135-step-8",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327135",
+    "service": "build-windows-latest-qt5-3-14",
+    "name": "Run the tests on Windows",
+    "start": "2026-10-28T13:27:00Z",
+    "duration_ms": 170000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327135-step-9",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327135",
+    "service": "build-windows-latest-qt5-3-14",
+    "name": "Check Launcher",
+    "start": "2026-10-28T13:29:50Z",
+    "duration_ms": 18000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327135-step-10",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327135",
+    "service": "build-windows-latest-qt5-3-14",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/upload-coverage@925e40fa6066f4533e0c40803bd4b6d0d2f4a781",
+    "start": "2026-10-28T13:30:08Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327135-step-19",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327135",
+    "service": "build-windows-latest-qt5-3-14",
+    "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:30:09Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327135-step-20",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327135",
+    "service": "build-windows-latest-qt5-3-14",
+    "name": "Post Checkout",
+    "start": "2026-10-28T13:30:09Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327135-step-21",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327135",
+    "service": "build-windows-latest-qt5-3-14",
+    "name": "Complete job",
+    "start": "2026-10-28T13:30:12Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327216",
+    "trace_id": "run-40696432425",
+    "parent_id": "run-40696432425",
+    "service": "link-check",
+    "name": "link_check",
+    "start": "2026-10-28T13:26:30Z",
+    "duration_ms": 238000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327216-step-1",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327216",
+    "service": "link-check",
+    "name": "Set up job",
+    "start": "2026-10-28T13:26:31Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327216-step-2",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327216",
+    "service": "link-check",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T13:26:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327216-step-3",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327216",
+    "service": "link-check",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/base-setup@925e40fa6066f4533e0c40803bd4b6d0d2f4a781",
+    "start": "2026-10-28T13:26:34Z",
+    "duration_ms": 15000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327216-step-4",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327216",
+    "service": "link-check",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/check-links@925e40fa6066f4533e0c40803bd4b6d0d2f4a781",
+    "start": "2026-10-28T13:26:49Z",
+    "duration_ms": 214000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327216-step-7",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327216",
+    "service": "link-check",
+    "name": "Post Run jupyterlab/maintainer-tools/.github/actions/base-setup@925e40fa6066f4533e0c40803bd4b6d0d2f4a781",
+    "start": "2026-10-28T13:30:23Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327216-step-8",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327216",
+    "service": "link-check",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T13:30:25Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327216-step-9",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327216",
+    "service": "link-check",
+    "name": "Complete job",
+    "start": "2026-10-28T13:30:26Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327227",
+    "trace_id": "run-40696432425",
+    "parent_id": "run-40696432425",
+    "service": "build-ubuntu-latest-qt6-pypy-3-11",
+    "name": "build (ubuntu-latest, qt6, pypy-3.11)",
+    "start": "2026-10-28T13:26:30Z",
+    "duration_ms": 337000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327227-step-1",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327227",
+    "service": "build-ubuntu-latest-qt6-pypy-3-11",
+    "name": "Set up job",
+    "start": "2026-10-28T13:26:31Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327227-step-2",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327227",
+    "service": "build-ubuntu-latest-qt6-pypy-3-11",
+    "name": "Checkout",
+    "start": "2026-10-28T13:26:32Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327227-step-3",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327227",
+    "service": "build-ubuntu-latest-qt6-pypy-3-11",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:26:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327227-step-4",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327227",
+    "service": "build-ubuntu-latest-qt6-pypy-3-11",
+    "name": "set qt env",
+    "start": "2026-10-28T13:26:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327227-step-5",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327227",
+    "service": "build-ubuntu-latest-qt6-pypy-3-11",
+    "name": "Install hatch",
+    "start": "2026-10-28T13:26:34Z",
+    "duration_ms": 67000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327227-step-7",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327227",
+    "service": "build-ubuntu-latest-qt6-pypy-3-11",
+    "name": "Run the tests on pypy",
+    "start": "2026-10-28T13:27:41Z",
+    "duration_ms": 251000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327227-step-9",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327227",
+    "service": "build-ubuntu-latest-qt6-pypy-3-11",
+    "name": "Check Launcher",
+    "start": "2026-10-28T13:31:52Z",
+    "duration_ms": 12000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327227-step-10",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327227",
+    "service": "build-ubuntu-latest-qt6-pypy-3-11",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/upload-coverage@925e40fa6066f4533e0c40803bd4b6d0d2f4a781",
+    "start": "2026-10-28T13:32:04Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327227-step-19",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327227",
+    "service": "build-ubuntu-latest-qt6-pypy-3-11",
+    "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:32:05Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327227-step-20",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327227",
+    "service": "build-ubuntu-latest-qt6-pypy-3-11",
+    "name": "Post Checkout",
+    "start": "2026-10-28T13:32:05Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327227-step-21",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327227",
+    "service": "build-ubuntu-latest-qt6-pypy-3-11",
+    "name": "Complete job",
+    "start": "2026-10-28T13:32:05Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327241",
+    "trace_id": "run-40696432425",
+    "parent_id": "run-40696432425",
+    "service": "build-macos-latest-qt5-3-14",
+    "name": "build (macos-latest, qt5, 3.14)",
+    "start": "2026-10-28T13:26:31Z",
+    "duration_ms": 197000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327241-step-1",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327241",
+    "service": "build-macos-latest-qt5-3-14",
+    "name": "Set up job",
+    "start": "2026-10-28T13:26:32Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327241-step-2",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327241",
+    "service": "build-macos-latest-qt5-3-14",
+    "name": "Checkout",
+    "start": "2026-10-28T13:26:34Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327241-step-3",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327241",
+    "service": "build-macos-latest-qt5-3-14",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:26:37Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327241-step-4",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327241",
+    "service": "build-macos-latest-qt5-3-14",
+    "name": "set qt env",
+    "start": "2026-10-28T13:26:37Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327241-step-5",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327241",
+    "service": "build-macos-latest-qt5-3-14",
+    "name": "Install hatch",
+    "start": "2026-10-28T13:26:37Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327241-step-6",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327241",
+    "service": "build-macos-latest-qt5-3-14",
+    "name": "Run the tests",
+    "start": "2026-10-28T13:26:44Z",
+    "duration_ms": 167000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327241-step-9",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327241",
+    "service": "build-macos-latest-qt5-3-14",
+    "name": "Check Launcher",
+    "start": "2026-10-28T13:29:31Z",
+    "duration_ms": 11000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327241-step-10",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327241",
+    "service": "build-macos-latest-qt5-3-14",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/upload-coverage@925e40fa6066f4533e0c40803bd4b6d0d2f4a781",
+    "start": "2026-10-28T13:29:42Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327241-step-19",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327241",
+    "service": "build-macos-latest-qt5-3-14",
+    "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:29:43Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327241-step-20",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327241",
+    "service": "build-macos-latest-qt5-3-14",
+    "name": "Post Checkout",
+    "start": "2026-10-28T13:29:43Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327241-step-21",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327241",
+    "service": "build-macos-latest-qt5-3-14",
+    "name": "Complete job",
+    "start": "2026-10-28T13:29:44Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327298",
+    "trace_id": "run-40696432425",
+    "parent_id": "run-40696432425",
+    "service": "build-ubuntu-latest-qt5-3-14",
+    "name": "build (ubuntu-latest, qt5, 3.14)",
+    "start": "2026-10-28T13:26:30Z",
+    "duration_ms": 160000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327298-step-1",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327298",
+    "service": "build-ubuntu-latest-qt5-3-14",
+    "name": "Set up job",
+    "start": "2026-10-28T13:26:31Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327298-step-2",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327298",
+    "service": "build-ubuntu-latest-qt5-3-14",
+    "name": "Checkout",
+    "start": "2026-10-28T13:26:32Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327298-step-3",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327298",
+    "service": "build-ubuntu-latest-qt5-3-14",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:26:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327298-step-4",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327298",
+    "service": "build-ubuntu-latest-qt5-3-14",
+    "name": "set qt env",
+    "start": "2026-10-28T13:26:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327298-step-5",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327298",
+    "service": "build-ubuntu-latest-qt5-3-14",
+    "name": "Install hatch",
+    "start": "2026-10-28T13:26:34Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327298-step-6",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327298",
+    "service": "build-ubuntu-latest-qt5-3-14",
+    "name": "Run the tests",
+    "start": "2026-10-28T13:26:42Z",
+    "duration_ms": 136000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327298-step-9",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327298",
+    "service": "build-ubuntu-latest-qt5-3-14",
+    "name": "Check Launcher",
+    "start": "2026-10-28T13:28:58Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327298-step-10",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327298",
+    "service": "build-ubuntu-latest-qt5-3-14",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/upload-coverage@925e40fa6066f4533e0c40803bd4b6d0d2f4a781",
+    "start": "2026-10-28T13:29:06Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327298-step-19",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327298",
+    "service": "build-ubuntu-latest-qt5-3-14",
+    "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:29:07Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327298-step-20",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327298",
+    "service": "build-ubuntu-latest-qt5-3-14",
+    "name": "Post Checkout",
+    "start": "2026-10-28T13:29:08Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327298-step-21",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327298",
+    "service": "build-ubuntu-latest-qt5-3-14",
+    "name": "Complete job",
+    "start": "2026-10-28T13:29:08Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327361",
+    "trace_id": "run-40696432425",
+    "parent_id": "run-40696432425",
+    "service": "build-windows-latest-qt6-3-11",
+    "name": "build (windows-latest, qt6, 3.11)",
+    "start": "2026-10-28T13:26:31Z",
+    "duration_ms": 261000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327361-step-1",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327361",
+    "service": "build-windows-latest-qt6-3-11",
+    "name": "Set up job",
+    "start": "2026-10-28T13:26:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327361-step-2",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327361",
+    "service": "build-windows-latest-qt6-3-11",
+    "name": "Checkout",
+    "start": "2026-10-28T13:26:34Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327361-step-3",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327361",
+    "service": "build-windows-latest-qt6-3-11",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:26:42Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327361-step-4",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327361",
+    "service": "build-windows-latest-qt6-3-11",
+    "name": "set qt env",
+    "start": "2026-10-28T13:26:42Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327361-step-5",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327361",
+    "service": "build-windows-latest-qt6-3-11",
+    "name": "Install hatch",
+    "start": "2026-10-28T13:26:43Z",
+    "duration_ms": 25000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327361-step-8",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327361",
+    "service": "build-windows-latest-qt6-3-11",
+    "name": "Run the tests on Windows",
+    "start": "2026-10-28T13:27:08Z",
+    "duration_ms": 199000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327361-step-9",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327361",
+    "service": "build-windows-latest-qt6-3-11",
+    "name": "Check Launcher",
+    "start": "2026-10-28T13:30:27Z",
+    "duration_ms": 19000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327361-step-10",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327361",
+    "service": "build-windows-latest-qt6-3-11",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/upload-coverage@925e40fa6066f4533e0c40803bd4b6d0d2f4a781",
+    "start": "2026-10-28T13:30:46Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327361-step-19",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327361",
+    "service": "build-windows-latest-qt6-3-11",
+    "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:30:48Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327361-step-20",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327361",
+    "service": "build-windows-latest-qt6-3-11",
+    "name": "Post Checkout",
+    "start": "2026-10-28T13:30:48Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327361-step-21",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327361",
+    "service": "build-windows-latest-qt6-3-11",
+    "name": "Complete job",
+    "start": "2026-10-28T13:30:50Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327363",
+    "trace_id": "run-40696432425",
+    "parent_id": "run-40696432425",
+    "service": "build-ubuntu-latest-qt6-3-12",
+    "name": "build (ubuntu-latest, qt6, 3.12)",
+    "start": "2026-10-28T13:26:31Z",
+    "duration_ms": 163000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327363-step-1",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327363",
+    "service": "build-ubuntu-latest-qt6-3-12",
+    "name": "Set up job",
+    "start": "2026-10-28T13:26:31Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327363-step-2",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327363",
+    "service": "build-ubuntu-latest-qt6-3-12",
+    "name": "Checkout",
+    "start": "2026-10-28T13:26:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327363-step-3",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327363",
+    "service": "build-ubuntu-latest-qt6-3-12",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:26:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327363-step-4",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327363",
+    "service": "build-ubuntu-latest-qt6-3-12",
+    "name": "set qt env",
+    "start": "2026-10-28T13:26:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327363-step-5",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327363",
+    "service": "build-ubuntu-latest-qt6-3-12",
+    "name": "Install hatch",
+    "start": "2026-10-28T13:26:34Z",
+    "duration_ms": 13000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327363-step-6",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327363",
+    "service": "build-ubuntu-latest-qt6-3-12",
+    "name": "Run the tests",
+    "start": "2026-10-28T13:26:47Z",
+    "duration_ms": 138000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327363-step-9",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327363",
+    "service": "build-ubuntu-latest-qt6-3-12",
+    "name": "Check Launcher",
+    "start": "2026-10-28T13:29:05Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327363-step-10",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327363",
+    "service": "build-ubuntu-latest-qt6-3-12",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/upload-coverage@925e40fa6066f4533e0c40803bd4b6d0d2f4a781",
+    "start": "2026-10-28T13:29:10Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327363-step-19",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327363",
+    "service": "build-ubuntu-latest-qt6-3-12",
+    "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:29:12Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327363-step-20",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327363",
+    "service": "build-ubuntu-latest-qt6-3-12",
+    "name": "Post Checkout",
+    "start": "2026-10-28T13:29:12Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327363-step-21",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327363",
+    "service": "build-ubuntu-latest-qt6-3-12",
+    "name": "Complete job",
+    "start": "2026-10-28T13:29:12Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327371",
+    "trace_id": "run-40696432425",
+    "parent_id": "run-40696432425",
+    "service": "build-ubuntu-latest-qt5-pypy-3-11",
+    "name": "build (ubuntu-latest, qt5, pypy-3.11)",
+    "start": "2026-10-28T13:26:30Z",
+    "duration_ms": 334000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327371-step-1",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327371",
+    "service": "build-ubuntu-latest-qt5-pypy-3-11",
+    "name": "Set up job",
+    "start": "2026-10-28T13:26:31Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327371-step-2",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327371",
+    "service": "build-ubuntu-latest-qt5-pypy-3-11",
+    "name": "Checkout",
+    "start": "2026-10-28T13:26:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327371-step-3",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327371",
+    "service": "build-ubuntu-latest-qt5-pypy-3-11",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:26:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327371-step-4",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327371",
+    "service": "build-ubuntu-latest-qt5-pypy-3-11",
+    "name": "set qt env",
+    "start": "2026-10-28T13:26:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327371-step-5",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327371",
+    "service": "build-ubuntu-latest-qt5-pypy-3-11",
+    "name": "Install hatch",
+    "start": "2026-10-28T13:26:35Z",
+    "duration_ms": 73000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327371-step-7",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327371",
+    "service": "build-ubuntu-latest-qt5-pypy-3-11",
+    "name": "Run the tests on pypy",
+    "start": "2026-10-28T13:27:48Z",
+    "duration_ms": 243000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327371-step-9",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327371",
+    "service": "build-ubuntu-latest-qt5-pypy-3-11",
+    "name": "Check Launcher",
+    "start": "2026-10-28T13:31:51Z",
+    "duration_ms": 11000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327371-step-10",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327371",
+    "service": "build-ubuntu-latest-qt5-pypy-3-11",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/upload-coverage@925e40fa6066f4533e0c40803bd4b6d0d2f4a781",
+    "start": "2026-10-28T13:32:02Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327371-step-19",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327371",
+    "service": "build-ubuntu-latest-qt5-pypy-3-11",
+    "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:32:02Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327371-step-20",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327371",
+    "service": "build-ubuntu-latest-qt5-pypy-3-11",
+    "name": "Post Checkout",
+    "start": "2026-10-28T13:32:02Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327371-step-21",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327371",
+    "service": "build-ubuntu-latest-qt5-pypy-3-11",
+    "name": "Complete job",
+    "start": "2026-10-28T13:32:02Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327388",
+    "trace_id": "run-40696432425",
+    "parent_id": "run-40696432425",
+    "service": "build-ubuntu-latest-qt6-3-13",
+    "name": "build (ubuntu-latest, qt6, 3.13)",
+    "start": "2026-10-28T13:26:30Z",
+    "duration_ms": 169000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327388-step-1",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327388",
+    "service": "build-ubuntu-latest-qt6-3-13",
+    "name": "Set up job",
+    "start": "2026-10-28T13:26:32Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327388-step-2",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327388",
+    "service": "build-ubuntu-latest-qt6-3-13",
+    "name": "Checkout",
+    "start": "2026-10-28T13:26:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327388-step-3",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327388",
+    "service": "build-ubuntu-latest-qt6-3-13",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:26:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327388-step-4",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327388",
+    "service": "build-ubuntu-latest-qt6-3-13",
+    "name": "set qt env",
+    "start": "2026-10-28T13:26:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327388-step-5",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327388",
+    "service": "build-ubuntu-latest-qt6-3-13",
+    "name": "Install hatch",
+    "start": "2026-10-28T13:26:34Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327388-step-6",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327388",
+    "service": "build-ubuntu-latest-qt6-3-13",
+    "name": "Run the tests",
+    "start": "2026-10-28T13:26:42Z",
+    "duration_ms": 145000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327388-step-9",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327388",
+    "service": "build-ubuntu-latest-qt6-3-13",
+    "name": "Check Launcher",
+    "start": "2026-10-28T13:29:07Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327388-step-10",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327388",
+    "service": "build-ubuntu-latest-qt6-3-13",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/upload-coverage@925e40fa6066f4533e0c40803bd4b6d0d2f4a781",
+    "start": "2026-10-28T13:29:14Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327388-step-19",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327388",
+    "service": "build-ubuntu-latest-qt6-3-13",
+    "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:29:16Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327388-step-20",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327388",
+    "service": "build-ubuntu-latest-qt6-3-13",
+    "name": "Post Checkout",
+    "start": "2026-10-28T13:29:16Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327388-step-21",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327388",
+    "service": "build-ubuntu-latest-qt6-3-13",
+    "name": "Complete job",
+    "start": "2026-10-28T13:29:17Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327430",
+    "trace_id": "run-40696432425",
+    "parent_id": "run-40696432425",
+    "service": "build-macos-latest-qt6-3-12",
+    "name": "build (macos-latest, qt6, 3.12)",
+    "start": "2026-10-28T13:26:31Z",
+    "duration_ms": 184000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327430-step-1",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327430",
+    "service": "build-macos-latest-qt6-3-12",
+    "name": "Set up job",
+    "start": "2026-10-28T13:26:32Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327430-step-2",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327430",
+    "service": "build-macos-latest-qt6-3-12",
+    "name": "Checkout",
+    "start": "2026-10-28T13:26:33Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327430-step-3",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327430",
+    "service": "build-macos-latest-qt6-3-12",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:26:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327430-step-4",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327430",
+    "service": "build-macos-latest-qt6-3-12",
+    "name": "set qt env",
+    "start": "2026-10-28T13:26:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327430-step-5",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327430",
+    "service": "build-macos-latest-qt6-3-12",
+    "name": "Install hatch",
+    "start": "2026-10-28T13:26:35Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327430-step-6",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327430",
+    "service": "build-macos-latest-qt6-3-12",
+    "name": "Run the tests",
+    "start": "2026-10-28T13:26:41Z",
+    "duration_ms": 159000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327430-step-9",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327430",
+    "service": "build-macos-latest-qt6-3-12",
+    "name": "Check Launcher",
+    "start": "2026-10-28T13:29:20Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327430-step-10",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327430",
+    "service": "build-macos-latest-qt6-3-12",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/upload-coverage@925e40fa6066f4533e0c40803bd4b6d0d2f4a781",
+    "start": "2026-10-28T13:29:29Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327430-step-19",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327430",
+    "service": "build-macos-latest-qt6-3-12",
+    "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:29:31Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327430-step-20",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327430",
+    "service": "build-macos-latest-qt6-3-12",
+    "name": "Post Checkout",
+    "start": "2026-10-28T13:29:31Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327430-step-21",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327430",
+    "service": "build-macos-latest-qt6-3-12",
+    "name": "Complete job",
+    "start": "2026-10-28T13:29:31Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327432",
+    "trace_id": "run-40696432425",
+    "parent_id": "run-40696432425",
+    "service": "build-windows-latest-qt6-pypy-3-11",
+    "name": "build (windows-latest, qt6, pypy-3.11)",
+    "start": "2026-10-28T13:26:33Z",
+    "duration_ms": 421000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327432-step-1",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327432",
+    "service": "build-windows-latest-qt6-pypy-3-11",
+    "name": "Set up job",
+    "start": "2026-10-28T13:26:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327432-step-2",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327432",
+    "service": "build-windows-latest-qt6-pypy-3-11",
+    "name": "Checkout",
+    "start": "2026-10-28T13:26:35Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327432-step-3",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327432",
+    "service": "build-windows-latest-qt6-pypy-3-11",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:26:44Z",
+    "duration_ms": 33000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327432-step-4",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327432",
+    "service": "build-windows-latest-qt6-pypy-3-11",
+    "name": "set qt env",
+    "start": "2026-10-28T13:27:17Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327432-step-5",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327432",
+    "service": "build-windows-latest-qt6-pypy-3-11",
+    "name": "Install hatch",
+    "start": "2026-10-28T13:27:17Z",
+    "duration_ms": 19000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327432-step-7",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327432",
+    "service": "build-windows-latest-qt6-pypy-3-11",
+    "name": "Run the tests on pypy",
+    "start": "2026-10-28T13:27:36Z",
+    "duration_ms": 326000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327432-step-9",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327432",
+    "service": "build-windows-latest-qt6-pypy-3-11",
+    "name": "Check Launcher",
+    "start": "2026-10-28T13:33:02Z",
+    "duration_ms": 28000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327432-step-10",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327432",
+    "service": "build-windows-latest-qt6-pypy-3-11",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/upload-coverage@925e40fa6066f4533e0c40803bd4b6d0d2f4a781",
+    "start": "2026-10-28T13:33:30Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327432-step-19",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327432",
+    "service": "build-windows-latest-qt6-pypy-3-11",
+    "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:33:30Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327432-step-20",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327432",
+    "service": "build-windows-latest-qt6-pypy-3-11",
+    "name": "Post Checkout",
+    "start": "2026-10-28T13:33:30Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327432-step-21",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327432",
+    "service": "build-windows-latest-qt6-pypy-3-11",
+    "name": "Complete job",
+    "start": "2026-10-28T13:33:33Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327484",
+    "trace_id": "run-40696432425",
+    "parent_id": "run-40696432425",
+    "service": "build-macos-latest-qt5-pypy-3-11",
+    "name": "build (macos-latest, qt5, pypy-3.11)",
+    "start": "2026-10-28T13:26:31Z",
+    "duration_ms": 319000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327484-step-1",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327484",
+    "service": "build-macos-latest-qt5-pypy-3-11",
+    "name": "Set up job",
+    "start": "2026-10-28T13:26:31Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327484-step-2",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327484",
+    "service": "build-macos-latest-qt5-pypy-3-11",
+    "name": "Checkout",
+    "start": "2026-10-28T13:26:33Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327484-step-3",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327484",
+    "service": "build-macos-latest-qt5-pypy-3-11",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:26:35Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327484-step-4",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327484",
+    "service": "build-macos-latest-qt5-pypy-3-11",
+    "name": "set qt env",
+    "start": "2026-10-28T13:26:44Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327484-step-5",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327484",
+    "service": "build-macos-latest-qt5-pypy-3-11",
+    "name": "Install hatch",
+    "start": "2026-10-28T13:26:44Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327484-step-7",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327484",
+    "service": "build-macos-latest-qt5-pypy-3-11",
+    "name": "Run the tests on pypy",
+    "start": "2026-10-28T13:26:50Z",
+    "duration_ms": 275000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327484-step-9",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327484",
+    "service": "build-macos-latest-qt5-pypy-3-11",
+    "name": "Check Launcher",
+    "start": "2026-10-28T13:31:25Z",
+    "duration_ms": 18000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327484-step-10",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327484",
+    "service": "build-macos-latest-qt5-pypy-3-11",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/upload-coverage@925e40fa6066f4533e0c40803bd4b6d0d2f4a781",
+    "start": "2026-10-28T13:31:43Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327484-step-19",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327484",
+    "service": "build-macos-latest-qt5-pypy-3-11",
+    "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:31:44Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327484-step-20",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327484",
+    "service": "build-macos-latest-qt5-pypy-3-11",
+    "name": "Post Checkout",
+    "start": "2026-10-28T13:31:44Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327484-step-21",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327484",
+    "service": "build-macos-latest-qt5-pypy-3-11",
+    "name": "Complete job",
+    "start": "2026-10-28T13:31:45Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327490",
+    "trace_id": "run-40696432425",
+    "parent_id": "run-40696432425",
+    "service": "build-macos-latest-qt6-3-13",
+    "name": "build (macos-latest, qt6, 3.13)",
+    "start": "2026-10-28T13:26:31Z",
+    "duration_ms": 204000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327490-step-1",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327490",
+    "service": "build-macos-latest-qt6-3-13",
+    "name": "Set up job",
+    "start": "2026-10-28T13:26:32Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327490-step-2",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327490",
+    "service": "build-macos-latest-qt6-3-13",
+    "name": "Checkout",
+    "start": "2026-10-28T13:26:34Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327490-step-3",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327490",
+    "service": "build-macos-latest-qt6-3-13",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:26:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327490-step-4",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327490",
+    "service": "build-macos-latest-qt6-3-13",
+    "name": "set qt env",
+    "start": "2026-10-28T13:26:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327490-step-5",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327490",
+    "service": "build-macos-latest-qt6-3-13",
+    "name": "Install hatch",
+    "start": "2026-10-28T13:26:36Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327490-step-6",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327490",
+    "service": "build-macos-latest-qt6-3-13",
+    "name": "Run the tests",
+    "start": "2026-10-28T13:26:42Z",
+    "duration_ms": 175000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327490-step-9",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327490",
+    "service": "build-macos-latest-qt6-3-13",
+    "name": "Check Launcher",
+    "start": "2026-10-28T13:29:37Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327490-step-10",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327490",
+    "service": "build-macos-latest-qt6-3-13",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/upload-coverage@925e40fa6066f4533e0c40803bd4b6d0d2f4a781",
+    "start": "2026-10-28T13:29:46Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327490-step-19",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327490",
+    "service": "build-macos-latest-qt6-3-13",
+    "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:29:49Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327490-step-20",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327490",
+    "service": "build-macos-latest-qt6-3-13",
+    "name": "Post Checkout",
+    "start": "2026-10-28T13:29:49Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327490-step-21",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327490",
+    "service": "build-macos-latest-qt6-3-13",
+    "name": "Complete job",
+    "start": "2026-10-28T13:29:50Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327494",
+    "trace_id": "run-40696432425",
+    "parent_id": "run-40696432425",
+    "service": "build-windows-latest-qt6-3-13",
+    "name": "build (windows-latest, qt6, 3.13)",
+    "start": "2026-10-28T13:26:31Z",
+    "duration_ms": 287000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327494-step-1",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327494",
+    "service": "build-windows-latest-qt6-3-13",
+    "name": "Set up job",
+    "start": "2026-10-28T13:26:32Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327494-step-2",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327494",
+    "service": "build-windows-latest-qt6-3-13",
+    "name": "Checkout",
+    "start": "2026-10-28T13:26:34Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327494-step-3",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327494",
+    "service": "build-windows-latest-qt6-3-13",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:26:43Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327494-step-4",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327494",
+    "service": "build-windows-latest-qt6-3-13",
+    "name": "set qt env",
+    "start": "2026-10-28T13:26:43Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327494-step-5",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327494",
+    "service": "build-windows-latest-qt6-3-13",
+    "name": "Install hatch",
+    "start": "2026-10-28T13:26:43Z",
+    "duration_ms": 26000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327494-step-8",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327494",
+    "service": "build-windows-latest-qt6-3-13",
+    "name": "Run the tests on Windows",
+    "start": "2026-10-28T13:27:09Z",
+    "duration_ms": 222000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327494-step-9",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327494",
+    "service": "build-windows-latest-qt6-3-13",
+    "name": "Check Launcher",
+    "start": "2026-10-28T13:30:51Z",
+    "duration_ms": 21000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327494-step-10",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327494",
+    "service": "build-windows-latest-qt6-3-13",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/upload-coverage@925e40fa6066f4533e0c40803bd4b6d0d2f4a781",
+    "start": "2026-10-28T13:31:12Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327494-step-19",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327494",
+    "service": "build-windows-latest-qt6-3-13",
+    "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:31:14Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327494-step-20",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327494",
+    "service": "build-windows-latest-qt6-3-13",
+    "name": "Post Checkout",
+    "start": "2026-10-28T13:31:14Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327494-step-21",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327494",
+    "service": "build-windows-latest-qt6-3-13",
+    "name": "Complete job",
+    "start": "2026-10-28T13:31:16Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327538",
+    "trace_id": "run-40696432425",
+    "parent_id": "run-40696432425",
+    "service": "build-windows-latest-qt6-3-12",
+    "name": "build (windows-latest, qt6, 3.12)",
+    "start": "2026-10-28T13:26:31Z",
+    "duration_ms": 252000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327538-step-1",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327538",
+    "service": "build-windows-latest-qt6-3-12",
+    "name": "Set up job",
+    "start": "2026-10-28T13:26:32Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327538-step-2",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327538",
+    "service": "build-windows-latest-qt6-3-12",
+    "name": "Checkout",
+    "start": "2026-10-28T13:26:33Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327538-step-3",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327538",
+    "service": "build-windows-latest-qt6-3-12",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:26:41Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327538-step-4",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327538",
+    "service": "build-windows-latest-qt6-3-12",
+    "name": "set qt env",
+    "start": "2026-10-28T13:26:41Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327538-step-5",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327538",
+    "service": "build-windows-latest-qt6-3-12",
+    "name": "Install hatch",
+    "start": "2026-10-28T13:26:42Z",
+    "duration_ms": 18000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327538-step-8",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327538",
+    "service": "build-windows-latest-qt6-3-12",
+    "name": "Run the tests on Windows",
+    "start": "2026-10-28T13:27:00Z",
+    "duration_ms": 196000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327538-step-9",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327538",
+    "service": "build-windows-latest-qt6-3-12",
+    "name": "Check Launcher",
+    "start": "2026-10-28T13:30:16Z",
+    "duration_ms": 20000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327538-step-10",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327538",
+    "service": "build-windows-latest-qt6-3-12",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/upload-coverage@925e40fa6066f4533e0c40803bd4b6d0d2f4a781",
+    "start": "2026-10-28T13:30:36Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327538-step-19",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327538",
+    "service": "build-windows-latest-qt6-3-12",
+    "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:30:38Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327538-step-20",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327538",
+    "service": "build-windows-latest-qt6-3-12",
+    "name": "Post Checkout",
+    "start": "2026-10-28T13:30:39Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327538-step-21",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327538",
+    "service": "build-windows-latest-qt6-3-12",
+    "name": "Complete job",
+    "start": "2026-10-28T13:30:41Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327539",
+    "trace_id": "run-40696432425",
+    "parent_id": "run-40696432425",
+    "service": "build-ubuntu-latest-qt6-3-11",
+    "name": "build (ubuntu-latest, qt6, 3.11)",
+    "start": "2026-10-28T13:26:31Z",
+    "duration_ms": 150000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327539-step-1",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327539",
+    "service": "build-ubuntu-latest-qt6-3-11",
+    "name": "Set up job",
+    "start": "2026-10-28T13:26:32Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327539-step-2",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327539",
+    "service": "build-ubuntu-latest-qt6-3-11",
+    "name": "Checkout",
+    "start": "2026-10-28T13:26:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327539-step-3",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327539",
+    "service": "build-ubuntu-latest-qt6-3-11",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:26:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327539-step-4",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327539",
+    "service": "build-ubuntu-latest-qt6-3-11",
+    "name": "set qt env",
+    "start": "2026-10-28T13:26:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327539-step-5",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327539",
+    "service": "build-ubuntu-latest-qt6-3-11",
+    "name": "Install hatch",
+    "start": "2026-10-28T13:26:35Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327539-step-6",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327539",
+    "service": "build-ubuntu-latest-qt6-3-11",
+    "name": "Run the tests",
+    "start": "2026-10-28T13:26:41Z",
+    "duration_ms": 131000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327539-step-9",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327539",
+    "service": "build-ubuntu-latest-qt6-3-11",
+    "name": "Check Launcher",
+    "start": "2026-10-28T13:28:52Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327539-step-10",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327539",
+    "service": "build-ubuntu-latest-qt6-3-11",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/upload-coverage@925e40fa6066f4533e0c40803bd4b6d0d2f4a781",
+    "start": "2026-10-28T13:28:57Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327539-step-19",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327539",
+    "service": "build-ubuntu-latest-qt6-3-11",
+    "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:28:58Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327539-step-20",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327539",
+    "service": "build-ubuntu-latest-qt6-3-11",
+    "name": "Post Checkout",
+    "start": "2026-10-28T13:28:59Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327539-step-21",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327539",
+    "service": "build-ubuntu-latest-qt6-3-11",
+    "name": "Complete job",
+    "start": "2026-10-28T13:28:59Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327605",
+    "trace_id": "run-40696432425",
+    "parent_id": "run-40696432425",
+    "service": "build-macos-latest-qt6-pypy-3-11",
+    "name": "build (macos-latest, qt6, pypy-3.11)",
+    "start": "2026-10-28T13:26:32Z",
+    "duration_ms": 394000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327605-step-1",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327605",
+    "service": "build-macos-latest-qt6-pypy-3-11",
+    "name": "Set up job",
+    "start": "2026-10-28T13:26:33Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327605-step-2",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327605",
+    "service": "build-macos-latest-qt6-pypy-3-11",
+    "name": "Checkout",
+    "start": "2026-10-28T13:26:35Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327605-step-3",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327605",
+    "service": "build-macos-latest-qt6-pypy-3-11",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:26:38Z",
+    "duration_ms": 19000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327605-step-4",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327605",
+    "service": "build-macos-latest-qt6-pypy-3-11",
+    "name": "set qt env",
+    "start": "2026-10-28T13:26:57Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327605-step-5",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327605",
+    "service": "build-macos-latest-qt6-pypy-3-11",
+    "name": "Install hatch",
+    "start": "2026-10-28T13:26:57Z",
+    "duration_ms": 10000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327605-step-7",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327605",
+    "service": "build-macos-latest-qt6-pypy-3-11",
+    "name": "Run the tests on pypy",
+    "start": "2026-10-28T13:27:07Z",
+    "duration_ms": 336000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327605-step-9",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327605",
+    "service": "build-macos-latest-qt6-pypy-3-11",
+    "name": "Check Launcher",
+    "start": "2026-10-28T13:32:43Z",
+    "duration_ms": 16000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327605-step-10",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327605",
+    "service": "build-macos-latest-qt6-pypy-3-11",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/upload-coverage@925e40fa6066f4533e0c40803bd4b6d0d2f4a781",
+    "start": "2026-10-28T13:32:59Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327605-step-19",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327605",
+    "service": "build-macos-latest-qt6-pypy-3-11",
+    "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:33:00Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327605-step-20",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327605",
+    "service": "build-macos-latest-qt6-pypy-3-11",
+    "name": "Post Checkout",
+    "start": "2026-10-28T13:33:00Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327605-step-21",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327605",
+    "service": "build-macos-latest-qt6-pypy-3-11",
+    "name": "Complete job",
+    "start": "2026-10-28T13:33:01Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327687",
+    "trace_id": "run-40696432425",
+    "parent_id": "run-40696432425",
+    "service": "build-windows-latest-qt5-pypy-3-11",
+    "name": "build (windows-latest, qt5, pypy-3.11)",
+    "start": "2026-10-28T13:26:31Z",
+    "duration_ms": 409000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-122844327687-step-1",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327687",
+    "service": "build-windows-latest-qt5-pypy-3-11",
+    "name": "Set up job",
+    "start": "2026-10-28T13:26:34Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327687-step-2",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327687",
+    "service": "build-windows-latest-qt5-pypy-3-11",
+    "name": "Checkout",
+    "start": "2026-10-28T13:26:37Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327687-step-3",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327687",
+    "service": "build-windows-latest-qt5-pypy-3-11",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-10-28T13:26:45Z",
+    "duration_ms": 28000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327687-step-4",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327687",
+    "service": "build-windows-latest-qt5-pypy-3-11",
+    "name": "set qt env",
+    "start": "2026-10-28T13:27:13Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327687-step-5",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327687",
+    "service": "build-windows-latest-qt5-pypy-3-11",
+    "name": "Install hatch",
+    "start": "2026-10-28T13:27:13Z",
+    "duration_ms": 19000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327687-step-7",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327687",
+    "service": "build-windows-latest-qt5-pypy-3-11",
+    "name": "Run the tests on pypy",
+    "start": "2026-10-28T13:27:32Z",
+    "duration_ms": 344000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-122844327687-step-20",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327687",
+    "service": "build-windows-latest-qt5-pypy-3-11",
+    "name": "Post Checkout",
+    "start": "2026-10-28T13:33:16Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844327687-step-21",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844327687",
+    "service": "build-windows-latest-qt5-pypy-3-11",
+    "name": "Complete job",
+    "start": "2026-10-28T13:33:18Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844605587",
+    "trace_id": "run-40696432425",
+    "parent_id": "run-40696432425",
+    "service": "install-from-sdist-and-test",
+    "name": "Install from SDist and Test",
+    "start": "2026-10-28T13:27:01Z",
+    "duration_ms": 147000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844605587-step-1",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844605587",
+    "service": "install-from-sdist-and-test",
+    "name": "Set up job",
+    "start": "2026-10-28T13:27:02Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844605587-step-2",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844605587",
+    "service": "install-from-sdist-and-test",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/base-setup@925e40fa6066f4533e0c40803bd4b6d0d2f4a781",
+    "start": "2026-10-28T13:27:04Z",
+    "duration_ms": 15000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844605587-step-3",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844605587",
+    "service": "install-from-sdist-and-test",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/test-sdist@925e40fa6066f4533e0c40803bd4b6d0d2f4a781",
+    "start": "2026-10-28T13:27:19Z",
+    "duration_ms": 126000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844605587-step-6",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844605587",
+    "service": "install-from-sdist-and-test",
+    "name": "Post Run jupyterlab/maintainer-tools/.github/actions/base-setup@925e40fa6066f4533e0c40803bd4b6d0d2f4a781",
+    "start": "2026-10-28T13:29:25Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122844605587-step-7",
+    "trace_id": "run-40696432425",
+    "parent_id": "job-122844605587",
+    "service": "install-from-sdist-and-test",
+    "name": "Complete job",
+    "start": "2026-10-28T13:29:26Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122848183025",
+    "trace_id": "run-40696432425",
+    "parent_id": "run-40696432425",
+    "service": "coverage",
+    "name": "coverage",
+    "start": "2026-10-28T13:33:35Z",
+    "duration_ms": -1000.0,
+    "status": "ok"
+  }
+]

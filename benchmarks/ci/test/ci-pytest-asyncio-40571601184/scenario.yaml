@@ -6,6 +6,7 @@ alert:
   summary: 'workflow CI failed on fix/validate-marker-loop-scope at 5c58517276: step ''Run
     pre-commit checks'' in job ''Run linters'' failed.'
 truth:
+  grading: class
   category: bad_code_deploy
   service: pytest-asyncio
   required_evidence_any:

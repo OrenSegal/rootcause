@@ -1,0 +1,43 @@
+[
+  {
+    "id": "07453cac08",
+    "service": "joblib",
+    "version": "07453cac08",
+    "ts": "2026-10-21T12:15:31Z",
+    "author": "Nanored4498",
+    "summary": "fix frozenset hash",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "joblib/func_inspect.py",
+      "joblib/hashing.py"
+    ]
+  },
+  {
+    "id": "e6a3861aae",
+    "service": "joblib",
+    "version": "e6a3861aae",
+    "ts": "2026-10-21T12:45:43Z",
+    "author": "Nanored4498",
+    "summary": "changelog + test",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "CHANGES.rst",
+      "joblib/test/test_memory.py"
+    ]
+  },
+  {
+    "id": "0619edd2ab",
+    "service": "joblib",
+    "version": "0619edd2ab",
+    "ts": "2026-10-21T13:14:02Z",
+    "author": "Nanored4498",
+    "summary": "test hash of frozenset != hash of set",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "joblib/test/test_hashing.py"
+    ]
+  }
+]

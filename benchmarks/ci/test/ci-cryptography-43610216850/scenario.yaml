@@ -6,6 +6,7 @@ alert:
   summary: 'workflow CI failed on dsa-traditional-public-key-match at a2dbabd654: step ''Combine
     coverage and fail if it''s <100%.'' in job ''all-green'' failed.'
 truth:
+  grading: class
   category: bad_code_deploy
   service: cryptography
   required_evidence_any:

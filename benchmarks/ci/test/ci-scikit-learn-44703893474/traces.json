@@ -1,0 +1,82 @@
+[
+  {
+    "span_id": "run-44703893474",
+    "trace_id": "run-44703893474",
+    "parent_id": null,
+    "service": "verify-actions-lockfile",
+    "name": "Verify actions lockfile",
+    "start": "2026-11-20T08:36:25Z",
+    "duration_ms": 21000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-136178581618",
+    "trace_id": "run-44703893474",
+    "parent_id": "run-44703893474",
+    "service": "verify-actions-lock",
+    "name": "verify-actions-lock",
+    "start": "2026-11-20T08:36:29Z",
+    "duration_ms": 17000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-136178581618-step-1",
+    "trace_id": "run-44703893474",
+    "parent_id": "job-136178581618",
+    "service": "verify-actions-lock",
+    "name": "Set up job",
+    "start": "2026-11-20T08:36:30Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136178581618-step-2",
+    "trace_id": "run-44703893474",
+    "parent_id": "job-136178581618",
+    "service": "verify-actions-lock",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-20T08:36:32Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136178581618-step-3",
+    "trace_id": "run-44703893474",
+    "parent_id": "job-136178581618",
+    "service": "verify-actions-lock",
+    "name": "Run gh extension install github/gh-actions-lock --pin v0.4.1",
+    "start": "2026-11-20T08:36:38Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136178581618-step-4",
+    "trace_id": "run-44703893474",
+    "parent_id": "job-136178581618",
+    "service": "verify-actions-lock",
+    "name": "Run gh actions-lock --verify",
+    "start": "2026-11-20T08:36:41Z",
+    "duration_ms": 2000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-136178581618-step-8",
+    "trace_id": "run-44703893474",
+    "parent_id": "job-136178581618",
+    "service": "verify-actions-lock",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-20T08:36:43Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136178581618-step-9",
+    "trace_id": "run-44703893474",
+    "parent_id": "job-136178581618",
+    "service": "verify-actions-lock",
+    "name": "Complete job",
+    "start": "2026-11-20T08:36:43Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

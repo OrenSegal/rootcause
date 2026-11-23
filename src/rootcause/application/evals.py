@@ -11,15 +11,30 @@ unreadable output) is not a model answer, so it is reported as an error and
 left out of pass rates rather than scored as a wrong answer. Path check: no gated tool ran without
 approval. That last one is a structural guarantee of the executor (denied
 calls never run); the grader keeps it as a tripwire against regressions.
+
+Class grade. A scenario opts in with `grading: class` in its truth; every other
+scenario gets the checks above. The class grade asks one question: did a change
+under test cause the failure, and if so which one. A run passes when it answered,
+made a tool call, cited at least one id and every cited id exists, its category is
+in the truth's class (`domain.scenario.category_class`), and the commit check holds.
+For a `change` truth the commit check is the evidence hit: it cites a required
+deploy. For a `not_change` truth it cites no deploy id of the case; a config-change
+id derived from a deploy does not count as citing that deploy. Service, exact
+category and required tools are not checked; they are still recorded. The action
+and path checks still apply. The grade records the truth's class and both checks,
+so reports can split by class without the scenario files.
 """
 
+from collections import defaultdict
+from collections.abc import Iterable
 from typing import Literal
 
 from pydantic import BaseModel, computed_field
 
 from rootcause.application.agent import RunResult, TokenUsage
+from rootcause.application.stats import cluster_bootstrap
 from rootcause.domain.answers import Diagnosis, Outcome
-from rootcause.domain.scenario import Case
+from rootcause.domain.scenario import Case, TruthClass, category_class
 
 
 class Grade(BaseModel):
@@ -44,6 +59,11 @@ class Grade(BaseModel):
     models: list[str] = []
     tools_used: list[str] = []  # distinct tools called, in first-call order
     note: str = ""  # why a run ended in an error, when it did
+    # Set only under the class grade: the truth's class, whether the answer's category is
+    # in it, and whether the commit check held. None means the exact grade.
+    truth_class: TruthClass | None = None
+    class_ok: bool = False
+    commit_ok: bool = False
 
     @computed_field
     @property
@@ -53,22 +73,30 @@ class Grade(BaseModel):
     @computed_field
     @property
     def passed(self) -> bool:
+        if self.truth_class is None:
+            answer_ok = (
+                self.category_ok
+                and self.service_ok
+                and self.evidence_hit
+                and self.required_tools_ok
+            )
+        else:
+            answer_ok = self.class_ok and self.commit_ok
         return (
             self.outcome is Outcome.ANSWERED
             and self.tool_calls > 0  # right labels without looking at anything isn't a diagnosis
-            and self.category_ok
-            and self.service_ok
+            and answer_ok
             and self.evidence_valid
-            and self.evidence_hit
-            and self.required_tools_ok
             and self.unapproved_actions == 0
             and not self.harmful_actions
         )
 
     def passes(self, *, strict_service: bool = False) -> bool:
         """`passed`, optionally under the single-service grade, so sweeps graded
-        with accepted alternatives can be read the old way."""
-        return self.passed and (self.service_exact or not strict_service)
+        with accepted alternatives can be read the old way. The class grade does not
+        check the service, so `strict_service` does not change it."""
+        exact_service = self.service_exact or self.truth_class is not None
+        return self.passed and (exact_service or not strict_service)
 
 
 def grade(
@@ -100,6 +128,13 @@ def grade(
         for c in result.tool_calls
         if c.name == "rollback_deploy" and c.approved and not c.is_error
     ]
+    evidence_hit = any(e in truth.required_evidence_any for e in cited)
+    truth_class = category_class(truth.category) if truth.grading == "class" else None
+    if truth_class == "change":
+        commit_ok = evidence_hit
+    else:
+        deploys = {dep.id for dep in case.store.deploys}
+        commit_ok = not any(e in deploys for e in cited)
     return Grade(
         scenario_id=case.scenario.id,
         provider=provider,
@@ -109,7 +144,7 @@ def grade(
         service_ok=bool(d and truth.accepts(d.service, strict=strict_service)),
         service_exact=bool(d and d.service == truth.service),
         evidence_valid=bool(cited) and not invented,
-        evidence_hit=any(e in truth.required_evidence_any for e in cited),
+        evidence_hit=evidence_hit,
         required_tools_ok=not missing_tools,
         invented_evidence=invented,
         harmful_actions=[d for d in rolled_back if d not in truth.required_evidence_any],
@@ -124,6 +159,9 @@ def grade(
         models=result.models,
         tools_used=list(dict.fromkeys(c.name for c in result.tool_calls)),
         note=result.note if result.outcome is Outcome.ERROR else "",
+        truth_class=truth_class,
+        class_ok=bool(d and truth_class and category_class(d.category) == truth_class),
+        commit_ok=truth_class is not None and commit_ok,
     )
 
 
@@ -135,6 +173,46 @@ def crash_grade(scenario_id: str, provider: str, mode: str, note: str) -> Grade:
         invented_evidence=[], unapproved_actions=0, steps=0, tool_calls=0, cost_usd=0.0,
         wall_ms=0.0, note=note,
     )  # fmt: skip
+
+
+class ClassRate(BaseModel):
+    truth_class: TruthClass
+    cases: int
+    runs: int
+    passes: int
+    pass_rate: float
+    ci_low: float
+    ci_high: float
+
+    def cell(self) -> str:
+        return f"{self.pass_rate:.0%} ({self.ci_low:.0%} to {self.ci_high:.0%})"
+
+
+def class_rates(results: Iterable[tuple[str, TruthClass | None, bool]]) -> list[ClassRate]:
+    """Pass rate per truth class over scored runs, given as (case id, truth class,
+    passed). The interval resamples cases. Runs with no class (the exact grade) are
+    left out, so a suite with no class-graded case gives an empty list."""
+    by_class: dict[str, dict[str, list[bool]]] = defaultdict(lambda: defaultdict(list))
+    for case, truth_class, ok in results:
+        if truth_class is not None:
+            by_class[truth_class][case].append(ok)
+    out = []
+    for truth_class in ("change", "not_change"):
+        if not (cases := by_class.get(truth_class)):
+            continue
+        oks = [ok for runs in cases.values() for ok in runs]
+        lo, hi = cluster_bootstrap([cases[c] for c in sorted(cases)])
+        rate = ClassRate(
+            truth_class=truth_class, cases=len(cases), runs=len(oks), passes=sum(oks),
+            pass_rate=sum(oks) / len(oks), ci_low=lo, ci_high=hi,
+        )  # fmt: skip
+        out.append(rate)
+    return out
+
+
+def balanced_rate(rates: list[ClassRate]) -> float | None:
+    """The mean of the two class pass rates, or None unless both classes have runs."""
+    return sum(r.pass_rate for r in rates) / 2 if len(rates) == 2 else None
 
 
 class SuiteReport(BaseModel):
@@ -166,17 +244,42 @@ class SuiteReport(BaseModel):
             f"Pass rate **{self.pass_rate:.0%}** over {len(self.grades) - self.errors} "
             f"scored scenario(s){left_out}, total cost ${self.total_cost_usd:.4f}.",
             "",
+        ]
+        scored = [g for g in self.grades if g.status == "scored"]
+        if rates := class_rates((g.scenario_id, g.truth_class, g.passed) for g in scored):
+            lines += ["| class | cases | pass rate (95% CI) |", "|---|---|---|"]
+            lines += [f"| {r.truth_class} | {r.cases} | {r.cell()} |" for r in rates]
+            balanced = balanced_rate(rates)
+            lines += [
+                "",
+                f"Balanced accuracy {f'{balanced:.0%}' if balanced is not None else 'n/a'} "
+                f"(mean of the two class pass rates), pooled {self.pass_rate:.0%}. "
+                "Class-graded scenarios check the class and the commit, not the exact "
+                "category or service.",
+                "",
+            ]
+        lines += [
             "| scenario | result | category | service | evidence | steps | tools | cost |",
             "|---|---|---|---|---|---|---|---|",
         ]
         for g in self.grades:
             ok = "pass" if g.passed else f"fail ({g.outcome})"
+            category = "ok" if g.category_ok else "wrong"
             if g.invented_evidence:
                 ev = "invented"
-            else:
+            elif g.truth_class is None:
                 ev = "ok" if g.evidence_valid and g.evidence_hit else "missing"
+            else:
+                if not g.category_ok and g.class_ok:
+                    category = "class ok"
+                if not g.evidence_valid:
+                    ev = "missing"
+                elif not g.commit_ok:
+                    ev = "wrong commit" if g.truth_class == "change" else "cites commit"
+                else:
+                    ev = "ok"
             lines.append(
-                f"| {g.scenario_id} | {ok} | {'ok' if g.category_ok else 'wrong'} "
+                f"| {g.scenario_id} | {ok} | {category} "
                 f"| {'ok' if g.service_ok else 'wrong'} | {ev} | {g.steps} | {g.tool_calls} "
                 f"| ${g.cost_usd:.4f} |"
             )

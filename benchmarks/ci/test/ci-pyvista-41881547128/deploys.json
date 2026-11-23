@@ -1,0 +1,251 @@
+[
+  {
+    "id": "400779f73f",
+    "service": "pyvista",
+    "version": "400779f73f",
+    "ts": "2026-09-08T02:47:55Z",
+    "author": "akaszynski",
+    "summary": "Release v0.49.0 (#9157)",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "pyvista/_version.py"
+    ]
+  },
+  {
+    "id": "38b67e2501",
+    "service": "pyvista",
+    "version": "38b67e2501",
+    "ts": "2026-09-14T13:55:24Z",
+    "author": "echedey-ls",
+    "summary": "DOC: Update DataObjectFilters.extract_surface param algorithm misdocumented (#9236)",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "pyvista/core/filters/data_object.py"
+    ]
+  },
+  {
+    "id": "4266c65a08",
+    "service": "pyvista",
+    "version": "4266c65a08",
+    "ts": "2026-10-02T16:05:33Z",
+    "author": "user27182",
+    "summary": "Backport bug and doc fixes to 0.49 for the 0.49.1 patch release (#9364)",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "doc/source/api/index.rst",
+      "doc/source/api/readers/index.rst",
+      "doc/source/conf.py",
+      "doc/source/make_tables.py",
+      "examples/02-plot/texture.py",
+      "pyvista/_cli/utils.py",
+      "pyvista/core/filters/composite.py",
+      "pyvista/core/filters/image_data.py",
+      "pyvista/core/filters/poly_data.py",
+      "pyvista/core/utilities/docs.py",
+      "pyvista/core/utilities/geometric_objects.py",
+      "pyvista/core/utilities/misc.py",
+      "pyvista/examples/_dataset_loader.py",
+      "pyvista/examples/_get_example.py",
+      "pyvista/jupyter/__init__.py",
+      "pyvista/plotting/lookup_table.py",
+      "pyvista/plotting/plotter.py",
+      "pyvista/plotting/utilities/gl_checks.py",
+      "pyvista/plotting/utilities/regression.py",
+      "tests/core/test_composite.py",
+      "tests/core/test_imagedata_filters.py",
+      "tests/core/test_ipython_completion.py",
+      "tests/core/test_optional_formats.py",
+      "tests/core/test_polydata.py",
+      "tests/core/test_utilities.py",
+      "tests/doc/doc_build/test_intersphinx_links.py",
+      "tests/plotting/test_gc.py",
+      "tests/plotting/test_lookup_table.py",
+      "tests/plotting/test_plotter.py",
+      "tests/plotting/test_plotting.py",
+      "tests/plotting/test_plotting_utilities.py",
+      "tests/test_cli.py"
+    ]
+  },
+  {
+    "id": "dbe2187f12",
+    "service": "pyvista",
+    "version": "dbe2187f12",
+    "ts": "2026-10-11T06:00:18Z",
+    "author": "user27182",
+    "summary": "Backport to 0.49: restore `jupyter-server-proxy` in the `jupyter` extra (#9394)",
+    "config_before": {
+      ".github/workflows/docker-package.yml": "previous",
+      "pyproject.toml": "previous"
+    },
+    "config_after": {
+      ".github/workflows/docker-package.yml": "modified in dbe2187f12",
+      "pyproject.toml": "modified in dbe2187f12"
+    },
+    "files": [
+      ".github/workflows/docker-package.yml",
+      "doc/source/user-guide/jupyter/trame.rst",
+      "pyproject.toml",
+      "pyvista/jupyter/__init__.py",
+      "pyvista/jupyter/notebook.py",
+      "tests/plotting/jupyter/test_custom_backends.py",
+      "toxfile.py"
+    ]
+  },
+  {
+    "id": "24ff82836e",
+    "service": "pyvista",
+    "version": "24ff82836e",
+    "ts": "2026-10-11T06:22:02Z",
+    "author": "user27182",
+    "summary": "Release v0.49.1",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "pyvista/_version.py"
+    ]
+  },
+  {
+    "id": "4315b67324",
+    "service": "pyvista",
+    "version": "4315b67324",
+    "ts": "2026-10-28T21:26:51Z",
+    "author": "banesullivan",
+    "summary": "Pickle `pyvista_ndarray` as a plain `ndarray` (#9470)",
+    "config_before": {
+      "pyproject.toml": "previous"
+    },
+    "config_after": {
+      "pyproject.toml": "modified in 4315b67324"
+    },
+    "files": [
+      "pyproject.toml",
+      "pyvista/core/pyvista_ndarray.py",
+      "tests/core/test_pyvista_ndarray.py"
+    ]
+  },
+  {
+    "id": "3204a4bb2c",
+    "service": "pyvista",
+    "version": "3204a4bb2c",
+    "ts": "2026-10-28T21:26:51Z",
+    "author": "banesullivan",
+    "summary": "Release render-window observers in `Plotter.close()` (#9378)",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "pyvista/plotting/plotter.py",
+      "tests/plotting/test_plotter.py"
+    ]
+  },
+  {
+    "id": "038861ac6c",
+    "service": "pyvista",
+    "version": "038861ac6c",
+    "ts": "2026-10-28T21:26:51Z",
+    "author": "user27182",
+    "summary": "Look up arrays by index in `DataSetAttributes.values` (#9418)",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "pyvista/core/datasetattributes.py",
+      "tests/core/test_datasetattributes.py"
+    ]
+  },
+  {
+    "id": "179bbcd69f",
+    "service": "pyvista",
+    "version": "179bbcd69f",
+    "ts": "2026-10-28T21:26:51Z",
+    "author": "nazeeh111",
+    "summary": "Fix boundary edges in ParametricKlein (#9457)",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "pyvista/core/utilities/parametric_objects.py",
+      "tests/core/test_parametric_geometry.py",
+      "tests/plotting/image_cache/direction_objects[ParametricKlein-neg].png",
+      "tests/plotting/image_cache/direction_objects[ParametricKlein-pos].png"
+    ]
+  },
+  {
+    "id": "503ae0ab7d",
+    "service": "pyvista",
+    "version": "503ae0ab7d",
+    "ts": "2026-10-28T21:28:37Z",
+    "author": "banesullivan",
+    "summary": "Bump that version, dawg!",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "pyvista/_version.py"
+    ]
+  },
+  {
+    "id": "64e685beac",
+    "service": "pyvista",
+    "version": "64e685beac",
+    "ts": "2026-11-04T16:53:12Z",
+    "author": "user27182",
+    "summary": "Support Python 3.15",
+    "config_before": {
+      "pyproject.toml": "previous"
+    },
+    "config_after": {
+      "pyproject.toml": "modified in 64e685beac"
+    },
+    "files": [
+      "pyproject.toml",
+      "pyvista/core/objects.py",
+      "pyvista/core/utilities/arrays.py",
+      "tests/conftest.py",
+      "tests/core/test_datasetattributes.py",
+      "tests/core/test_polydata.py",
+      "tests/core/test_pyvista_ndarray.py",
+      "tests/namespace/test_public_namespace.py"
+    ]
+  },
+  {
+    "id": "dd77adddb3",
+    "service": "pyvista",
+    "version": "dd77adddb3",
+    "ts": "2026-11-04T16:53:23Z",
+    "author": "user27182",
+    "summary": "Test Python 3.15",
+    "config_before": {
+      ".github/workflows/testing-and-deployment.yml": "previous",
+      "tox.ini": "previous"
+    },
+    "config_after": {
+      ".github/workflows/testing-and-deployment.yml": "modified in dd77adddb3",
+      "tox.ini": "modified in dd77adddb3"
+    },
+    "files": [
+      ".github/workflows/testing-and-deployment.yml",
+      "tox.ini"
+    ]
+  },
+  {
+    "id": "e6eb611671",
+    "service": "pyvista",
+    "version": "e6eb611671",
+    "ts": "2026-11-04T17:51:09Z",
+    "author": "user27182",
+    "summary": "Refresh streamline and kitchen doc images for VTK 9.7.2",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "tests/doc/doc_image_cache/pyvista-DataSetFilters-streamlines_evenly_spaced_2D-9b06c1c3db4cdc80_00_00.jpg",
+      "tests/doc/doc_image_cache/pyvista-DataSetFilters-streamlines_evenly_spaced_2D-9b06c1c3db4cdc80_00_00_vtksz.jpg",
+      "tests/doc/doc_image_cache/pyvista-examples-downloads-download_kitchen-ba213fe2db1b71ad_00_00.jpg",
+      "tests/doc/doc_image_cache/pyvista-examples-downloads-download_kitchen-ba213fe2db1b71ad_00_00_vtksz.jpg",
+      "tests/doc/doc_image_cache/sphx_glr_streamlines_004.jpg",
+      "tests/doc/doc_image_cache/sphx_glr_streamlines_004_vtksz.jpg",
+      "tests/doc/doc_image_cache/sphx_glr_streamlines_2D_003.jpg",
+      "tests/doc/doc_image_cache/sphx_glr_streamlines_2D_003_vtksz.jpg",
+      "tests/doc/doc_image_cache/sphx_glr_streamlines_2D_thumb.jpg"
+    ]
+  }
+]

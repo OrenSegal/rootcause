@@ -6,6 +6,7 @@ alert:
   summary: 'workflow Test Suite failed on fix/mount-url-path-for-leading-slash at 44d79149f1:
     step ''Enforce coverage'' in job ''Python 3.13'' failed.'
 truth:
+  grading: class
   category: bad_code_deploy
   service: starlette
   required_evidence_any:

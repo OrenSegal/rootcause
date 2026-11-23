@@ -1,0 +1,106 @@
+[
+  {
+    "author": "gaborbernat",
+    "committedDate": "2026-10-09T23:01:11Z",
+    "messageHeadline": "feat(python): default to Python 3.15",
+    "oid": "dccc7837b5c735ce3860e777fdd6fc607d359f65",
+    "files": [
+      {
+        "filename": ".github/workflows/pre-release.yml",
+        "status": "modified"
+      },
+      {
+        "filename": ".github/workflows/reusable-docs.yml",
+        "status": "modified"
+      },
+      {
+        "filename": ".github/workflows/reusable-pytest.yml",
+        "status": "modified"
+      },
+      {
+        "filename": ".github/workflows/reusable-type.yml",
+        "status": "modified"
+      },
+      {
+        "filename": ".pre-commit-config.yaml",
+        "status": "modified"
+      },
+      {
+        "filename": ".readthedocs.yml",
+        "status": "modified"
+      },
+      {
+        "filename": "docs/how-to/install.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "docs/tutorial/getting-started.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "pyproject.toml",
+        "status": "modified"
+      },
+      {
+        "filename": "src/build/_builder.py",
+        "status": "modified"
+      },
+      {
+        "filename": "src/build/_compat/importlib.py",
+        "status": "removed"
+      },
+      {
+        "filename": "src/build/_compat/tarfile.py",
+        "status": "modified"
+      },
+      {
+        "filename": "src/build/_compat/tomllib.py",
+        "status": "removed"
+      },
+      {
+        "filename": "src/build/_util.py",
+        "status": "modified"
+      },
+      {
+        "filename": "src/build/env.py",
+        "status": "modified"
+      },
+      {
+        "filename": "src/build/util.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/conftest.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/integration_sources.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/packages/test-no-prepare/backend_no_prepare.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_env.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_main.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_projectbuilder.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_self_packaging.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tox.toml",
+        "status": "modified"
+      }
+    ]
+  }
+]

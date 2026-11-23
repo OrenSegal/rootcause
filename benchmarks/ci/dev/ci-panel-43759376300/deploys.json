@@ -1,0 +1,20 @@
+[
+  {
+    "id": "4a225abe2a",
+    "service": "panel",
+    "version": "4a225abe2a",
+    "ts": "2026-11-15T20:39:41Z",
+    "author": "philippjfr",
+    "summary": "docs: Add 1.11.0 release notes",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "CHANGELOG.md",
+      "doc/about/releases.md",
+      "doc/how_to/authentication/configuration.md",
+      "doc/how_to/authentication/trouble_shooting.md",
+      "doc/how_to/server/proxy.md",
+      "doc/upgrade.md"
+    ]
+  }
+]

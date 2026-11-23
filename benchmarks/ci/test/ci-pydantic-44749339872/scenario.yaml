@@ -6,6 +6,7 @@ alert:
   summary: 'workflow CI failed on codex/json-cursor-expand-unions at fe5cff33bb: step ''Run
     pytest (no coverage)'' in job ''Test macos-latest / pypy3.11'' failed.'
 truth:
+  grading: class
   category: infrastructure
   service: pydantic
   required_evidence_any:

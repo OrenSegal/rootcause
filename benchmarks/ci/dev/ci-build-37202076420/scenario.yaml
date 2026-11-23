@@ -1,0 +1,14 @@
+id: ci-build-37202076420
+title: Reject sdists whose top-level directory escapes --sdist-extract-dir
+alert:
+  severity: ci
+  service: pytest-run-tests-windows-3-11-tox
+  summary: 'workflow test failed on fix/sdist-top-level-escapes-extract-dir at c8e36bc75b:
+    step ''Run test suite via tox'' in job ''pytest / Run tests (windows, 3.11, tox)'' failed.'
+truth:
+  grading: class
+  category: bad_code_deploy
+  service: build
+  required_evidence_any:
+  - c8e36bc75b
+provenance: recorded

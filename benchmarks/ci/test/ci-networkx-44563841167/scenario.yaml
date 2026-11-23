@@ -6,6 +6,7 @@ alert:
   summary: 'workflow style failed on dschult-patch-1 at 92ce603506: step ''Lint'' in job ''format''
     failed.'
 truth:
+  grading: class
   category: config_change
   service: networkx
   required_evidence_any:

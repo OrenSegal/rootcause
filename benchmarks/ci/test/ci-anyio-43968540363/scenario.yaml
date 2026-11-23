@@ -6,6 +6,7 @@ alert:
   summary: 'workflow test suite failed on fix/asyncio-callback-error-notes at b389aedb3c:
     step ''Test with pytest'' in job ''test (ubuntu-latest, pypy3.11, [trio], false)'' failed.'
 truth:
+  grading: class
   category: bad_code_deploy
   service: anyio
   required_evidence_any:

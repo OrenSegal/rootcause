@@ -1,0 +1,16 @@
+[
+  {
+    "id": "bde6b65e02",
+    "service": "scrapy",
+    "version": "bde6b65e02",
+    "ts": "2026-11-13T20:41:39Z",
+    "author": "diogosuguimoto",
+    "summary": "skip nested async function in is_generator_with_return_value",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "scrapy/utils/misc.py",
+      "tests/test_utils_misc/test_return_with_argument_inside_generator.py"
+    ]
+  }
+]

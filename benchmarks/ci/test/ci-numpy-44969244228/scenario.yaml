@@ -6,6 +6,7 @@ alert:
   summary: 'workflow Wheel builder failed on double-to-int-helpers at e1a3a61623: step ''Build
     wheels'' in job ''Build wheel cp313-android_arm64_v8a-'' failed.'
 truth:
+  grading: class
   category: bad_code_deploy
   service: numpy
   required_evidence_any:

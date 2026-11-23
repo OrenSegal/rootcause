@@ -1,0 +1,20 @@
+[
+  {
+    "id": "2b481c37eb",
+    "service": "yarl",
+    "version": "2b481c37eb",
+    "ts": "2026-10-26T12:44:25Z",
+    "author": "asvetlov",
+    "summary": "Read the host after the slashes of a hostless join reference",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "CHANGES/1996.bugfix.rst",
+      "docs/api.rst",
+      "tests/test_url_empty_components.py",
+      "tests/test_url_join_empty_authority.py",
+      "tools/conformance/REPORT.md",
+      "yarl/_url.py"
+    ]
+  }
+]

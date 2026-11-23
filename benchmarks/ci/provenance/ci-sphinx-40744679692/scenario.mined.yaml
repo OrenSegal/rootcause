@@ -1,0 +1,17 @@
+# Mined from https://github.com/sphinx-doc/sphinx/actions/runs/40744679692 (sphinx-
+# doc/sphinx, licence NOASSERTION). Fixed by run https://github.com/sphinx-
+# doc/sphinx/actions/runs/40748049337. Label rule: the fix changed files exactly one
+# tested commit touched. Fix touched: tests/test_domains/test_domain_std.py.
+id: ci-sphinx-40744679692
+title: Fix missed warnings about duplicate labels in parallel builds
+alert:
+  severity: ci
+  service: docutils-head
+  summary: 'workflow CI failed on fix-4459 at 129123633f: step ''Install Docutils'' HEAD''
+    in job ''Docutils HEAD'' failed.'
+truth:
+  category: bad_code_deploy
+  service: sphinx
+  required_evidence_any:
+  - 129123633f
+provenance: recorded

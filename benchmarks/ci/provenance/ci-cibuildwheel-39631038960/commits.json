@@ -1,0 +1,74 @@
+[
+  {
+    "author": "henryiii",
+    "committedDate": "2026-10-21T15:49:11Z",
+    "messageHeadline": "fix: use cibuildwheel's CA bundle for pip in cross venvs",
+    "oid": "8067e019875e349c317173fb1ac739b19536c50d",
+    "files": [
+      {
+        "filename": "cibuildwheel/platforms/android.py",
+        "status": "modified"
+      },
+      {
+        "filename": "cibuildwheel/platforms/ios.py",
+        "status": "modified"
+      },
+      {
+        "filename": "cibuildwheel/platforms/pyodide.py",
+        "status": "modified"
+      },
+      {
+        "filename": "test/test_android.py",
+        "status": "modified"
+      },
+      {
+        "filename": "test/test_ios.py",
+        "status": "modified"
+      },
+      {
+        "filename": "test/test_pyodide.py",
+        "status": "modified"
+      },
+      {
+        "filename": "test/utils.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "henryiii",
+    "committedDate": "2026-10-21T16:01:41Z",
+    "messageHeadline": "fix: also set SSL_CERT_FILE in cross venvs",
+    "oid": "5a649f44e2e30955f29345f747722516c333d218",
+    "files": [
+      {
+        "filename": "cibuildwheel/platforms/android.py",
+        "status": "modified"
+      },
+      {
+        "filename": "cibuildwheel/platforms/ios.py",
+        "status": "modified"
+      },
+      {
+        "filename": "cibuildwheel/platforms/pyodide.py",
+        "status": "modified"
+      },
+      {
+        "filename": "test/test_android.py",
+        "status": "modified"
+      },
+      {
+        "filename": "test/test_ios.py",
+        "status": "modified"
+      },
+      {
+        "filename": "test/test_pyodide.py",
+        "status": "modified"
+      },
+      {
+        "filename": "test/utils.py",
+        "status": "modified"
+      }
+    ]
+  }
+]
