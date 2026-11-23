@@ -1,0 +1,9 @@
+# Dev only: the same cases as ci-dev-pilot with one line added to the brief, asking for
+# the guilty commit's id. In the pilot, 8 of Haiku's 9 misses on change cases named the
+# right cause and cited no commit. Compare with `rootcause diff` against the pilot rows.
+name: ci-dev-brief-2026-11-23
+repeats: 1
+scenarios: benchmarks/ci/dev
+configs:
+  - {name: haiku-5.5-high-cite, provider: claude-code, model: claude-haiku-5-5, effort: high, brief: sweeps/briefs/ci-cite-commit.txt}
+  - {name: opus-5.5-high-cite, provider: claude-code, model: claude-opus-5-5, effort: high, brief: sweeps/briefs/ci-cite-commit.txt}

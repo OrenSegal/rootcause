@@ -1,0 +1,29 @@
+{
+  "name": "ci-dev-brief-2026-11-23",
+  "repeats": 1,
+  "scenarios": "benchmarks/ci/dev",
+  "scenario_ids": [],
+  "held_out": [],
+  "configs": [
+    {
+      "name": "haiku-5.5-high-cite",
+      "provider": "claude-code",
+      "model": "claude-haiku-5-5",
+      "effort": "high",
+      "mode": "single",
+      "retrieval": "none",
+      "budget_usd": 1.0,
+      "brief": "sweeps/briefs/ci-cite-commit.txt"
+    },
+    {
+      "name": "opus-5.5-high-cite",
+      "provider": "claude-code",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "mode": "single",
+      "retrieval": "none",
+      "budget_usd": 1.0,
+      "brief": "sweeps/briefs/ci-cite-commit.txt"
+    }
+  ]
+}
