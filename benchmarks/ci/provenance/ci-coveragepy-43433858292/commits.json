@@ -1,0 +1,18 @@
+[
+  {
+    "author": "imsurya26",
+    "committedDate": "2026-11-13T13:27:19Z",
+    "messageHeadline": "Fix json: filter contexts by region statements when show_contexts is enabled (fixes #2374)",
+    "oid": "f059db2da604831f1a8a9c06a8210d510f4f65b9",
+    "files": [
+      {
+        "filename": "coverage/jsonreport.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_json.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

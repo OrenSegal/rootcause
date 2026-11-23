@@ -1,0 +1,16 @@
+[
+  {
+    "id": "3068b299db",
+    "service": "click",
+    "version": "3068b299db",
+    "ts": "2026-09-07T16:42:52Z",
+    "author": "seethinajayadileep",
+    "summary": "Fix Windows click.edit notepad launch failures",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "src/click/_termui_impl.py",
+      "tests/test_termui.py"
+    ]
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "author": "jaesungkr",
+    "committedDate": "2026-11-13T15:59:35Z",
+    "messageHeadline": "Use numeric gufunc core dimensions for dtype inference samples",
+    "oid": "23f2677287d268da7cf8ebbda540f57d56285746",
+    "files": [
+      {
+        "filename": "dask/array/core.py",
+        "status": "modified"
+      },
+      {
+        "filename": "dask/array/gufunc.py",
+        "status": "modified"
+      },
+      {
+        "filename": "dask/array/tests/test_gufunc.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

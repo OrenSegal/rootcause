@@ -1,0 +1,3113 @@
+{
+  "attempt": 1,
+  "conclusion": "failure",
+  "createdAt": "2026-11-17T17:32:50Z",
+  "databaseId": 44138170508,
+  "displayTitle": "\u267b\ufe0f Refactor query, header, and form parameter extraction",
+  "event": "pull_request",
+  "headBranch": "codex/refactor-parameter-extraction",
+  "headSha": "1a42905d428f74c7cde734b16c29d67382d7662b",
+  "jobs": [
+    {
+      "completedAt": "2026-11-17T17:32:59Z",
+      "conclusion": "success",
+      "databaseId": 134233337721,
+      "name": "changes",
+      "startedAt": "2026-11-17T17:32:54Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-17T17:32:55Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-17T17:32:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:32:57Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7.0.1",
+          "number": 2,
+          "startedAt": "2026-11-17T17:32:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:32:57Z",
+          "conclusion": "success",
+          "name": "Run dorny/paths-filter@v4.0.3",
+          "number": 3,
+          "startedAt": "2026-11-17T17:32:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:32:58Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7.0.1",
+          "number": 6,
+          "startedAt": "2026-11-17T17:32:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:32:58Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 7,
+          "startedAt": "2026-11-17T17:32:58Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/fastapi/fastapi/actions/runs/44138170508/job/134233337721"
+    },
+    {
+      "completedAt": "2026-11-17T17:33:21Z",
+      "conclusion": "success",
+      "databaseId": 134233338431,
+      "name": "regression-test",
+      "startedAt": "2026-11-17T17:32:54Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-17T17:32:56Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-17T17:32:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:03Z",
+          "conclusion": "success",
+          "name": "Check out the pull request",
+          "number": 2,
+          "startedAt": "2026-11-17T17:32:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:03Z",
+          "conclusion": "success",
+          "name": "Find changed tests",
+          "number": 3,
+          "startedAt": "2026-11-17T17:33:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:06Z",
+          "conclusion": "success",
+          "name": "Check out the base revision",
+          "number": 4,
+          "startedAt": "2026-11-17T17:33:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:06Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 5,
+          "startedAt": "2026-11-17T17:33:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:08Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 6,
+          "startedAt": "2026-11-17T17:33:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:14Z",
+          "conclusion": "success",
+          "name": "Run the changed tests against the base code",
+          "number": 7,
+          "startedAt": "2026-11-17T17:33:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:17Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 11,
+          "startedAt": "2026-11-17T17:33:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:17Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 12,
+          "startedAt": "2026-11-17T17:33:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:17Z",
+          "conclusion": "success",
+          "name": "Post Check out the base revision",
+          "number": 13,
+          "startedAt": "2026-11-17T17:33:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:17Z",
+          "conclusion": "success",
+          "name": "Post Check out the pull request",
+          "number": 14,
+          "startedAt": "2026-11-17T17:33:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:17Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-17T17:33:17Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/fastapi/fastapi/actions/runs/44138170508/job/134233338431"
+    },
+    {
+      "completedAt": "2026-11-17T17:35:59Z",
+      "conclusion": "success",
+      "databaseId": 134233429629,
+      "name": "benchmark",
+      "startedAt": "2026-11-17T17:33:02Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-17T17:33:07Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-17T17:33:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:08Z",
+          "conclusion": "success",
+          "name": "Dump GitHub context",
+          "number": 2,
+          "startedAt": "2026-11-17T17:33:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:14Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7.0.1",
+          "number": 3,
+          "startedAt": "2026-11-17T17:33:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:14Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-17T17:33:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:22Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 5,
+          "startedAt": "2026-11-17T17:33:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:23Z",
+          "conclusion": "success",
+          "name": "Install Dependencies",
+          "number": 6,
+          "startedAt": "2026-11-17T17:33:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:39Z",
+          "conclusion": "success",
+          "name": "CodSpeed benchmarks",
+          "number": 7,
+          "startedAt": "2026-11-17T17:33:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:54Z",
+          "conclusion": "success",
+          "name": "CodSpeed memory benchmark",
+          "number": 8,
+          "startedAt": "2026-11-17T17:35:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:55Z",
+          "conclusion": "success",
+          "name": "Post CodSpeed memory benchmark",
+          "number": 12,
+          "startedAt": "2026-11-17T17:35:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:55Z",
+          "conclusion": "success",
+          "name": "Post CodSpeed benchmarks",
+          "number": 13,
+          "startedAt": "2026-11-17T17:35:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:55Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 14,
+          "startedAt": "2026-11-17T17:35:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:55Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 15,
+          "startedAt": "2026-11-17T17:35:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:55Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7.0.1",
+          "number": 16,
+          "startedAt": "2026-11-17T17:35:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:55Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-11-17T17:35:55Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/fastapi/fastapi/actions/runs/44138170508/job/134233429629"
+    },
+    {
+      "completedAt": "2026-11-17T17:35:20Z",
+      "conclusion": "success",
+      "databaseId": 134233429903,
+      "name": "test (ubuntu-latest, 3.14t, highest, no-deprecation, coverage)",
+      "startedAt": "2026-11-17T17:33:02Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-17T17:33:08Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-17T17:33:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:08Z",
+          "conclusion": "success",
+          "name": "Dump GitHub context",
+          "number": 2,
+          "startedAt": "2026-11-17T17:33:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:16Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7.0.1",
+          "number": 3,
+          "startedAt": "2026-11-17T17:33:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:23Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-17T17:33:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:27Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 5,
+          "startedAt": "2026-11-17T17:33:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:28Z",
+          "conclusion": "success",
+          "name": "Install Dependencies",
+          "number": 6,
+          "startedAt": "2026-11-17T17:33:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:28Z",
+          "conclusion": "skipped",
+          "name": "Ensure that we have the lowest supported Pydantic version",
+          "number": 7,
+          "startedAt": "2026-11-17T17:33:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:28Z",
+          "conclusion": "skipped",
+          "name": "Install Starlette from source",
+          "number": 8,
+          "startedAt": "2026-11-17T17:33:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:28Z",
+          "conclusion": "skipped",
+          "name": "Install deprecated libraries just for testing",
+          "number": 9,
+          "startedAt": "2026-11-17T17:33:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:28Z",
+          "conclusion": "skipped",
+          "name": "Uninstall httpx2 to run tests with httpx",
+          "number": 10,
+          "startedAt": "2026-11-17T17:33:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:32Z",
+          "conclusion": "success",
+          "name": "Reinstall SQLAlchemy without Cython extensions",
+          "number": 11,
+          "startedAt": "2026-11-17T17:33:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:32Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 12,
+          "startedAt": "2026-11-17T17:33:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:13Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 13,
+          "startedAt": "2026-11-17T17:33:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:16Z",
+          "conclusion": "success",
+          "name": "Store coverage files",
+          "number": 14,
+          "startedAt": "2026-11-17T17:35:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:16Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 26,
+          "startedAt": "2026-11-17T17:35:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:16Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 27,
+          "startedAt": "2026-11-17T17:35:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:16Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7.0.1",
+          "number": 28,
+          "startedAt": "2026-11-17T17:35:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:16Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 29,
+          "startedAt": "2026-11-17T17:35:16Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/fastapi/fastapi/actions/runs/44138170508/job/134233429903"
+    },
+    {
+      "completedAt": "2026-11-17T17:36:22Z",
+      "conclusion": "success",
+      "databaseId": 134233429978,
+      "name": "test (windows-latest, 3.15, no-deprecation, highest, starlette-git)",
+      "startedAt": "2026-11-17T17:33:02Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-17T17:33:05Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-17T17:33:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:06Z",
+          "conclusion": "success",
+          "name": "Dump GitHub context",
+          "number": 2,
+          "startedAt": "2026-11-17T17:33:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:15Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7.0.1",
+          "number": 3,
+          "startedAt": "2026-11-17T17:33:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:15Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-17T17:33:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:24Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 5,
+          "startedAt": "2026-11-17T17:33:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:27Z",
+          "conclusion": "success",
+          "name": "Install Dependencies",
+          "number": 6,
+          "startedAt": "2026-11-17T17:33:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:27Z",
+          "conclusion": "skipped",
+          "name": "Ensure that we have the lowest supported Pydantic version",
+          "number": 7,
+          "startedAt": "2026-11-17T17:33:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:32Z",
+          "conclusion": "success",
+          "name": "Install Starlette from source",
+          "number": 8,
+          "startedAt": "2026-11-17T17:33:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:32Z",
+          "conclusion": "skipped",
+          "name": "Install deprecated libraries just for testing",
+          "number": 9,
+          "startedAt": "2026-11-17T17:33:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:32Z",
+          "conclusion": "skipped",
+          "name": "Uninstall httpx2 to run tests with httpx",
+          "number": 10,
+          "startedAt": "2026-11-17T17:33:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:32Z",
+          "conclusion": "skipped",
+          "name": "Reinstall SQLAlchemy without Cython extensions",
+          "number": 11,
+          "startedAt": "2026-11-17T17:33:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:33Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 12,
+          "startedAt": "2026-11-17T17:33:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:17Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 13,
+          "startedAt": "2026-11-17T17:33:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:17Z",
+          "conclusion": "skipped",
+          "name": "Store coverage files",
+          "number": 14,
+          "startedAt": "2026-11-17T17:36:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:17Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 26,
+          "startedAt": "2026-11-17T17:36:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:17Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 27,
+          "startedAt": "2026-11-17T17:36:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:20Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7.0.1",
+          "number": 28,
+          "startedAt": "2026-11-17T17:36:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:20Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 29,
+          "startedAt": "2026-11-17T17:36:20Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/fastapi/fastapi/actions/runs/44138170508/job/134233429978"
+    },
+    {
+      "completedAt": "2026-11-17T17:35:32Z",
+      "conclusion": "success",
+      "databaseId": 134233429981,
+      "name": "test (macos-latest, 3.15, no-deprecation, highest, starlette-pypi)",
+      "startedAt": "2026-11-17T17:33:03Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-17T17:33:07Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-17T17:33:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:07Z",
+          "conclusion": "success",
+          "name": "Dump GitHub context",
+          "number": 2,
+          "startedAt": "2026-11-17T17:33:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:12Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7.0.1",
+          "number": 3,
+          "startedAt": "2026-11-17T17:33:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:12Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-17T17:33:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:20Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 5,
+          "startedAt": "2026-11-17T17:33:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:29Z",
+          "conclusion": "success",
+          "name": "Install Dependencies",
+          "number": 6,
+          "startedAt": "2026-11-17T17:33:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:29Z",
+          "conclusion": "skipped",
+          "name": "Ensure that we have the lowest supported Pydantic version",
+          "number": 7,
+          "startedAt": "2026-11-17T17:33:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:29Z",
+          "conclusion": "skipped",
+          "name": "Install Starlette from source",
+          "number": 8,
+          "startedAt": "2026-11-17T17:33:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:29Z",
+          "conclusion": "skipped",
+          "name": "Install deprecated libraries just for testing",
+          "number": 9,
+          "startedAt": "2026-11-17T17:33:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:29Z",
+          "conclusion": "skipped",
+          "name": "Uninstall httpx2 to run tests with httpx",
+          "number": 10,
+          "startedAt": "2026-11-17T17:33:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:29Z",
+          "conclusion": "skipped",
+          "name": "Reinstall SQLAlchemy without Cython extensions",
+          "number": 11,
+          "startedAt": "2026-11-17T17:33:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:29Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 12,
+          "startedAt": "2026-11-17T17:33:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:25Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 13,
+          "startedAt": "2026-11-17T17:33:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:25Z",
+          "conclusion": "skipped",
+          "name": "Store coverage files",
+          "number": 14,
+          "startedAt": "2026-11-17T17:35:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:26Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 26,
+          "startedAt": "2026-11-17T17:35:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:26Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 27,
+          "startedAt": "2026-11-17T17:35:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:27Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7.0.1",
+          "number": 28,
+          "startedAt": "2026-11-17T17:35:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:28Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 29,
+          "startedAt": "2026-11-17T17:35:27Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/fastapi/fastapi/actions/runs/44138170508/job/134233429981"
+    },
+    {
+      "completedAt": "2026-11-17T17:36:50Z",
+      "conclusion": "success",
+      "databaseId": 134233429995,
+      "name": "test (windows-latest, 3.12, lowest-direct, no-deprecation, coverage)",
+      "startedAt": "2026-11-17T17:33:01Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-17T17:33:03Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-17T17:33:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:04Z",
+          "conclusion": "success",
+          "name": "Dump GitHub context",
+          "number": 2,
+          "startedAt": "2026-11-17T17:33:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:13Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7.0.1",
+          "number": 3,
+          "startedAt": "2026-11-17T17:33:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:13Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-17T17:33:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:20Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 5,
+          "startedAt": "2026-11-17T17:33:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:27Z",
+          "conclusion": "success",
+          "name": "Install Dependencies",
+          "number": 6,
+          "startedAt": "2026-11-17T17:33:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:28Z",
+          "conclusion": "success",
+          "name": "Ensure that we have the lowest supported Pydantic version",
+          "number": 7,
+          "startedAt": "2026-11-17T17:33:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:28Z",
+          "conclusion": "skipped",
+          "name": "Install Starlette from source",
+          "number": 8,
+          "startedAt": "2026-11-17T17:33:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:28Z",
+          "conclusion": "skipped",
+          "name": "Install deprecated libraries just for testing",
+          "number": 9,
+          "startedAt": "2026-11-17T17:33:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:28Z",
+          "conclusion": "skipped",
+          "name": "Uninstall httpx2 to run tests with httpx",
+          "number": 10,
+          "startedAt": "2026-11-17T17:33:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:28Z",
+          "conclusion": "skipped",
+          "name": "Reinstall SQLAlchemy without Cython extensions",
+          "number": 11,
+          "startedAt": "2026-11-17T17:33:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:28Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 12,
+          "startedAt": "2026-11-17T17:33:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:42Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 13,
+          "startedAt": "2026-11-17T17:33:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:45Z",
+          "conclusion": "success",
+          "name": "Store coverage files",
+          "number": 14,
+          "startedAt": "2026-11-17T17:36:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:46Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 26,
+          "startedAt": "2026-11-17T17:36:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:46Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 27,
+          "startedAt": "2026-11-17T17:36:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:48Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7.0.1",
+          "number": 28,
+          "startedAt": "2026-11-17T17:36:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:48Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 29,
+          "startedAt": "2026-11-17T17:36:48Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/fastapi/fastapi/actions/runs/44138170508/job/134233429995"
+    },
+    {
+      "completedAt": "2026-11-17T17:36:07Z",
+      "conclusion": "success",
+      "databaseId": 134233430021,
+      "name": "test (windows-latest, 3.15, no-deprecation, highest, starlette-pypi)",
+      "startedAt": "2026-11-17T17:33:02Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-17T17:33:06Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-17T17:33:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:06Z",
+          "conclusion": "success",
+          "name": "Dump GitHub context",
+          "number": 2,
+          "startedAt": "2026-11-17T17:33:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:16Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7.0.1",
+          "number": 3,
+          "startedAt": "2026-11-17T17:33:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:16Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-17T17:33:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:24Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 5,
+          "startedAt": "2026-11-17T17:33:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:27Z",
+          "conclusion": "success",
+          "name": "Install Dependencies",
+          "number": 6,
+          "startedAt": "2026-11-17T17:33:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:27Z",
+          "conclusion": "skipped",
+          "name": "Ensure that we have the lowest supported Pydantic version",
+          "number": 7,
+          "startedAt": "2026-11-17T17:33:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:27Z",
+          "conclusion": "skipped",
+          "name": "Install Starlette from source",
+          "number": 8,
+          "startedAt": "2026-11-17T17:33:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:27Z",
+          "conclusion": "skipped",
+          "name": "Install deprecated libraries just for testing",
+          "number": 9,
+          "startedAt": "2026-11-17T17:33:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:27Z",
+          "conclusion": "skipped",
+          "name": "Uninstall httpx2 to run tests with httpx",
+          "number": 10,
+          "startedAt": "2026-11-17T17:33:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:27Z",
+          "conclusion": "skipped",
+          "name": "Reinstall SQLAlchemy without Cython extensions",
+          "number": 11,
+          "startedAt": "2026-11-17T17:33:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:28Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 12,
+          "startedAt": "2026-11-17T17:33:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:03Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 13,
+          "startedAt": "2026-11-17T17:33:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:03Z",
+          "conclusion": "skipped",
+          "name": "Store coverage files",
+          "number": 14,
+          "startedAt": "2026-11-17T17:36:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:03Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 26,
+          "startedAt": "2026-11-17T17:36:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:03Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 27,
+          "startedAt": "2026-11-17T17:36:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:05Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7.0.1",
+          "number": 28,
+          "startedAt": "2026-11-17T17:36:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:05Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 29,
+          "startedAt": "2026-11-17T17:36:05Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/fastapi/fastapi/actions/runs/44138170508/job/134233430021"
+    },
+    {
+      "completedAt": "2026-11-17T17:35:41Z",
+      "conclusion": "success",
+      "databaseId": 134233430024,
+      "name": "test (ubuntu-latest, 3.13, highest, no-deprecation, coverage)",
+      "startedAt": "2026-11-17T17:33:17Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-17T17:33:19Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-17T17:33:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:20Z",
+          "conclusion": "success",
+          "name": "Dump GitHub context",
+          "number": 2,
+          "startedAt": "2026-11-17T17:33:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:23Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7.0.1",
+          "number": 3,
+          "startedAt": "2026-11-17T17:33:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:23Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-17T17:33:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:28Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 5,
+          "startedAt": "2026-11-17T17:33:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:29Z",
+          "conclusion": "success",
+          "name": "Install Dependencies",
+          "number": 6,
+          "startedAt": "2026-11-17T17:33:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:29Z",
+          "conclusion": "skipped",
+          "name": "Ensure that we have the lowest supported Pydantic version",
+          "number": 7,
+          "startedAt": "2026-11-17T17:33:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:29Z",
+          "conclusion": "skipped",
+          "name": "Install Starlette from source",
+          "number": 8,
+          "startedAt": "2026-11-17T17:33:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:29Z",
+          "conclusion": "skipped",
+          "name": "Install deprecated libraries just for testing",
+          "number": 9,
+          "startedAt": "2026-11-17T17:33:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:29Z",
+          "conclusion": "skipped",
+          "name": "Uninstall httpx2 to run tests with httpx",
+          "number": 10,
+          "startedAt": "2026-11-17T17:33:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:29Z",
+          "conclusion": "skipped",
+          "name": "Reinstall SQLAlchemy without Cython extensions",
+          "number": 11,
+          "startedAt": "2026-11-17T17:33:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:29Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 12,
+          "startedAt": "2026-11-17T17:33:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:34Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 13,
+          "startedAt": "2026-11-17T17:33:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:37Z",
+          "conclusion": "success",
+          "name": "Store coverage files",
+          "number": 14,
+          "startedAt": "2026-11-17T17:35:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:38Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 26,
+          "startedAt": "2026-11-17T17:35:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:38Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 27,
+          "startedAt": "2026-11-17T17:35:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:38Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7.0.1",
+          "number": 28,
+          "startedAt": "2026-11-17T17:35:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:38Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 29,
+          "startedAt": "2026-11-17T17:35:38Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/fastapi/fastapi/actions/runs/44138170508/job/134233430024"
+    },
+    {
+      "completedAt": "2026-11-17T17:36:02Z",
+      "conclusion": "success",
+      "databaseId": 134233430034,
+      "name": "test (macos-latest, 3.15, no-deprecation, highest, starlette-git)",
+      "startedAt": "2026-11-17T17:33:03Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-17T17:33:06Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-17T17:33:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:06Z",
+          "conclusion": "success",
+          "name": "Dump GitHub context",
+          "number": 2,
+          "startedAt": "2026-11-17T17:33:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:13Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7.0.1",
+          "number": 3,
+          "startedAt": "2026-11-17T17:33:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:34:00Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-17T17:33:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:34:05Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 5,
+          "startedAt": "2026-11-17T17:34:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:34:14Z",
+          "conclusion": "success",
+          "name": "Install Dependencies",
+          "number": 6,
+          "startedAt": "2026-11-17T17:34:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:34:14Z",
+          "conclusion": "skipped",
+          "name": "Ensure that we have the lowest supported Pydantic version",
+          "number": 7,
+          "startedAt": "2026-11-17T17:34:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:34:17Z",
+          "conclusion": "success",
+          "name": "Install Starlette from source",
+          "number": 8,
+          "startedAt": "2026-11-17T17:34:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:34:17Z",
+          "conclusion": "skipped",
+          "name": "Install deprecated libraries just for testing",
+          "number": 9,
+          "startedAt": "2026-11-17T17:34:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:34:17Z",
+          "conclusion": "skipped",
+          "name": "Uninstall httpx2 to run tests with httpx",
+          "number": 10,
+          "startedAt": "2026-11-17T17:34:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:34:17Z",
+          "conclusion": "skipped",
+          "name": "Reinstall SQLAlchemy without Cython extensions",
+          "number": 11,
+          "startedAt": "2026-11-17T17:34:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:34:17Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 12,
+          "startedAt": "2026-11-17T17:34:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:56Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 13,
+          "startedAt": "2026-11-17T17:34:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:56Z",
+          "conclusion": "skipped",
+          "name": "Store coverage files",
+          "number": 14,
+          "startedAt": "2026-11-17T17:35:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:57Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 26,
+          "startedAt": "2026-11-17T17:35:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:57Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 27,
+          "startedAt": "2026-11-17T17:35:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:58Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7.0.1",
+          "number": 28,
+          "startedAt": "2026-11-17T17:35:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:58Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 29,
+          "startedAt": "2026-11-17T17:35:58Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/fastapi/fastapi/actions/runs/44138170508/job/134233430034"
+    },
+    {
+      "completedAt": "2026-11-17T17:40:27Z",
+      "conclusion": "success",
+      "databaseId": 134233430042,
+      "name": "test (windows-latest, 3.15t, no-deprecation, highest, starlette-git)",
+      "startedAt": "2026-11-17T17:33:02Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-17T17:33:04Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-17T17:33:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:05Z",
+          "conclusion": "success",
+          "name": "Dump GitHub context",
+          "number": 2,
+          "startedAt": "2026-11-17T17:33:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:16Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7.0.1",
+          "number": 3,
+          "startedAt": "2026-11-17T17:33:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:34:02Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-17T17:33:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:34:10Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 5,
+          "startedAt": "2026-11-17T17:34:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:14Z",
+          "conclusion": "success",
+          "name": "Install Dependencies",
+          "number": 6,
+          "startedAt": "2026-11-17T17:34:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:14Z",
+          "conclusion": "skipped",
+          "name": "Ensure that we have the lowest supported Pydantic version",
+          "number": 7,
+          "startedAt": "2026-11-17T17:36:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:18Z",
+          "conclusion": "success",
+          "name": "Install Starlette from source",
+          "number": 8,
+          "startedAt": "2026-11-17T17:36:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:18Z",
+          "conclusion": "skipped",
+          "name": "Install deprecated libraries just for testing",
+          "number": 9,
+          "startedAt": "2026-11-17T17:36:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:18Z",
+          "conclusion": "skipped",
+          "name": "Uninstall httpx2 to run tests with httpx",
+          "number": 10,
+          "startedAt": "2026-11-17T17:36:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:18Z",
+          "conclusion": "skipped",
+          "name": "Reinstall SQLAlchemy without Cython extensions",
+          "number": 11,
+          "startedAt": "2026-11-17T17:36:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:18Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 12,
+          "startedAt": "2026-11-17T17:36:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:40:21Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 13,
+          "startedAt": "2026-11-17T17:36:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:40:21Z",
+          "conclusion": "skipped",
+          "name": "Store coverage files",
+          "number": 14,
+          "startedAt": "2026-11-17T17:40:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:40:22Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 26,
+          "startedAt": "2026-11-17T17:40:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:40:22Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 27,
+          "startedAt": "2026-11-17T17:40:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:40:25Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7.0.1",
+          "number": 28,
+          "startedAt": "2026-11-17T17:40:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:40:25Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 29,
+          "startedAt": "2026-11-17T17:40:25Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/fastapi/fastapi/actions/runs/44138170508/job/134233430042"
+    },
+    {
+      "completedAt": "2026-11-17T17:35:32Z",
+      "conclusion": "success",
+      "databaseId": 134233430056,
+      "name": "test (ubuntu-latest, 3.13, highest, no-deprecation, true)",
+      "startedAt": "2026-11-17T17:33:02Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-17T17:33:04Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-17T17:33:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:05Z",
+          "conclusion": "success",
+          "name": "Dump GitHub context",
+          "number": 2,
+          "startedAt": "2026-11-17T17:33:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:07Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7.0.1",
+          "number": 3,
+          "startedAt": "2026-11-17T17:33:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:07Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-17T17:33:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:15Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 5,
+          "startedAt": "2026-11-17T17:33:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:16Z",
+          "conclusion": "success",
+          "name": "Install Dependencies",
+          "number": 6,
+          "startedAt": "2026-11-17T17:33:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:16Z",
+          "conclusion": "skipped",
+          "name": "Ensure that we have the lowest supported Pydantic version",
+          "number": 7,
+          "startedAt": "2026-11-17T17:33:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:16Z",
+          "conclusion": "skipped",
+          "name": "Install Starlette from source",
+          "number": 8,
+          "startedAt": "2026-11-17T17:33:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:16Z",
+          "conclusion": "skipped",
+          "name": "Install deprecated libraries just for testing",
+          "number": 9,
+          "startedAt": "2026-11-17T17:33:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:16Z",
+          "conclusion": "skipped",
+          "name": "Uninstall httpx2 to run tests with httpx",
+          "number": 10,
+          "startedAt": "2026-11-17T17:33:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:16Z",
+          "conclusion": "skipped",
+          "name": "Reinstall SQLAlchemy without Cython extensions",
+          "number": 11,
+          "startedAt": "2026-11-17T17:33:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:16Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 12,
+          "startedAt": "2026-11-17T17:33:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:28Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 13,
+          "startedAt": "2026-11-17T17:33:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:28Z",
+          "conclusion": "skipped",
+          "name": "Store coverage files",
+          "number": 14,
+          "startedAt": "2026-11-17T17:35:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:28Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 26,
+          "startedAt": "2026-11-17T17:35:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:29Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 27,
+          "startedAt": "2026-11-17T17:35:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:29Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7.0.1",
+          "number": 28,
+          "startedAt": "2026-11-17T17:35:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:29Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 29,
+          "startedAt": "2026-11-17T17:35:29Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/fastapi/fastapi/actions/runs/44138170508/job/134233430056"
+    },
+    {
+      "completedAt": "2026-11-17T17:35:15Z",
+      "conclusion": "success",
+      "databaseId": 134233430102,
+      "name": "test (ubuntu-latest, 3.13, highest, no-deprecation, codspeed)",
+      "startedAt": "2026-11-17T17:33:01Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-17T17:33:03Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-17T17:33:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:03Z",
+          "conclusion": "success",
+          "name": "Dump GitHub context",
+          "number": 2,
+          "startedAt": "2026-11-17T17:33:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:06Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7.0.1",
+          "number": 3,
+          "startedAt": "2026-11-17T17:33:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:06Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-17T17:33:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:09Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 5,
+          "startedAt": "2026-11-17T17:33:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:09Z",
+          "conclusion": "success",
+          "name": "Install Dependencies",
+          "number": 6,
+          "startedAt": "2026-11-17T17:33:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:09Z",
+          "conclusion": "skipped",
+          "name": "Ensure that we have the lowest supported Pydantic version",
+          "number": 7,
+          "startedAt": "2026-11-17T17:33:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:09Z",
+          "conclusion": "skipped",
+          "name": "Install Starlette from source",
+          "number": 8,
+          "startedAt": "2026-11-17T17:33:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:09Z",
+          "conclusion": "skipped",
+          "name": "Install deprecated libraries just for testing",
+          "number": 9,
+          "startedAt": "2026-11-17T17:33:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:09Z",
+          "conclusion": "skipped",
+          "name": "Uninstall httpx2 to run tests with httpx",
+          "number": 10,
+          "startedAt": "2026-11-17T17:33:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:09Z",
+          "conclusion": "skipped",
+          "name": "Reinstall SQLAlchemy without Cython extensions",
+          "number": 11,
+          "startedAt": "2026-11-17T17:33:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:09Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 12,
+          "startedAt": "2026-11-17T17:33:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:12Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 13,
+          "startedAt": "2026-11-17T17:33:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:12Z",
+          "conclusion": "skipped",
+          "name": "Store coverage files",
+          "number": 14,
+          "startedAt": "2026-11-17T17:35:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:13Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 26,
+          "startedAt": "2026-11-17T17:35:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:13Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 27,
+          "startedAt": "2026-11-17T17:35:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:13Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7.0.1",
+          "number": 28,
+          "startedAt": "2026-11-17T17:35:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:13Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 29,
+          "startedAt": "2026-11-17T17:35:13Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/fastapi/fastapi/actions/runs/44138170508/job/134233430102"
+    },
+    {
+      "completedAt": "2026-11-17T17:35:36Z",
+      "conclusion": "success",
+      "databaseId": 134233430165,
+      "name": "test (ubuntu-latest, 3.15t, highest, no-deprecation, coverage)",
+      "startedAt": "2026-11-17T17:33:01Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-17T17:33:02Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-17T17:33:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:03Z",
+          "conclusion": "success",
+          "name": "Dump GitHub context",
+          "number": 2,
+          "startedAt": "2026-11-17T17:33:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:05Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7.0.1",
+          "number": 3,
+          "startedAt": "2026-11-17T17:33:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:11Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-17T17:33:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:13Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 5,
+          "startedAt": "2026-11-17T17:33:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:34:02Z",
+          "conclusion": "success",
+          "name": "Install Dependencies",
+          "number": 6,
+          "startedAt": "2026-11-17T17:33:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:34:02Z",
+          "conclusion": "skipped",
+          "name": "Ensure that we have the lowest supported Pydantic version",
+          "number": 7,
+          "startedAt": "2026-11-17T17:34:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:34:02Z",
+          "conclusion": "skipped",
+          "name": "Install Starlette from source",
+          "number": 8,
+          "startedAt": "2026-11-17T17:34:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:34:02Z",
+          "conclusion": "skipped",
+          "name": "Install deprecated libraries just for testing",
+          "number": 9,
+          "startedAt": "2026-11-17T17:34:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:34:02Z",
+          "conclusion": "skipped",
+          "name": "Uninstall httpx2 to run tests with httpx",
+          "number": 10,
+          "startedAt": "2026-11-17T17:34:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:34:02Z",
+          "conclusion": "skipped",
+          "name": "Reinstall SQLAlchemy without Cython extensions",
+          "number": 11,
+          "startedAt": "2026-11-17T17:34:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:34:02Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 12,
+          "startedAt": "2026-11-17T17:34:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:31Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 13,
+          "startedAt": "2026-11-17T17:34:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:32Z",
+          "conclusion": "success",
+          "name": "Store coverage files",
+          "number": 14,
+          "startedAt": "2026-11-17T17:35:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:32Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 26,
+          "startedAt": "2026-11-17T17:35:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:33Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 27,
+          "startedAt": "2026-11-17T17:35:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:33Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7.0.1",
+          "number": 28,
+          "startedAt": "2026-11-17T17:35:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:33Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 29,
+          "startedAt": "2026-11-17T17:35:33Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/fastapi/fastapi/actions/runs/44138170508/job/134233430165"
+    },
+    {
+      "completedAt": "2026-11-17T17:35:28Z",
+      "conclusion": "success",
+      "databaseId": 134233430216,
+      "name": "test (macos-latest, 3.11, lowest-direct, no-deprecation, coverage)",
+      "startedAt": "2026-11-17T17:33:24Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-17T17:33:27Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-17T17:33:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:27Z",
+          "conclusion": "success",
+          "name": "Dump GitHub context",
+          "number": 2,
+          "startedAt": "2026-11-17T17:33:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:32Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7.0.1",
+          "number": 3,
+          "startedAt": "2026-11-17T17:33:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:32Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-17T17:33:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:37Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 5,
+          "startedAt": "2026-11-17T17:33:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:38Z",
+          "conclusion": "success",
+          "name": "Install Dependencies",
+          "number": 6,
+          "startedAt": "2026-11-17T17:33:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:38Z",
+          "conclusion": "success",
+          "name": "Ensure that we have the lowest supported Pydantic version",
+          "number": 7,
+          "startedAt": "2026-11-17T17:33:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:38Z",
+          "conclusion": "skipped",
+          "name": "Install Starlette from source",
+          "number": 8,
+          "startedAt": "2026-11-17T17:33:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:38Z",
+          "conclusion": "skipped",
+          "name": "Install deprecated libraries just for testing",
+          "number": 9,
+          "startedAt": "2026-11-17T17:33:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:38Z",
+          "conclusion": "skipped",
+          "name": "Uninstall httpx2 to run tests with httpx",
+          "number": 10,
+          "startedAt": "2026-11-17T17:33:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:38Z",
+          "conclusion": "skipped",
+          "name": "Reinstall SQLAlchemy without Cython extensions",
+          "number": 11,
+          "startedAt": "2026-11-17T17:33:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:38Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 12,
+          "startedAt": "2026-11-17T17:33:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:20Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 13,
+          "startedAt": "2026-11-17T17:33:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:23Z",
+          "conclusion": "success",
+          "name": "Store coverage files",
+          "number": 14,
+          "startedAt": "2026-11-17T17:35:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:24Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 26,
+          "startedAt": "2026-11-17T17:35:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:24Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 27,
+          "startedAt": "2026-11-17T17:35:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:25Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7.0.1",
+          "number": 28,
+          "startedAt": "2026-11-17T17:35:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:26Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 29,
+          "startedAt": "2026-11-17T17:35:25Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/fastapi/fastapi/actions/runs/44138170508/job/134233430216"
+    },
+    {
+      "completedAt": "2026-11-17T17:40:28Z",
+      "conclusion": "success",
+      "databaseId": 134233430234,
+      "name": "test (macos-latest, 3.15t, no-deprecation, highest, starlette-git)",
+      "startedAt": "2026-11-17T17:33:51Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-17T17:33:54Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-17T17:33:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:54Z",
+          "conclusion": "success",
+          "name": "Dump GitHub context",
+          "number": 2,
+          "startedAt": "2026-11-17T17:33:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:34:00Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7.0.1",
+          "number": 3,
+          "startedAt": "2026-11-17T17:33:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:34:55Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-17T17:34:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:00Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 5,
+          "startedAt": "2026-11-17T17:34:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:46Z",
+          "conclusion": "success",
+          "name": "Install Dependencies",
+          "number": 6,
+          "startedAt": "2026-11-17T17:35:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:46Z",
+          "conclusion": "skipped",
+          "name": "Ensure that we have the lowest supported Pydantic version",
+          "number": 7,
+          "startedAt": "2026-11-17T17:36:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:52Z",
+          "conclusion": "success",
+          "name": "Install Starlette from source",
+          "number": 8,
+          "startedAt": "2026-11-17T17:36:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:52Z",
+          "conclusion": "skipped",
+          "name": "Install deprecated libraries just for testing",
+          "number": 9,
+          "startedAt": "2026-11-17T17:36:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:52Z",
+          "conclusion": "skipped",
+          "name": "Uninstall httpx2 to run tests with httpx",
+          "number": 10,
+          "startedAt": "2026-11-17T17:36:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:52Z",
+          "conclusion": "skipped",
+          "name": "Reinstall SQLAlchemy without Cython extensions",
+          "number": 11,
+          "startedAt": "2026-11-17T17:36:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:52Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 12,
+          "startedAt": "2026-11-17T17:36:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:40:17Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 13,
+          "startedAt": "2026-11-17T17:36:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:40:17Z",
+          "conclusion": "skipped",
+          "name": "Store coverage files",
+          "number": 14,
+          "startedAt": "2026-11-17T17:40:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:40:18Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 26,
+          "startedAt": "2026-11-17T17:40:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:40:18Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 27,
+          "startedAt": "2026-11-17T17:40:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:40:19Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7.0.1",
+          "number": 28,
+          "startedAt": "2026-11-17T17:40:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:40:24Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 29,
+          "startedAt": "2026-11-17T17:40:19Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/fastapi/fastapi/actions/runs/44138170508/job/134233430234"
+    },
+    {
+      "completedAt": "2026-11-17T17:35:51Z",
+      "conclusion": "success",
+      "databaseId": 134233430255,
+      "name": "test (ubuntu-latest, 3.14, highest, starlette-git, test-deprecation, coverage)",
+      "startedAt": "2026-11-17T17:33:41Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-17T17:33:42Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-17T17:33:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:43Z",
+          "conclusion": "success",
+          "name": "Dump GitHub context",
+          "number": 2,
+          "startedAt": "2026-11-17T17:33:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:44Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7.0.1",
+          "number": 3,
+          "startedAt": "2026-11-17T17:33:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:45Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-17T17:33:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:47Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 5,
+          "startedAt": "2026-11-17T17:33:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:48Z",
+          "conclusion": "success",
+          "name": "Install Dependencies",
+          "number": 6,
+          "startedAt": "2026-11-17T17:33:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:48Z",
+          "conclusion": "skipped",
+          "name": "Ensure that we have the lowest supported Pydantic version",
+          "number": 7,
+          "startedAt": "2026-11-17T17:33:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:49Z",
+          "conclusion": "success",
+          "name": "Install Starlette from source",
+          "number": 8,
+          "startedAt": "2026-11-17T17:33:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:49Z",
+          "conclusion": "success",
+          "name": "Install deprecated libraries just for testing",
+          "number": 9,
+          "startedAt": "2026-11-17T17:33:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:49Z",
+          "conclusion": "skipped",
+          "name": "Uninstall httpx2 to run tests with httpx",
+          "number": 10,
+          "startedAt": "2026-11-17T17:33:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:49Z",
+          "conclusion": "skipped",
+          "name": "Reinstall SQLAlchemy without Cython extensions",
+          "number": 11,
+          "startedAt": "2026-11-17T17:33:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:49Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 12,
+          "startedAt": "2026-11-17T17:33:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:47Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 13,
+          "startedAt": "2026-11-17T17:33:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:49Z",
+          "conclusion": "success",
+          "name": "Store coverage files",
+          "number": 14,
+          "startedAt": "2026-11-17T17:35:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:49Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 26,
+          "startedAt": "2026-11-17T17:35:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:49Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 27,
+          "startedAt": "2026-11-17T17:35:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:49Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7.0.1",
+          "number": 28,
+          "startedAt": "2026-11-17T17:35:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:49Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 29,
+          "startedAt": "2026-11-17T17:35:49Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/fastapi/fastapi/actions/runs/44138170508/job/134233430255"
+    },
+    {
+      "completedAt": "2026-11-17T17:39:10Z",
+      "conclusion": "success",
+      "databaseId": 134233430342,
+      "name": "test (macos-latest, 3.15t, no-deprecation, highest, starlette-pypi)",
+      "startedAt": "2026-11-17T17:33:04Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-17T17:33:07Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-17T17:33:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:07Z",
+          "conclusion": "success",
+          "name": "Dump GitHub context",
+          "number": 2,
+          "startedAt": "2026-11-17T17:33:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:13Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7.0.1",
+          "number": 3,
+          "startedAt": "2026-11-17T17:33:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:34:07Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-17T17:33:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:34:15Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 5,
+          "startedAt": "2026-11-17T17:34:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:06Z",
+          "conclusion": "success",
+          "name": "Install Dependencies",
+          "number": 6,
+          "startedAt": "2026-11-17T17:34:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:06Z",
+          "conclusion": "skipped",
+          "name": "Ensure that we have the lowest supported Pydantic version",
+          "number": 7,
+          "startedAt": "2026-11-17T17:36:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:06Z",
+          "conclusion": "skipped",
+          "name": "Install Starlette from source",
+          "number": 8,
+          "startedAt": "2026-11-17T17:36:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:06Z",
+          "conclusion": "skipped",
+          "name": "Install deprecated libraries just for testing",
+          "number": 9,
+          "startedAt": "2026-11-17T17:36:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:06Z",
+          "conclusion": "skipped",
+          "name": "Uninstall httpx2 to run tests with httpx",
+          "number": 10,
+          "startedAt": "2026-11-17T17:36:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:06Z",
+          "conclusion": "skipped",
+          "name": "Reinstall SQLAlchemy without Cython extensions",
+          "number": 11,
+          "startedAt": "2026-11-17T17:36:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:06Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 12,
+          "startedAt": "2026-11-17T17:36:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:39:00Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 13,
+          "startedAt": "2026-11-17T17:36:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:39:00Z",
+          "conclusion": "skipped",
+          "name": "Store coverage files",
+          "number": 14,
+          "startedAt": "2026-11-17T17:39:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:39:01Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 26,
+          "startedAt": "2026-11-17T17:39:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:39:01Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 27,
+          "startedAt": "2026-11-17T17:39:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:39:02Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7.0.1",
+          "number": 28,
+          "startedAt": "2026-11-17T17:39:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:39:06Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 29,
+          "startedAt": "2026-11-17T17:39:02Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/fastapi/fastapi/actions/runs/44138170508/job/134233430342"
+    },
+    {
+      "completedAt": "2026-11-17T17:35:50Z",
+      "conclusion": "success",
+      "databaseId": 134233430396,
+      "name": "test (ubuntu-latest, 3.15, highest, starlette-git, test-deprecation, coverage)",
+      "startedAt": "2026-11-17T17:33:03Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-17T17:33:05Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-17T17:33:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:05Z",
+          "conclusion": "success",
+          "name": "Dump GitHub context",
+          "number": 2,
+          "startedAt": "2026-11-17T17:33:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:09Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7.0.1",
+          "number": 3,
+          "startedAt": "2026-11-17T17:33:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:09Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-17T17:33:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:21Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 5,
+          "startedAt": "2026-11-17T17:33:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:23Z",
+          "conclusion": "success",
+          "name": "Install Dependencies",
+          "number": 6,
+          "startedAt": "2026-11-17T17:33:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:23Z",
+          "conclusion": "skipped",
+          "name": "Ensure that we have the lowest supported Pydantic version",
+          "number": 7,
+          "startedAt": "2026-11-17T17:33:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:23Z",
+          "conclusion": "success",
+          "name": "Install Starlette from source",
+          "number": 8,
+          "startedAt": "2026-11-17T17:33:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:23Z",
+          "conclusion": "success",
+          "name": "Install deprecated libraries just for testing",
+          "number": 9,
+          "startedAt": "2026-11-17T17:33:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:24Z",
+          "conclusion": "skipped",
+          "name": "Uninstall httpx2 to run tests with httpx",
+          "number": 10,
+          "startedAt": "2026-11-17T17:33:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:24Z",
+          "conclusion": "skipped",
+          "name": "Reinstall SQLAlchemy without Cython extensions",
+          "number": 11,
+          "startedAt": "2026-11-17T17:33:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:24Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 12,
+          "startedAt": "2026-11-17T17:33:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:39Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 13,
+          "startedAt": "2026-11-17T17:33:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:42Z",
+          "conclusion": "success",
+          "name": "Store coverage files",
+          "number": 14,
+          "startedAt": "2026-11-17T17:35:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:42Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 26,
+          "startedAt": "2026-11-17T17:35:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:42Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 27,
+          "startedAt": "2026-11-17T17:35:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:43Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7.0.1",
+          "number": 28,
+          "startedAt": "2026-11-17T17:35:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:35:43Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 29,
+          "startedAt": "2026-11-17T17:35:43Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/fastapi/fastapi/actions/runs/44138170508/job/134233430396"
+    },
+    {
+      "completedAt": "2026-11-17T17:39:34Z",
+      "conclusion": "success",
+      "databaseId": 134233430442,
+      "name": "test (windows-latest, 3.15t, no-deprecation, highest, starlette-pypi)",
+      "startedAt": "2026-11-17T17:33:42Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-17T17:33:44Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-17T17:33:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:45Z",
+          "conclusion": "success",
+          "name": "Dump GitHub context",
+          "number": 2,
+          "startedAt": "2026-11-17T17:33:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:33:52Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7.0.1",
+          "number": 3,
+          "startedAt": "2026-11-17T17:33:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:34:27Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-17T17:33:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:34:33Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 5,
+          "startedAt": "2026-11-17T17:34:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:04Z",
+          "conclusion": "success",
+          "name": "Install Dependencies",
+          "number": 6,
+          "startedAt": "2026-11-17T17:34:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:04Z",
+          "conclusion": "skipped",
+          "name": "Ensure that we have the lowest supported Pydantic version",
+          "number": 7,
+          "startedAt": "2026-11-17T17:36:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:04Z",
+          "conclusion": "skipped",
+          "name": "Install Starlette from source",
+          "number": 8,
+          "startedAt": "2026-11-17T17:36:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:04Z",
+          "conclusion": "skipped",
+          "name": "Install deprecated libraries just for testing",
+          "number": 9,
+          "startedAt": "2026-11-17T17:36:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:04Z",
+          "conclusion": "skipped",
+          "name": "Uninstall httpx2 to run tests with httpx",
+          "number": 10,
+          "startedAt": "2026-11-17T17:36:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:04Z",
+          "conclusion": "skipped",
+          "name": "Reinstall SQLAlchemy without Cython extensions",
+          "number": 11,
+          "startedAt": "2026-11-17T17:36:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:36:05Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 12,
+          "startedAt": "2026-11-17T17:36:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:39:29Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 13,
+          "startedAt": "2026-11-17T17:36:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:39:29Z",
+          "conclusion": "skipped",
+          "name": "Store coverage files",
+          "number": 14,
+          "startedAt": "2026-11-17T17:39:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:39:30Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 26,
+          "startedAt": "2026-11-17T17:39:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:39:30Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 27,
+          "startedAt": "2026-11-17T17:39:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:39:31Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7.0.1",
+          "number": 28,
+          "startedAt": "2026-11-17T17:39:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:39:31Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 29,
+          "startedAt": "2026-11-17T17:39:31Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/fastapi/fastapi/actions/runs/44138170508/job/134233430442"
+    },
+    {
+      "completedAt": "2026-11-17T17:42:43Z",
+      "conclusion": "failure",
+      "databaseId": 134238302208,
+      "name": "coverage-combine",
+      "startedAt": "2026-11-17T17:40:31Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-17T17:40:33Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-17T17:40:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:40:33Z",
+          "conclusion": "success",
+          "name": "Dump GitHub context",
+          "number": 2,
+          "startedAt": "2026-11-17T17:40:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:40:36Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7.0.1",
+          "number": 3,
+          "startedAt": "2026-11-17T17:40:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:40:36Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@v7.1.0",
+          "number": 4,
+          "startedAt": "2026-11-17T17:40:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:40:48Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 5,
+          "startedAt": "2026-11-17T17:40:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:40:49Z",
+          "conclusion": "success",
+          "name": "Install Dependencies",
+          "number": 6,
+          "startedAt": "2026-11-17T17:40:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:40:51Z",
+          "conclusion": "success",
+          "name": "Get coverage files",
+          "number": 7,
+          "startedAt": "2026-11-17T17:40:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:40:51Z",
+          "conclusion": "success",
+          "name": "Run ls -la coverage",
+          "number": 8,
+          "startedAt": "2026-11-17T17:40:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:40:55Z",
+          "conclusion": "success",
+          "name": "Run uv run coverage combine coverage",
+          "number": 9,
+          "startedAt": "2026-11-17T17:40:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:42:17Z",
+          "conclusion": "success",
+          "name": "Run uv run coverage html --title \"Coverage for 99cf76df67862c870def10c1094bb5ec03334308\"",
+          "number": 10,
+          "startedAt": "2026-11-17T17:40:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:42:21Z",
+          "conclusion": "success",
+          "name": "Store coverage HTML",
+          "number": 11,
+          "startedAt": "2026-11-17T17:42:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:42:38Z",
+          "conclusion": "failure",
+          "name": "Run uv run coverage report --fail-under=100",
+          "number": 12,
+          "startedAt": "2026-11-17T17:42:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:42:38Z",
+          "conclusion": "skipped",
+          "name": "Post Setup uv",
+          "number": 22,
+          "startedAt": "2026-11-17T17:42:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:42:38Z",
+          "conclusion": "skipped",
+          "name": "Post Run actions/setup-python@v7.1.0",
+          "number": 23,
+          "startedAt": "2026-11-17T17:42:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:42:38Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7.0.1",
+          "number": 24,
+          "startedAt": "2026-11-17T17:42:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:42:38Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 25,
+          "startedAt": "2026-11-17T17:42:38Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/fastapi/fastapi/actions/runs/44138170508/job/134238302208"
+    },
+    {
+      "completedAt": "2026-11-17T17:42:48Z",
+      "conclusion": "failure",
+      "databaseId": 134239746964,
+      "name": "test-alls-green",
+      "startedAt": "2026-11-17T17:42:45Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-17T17:42:46Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-17T17:42:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:42:46Z",
+          "conclusion": "success",
+          "name": "Dump GitHub context",
+          "number": 2,
+          "startedAt": "2026-11-17T17:42:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:42:47Z",
+          "conclusion": "failure",
+          "name": "Decide whether the needed jobs succeeded or failed",
+          "number": 3,
+          "startedAt": "2026-11-17T17:42:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T17:42:47Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 4,
+          "startedAt": "2026-11-17T17:42:47Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/fastapi/fastapi/actions/runs/44138170508/job/134239746964"
+    }
+  ],
+  "name": "Test",
+  "updatedAt": "2026-11-17T17:42:48Z",
+  "repository": "fastapi/fastapi"
+}

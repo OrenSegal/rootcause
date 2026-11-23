@@ -1,0 +1,22 @@
+[
+  {
+    "author": "PStarH",
+    "committedDate": "2026-11-14T12:12:42Z",
+    "messageHeadline": "Speed up interp at a few points of a chunked array",
+    "oid": "e094e87c5eadee3e5ca68d845e2b8c28eea4eba3",
+    "files": [
+      {
+        "filename": "doc/whats-new.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "xarray/core/missing.py",
+        "status": "modified"
+      },
+      {
+        "filename": "xarray/tests/test_missing.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

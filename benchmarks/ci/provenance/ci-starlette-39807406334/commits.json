@@ -1,0 +1,18 @@
+[
+  {
+    "author": "princejain756",
+    "committedDate": "2026-10-22T15:42:03Z",
+    "messageHeadline": "Fix URL.replace() double port when hostname embeds one",
+    "oid": "03db5ca89632619be3fbc02520470f9c92f53655",
+    "files": [
+      {
+        "filename": "starlette/datastructures.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_datastructures.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

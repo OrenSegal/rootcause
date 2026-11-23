@@ -1,0 +1,54 @@
+[
+  {
+    "id": "e0084311fe",
+    "service": "mypy",
+    "version": "e0084311fe",
+    "ts": "2026-11-08T19:01:49Z",
+    "author": "Rifa-111",
+    "summary": "Fix placeholder qualified names during semantic analysis (#22326)",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "mypy/semanal.py"
+    ]
+  },
+  {
+    "id": "b5dd3d7c1b",
+    "service": "mypy",
+    "version": "b5dd3d7c1b",
+    "ts": "2026-11-08T19:03:09Z",
+    "author": "Rifa-111",
+    "summary": "Support deferred dynamic class hook test fixture",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "test-data/unit/plugins/dyn_class_from_method.py"
+    ]
+  },
+  {
+    "id": "d020e3143e",
+    "service": "mypy",
+    "version": "d020e3143e",
+    "ts": "2026-11-08T19:03:11Z",
+    "author": "Rifa-111",
+    "summary": "Add regression coverage for imported placeholder dynamic class hooks",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "test-data/unit/check-custom-plugin.test"
+    ]
+  },
+  {
+    "id": "1a8ca7e293",
+    "service": "mypy",
+    "version": "1a8ca7e293",
+    "ts": "2026-11-08T19:22:50Z",
+    "author": "Rifa-111",
+    "summary": "Import PlaceholderNode for deferred dynamic class regression fixture",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "test-data/unit/plugins/dyn_class_from_method.py"
+    ]
+  }
+]

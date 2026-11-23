@@ -1,0 +1,18 @@
+[
+  {
+    "author": "sanyamk23",
+    "committedDate": "2026-08-31T17:58:16Z",
+    "messageHeadline": "Fix indent filter ignoring blank=False when first=True",
+    "oid": "3af7cff3dabccc7350260d8ba72614e470775290",
+    "files": [
+      {
+        "filename": "src/jinja2/filters.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_filters.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

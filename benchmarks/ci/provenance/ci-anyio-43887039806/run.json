@@ -1,0 +1,1866 @@
+{
+  "attempt": 1,
+  "conclusion": "failure",
+  "createdAt": "2026-11-16T14:33:53Z",
+  "databaseId": 43887039806,
+  "displayTitle": "Expose `run_sync_soon` through the low-level API",
+  "event": "pull_request",
+  "headBranch": "add-lowlevel-run-sync-soon",
+  "headSha": "a22b2a86fc848702dc95dbb358836aadca517c34",
+  "jobs": [
+    {
+      "completedAt": "2026-11-16T14:34:00Z",
+      "conclusion": "success",
+      "databaseId": 133367885150,
+      "name": "changed-files",
+      "startedAt": "2026-11-16T14:33:55Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-16T14:33:56Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-16T14:33:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:33:57Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-16T14:33:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:33:59Z",
+          "conclusion": "success",
+          "name": "Get changed files by category",
+          "number": 3,
+          "startedAt": "2026-11-16T14:33:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:33:59Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 6,
+          "startedAt": "2026-11-16T14:33:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:33:59Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 7,
+          "startedAt": "2026-11-16T14:33:59Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/agronholm/anyio/actions/runs/43887039806/job/133367885150"
+    },
+    {
+      "completedAt": "2026-11-16T14:34:29Z",
+      "conclusion": "failure",
+      "databaseId": 133367952945,
+      "name": "docs",
+      "startedAt": "2026-11-16T14:34:02Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-16T14:34:05Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-16T14:34:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:09Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-16T14:34:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:14Z",
+          "conclusion": "success",
+          "name": "Set up Python ",
+          "number": 3,
+          "startedAt": "2026-11-16T14:34:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:21Z",
+          "conclusion": "success",
+          "name": "Install the project and its dependencies",
+          "number": 4,
+          "startedAt": "2026-11-16T14:34:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:27Z",
+          "conclusion": "failure",
+          "name": "Build documentation",
+          "number": 5,
+          "startedAt": "2026-11-16T14:34:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:27Z",
+          "conclusion": "skipped",
+          "name": "Post Set up Python ",
+          "number": 9,
+          "startedAt": "2026-11-16T14:34:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:27Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 10,
+          "startedAt": "2026-11-16T14:34:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:27Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "startedAt": "2026-11-16T14:34:27Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/agronholm/anyio/actions/runs/43887039806/job/133367952945"
+    },
+    {
+      "completedAt": "2026-11-16T14:34:13Z",
+      "conclusion": "success",
+      "databaseId": 133367953004,
+      "name": "pyright",
+      "startedAt": "2026-11-16T14:34:02Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-16T14:34:03Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-16T14:34:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:03Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-16T14:34:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:03Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-11-16T14:34:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:04Z",
+          "conclusion": "success",
+          "name": "Run actions/cache@v6",
+          "number": 4,
+          "startedAt": "2026-11-16T14:34:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:10Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "startedAt": "2026-11-16T14:34:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:11Z",
+          "conclusion": "success",
+          "name": "Run pyright",
+          "number": 6,
+          "startedAt": "2026-11-16T14:34:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:11Z",
+          "conclusion": "success",
+          "name": "Post Run actions/cache@v6",
+          "number": 10,
+          "startedAt": "2026-11-16T14:34:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:11Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 11,
+          "startedAt": "2026-11-16T14:34:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:11Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 12,
+          "startedAt": "2026-11-16T14:34:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:11Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-11-16T14:34:11Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/agronholm/anyio/actions/runs/43887039806/job/133367953004"
+    },
+    {
+      "completedAt": "2026-11-16T14:36:31Z",
+      "conclusion": "success",
+      "databaseId": 133367953320,
+      "name": "test (ubuntu-latest, 3.13, [trio], false)",
+      "startedAt": "2026-11-16T14:34:03Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-16T14:34:05Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-16T14:34:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:06Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-16T14:34:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:10Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.13",
+          "number": 3,
+          "startedAt": "2026-11-16T14:34:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:18Z",
+          "conclusion": "success",
+          "name": "Install the project and its dependencies",
+          "number": 4,
+          "startedAt": "2026-11-16T14:34:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:18Z",
+          "conclusion": "skipped",
+          "name": "Install the project and its dependencies (lowest bound)",
+          "number": 5,
+          "startedAt": "2026-11-16T14:34:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:18Z",
+          "conclusion": "success",
+          "name": "Patch /etc/hosts",
+          "number": 6,
+          "startedAt": "2026-11-16T14:34:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:18Z",
+          "conclusion": "skipped",
+          "name": "Patch C:\\Windows\\System32\\drivers\\etc\\hosts",
+          "number": 7,
+          "startedAt": "2026-11-16T14:34:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:26Z",
+          "conclusion": "success",
+          "name": "Test with pytest",
+          "number": 8,
+          "startedAt": "2026-11-16T14:34:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:26Z",
+          "conclusion": "success",
+          "name": "Generate coverage report",
+          "number": 9,
+          "startedAt": "2026-11-16T14:36:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:26Z",
+          "conclusion": "skipped",
+          "name": "Trust Coveralls Homebrew tap (Homebrew 6 requirement)",
+          "number": 10,
+          "startedAt": "2026-11-16T14:36:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:28Z",
+          "conclusion": "success",
+          "name": "Upload Coverage",
+          "number": 11,
+          "startedAt": "2026-11-16T14:36:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:28Z",
+          "conclusion": "success",
+          "name": "Post Set up Python 3.13",
+          "number": 21,
+          "startedAt": "2026-11-16T14:36:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:28Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 22,
+          "startedAt": "2026-11-16T14:36:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:28Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-11-16T14:36:28Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/agronholm/anyio/actions/runs/43887039806/job/133367953320"
+    },
+    {
+      "completedAt": "2026-11-16T14:36:23Z",
+      "conclusion": "success",
+      "databaseId": 133367953387,
+      "name": "test (macos-latest, 3.15, [trio])",
+      "startedAt": "2026-11-16T14:34:06Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-16T14:34:08Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-16T14:34:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:10Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-16T14:34:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:37Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.15",
+          "number": 3,
+          "startedAt": "2026-11-16T14:34:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:41Z",
+          "conclusion": "success",
+          "name": "Install the project and its dependencies",
+          "number": 4,
+          "startedAt": "2026-11-16T14:34:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:41Z",
+          "conclusion": "skipped",
+          "name": "Install the project and its dependencies (lowest bound)",
+          "number": 5,
+          "startedAt": "2026-11-16T14:34:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:41Z",
+          "conclusion": "success",
+          "name": "Patch /etc/hosts",
+          "number": 6,
+          "startedAt": "2026-11-16T14:34:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:41Z",
+          "conclusion": "skipped",
+          "name": "Patch C:\\Windows\\System32\\drivers\\etc\\hosts",
+          "number": 7,
+          "startedAt": "2026-11-16T14:34:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:08Z",
+          "conclusion": "success",
+          "name": "Test with pytest",
+          "number": 8,
+          "startedAt": "2026-11-16T14:34:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:09Z",
+          "conclusion": "success",
+          "name": "Generate coverage report",
+          "number": 9,
+          "startedAt": "2026-11-16T14:36:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:10Z",
+          "conclusion": "success",
+          "name": "Trust Coveralls Homebrew tap (Homebrew 6 requirement)",
+          "number": 10,
+          "startedAt": "2026-11-16T14:36:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:20Z",
+          "conclusion": "success",
+          "name": "Upload Coverage",
+          "number": 11,
+          "startedAt": "2026-11-16T14:36:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:20Z",
+          "conclusion": "success",
+          "name": "Post Set up Python 3.15",
+          "number": 21,
+          "startedAt": "2026-11-16T14:36:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:20Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 22,
+          "startedAt": "2026-11-16T14:36:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:21Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-11-16T14:36:20Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/agronholm/anyio/actions/runs/43887039806/job/133367953387"
+    },
+    {
+      "completedAt": "2026-11-16T14:35:58Z",
+      "conclusion": "success",
+      "databaseId": 133367953399,
+      "name": "test (ubuntu-latest, 3.15, [trio], false)",
+      "startedAt": "2026-11-16T14:34:02Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-16T14:34:04Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-16T14:34:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:05Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-16T14:34:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:08Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.15",
+          "number": 3,
+          "startedAt": "2026-11-16T14:34:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:16Z",
+          "conclusion": "success",
+          "name": "Install the project and its dependencies",
+          "number": 4,
+          "startedAt": "2026-11-16T14:34:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:16Z",
+          "conclusion": "skipped",
+          "name": "Install the project and its dependencies (lowest bound)",
+          "number": 5,
+          "startedAt": "2026-11-16T14:34:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:16Z",
+          "conclusion": "success",
+          "name": "Patch /etc/hosts",
+          "number": 6,
+          "startedAt": "2026-11-16T14:34:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:16Z",
+          "conclusion": "skipped",
+          "name": "Patch C:\\Windows\\System32\\drivers\\etc\\hosts",
+          "number": 7,
+          "startedAt": "2026-11-16T14:34:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:53Z",
+          "conclusion": "success",
+          "name": "Test with pytest",
+          "number": 8,
+          "startedAt": "2026-11-16T14:34:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:54Z",
+          "conclusion": "success",
+          "name": "Generate coverage report",
+          "number": 9,
+          "startedAt": "2026-11-16T14:35:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:54Z",
+          "conclusion": "skipped",
+          "name": "Trust Coveralls Homebrew tap (Homebrew 6 requirement)",
+          "number": 10,
+          "startedAt": "2026-11-16T14:35:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:56Z",
+          "conclusion": "success",
+          "name": "Upload Coverage",
+          "number": 11,
+          "startedAt": "2026-11-16T14:35:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:56Z",
+          "conclusion": "success",
+          "name": "Post Set up Python 3.15",
+          "number": 21,
+          "startedAt": "2026-11-16T14:35:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:56Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 22,
+          "startedAt": "2026-11-16T14:35:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:56Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-11-16T14:35:56Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/agronholm/anyio/actions/runs/43887039806/job/133367953399"
+    },
+    {
+      "completedAt": "2026-11-16T14:36:18Z",
+      "conclusion": "success",
+      "databaseId": 133367953471,
+      "name": "test (ubuntu-latest, 3.12, [trio], false)",
+      "startedAt": "2026-11-16T14:34:02Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-16T14:34:04Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-16T14:34:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:05Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-16T14:34:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:08Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.12",
+          "number": 3,
+          "startedAt": "2026-11-16T14:34:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:16Z",
+          "conclusion": "success",
+          "name": "Install the project and its dependencies",
+          "number": 4,
+          "startedAt": "2026-11-16T14:34:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:16Z",
+          "conclusion": "skipped",
+          "name": "Install the project and its dependencies (lowest bound)",
+          "number": 5,
+          "startedAt": "2026-11-16T14:34:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:16Z",
+          "conclusion": "success",
+          "name": "Patch /etc/hosts",
+          "number": 6,
+          "startedAt": "2026-11-16T14:34:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:16Z",
+          "conclusion": "skipped",
+          "name": "Patch C:\\Windows\\System32\\drivers\\etc\\hosts",
+          "number": 7,
+          "startedAt": "2026-11-16T14:34:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:13Z",
+          "conclusion": "success",
+          "name": "Test with pytest",
+          "number": 8,
+          "startedAt": "2026-11-16T14:34:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:14Z",
+          "conclusion": "success",
+          "name": "Generate coverage report",
+          "number": 9,
+          "startedAt": "2026-11-16T14:36:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:14Z",
+          "conclusion": "skipped",
+          "name": "Trust Coveralls Homebrew tap (Homebrew 6 requirement)",
+          "number": 10,
+          "startedAt": "2026-11-16T14:36:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:15Z",
+          "conclusion": "success",
+          "name": "Upload Coverage",
+          "number": 11,
+          "startedAt": "2026-11-16T14:36:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:16Z",
+          "conclusion": "success",
+          "name": "Post Set up Python 3.12",
+          "number": 21,
+          "startedAt": "2026-11-16T14:36:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:16Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 22,
+          "startedAt": "2026-11-16T14:36:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:16Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-11-16T14:36:16Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/agronholm/anyio/actions/runs/43887039806/job/133367953471"
+    },
+    {
+      "completedAt": "2026-11-16T14:36:13Z",
+      "conclusion": "success",
+      "databaseId": 133367953490,
+      "name": "test (ubuntu-latest, 3.14, [trio], false)",
+      "startedAt": "2026-11-16T14:34:02Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-16T14:34:03Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-16T14:34:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:04Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-16T14:34:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:12Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.14",
+          "number": 3,
+          "startedAt": "2026-11-16T14:34:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:23Z",
+          "conclusion": "success",
+          "name": "Install the project and its dependencies",
+          "number": 4,
+          "startedAt": "2026-11-16T14:34:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:23Z",
+          "conclusion": "skipped",
+          "name": "Install the project and its dependencies (lowest bound)",
+          "number": 5,
+          "startedAt": "2026-11-16T14:34:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:23Z",
+          "conclusion": "success",
+          "name": "Patch /etc/hosts",
+          "number": 6,
+          "startedAt": "2026-11-16T14:34:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:23Z",
+          "conclusion": "skipped",
+          "name": "Patch C:\\Windows\\System32\\drivers\\etc\\hosts",
+          "number": 7,
+          "startedAt": "2026-11-16T14:34:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:09Z",
+          "conclusion": "success",
+          "name": "Test with pytest",
+          "number": 8,
+          "startedAt": "2026-11-16T14:34:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:10Z",
+          "conclusion": "success",
+          "name": "Generate coverage report",
+          "number": 9,
+          "startedAt": "2026-11-16T14:36:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:10Z",
+          "conclusion": "skipped",
+          "name": "Trust Coveralls Homebrew tap (Homebrew 6 requirement)",
+          "number": 10,
+          "startedAt": "2026-11-16T14:36:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:11Z",
+          "conclusion": "success",
+          "name": "Upload Coverage",
+          "number": 11,
+          "startedAt": "2026-11-16T14:36:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:11Z",
+          "conclusion": "success",
+          "name": "Post Set up Python 3.14",
+          "number": 21,
+          "startedAt": "2026-11-16T14:36:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:11Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 22,
+          "startedAt": "2026-11-16T14:36:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:11Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-11-16T14:36:11Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/agronholm/anyio/actions/runs/43887039806/job/133367953490"
+    },
+    {
+      "completedAt": "2026-11-16T14:35:49Z",
+      "conclusion": "success",
+      "databaseId": 133367953504,
+      "name": "test (ubuntu-latest, 3.15, only asyncio)",
+      "startedAt": "2026-11-16T14:34:02Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-16T14:34:04Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-16T14:34:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:05Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-16T14:34:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:09Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.15",
+          "number": 3,
+          "startedAt": "2026-11-16T14:34:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:16Z",
+          "conclusion": "success",
+          "name": "Install the project and its dependencies",
+          "number": 4,
+          "startedAt": "2026-11-16T14:34:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:16Z",
+          "conclusion": "skipped",
+          "name": "Install the project and its dependencies (lowest bound)",
+          "number": 5,
+          "startedAt": "2026-11-16T14:34:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:16Z",
+          "conclusion": "success",
+          "name": "Patch /etc/hosts",
+          "number": 6,
+          "startedAt": "2026-11-16T14:34:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:16Z",
+          "conclusion": "skipped",
+          "name": "Patch C:\\Windows\\System32\\drivers\\etc\\hosts",
+          "number": 7,
+          "startedAt": "2026-11-16T14:34:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:41Z",
+          "conclusion": "success",
+          "name": "Test with pytest",
+          "number": 8,
+          "startedAt": "2026-11-16T14:34:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:41Z",
+          "conclusion": "success",
+          "name": "Generate coverage report",
+          "number": 9,
+          "startedAt": "2026-11-16T14:35:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:41Z",
+          "conclusion": "skipped",
+          "name": "Trust Coveralls Homebrew tap (Homebrew 6 requirement)",
+          "number": 10,
+          "startedAt": "2026-11-16T14:35:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:46Z",
+          "conclusion": "success",
+          "name": "Upload Coverage",
+          "number": 11,
+          "startedAt": "2026-11-16T14:35:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:46Z",
+          "conclusion": "success",
+          "name": "Post Set up Python 3.15",
+          "number": 21,
+          "startedAt": "2026-11-16T14:35:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:46Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 22,
+          "startedAt": "2026-11-16T14:35:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:46Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-11-16T14:35:46Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/agronholm/anyio/actions/runs/43887039806/job/133367953504"
+    },
+    {
+      "completedAt": "2026-11-16T14:36:31Z",
+      "conclusion": "success",
+      "databaseId": 133367953515,
+      "name": "test (ubuntu-latest, pypy3.11, [trio], false)",
+      "startedAt": "2026-11-16T14:34:02Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-16T14:34:03Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-16T14:34:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:04Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-16T14:34:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:12Z",
+          "conclusion": "success",
+          "name": "Set up Python pypy3.11",
+          "number": 3,
+          "startedAt": "2026-11-16T14:34:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:21Z",
+          "conclusion": "success",
+          "name": "Install the project and its dependencies",
+          "number": 4,
+          "startedAt": "2026-11-16T14:34:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:21Z",
+          "conclusion": "skipped",
+          "name": "Install the project and its dependencies (lowest bound)",
+          "number": 5,
+          "startedAt": "2026-11-16T14:34:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:21Z",
+          "conclusion": "success",
+          "name": "Patch /etc/hosts",
+          "number": 6,
+          "startedAt": "2026-11-16T14:34:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:21Z",
+          "conclusion": "skipped",
+          "name": "Patch C:\\Windows\\System32\\drivers\\etc\\hosts",
+          "number": 7,
+          "startedAt": "2026-11-16T14:34:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:26Z",
+          "conclusion": "success",
+          "name": "Test with pytest",
+          "number": 8,
+          "startedAt": "2026-11-16T14:34:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:27Z",
+          "conclusion": "success",
+          "name": "Generate coverage report",
+          "number": 9,
+          "startedAt": "2026-11-16T14:36:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:27Z",
+          "conclusion": "skipped",
+          "name": "Trust Coveralls Homebrew tap (Homebrew 6 requirement)",
+          "number": 10,
+          "startedAt": "2026-11-16T14:36:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:28Z",
+          "conclusion": "success",
+          "name": "Upload Coverage",
+          "number": 11,
+          "startedAt": "2026-11-16T14:36:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:28Z",
+          "conclusion": "success",
+          "name": "Post Set up Python pypy3.11",
+          "number": 21,
+          "startedAt": "2026-11-16T14:36:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:29Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 22,
+          "startedAt": "2026-11-16T14:36:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:29Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-11-16T14:36:29Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/agronholm/anyio/actions/runs/43887039806/job/133367953515"
+    },
+    {
+      "completedAt": "2026-11-16T14:37:14Z",
+      "conclusion": "success",
+      "databaseId": 133367953520,
+      "name": "test (windows-latest, 3.15, [trio])",
+      "startedAt": "2026-11-16T14:34:02Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-16T14:34:03Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-16T14:34:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:09Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-16T14:34:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:15Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.15",
+          "number": 3,
+          "startedAt": "2026-11-16T14:34:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:36Z",
+          "conclusion": "success",
+          "name": "Install the project and its dependencies",
+          "number": 4,
+          "startedAt": "2026-11-16T14:34:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:36Z",
+          "conclusion": "skipped",
+          "name": "Install the project and its dependencies (lowest bound)",
+          "number": 5,
+          "startedAt": "2026-11-16T14:34:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:36Z",
+          "conclusion": "skipped",
+          "name": "Patch /etc/hosts",
+          "number": 6,
+          "startedAt": "2026-11-16T14:34:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:36Z",
+          "conclusion": "success",
+          "name": "Patch C:\\Windows\\System32\\drivers\\etc\\hosts",
+          "number": 7,
+          "startedAt": "2026-11-16T14:34:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:37:04Z",
+          "conclusion": "success",
+          "name": "Test with pytest",
+          "number": 8,
+          "startedAt": "2026-11-16T14:34:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:37:05Z",
+          "conclusion": "success",
+          "name": "Generate coverage report",
+          "number": 9,
+          "startedAt": "2026-11-16T14:37:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:37:05Z",
+          "conclusion": "skipped",
+          "name": "Trust Coveralls Homebrew tap (Homebrew 6 requirement)",
+          "number": 10,
+          "startedAt": "2026-11-16T14:37:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:37:11Z",
+          "conclusion": "success",
+          "name": "Upload Coverage",
+          "number": 11,
+          "startedAt": "2026-11-16T14:37:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:37:11Z",
+          "conclusion": "success",
+          "name": "Post Set up Python 3.15",
+          "number": 21,
+          "startedAt": "2026-11-16T14:37:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:37:13Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 22,
+          "startedAt": "2026-11-16T14:37:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:37:13Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-11-16T14:37:13Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/agronholm/anyio/actions/runs/43887039806/job/133367953520"
+    },
+    {
+      "completedAt": "2026-11-16T14:35:59Z",
+      "conclusion": "success",
+      "databaseId": 133367953531,
+      "name": "test (ubuntu-latest, 3.11, [trio], false)",
+      "startedAt": "2026-11-16T14:34:02Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-16T14:34:04Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-16T14:34:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:04Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-16T14:34:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:07Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.11",
+          "number": 3,
+          "startedAt": "2026-11-16T14:34:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:17Z",
+          "conclusion": "success",
+          "name": "Install the project and its dependencies",
+          "number": 4,
+          "startedAt": "2026-11-16T14:34:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:17Z",
+          "conclusion": "skipped",
+          "name": "Install the project and its dependencies (lowest bound)",
+          "number": 5,
+          "startedAt": "2026-11-16T14:34:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:17Z",
+          "conclusion": "success",
+          "name": "Patch /etc/hosts",
+          "number": 6,
+          "startedAt": "2026-11-16T14:34:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:17Z",
+          "conclusion": "skipped",
+          "name": "Patch C:\\Windows\\System32\\drivers\\etc\\hosts",
+          "number": 7,
+          "startedAt": "2026-11-16T14:34:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:56Z",
+          "conclusion": "success",
+          "name": "Test with pytest",
+          "number": 8,
+          "startedAt": "2026-11-16T14:34:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:57Z",
+          "conclusion": "success",
+          "name": "Generate coverage report",
+          "number": 9,
+          "startedAt": "2026-11-16T14:35:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:57Z",
+          "conclusion": "skipped",
+          "name": "Trust Coveralls Homebrew tap (Homebrew 6 requirement)",
+          "number": 10,
+          "startedAt": "2026-11-16T14:35:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:58Z",
+          "conclusion": "success",
+          "name": "Upload Coverage",
+          "number": 11,
+          "startedAt": "2026-11-16T14:35:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:58Z",
+          "conclusion": "success",
+          "name": "Post Set up Python 3.11",
+          "number": 21,
+          "startedAt": "2026-11-16T14:35:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:58Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 22,
+          "startedAt": "2026-11-16T14:35:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:58Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-11-16T14:35:58Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/agronholm/anyio/actions/runs/43887039806/job/133367953531"
+    },
+    {
+      "completedAt": "2026-11-16T14:35:58Z",
+      "conclusion": "success",
+      "databaseId": 133367953546,
+      "name": "test (ubuntu-latest, 3.15t, [trio], false)",
+      "startedAt": "2026-11-16T14:34:02Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-16T14:34:03Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-16T14:34:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:04Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-16T14:34:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:11Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.15t",
+          "number": 3,
+          "startedAt": "2026-11-16T14:34:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:18Z",
+          "conclusion": "success",
+          "name": "Install the project and its dependencies",
+          "number": 4,
+          "startedAt": "2026-11-16T14:34:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:18Z",
+          "conclusion": "skipped",
+          "name": "Install the project and its dependencies (lowest bound)",
+          "number": 5,
+          "startedAt": "2026-11-16T14:34:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:18Z",
+          "conclusion": "success",
+          "name": "Patch /etc/hosts",
+          "number": 6,
+          "startedAt": "2026-11-16T14:34:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:18Z",
+          "conclusion": "skipped",
+          "name": "Patch C:\\Windows\\System32\\drivers\\etc\\hosts",
+          "number": 7,
+          "startedAt": "2026-11-16T14:34:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:53Z",
+          "conclusion": "success",
+          "name": "Test with pytest",
+          "number": 8,
+          "startedAt": "2026-11-16T14:34:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:53Z",
+          "conclusion": "success",
+          "name": "Generate coverage report",
+          "number": 9,
+          "startedAt": "2026-11-16T14:35:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:53Z",
+          "conclusion": "skipped",
+          "name": "Trust Coveralls Homebrew tap (Homebrew 6 requirement)",
+          "number": 10,
+          "startedAt": "2026-11-16T14:35:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:55Z",
+          "conclusion": "success",
+          "name": "Upload Coverage",
+          "number": 11,
+          "startedAt": "2026-11-16T14:35:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:55Z",
+          "conclusion": "success",
+          "name": "Post Set up Python 3.15t",
+          "number": 21,
+          "startedAt": "2026-11-16T14:35:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:55Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 22,
+          "startedAt": "2026-11-16T14:35:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:55Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-11-16T14:35:55Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/agronholm/anyio/actions/runs/43887039806/job/133367953546"
+    },
+    {
+      "completedAt": "2026-11-16T14:35:54Z",
+      "conclusion": "success",
+      "databaseId": 133367953547,
+      "name": "test (ubuntu-latest, 3.11, [trio], true, oldest dependencies)",
+      "startedAt": "2026-11-16T14:34:03Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-16T14:34:07Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-16T14:34:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:14Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-16T14:34:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:21Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.11",
+          "number": 3,
+          "startedAt": "2026-11-16T14:34:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:21Z",
+          "conclusion": "skipped",
+          "name": "Install the project and its dependencies",
+          "number": 4,
+          "startedAt": "2026-11-16T14:34:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:30Z",
+          "conclusion": "success",
+          "name": "Install the project and its dependencies (lowest bound)",
+          "number": 5,
+          "startedAt": "2026-11-16T14:34:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:30Z",
+          "conclusion": "success",
+          "name": "Patch /etc/hosts",
+          "number": 6,
+          "startedAt": "2026-11-16T14:34:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:30Z",
+          "conclusion": "skipped",
+          "name": "Patch C:\\Windows\\System32\\drivers\\etc\\hosts",
+          "number": 7,
+          "startedAt": "2026-11-16T14:34:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:49Z",
+          "conclusion": "success",
+          "name": "Test with pytest",
+          "number": 8,
+          "startedAt": "2026-11-16T14:34:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:49Z",
+          "conclusion": "success",
+          "name": "Generate coverage report",
+          "number": 9,
+          "startedAt": "2026-11-16T14:35:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:49Z",
+          "conclusion": "skipped",
+          "name": "Trust Coveralls Homebrew tap (Homebrew 6 requirement)",
+          "number": 10,
+          "startedAt": "2026-11-16T14:35:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:50Z",
+          "conclusion": "success",
+          "name": "Upload Coverage",
+          "number": 11,
+          "startedAt": "2026-11-16T14:35:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:50Z",
+          "conclusion": "success",
+          "name": "Post Set up Python 3.11",
+          "number": 21,
+          "startedAt": "2026-11-16T14:35:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:50Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 22,
+          "startedAt": "2026-11-16T14:35:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:50Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-11-16T14:35:50Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/agronholm/anyio/actions/runs/43887039806/job/133367953547"
+    },
+    {
+      "completedAt": "2026-11-16T14:36:50Z",
+      "conclusion": "success",
+      "databaseId": 133367953562,
+      "name": "test (windows-latest, 3.11, [trio])",
+      "startedAt": "2026-11-16T14:34:03Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-16T14:34:05Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-16T14:34:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:11Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-16T14:34:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:15Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.11",
+          "number": 3,
+          "startedAt": "2026-11-16T14:34:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:32Z",
+          "conclusion": "success",
+          "name": "Install the project and its dependencies",
+          "number": 4,
+          "startedAt": "2026-11-16T14:34:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:32Z",
+          "conclusion": "skipped",
+          "name": "Install the project and its dependencies (lowest bound)",
+          "number": 5,
+          "startedAt": "2026-11-16T14:34:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:32Z",
+          "conclusion": "skipped",
+          "name": "Patch /etc/hosts",
+          "number": 6,
+          "startedAt": "2026-11-16T14:34:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:32Z",
+          "conclusion": "success",
+          "name": "Patch C:\\Windows\\System32\\drivers\\etc\\hosts",
+          "number": 7,
+          "startedAt": "2026-11-16T14:34:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:43Z",
+          "conclusion": "success",
+          "name": "Test with pytest",
+          "number": 8,
+          "startedAt": "2026-11-16T14:34:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:44Z",
+          "conclusion": "success",
+          "name": "Generate coverage report",
+          "number": 9,
+          "startedAt": "2026-11-16T14:36:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:44Z",
+          "conclusion": "skipped",
+          "name": "Trust Coveralls Homebrew tap (Homebrew 6 requirement)",
+          "number": 10,
+          "startedAt": "2026-11-16T14:36:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:47Z",
+          "conclusion": "success",
+          "name": "Upload Coverage",
+          "number": 11,
+          "startedAt": "2026-11-16T14:36:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:47Z",
+          "conclusion": "success",
+          "name": "Post Set up Python 3.11",
+          "number": 21,
+          "startedAt": "2026-11-16T14:36:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:49Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 22,
+          "startedAt": "2026-11-16T14:36:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:36:49Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-11-16T14:36:49Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/agronholm/anyio/actions/runs/43887039806/job/133367953562"
+    },
+    {
+      "completedAt": "2026-11-16T14:35:55Z",
+      "conclusion": "success",
+      "databaseId": 133367953581,
+      "name": "test (macos-latest, 3.11, [trio])",
+      "startedAt": "2026-11-16T14:34:07Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-16T14:34:08Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-16T14:34:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:10Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-16T14:34:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:11Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.11",
+          "number": 3,
+          "startedAt": "2026-11-16T14:34:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:17Z",
+          "conclusion": "success",
+          "name": "Install the project and its dependencies",
+          "number": 4,
+          "startedAt": "2026-11-16T14:34:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:17Z",
+          "conclusion": "skipped",
+          "name": "Install the project and its dependencies (lowest bound)",
+          "number": 5,
+          "startedAt": "2026-11-16T14:34:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:17Z",
+          "conclusion": "success",
+          "name": "Patch /etc/hosts",
+          "number": 6,
+          "startedAt": "2026-11-16T14:34:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:34:17Z",
+          "conclusion": "skipped",
+          "name": "Patch C:\\Windows\\System32\\drivers\\etc\\hosts",
+          "number": 7,
+          "startedAt": "2026-11-16T14:34:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:35Z",
+          "conclusion": "success",
+          "name": "Test with pytest",
+          "number": 8,
+          "startedAt": "2026-11-16T14:34:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:36Z",
+          "conclusion": "success",
+          "name": "Generate coverage report",
+          "number": 9,
+          "startedAt": "2026-11-16T14:35:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:41Z",
+          "conclusion": "success",
+          "name": "Trust Coveralls Homebrew tap (Homebrew 6 requirement)",
+          "number": 10,
+          "startedAt": "2026-11-16T14:35:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:52Z",
+          "conclusion": "success",
+          "name": "Upload Coverage",
+          "number": 11,
+          "startedAt": "2026-11-16T14:35:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:52Z",
+          "conclusion": "success",
+          "name": "Post Set up Python 3.11",
+          "number": 21,
+          "startedAt": "2026-11-16T14:35:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:52Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 22,
+          "startedAt": "2026-11-16T14:35:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:35:53Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-11-16T14:35:52Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/agronholm/anyio/actions/runs/43887039806/job/133367953581"
+    },
+    {
+      "completedAt": "2026-11-16T14:37:20Z",
+      "conclusion": "success",
+      "databaseId": 133369944856,
+      "name": "Finish Coveralls",
+      "startedAt": "2026-11-16T14:37:17Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-16T14:37:18Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-16T14:37:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:37:19Z",
+          "conclusion": "success",
+          "name": "Finished",
+          "number": 2,
+          "startedAt": "2026-11-16T14:37:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-16T14:37:19Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 3,
+          "startedAt": "2026-11-16T14:37:19Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/agronholm/anyio/actions/runs/43887039806/job/133369944856"
+    }
+  ],
+  "name": "test suite",
+  "updatedAt": "2026-11-16T14:37:21Z",
+  "repository": "agronholm/anyio"
+}

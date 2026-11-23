@@ -1,0 +1,12 @@
+{
+  "fixed_run": "https://github.com/pandas-dev/pandas/actions/runs/44928533804",
+  "fixed_sha": "9d8fa08e1aacab46deb789a450b688b0933e96ea",
+  "commits": [
+    "a87c66300e35602fb7549b70734b774bd1141009",
+    "9d8fa08e1aacab46deb789a450b688b0933e96ea"
+  ],
+  "files": [
+    "pandas/tests/indexing/test_loc.py"
+  ],
+  "status": "ahead"
+}

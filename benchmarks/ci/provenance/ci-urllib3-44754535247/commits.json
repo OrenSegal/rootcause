@@ -1,0 +1,22 @@
+[
+  {
+    "author": "Giriprasada",
+    "committedDate": "2026-11-20T14:28:24Z",
+    "messageHeadline": "Reject decode-mode switches in read_chunked before consuming body data.",
+    "oid": "37ad69262e8831d30daca7a5ffff8ec6805cc9b5",
+    "files": [
+      {
+        "filename": "changelog/+read-chunked-decode-toggle.bugfix.rst",
+        "status": "added"
+      },
+      {
+        "filename": "src/urllib3/response.py",
+        "status": "modified"
+      },
+      {
+        "filename": "test/test_response.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

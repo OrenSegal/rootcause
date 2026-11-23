@@ -1,0 +1,13 @@
+id: ci-matplotlib-43908764069
+title: 'Draft: Experiments with CI'
+alert:
+  severity: ci
+  service: python-3-14-on-macos-26
+  summary: 'workflow Tests failed on ci-adventures at f7854b000e: step ''Disable unneeded
+    macOS services'' in job ''Python 3.14 on macos-26'' failed.'
+truth:
+  category: config_change
+  service: matplotlib
+  required_evidence_any:
+  - f7854b000e
+provenance: recorded

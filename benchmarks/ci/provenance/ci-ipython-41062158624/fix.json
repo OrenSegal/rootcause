@@ -1,0 +1,11 @@
+{
+  "fixed_run": "https://github.com/ipython/ipython/actions/runs/41454090291",
+  "fixed_sha": "7c6ed41d597bf1ab78afadabc74dfcc2e012c80e",
+  "commits": [
+    "7c6ed41d597bf1ab78afadabc74dfcc2e012c80e"
+  ],
+  "files": [
+    "tests/test_interactiveshell.py"
+  ],
+  "status": "ahead"
+}

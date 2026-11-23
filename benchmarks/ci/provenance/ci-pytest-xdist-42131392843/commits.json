@@ -1,0 +1,34 @@
+[
+  {
+    "author": "hector2394",
+    "committedDate": "2026-11-05T23:41:23Z",
+    "messageHeadline": "fix(workers): preserve usage-error diagnostics and exit status",
+    "oid": "ab56651595c3fb795323147583e134bfd6603203",
+    "files": [
+      {
+        "filename": "README.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "changelog/15346.bugfix.rst",
+        "status": "added"
+      },
+      {
+        "filename": "pyproject.toml",
+        "status": "modified"
+      },
+      {
+        "filename": "src/xdist/dsession.py",
+        "status": "modified"
+      },
+      {
+        "filename": "src/xdist/remote.py",
+        "status": "modified"
+      },
+      {
+        "filename": "testing/acceptance_test.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

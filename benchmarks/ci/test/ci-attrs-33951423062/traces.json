@@ -1,0 +1,1442 @@
+[
+  {
+    "span_id": "run-33951423062",
+    "trace_id": "run-33951423062",
+    "parent_id": null,
+    "service": "ci",
+    "name": "CI",
+    "start": "2026-09-05T07:01:52Z",
+    "duration_ms": 138000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-101266851932",
+    "trace_id": "run-33951423062",
+    "parent_id": "run-33951423062",
+    "service": "build-verify-package",
+    "name": "Build & verify package",
+    "start": "2026-09-05T07:01:55Z",
+    "duration_ms": 19000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266851932-step-1",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266851932",
+    "service": "build-verify-package",
+    "name": "Set up job",
+    "start": "2026-09-05T07:01:56Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266851932-step-2",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266851932",
+    "service": "build-verify-package",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-09-05T07:01:59Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266851932-step-3",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266851932",
+    "service": "build-verify-package",
+    "name": "Run hynek/build-and-inspect-python-package@2abe76da66d0a6a4a227101f9348ee855797cfa5",
+    "start": "2026-09-05T07:02:00Z",
+    "duration_ms": 11000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266851932-step-5",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266851932",
+    "service": "build-verify-package",
+    "name": "Post Run hynek/build-and-inspect-python-package@2abe76da66d0a6a4a227101f9348ee855797cfa5",
+    "start": "2026-09-05T07:02:11Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266851932-step-6",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266851932",
+    "service": "build-verify-package",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-09-05T07:02:12Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266851932-step-7",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266851932",
+    "service": "build-verify-package",
+    "name": "Complete job",
+    "start": "2026-09-05T07:02:12Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266852032",
+    "trace_id": "run-33951423062",
+    "parent_id": "run-33951423062",
+    "service": "verify-dev-env",
+    "name": "Verify dev env",
+    "start": "2026-09-05T07:01:55Z",
+    "duration_ms": 12000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266852032-step-1",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266852032",
+    "service": "verify-dev-env",
+    "name": "Set up job",
+    "start": "2026-09-05T07:01:56Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266852032-step-2",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266852032",
+    "service": "verify-dev-env",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-09-05T07:01:58Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266852032-step-3",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266852032",
+    "service": "verify-dev-env",
+    "name": "Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+    "start": "2026-09-05T07:01:59Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266852032-step-4",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266852032",
+    "service": "verify-dev-env",
+    "name": "Run uv sync --python $(cat .python-version-default)",
+    "start": "2026-09-05T07:02:02Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266852032-step-5",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266852032",
+    "service": "verify-dev-env",
+    "name": "Ensure we can import attr and attrs packages",
+    "start": "2026-09-05T07:02:05Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266852032-step-9",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266852032",
+    "service": "verify-dev-env",
+    "name": "Post Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+    "start": "2026-09-05T07:02:05Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266852032-step-10",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266852032",
+    "service": "verify-dev-env",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-09-05T07:02:05Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266852032-step-11",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266852032",
+    "service": "verify-dev-env",
+    "name": "Complete job",
+    "start": "2026-09-05T07:02:05Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266852036",
+    "trace_id": "run-33951423062",
+    "parent_id": "run-33951423062",
+    "service": "check-types-using-supported-type-checkers",
+    "name": "Check types using supported type checkers",
+    "start": "2026-09-05T07:01:56Z",
+    "duration_ms": 20000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266852036-step-1",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266852036",
+    "service": "check-types-using-supported-type-checkers",
+    "name": "Set up job",
+    "start": "2026-09-05T07:01:57Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266852036-step-2",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266852036",
+    "service": "check-types-using-supported-type-checkers",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-09-05T07:01:59Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266852036-step-3",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266852036",
+    "service": "check-types-using-supported-type-checkers",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-09-05T07:02:00Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266852036-step-4",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266852036",
+    "service": "check-types-using-supported-type-checkers",
+    "name": "Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+    "start": "2026-09-05T07:02:00Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266852036-step-5",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266852036",
+    "service": "check-types-using-supported-type-checkers",
+    "name": "Run uv run --only-group tox tox run -f typing",
+    "start": "2026-09-05T07:02:03Z",
+    "duration_ms": 10000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266852036-step-8",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266852036",
+    "service": "check-types-using-supported-type-checkers",
+    "name": "Post Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+    "start": "2026-09-05T07:02:13Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266852036-step-9",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266852036",
+    "service": "check-types-using-supported-type-checkers",
+    "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-09-05T07:02:13Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266852036-step-10",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266852036",
+    "service": "check-types-using-supported-type-checkers",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-09-05T07:02:13Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266852036-step-11",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266852036",
+    "service": "check-types-using-supported-type-checkers",
+    "name": "Complete job",
+    "start": "2026-09-05T07:02:13Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266852061",
+    "trace_id": "run-33951423062",
+    "parent_id": "run-33951423062",
+    "service": "run-linters",
+    "name": "Run linters",
+    "start": "2026-09-05T07:01:55Z",
+    "duration_ms": 22000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-101266852061-step-1",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266852061",
+    "service": "run-linters",
+    "name": "Set up job",
+    "start": "2026-09-05T07:01:56Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266852061-step-2",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266852061",
+    "service": "run-linters",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-09-05T07:01:58Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266852061-step-3",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266852061",
+    "service": "run-linters",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-09-05T07:01:59Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266852061-step-4",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266852061",
+    "service": "run-linters",
+    "name": "Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+    "start": "2026-09-05T07:01:59Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266852061-step-5",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266852061",
+    "service": "run-linters",
+    "name": "Run uv run --only-group tox tox run -f lint",
+    "start": "2026-09-05T07:02:02Z",
+    "duration_ms": 13000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-101266852061-step-8",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266852061",
+    "service": "run-linters",
+    "name": "Post Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+    "start": "2026-09-05T07:02:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266852061-step-10",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266852061",
+    "service": "run-linters",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-09-05T07:02:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266852061-step-11",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266852061",
+    "service": "run-linters",
+    "name": "Complete job",
+    "start": "2026-09-05T07:02:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898598",
+    "trace_id": "run-33951423062",
+    "parent_id": "run-33951423062",
+    "service": "tests-on-pypy-3-11",
+    "name": "Tests on pypy-3.11",
+    "start": "2026-09-05T07:02:17Z",
+    "duration_ms": 21000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898598-step-1",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898598",
+    "service": "tests-on-pypy-3-11",
+    "name": "Set up job",
+    "start": "2026-09-05T07:02:18Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898598-step-2",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898598",
+    "service": "tests-on-pypy-3-11",
+    "name": "Download pre-built packages",
+    "start": "2026-09-05T07:02:20Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898598-step-3",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898598",
+    "service": "tests-on-pypy-3-11",
+    "name": "Run tar xf dist/*.tar.gz --strip-components=1",
+    "start": "2026-09-05T07:02:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898598-step-4",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898598",
+    "service": "tests-on-pypy-3-11",
+    "name": "Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+    "start": "2026-09-05T07:02:22Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898598-step-5",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898598",
+    "service": "tests-on-pypy-3-11",
+    "name": "Run limited tests on PyPy",
+    "start": "2026-09-05T07:02:25Z",
+    "duration_ms": 11000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898598-step-10",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898598",
+    "service": "tests-on-pypy-3-11",
+    "name": "Post Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+    "start": "2026-09-05T07:02:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898598-step-11",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898598",
+    "service": "tests-on-pypy-3-11",
+    "name": "Complete job",
+    "start": "2026-09-05T07:02:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898606",
+    "trace_id": "run-33951423062",
+    "parent_id": "run-33951423062",
+    "service": "run-doctests-render-changelog",
+    "name": "Run doctests & render changelog",
+    "start": "2026-09-05T07:02:20Z",
+    "duration_ms": 18000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898606-step-1",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898606",
+    "service": "run-doctests-render-changelog",
+    "name": "Set up job",
+    "start": "2026-09-05T07:02:21Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898606-step-2",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898606",
+    "service": "run-doctests-render-changelog",
+    "name": "Download pre-built packages",
+    "start": "2026-09-05T07:02:22Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898606-step-3",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898606",
+    "service": "run-doctests-render-changelog",
+    "name": "Run tar xf dist/*.tar.gz --strip-components=1",
+    "start": "2026-09-05T07:02:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898606-step-4",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898606",
+    "service": "run-doctests-render-changelog",
+    "name": "Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+    "start": "2026-09-05T07:02:24Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898606-step-5",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898606",
+    "service": "run-doctests-render-changelog",
+    "name": "Run uv run --only-group tox tox run -e docs-doctests,changelog",
+    "start": "2026-09-05T07:02:27Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898606-step-10",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898606",
+    "service": "run-doctests-render-changelog",
+    "name": "Post Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+    "start": "2026-09-05T07:02:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898606-step-11",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898606",
+    "service": "run-doctests-render-changelog",
+    "name": "Complete job",
+    "start": "2026-09-05T07:02:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898624",
+    "trace_id": "run-33951423062",
+    "parent_id": "run-33951423062",
+    "service": "tests-mypy-on-3-11",
+    "name": "Tests & Mypy on 3.11",
+    "start": "2026-09-05T07:02:17Z",
+    "duration_ms": 31000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898624-step-1",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898624",
+    "service": "tests-mypy-on-3-11",
+    "name": "Set up job",
+    "start": "2026-09-05T07:02:17Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898624-step-2",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898624",
+    "service": "tests-mypy-on-3-11",
+    "name": "Download pre-built packages",
+    "start": "2026-09-05T07:02:20Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898624-step-3",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898624",
+    "service": "tests-mypy-on-3-11",
+    "name": "Run tar xf dist/*.tar.gz --strip-components=1",
+    "start": "2026-09-05T07:02:21Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898624-step-4",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898624",
+    "service": "tests-mypy-on-3-11",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-09-05T07:02:21Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898624-step-5",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898624",
+    "service": "tests-mypy-on-3-11",
+    "name": "Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+    "start": "2026-09-05T07:02:21Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898624-step-6",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898624",
+    "service": "tests-mypy-on-3-11",
+    "name": "Run uv run --only-group tox tox run -e $PYTHON-mypy",
+    "start": "2026-09-05T07:02:24Z",
+    "duration_ms": 15000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898624-step-7",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898624",
+    "service": "tests-mypy-on-3-11",
+    "name": "Remove src to ensure tests run against wheel",
+    "start": "2026-09-05T07:02:39Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898624-step-8",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898624",
+    "service": "tests-mypy-on-3-11",
+    "name": "Run uv run --only-group tox tox run --installpkg dist/*.whl -e $PYTHON-tests",
+    "start": "2026-09-05T07:02:39Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898624-step-9",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898624",
+    "service": "tests-mypy-on-3-11",
+    "name": "Upload coverage data",
+    "start": "2026-09-05T07:02:44Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898624-step-17",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898624",
+    "service": "tests-mypy-on-3-11",
+    "name": "Post Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+    "start": "2026-09-05T07:02:44Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898624-step-18",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898624",
+    "service": "tests-mypy-on-3-11",
+    "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-09-05T07:02:45Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898624-step-19",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898624",
+    "service": "tests-mypy-on-3-11",
+    "name": "Complete job",
+    "start": "2026-09-05T07:02:45Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898634",
+    "trace_id": "run-33951423062",
+    "parent_id": "run-33951423062",
+    "service": "tests-mypy-on-3-12",
+    "name": "Tests & Mypy on 3.12",
+    "start": "2026-09-05T07:02:17Z",
+    "duration_ms": 46000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898634-step-1",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898634",
+    "service": "tests-mypy-on-3-12",
+    "name": "Set up job",
+    "start": "2026-09-05T07:02:18Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898634-step-2",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898634",
+    "service": "tests-mypy-on-3-12",
+    "name": "Download pre-built packages",
+    "start": "2026-09-05T07:02:19Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898634-step-3",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898634",
+    "service": "tests-mypy-on-3-12",
+    "name": "Run tar xf dist/*.tar.gz --strip-components=1",
+    "start": "2026-09-05T07:02:20Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898634-step-4",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898634",
+    "service": "tests-mypy-on-3-12",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-09-05T07:02:20Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898634-step-5",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898634",
+    "service": "tests-mypy-on-3-12",
+    "name": "Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+    "start": "2026-09-05T07:02:20Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898634-step-6",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898634",
+    "service": "tests-mypy-on-3-12",
+    "name": "Run uv run --only-group tox tox run -e $PYTHON-mypy",
+    "start": "2026-09-05T07:02:22Z",
+    "duration_ms": 29000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898634-step-7",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898634",
+    "service": "tests-mypy-on-3-12",
+    "name": "Remove src to ensure tests run against wheel",
+    "start": "2026-09-05T07:02:51Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898634-step-8",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898634",
+    "service": "tests-mypy-on-3-12",
+    "name": "Run uv run --only-group tox tox run --installpkg dist/*.whl -e $PYTHON-tests",
+    "start": "2026-09-05T07:02:51Z",
+    "duration_ms": 10000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898634-step-9",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898634",
+    "service": "tests-mypy-on-3-12",
+    "name": "Upload coverage data",
+    "start": "2026-09-05T07:03:01Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898634-step-17",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898634",
+    "service": "tests-mypy-on-3-12",
+    "name": "Post Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+    "start": "2026-09-05T07:03:02Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898634-step-18",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898634",
+    "service": "tests-mypy-on-3-12",
+    "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-09-05T07:03:02Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898634-step-19",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898634",
+    "service": "tests-mypy-on-3-12",
+    "name": "Complete job",
+    "start": "2026-09-05T07:03:02Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898649",
+    "trace_id": "run-33951423062",
+    "parent_id": "run-33951423062",
+    "service": "tests-mypy-on-3-10",
+    "name": "Tests & Mypy on 3.10",
+    "start": "2026-09-05T07:02:17Z",
+    "duration_ms": 53000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898649-step-1",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898649",
+    "service": "tests-mypy-on-3-10",
+    "name": "Set up job",
+    "start": "2026-09-05T07:02:17Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898649-step-2",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898649",
+    "service": "tests-mypy-on-3-10",
+    "name": "Download pre-built packages",
+    "start": "2026-09-05T07:02:19Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898649-step-3",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898649",
+    "service": "tests-mypy-on-3-10",
+    "name": "Run tar xf dist/*.tar.gz --strip-components=1",
+    "start": "2026-09-05T07:02:19Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898649-step-4",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898649",
+    "service": "tests-mypy-on-3-10",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-09-05T07:02:19Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898649-step-5",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898649",
+    "service": "tests-mypy-on-3-10",
+    "name": "Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+    "start": "2026-09-05T07:02:19Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898649-step-6",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898649",
+    "service": "tests-mypy-on-3-10",
+    "name": "Run uv run --only-group tox tox run -e $PYTHON-mypy",
+    "start": "2026-09-05T07:02:21Z",
+    "duration_ms": 28000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898649-step-7",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898649",
+    "service": "tests-mypy-on-3-10",
+    "name": "Remove src to ensure tests run against wheel",
+    "start": "2026-09-05T07:02:49Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898649-step-8",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898649",
+    "service": "tests-mypy-on-3-10",
+    "name": "Run uv run --only-group tox tox run --installpkg dist/*.whl -e $PYTHON-tests",
+    "start": "2026-09-05T07:02:49Z",
+    "duration_ms": 19000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898649-step-9",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898649",
+    "service": "tests-mypy-on-3-10",
+    "name": "Upload coverage data",
+    "start": "2026-09-05T07:03:08Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898649-step-17",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898649",
+    "service": "tests-mypy-on-3-10",
+    "name": "Post Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+    "start": "2026-09-05T07:03:09Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898649-step-18",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898649",
+    "service": "tests-mypy-on-3-10",
+    "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-09-05T07:03:09Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898649-step-19",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898649",
+    "service": "tests-mypy-on-3-10",
+    "name": "Complete job",
+    "start": "2026-09-05T07:03:09Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898657",
+    "trace_id": "run-33951423062",
+    "parent_id": "run-33951423062",
+    "service": "tests-mypy-on-3-14",
+    "name": "Tests & Mypy on 3.14",
+    "start": "2026-09-05T07:02:17Z",
+    "duration_ms": 55000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898657-step-1",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898657",
+    "service": "tests-mypy-on-3-14",
+    "name": "Set up job",
+    "start": "2026-09-05T07:02:17Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898657-step-2",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898657",
+    "service": "tests-mypy-on-3-14",
+    "name": "Download pre-built packages",
+    "start": "2026-09-05T07:02:20Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898657-step-3",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898657",
+    "service": "tests-mypy-on-3-14",
+    "name": "Run tar xf dist/*.tar.gz --strip-components=1",
+    "start": "2026-09-05T07:02:20Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898657-step-4",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898657",
+    "service": "tests-mypy-on-3-14",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-09-05T07:02:20Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898657-step-5",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898657",
+    "service": "tests-mypy-on-3-14",
+    "name": "Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+    "start": "2026-09-05T07:02:21Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898657-step-6",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898657",
+    "service": "tests-mypy-on-3-14",
+    "name": "Run uv run --only-group tox tox run -e $PYTHON-mypy",
+    "start": "2026-09-05T07:02:23Z",
+    "duration_ms": 35000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898657-step-7",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898657",
+    "service": "tests-mypy-on-3-14",
+    "name": "Remove src to ensure tests run against wheel",
+    "start": "2026-09-05T07:02:58Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898657-step-8",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898657",
+    "service": "tests-mypy-on-3-14",
+    "name": "Run uv run --only-group tox tox run --installpkg dist/*.whl -e $PYTHON-tests",
+    "start": "2026-09-05T07:02:58Z",
+    "duration_ms": 12000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898657-step-9",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898657",
+    "service": "tests-mypy-on-3-14",
+    "name": "Upload coverage data",
+    "start": "2026-09-05T07:03:10Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898657-step-17",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898657",
+    "service": "tests-mypy-on-3-14",
+    "name": "Post Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+    "start": "2026-09-05T07:03:11Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898657-step-18",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898657",
+    "service": "tests-mypy-on-3-14",
+    "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-09-05T07:03:11Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898657-step-19",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898657",
+    "service": "tests-mypy-on-3-14",
+    "name": "Complete job",
+    "start": "2026-09-05T07:03:11Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898672",
+    "trace_id": "run-33951423062",
+    "parent_id": "run-33951423062",
+    "service": "tests-mypy-on-3-13",
+    "name": "Tests & Mypy on 3.13",
+    "start": "2026-09-05T07:02:17Z",
+    "duration_ms": 45000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898672-step-1",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898672",
+    "service": "tests-mypy-on-3-13",
+    "name": "Set up job",
+    "start": "2026-09-05T07:02:17Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898672-step-2",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898672",
+    "service": "tests-mypy-on-3-13",
+    "name": "Download pre-built packages",
+    "start": "2026-09-05T07:02:19Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898672-step-3",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898672",
+    "service": "tests-mypy-on-3-13",
+    "name": "Run tar xf dist/*.tar.gz --strip-components=1",
+    "start": "2026-09-05T07:02:19Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898672-step-4",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898672",
+    "service": "tests-mypy-on-3-13",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-09-05T07:02:19Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898672-step-5",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898672",
+    "service": "tests-mypy-on-3-13",
+    "name": "Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+    "start": "2026-09-05T07:02:19Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898672-step-6",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898672",
+    "service": "tests-mypy-on-3-13",
+    "name": "Run uv run --only-group tox tox run -e $PYTHON-mypy",
+    "start": "2026-09-05T07:02:21Z",
+    "duration_ms": 29000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898672-step-7",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898672",
+    "service": "tests-mypy-on-3-13",
+    "name": "Remove src to ensure tests run against wheel",
+    "start": "2026-09-05T07:02:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898672-step-8",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898672",
+    "service": "tests-mypy-on-3-13",
+    "name": "Run uv run --only-group tox tox run --installpkg dist/*.whl -e $PYTHON-tests",
+    "start": "2026-09-05T07:02:50Z",
+    "duration_ms": 10000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898672-step-9",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898672",
+    "service": "tests-mypy-on-3-13",
+    "name": "Upload coverage data",
+    "start": "2026-09-05T07:03:00Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898672-step-17",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898672",
+    "service": "tests-mypy-on-3-13",
+    "name": "Post Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+    "start": "2026-09-05T07:03:00Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898672-step-18",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898672",
+    "service": "tests-mypy-on-3-13",
+    "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-09-05T07:03:00Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898672-step-19",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898672",
+    "service": "tests-mypy-on-3-13",
+    "name": "Complete job",
+    "start": "2026-09-05T07:03:00Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898673",
+    "trace_id": "run-33951423062",
+    "parent_id": "run-33951423062",
+    "service": "tests-mypy-on-3-15",
+    "name": "Tests & Mypy on 3.15",
+    "start": "2026-09-05T07:02:17Z",
+    "duration_ms": 94000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898673-step-1",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898673",
+    "service": "tests-mypy-on-3-15",
+    "name": "Set up job",
+    "start": "2026-09-05T07:02:17Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898673-step-2",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898673",
+    "service": "tests-mypy-on-3-15",
+    "name": "Download pre-built packages",
+    "start": "2026-09-05T07:02:19Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898673-step-3",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898673",
+    "service": "tests-mypy-on-3-15",
+    "name": "Run tar xf dist/*.tar.gz --strip-components=1",
+    "start": "2026-09-05T07:02:20Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898673-step-4",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898673",
+    "service": "tests-mypy-on-3-15",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-09-05T07:02:20Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898673-step-5",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898673",
+    "service": "tests-mypy-on-3-15",
+    "name": "Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+    "start": "2026-09-05T07:02:28Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898673-step-6",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898673",
+    "service": "tests-mypy-on-3-15",
+    "name": "Run uv run --only-group tox tox run -e $PYTHON-mypy",
+    "start": "2026-09-05T07:02:30Z",
+    "duration_ms": 67000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898673-step-7",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898673",
+    "service": "tests-mypy-on-3-15",
+    "name": "Remove src to ensure tests run against wheel",
+    "start": "2026-09-05T07:03:37Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898673-step-8",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898673",
+    "service": "tests-mypy-on-3-15",
+    "name": "Run uv run --only-group tox tox run --installpkg dist/*.whl -e $PYTHON-tests",
+    "start": "2026-09-05T07:03:37Z",
+    "duration_ms": 11000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898673-step-9",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898673",
+    "service": "tests-mypy-on-3-15",
+    "name": "Upload coverage data",
+    "start": "2026-09-05T07:03:48Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898673-step-17",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898673",
+    "service": "tests-mypy-on-3-15",
+    "name": "Post Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+    "start": "2026-09-05T07:03:48Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898673-step-18",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898673",
+    "service": "tests-mypy-on-3-15",
+    "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-09-05T07:03:48Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101266898673-step-19",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101266898673",
+    "service": "tests-mypy-on-3-15",
+    "name": "Complete job",
+    "start": "2026-09-05T07:03:48Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101267096085",
+    "trace_id": "run-33951423062",
+    "parent_id": "run-33951423062",
+    "service": "combine-check-coverage",
+    "name": "Combine & check coverage",
+    "start": "2026-09-05T07:03:54Z",
+    "duration_ms": 11000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-101267096085-step-1",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101267096085",
+    "service": "combine-check-coverage",
+    "name": "Set up job",
+    "start": "2026-09-05T07:03:54Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101267096085-step-2",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101267096085",
+    "service": "combine-check-coverage",
+    "name": "Download pre-built packages",
+    "start": "2026-09-05T07:03:57Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101267096085-step-3",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101267096085",
+    "service": "combine-check-coverage",
+    "name": "Run tar xf dist/*.tar.gz --strip-components=1",
+    "start": "2026-09-05T07:03:58Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101267096085-step-4",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101267096085",
+    "service": "combine-check-coverage",
+    "name": "Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+    "start": "2026-09-05T07:03:58Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101267096085-step-5",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101267096085",
+    "service": "combine-check-coverage",
+    "name": "Download coverage data",
+    "start": "2026-09-05T07:04:00Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101267096085-step-6",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101267096085",
+    "service": "combine-check-coverage",
+    "name": "Combine coverage & fail if it's <100%.",
+    "start": "2026-09-05T07:04:01Z",
+    "duration_ms": 2000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-101267096085-step-7",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101267096085",
+    "service": "combine-check-coverage",
+    "name": "Upload HTML report if check failed.",
+    "start": "2026-09-05T07:04:03Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101267096085-step-14",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101267096085",
+    "service": "combine-check-coverage",
+    "name": "Post Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+    "start": "2026-09-05T07:04:04Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101267096085-step-15",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101267096085",
+    "service": "combine-check-coverage",
+    "name": "Complete job",
+    "start": "2026-09-05T07:04:04Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101267126420",
+    "trace_id": "run-33951423062",
+    "parent_id": "run-33951423062",
+    "service": "ensure-everything-required-is-passing-for-branch-protection",
+    "name": "Ensure everything required is passing for branch protection",
+    "start": "2026-09-05T07:04:07Z",
+    "duration_ms": 2000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-101267126420-step-1",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101267126420",
+    "service": "ensure-everything-required-is-passing-for-branch-protection",
+    "name": "Set up job",
+    "start": "2026-09-05T07:04:08Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-101267126420-step-2",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101267126420",
+    "service": "ensure-everything-required-is-passing-for-branch-protection",
+    "name": "Decide whether the needed jobs succeeded or failed",
+    "start": "2026-09-05T07:04:09Z",
+    "duration_ms": 0.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-101267126420-step-3",
+    "trace_id": "run-33951423062",
+    "parent_id": "job-101267126420",
+    "service": "ensure-everything-required-is-passing-for-branch-protection",
+    "name": "Complete job",
+    "start": "2026-09-05T07:04:09Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

@@ -1,0 +1,17 @@
+# Mined from https://github.com/Kludex/starlette/actions/runs/39538037810
+# (encode/starlette, licence BSD-3-Clause). Fixed by run
+# https://github.com/Kludex/starlette/actions/runs/39538321397. Label rule: the fix
+# changed files exactly one tested commit touched. Fix touched: starlette/routing.py.
+id: ci-starlette-39538037810
+title: Fix Mount.url_path_for producing %2F when path starts with / (#3686)
+alert:
+  severity: ci
+  service: python-3-13
+  summary: 'workflow Test Suite failed on fix/mount-url-path-for-leading-slash at 44d79149f1:
+    step ''Enforce coverage'' in job ''Python 3.13'' failed.'
+truth:
+  category: bad_code_deploy
+  service: starlette
+  required_evidence_any:
+  - 44d79149f1
+provenance: recorded

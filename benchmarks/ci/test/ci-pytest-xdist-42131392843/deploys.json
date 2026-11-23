@@ -1,0 +1,24 @@
+[
+  {
+    "id": "ab56651595",
+    "service": "pytest-xdist",
+    "version": "ab56651595",
+    "ts": "2026-11-05T23:41:23Z",
+    "author": "hector2394",
+    "summary": "fix(workers): preserve usage-error diagnostics and exit status",
+    "config_before": {
+      "pyproject.toml": "previous"
+    },
+    "config_after": {
+      "pyproject.toml": "modified in ab56651595"
+    },
+    "files": [
+      "README.rst",
+      "changelog/15346.bugfix.rst",
+      "pyproject.toml",
+      "src/xdist/dsession.py",
+      "src/xdist/remote.py",
+      "testing/acceptance_test.py"
+    ]
+  }
+]

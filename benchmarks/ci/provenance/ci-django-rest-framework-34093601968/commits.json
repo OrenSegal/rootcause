@@ -1,0 +1,14 @@
+[
+  {
+    "author": "auvipy",
+    "committedDate": "2026-09-07T07:03:18Z",
+    "messageHeadline": "Refactor display value assignment in relations.py",
+    "oid": "b5cabc1f725ab892ad7064c89165d14628ebc12c",
+    "files": [
+      {
+        "filename": "rest_framework/relations.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

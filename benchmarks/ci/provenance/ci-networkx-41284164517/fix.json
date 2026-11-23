@@ -1,0 +1,11 @@
+{
+  "fixed_run": "https://github.com/networkx/networkx/actions/runs/41286791991",
+  "fixed_sha": "eb6738c244940d01c2028cfc0cd1d6a06555b37b",
+  "commits": [
+    "eb6738c244940d01c2028cfc0cd1d6a06555b37b"
+  ],
+  "files": [
+    "networkx/algorithms/centrality/tests/test_current_flow_betweenness_centrality.py"
+  ],
+  "status": "ahead"
+}

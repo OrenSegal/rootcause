@@ -1,0 +1,13 @@
+id: ci-matplotlib-43938180211
+title: 'FIX: validate empty cellText and cellColours in table()'
+alert:
+  severity: ci
+  service: ruff
+  summary: 'workflow Linting failed on fix-table-empty-celltext at 757845f1ed: step ''Run
+    ruff'' in job ''ruff'' failed.'
+truth:
+  category: bad_code_deploy
+  service: matplotlib
+  required_evidence_any:
+  - 757845f1ed
+provenance: recorded

@@ -1,0 +1,292 @@
+[
+  {
+    "span_id": "run-44397232490",
+    "trace_id": "run-44397232490",
+    "parent_id": null,
+    "service": "tests",
+    "name": "tests",
+    "start": "2026-11-18T21:02:09Z",
+    "duration_ms": 47000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-135130273623",
+    "trace_id": "run-44397232490",
+    "parent_id": "run-44397232490",
+    "service": "pixi-lock",
+    "name": "Pixi lock",
+    "start": "2026-11-18T21:02:11Z",
+    "duration_ms": 11000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135130273623-step-1",
+    "trace_id": "run-44397232490",
+    "parent_id": "job-135130273623",
+    "service": "pixi-lock",
+    "name": "Set up job",
+    "start": "2026-11-18T21:02:12Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135130273623-step-2",
+    "trace_id": "run-44397232490",
+    "parent_id": "job-135130273623",
+    "service": "pixi-lock",
+    "name": "Run holoviz-dev/holoviz_tasks/pixi-lock@11eb638302f76ec64217e2eeddfb11df1f788b54",
+    "start": "2026-11-18T21:02:14Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135130273623-step-4",
+    "trace_id": "run-44397232490",
+    "parent_id": "job-135130273623",
+    "service": "pixi-lock",
+    "name": "Post Run holoviz-dev/holoviz_tasks/pixi-lock@11eb638302f76ec64217e2eeddfb11df1f788b54",
+    "start": "2026-11-18T21:02:19Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135130273623-step-5",
+    "trace_id": "run-44397232490",
+    "parent_id": "job-135130273623",
+    "service": "pixi-lock",
+    "name": "Complete job",
+    "start": "2026-11-18T21:02:19Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135130274072",
+    "trace_id": "run-44397232490",
+    "parent_id": "run-44397232490",
+    "service": "setup-workflow",
+    "name": "Setup workflow",
+    "start": "2026-11-18T21:02:11Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135130274072-step-1",
+    "trace_id": "run-44397232490",
+    "parent_id": "job-135130274072",
+    "service": "setup-workflow",
+    "name": "Set up job",
+    "start": "2026-11-18T21:02:12Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135130274072-step-3",
+    "trace_id": "run-44397232490",
+    "parent_id": "job-135130274072",
+    "service": "setup-workflow",
+    "name": "Check for code changes",
+    "start": "2026-11-18T21:02:13Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135130274072-step-4",
+    "trace_id": "run-44397232490",
+    "parent_id": "job-135130274072",
+    "service": "setup-workflow",
+    "name": "Set matrix option",
+    "start": "2026-11-18T21:02:14Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135130274072-step-5",
+    "trace_id": "run-44397232490",
+    "parent_id": "job-135130274072",
+    "service": "setup-workflow",
+    "name": "Set test matrix with 'default' option",
+    "start": "2026-11-18T21:02:14Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135130274072-step-8",
+    "trace_id": "run-44397232490",
+    "parent_id": "job-135130274072",
+    "service": "setup-workflow",
+    "name": "Complete job",
+    "start": "2026-11-18T21:02:14Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135130274112",
+    "trace_id": "run-44397232490",
+    "parent_id": "run-44397232490",
+    "service": "optimize-png",
+    "name": "optimize-png",
+    "start": "2026-11-18T21:02:12Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135130274112-step-1",
+    "trace_id": "run-44397232490",
+    "parent_id": "job-135130274112",
+    "service": "optimize-png",
+    "name": "Set up job",
+    "start": "2026-11-18T21:02:13Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135130274112-step-2",
+    "trace_id": "run-44397232490",
+    "parent_id": "job-135130274112",
+    "service": "optimize-png",
+    "name": "Run holoviz-dev/holoviz_tasks/optimize-png@e9aaca7738db5d27bf34d0f69e25990b74a85eaf",
+    "start": "2026-11-18T21:02:14Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135130274112-step-4",
+    "trace_id": "run-44397232490",
+    "parent_id": "job-135130274112",
+    "service": "optimize-png",
+    "name": "Post Run holoviz-dev/holoviz_tasks/optimize-png@e9aaca7738db5d27bf34d0f69e25990b74a85eaf",
+    "start": "2026-11-18T21:02:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135130274112-step-5",
+    "trace_id": "run-44397232490",
+    "parent_id": "job-135130274112",
+    "service": "optimize-png",
+    "name": "Complete job",
+    "start": "2026-11-18T21:02:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135130357132",
+    "trace_id": "run-44397232490",
+    "parent_id": "run-44397232490",
+    "service": "run-pre-commit",
+    "name": "Run pre-commit",
+    "start": "2026-11-18T21:02:20Z",
+    "duration_ms": 31000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-135130357132-step-1",
+    "trace_id": "run-44397232490",
+    "parent_id": "job-135130357132",
+    "service": "run-pre-commit",
+    "name": "Set up job",
+    "start": "2026-11-18T21:02:21Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135130357132-step-2",
+    "trace_id": "run-44397232490",
+    "parent_id": "job-135130357132",
+    "service": "run-pre-commit",
+    "name": "Run holoviz-dev/holoviz_tasks/pre-commit@11eb638302f76ec64217e2eeddfb11df1f788b54",
+    "start": "2026-11-18T21:02:22Z",
+    "duration_ms": 26000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-135130357132-step-4",
+    "trace_id": "run-44397232490",
+    "parent_id": "job-135130357132",
+    "service": "run-pre-commit",
+    "name": "Post Run holoviz-dev/holoviz_tasks/pre-commit@11eb638302f76ec64217e2eeddfb11df1f788b54",
+    "start": "2026-11-18T21:02:48Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135130357132-step-5",
+    "trace_id": "run-44397232490",
+    "parent_id": "job-135130357132",
+    "service": "run-pre-commit",
+    "name": "Complete job",
+    "start": "2026-11-18T21:02:48Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135130699682",
+    "trace_id": "run-44397232490",
+    "parent_id": "run-44397232490",
+    "service": "result-test",
+    "name": "result:test",
+    "start": "2026-11-18T21:02:53Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135130699682-step-1",
+    "trace_id": "run-44397232490",
+    "parent_id": "job-135130699682",
+    "service": "result-test",
+    "name": "Set up job",
+    "start": "2026-11-18T21:02:53Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135130699682-step-3",
+    "trace_id": "run-44397232490",
+    "parent_id": "job-135130699682",
+    "service": "result-test",
+    "name": "Complete job",
+    "start": "2026-11-18T21:02:53Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135130701099",
+    "trace_id": "run-44397232490",
+    "parent_id": "run-44397232490",
+    "service": "core-matrix-environment-matrix-os",
+    "name": "core:${{ matrix.environment }}:${{ matrix.os }}",
+    "start": "2026-11-18T21:02:51Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135130701913",
+    "trace_id": "run-44397232490",
+    "parent_id": "run-44397232490",
+    "service": "type-matrix-environment-matrix-os",
+    "name": "type:${{ matrix.environment }}:${{ matrix.os }}",
+    "start": "2026-11-18T21:02:51Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135130702208",
+    "trace_id": "run-44397232490",
+    "parent_id": "run-44397232490",
+    "service": "unit-matrix-environment-matrix-os",
+    "name": "unit:${{ matrix.environment }}:${{ matrix.os }}",
+    "start": "2026-11-18T21:02:51Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135130702794",
+    "trace_id": "run-44397232490",
+    "parent_id": "run-44397232490",
+    "service": "ui-matrix-environment-matrix-os",
+    "name": "ui:${{ matrix.environment }}:${{ matrix.os }}",
+    "start": "2026-11-18T21:02:51Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

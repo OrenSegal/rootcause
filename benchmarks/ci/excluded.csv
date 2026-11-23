@@ -1,0 +1,71 @@
+case_id,round,reason
+ci-fastapi-44694893735,m1-pr,verdict arguable
+ci-flask-33236247623,m1-pr,verdict uncertain
+ci-pytest-42785732184,m1-pr,leak: trace root span status is 'ok'
+ci-black-40142167378,main,default-branch run (excluded)
+ci-black-40259878945,main,default-branch run (excluded)
+ci-black-41256375361,main,default-branch run (excluded)
+ci-black-41256375403,main,default-branch run (excluded)
+ci-fastapi-37688429128,main,default-branch run (excluded)
+ci-fastapi-43475880790,main,default-branch run (excluded)
+ci-fastapi-44310583790,main,default-branch run (excluded)
+ci-pydantic-37828953430,main,default-branch run (excluded)
+ci-click-33496785933,v1,verdict wrong
+ci-pip-40913919882,v1,verdict wrong
+ci-pip-40929906813,v1,verdict wrong
+ci-pip-42223885293,v1,verdict arguable
+ci-pip-43157410626,v1,verdict wrong
+ci-pip-44045555196,v1,verdict arguable
+ci-scrapy-43506370153,v1,verdict wrong
+ci-starlette-40128596053,v1,duplicate of ci-starlette-39807406334
+ci-starlette-40132230591,v1,duplicate of ci-starlette-39807406334
+ci-starlette-40324648385,v1,duplicate of ci-starlette-39807406334
+ci-starlette-40861908438,v1,duplicate of ci-starlette-39807406334
+ci-starlette-41171429575,v1,duplicate of ci-starlette-39807406334
+ci-anyio-42467640327,v2,verdict wrong
+ci-sphinx-40389205348,v2,verdict unmatched
+ci-sphinx-40621575115,v2,verdict unmatched
+ci-sphinx-40744679692,v2,verdict wrong
+ci-sphinx-40744679694,v2,verdict unmatched
+ci-sphinx-41576711926,v2,verdict unmatched
+ci-sphinx-41763721208,v2,verdict unmatched
+ci-sphinx-42373832605,v2,verdict arguable
+ci-sphinx-42492348058,v2,verdict unmatched
+ci-sphinx-42786935114,v2,verdict unmatched
+ci-sphinx-42915734813,v2,verdict unmatched
+ci-sphinx-44293155379,v2,verdict unmatched
+ci-sphinx-44293155460,v2,verdict wrong
+ci-yarl-40324913764,v2,verdict wrong
+ci-build-38002299563,v3,verdict wrong
+ci-matplotlib-43938180225,v3,duplicate of ci-matplotlib-43938180211
+ci-matplotlib-43938180240,v3,duplicate of ci-matplotlib-43938180211
+ci-matplotlib-44944357599,v3,verdict uncertain
+ci-mkdocs-44414107169,v3,verdict arguable
+ci-multidict-38134575629,v3,verdict arguable
+ci-numpy-44969244234,v3,duplicate of ci-numpy-44969244228
+ci-numpy-44969244266,v3,duplicate of ci-numpy-44969244228
+ci-numpy-44969244380,v3,duplicate of ci-numpy-44969244228
+ci-numpy-44969244439,v3,duplicate of ci-numpy-44969244228
+ci-pandas-44721698218,v3,verdict uncertain
+ci-poetry-39765933980,v3,verdict wrong
+ci-scikit-learn-44703893474,v3,verdict wrong
+ci-scikit-learn-44711150450,v3,verdict wrong
+ci-scipy-44520410829,v3,verdict wrong
+ci-sympy-44524099951,v3,verdict wrong
+ci-sympy-44931840961,v3,verdict arguable
+ci-bokeh-43981079745,v4,duplicate of ci-bokeh-43981079637
+ci-bokeh-44518389819,v4,verdict arguable
+ci-bokeh-44518389846,v4,verdict arguable
+ci-dask-44522384834,v4,oversized: logs.jsonl is 108576422 bytes
+ci-dask-44533673971,v4,verdict arguable
+ci-panel-43759376300,v4,verdict wrong
+ci-panel-43954653640,v4,verdict wrong
+ci-panel-44356789031,v4,verdict wrong
+ci-pytest-xdist-40093733658,v4,verdict wrong
+ci-urllib3-44317367138,v4,duplicate of ci-urllib3-44317366923
+ci-plotly.py-44556032814,validate5,never reviewed
+ci-plotly.py-44556035494,validate5,never reviewed
+ci-sqlmodel-34026713750,validate5,never reviewed
+ci-typer-36749871685,validate5,never reviewed
+ci-typer-37499332950,validate5,never reviewed
+ci-typer-40191012686,validate5,never reviewed

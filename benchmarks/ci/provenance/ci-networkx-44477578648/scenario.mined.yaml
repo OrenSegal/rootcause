@@ -1,0 +1,19 @@
+# Mined from https://github.com/networkx/networkx/actions/runs/44477578648
+# (networkx/networkx, licence NOASSERTION). Fixed by run
+# https://github.com/networkx/networkx/actions/runs/44632642155. Label rule: the fix
+# only changed config one tested commit touched. Fix touched: .github/dependabot.yml,
+# .github/workflows/benchmark.yml, .github/workflows/milestone-merged-prs.yaml, .pre-
+# commit-config.yaml.
+id: ci-networkx-44477578648
+title: Add zizmor pre-commit hook configuration
+alert:
+  severity: ci
+  service: format
+  summary: 'workflow style failed on zizmor at c537b78f1e: step ''Lint'' in job ''format''
+    failed.'
+truth:
+  category: config_change
+  service: networkx
+  required_evidence_any:
+  - c537b78f1e
+provenance: recorded

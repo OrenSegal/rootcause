@@ -14,3 +14,6 @@ wheels/
 
 # Local secrets
 .env
+
+# Mined CI runs: raw logs, not committed (benchmarks/ci holds the frozen subset)
+scenarios-ci/

@@ -1,0 +1,18 @@
+# Mined from https://github.com/agronholm/anyio/actions/runs/43887039806
+# (agronholm/anyio, licence MIT). Fixed by run
+# https://github.com/agronholm/anyio/actions/runs/43887713243. Label rule: the fix
+# changed files exactly one tested commit touched. Fix touched:
+# changelog.d/1493.added.rst, docs/signals.rst.
+id: ci-anyio-43887039806
+title: Expose `run_sync_soon` through the low-level API
+alert:
+  severity: ci
+  service: docs
+  summary: 'workflow test suite failed on add-lowlevel-run-sync-soon at a22b2a86fc: step ''Build
+    documentation'' in job ''docs'' failed.'
+truth:
+  category: bad_code_deploy
+  service: anyio
+  required_evidence_any:
+  - a22b2a86fc
+provenance: recorded

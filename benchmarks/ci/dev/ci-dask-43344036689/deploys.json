@@ -1,0 +1,15 @@
+[
+  {
+    "id": "5b4630d57b",
+    "service": "dask",
+    "version": "5b4630d57b",
+    "ts": "2026-11-13T01:19:09Z",
+    "author": "crusaderky",
+    "summary": "Make __array_wrap__ method name detection robust across NumPy versions",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "dask/dataframe/dask_expr/_collection.py"
+    ]
+  }
+]

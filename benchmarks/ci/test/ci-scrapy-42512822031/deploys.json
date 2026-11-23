@@ -1,0 +1,34 @@
+[
+  {
+    "id": "367a756154",
+    "service": "scrapy",
+    "version": "367a756154",
+    "ts": "2026-11-08T18:57:38Z",
+    "author": "wRAR",
+    "summary": "Support coros in schedulers and dupefilters.",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "docs/topics/coroutines.rst",
+      "docs/topics/settings.rst",
+      "scrapy/core/engine.py",
+      "scrapy/core/scheduler.py",
+      "scrapy/dupefilters.py",
+      "tests/test_engine_lifecycle.py",
+      "tests/test_scheduler_base.py"
+    ]
+  },
+  {
+    "id": "0c2e3e8385",
+    "service": "scrapy",
+    "version": "0c2e3e8385",
+    "ts": "2026-11-08T18:59:28Z",
+    "author": "wRAR",
+    "summary": "Improve wording.",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "docs/topics/settings.rst"
+    ]
+  }
+]

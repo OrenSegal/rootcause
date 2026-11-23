@@ -1,0 +1,19 @@
+# Mined from https://github.com/bokeh/bokeh/actions/runs/44680865048 (bokeh/bokeh,
+# licence BSD-3-Clause). Fixed by run
+# https://github.com/bokeh/bokeh/actions/runs/44682827696. Label rule: the fix changed
+# files exactly one tested commit touched. Fix touched: .github/workflows/bokeh-ci-
+# full.yml, src/bokeh/models/util/structure.py, src/bokeh/sphinxext/bokeh_plot.py,
+# tests/unit/bokeh/sphinxext/test_bokeh_plot.py.
+id: ci-bokeh-44680865048
+title: Fix nightly docs failures and improve model structure plots
+alert:
+  severity: ci
+  service: minimal-deps
+  summary: 'workflow Bokeh-CI failed on codex/fix-nightly-docs-ci at 1882cc34fb: step ''Run
+    dependency tests'' in job ''minimal-deps'' failed.'
+truth:
+  category: bad_code_deploy
+  service: bokeh
+  required_evidence_any:
+  - 1882cc34fb
+provenance: recorded

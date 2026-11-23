@@ -1,0 +1,15 @@
+[
+  {
+    "id": "5af3d943ac",
+    "service": "jinja",
+    "version": "5af3d943ac",
+    "ts": "2026-09-13T00:08:45Z",
+    "author": "gcoinstash-cmd",
+    "summary": "test(filters): add unit tests for default filter truthiness and None handling",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "tests/test_filter_default_cases.py"
+    ]
+  }
+]

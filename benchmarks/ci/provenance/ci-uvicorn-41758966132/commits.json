@@ -1,0 +1,22 @@
+[
+  {
+    "author": "feiiiiii5",
+    "committedDate": "2026-11-04T02:10:07Z",
+    "messageHeadline": "fix: preserve color overrides for compatible formatter factories",
+    "oid": "1aa219c8e5d661e1dec0423395bac53095d860ec",
+    "files": [
+      {
+        "filename": "docs/settings.md",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_config.py",
+        "status": "modified"
+      },
+      {
+        "filename": "uvicorn/config.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

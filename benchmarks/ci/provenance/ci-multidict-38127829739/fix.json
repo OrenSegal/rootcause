@@ -1,0 +1,11 @@
+{
+  "fixed_run": "https://github.com/aio-libs/multidict/actions/runs/38129649721",
+  "fixed_sha": "4d1104f05d43da97ecc0e6da33ce362d43a263ef",
+  "commits": [
+    "4d1104f05d43da97ecc0e6da33ce362d43a263ef"
+  ],
+  "files": [
+    "tools/check_inlining.py"
+  ],
+  "status": "ahead"
+}

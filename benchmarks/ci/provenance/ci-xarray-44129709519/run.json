@@ -1,0 +1,122 @@
+{
+  "attempt": 1,
+  "conclusion": "failure",
+  "createdAt": "2026-11-17T16:47:12Z",
+  "databaseId": 44129709519,
+  "displayTitle": "Arrow pycapsule dataset",
+  "event": "pull_request",
+  "headBranch": "arrow-pycapsule-dataset",
+  "headSha": "fbe0781773d92fd3a7660ed580ec39d81c3ede9e",
+  "jobs": [
+    {
+      "completedAt": "2026-11-17T18:09:13Z",
+      "conclusion": "failure",
+      "databaseId": 134203084104,
+      "name": "Linux",
+      "startedAt": "2026-11-17T16:47:14Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-17T16:47:16Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-17T16:47:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T16:47:21Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7.0.1",
+          "number": 2,
+          "startedAt": "2026-11-17T16:47:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T16:47:21Z",
+          "conclusion": "success",
+          "name": "Determine the baseline",
+          "number": 3,
+          "startedAt": "2026-11-17T16:47:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T16:52:48Z",
+          "conclusion": "success",
+          "name": "Set up conda environment",
+          "number": 4,
+          "startedAt": "2026-11-17T16:47:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T18:09:08Z",
+          "conclusion": "failure",
+          "name": "Run benchmarks",
+          "number": 5,
+          "startedAt": "2026-11-17T16:52:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T18:09:08Z",
+          "conclusion": "success",
+          "name": "Write the PR comment",
+          "number": 6,
+          "startedAt": "2026-11-17T18:09:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T18:09:09Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@v7.0.2",
+          "number": 7,
+          "startedAt": "2026-11-17T18:09:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T18:09:09Z",
+          "conclusion": "success",
+          "name": "Add instructions to artifact",
+          "number": 8,
+          "startedAt": "2026-11-17T18:09:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T18:09:11Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@v7.0.2",
+          "number": 9,
+          "startedAt": "2026-11-17T18:09:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T18:09:11Z",
+          "conclusion": "success",
+          "name": "Post Set up conda environment",
+          "number": 17,
+          "startedAt": "2026-11-17T18:09:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T18:09:11Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7.0.1",
+          "number": 18,
+          "startedAt": "2026-11-17T18:09:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-17T18:09:11Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-17T18:09:11Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydata/xarray/actions/runs/44129709519/job/134203084104"
+    }
+  ],
+  "name": "Benchmark",
+  "updatedAt": "2026-11-17T18:09:14Z",
+  "repository": "pydata/xarray"
+}

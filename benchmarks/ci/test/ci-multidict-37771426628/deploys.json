@@ -1,0 +1,16 @@
+[
+  {
+    "id": "352e8d49d3",
+    "service": "multidict",
+    "version": "352e8d49d3",
+    "ts": "2026-10-08T11:38:39Z",
+    "author": "asvetlov",
+    "summary": "Check for repeated keys when a dict or keyword names hold a str subclass",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "multidict/_multilib/bulk_update.h",
+      "tests/test_keys_dedup.py"
+    ]
+  }
+]

@@ -1,0 +1,31 @@
+[
+  {
+    "id": "71eccfdb8a",
+    "service": "xarray",
+    "version": "71eccfdb8a",
+    "ts": "2026-11-15T19:26:43Z",
+    "author": "headtr1ck",
+    "summary": "Treat missing dimensions as size 1 in weighted Dataset reductions",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "doc/user-guide/computation.md",
+      "doc/whats-new.rst",
+      "xarray/computation/weighted.py",
+      "xarray/tests/test_weighted.py"
+    ]
+  },
+  {
+    "id": "9e5756ac33",
+    "service": "xarray",
+    "version": "9e5756ac33",
+    "ts": "2026-11-15T19:34:20Z",
+    "author": "headtr1ck",
+    "summary": "Add the PR number to whats-new",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "doc/whats-new.rst"
+    ]
+  }
+]

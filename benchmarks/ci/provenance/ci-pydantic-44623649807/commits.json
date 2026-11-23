@@ -1,0 +1,14 @@
+[
+  {
+    "author": "alexmojaki",
+    "committedDate": "2026-11-19T21:55:34Z",
+    "messageHeadline": "Inline the shared integer cursor token validation helper",
+    "oid": "051023fad182702706559a8a1c844928e4507f43",
+    "files": [
+      {
+        "filename": "pydantic-core/src/validators/int.rs",
+        "status": "modified"
+      }
+    ]
+  }
+]

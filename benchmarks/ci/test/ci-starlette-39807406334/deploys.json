@@ -1,0 +1,16 @@
+[
+  {
+    "id": "03db5ca896",
+    "service": "starlette",
+    "version": "03db5ca896",
+    "ts": "2026-10-22T15:42:03Z",
+    "author": "princejain756",
+    "summary": "Fix URL.replace() double port when hostname embeds one",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "starlette/datastructures.py",
+      "tests/test_datastructures.py"
+    ]
+  }
+]

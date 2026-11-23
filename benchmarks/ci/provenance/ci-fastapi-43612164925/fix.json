@@ -1,0 +1,14 @@
+{
+  "fixed_run": "https://github.com/fastapi/fastapi/actions/runs/43614671955",
+  "fixed_sha": "2eec33c8b814d94486fb3488127689b3ffa0f7ae",
+  "commits": [
+    "c9aef6a00994dd711447e755c75cfdc14ac4b952",
+    "2eec33c8b814d94486fb3488127689b3ffa0f7ae"
+  ],
+  "files": [
+    "fastapi/.agents/skills/fastapi/SKILL.md",
+    "fastapi/.agents/skills/fastapi/references/dependencies.md",
+    "tests/test_dependency_concurrency.py"
+  ],
+  "status": "ahead"
+}

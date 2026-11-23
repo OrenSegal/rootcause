@@ -1,0 +1,5160 @@
+{
+  "attempt": 1,
+  "conclusion": "failure",
+  "createdAt": "2026-11-20T14:00:28Z",
+  "databaseId": 44749339872,
+  "displayTitle": "Stream container union branches on the existing validator graph",
+  "event": "pull_request",
+  "headBranch": "codex/json-cursor-expand-unions",
+  "headSha": "fe5cff33bbe69e784198497ad49bcd0b02f15ade",
+  "jobs": [
+    {
+      "completedAt": "2026-11-20T14:00:53Z",
+      "conclusion": "success",
+      "databaseId": 136332843507,
+      "name": "core / Build sdist",
+      "startedAt": "2026-11-20T14:00:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:35Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:37Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:37Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:49Z",
+          "conclusion": "success",
+          "name": "Run PyO3/maturin-action@e83996d129638aa358a18fbd1dfb82f0b0fb5d3b",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:49Z",
+          "conclusion": "skipped",
+          "name": "Run actions/attest@1e69f48acb82d1966a394da916b4c1698aa569d6",
+          "number": 5,
+          "startedAt": "2026-11-20T14:00:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:50Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+          "number": 6,
+          "startedAt": "2026-11-20T14:00:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:51Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 11,
+          "startedAt": "2026-11-20T14:00:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:51Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 12,
+          "startedAt": "2026-11-20T14:00:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:51Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-11-20T14:00:51Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332843507"
+    },
+    {
+      "completedAt": "2026-11-20T14:02:06Z",
+      "conclusion": "success",
+      "databaseId": 136332843799,
+      "name": "core / Test MSRV",
+      "startedAt": "2026-11-20T14:00:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:34Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:35Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:37Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:39Z",
+          "conclusion": "success",
+          "name": "Resolve MSRV",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:46Z",
+          "conclusion": "success",
+          "name": "Install rust MSRV",
+          "number": 5,
+          "startedAt": "2026-11-20T14:00:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:46Z",
+          "conclusion": "success",
+          "name": "Cache rust",
+          "number": 6,
+          "startedAt": "2026-11-20T14:00:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:19Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 7,
+          "startedAt": "2026-11-20T14:00:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:19Z",
+          "conclusion": "success",
+          "name": "Run uv pip freeze",
+          "number": 8,
+          "startedAt": "2026-11-20T14:01:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:42Z",
+          "conclusion": "success",
+          "name": "Run uv run pytest tests/pydantic_core",
+          "number": 9,
+          "startedAt": "2026-11-20T14:01:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:04Z",
+          "conclusion": "success",
+          "name": "Run cargo test",
+          "number": 10,
+          "startedAt": "2026-11-20T14:01:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:04Z",
+          "conclusion": "success",
+          "name": "Post Cache rust",
+          "number": 18,
+          "startedAt": "2026-11-20T14:02:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:04Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 19,
+          "startedAt": "2026-11-20T14:02:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:05Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 20,
+          "startedAt": "2026-11-20T14:02:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:05Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "startedAt": "2026-11-20T14:02:05Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332843799"
+    },
+    {
+      "completedAt": "2026-11-20T14:04:10Z",
+      "conclusion": "success",
+      "databaseId": 136332843882,
+      "name": "core / Run Rust benchmarks",
+      "startedAt": "2026-11-20T14:00:33Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:35Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:37Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:45Z",
+          "conclusion": "success",
+          "name": "Install rust nightly",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:46Z",
+          "conclusion": "success",
+          "name": "Cache rust",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:06Z",
+          "conclusion": "success",
+          "name": "Run cargo bench",
+          "number": 5,
+          "startedAt": "2026-11-20T14:00:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:08Z",
+          "conclusion": "success",
+          "name": "Post Cache rust",
+          "number": 9,
+          "startedAt": "2026-11-20T14:04:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:08Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 10,
+          "startedAt": "2026-11-20T14:04:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:08Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "startedAt": "2026-11-20T14:04:08Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332843882"
+    },
+    {
+      "completedAt": "2026-11-20T14:03:49Z",
+      "conclusion": "success",
+      "databaseId": 136332843902,
+      "name": "Test ubuntu-latest / 3.12",
+      "startedAt": "2026-11-20T14:00:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:34Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:36Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:39Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:18Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:18Z",
+          "conclusion": "success",
+          "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+          "number": 5,
+          "startedAt": "2026-11-20T14:01:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:18Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 6,
+          "startedAt": "2026-11-20T14:01:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:43Z",
+          "conclusion": "success",
+          "name": "Run pytest",
+          "number": 7,
+          "startedAt": "2026-11-20T14:01:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:43Z",
+          "conclusion": "skipped",
+          "name": "Run pytest (no coverage)",
+          "number": 8,
+          "startedAt": "2026-11-20T14:03:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:45Z",
+          "conclusion": "success",
+          "name": "Store coverage files",
+          "number": 9,
+          "startedAt": "2026-11-20T14:03:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:45Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 17,
+          "startedAt": "2026-11-20T14:03:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:45Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-20T14:03:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:45Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-20T14:03:45Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332843902"
+    },
+    {
+      "completedAt": "2026-11-20T14:04:52Z",
+      "conclusion": "success",
+      "databaseId": 136332843930,
+      "name": "core / Build PyEmscripten (3.14)",
+      "startedAt": "2026-11-20T14:00:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:35Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:36Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:39Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:39Z",
+          "conclusion": "success",
+          "name": "Run uv sync --only-group pyodide-build",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:40Z",
+          "conclusion": "success",
+          "name": "Run uv run pyodide xbuildenv install 314.0.7",
+          "number": 5,
+          "startedAt": "2026-11-20T14:00:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:42Z",
+          "conclusion": "success",
+          "name": "Get pyodide config",
+          "number": 6,
+          "startedAt": "2026-11-20T14:00:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:15Z",
+          "conclusion": "success",
+          "name": "Run emscripten-core/setup-emsdk@4528d102f7230f0e7b276855c01ea1159be0e984",
+          "number": 7,
+          "startedAt": "2026-11-20T14:00:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:47Z",
+          "conclusion": "success",
+          "name": "Build wheels",
+          "number": 8,
+          "startedAt": "2026-11-20T14:01:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:47Z",
+          "conclusion": "success",
+          "name": "Run ls -lh dist/",
+          "number": 9,
+          "startedAt": "2026-11-20T14:04:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:47Z",
+          "conclusion": "skipped",
+          "name": "Run actions/attest@1e69f48acb82d1966a394da916b4c1698aa569d6",
+          "number": 10,
+          "startedAt": "2026-11-20T14:04:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:48Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+          "number": 11,
+          "startedAt": "2026-11-20T14:04:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:48Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 21,
+          "startedAt": "2026-11-20T14:04:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:49Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-11-20T14:04:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:49Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-11-20T14:04:49Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332843930"
+    },
+    {
+      "completedAt": "2026-11-20T14:03:10Z",
+      "conclusion": "success",
+      "databaseId": 136332843946,
+      "name": "Lint 3.13",
+      "startedAt": "2026-11-20T14:00:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:34Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:36Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:40Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:08Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:04Z",
+          "conclusion": "success",
+          "name": "Run pre-commit/action@2c7b3805fd2a0fd8c1884dcaebf91fc102a13ecd",
+          "number": 5,
+          "startedAt": "2026-11-20T14:02:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:05Z",
+          "conclusion": "success",
+          "name": "Post Run pre-commit/action@2c7b3805fd2a0fd8c1884dcaebf91fc102a13ecd",
+          "number": 8,
+          "startedAt": "2026-11-20T14:03:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:05Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 9,
+          "startedAt": "2026-11-20T14:03:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:05Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 10,
+          "startedAt": "2026-11-20T14:03:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:05Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "startedAt": "2026-11-20T14:03:05Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332843946"
+    },
+    {
+      "completedAt": "2026-11-20T14:07:54Z",
+      "conclusion": "success",
+      "databaseId": 136332843966,
+      "name": "Test macos-15-intel / 3.15t",
+      "startedAt": "2026-11-20T14:00:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:36Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:41Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:47Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:49Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:50Z",
+          "conclusion": "success",
+          "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+          "number": 5,
+          "startedAt": "2026-11-20T14:02:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:50Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 6,
+          "startedAt": "2026-11-20T14:02:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:07:46Z",
+          "conclusion": "success",
+          "name": "Run pytest",
+          "number": 7,
+          "startedAt": "2026-11-20T14:02:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:07:46Z",
+          "conclusion": "skipped",
+          "name": "Run pytest (no coverage)",
+          "number": 8,
+          "startedAt": "2026-11-20T14:07:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:07:47Z",
+          "conclusion": "success",
+          "name": "Store coverage files",
+          "number": 9,
+          "startedAt": "2026-11-20T14:07:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:07:47Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 17,
+          "startedAt": "2026-11-20T14:07:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:07:48Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-20T14:07:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:07:48Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-20T14:07:48Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332843966"
+    },
+    {
+      "completedAt": "2026-11-20T14:02:54Z",
+      "conclusion": "success",
+      "databaseId": 136332843971,
+      "name": "Test ubuntu-latest / 3.15",
+      "startedAt": "2026-11-20T14:00:33Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:35Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:36Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:40Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:15Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:15Z",
+          "conclusion": "success",
+          "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+          "number": 5,
+          "startedAt": "2026-11-20T14:01:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:15Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 6,
+          "startedAt": "2026-11-20T14:01:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:47Z",
+          "conclusion": "success",
+          "name": "Run pytest",
+          "number": 7,
+          "startedAt": "2026-11-20T14:01:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:47Z",
+          "conclusion": "skipped",
+          "name": "Run pytest (no coverage)",
+          "number": 8,
+          "startedAt": "2026-11-20T14:02:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:49Z",
+          "conclusion": "success",
+          "name": "Store coverage files",
+          "number": 9,
+          "startedAt": "2026-11-20T14:02:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:49Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 17,
+          "startedAt": "2026-11-20T14:02:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:50Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-20T14:02:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:50Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-20T14:02:50Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332843971"
+    },
+    {
+      "completedAt": "2026-11-20T14:03:16Z",
+      "conclusion": "success",
+      "databaseId": 136332843982,
+      "name": "Test ubuntu-latest / 3.13",
+      "startedAt": "2026-11-20T14:00:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:33Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:35Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:38Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:13Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:13Z",
+          "conclusion": "success",
+          "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+          "number": 5,
+          "startedAt": "2026-11-20T14:01:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:13Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 6,
+          "startedAt": "2026-11-20T14:01:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:12Z",
+          "conclusion": "success",
+          "name": "Run pytest",
+          "number": 7,
+          "startedAt": "2026-11-20T14:01:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:12Z",
+          "conclusion": "skipped",
+          "name": "Run pytest (no coverage)",
+          "number": 8,
+          "startedAt": "2026-11-20T14:03:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:13Z",
+          "conclusion": "success",
+          "name": "Store coverage files",
+          "number": 9,
+          "startedAt": "2026-11-20T14:03:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:14Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 17,
+          "startedAt": "2026-11-20T14:03:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:14Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-20T14:03:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:14Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-20T14:03:14Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332843982"
+    },
+    {
+      "completedAt": "2026-11-20T14:03:02Z",
+      "conclusion": "success",
+      "databaseId": 136332844004,
+      "name": "core / Test with debug build (3.14)",
+      "startedAt": "2026-11-20T14:00:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:34Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:35Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:38Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:47Z",
+          "conclusion": "success",
+          "name": "Install rust stable",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:48Z",
+          "conclusion": "success",
+          "name": "Cache rust",
+          "number": 5,
+          "startedAt": "2026-11-20T14:00:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:15Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 6,
+          "startedAt": "2026-11-20T14:00:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:29Z",
+          "conclusion": "success",
+          "name": "Run uv run --no-sync maturin develop --uv",
+          "number": 7,
+          "startedAt": "2026-11-20T14:01:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:29Z",
+          "conclusion": "success",
+          "name": "Run uv pip freeze",
+          "number": 8,
+          "startedAt": "2026-11-20T14:01:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:52Z",
+          "conclusion": "success",
+          "name": "Run uv run pytest",
+          "number": 9,
+          "startedAt": "2026-11-20T14:01:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:52Z",
+          "conclusion": "success",
+          "name": "Post Cache rust",
+          "number": 16,
+          "startedAt": "2026-11-20T14:02:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:53Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 17,
+          "startedAt": "2026-11-20T14:02:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:53Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-20T14:02:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:53Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-20T14:02:53Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844004"
+    },
+    {
+      "completedAt": "2026-11-20T14:01:14Z",
+      "conclusion": "success",
+      "databaseId": 136332844012,
+      "name": "Typechecking integration tests",
+      "startedAt": "2026-11-20T14:00:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:34Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:35Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:38Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:05Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:09Z",
+          "conclusion": "success",
+          "name": "Run typechecking integration tests (Pyright)",
+          "number": 5,
+          "startedAt": "2026-11-20T14:01:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:11Z",
+          "conclusion": "success",
+          "name": "Run typechecking integration tests (Mypy)",
+          "number": 6,
+          "startedAt": "2026-11-20T14:01:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:11Z",
+          "conclusion": "success",
+          "name": "Run typechecking integration tests (Pyrefly)",
+          "number": 7,
+          "startedAt": "2026-11-20T14:01:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:11Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 13,
+          "startedAt": "2026-11-20T14:01:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:11Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 14,
+          "startedAt": "2026-11-20T14:01:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:11Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-20T14:01:11Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844012"
+    },
+    {
+      "completedAt": "2026-11-20T14:01:54Z",
+      "conclusion": "success",
+      "databaseId": 136332844014,
+      "name": "Lint 3.12",
+      "startedAt": "2026-11-20T14:00:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:34Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:35Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:37Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:08Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:52Z",
+          "conclusion": "success",
+          "name": "Run pre-commit/action@2c7b3805fd2a0fd8c1884dcaebf91fc102a13ecd",
+          "number": 5,
+          "startedAt": "2026-11-20T14:01:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:52Z",
+          "conclusion": "success",
+          "name": "Post Run pre-commit/action@2c7b3805fd2a0fd8c1884dcaebf91fc102a13ecd",
+          "number": 8,
+          "startedAt": "2026-11-20T14:01:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:52Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 9,
+          "startedAt": "2026-11-20T14:01:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:52Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 10,
+          "startedAt": "2026-11-20T14:01:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:52Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "startedAt": "2026-11-20T14:01:52Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844014"
+    },
+    {
+      "completedAt": "2026-11-20T14:01:22Z",
+      "conclusion": "success",
+      "databaseId": 136332844048,
+      "name": "Test Pydantic plugin",
+      "startedAt": "2026-11-20T14:00:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:34Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:35Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:39Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:16Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:16Z",
+          "conclusion": "success",
+          "name": "Install example plugin",
+          "number": 5,
+          "startedAt": "2026-11-20T14:01:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:18Z",
+          "conclusion": "success",
+          "name": "Run uv run pytest tests/plugin",
+          "number": 6,
+          "startedAt": "2026-11-20T14:01:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:18Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 11,
+          "startedAt": "2026-11-20T14:01:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:18Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 12,
+          "startedAt": "2026-11-20T14:01:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:18Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-11-20T14:01:18Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844048"
+    },
+    {
+      "completedAt": "2026-11-20T14:03:06Z",
+      "conclusion": "success",
+      "databaseId": 136332844060,
+      "name": "core / Test on GraalPy graalpy3.12",
+      "startedAt": "2026-11-20T14:00:33Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:36Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:37Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:38Z",
+          "conclusion": "success",
+          "name": "Install rust stable",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:39Z",
+          "conclusion": "success",
+          "name": "Cache rust",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:42Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 5,
+          "startedAt": "2026-11-20T14:00:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:25Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 6,
+          "startedAt": "2026-11-20T14:00:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:25Z",
+          "conclusion": "success",
+          "name": "Run uv pip freeze",
+          "number": 7,
+          "startedAt": "2026-11-20T14:01:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:02Z",
+          "conclusion": "success",
+          "name": "Run uv run --no-sync pytest tests/pydantic_core --ignore=tests/pydantic_core/test_docstrings.py $EXTRA_PYTEST_ARGS",
+          "number": 8,
+          "startedAt": "2026-11-20T14:01:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:02Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 14,
+          "startedAt": "2026-11-20T14:03:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:02Z",
+          "conclusion": "success",
+          "name": "Post Cache rust",
+          "number": 15,
+          "startedAt": "2026-11-20T14:03:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:03Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 16,
+          "startedAt": "2026-11-20T14:03:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:03Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-11-20T14:03:03Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844060"
+    },
+    {
+      "completedAt": "2026-11-20T14:02:39Z",
+      "conclusion": "success",
+      "databaseId": 136332844104,
+      "name": "Test typing-extensions (`main` branch) on Python 3.15",
+      "startedAt": "2026-11-20T14:00:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:34Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:35Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:36Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:10Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:12Z",
+          "conclusion": "success",
+          "name": "Install typing-extensions",
+          "number": 5,
+          "startedAt": "2026-11-20T14:01:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:36Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 6,
+          "startedAt": "2026-11-20T14:01:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:36Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 11,
+          "startedAt": "2026-11-20T14:02:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:36Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 12,
+          "startedAt": "2026-11-20T14:02:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:36Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-11-20T14:02:36Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844104"
+    },
+    {
+      "completedAt": "2026-11-20T14:06:28Z",
+      "conclusion": "success",
+      "databaseId": 136332844119,
+      "name": "Test macos-latest / 3.12",
+      "startedAt": "2026-11-20T14:00:33Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:37Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:41Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:48Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:07Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:07Z",
+          "conclusion": "success",
+          "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+          "number": 5,
+          "startedAt": "2026-11-20T14:02:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:07Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 6,
+          "startedAt": "2026-11-20T14:02:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:06:19Z",
+          "conclusion": "success",
+          "name": "Run pytest",
+          "number": 7,
+          "startedAt": "2026-11-20T14:02:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:06:19Z",
+          "conclusion": "skipped",
+          "name": "Run pytest (no coverage)",
+          "number": 8,
+          "startedAt": "2026-11-20T14:06:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:06:21Z",
+          "conclusion": "success",
+          "name": "Store coverage files",
+          "number": 9,
+          "startedAt": "2026-11-20T14:06:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:06:21Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 17,
+          "startedAt": "2026-11-20T14:06:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:06:22Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-20T14:06:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:06:25Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-20T14:06:22Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844119"
+    },
+    {
+      "completedAt": "2026-11-20T14:04:34Z",
+      "conclusion": "success",
+      "databaseId": 136332844136,
+      "name": "Test ubuntu-latest / 3.11",
+      "startedAt": "2026-11-20T14:00:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:33Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:34Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:37Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:19Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:19Z",
+          "conclusion": "success",
+          "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+          "number": 5,
+          "startedAt": "2026-11-20T14:01:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:19Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 6,
+          "startedAt": "2026-11-20T14:01:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:30Z",
+          "conclusion": "success",
+          "name": "Run pytest",
+          "number": 7,
+          "startedAt": "2026-11-20T14:01:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:30Z",
+          "conclusion": "skipped",
+          "name": "Run pytest (no coverage)",
+          "number": 8,
+          "startedAt": "2026-11-20T14:04:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:31Z",
+          "conclusion": "success",
+          "name": "Store coverage files",
+          "number": 9,
+          "startedAt": "2026-11-20T14:04:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:31Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 17,
+          "startedAt": "2026-11-20T14:04:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:32Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-20T14:04:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:32Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-20T14:04:32Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844136"
+    },
+    {
+      "completedAt": "2026-11-20T14:02:11Z",
+      "conclusion": "success",
+      "databaseId": 136332844155,
+      "name": "Lint 3.15",
+      "startedAt": "2026-11-20T14:00:33Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:36Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:37Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:40Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:20Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:06Z",
+          "conclusion": "success",
+          "name": "Run pre-commit/action@2c7b3805fd2a0fd8c1884dcaebf91fc102a13ecd",
+          "number": 5,
+          "startedAt": "2026-11-20T14:01:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:06Z",
+          "conclusion": "success",
+          "name": "Post Run pre-commit/action@2c7b3805fd2a0fd8c1884dcaebf91fc102a13ecd",
+          "number": 8,
+          "startedAt": "2026-11-20T14:02:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:06Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 9,
+          "startedAt": "2026-11-20T14:02:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:06Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 10,
+          "startedAt": "2026-11-20T14:02:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:06Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "startedAt": "2026-11-20T14:02:06Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844155"
+    },
+    {
+      "completedAt": "2026-11-20T14:03:32Z",
+      "conclusion": "success",
+      "databaseId": 136332844165,
+      "name": "Test typing-extensions (`main` branch) on Python 3.12",
+      "startedAt": "2026-11-20T14:00:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:34Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:35Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:36Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:10Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:11Z",
+          "conclusion": "success",
+          "name": "Install typing-extensions",
+          "number": 5,
+          "startedAt": "2026-11-20T14:01:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:30Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 6,
+          "startedAt": "2026-11-20T14:01:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:30Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 11,
+          "startedAt": "2026-11-20T14:03:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:30Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 12,
+          "startedAt": "2026-11-20T14:03:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:30Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-11-20T14:03:30Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844165"
+    },
+    {
+      "completedAt": "2026-11-20T14:01:58Z",
+      "conclusion": "success",
+      "databaseId": 136332844168,
+      "name": "Mypy typechecking tests",
+      "startedAt": "2026-11-20T14:00:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:33Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:35Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:38Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:09Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:09Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 5,
+          "startedAt": "2026-11-20T14:01:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:53Z",
+          "conclusion": "success",
+          "name": "Run mypy tests",
+          "number": 6,
+          "startedAt": "2026-11-20T14:01:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:55Z",
+          "conclusion": "success",
+          "name": "Store coverage files",
+          "number": 7,
+          "startedAt": "2026-11-20T14:01:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:55Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 13,
+          "startedAt": "2026-11-20T14:01:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:55Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 14,
+          "startedAt": "2026-11-20T14:01:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:55Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-20T14:01:55Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844168"
+    },
+    {
+      "completedAt": "2026-11-20T14:03:05Z",
+      "conclusion": "success",
+      "databaseId": 136332844177,
+      "name": "core / Test on windows",
+      "startedAt": "2026-11-20T14:00:33Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:36Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:47Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:53Z",
+          "conclusion": "success",
+          "name": "Install rust stable",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:56Z",
+          "conclusion": "success",
+          "name": "Cache rust",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:01Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 5,
+          "startedAt": "2026-11-20T14:00:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:05Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 6,
+          "startedAt": "2026-11-20T14:01:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:06Z",
+          "conclusion": "success",
+          "name": "Run uv pip freeze",
+          "number": 7,
+          "startedAt": "2026-11-20T14:02:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:31Z",
+          "conclusion": "success",
+          "name": "Run uv run pytest tests/pydantic_core",
+          "number": 8,
+          "startedAt": "2026-11-20T14:02:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:01Z",
+          "conclusion": "success",
+          "name": "Run cargo test",
+          "number": 9,
+          "startedAt": "2026-11-20T14:02:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:01Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 16,
+          "startedAt": "2026-11-20T14:03:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:01Z",
+          "conclusion": "success",
+          "name": "Post Cache rust",
+          "number": 17,
+          "startedAt": "2026-11-20T14:03:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:03Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-20T14:03:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:03Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-20T14:03:03Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844177"
+    },
+    {
+      "completedAt": "2026-11-20T14:02:00Z",
+      "conclusion": "success",
+      "databaseId": 136332844193,
+      "name": "Lint 3.11",
+      "startedAt": "2026-11-20T14:00:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:35Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:36Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:38Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:17Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:57Z",
+          "conclusion": "success",
+          "name": "Run pre-commit/action@2c7b3805fd2a0fd8c1884dcaebf91fc102a13ecd",
+          "number": 5,
+          "startedAt": "2026-11-20T14:01:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:57Z",
+          "conclusion": "success",
+          "name": "Post Run pre-commit/action@2c7b3805fd2a0fd8c1884dcaebf91fc102a13ecd",
+          "number": 8,
+          "startedAt": "2026-11-20T14:01:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:58Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 9,
+          "startedAt": "2026-11-20T14:01:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:58Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 10,
+          "startedAt": "2026-11-20T14:01:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:58Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "startedAt": "2026-11-20T14:01:58Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844193"
+    },
+    {
+      "completedAt": "2026-11-20T14:02:14Z",
+      "conclusion": "success",
+      "databaseId": 136332844196,
+      "name": "Lint 3.14",
+      "startedAt": "2026-11-20T14:00:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:34Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:35Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:37Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:24Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:12Z",
+          "conclusion": "success",
+          "name": "Run pre-commit/action@2c7b3805fd2a0fd8c1884dcaebf91fc102a13ecd",
+          "number": 5,
+          "startedAt": "2026-11-20T14:01:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:12Z",
+          "conclusion": "success",
+          "name": "Post Run pre-commit/action@2c7b3805fd2a0fd8c1884dcaebf91fc102a13ecd",
+          "number": 8,
+          "startedAt": "2026-11-20T14:02:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:12Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 9,
+          "startedAt": "2026-11-20T14:02:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:12Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 10,
+          "startedAt": "2026-11-20T14:02:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:12Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "startedAt": "2026-11-20T14:02:12Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844196"
+    },
+    {
+      "completedAt": "2026-11-20T14:03:26Z",
+      "conclusion": "success",
+      "databaseId": 136332844198,
+      "name": "Test typing-extensions (`main` branch) on Python 3.14",
+      "startedAt": "2026-11-20T14:00:33Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:35Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:36Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:37Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:29Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:30Z",
+          "conclusion": "success",
+          "name": "Install typing-extensions",
+          "number": 5,
+          "startedAt": "2026-11-20T14:01:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:22Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 6,
+          "startedAt": "2026-11-20T14:01:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:23Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 11,
+          "startedAt": "2026-11-20T14:03:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:23Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 12,
+          "startedAt": "2026-11-20T14:03:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:23Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-11-20T14:03:23Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844198"
+    },
+    {
+      "completedAt": "2026-11-20T14:02:50Z",
+      "conclusion": "success",
+      "databaseId": 136332844200,
+      "name": "docs-build",
+      "startedAt": "2026-11-20T14:00:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:34Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:35Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:38Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:35Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:36Z",
+          "conclusion": "success",
+          "name": "Run uv run python -c 'import docs.plugins.main'",
+          "number": 5,
+          "startedAt": "2026-11-20T14:01:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:36Z",
+          "conclusion": "success",
+          "name": "prepare shortcuts for extra modules",
+          "number": 6,
+          "startedAt": "2026-11-20T14:01:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:48Z",
+          "conclusion": "success",
+          "name": "Run PYTHONPATH=\"$PWD${PYTHONPATH:+:${PYTHONPATH}}\" uv run mkdocs build",
+          "number": 7,
+          "startedAt": "2026-11-20T14:01:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:48Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 13,
+          "startedAt": "2026-11-20T14:02:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:48Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 14,
+          "startedAt": "2026-11-20T14:02:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:48Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-20T14:02:48Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844200"
+    },
+    {
+      "completedAt": "2026-11-20T14:06:54Z",
+      "conclusion": "success",
+      "databaseId": 136332844201,
+      "name": "Test memray",
+      "startedAt": "2026-11-20T14:00:33Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:35Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:37Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:39Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:10Z",
+          "conclusion": "success",
+          "name": "install deps",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:06:51Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 5,
+          "startedAt": "2026-11-20T14:01:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:06:51Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 9,
+          "startedAt": "2026-11-20T14:06:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:06:51Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 10,
+          "startedAt": "2026-11-20T14:06:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:06:51Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "startedAt": "2026-11-20T14:06:51Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844201"
+    },
+    {
+      "completedAt": "2026-11-20T14:03:28Z",
+      "conclusion": "success",
+      "databaseId": 136332844204,
+      "name": "Test ubuntu-latest / 3.15t",
+      "startedAt": "2026-11-20T14:00:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:34Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:36Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:38Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:20Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:20Z",
+          "conclusion": "success",
+          "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+          "number": 5,
+          "startedAt": "2026-11-20T14:01:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:20Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 6,
+          "startedAt": "2026-11-20T14:01:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:25Z",
+          "conclusion": "success",
+          "name": "Run pytest",
+          "number": 7,
+          "startedAt": "2026-11-20T14:01:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:25Z",
+          "conclusion": "skipped",
+          "name": "Run pytest (no coverage)",
+          "number": 8,
+          "startedAt": "2026-11-20T14:03:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:26Z",
+          "conclusion": "success",
+          "name": "Store coverage files",
+          "number": 9,
+          "startedAt": "2026-11-20T14:03:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:26Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 17,
+          "startedAt": "2026-11-20T14:03:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:27Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-20T14:03:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:27Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-20T14:03:27Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844204"
+    },
+    {
+      "completedAt": "2026-11-20T14:03:01Z",
+      "conclusion": "success",
+      "databaseId": 136332844213,
+      "name": "core / Test on GraalPy graalpy3.13",
+      "startedAt": "2026-11-20T14:00:33Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:35Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:37Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:45Z",
+          "conclusion": "success",
+          "name": "Install rust stable",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:46Z",
+          "conclusion": "success",
+          "name": "Cache rust",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:49Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 5,
+          "startedAt": "2026-11-20T14:00:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:27Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 6,
+          "startedAt": "2026-11-20T14:00:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:27Z",
+          "conclusion": "success",
+          "name": "Run uv pip freeze",
+          "number": 7,
+          "startedAt": "2026-11-20T14:01:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:57Z",
+          "conclusion": "success",
+          "name": "Run uv run --no-sync pytest tests/pydantic_core --ignore=tests/pydantic_core/test_docstrings.py $EXTRA_PYTEST_ARGS",
+          "number": 8,
+          "startedAt": "2026-11-20T14:01:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:57Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 14,
+          "startedAt": "2026-11-20T14:02:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:57Z",
+          "conclusion": "success",
+          "name": "Post Cache rust",
+          "number": 15,
+          "startedAt": "2026-11-20T14:02:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:58Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 16,
+          "startedAt": "2026-11-20T14:02:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:58Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-11-20T14:02:58Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844213"
+    },
+    {
+      "completedAt": "2026-11-20T14:05:05Z",
+      "conclusion": "failure",
+      "databaseId": 136332844220,
+      "name": "Test macos-latest / pypy3.11",
+      "startedAt": "2026-11-20T14:00:34Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:37Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:40Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:45Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:48Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:49Z",
+          "conclusion": "success",
+          "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+          "number": 5,
+          "startedAt": "2026-11-20T14:01:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:49Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 6,
+          "startedAt": "2026-11-20T14:01:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:49Z",
+          "conclusion": "skipped",
+          "name": "Run pytest",
+          "number": 7,
+          "startedAt": "2026-11-20T14:01:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:56Z",
+          "conclusion": "failure",
+          "name": "Run pytest (no coverage)",
+          "number": 8,
+          "startedAt": "2026-11-20T14:01:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:56Z",
+          "conclusion": "skipped",
+          "name": "Store coverage files",
+          "number": 9,
+          "startedAt": "2026-11-20T14:04:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:56Z",
+          "conclusion": "skipped",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 17,
+          "startedAt": "2026-11-20T14:04:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:58Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-20T14:04:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:05:01Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-20T14:04:58Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844220"
+    },
+    {
+      "completedAt": "2026-11-20T14:04:08Z",
+      "conclusion": "success",
+      "databaseId": 136332844226,
+      "name": "Test macos-latest / 3.15",
+      "startedAt": "2026-11-20T14:00:33Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:35Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:40Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:43Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:47Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:47Z",
+          "conclusion": "success",
+          "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+          "number": 5,
+          "startedAt": "2026-11-20T14:01:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:47Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 6,
+          "startedAt": "2026-11-20T14:01:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:00Z",
+          "conclusion": "success",
+          "name": "Run pytest",
+          "number": 7,
+          "startedAt": "2026-11-20T14:01:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:00Z",
+          "conclusion": "skipped",
+          "name": "Run pytest (no coverage)",
+          "number": 8,
+          "startedAt": "2026-11-20T14:04:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:01Z",
+          "conclusion": "success",
+          "name": "Store coverage files",
+          "number": 9,
+          "startedAt": "2026-11-20T14:04:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:02Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 17,
+          "startedAt": "2026-11-20T14:04:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:02Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-20T14:04:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:05Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-20T14:04:02Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844226"
+    },
+    {
+      "completedAt": "2026-11-20T14:04:29Z",
+      "conclusion": "success",
+      "databaseId": 136332844236,
+      "name": "core / Test with debug build (pypy3.11)",
+      "startedAt": "2026-11-20T14:00:33Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:34Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:35Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:37Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:38Z",
+          "conclusion": "success",
+          "name": "Install rust stable",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:39Z",
+          "conclusion": "success",
+          "name": "Cache rust",
+          "number": 5,
+          "startedAt": "2026-11-20T14:00:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:28Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 6,
+          "startedAt": "2026-11-20T14:00:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:45Z",
+          "conclusion": "success",
+          "name": "Run uv run --no-sync maturin develop --uv",
+          "number": 7,
+          "startedAt": "2026-11-20T14:01:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:45Z",
+          "conclusion": "success",
+          "name": "Run uv pip freeze",
+          "number": 8,
+          "startedAt": "2026-11-20T14:01:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:27Z",
+          "conclusion": "success",
+          "name": "Run uv run pytest",
+          "number": 9,
+          "startedAt": "2026-11-20T14:01:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:27Z",
+          "conclusion": "success",
+          "name": "Post Cache rust",
+          "number": 16,
+          "startedAt": "2026-11-20T14:04:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:28Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 17,
+          "startedAt": "2026-11-20T14:04:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:28Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-20T14:04:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:28Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-20T14:04:28Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844236"
+    },
+    {
+      "completedAt": "2026-11-20T14:03:48Z",
+      "conclusion": "success",
+      "databaseId": 136332844240,
+      "name": "Test typing-extensions (`main` branch) on Python 3.13",
+      "startedAt": "2026-11-20T14:00:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:34Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:35Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:36Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:21Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:23Z",
+          "conclusion": "success",
+          "name": "Install typing-extensions",
+          "number": 5,
+          "startedAt": "2026-11-20T14:01:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:46Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 6,
+          "startedAt": "2026-11-20T14:01:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:46Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 11,
+          "startedAt": "2026-11-20T14:03:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:46Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 12,
+          "startedAt": "2026-11-20T14:03:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:46Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-11-20T14:03:46Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844240"
+    },
+    {
+      "completedAt": "2026-11-20T14:02:21Z",
+      "conclusion": "failure",
+      "databaseId": 136332844241,
+      "name": "Test macos-latest / 3.13",
+      "startedAt": "2026-11-20T14:00:34Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:36Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:41Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:47Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:15Z",
+          "conclusion": "failure",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:15Z",
+          "conclusion": "skipped",
+          "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+          "number": 5,
+          "startedAt": "2026-11-20T14:02:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:15Z",
+          "conclusion": "skipped",
+          "name": "Run mkdir coverage",
+          "number": 6,
+          "startedAt": "2026-11-20T14:02:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:16Z",
+          "conclusion": "skipped",
+          "name": "Run pytest",
+          "number": 7,
+          "startedAt": "2026-11-20T14:02:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:16Z",
+          "conclusion": "skipped",
+          "name": "Run pytest (no coverage)",
+          "number": 8,
+          "startedAt": "2026-11-20T14:02:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:16Z",
+          "conclusion": "skipped",
+          "name": "Store coverage files",
+          "number": 9,
+          "startedAt": "2026-11-20T14:02:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:16Z",
+          "conclusion": "skipped",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 17,
+          "startedAt": "2026-11-20T14:02:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:16Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-20T14:02:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:18Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-20T14:02:16Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844241"
+    },
+    {
+      "completedAt": "2026-11-20T14:05:07Z",
+      "conclusion": "success",
+      "databaseId": 136332844255,
+      "name": "Test macos-latest / 3.15t",
+      "startedAt": "2026-11-20T14:00:34Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:36Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:40Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:45Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:45Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:45Z",
+          "conclusion": "success",
+          "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+          "number": 5,
+          "startedAt": "2026-11-20T14:01:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:45Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 6,
+          "startedAt": "2026-11-20T14:01:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:56Z",
+          "conclusion": "success",
+          "name": "Run pytest",
+          "number": 7,
+          "startedAt": "2026-11-20T14:01:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:56Z",
+          "conclusion": "skipped",
+          "name": "Run pytest (no coverage)",
+          "number": 8,
+          "startedAt": "2026-11-20T14:04:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:59Z",
+          "conclusion": "success",
+          "name": "Store coverage files",
+          "number": 9,
+          "startedAt": "2026-11-20T14:04:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:59Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 17,
+          "startedAt": "2026-11-20T14:04:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:05:00Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-20T14:04:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:05:04Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-20T14:05:00Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844255"
+    },
+    {
+      "completedAt": "2026-11-20T14:03:04Z",
+      "conclusion": "success",
+      "databaseId": 136332844271,
+      "name": "Test macos-latest / 3.11",
+      "startedAt": "2026-11-20T14:00:33Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:35Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:37Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:40Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:08Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:08Z",
+          "conclusion": "success",
+          "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+          "number": 5,
+          "startedAt": "2026-11-20T14:01:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:08Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 6,
+          "startedAt": "2026-11-20T14:01:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:58Z",
+          "conclusion": "success",
+          "name": "Run pytest",
+          "number": 7,
+          "startedAt": "2026-11-20T14:01:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:58Z",
+          "conclusion": "skipped",
+          "name": "Run pytest (no coverage)",
+          "number": 8,
+          "startedAt": "2026-11-20T14:02:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:00Z",
+          "conclusion": "success",
+          "name": "Store coverage files",
+          "number": 9,
+          "startedAt": "2026-11-20T14:02:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:00Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 17,
+          "startedAt": "2026-11-20T14:03:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:01Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-20T14:03:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:01Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-20T14:03:01Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844271"
+    },
+    {
+      "completedAt": "2026-11-20T14:04:14Z",
+      "conclusion": "success",
+      "databaseId": 136332844274,
+      "name": "Test ubuntu-latest / pypy3.11",
+      "startedAt": "2026-11-20T14:00:33Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:34Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:35Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:37Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:24Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:24Z",
+          "conclusion": "success",
+          "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+          "number": 5,
+          "startedAt": "2026-11-20T14:01:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:24Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 6,
+          "startedAt": "2026-11-20T14:01:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:24Z",
+          "conclusion": "skipped",
+          "name": "Run pytest",
+          "number": 7,
+          "startedAt": "2026-11-20T14:01:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:12Z",
+          "conclusion": "success",
+          "name": "Run pytest (no coverage)",
+          "number": 8,
+          "startedAt": "2026-11-20T14:01:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:12Z",
+          "conclusion": "skipped",
+          "name": "Store coverage files",
+          "number": 9,
+          "startedAt": "2026-11-20T14:04:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:13Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 17,
+          "startedAt": "2026-11-20T14:04:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:13Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-20T14:04:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:13Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-20T14:04:13Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844274"
+    },
+    {
+      "completedAt": "2026-11-20T14:03:31Z",
+      "conclusion": "success",
+      "databaseId": 136332844282,
+      "name": "Test windows-latest / 3.14",
+      "startedAt": "2026-11-20T14:00:33Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:35Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:42Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:46Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:55Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:56Z",
+          "conclusion": "success",
+          "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+          "number": 5,
+          "startedAt": "2026-11-20T14:01:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:57Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 6,
+          "startedAt": "2026-11-20T14:01:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:26Z",
+          "conclusion": "success",
+          "name": "Run pytest",
+          "number": 7,
+          "startedAt": "2026-11-20T14:01:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:26Z",
+          "conclusion": "skipped",
+          "name": "Run pytest (no coverage)",
+          "number": 8,
+          "startedAt": "2026-11-20T14:03:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:27Z",
+          "conclusion": "success",
+          "name": "Store coverage files",
+          "number": 9,
+          "startedAt": "2026-11-20T14:03:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:28Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 17,
+          "startedAt": "2026-11-20T14:03:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:29Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-20T14:03:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:29Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-20T14:03:29Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844282"
+    },
+    {
+      "completedAt": "2026-11-20T14:02:49Z",
+      "conclusion": "success",
+      "databaseId": 136332844294,
+      "name": "Test ubuntu-latest / 3.14",
+      "startedAt": "2026-11-20T14:00:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:34Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:35Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:37Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:13Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:13Z",
+          "conclusion": "success",
+          "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+          "number": 5,
+          "startedAt": "2026-11-20T14:01:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:13Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 6,
+          "startedAt": "2026-11-20T14:01:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:45Z",
+          "conclusion": "success",
+          "name": "Run pytest",
+          "number": 7,
+          "startedAt": "2026-11-20T14:01:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:45Z",
+          "conclusion": "skipped",
+          "name": "Run pytest (no coverage)",
+          "number": 8,
+          "startedAt": "2026-11-20T14:02:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:46Z",
+          "conclusion": "success",
+          "name": "Store coverage files",
+          "number": 9,
+          "startedAt": "2026-11-20T14:02:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:46Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 17,
+          "startedAt": "2026-11-20T14:02:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:46Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-20T14:02:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:46Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-20T14:02:46Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844294"
+    },
+    {
+      "completedAt": "2026-11-20T14:01:49Z",
+      "conclusion": "success",
+      "databaseId": 136332844300,
+      "name": "core / Test on ubuntu",
+      "startedAt": "2026-11-20T14:00:33Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:35Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:36Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:45Z",
+          "conclusion": "success",
+          "name": "Install rust stable",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:45Z",
+          "conclusion": "success",
+          "name": "Cache rust",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:48Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 5,
+          "startedAt": "2026-11-20T14:00:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:12Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 6,
+          "startedAt": "2026-11-20T14:00:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:12Z",
+          "conclusion": "success",
+          "name": "Run uv pip freeze",
+          "number": 7,
+          "startedAt": "2026-11-20T14:01:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:32Z",
+          "conclusion": "success",
+          "name": "Run uv run pytest tests/pydantic_core",
+          "number": 8,
+          "startedAt": "2026-11-20T14:01:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:46Z",
+          "conclusion": "success",
+          "name": "Run cargo test",
+          "number": 9,
+          "startedAt": "2026-11-20T14:01:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:47Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 16,
+          "startedAt": "2026-11-20T14:01:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:47Z",
+          "conclusion": "success",
+          "name": "Post Cache rust",
+          "number": 17,
+          "startedAt": "2026-11-20T14:01:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:47Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-20T14:01:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:47Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-20T14:01:47Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844300"
+    },
+    {
+      "completedAt": "2026-11-20T14:06:44Z",
+      "conclusion": "success",
+      "databaseId": 136332844330,
+      "name": "Test windows-latest / pypy3.11",
+      "startedAt": "2026-11-20T14:00:33Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:34Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:42Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:48Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:12Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:13Z",
+          "conclusion": "success",
+          "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+          "number": 5,
+          "startedAt": "2026-11-20T14:03:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:14Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 6,
+          "startedAt": "2026-11-20T14:03:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:14Z",
+          "conclusion": "skipped",
+          "name": "Run pytest",
+          "number": 7,
+          "startedAt": "2026-11-20T14:03:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:06:39Z",
+          "conclusion": "success",
+          "name": "Run pytest (no coverage)",
+          "number": 8,
+          "startedAt": "2026-11-20T14:03:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:06:39Z",
+          "conclusion": "skipped",
+          "name": "Store coverage files",
+          "number": 9,
+          "startedAt": "2026-11-20T14:06:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:06:39Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 17,
+          "startedAt": "2026-11-20T14:06:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:06:41Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-20T14:06:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:06:41Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-20T14:06:41Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844330"
+    },
+    {
+      "completedAt": "2026-11-20T14:03:58Z",
+      "conclusion": "success",
+      "databaseId": 136332844342,
+      "name": "Test macos-latest / 3.14",
+      "startedAt": "2026-11-20T14:00:33Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:36Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:39Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:46Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:44Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:44Z",
+          "conclusion": "success",
+          "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+          "number": 5,
+          "startedAt": "2026-11-20T14:01:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:45Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 6,
+          "startedAt": "2026-11-20T14:01:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:50Z",
+          "conclusion": "success",
+          "name": "Run pytest",
+          "number": 7,
+          "startedAt": "2026-11-20T14:01:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:50Z",
+          "conclusion": "skipped",
+          "name": "Run pytest (no coverage)",
+          "number": 8,
+          "startedAt": "2026-11-20T14:03:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:52Z",
+          "conclusion": "success",
+          "name": "Store coverage files",
+          "number": 9,
+          "startedAt": "2026-11-20T14:03:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:52Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 17,
+          "startedAt": "2026-11-20T14:03:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:53Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-20T14:03:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:55Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-20T14:03:53Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844342"
+    },
+    {
+      "completedAt": "2026-11-20T14:04:28Z",
+      "conclusion": "success",
+      "databaseId": 136332844343,
+      "name": "Test windows-latest / 3.15t",
+      "startedAt": "2026-11-20T14:00:33Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:34Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:41Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:44Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:00Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:01Z",
+          "conclusion": "success",
+          "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+          "number": 5,
+          "startedAt": "2026-11-20T14:02:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:01Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 6,
+          "startedAt": "2026-11-20T14:02:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:23Z",
+          "conclusion": "success",
+          "name": "Run pytest",
+          "number": 7,
+          "startedAt": "2026-11-20T14:02:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:23Z",
+          "conclusion": "skipped",
+          "name": "Run pytest (no coverage)",
+          "number": 8,
+          "startedAt": "2026-11-20T14:04:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:24Z",
+          "conclusion": "success",
+          "name": "Store coverage files",
+          "number": 9,
+          "startedAt": "2026-11-20T14:04:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:24Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 17,
+          "startedAt": "2026-11-20T14:04:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:25Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-20T14:04:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:25Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-20T14:04:25Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844343"
+    },
+    {
+      "completedAt": "2026-11-20T14:04:31Z",
+      "conclusion": "success",
+      "databaseId": 136332844383,
+      "name": "Test typing-extensions (`main` branch) on Python 3.11",
+      "startedAt": "2026-11-20T14:00:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:34Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:35Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:36Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:17Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:18Z",
+          "conclusion": "success",
+          "name": "Install typing-extensions",
+          "number": 5,
+          "startedAt": "2026-11-20T14:01:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:28Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 6,
+          "startedAt": "2026-11-20T14:01:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:29Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 11,
+          "startedAt": "2026-11-20T14:04:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:29Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 12,
+          "startedAt": "2026-11-20T14:04:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:29Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-11-20T14:04:29Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844383"
+    },
+    {
+      "completedAt": "2026-11-20T14:04:34Z",
+      "conclusion": "success",
+      "databaseId": 136332844402,
+      "name": "Test windows-latest / 3.15",
+      "startedAt": "2026-11-20T14:00:33Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:36Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:44Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:49Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:23Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:24Z",
+          "conclusion": "success",
+          "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+          "number": 5,
+          "startedAt": "2026-11-20T14:02:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:24Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 6,
+          "startedAt": "2026-11-20T14:02:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:27Z",
+          "conclusion": "success",
+          "name": "Run pytest",
+          "number": 7,
+          "startedAt": "2026-11-20T14:02:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:27Z",
+          "conclusion": "skipped",
+          "name": "Run pytest (no coverage)",
+          "number": 8,
+          "startedAt": "2026-11-20T14:04:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:29Z",
+          "conclusion": "success",
+          "name": "Store coverage files",
+          "number": 9,
+          "startedAt": "2026-11-20T14:04:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:29Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 17,
+          "startedAt": "2026-11-20T14:04:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:31Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-20T14:04:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:31Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-20T14:04:31Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844402"
+    },
+    {
+      "completedAt": "2026-11-20T14:02:19Z",
+      "conclusion": "success",
+      "databaseId": 136332844407,
+      "name": "core / Test on macos",
+      "startedAt": "2026-11-20T14:00:33Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:36Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:39Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:41Z",
+          "conclusion": "success",
+          "name": "Install rust stable",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:42Z",
+          "conclusion": "success",
+          "name": "Cache rust",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:47Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 5,
+          "startedAt": "2026-11-20T14:00:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:32Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 6,
+          "startedAt": "2026-11-20T14:00:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:32Z",
+          "conclusion": "success",
+          "name": "Run uv pip freeze",
+          "number": 7,
+          "startedAt": "2026-11-20T14:01:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:56Z",
+          "conclusion": "success",
+          "name": "Run uv run pytest tests/pydantic_core",
+          "number": 8,
+          "startedAt": "2026-11-20T14:01:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:15Z",
+          "conclusion": "success",
+          "name": "Run cargo test",
+          "number": 9,
+          "startedAt": "2026-11-20T14:01:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:15Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 16,
+          "startedAt": "2026-11-20T14:02:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:15Z",
+          "conclusion": "success",
+          "name": "Post Cache rust",
+          "number": 17,
+          "startedAt": "2026-11-20T14:02:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:16Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-20T14:02:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:16Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-20T14:02:16Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844407"
+    },
+    {
+      "completedAt": "2026-11-20T14:09:36Z",
+      "conclusion": "success",
+      "databaseId": 136332844424,
+      "name": "Test macos-15-intel / 3.15",
+      "startedAt": "2026-11-20T14:00:35Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:40Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:48Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:01:05Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:54Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:01:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:55Z",
+          "conclusion": "success",
+          "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+          "number": 5,
+          "startedAt": "2026-11-20T14:04:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:55Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 6,
+          "startedAt": "2026-11-20T14:04:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:09:19Z",
+          "conclusion": "success",
+          "name": "Run pytest",
+          "number": 7,
+          "startedAt": "2026-11-20T14:04:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:09:19Z",
+          "conclusion": "skipped",
+          "name": "Run pytest (no coverage)",
+          "number": 8,
+          "startedAt": "2026-11-20T14:09:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:09:21Z",
+          "conclusion": "success",
+          "name": "Store coverage files",
+          "number": 9,
+          "startedAt": "2026-11-20T14:09:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:09:22Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 17,
+          "startedAt": "2026-11-20T14:09:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:09:23Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-20T14:09:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:09:23Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-20T14:09:23Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844424"
+    },
+    {
+      "completedAt": "2026-11-20T14:05:54Z",
+      "conclusion": "success",
+      "databaseId": 136332844428,
+      "name": "Test windows-latest / 3.11",
+      "startedAt": "2026-11-20T14:00:33Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:35Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:44Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:49Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:15Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:16Z",
+          "conclusion": "success",
+          "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+          "number": 5,
+          "startedAt": "2026-11-20T14:02:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:16Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 6,
+          "startedAt": "2026-11-20T14:02:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:05:47Z",
+          "conclusion": "success",
+          "name": "Run pytest",
+          "number": 7,
+          "startedAt": "2026-11-20T14:02:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:05:47Z",
+          "conclusion": "skipped",
+          "name": "Run pytest (no coverage)",
+          "number": 8,
+          "startedAt": "2026-11-20T14:05:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:05:49Z",
+          "conclusion": "success",
+          "name": "Store coverage files",
+          "number": 9,
+          "startedAt": "2026-11-20T14:05:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:05:49Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 17,
+          "startedAt": "2026-11-20T14:05:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:05:51Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-20T14:05:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:05:51Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-20T14:05:51Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844428"
+    },
+    {
+      "completedAt": "2026-11-20T14:05:22Z",
+      "conclusion": "success",
+      "databaseId": 136332844451,
+      "name": "Test windows-latest / 3.12",
+      "startedAt": "2026-11-20T14:00:34Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:36Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:44Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:49Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:06Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:07Z",
+          "conclusion": "success",
+          "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+          "number": 5,
+          "startedAt": "2026-11-20T14:02:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:02:07Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 6,
+          "startedAt": "2026-11-20T14:02:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:05:17Z",
+          "conclusion": "success",
+          "name": "Run pytest",
+          "number": 7,
+          "startedAt": "2026-11-20T14:02:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:05:17Z",
+          "conclusion": "skipped",
+          "name": "Run pytest (no coverage)",
+          "number": 8,
+          "startedAt": "2026-11-20T14:05:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:05:18Z",
+          "conclusion": "success",
+          "name": "Store coverage files",
+          "number": 9,
+          "startedAt": "2026-11-20T14:05:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:05:18Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 17,
+          "startedAt": "2026-11-20T14:05:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:05:20Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-20T14:05:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:05:20Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-20T14:05:20Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844451"
+    },
+    {
+      "completedAt": "2026-11-20T14:06:38Z",
+      "conclusion": "success",
+      "databaseId": 136332844505,
+      "name": "Test windows-latest / 3.13",
+      "startedAt": "2026-11-20T14:00:35Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:00:38Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:00:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:50Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:00:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:00:59Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 3,
+          "startedAt": "2026-11-20T14:00:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:04Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-11-20T14:00:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:05Z",
+          "conclusion": "success",
+          "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+          "number": 5,
+          "startedAt": "2026-11-20T14:03:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:03:05Z",
+          "conclusion": "success",
+          "name": "Run mkdir coverage",
+          "number": 6,
+          "startedAt": "2026-11-20T14:03:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:06:30Z",
+          "conclusion": "success",
+          "name": "Run pytest",
+          "number": 7,
+          "startedAt": "2026-11-20T14:03:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:06:30Z",
+          "conclusion": "skipped",
+          "name": "Run pytest (no coverage)",
+          "number": 8,
+          "startedAt": "2026-11-20T14:06:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:06:32Z",
+          "conclusion": "success",
+          "name": "Store coverage files",
+          "number": 9,
+          "startedAt": "2026-11-20T14:06:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:06:32Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+          "number": 17,
+          "startedAt": "2026-11-20T14:06:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:06:35Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-20T14:06:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:06:35Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-20T14:06:35Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332844505"
+    },
+    {
+      "completedAt": "2026-11-20T14:00:29Z",
+      "conclusion": "skipped",
+      "databaseId": 136332845570,
+      "name": "build-pydantic",
+      "startedAt": "2026-11-20T14:00:29Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332845570"
+    },
+    {
+      "completedAt": "2026-11-20T14:00:29Z",
+      "conclusion": "skipped",
+      "databaseId": 136332845682,
+      "name": "core / Build PGO-optimized on ${{ matrix.platform.os }} / ${{ matrix.interpreter }}",
+      "startedAt": "2026-11-20T14:00:29Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332845682"
+    },
+    {
+      "completedAt": "2026-11-20T14:00:29Z",
+      "conclusion": "skipped",
+      "databaseId": 136332846196,
+      "name": "core / Test build on ${{ matrix.target }}-${{ matrix.distro }}",
+      "startedAt": "2026-11-20T14:00:29Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332846196"
+    },
+    {
+      "completedAt": "2026-11-20T14:00:29Z",
+      "conclusion": "skipped",
+      "databaseId": 136332846303,
+      "name": "core / Build on ${{ matrix.os }} (${{ matrix.target }} - ${{ (matrix.interpreter || 'all') }}${{ (((matrix.os == 'linux') && format(' - {0}', (((matrix.manylinux == 'auto') && 'manylinux') || matrix.manylinux))) || '') }})",
+      "startedAt": "2026-11-20T14:00:29Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332846303"
+    },
+    {
+      "completedAt": "2026-11-20T14:00:29Z",
+      "conclusion": "skipped",
+      "databaseId": 136332846403,
+      "name": "core / Test build on ${{ matrix.platform.os }}",
+      "startedAt": "2026-11-20T14:00:29Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332846403"
+    },
+    {
+      "completedAt": "2026-11-20T14:00:29Z",
+      "conclusion": "skipped",
+      "databaseId": 136332846753,
+      "name": "core / Test with debug Python (${{ matrix.python-version }})",
+      "startedAt": "2026-11-20T14:00:29Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136332846753"
+    },
+    {
+      "completedAt": "2026-11-20T14:08:10Z",
+      "conclusion": "success",
+      "databaseId": 136335205689,
+      "name": "Test build on PyEmscripten (Pyodide) (3.14)",
+      "startedAt": "2026-11-20T14:04:55Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:04:56Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:04:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:04:57Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-20T14:04:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:05:00Z",
+          "conclusion": "success",
+          "name": "install uv",
+          "number": 3,
+          "startedAt": "2026-11-20T14:04:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:05:00Z",
+          "conclusion": "success",
+          "name": "get dist artifacts",
+          "number": 4,
+          "startedAt": "2026-11-20T14:05:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:08:08Z",
+          "conclusion": "success",
+          "name": "Run uv sync --only-group pyodide-build",
+          "number": 5,
+          "startedAt": "2026-11-20T14:05:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:08:08Z",
+          "conclusion": "success",
+          "name": "Post install uv",
+          "number": 9,
+          "startedAt": "2026-11-20T14:08:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:08:08Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 10,
+          "startedAt": "2026-11-20T14:08:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:08:08Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "startedAt": "2026-11-20T14:08:08Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136335205689"
+    },
+    {
+      "completedAt": "2026-11-20T14:09:48Z",
+      "conclusion": "failure",
+      "databaseId": 136337772657,
+      "name": "check",
+      "startedAt": "2026-11-20T14:09:44Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T14:09:46Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T14:09:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:09:46Z",
+          "conclusion": "failure",
+          "name": "Decide whether the needed jobs succeeded or failed",
+          "number": 2,
+          "startedAt": "2026-11-20T14:09:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T14:09:46Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 3,
+          "startedAt": "2026-11-20T14:09:46Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136337772657"
+    },
+    {
+      "completedAt": "2026-11-20T14:09:37Z",
+      "conclusion": "skipped",
+      "databaseId": 136337775582,
+      "name": "coverage-pr-comment",
+      "startedAt": "2026-11-20T14:09:37Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136337775582"
+    },
+    {
+      "completedAt": "2026-11-20T14:09:36Z",
+      "conclusion": "skipped",
+      "databaseId": 136337776546,
+      "name": "coverage-combine",
+      "startedAt": "2026-11-20T14:09:37Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136337776546"
+    },
+    {
+      "completedAt": "2026-11-20T14:09:48Z",
+      "conclusion": "skipped",
+      "databaseId": 136337879282,
+      "name": "deploy-docs",
+      "startedAt": "2026-11-20T14:09:49Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136337879282"
+    },
+    {
+      "completedAt": "2026-11-20T14:09:48Z",
+      "conclusion": "skipped",
+      "databaseId": 136337879333,
+      "name": "release-pydantic",
+      "startedAt": "2026-11-20T14:09:49Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136337879333"
+    },
+    {
+      "completedAt": "2026-11-20T14:09:48Z",
+      "conclusion": "skipped",
+      "databaseId": 136337879832,
+      "name": "release-pydantic-core",
+      "startedAt": "2026-11-20T14:09:49Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136337879832"
+    },
+    {
+      "completedAt": "2026-11-20T14:09:48Z",
+      "conclusion": "skipped",
+      "databaseId": 136337880544,
+      "name": "Send tweet",
+      "startedAt": "2026-11-20T14:09:49Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/pydantic/pydantic/actions/runs/44749339872/job/136337880544"
+    }
+  ],
+  "name": "CI",
+  "updatedAt": "2026-11-20T14:09:49Z",
+  "repository": "pydantic/pydantic"
+}

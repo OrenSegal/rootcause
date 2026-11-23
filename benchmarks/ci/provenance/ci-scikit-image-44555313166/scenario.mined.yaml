@@ -1,0 +1,19 @@
+# Mined from https://github.com/scikit-image/scikit-image/actions/runs/44555313166
+# (scikit-image/scikit-image, licence NOASSERTION). Fixed by run
+# https://github.com/scikit-image/scikit-image/actions/runs/44557187787. Label rule: the
+# fix changed files exactly one tested commit touched. Fix touched:
+# src/skimage/filters/ridges.py, tests/skimage/filters/test_ridges.py,
+# tests/skimage2/filters/test_ridges.py.
+id: ci-scikit-image-44555313166
+title: Fix and test various Frangi bugs
+alert:
+  severity: ci
+  service: test-docstub
+  summary: 'workflow Typing failed on frangi-fixes at 99df232ff5: step ''Create skimage-stubs
+    with docstub'' in job ''Test docstub'' failed.'
+truth:
+  category: bad_code_deploy
+  service: scikit-image
+  required_evidence_any:
+  - 99df232ff5
+provenance: recorded

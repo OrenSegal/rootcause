@@ -1,0 +1,18 @@
+# Mined from https://github.com/ipython/ipython/actions/runs/39596261587
+# (ipython/ipython, licence BSD-3-Clause). Fixed by run
+# https://github.com/ipython/ipython/actions/runs/39596760281. Label rule: the fix
+# changed files exactly one tested commit touched. Fix touched:
+# IPython/core/magics/execution.py.
+id: ci-ipython-39596261587
+title: Accept a quoted FILE:LINE in %debug --breakpoint
+alert:
+  severity: ci
+  service: formatting
+  summary: 'workflow Python package failed on fix/debug-breakpoint-quoted-path at 94c7262ef2:
+    step ''Lint with darker'' in job ''formatting'' failed.'
+truth:
+  category: bad_code_deploy
+  service: ipython
+  required_evidence_any:
+  - 94c7262ef2
+provenance: recorded

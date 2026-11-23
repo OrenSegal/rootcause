@@ -1,0 +1,13 @@
+{
+  "fixed_run": "https://github.com/Kludex/uvicorn/actions/runs/40674736559",
+  "fixed_sha": "f7c4eaf13b205d1e35846525b355ce0782b9deae",
+  "commits": [
+    "955f802844de0bddbae3f60ce591851491ca1736",
+    "f7c4eaf13b205d1e35846525b355ce0782b9deae"
+  ],
+  "files": [
+    "tests/protocols/test_websocket.py",
+    "uvicorn/protocols/websockets/wsproto_impl.py"
+  ],
+  "status": "ahead"
+}

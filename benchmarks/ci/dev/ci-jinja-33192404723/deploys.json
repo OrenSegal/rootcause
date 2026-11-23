@@ -1,0 +1,15 @@
+[
+  {
+    "id": "088afb5f67",
+    "service": "jinja",
+    "version": "088afb5f67",
+    "ts": "2026-08-28T16:57:12Z",
+    "author": "YeshwanthRajSelvaraj",
+    "summary": "Update urlize test cases for trailing punctuation handling",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "tests/test_filters.py"
+    ]
+  }
+]

@@ -1,0 +1,21 @@
+[
+  {
+    "id": "35b5eccd46",
+    "service": "pytest-asyncio",
+    "version": "35b5eccd46",
+    "ts": "2026-11-09T12:22:06Z",
+    "author": "kd-02",
+    "summary": "feat: warn about unhandled event loop exceptions",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "changelog.d/205.added.rst",
+      "docs/reference/index.rst",
+      "docs/reference/warnings.rst",
+      "pytest_asyncio/__init__.py",
+      "pytest_asyncio/plugin.py",
+      "tests/test_loop_exceptions.py",
+      "tests/test_task_cleanup.py"
+    ]
+  }
+]

@@ -1,0 +1,17 @@
+# Mined from https://github.com/pandas-dev/pandas/actions/runs/44578641860 (pandas-
+# dev/pandas, licence BSD-3-Clause). Fixed by run https://github.com/pandas-
+# dev/pandas/actions/runs/44928300245. Label rule: the fix changed files exactly one
+# tested commit touched. Fix touched: pandas/tests/groupby/transform/test_transform.py.
+id: ci-pandas-44578641860
+title: 'ENH: SeriesGroupBy.transform accepts a list of functions (GH#17309)'
+alert:
+  severity: ci
+  service: type-checking
+  summary: 'workflow Code Checks failed on bug-17309 at 09a8de0158: step ''Typing Checks''
+    in job ''Type Checking'' failed.'
+truth:
+  category: bad_code_deploy
+  service: pandas
+  required_evidence_any:
+  - 09a8de0158
+provenance: recorded

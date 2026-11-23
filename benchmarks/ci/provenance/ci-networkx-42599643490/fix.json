@@ -1,0 +1,11 @@
+{
+  "fixed_run": "https://github.com/networkx/networkx/actions/runs/42601214725",
+  "fixed_sha": "b172b34ba64fa3055a4287f8663b8698e6b0f830",
+  "commits": [
+    "b172b34ba64fa3055a4287f8663b8698e6b0f830"
+  ],
+  "files": [
+    "networkx/algorithms/traversal/tests/test_dfs.py"
+  ],
+  "status": "ahead"
+}

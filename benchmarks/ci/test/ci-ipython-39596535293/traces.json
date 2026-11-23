@@ -1,0 +1,112 @@
+[
+  {
+    "span_id": "run-39596535293",
+    "trace_id": "run-39596535293",
+    "parent_id": null,
+    "service": "build-docs",
+    "name": "Build docs",
+    "start": "2026-10-21T12:03:02Z",
+    "duration_ms": 56000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-119210120905",
+    "trace_id": "run-39596535293",
+    "parent_id": "run-39596535293",
+    "service": "build",
+    "name": "build",
+    "start": "2026-10-21T12:03:05Z",
+    "duration_ms": 53000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-119210120905-step-1",
+    "trace_id": "run-39596535293",
+    "parent_id": "job-119210120905",
+    "service": "build",
+    "name": "Set up job",
+    "start": "2026-10-21T12:03:06Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-119210120905-step-2",
+    "trace_id": "run-39596535293",
+    "parent_id": "job-119210120905",
+    "service": "build",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-21T12:03:07Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-119210120905-step-3",
+    "trace_id": "run-39596535293",
+    "parent_id": "job-119210120905",
+    "service": "build",
+    "name": "Set up Python",
+    "start": "2026-10-21T12:03:08Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-119210120905-step-4",
+    "trace_id": "run-39596535293",
+    "parent_id": "job-119210120905",
+    "service": "build",
+    "name": "Install uv",
+    "start": "2026-10-21T12:03:10Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-119210120905-step-5",
+    "trace_id": "run-39596535293",
+    "parent_id": "job-119210120905",
+    "service": "build",
+    "name": "Install Graphviz",
+    "start": "2026-10-21T12:03:11Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-119210120905-step-6",
+    "trace_id": "run-39596535293",
+    "parent_id": "job-119210120905",
+    "service": "build",
+    "name": "Install Python dependencies",
+    "start": "2026-10-21T12:03:18Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-119210120905-step-7",
+    "trace_id": "run-39596535293",
+    "parent_id": "job-119210120905",
+    "service": "build",
+    "name": "Build docs",
+    "start": "2026-10-21T12:03:20Z",
+    "duration_ms": 36000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-119210120905-step-18",
+    "trace_id": "run-39596535293",
+    "parent_id": "job-119210120905",
+    "service": "build",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-21T12:03:56Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-119210120905-step-19",
+    "trace_id": "run-39596535293",
+    "parent_id": "job-119210120905",
+    "service": "build",
+    "name": "Complete job",
+    "start": "2026-10-21T12:03:56Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

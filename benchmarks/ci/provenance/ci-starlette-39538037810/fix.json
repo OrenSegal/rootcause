@@ -1,0 +1,11 @@
+{
+  "fixed_run": "https://github.com/Kludex/starlette/actions/runs/39538321397",
+  "fixed_sha": "32749f562a0d3b951a673bcd5965511ebcaa2d04",
+  "commits": [
+    "32749f562a0d3b951a673bcd5965511ebcaa2d04"
+  ],
+  "files": [
+    "starlette/routing.py"
+  ],
+  "status": "ahead"
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "e7a010d1f9",
+    "service": "multidict",
+    "version": "e7a010d1f9",
+    "ts": "2026-10-06T06:00:33Z",
+    "author": "asvetlov",
+    "summary": "Fail check_inlining.py on out-of-line copies of CPython inlines",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "AGENTS.md",
+      "CHANGES/1686.contrib.rst",
+      "tools/check_inlining.py"
+    ]
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "author": "claude",
+    "committedDate": "2026-11-11T17:11:14Z",
+    "messageHeadline": "Keep the worker interpreter's own sys.path for local workers",
+    "oid": "f005d1f09570ca1bb0ddbd2ab8ca2c33f7cc4a59",
+    "files": [
+      {
+        "filename": "changelog/1049.bugfix.rst",
+        "status": "added"
+      },
+      {
+        "filename": "src/xdist/plugin.py",
+        "status": "modified"
+      },
+      {
+        "filename": "src/xdist/remote.py",
+        "status": "modified"
+      },
+      {
+        "filename": "src/xdist/workermanage.py",
+        "status": "modified"
+      },
+      {
+        "filename": "testing/test_remote.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

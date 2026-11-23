@@ -1,0 +1,12 @@
+{
+  "fixed_run": "https://github.com/python-attrs/attrs/actions/runs/33952800626",
+  "fixed_sha": "bea95f8b86c7dbbfc5f1f0d289f985255280859c",
+  "commits": [
+    "bea95f8b86c7dbbfc5f1f0d289f985255280859c"
+  ],
+  "files": [
+    "src/attr/_make.py",
+    "tests/test_annotations.py"
+  ],
+  "status": "ahead"
+}

@@ -1,0 +1,114 @@
+{
+  "attempt": 1,
+  "conclusion": "failure",
+  "createdAt": "2026-09-04T15:04:49Z",
+  "databaseId": 33887414469,
+  "displayTitle": "prevent HelpFormatter.write_usage from breaking options at hyphens (fixes #3362)",
+  "event": "pull_request",
+  "headBranch": "fix/write-usage-break-on-hyphens",
+  "headSha": "7429ffdb0d00c28db5cda454030e1e9d37c6cec3",
+  "jobs": [
+    {
+      "completedAt": "2026-09-04T15:05:05Z",
+      "conclusion": "failure",
+      "databaseId": 101070512435,
+      "name": "main",
+      "startedAt": "2026-09-04T15:04:52Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-09-04T15:04:54Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-09-04T15:04:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-04T15:04:55Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-09-04T15:04:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-04T15:04:58Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+          "number": 3,
+          "startedAt": "2026-09-04T15:04:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-04T15:04:59Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 4,
+          "startedAt": "2026-09-04T15:04:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-04T15:05:01Z",
+          "conclusion": "success",
+          "name": "Run actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9",
+          "number": 5,
+          "startedAt": "2026-09-04T15:04:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-04T15:05:03Z",
+          "conclusion": "failure",
+          "name": "Run uv run --locked --no-default-groups --group pre-commit pre-commit run --show-diff-on-failure --color=always --all-files",
+          "number": 6,
+          "startedAt": "2026-09-04T15:05:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-04T15:05:03Z",
+          "conclusion": "skipped",
+          "name": "Post Run actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9",
+          "number": 9,
+          "startedAt": "2026-09-04T15:05:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-04T15:05:03Z",
+          "conclusion": "skipped",
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 10,
+          "startedAt": "2026-09-04T15:05:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-04T15:05:03Z",
+          "conclusion": "skipped",
+          "name": "Post Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+          "number": 11,
+          "startedAt": "2026-09-04T15:05:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-04T15:05:03Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 12,
+          "startedAt": "2026-09-04T15:05:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-04T15:05:03Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-09-04T15:05:03Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pallets/click/actions/runs/33887414469/job/101070512435"
+    }
+  ],
+  "name": "pre-commit",
+  "updatedAt": "2026-09-04T15:05:06Z",
+  "repository": "pallets/click"
+}

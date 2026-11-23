@@ -1,0 +1,26 @@
+[
+  {
+    "author": "hammadqureshi-web",
+    "committedDate": "2026-11-07T01:00:09Z",
+    "messageHeadline": "Do not warn about requests built by get_retry_request()",
+    "oid": "03e1f94e9658b8433d16130c148ae39936f394a3",
+    "files": [
+      {
+        "filename": "docs/topics/spider-middleware.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "scrapy/downloadermiddlewares/retry.py",
+        "status": "modified"
+      },
+      {
+        "filename": "scrapy/spidermiddlewares/metacopy.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_spidermiddleware_metacopy.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

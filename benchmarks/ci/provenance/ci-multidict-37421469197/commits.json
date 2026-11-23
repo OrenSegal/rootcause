@@ -1,0 +1,22 @@
+[
+  {
+    "author": "asvetlov",
+    "committedDate": "2026-10-06T06:00:33Z",
+    "messageHeadline": "Fail check_inlining.py on out-of-line copies of CPython inlines",
+    "oid": "e7a010d1f9dffc6279f6dcc9e78101405227f104",
+    "files": [
+      {
+        "filename": "AGENTS.md",
+        "status": "modified"
+      },
+      {
+        "filename": "CHANGES/1686.contrib.rst",
+        "status": "added"
+      },
+      {
+        "filename": "tools/check_inlining.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

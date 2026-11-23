@@ -1,0 +1,16 @@
+[
+  {
+    "id": "5c58517276",
+    "service": "pytest-asyncio",
+    "version": "5c58517276",
+    "ts": "2026-10-27T18:00:57Z",
+    "author": "voidstackloop",
+    "summary": "fix(plugin): validate asyncio marker loop_scope with UsageError",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "pytest_asyncio/plugin.py",
+      "tests/test_asyncio_mark.py"
+    ]
+  }
+]

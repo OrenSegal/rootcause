@@ -1,0 +1,350 @@
+{
+  "attempt": 1,
+  "conclusion": "failure",
+  "createdAt": "2026-11-18T16:21:58Z",
+  "databaseId": 44346380931,
+  "displayTitle": "Fixed 37514 -- Requires Change user permission to add user when using\u2026",
+  "event": "pull_request",
+  "headBranch": "27514",
+  "headSha": "15f1bdfc1f6cda86514a30053780d2676699d4ac",
+  "jobs": [
+    {
+      "completedAt": "2026-11-18T16:22:14Z",
+      "conclusion": "success",
+      "databaseId": 134949776206,
+      "name": "zizmor",
+      "startedAt": "2026-11-18T16:22:00Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-18T16:22:03Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-18T16:22:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T16:22:06Z",
+          "conclusion": "success",
+          "name": "Checkout",
+          "number": 2,
+          "startedAt": "2026-11-18T16:22:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T16:22:11Z",
+          "conclusion": "success",
+          "name": "Run zizmor",
+          "number": 3,
+          "startedAt": "2026-11-18T16:22:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T16:22:11Z",
+          "conclusion": "success",
+          "name": "Post Run zizmor",
+          "number": 5,
+          "startedAt": "2026-11-18T16:22:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T16:22:11Z",
+          "conclusion": "success",
+          "name": "Post Checkout",
+          "number": 6,
+          "startedAt": "2026-11-18T16:22:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T16:22:11Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 7,
+          "startedAt": "2026-11-18T16:22:11Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/django/django/actions/runs/44346380931/job/134949776206"
+    },
+    {
+      "completedAt": "2026-11-18T16:22:24Z",
+      "conclusion": "success",
+      "databaseId": 134949776971,
+      "name": "biome",
+      "startedAt": "2026-11-18T16:22:00Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-18T16:22:01Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-18T16:22:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T16:22:05Z",
+          "conclusion": "success",
+          "name": "Checkout",
+          "number": 2,
+          "startedAt": "2026-11-18T16:22:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T16:22:08Z",
+          "conclusion": "success",
+          "name": "Set up Node.js",
+          "number": 3,
+          "startedAt": "2026-11-18T16:22:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T16:22:22Z",
+          "conclusion": "success",
+          "name": "Run npm install",
+          "number": 4,
+          "startedAt": "2026-11-18T16:22:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T16:22:22Z",
+          "conclusion": "success",
+          "name": "Run npx biome ci",
+          "number": 5,
+          "startedAt": "2026-11-18T16:22:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T16:22:22Z",
+          "conclusion": "success",
+          "name": "Post Set up Node.js",
+          "number": 9,
+          "startedAt": "2026-11-18T16:22:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T16:22:22Z",
+          "conclusion": "success",
+          "name": "Post Checkout",
+          "number": 10,
+          "startedAt": "2026-11-18T16:22:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T16:22:22Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "startedAt": "2026-11-18T16:22:22Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/django/django/actions/runs/44346380931/job/134949776971"
+    },
+    {
+      "completedAt": "2026-11-18T16:22:58Z",
+      "conclusion": "failure",
+      "databaseId": 134949776978,
+      "name": "black",
+      "startedAt": "2026-11-18T16:22:00Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-18T16:22:02Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-18T16:22:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T16:22:05Z",
+          "conclusion": "success",
+          "name": "Checkout",
+          "number": 2,
+          "startedAt": "2026-11-18T16:22:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T16:22:56Z",
+          "conclusion": "failure",
+          "name": "black",
+          "number": 3,
+          "startedAt": "2026-11-18T16:22:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T16:22:56Z",
+          "conclusion": "success",
+          "name": "Post Checkout",
+          "number": 6,
+          "startedAt": "2026-11-18T16:22:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T16:22:56Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 7,
+          "startedAt": "2026-11-18T16:22:56Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/django/django/actions/runs/44346380931/job/134949776978"
+    },
+    {
+      "completedAt": "2026-11-18T16:22:26Z",
+      "conclusion": "failure",
+      "databaseId": 134949777003,
+      "name": "flake8",
+      "startedAt": "2026-11-18T16:22:00Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-18T16:22:01Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-18T16:22:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T16:22:05Z",
+          "conclusion": "success",
+          "name": "Checkout",
+          "number": 2,
+          "startedAt": "2026-11-18T16:22:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T16:22:05Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-11-18T16:22:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T16:22:09Z",
+          "conclusion": "success",
+          "name": "Run python -m pip install flake8",
+          "number": 4,
+          "startedAt": "2026-11-18T16:22:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T16:22:25Z",
+          "conclusion": "failure",
+          "name": "flake8",
+          "number": 5,
+          "startedAt": "2026-11-18T16:22:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T16:22:25Z",
+          "conclusion": "skipped",
+          "name": "Post Set up Python",
+          "number": 9,
+          "startedAt": "2026-11-18T16:22:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T16:22:25Z",
+          "conclusion": "success",
+          "name": "Post Checkout",
+          "number": 10,
+          "startedAt": "2026-11-18T16:22:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T16:22:25Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "startedAt": "2026-11-18T16:22:25Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/django/django/actions/runs/44346380931/job/134949777003"
+    },
+    {
+      "completedAt": "2026-11-18T16:22:13Z",
+      "conclusion": "success",
+      "databaseId": 134949777031,
+      "name": "isort",
+      "startedAt": "2026-11-18T16:22:00Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-18T16:22:02Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-18T16:22:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T16:22:05Z",
+          "conclusion": "success",
+          "name": "Checkout",
+          "number": 2,
+          "startedAt": "2026-11-18T16:22:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T16:22:05Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-11-18T16:22:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T16:22:09Z",
+          "conclusion": "success",
+          "name": "Run python -m pip install isort",
+          "number": 4,
+          "startedAt": "2026-11-18T16:22:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T16:22:11Z",
+          "conclusion": "success",
+          "name": "isort",
+          "number": 5,
+          "startedAt": "2026-11-18T16:22:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T16:22:11Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 9,
+          "startedAt": "2026-11-18T16:22:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T16:22:12Z",
+          "conclusion": "success",
+          "name": "Post Checkout",
+          "number": 10,
+          "startedAt": "2026-11-18T16:22:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T16:22:12Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "startedAt": "2026-11-18T16:22:12Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/django/django/actions/runs/44346380931/job/134949777031"
+    }
+  ],
+  "name": "Linters",
+  "updatedAt": "2026-11-18T16:22:58Z",
+  "repository": "django/django"
+}

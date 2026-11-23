@@ -1,0 +1,18 @@
+[
+  {
+    "author": "philippjfr",
+    "committedDate": "2026-11-18T15:27:24Z",
+    "messageHeadline": "fix: Keep unlocked writes streaming while a busy callback holds the lock",
+    "oid": "49f0f11ada024fa0529864394e38fe3f7f45d16a",
+    "files": [
+      {
+        "filename": "panel/io/document.py",
+        "status": "modified"
+      },
+      {
+        "filename": "panel/tests/io/test_document.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

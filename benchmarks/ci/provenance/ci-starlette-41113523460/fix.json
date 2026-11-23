@@ -1,0 +1,16 @@
+{
+  "fixed_run": "https://github.com/Kludex/starlette/actions/runs/41184070978",
+  "fixed_sha": "a2e934d05bc501215de46c4f79c1c11d392c7e61",
+  "commits": [
+    "4c91214d47b1bdc1eddac24d76b4c1d46bf14883",
+    "691e0615d45aabe30bec40c23f5e403c81eb359f",
+    "3413b52513bb924c6ce9703944432fb864d3419f",
+    "fd4a230fdbe0bae11b2ed58da11b4b2de1034ff4",
+    "a2e934d05bc501215de46c4f79c1c11d392c7e61"
+  ],
+  "files": [
+    "starlette/requests.py",
+    "tests/test_requests.py"
+  ],
+  "status": "ahead"
+}

@@ -1,0 +1,14 @@
+id: ci-jinja-33386024559
+title: '[rejected AI] The escaped test is false for undefined values'
+alert:
+  severity: ci
+  service: main
+  summary: 'workflow pre-commit failed on fix/escaped-undefined-chainable at a877bf760a: step
+    ''Run uv run --locked --group pre-commit pre-commit run --show-diff-on-failure --color=always
+    --all-files'' in job ''main'' failed.'
+truth:
+  category: bad_code_deploy
+  service: jinja
+  required_evidence_any:
+  - a877bf760a
+provenance: recorded

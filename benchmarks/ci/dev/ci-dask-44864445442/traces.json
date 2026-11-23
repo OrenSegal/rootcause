@@ -1,0 +1,3162 @@
+[
+  {
+    "span_id": "run-44864445442",
+    "trace_id": "run-44864445442",
+    "parent_id": null,
+    "service": "tests",
+    "name": "Tests",
+    "start": "2026-11-21T04:06:34Z",
+    "duration_ms": 2367000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-136724855157",
+    "trace_id": "run-44864445442",
+    "parent_id": "run-44864445442",
+    "service": "event-file",
+    "name": "Event File",
+    "start": "2026-11-21T04:06:38Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855157-step-1",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855157",
+    "service": "event-file",
+    "name": "Set up job",
+    "start": "2026-11-21T04:06:38Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855157-step-2",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855157",
+    "service": "event-file",
+    "name": "Upload",
+    "start": "2026-11-21T04:06:39Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855157-step-3",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855157",
+    "service": "event-file",
+    "name": "Complete job",
+    "start": "2026-11-21T04:06:40Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855287",
+    "trace_id": "run-44864445442",
+    "parent_id": "run-44864445442",
+    "service": "ubuntu-latest-py315-test-array-expr",
+    "name": "ubuntu-latest py315 test-array-expr",
+    "start": "2026-11-21T04:06:38Z",
+    "duration_ms": 113000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855287-step-1",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855287",
+    "service": "ubuntu-latest-py315-test-array-expr",
+    "name": "Set up job",
+    "start": "2026-11-21T04:06:39Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855287-step-2",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855287",
+    "service": "ubuntu-latest-py315-test-array-expr",
+    "name": "Checkout source",
+    "start": "2026-11-21T04:06:40Z",
+    "duration_ms": 16000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855287-step-3",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855287",
+    "service": "ubuntu-latest-py315-test-array-expr",
+    "name": "Reconfigure pytest-timeout",
+    "start": "2026-11-21T04:06:56Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855287-step-4",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855287",
+    "service": "ubuntu-latest-py315-test-array-expr",
+    "name": "Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:06:56Z",
+    "duration_ms": 26000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855287-step-5",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855287",
+    "service": "ubuntu-latest-py315-test-array-expr",
+    "name": "Run tests",
+    "start": "2026-11-21T04:07:22Z",
+    "duration_ms": 62000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855287-step-6",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855287",
+    "service": "ubuntu-latest-py315-test-array-expr",
+    "name": "Coverage",
+    "start": "2026-11-21T04:08:24Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855287-step-7",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855287",
+    "service": "ubuntu-latest-py315-test-array-expr",
+    "name": "Upload test results",
+    "start": "2026-11-21T04:08:28Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855287-step-13",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855287",
+    "service": "ubuntu-latest-py315-test-array-expr",
+    "name": "Post Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:08:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855287-step-14",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855287",
+    "service": "ubuntu-latest-py315-test-array-expr",
+    "name": "Post Checkout source",
+    "start": "2026-11-21T04:08:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855287-step-15",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855287",
+    "service": "ubuntu-latest-py315-test-array-expr",
+    "name": "Complete job",
+    "start": "2026-11-21T04:08:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855330",
+    "trace_id": "run-44864445442",
+    "parent_id": "run-44864445442",
+    "service": "ubuntu-latest-mindeps-array-test-ci",
+    "name": "ubuntu-latest mindeps-array test-ci",
+    "start": "2026-11-21T04:06:38Z",
+    "duration_ms": 141000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855330-step-1",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855330",
+    "service": "ubuntu-latest-mindeps-array-test-ci",
+    "name": "Set up job",
+    "start": "2026-11-21T04:06:39Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855330-step-2",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855330",
+    "service": "ubuntu-latest-mindeps-array-test-ci",
+    "name": "Checkout source",
+    "start": "2026-11-21T04:06:41Z",
+    "duration_ms": 14000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855330-step-3",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855330",
+    "service": "ubuntu-latest-mindeps-array-test-ci",
+    "name": "Reconfigure pytest-timeout",
+    "start": "2026-11-21T04:06:55Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855330-step-4",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855330",
+    "service": "ubuntu-latest-mindeps-array-test-ci",
+    "name": "Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:06:55Z",
+    "duration_ms": 10000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855330-step-5",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855330",
+    "service": "ubuntu-latest-mindeps-array-test-ci",
+    "name": "Run tests",
+    "start": "2026-11-21T04:07:05Z",
+    "duration_ms": 107000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855330-step-6",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855330",
+    "service": "ubuntu-latest-mindeps-array-test-ci",
+    "name": "Coverage",
+    "start": "2026-11-21T04:08:52Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855330-step-7",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855330",
+    "service": "ubuntu-latest-mindeps-array-test-ci",
+    "name": "Upload test results",
+    "start": "2026-11-21T04:08:55Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855330-step-13",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855330",
+    "service": "ubuntu-latest-mindeps-array-test-ci",
+    "name": "Post Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:08:56Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855330-step-14",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855330",
+    "service": "ubuntu-latest-mindeps-array-test-ci",
+    "name": "Post Checkout source",
+    "start": "2026-11-21T04:08:56Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855330-step-15",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855330",
+    "service": "ubuntu-latest-mindeps-array-test-ci",
+    "name": "Complete job",
+    "start": "2026-11-21T04:08:56Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855331",
+    "trace_id": "run-44864445442",
+    "parent_id": "run-44864445442",
+    "service": "windows-latest-py313-test-ci",
+    "name": "windows-latest py313 test-ci",
+    "start": "2026-11-21T04:06:38Z",
+    "duration_ms": 1475000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855331-step-1",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855331",
+    "service": "windows-latest-py313-test-ci",
+    "name": "Set up job",
+    "start": "2026-11-21T04:06:38Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855331-step-2",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855331",
+    "service": "windows-latest-py313-test-ci",
+    "name": "Checkout source",
+    "start": "2026-11-21T04:06:40Z",
+    "duration_ms": 17000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855331-step-4",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855331",
+    "service": "windows-latest-py313-test-ci",
+    "name": "Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:06:57Z",
+    "duration_ms": 139000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855331-step-5",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855331",
+    "service": "windows-latest-py313-test-ci",
+    "name": "Run tests",
+    "start": "2026-11-21T04:09:16Z",
+    "duration_ms": 1305000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855331-step-6",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855331",
+    "service": "windows-latest-py313-test-ci",
+    "name": "Coverage",
+    "start": "2026-11-21T04:31:01Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855331-step-7",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855331",
+    "service": "windows-latest-py313-test-ci",
+    "name": "Upload test results",
+    "start": "2026-11-21T04:31:08Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855331-step-13",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855331",
+    "service": "windows-latest-py313-test-ci",
+    "name": "Post Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:31:10Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855331-step-14",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855331",
+    "service": "windows-latest-py313-test-ci",
+    "name": "Post Checkout source",
+    "start": "2026-11-21T04:31:10Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855331-step-15",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855331",
+    "service": "windows-latest-py313-test-ci",
+    "name": "Complete job",
+    "start": "2026-11-21T04:31:12Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855333",
+    "trace_id": "run-44864445442",
+    "parent_id": "run-44864445442",
+    "service": "ubuntu-latest-mindeps-non-optional-test-ci",
+    "name": "ubuntu-latest mindeps-non-optional test-ci",
+    "start": "2026-11-21T04:06:38Z",
+    "duration_ms": 78000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855333-step-1",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855333",
+    "service": "ubuntu-latest-mindeps-non-optional-test-ci",
+    "name": "Set up job",
+    "start": "2026-11-21T04:06:39Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855333-step-2",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855333",
+    "service": "ubuntu-latest-mindeps-non-optional-test-ci",
+    "name": "Checkout source",
+    "start": "2026-11-21T04:06:42Z",
+    "duration_ms": 16000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855333-step-3",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855333",
+    "service": "ubuntu-latest-mindeps-non-optional-test-ci",
+    "name": "Reconfigure pytest-timeout",
+    "start": "2026-11-21T04:06:58Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855333-step-4",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855333",
+    "service": "ubuntu-latest-mindeps-non-optional-test-ci",
+    "name": "Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:06:58Z",
+    "duration_ms": 13000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855333-step-5",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855333",
+    "service": "ubuntu-latest-mindeps-non-optional-test-ci",
+    "name": "Run tests",
+    "start": "2026-11-21T04:07:11Z",
+    "duration_ms": 37000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855333-step-6",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855333",
+    "service": "ubuntu-latest-mindeps-non-optional-test-ci",
+    "name": "Coverage",
+    "start": "2026-11-21T04:07:48Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855333-step-7",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855333",
+    "service": "ubuntu-latest-mindeps-non-optional-test-ci",
+    "name": "Upload test results",
+    "start": "2026-11-21T04:07:51Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855333-step-13",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855333",
+    "service": "ubuntu-latest-mindeps-non-optional-test-ci",
+    "name": "Post Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:07:53Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855333-step-14",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855333",
+    "service": "ubuntu-latest-mindeps-non-optional-test-ci",
+    "name": "Post Checkout source",
+    "start": "2026-11-21T04:07:53Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855333-step-15",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855333",
+    "service": "ubuntu-latest-mindeps-non-optional-test-ci",
+    "name": "Complete job",
+    "start": "2026-11-21T04:07:53Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855364",
+    "trace_id": "run-44864445442",
+    "parent_id": "run-44864445442",
+    "service": "ubuntu-latest-mindeps-array-test-array-expr",
+    "name": "ubuntu-latest mindeps-array test-array-expr",
+    "start": "2026-11-21T04:06:38Z",
+    "duration_ms": 56000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855364-step-1",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855364",
+    "service": "ubuntu-latest-mindeps-array-test-array-expr",
+    "name": "Set up job",
+    "start": "2026-11-21T04:06:39Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855364-step-2",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855364",
+    "service": "ubuntu-latest-mindeps-array-test-array-expr",
+    "name": "Checkout source",
+    "start": "2026-11-21T04:06:43Z",
+    "duration_ms": 14000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855364-step-3",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855364",
+    "service": "ubuntu-latest-mindeps-array-test-array-expr",
+    "name": "Reconfigure pytest-timeout",
+    "start": "2026-11-21T04:06:57Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855364-step-4",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855364",
+    "service": "ubuntu-latest-mindeps-array-test-array-expr",
+    "name": "Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:06:57Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855364-step-5",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855364",
+    "service": "ubuntu-latest-mindeps-array-test-array-expr",
+    "name": "Run tests",
+    "start": "2026-11-21T04:07:05Z",
+    "duration_ms": 21000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855364-step-6",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855364",
+    "service": "ubuntu-latest-mindeps-array-test-array-expr",
+    "name": "Coverage",
+    "start": "2026-11-21T04:07:26Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855364-step-7",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855364",
+    "service": "ubuntu-latest-mindeps-array-test-array-expr",
+    "name": "Upload test results",
+    "start": "2026-11-21T04:07:29Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855364-step-13",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855364",
+    "service": "ubuntu-latest-mindeps-array-test-array-expr",
+    "name": "Post Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:07:31Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855364-step-14",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855364",
+    "service": "ubuntu-latest-mindeps-array-test-array-expr",
+    "name": "Post Checkout source",
+    "start": "2026-11-21T04:07:31Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855364-step-15",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855364",
+    "service": "ubuntu-latest-mindeps-array-test-array-expr",
+    "name": "Complete job",
+    "start": "2026-11-21T04:07:31Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855367",
+    "trace_id": "run-44864445442",
+    "parent_id": "run-44864445442",
+    "service": "ubuntu-latest-mindeps-distributed-test-ci",
+    "name": "ubuntu-latest mindeps-distributed test-ci",
+    "start": "2026-11-21T04:06:38Z",
+    "duration_ms": 119000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855367-step-1",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855367",
+    "service": "ubuntu-latest-mindeps-distributed-test-ci",
+    "name": "Set up job",
+    "start": "2026-11-21T04:06:38Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855367-step-2",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855367",
+    "service": "ubuntu-latest-mindeps-distributed-test-ci",
+    "name": "Checkout source",
+    "start": "2026-11-21T04:06:39Z",
+    "duration_ms": 18000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855367-step-3",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855367",
+    "service": "ubuntu-latest-mindeps-distributed-test-ci",
+    "name": "Reconfigure pytest-timeout",
+    "start": "2026-11-21T04:06:57Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855367-step-4",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855367",
+    "service": "ubuntu-latest-mindeps-distributed-test-ci",
+    "name": "Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:06:57Z",
+    "duration_ms": 12000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855367-step-5",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855367",
+    "service": "ubuntu-latest-mindeps-distributed-test-ci",
+    "name": "Run tests",
+    "start": "2026-11-21T04:07:09Z",
+    "duration_ms": 84000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855367-step-6",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855367",
+    "service": "ubuntu-latest-mindeps-distributed-test-ci",
+    "name": "Coverage",
+    "start": "2026-11-21T04:08:33Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855367-step-7",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855367",
+    "service": "ubuntu-latest-mindeps-distributed-test-ci",
+    "name": "Upload test results",
+    "start": "2026-11-21T04:08:35Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855367-step-13",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855367",
+    "service": "ubuntu-latest-mindeps-distributed-test-ci",
+    "name": "Post Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:08:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855367-step-14",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855367",
+    "service": "ubuntu-latest-mindeps-distributed-test-ci",
+    "name": "Post Checkout source",
+    "start": "2026-11-21T04:08:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855367-step-15",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855367",
+    "service": "ubuntu-latest-mindeps-distributed-test-ci",
+    "name": "Complete job",
+    "start": "2026-11-21T04:08:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855370",
+    "trace_id": "run-44864445442",
+    "parent_id": "run-44864445442",
+    "service": "ubuntu-latest-mindeps-optional-test-ci",
+    "name": "ubuntu-latest mindeps-optional test-ci",
+    "start": "2026-11-21T04:06:38Z",
+    "duration_ms": 1357000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855370-step-1",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855370",
+    "service": "ubuntu-latest-mindeps-optional-test-ci",
+    "name": "Set up job",
+    "start": "2026-11-21T04:06:38Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855370-step-2",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855370",
+    "service": "ubuntu-latest-mindeps-optional-test-ci",
+    "name": "Checkout source",
+    "start": "2026-11-21T04:06:41Z",
+    "duration_ms": 18000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855370-step-3",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855370",
+    "service": "ubuntu-latest-mindeps-optional-test-ci",
+    "name": "Reconfigure pytest-timeout",
+    "start": "2026-11-21T04:06:59Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855370-step-4",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855370",
+    "service": "ubuntu-latest-mindeps-optional-test-ci",
+    "name": "Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:06:59Z",
+    "duration_ms": 40000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855370-step-5",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855370",
+    "service": "ubuntu-latest-mindeps-optional-test-ci",
+    "name": "Run tests",
+    "start": "2026-11-21T04:07:39Z",
+    "duration_ms": 1288000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855370-step-6",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855370",
+    "service": "ubuntu-latest-mindeps-optional-test-ci",
+    "name": "Coverage",
+    "start": "2026-11-21T04:29:07Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855370-step-7",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855370",
+    "service": "ubuntu-latest-mindeps-optional-test-ci",
+    "name": "Upload test results",
+    "start": "2026-11-21T04:29:12Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855370-step-13",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855370",
+    "service": "ubuntu-latest-mindeps-optional-test-ci",
+    "name": "Post Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:29:13Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855370-step-14",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855370",
+    "service": "ubuntu-latest-mindeps-optional-test-ci",
+    "name": "Post Checkout source",
+    "start": "2026-11-21T04:29:13Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855370-step-15",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855370",
+    "service": "ubuntu-latest-mindeps-optional-test-ci",
+    "name": "Complete job",
+    "start": "2026-11-21T04:29:13Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855383",
+    "trace_id": "run-44864445442",
+    "parent_id": "run-44864445442",
+    "service": "ubuntu-latest-mindeps-dataframe-test-ci",
+    "name": "ubuntu-latest mindeps-dataframe test-ci",
+    "start": "2026-11-21T04:06:38Z",
+    "duration_ms": 1092000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855383-step-1",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855383",
+    "service": "ubuntu-latest-mindeps-dataframe-test-ci",
+    "name": "Set up job",
+    "start": "2026-11-21T04:06:39Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855383-step-2",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855383",
+    "service": "ubuntu-latest-mindeps-dataframe-test-ci",
+    "name": "Checkout source",
+    "start": "2026-11-21T04:06:40Z",
+    "duration_ms": 15000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855383-step-3",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855383",
+    "service": "ubuntu-latest-mindeps-dataframe-test-ci",
+    "name": "Reconfigure pytest-timeout",
+    "start": "2026-11-21T04:06:55Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855383-step-4",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855383",
+    "service": "ubuntu-latest-mindeps-dataframe-test-ci",
+    "name": "Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:06:55Z",
+    "duration_ms": 12000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855383-step-5",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855383",
+    "service": "ubuntu-latest-mindeps-dataframe-test-ci",
+    "name": "Run tests",
+    "start": "2026-11-21T04:07:07Z",
+    "duration_ms": 1058000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855383-step-6",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855383",
+    "service": "ubuntu-latest-mindeps-dataframe-test-ci",
+    "name": "Coverage",
+    "start": "2026-11-21T04:24:45Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855383-step-7",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855383",
+    "service": "ubuntu-latest-mindeps-dataframe-test-ci",
+    "name": "Upload test results",
+    "start": "2026-11-21T04:24:48Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855383-step-13",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855383",
+    "service": "ubuntu-latest-mindeps-dataframe-test-ci",
+    "name": "Post Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:24:48Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855383-step-14",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855383",
+    "service": "ubuntu-latest-mindeps-dataframe-test-ci",
+    "name": "Post Checkout source",
+    "start": "2026-11-21T04:24:49Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855383-step-15",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855383",
+    "service": "ubuntu-latest-mindeps-dataframe-test-ci",
+    "name": "Complete job",
+    "start": "2026-11-21T04:24:49Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855404",
+    "trace_id": "run-44864445442",
+    "parent_id": "run-44864445442",
+    "service": "ubuntu-latest-py314t-test-ci",
+    "name": "ubuntu-latest py314t test-ci",
+    "start": "2026-11-21T04:06:38Z",
+    "duration_ms": 803000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855404-step-1",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855404",
+    "service": "ubuntu-latest-py314t-test-ci",
+    "name": "Set up job",
+    "start": "2026-11-21T04:06:38Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855404-step-2",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855404",
+    "service": "ubuntu-latest-py314t-test-ci",
+    "name": "Checkout source",
+    "start": "2026-11-21T04:06:40Z",
+    "duration_ms": 13000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855404-step-3",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855404",
+    "service": "ubuntu-latest-py314t-test-ci",
+    "name": "Reconfigure pytest-timeout",
+    "start": "2026-11-21T04:06:53Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855404-step-4",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855404",
+    "service": "ubuntu-latest-py314t-test-ci",
+    "name": "Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:06:53Z",
+    "duration_ms": 21000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855404-step-5",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855404",
+    "service": "ubuntu-latest-py314t-test-ci",
+    "name": "Run tests",
+    "start": "2026-11-21T04:07:14Z",
+    "duration_ms": 760000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855404-step-6",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855404",
+    "service": "ubuntu-latest-py314t-test-ci",
+    "name": "Coverage",
+    "start": "2026-11-21T04:19:54Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855404-step-7",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855404",
+    "service": "ubuntu-latest-py314t-test-ci",
+    "name": "Upload test results",
+    "start": "2026-11-21T04:19:57Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855404-step-13",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855404",
+    "service": "ubuntu-latest-py314t-test-ci",
+    "name": "Post Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:19:58Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855404-step-14",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855404",
+    "service": "ubuntu-latest-py314t-test-ci",
+    "name": "Post Checkout source",
+    "start": "2026-11-21T04:19:59Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855404-step-15",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855404",
+    "service": "ubuntu-latest-py314t-test-ci",
+    "name": "Complete job",
+    "start": "2026-11-21T04:19:59Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855410",
+    "trace_id": "run-44864445442",
+    "parent_id": "run-44864445442",
+    "service": "macos-latest-py315-test-ci",
+    "name": "macos-latest py315 test-ci",
+    "start": "2026-11-21T04:06:39Z",
+    "duration_ms": 893000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855410-step-1",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855410",
+    "service": "macos-latest-py315-test-ci",
+    "name": "Set up job",
+    "start": "2026-11-21T04:06:39Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855410-step-2",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855410",
+    "service": "macos-latest-py315-test-ci",
+    "name": "Checkout source",
+    "start": "2026-11-21T04:06:43Z",
+    "duration_ms": 18000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855410-step-3",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855410",
+    "service": "macos-latest-py315-test-ci",
+    "name": "Reconfigure pytest-timeout",
+    "start": "2026-11-21T04:07:01Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855410-step-4",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855410",
+    "service": "macos-latest-py315-test-ci",
+    "name": "Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:07:02Z",
+    "duration_ms": 79000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855410-step-5",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855410",
+    "service": "macos-latest-py315-test-ci",
+    "name": "Run tests",
+    "start": "2026-11-21T04:08:21Z",
+    "duration_ms": 774000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855410-step-6",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855410",
+    "service": "macos-latest-py315-test-ci",
+    "name": "Coverage",
+    "start": "2026-11-21T04:21:15Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855410-step-7",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855410",
+    "service": "macos-latest-py315-test-ci",
+    "name": "Upload test results",
+    "start": "2026-11-21T04:21:20Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855410-step-13",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855410",
+    "service": "macos-latest-py315-test-ci",
+    "name": "Post Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:21:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855410-step-14",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855410",
+    "service": "macos-latest-py315-test-ci",
+    "name": "Post Checkout source",
+    "start": "2026-11-21T04:21:22Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855410-step-15",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855410",
+    "service": "macos-latest-py315-test-ci",
+    "name": "Complete job",
+    "start": "2026-11-21T04:21:28Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855444",
+    "trace_id": "run-44864445442",
+    "parent_id": "run-44864445442",
+    "service": "ubuntu-latest-py312-test-ci",
+    "name": "ubuntu-latest py312 test-ci",
+    "start": "2026-11-21T04:06:38Z",
+    "duration_ms": 1370000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855444-step-1",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855444",
+    "service": "ubuntu-latest-py312-test-ci",
+    "name": "Set up job",
+    "start": "2026-11-21T04:06:39Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855444-step-2",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855444",
+    "service": "ubuntu-latest-py312-test-ci",
+    "name": "Checkout source",
+    "start": "2026-11-21T04:06:41Z",
+    "duration_ms": 17000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855444-step-3",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855444",
+    "service": "ubuntu-latest-py312-test-ci",
+    "name": "Reconfigure pytest-timeout",
+    "start": "2026-11-21T04:06:58Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855444-step-4",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855444",
+    "service": "ubuntu-latest-py312-test-ci",
+    "name": "Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:06:58Z",
+    "duration_ms": 34000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855444-step-5",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855444",
+    "service": "ubuntu-latest-py312-test-ci",
+    "name": "Run tests",
+    "start": "2026-11-21T04:07:32Z",
+    "duration_ms": 1309000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855444-step-6",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855444",
+    "service": "ubuntu-latest-py312-test-ci",
+    "name": "Coverage",
+    "start": "2026-11-21T04:29:21Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855444-step-7",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855444",
+    "service": "ubuntu-latest-py312-test-ci",
+    "name": "Upload test results",
+    "start": "2026-11-21T04:29:24Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855444-step-13",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855444",
+    "service": "ubuntu-latest-py312-test-ci",
+    "name": "Post Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:29:26Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855444-step-14",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855444",
+    "service": "ubuntu-latest-py312-test-ci",
+    "name": "Post Checkout source",
+    "start": "2026-11-21T04:29:26Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855444-step-15",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855444",
+    "service": "ubuntu-latest-py312-test-ci",
+    "name": "Complete job",
+    "start": "2026-11-21T04:29:26Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855445",
+    "trace_id": "run-44864445442",
+    "parent_id": "run-44864445442",
+    "service": "ubuntu-latest-py315t-test-ci",
+    "name": "ubuntu-latest py315t test-ci",
+    "start": "2026-11-21T04:06:38Z",
+    "duration_ms": 74000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855445-step-1",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855445",
+    "service": "ubuntu-latest-py315t-test-ci",
+    "name": "Set up job",
+    "start": "2026-11-21T04:06:38Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855445-step-2",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855445",
+    "service": "ubuntu-latest-py315t-test-ci",
+    "name": "Checkout source",
+    "start": "2026-11-21T04:06:40Z",
+    "duration_ms": 16000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855445-step-3",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855445",
+    "service": "ubuntu-latest-py315t-test-ci",
+    "name": "Reconfigure pytest-timeout",
+    "start": "2026-11-21T04:06:56Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855445-step-4",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855445",
+    "service": "ubuntu-latest-py315t-test-ci",
+    "name": "Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:06:56Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855445-step-5",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855445",
+    "service": "ubuntu-latest-py315t-test-ci",
+    "name": "Run tests",
+    "start": "2026-11-21T04:07:05Z",
+    "duration_ms": 41000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855445-step-6",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855445",
+    "service": "ubuntu-latest-py315t-test-ci",
+    "name": "Coverage",
+    "start": "2026-11-21T04:07:46Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855445-step-7",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855445",
+    "service": "ubuntu-latest-py315t-test-ci",
+    "name": "Upload test results",
+    "start": "2026-11-21T04:07:49Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855445-step-13",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855445",
+    "service": "ubuntu-latest-py315t-test-ci",
+    "name": "Post Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:07:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855445-step-14",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855445",
+    "service": "ubuntu-latest-py315t-test-ci",
+    "name": "Post Checkout source",
+    "start": "2026-11-21T04:07:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855445-step-15",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855445",
+    "service": "ubuntu-latest-py315t-test-ci",
+    "name": "Complete job",
+    "start": "2026-11-21T04:07:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855455",
+    "trace_id": "run-44864445442",
+    "parent_id": "run-44864445442",
+    "service": "ubuntu-latest-spark-test-spark",
+    "name": "ubuntu-latest spark test-spark",
+    "start": "2026-11-21T04:06:38Z",
+    "duration_ms": 68000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855455-step-1",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855455",
+    "service": "ubuntu-latest-spark-test-spark",
+    "name": "Set up job",
+    "start": "2026-11-21T04:06:39Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855455-step-2",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855455",
+    "service": "ubuntu-latest-spark-test-spark",
+    "name": "Checkout source",
+    "start": "2026-11-21T04:06:40Z",
+    "duration_ms": 14000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855455-step-3",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855455",
+    "service": "ubuntu-latest-spark-test-spark",
+    "name": "Reconfigure pytest-timeout",
+    "start": "2026-11-21T04:06:54Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855455-step-4",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855455",
+    "service": "ubuntu-latest-spark-test-spark",
+    "name": "Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:06:54Z",
+    "duration_ms": 26000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855455-step-5",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855455",
+    "service": "ubuntu-latest-spark-test-spark",
+    "name": "Run tests",
+    "start": "2026-11-21T04:07:20Z",
+    "duration_ms": 20000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855455-step-6",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855455",
+    "service": "ubuntu-latest-spark-test-spark",
+    "name": "Coverage",
+    "start": "2026-11-21T04:07:40Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855455-step-7",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855455",
+    "service": "ubuntu-latest-spark-test-spark",
+    "name": "Upload test results",
+    "start": "2026-11-21T04:07:43Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855455-step-13",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855455",
+    "service": "ubuntu-latest-spark-test-spark",
+    "name": "Post Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:07:44Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855455-step-14",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855455",
+    "service": "ubuntu-latest-spark-test-spark",
+    "name": "Post Checkout source",
+    "start": "2026-11-21T04:07:44Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855455-step-15",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855455",
+    "service": "ubuntu-latest-spark-test-spark",
+    "name": "Complete job",
+    "start": "2026-11-21T04:07:44Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855548",
+    "trace_id": "run-44864445442",
+    "parent_id": "run-44864445442",
+    "service": "ubuntu-24-04-arm-py312-test-ci",
+    "name": "ubuntu-24.04-arm py312 test-ci",
+    "start": "2026-11-21T04:06:40Z",
+    "duration_ms": 774000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855548-step-1",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855548",
+    "service": "ubuntu-24-04-arm-py312-test-ci",
+    "name": "Set up job",
+    "start": "2026-11-21T04:06:41Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855548-step-2",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855548",
+    "service": "ubuntu-24-04-arm-py312-test-ci",
+    "name": "Checkout source",
+    "start": "2026-11-21T04:06:42Z",
+    "duration_ms": 12000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855548-step-3",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855548",
+    "service": "ubuntu-24-04-arm-py312-test-ci",
+    "name": "Reconfigure pytest-timeout",
+    "start": "2026-11-21T04:06:54Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855548-step-4",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855548",
+    "service": "ubuntu-24-04-arm-py312-test-ci",
+    "name": "Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:06:54Z",
+    "duration_ms": 28000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855548-step-5",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855548",
+    "service": "ubuntu-24-04-arm-py312-test-ci",
+    "name": "Run tests",
+    "start": "2026-11-21T04:07:22Z",
+    "duration_ms": 726000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855548-step-6",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855548",
+    "service": "ubuntu-24-04-arm-py312-test-ci",
+    "name": "Coverage",
+    "start": "2026-11-21T04:19:28Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855548-step-7",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855548",
+    "service": "ubuntu-24-04-arm-py312-test-ci",
+    "name": "Upload test results",
+    "start": "2026-11-21T04:19:31Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855548-step-13",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855548",
+    "service": "ubuntu-24-04-arm-py312-test-ci",
+    "name": "Post Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:19:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855548-step-14",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855548",
+    "service": "ubuntu-24-04-arm-py312-test-ci",
+    "name": "Post Checkout source",
+    "start": "2026-11-21T04:19:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855548-step-15",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855548",
+    "service": "ubuntu-24-04-arm-py312-test-ci",
+    "name": "Complete job",
+    "start": "2026-11-21T04:19:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855577",
+    "trace_id": "run-44864445442",
+    "parent_id": "run-44864445442",
+    "service": "windows-latest-py314-test-ci",
+    "name": "windows-latest py314 test-ci",
+    "start": "2026-11-21T04:06:38Z",
+    "duration_ms": 1291000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855577-step-1",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855577",
+    "service": "windows-latest-py314-test-ci",
+    "name": "Set up job",
+    "start": "2026-11-21T04:06:39Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855577-step-2",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855577",
+    "service": "windows-latest-py314-test-ci",
+    "name": "Checkout source",
+    "start": "2026-11-21T04:06:42Z",
+    "duration_ms": 23000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855577-step-4",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855577",
+    "service": "windows-latest-py314-test-ci",
+    "name": "Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:07:05Z",
+    "duration_ms": 134000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855577-step-5",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855577",
+    "service": "windows-latest-py314-test-ci",
+    "name": "Run tests",
+    "start": "2026-11-21T04:09:19Z",
+    "duration_ms": 1114000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855577-step-6",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855577",
+    "service": "windows-latest-py314-test-ci",
+    "name": "Coverage",
+    "start": "2026-11-21T04:27:53Z",
+    "duration_ms": 10000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855577-step-7",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855577",
+    "service": "windows-latest-py314-test-ci",
+    "name": "Upload test results",
+    "start": "2026-11-21T04:28:03Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855577-step-13",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855577",
+    "service": "windows-latest-py314-test-ci",
+    "name": "Post Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:28:05Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855577-step-14",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855577",
+    "service": "windows-latest-py314-test-ci",
+    "name": "Post Checkout source",
+    "start": "2026-11-21T04:28:05Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855577-step-15",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855577",
+    "service": "windows-latest-py314-test-ci",
+    "name": "Complete job",
+    "start": "2026-11-21T04:28:07Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855601",
+    "trace_id": "run-44864445442",
+    "parent_id": "run-44864445442",
+    "service": "ubuntu-latest-py310-test-ci",
+    "name": "ubuntu-latest py310 test-ci",
+    "start": "2026-11-21T04:06:38Z",
+    "duration_ms": 1434000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-136724855601-step-1",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855601",
+    "service": "ubuntu-latest-py310-test-ci",
+    "name": "Set up job",
+    "start": "2026-11-21T04:06:39Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855601-step-2",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855601",
+    "service": "ubuntu-latest-py310-test-ci",
+    "name": "Checkout source",
+    "start": "2026-11-21T04:06:41Z",
+    "duration_ms": 17000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855601-step-3",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855601",
+    "service": "ubuntu-latest-py310-test-ci",
+    "name": "Reconfigure pytest-timeout",
+    "start": "2026-11-21T04:06:58Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855601-step-4",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855601",
+    "service": "ubuntu-latest-py310-test-ci",
+    "name": "Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:06:58Z",
+    "duration_ms": 32000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855601-step-5",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855601",
+    "service": "ubuntu-latest-py310-test-ci",
+    "name": "Run tests",
+    "start": "2026-11-21T04:07:30Z",
+    "duration_ms": 1377000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-136724855601-step-7",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855601",
+    "service": "ubuntu-latest-py310-test-ci",
+    "name": "Upload test results",
+    "start": "2026-11-21T04:30:27Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855601-step-13",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855601",
+    "service": "ubuntu-latest-py310-test-ci",
+    "name": "Post Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:30:28Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855601-step-14",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855601",
+    "service": "ubuntu-latest-py310-test-ci",
+    "name": "Post Checkout source",
+    "start": "2026-11-21T04:30:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855601-step-15",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855601",
+    "service": "ubuntu-latest-py310-test-ci",
+    "name": "Complete job",
+    "start": "2026-11-21T04:30:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855605",
+    "trace_id": "run-44864445442",
+    "parent_id": "run-44864445442",
+    "service": "windows-latest-py311-test-ci",
+    "name": "windows-latest py311 test-ci",
+    "start": "2026-11-21T04:06:38Z",
+    "duration_ms": 1666000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855605-step-1",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855605",
+    "service": "windows-latest-py311-test-ci",
+    "name": "Set up job",
+    "start": "2026-11-21T04:06:39Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855605-step-2",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855605",
+    "service": "windows-latest-py311-test-ci",
+    "name": "Checkout source",
+    "start": "2026-11-21T04:06:40Z",
+    "duration_ms": 20000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855605-step-4",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855605",
+    "service": "windows-latest-py311-test-ci",
+    "name": "Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:07:00Z",
+    "duration_ms": 139000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855605-step-5",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855605",
+    "service": "windows-latest-py311-test-ci",
+    "name": "Run tests",
+    "start": "2026-11-21T04:09:19Z",
+    "duration_ms": 1491000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855605-step-6",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855605",
+    "service": "windows-latest-py311-test-ci",
+    "name": "Coverage",
+    "start": "2026-11-21T04:34:10Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855605-step-7",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855605",
+    "service": "windows-latest-py311-test-ci",
+    "name": "Upload test results",
+    "start": "2026-11-21T04:34:18Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855605-step-13",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855605",
+    "service": "windows-latest-py311-test-ci",
+    "name": "Post Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:34:20Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855605-step-14",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855605",
+    "service": "windows-latest-py311-test-ci",
+    "name": "Post Checkout source",
+    "start": "2026-11-21T04:34:20Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855605-step-15",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855605",
+    "service": "windows-latest-py311-test-ci",
+    "name": "Complete job",
+    "start": "2026-11-21T04:34:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855610",
+    "trace_id": "run-44864445442",
+    "parent_id": "run-44864445442",
+    "service": "ubuntu-latest-py313-test-ci",
+    "name": "ubuntu-latest py313 test-ci",
+    "start": "2026-11-21T04:06:38Z",
+    "duration_ms": 1429000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855610-step-1",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855610",
+    "service": "ubuntu-latest-py313-test-ci",
+    "name": "Set up job",
+    "start": "2026-11-21T04:06:39Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855610-step-2",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855610",
+    "service": "ubuntu-latest-py313-test-ci",
+    "name": "Checkout source",
+    "start": "2026-11-21T04:06:41Z",
+    "duration_ms": 16000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855610-step-3",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855610",
+    "service": "ubuntu-latest-py313-test-ci",
+    "name": "Reconfigure pytest-timeout",
+    "start": "2026-11-21T04:06:57Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855610-step-4",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855610",
+    "service": "ubuntu-latest-py313-test-ci",
+    "name": "Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:06:58Z",
+    "duration_ms": 30000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855610-step-5",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855610",
+    "service": "ubuntu-latest-py313-test-ci",
+    "name": "Run tests",
+    "start": "2026-11-21T04:07:28Z",
+    "duration_ms": 1371000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855610-step-6",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855610",
+    "service": "ubuntu-latest-py313-test-ci",
+    "name": "Coverage",
+    "start": "2026-11-21T04:30:19Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855610-step-7",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855610",
+    "service": "ubuntu-latest-py313-test-ci",
+    "name": "Upload test results",
+    "start": "2026-11-21T04:30:23Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855610-step-13",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855610",
+    "service": "ubuntu-latest-py313-test-ci",
+    "name": "Post Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:30:25Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855610-step-14",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855610",
+    "service": "ubuntu-latest-py313-test-ci",
+    "name": "Post Checkout source",
+    "start": "2026-11-21T04:30:25Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855610-step-15",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855610",
+    "service": "ubuntu-latest-py313-test-ci",
+    "name": "Complete job",
+    "start": "2026-11-21T04:30:25Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855619",
+    "trace_id": "run-44864445442",
+    "parent_id": "run-44864445442",
+    "service": "windows-latest-py312-test-ci",
+    "name": "windows-latest py312 test-ci",
+    "start": "2026-11-21T04:06:38Z",
+    "duration_ms": 2362000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855619-step-1",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855619",
+    "service": "windows-latest-py312-test-ci",
+    "name": "Set up job",
+    "start": "2026-11-21T04:06:40Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855619-step-2",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855619",
+    "service": "windows-latest-py312-test-ci",
+    "name": "Checkout source",
+    "start": "2026-11-21T04:06:42Z",
+    "duration_ms": 22000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855619-step-4",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855619",
+    "service": "windows-latest-py312-test-ci",
+    "name": "Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:07:04Z",
+    "duration_ms": 139000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855619-step-5",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855619",
+    "service": "windows-latest-py312-test-ci",
+    "name": "Run tests",
+    "start": "2026-11-21T04:09:23Z",
+    "duration_ms": 2181000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855619-step-6",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855619",
+    "service": "windows-latest-py312-test-ci",
+    "name": "Coverage",
+    "start": "2026-11-21T04:45:44Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855619-step-7",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855619",
+    "service": "windows-latest-py312-test-ci",
+    "name": "Upload test results",
+    "start": "2026-11-21T04:45:53Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855619-step-13",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855619",
+    "service": "windows-latest-py312-test-ci",
+    "name": "Post Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:45:55Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855619-step-14",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855619",
+    "service": "windows-latest-py312-test-ci",
+    "name": "Post Checkout source",
+    "start": "2026-11-21T04:45:55Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855619-step-15",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855619",
+    "service": "windows-latest-py312-test-ci",
+    "name": "Complete job",
+    "start": "2026-11-21T04:45:58Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855635",
+    "trace_id": "run-44864445442",
+    "parent_id": "run-44864445442",
+    "service": "ubuntu-24-04-arm-py315-test-ci",
+    "name": "ubuntu-24.04-arm py315 test-ci",
+    "start": "2026-11-21T04:06:40Z",
+    "duration_ms": 570000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855635-step-1",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855635",
+    "service": "ubuntu-24-04-arm-py315-test-ci",
+    "name": "Set up job",
+    "start": "2026-11-21T04:06:41Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855635-step-2",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855635",
+    "service": "ubuntu-24-04-arm-py315-test-ci",
+    "name": "Checkout source",
+    "start": "2026-11-21T04:06:43Z",
+    "duration_ms": 13000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855635-step-3",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855635",
+    "service": "ubuntu-24-04-arm-py315-test-ci",
+    "name": "Reconfigure pytest-timeout",
+    "start": "2026-11-21T04:06:56Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855635-step-4",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855635",
+    "service": "ubuntu-24-04-arm-py315-test-ci",
+    "name": "Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:06:56Z",
+    "duration_ms": 29000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855635-step-5",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855635",
+    "service": "ubuntu-24-04-arm-py315-test-ci",
+    "name": "Run tests",
+    "start": "2026-11-21T04:07:25Z",
+    "duration_ms": 518000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855635-step-6",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855635",
+    "service": "ubuntu-24-04-arm-py315-test-ci",
+    "name": "Coverage",
+    "start": "2026-11-21T04:16:03Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855635-step-7",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855635",
+    "service": "ubuntu-24-04-arm-py315-test-ci",
+    "name": "Upload test results",
+    "start": "2026-11-21T04:16:07Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855635-step-13",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855635",
+    "service": "ubuntu-24-04-arm-py315-test-ci",
+    "name": "Post Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:16:08Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855635-step-14",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855635",
+    "service": "ubuntu-24-04-arm-py315-test-ci",
+    "name": "Post Checkout source",
+    "start": "2026-11-21T04:16:08Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855635-step-15",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855635",
+    "service": "ubuntu-24-04-arm-py315-test-ci",
+    "name": "Complete job",
+    "start": "2026-11-21T04:16:08Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855636",
+    "trace_id": "run-44864445442",
+    "parent_id": "run-44864445442",
+    "service": "ubuntu-latest-py311-test-ci",
+    "name": "ubuntu-latest py311 test-ci",
+    "start": "2026-11-21T04:06:38Z",
+    "duration_ms": 1538000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855636-step-1",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855636",
+    "service": "ubuntu-latest-py311-test-ci",
+    "name": "Set up job",
+    "start": "2026-11-21T04:06:38Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855636-step-2",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855636",
+    "service": "ubuntu-latest-py311-test-ci",
+    "name": "Checkout source",
+    "start": "2026-11-21T04:06:40Z",
+    "duration_ms": 15000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855636-step-3",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855636",
+    "service": "ubuntu-latest-py311-test-ci",
+    "name": "Reconfigure pytest-timeout",
+    "start": "2026-11-21T04:06:55Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855636-step-4",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855636",
+    "service": "ubuntu-latest-py311-test-ci",
+    "name": "Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:06:56Z",
+    "duration_ms": 29000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855636-step-5",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855636",
+    "service": "ubuntu-latest-py311-test-ci",
+    "name": "Run tests",
+    "start": "2026-11-21T04:07:25Z",
+    "duration_ms": 1486000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855636-step-6",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855636",
+    "service": "ubuntu-latest-py311-test-ci",
+    "name": "Coverage",
+    "start": "2026-11-21T04:32:11Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855636-step-7",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855636",
+    "service": "ubuntu-latest-py311-test-ci",
+    "name": "Upload test results",
+    "start": "2026-11-21T04:32:14Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855636-step-13",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855636",
+    "service": "ubuntu-latest-py311-test-ci",
+    "name": "Post Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:32:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855636-step-14",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855636",
+    "service": "ubuntu-latest-py311-test-ci",
+    "name": "Post Checkout source",
+    "start": "2026-11-21T04:32:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855636-step-15",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855636",
+    "service": "ubuntu-latest-py311-test-ci",
+    "name": "Complete job",
+    "start": "2026-11-21T04:32:15Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855646",
+    "trace_id": "run-44864445442",
+    "parent_id": "run-44864445442",
+    "service": "ubuntu-latest-py314-test-ci",
+    "name": "ubuntu-latest py314 test-ci",
+    "start": "2026-11-21T04:06:38Z",
+    "duration_ms": 1049000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855646-step-1",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855646",
+    "service": "ubuntu-latest-py314-test-ci",
+    "name": "Set up job",
+    "start": "2026-11-21T04:06:39Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855646-step-2",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855646",
+    "service": "ubuntu-latest-py314-test-ci",
+    "name": "Checkout source",
+    "start": "2026-11-21T04:06:40Z",
+    "duration_ms": 16000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855646-step-3",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855646",
+    "service": "ubuntu-latest-py314-test-ci",
+    "name": "Reconfigure pytest-timeout",
+    "start": "2026-11-21T04:06:56Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855646-step-4",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855646",
+    "service": "ubuntu-latest-py314-test-ci",
+    "name": "Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:06:56Z",
+    "duration_ms": 29000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855646-step-5",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855646",
+    "service": "ubuntu-latest-py314-test-ci",
+    "name": "Run tests",
+    "start": "2026-11-21T04:07:25Z",
+    "duration_ms": 996000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855646-step-6",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855646",
+    "service": "ubuntu-latest-py314-test-ci",
+    "name": "Coverage",
+    "start": "2026-11-21T04:24:01Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855646-step-7",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855646",
+    "service": "ubuntu-latest-py314-test-ci",
+    "name": "Upload test results",
+    "start": "2026-11-21T04:24:04Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855646-step-13",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855646",
+    "service": "ubuntu-latest-py314-test-ci",
+    "name": "Post Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:24:05Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855646-step-14",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855646",
+    "service": "ubuntu-latest-py314-test-ci",
+    "name": "Post Checkout source",
+    "start": "2026-11-21T04:24:05Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855646-step-15",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855646",
+    "service": "ubuntu-latest-py314-test-ci",
+    "name": "Complete job",
+    "start": "2026-11-21T04:24:05Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855664",
+    "trace_id": "run-44864445442",
+    "parent_id": "run-44864445442",
+    "service": "ubuntu-24-04-arm-py314-test-ci",
+    "name": "ubuntu-24.04-arm py314 test-ci",
+    "start": "2026-11-21T04:06:40Z",
+    "duration_ms": 553000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855664-step-1",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855664",
+    "service": "ubuntu-24-04-arm-py314-test-ci",
+    "name": "Set up job",
+    "start": "2026-11-21T04:06:41Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855664-step-2",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855664",
+    "service": "ubuntu-24-04-arm-py314-test-ci",
+    "name": "Checkout source",
+    "start": "2026-11-21T04:06:43Z",
+    "duration_ms": 12000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855664-step-3",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855664",
+    "service": "ubuntu-24-04-arm-py314-test-ci",
+    "name": "Reconfigure pytest-timeout",
+    "start": "2026-11-21T04:06:55Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855664-step-4",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855664",
+    "service": "ubuntu-24-04-arm-py314-test-ci",
+    "name": "Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:06:55Z",
+    "duration_ms": 30000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855664-step-5",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855664",
+    "service": "ubuntu-24-04-arm-py314-test-ci",
+    "name": "Run tests",
+    "start": "2026-11-21T04:07:25Z",
+    "duration_ms": 501000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855664-step-6",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855664",
+    "service": "ubuntu-24-04-arm-py314-test-ci",
+    "name": "Coverage",
+    "start": "2026-11-21T04:15:46Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855664-step-7",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855664",
+    "service": "ubuntu-24-04-arm-py314-test-ci",
+    "name": "Upload test results",
+    "start": "2026-11-21T04:15:49Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855664-step-13",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855664",
+    "service": "ubuntu-24-04-arm-py314-test-ci",
+    "name": "Post Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:15:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855664-step-14",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855664",
+    "service": "ubuntu-24-04-arm-py314-test-ci",
+    "name": "Post Checkout source",
+    "start": "2026-11-21T04:15:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855664-step-15",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855664",
+    "service": "ubuntu-24-04-arm-py314-test-ci",
+    "name": "Complete job",
+    "start": "2026-11-21T04:15:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855667",
+    "trace_id": "run-44864445442",
+    "parent_id": "run-44864445442",
+    "service": "ubuntu-24-04-arm-py311-test-ci",
+    "name": "ubuntu-24.04-arm py311 test-ci",
+    "start": "2026-11-21T04:06:40Z",
+    "duration_ms": 773000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855667-step-1",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855667",
+    "service": "ubuntu-24-04-arm-py311-test-ci",
+    "name": "Set up job",
+    "start": "2026-11-21T04:06:41Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855667-step-2",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855667",
+    "service": "ubuntu-24-04-arm-py311-test-ci",
+    "name": "Checkout source",
+    "start": "2026-11-21T04:06:42Z",
+    "duration_ms": 13000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855667-step-3",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855667",
+    "service": "ubuntu-24-04-arm-py311-test-ci",
+    "name": "Reconfigure pytest-timeout",
+    "start": "2026-11-21T04:06:55Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855667-step-4",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855667",
+    "service": "ubuntu-24-04-arm-py311-test-ci",
+    "name": "Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:06:55Z",
+    "duration_ms": 33000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855667-step-5",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855667",
+    "service": "ubuntu-24-04-arm-py311-test-ci",
+    "name": "Run tests",
+    "start": "2026-11-21T04:07:28Z",
+    "duration_ms": 719000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855667-step-6",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855667",
+    "service": "ubuntu-24-04-arm-py311-test-ci",
+    "name": "Coverage",
+    "start": "2026-11-21T04:19:27Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855667-step-7",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855667",
+    "service": "ubuntu-24-04-arm-py311-test-ci",
+    "name": "Upload test results",
+    "start": "2026-11-21T04:19:30Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855667-step-13",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855667",
+    "service": "ubuntu-24-04-arm-py311-test-ci",
+    "name": "Post Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:19:31Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855667-step-14",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855667",
+    "service": "ubuntu-24-04-arm-py311-test-ci",
+    "name": "Post Checkout source",
+    "start": "2026-11-21T04:19:31Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855667-step-15",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855667",
+    "service": "ubuntu-24-04-arm-py311-test-ci",
+    "name": "Complete job",
+    "start": "2026-11-21T04:19:31Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855676",
+    "trace_id": "run-44864445442",
+    "parent_id": "run-44864445442",
+    "service": "windows-latest-py310-test-ci",
+    "name": "windows-latest py310 test-ci",
+    "start": "2026-11-21T04:06:38Z",
+    "duration_ms": 1856000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-136724855676-step-1",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855676",
+    "service": "windows-latest-py310-test-ci",
+    "name": "Set up job",
+    "start": "2026-11-21T04:06:39Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855676-step-2",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855676",
+    "service": "windows-latest-py310-test-ci",
+    "name": "Checkout source",
+    "start": "2026-11-21T04:06:41Z",
+    "duration_ms": 24000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855676-step-4",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855676",
+    "service": "windows-latest-py310-test-ci",
+    "name": "Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:07:05Z",
+    "duration_ms": 172000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855676-step-5",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855676",
+    "service": "windows-latest-py310-test-ci",
+    "name": "Run tests",
+    "start": "2026-11-21T04:09:57Z",
+    "duration_ms": 1651000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-136724855676-step-7",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855676",
+    "service": "windows-latest-py310-test-ci",
+    "name": "Upload test results",
+    "start": "2026-11-21T04:37:28Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855676-step-13",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855676",
+    "service": "windows-latest-py310-test-ci",
+    "name": "Post Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:37:30Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855676-step-14",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855676",
+    "service": "windows-latest-py310-test-ci",
+    "name": "Post Checkout source",
+    "start": "2026-11-21T04:37:30Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855676-step-15",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855676",
+    "service": "windows-latest-py310-test-ci",
+    "name": "Complete job",
+    "start": "2026-11-21T04:37:33Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855708",
+    "trace_id": "run-44864445442",
+    "parent_id": "run-44864445442",
+    "service": "ubuntu-latest-py315-test-ci",
+    "name": "ubuntu-latest py315 test-ci",
+    "start": "2026-11-21T04:06:38Z",
+    "duration_ms": 1008000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855708-step-1",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855708",
+    "service": "ubuntu-latest-py315-test-ci",
+    "name": "Set up job",
+    "start": "2026-11-21T04:06:39Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855708-step-2",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855708",
+    "service": "ubuntu-latest-py315-test-ci",
+    "name": "Checkout source",
+    "start": "2026-11-21T04:06:40Z",
+    "duration_ms": 16000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855708-step-3",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855708",
+    "service": "ubuntu-latest-py315-test-ci",
+    "name": "Reconfigure pytest-timeout",
+    "start": "2026-11-21T04:06:56Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855708-step-4",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855708",
+    "service": "ubuntu-latest-py315-test-ci",
+    "name": "Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:06:56Z",
+    "duration_ms": 27000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855708-step-5",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855708",
+    "service": "ubuntu-latest-py315-test-ci",
+    "name": "Run tests",
+    "start": "2026-11-21T04:07:23Z",
+    "duration_ms": 957000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855708-step-6",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855708",
+    "service": "ubuntu-latest-py315-test-ci",
+    "name": "Coverage",
+    "start": "2026-11-21T04:23:20Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855708-step-7",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855708",
+    "service": "ubuntu-latest-py315-test-ci",
+    "name": "Upload test results",
+    "start": "2026-11-21T04:23:23Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855708-step-13",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855708",
+    "service": "ubuntu-latest-py315-test-ci",
+    "name": "Post Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:23:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855708-step-14",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855708",
+    "service": "ubuntu-latest-py315-test-ci",
+    "name": "Post Checkout source",
+    "start": "2026-11-21T04:23:24Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855708-step-15",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855708",
+    "service": "ubuntu-latest-py315-test-ci",
+    "name": "Complete job",
+    "start": "2026-11-21T04:23:25Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855719",
+    "trace_id": "run-44864445442",
+    "parent_id": "run-44864445442",
+    "service": "ubuntu-24-04-arm-py310-test-ci",
+    "name": "ubuntu-24.04-arm py310 test-ci",
+    "start": "2026-11-21T04:06:40Z",
+    "duration_ms": 803000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-136724855719-step-1",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855719",
+    "service": "ubuntu-24-04-arm-py310-test-ci",
+    "name": "Set up job",
+    "start": "2026-11-21T04:06:41Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855719-step-2",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855719",
+    "service": "ubuntu-24-04-arm-py310-test-ci",
+    "name": "Checkout source",
+    "start": "2026-11-21T04:06:43Z",
+    "duration_ms": 12000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855719-step-3",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855719",
+    "service": "ubuntu-24-04-arm-py310-test-ci",
+    "name": "Reconfigure pytest-timeout",
+    "start": "2026-11-21T04:06:55Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855719-step-4",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855719",
+    "service": "ubuntu-24-04-arm-py310-test-ci",
+    "name": "Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:06:55Z",
+    "duration_ms": 27000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855719-step-5",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855719",
+    "service": "ubuntu-24-04-arm-py310-test-ci",
+    "name": "Run tests",
+    "start": "2026-11-21T04:07:22Z",
+    "duration_ms": 758000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-136724855719-step-7",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855719",
+    "service": "ubuntu-24-04-arm-py310-test-ci",
+    "name": "Upload test results",
+    "start": "2026-11-21T04:20:00Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855719-step-13",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855719",
+    "service": "ubuntu-24-04-arm-py310-test-ci",
+    "name": "Post Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:20:01Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855719-step-14",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855719",
+    "service": "ubuntu-24-04-arm-py310-test-ci",
+    "name": "Post Checkout source",
+    "start": "2026-11-21T04:20:01Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855719-step-15",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855719",
+    "service": "ubuntu-24-04-arm-py310-test-ci",
+    "name": "Complete job",
+    "start": "2026-11-21T04:20:01Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855783",
+    "trace_id": "run-44864445442",
+    "parent_id": "run-44864445442",
+    "service": "ubuntu-24-04-arm-py313-test-ci",
+    "name": "ubuntu-24.04-arm py313 test-ci",
+    "start": "2026-11-21T04:06:40Z",
+    "duration_ms": 876000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855783-step-1",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855783",
+    "service": "ubuntu-24-04-arm-py313-test-ci",
+    "name": "Set up job",
+    "start": "2026-11-21T04:06:41Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855783-step-2",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855783",
+    "service": "ubuntu-24-04-arm-py313-test-ci",
+    "name": "Checkout source",
+    "start": "2026-11-21T04:06:43Z",
+    "duration_ms": 12000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855783-step-3",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855783",
+    "service": "ubuntu-24-04-arm-py313-test-ci",
+    "name": "Reconfigure pytest-timeout",
+    "start": "2026-11-21T04:06:55Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855783-step-4",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855783",
+    "service": "ubuntu-24-04-arm-py313-test-ci",
+    "name": "Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:06:56Z",
+    "duration_ms": 30000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855783-step-5",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855783",
+    "service": "ubuntu-24-04-arm-py313-test-ci",
+    "name": "Run tests",
+    "start": "2026-11-21T04:07:26Z",
+    "duration_ms": 823000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855783-step-6",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855783",
+    "service": "ubuntu-24-04-arm-py313-test-ci",
+    "name": "Coverage",
+    "start": "2026-11-21T04:21:09Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855783-step-7",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855783",
+    "service": "ubuntu-24-04-arm-py313-test-ci",
+    "name": "Upload test results",
+    "start": "2026-11-21T04:21:12Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855783-step-13",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855783",
+    "service": "ubuntu-24-04-arm-py313-test-ci",
+    "name": "Post Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:21:13Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855783-step-14",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855783",
+    "service": "ubuntu-24-04-arm-py313-test-ci",
+    "name": "Post Checkout source",
+    "start": "2026-11-21T04:21:14Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855783-step-15",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855783",
+    "service": "ubuntu-24-04-arm-py313-test-ci",
+    "name": "Complete job",
+    "start": "2026-11-21T04:21:14Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855839",
+    "trace_id": "run-44864445442",
+    "parent_id": "run-44864445442",
+    "service": "windows-latest-py315-test-ci",
+    "name": "windows-latest py315 test-ci",
+    "start": "2026-11-21T04:06:38Z",
+    "duration_ms": 848000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855839-step-1",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855839",
+    "service": "windows-latest-py315-test-ci",
+    "name": "Set up job",
+    "start": "2026-11-21T04:06:38Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855839-step-2",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855839",
+    "service": "windows-latest-py315-test-ci",
+    "name": "Checkout source",
+    "start": "2026-11-21T04:06:40Z",
+    "duration_ms": 13000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855839-step-4",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855839",
+    "service": "windows-latest-py315-test-ci",
+    "name": "Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:06:53Z",
+    "duration_ms": 105000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855839-step-5",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855839",
+    "service": "windows-latest-py315-test-ci",
+    "name": "Run tests",
+    "start": "2026-11-21T04:08:38Z",
+    "duration_ms": 718000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855839-step-6",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855839",
+    "service": "windows-latest-py315-test-ci",
+    "name": "Coverage",
+    "start": "2026-11-21T04:20:36Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855839-step-7",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855839",
+    "service": "windows-latest-py315-test-ci",
+    "name": "Upload test results",
+    "start": "2026-11-21T04:20:42Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855839-step-13",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855839",
+    "service": "windows-latest-py315-test-ci",
+    "name": "Post Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-21T04:20:43Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855839-step-14",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855839",
+    "service": "windows-latest-py315-test-ci",
+    "name": "Post Checkout source",
+    "start": "2026-11-21T04:20:43Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136724855839-step-15",
+    "trace_id": "run-44864445442",
+    "parent_id": "job-136724855839",
+    "service": "windows-latest-py315-test-ci",
+    "name": "Complete job",
+    "start": "2026-11-21T04:20:45Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136735150937",
+    "trace_id": "run-44864445442",
+    "parent_id": "run-44864445442",
+    "service": "unit-test-results",
+    "name": "Unit Test Results",
+    "start": "2026-11-21T04:46:55Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

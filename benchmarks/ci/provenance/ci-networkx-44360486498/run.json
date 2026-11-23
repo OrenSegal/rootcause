@@ -1,0 +1,82 @@
+{
+  "attempt": 1,
+  "conclusion": "failure",
+  "createdAt": "2026-11-18T17:36:08Z",
+  "databaseId": 44360486498,
+  "displayTitle": "Make Cytoscape edge endpoints reference the exported node IDs; map IDs back on import and restore tuple nodes after JSON conversion.",
+  "event": "pull_request",
+  "headBranch": "first-fix",
+  "headSha": "e14db0e50efc4f6dd33db5a1e7b9f1c385b652a0",
+  "jobs": [
+    {
+      "completedAt": "2026-11-18T17:36:32Z",
+      "conclusion": "failure",
+      "databaseId": 135000168582,
+      "name": "format",
+      "startedAt": "2026-11-18T17:36:12Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-18T17:36:13Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-18T17:36:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T17:36:14Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-18T17:36:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T17:36:21Z",
+          "conclusion": "success",
+          "name": "Run prefix-dev/setup-pixi@ad1da6449d9e506fd127fd67ab2d054a769f6a94",
+          "number": 3,
+          "startedAt": "2026-11-18T17:36:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T17:36:30Z",
+          "conclusion": "failure",
+          "name": "Lint",
+          "number": 4,
+          "startedAt": "2026-11-18T17:36:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T17:36:30Z",
+          "conclusion": "success",
+          "name": "Post Run prefix-dev/setup-pixi@ad1da6449d9e506fd127fd67ab2d054a769f6a94",
+          "number": 7,
+          "startedAt": "2026-11-18T17:36:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T17:36:30Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 8,
+          "startedAt": "2026-11-18T17:36:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T17:36:30Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 9,
+          "startedAt": "2026-11-18T17:36:30Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/networkx/networkx/actions/runs/44360486498/job/135000168582"
+    }
+  ],
+  "name": "style",
+  "updatedAt": "2026-11-18T17:36:33Z",
+  "repository": "networkx/networkx"
+}

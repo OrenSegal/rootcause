@@ -1,0 +1,13 @@
+id: ci-multidict-37647784094
+title: Drop ALWAYS_INLINE from the C extension
+alert:
+  severity: ci
+  service: inlining
+  summary: 'workflow CI/CD failed on claude/always-inline-conversion-166543 at b1660cc5b4:
+    step ''Check that the hot paths keep their helpers inlined'' in job ''Inlining'' failed.'
+truth:
+  category: bad_code_deploy
+  service: multidict
+  required_evidence_any:
+  - b1660cc5b4
+provenance: recorded

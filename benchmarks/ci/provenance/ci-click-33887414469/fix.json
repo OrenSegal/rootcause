@@ -1,0 +1,11 @@
+{
+  "fixed_run": "https://github.com/pallets/click/actions/runs/33887541171",
+  "fixed_sha": "a1414604cad59d57a2a4b31e6adf92dfbdc93f2e",
+  "commits": [
+    "a1414604cad59d57a2a4b31e6adf92dfbdc93f2e"
+  ],
+  "files": [
+    "tests/test_formatting.py"
+  ],
+  "status": "ahead"
+}

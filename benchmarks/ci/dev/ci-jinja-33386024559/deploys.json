@@ -1,0 +1,18 @@
+[
+  {
+    "id": "a877bf760a",
+    "service": "jinja",
+    "version": "a877bf760a",
+    "ts": "2026-08-31T11:13:46Z",
+    "author": "official-burak",
+    "summary": "The escaped test is false for undefined values.",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "CHANGES.rst",
+      "src/jinja2/tests.py",
+      "tests/test_api.py",
+      "tests/test_tests.py"
+    ]
+  }
+]

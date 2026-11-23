@@ -1,0 +1,14 @@
+[
+  {
+    "author": "waseem1302-x",
+    "committedDate": "2026-11-17T17:31:58Z",
+    "messageHeadline": "TST: regression tests for Dataset from DataFrame with CategoricalIndex of Intervals",
+    "oid": "a6dbb66309943ab4cb944ab45fb5096145bfdc86",
+    "files": [
+      {
+        "filename": "xarray/tests/test_dataset.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

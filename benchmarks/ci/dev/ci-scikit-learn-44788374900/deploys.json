@@ -1,0 +1,17 @@
+[
+  {
+    "id": "d34a8b11f9",
+    "service": "scikit-learn",
+    "version": "d34a8b11f9",
+    "ts": "2026-11-20T17:58:11Z",
+    "author": "Alok-Yadav25",
+    "summary": "FIX move_estimator_to should not convert non-numeric/non-boolean array attributes (#35109)",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "doc/whats_new/upcoming_changes/sklearn.utils/35109.fix.rst",
+      "sklearn/utils/_array_api.py",
+      "sklearn/utils/tests/test_array_api.py"
+    ]
+  }
+]

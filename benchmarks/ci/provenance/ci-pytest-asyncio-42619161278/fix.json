@@ -1,0 +1,14 @@
+{
+  "fixed_run": "https://github.com/pytest-dev/pytest-asyncio/actions/runs/42619501152",
+  "fixed_sha": "7c4f06c58c9a0ba39faafaad052cb7f4c2d156ce",
+  "commits": [
+    "77069eb3d76e3f3d609e5f61dc2848282f7cfc3e",
+    "7c4f06c58c9a0ba39faafaad052cb7f4c2d156ce"
+  ],
+  "files": [
+    "docs/reference/warnings.rst",
+    "tests/test_task_cleanup.py"
+  ],
+  "merges": [],
+  "status": "ahead"
+}

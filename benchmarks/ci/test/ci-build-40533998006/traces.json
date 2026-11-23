@@ -1,0 +1,5812 @@
+[
+  {
+    "span_id": "run-40533998006",
+    "trace_id": "run-40533998006",
+    "parent_id": null,
+    "service": "test",
+    "name": "test",
+    "start": "2026-10-27T15:44:37Z",
+    "duration_ms": 490000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-122294159179",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "change-detection-identify-source-changes",
+    "name": "change-detection / Identify source changes",
+    "start": "2026-10-27T15:44:41Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294159179-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294159179",
+    "service": "change-detection-identify-source-changes",
+    "name": "Set up job",
+    "start": "2026-10-27T15:44:42Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294159179-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294159179",
+    "service": "change-detection-identify-source-changes",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:44:43Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294159179-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294159179",
+    "service": "change-detection-identify-source-changes",
+    "name": "Get a list of the changed runtime-related files",
+    "start": "2026-10-27T15:44:43Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294159179-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294159179",
+    "service": "change-detection-identify-source-changes",
+    "name": "Set a flag for running the tests",
+    "start": "2026-10-27T15:44:44Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294159179-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294159179",
+    "service": "change-detection-identify-source-changes",
+    "name": "Get a list of the changed documentation-related files",
+    "start": "2026-10-27T15:44:44Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294159179-step-12",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294159179",
+    "service": "change-detection-identify-source-changes",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:44:45Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294159179-step-13",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294159179",
+    "service": "change-detection-identify-source-changes",
+    "name": "Complete job",
+    "start": "2026-10-27T15:44:45Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294247414",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "type-type-check",
+    "name": "type / Type check",
+    "start": "2026-10-27T15:44:50Z",
+    "duration_ms": 10000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-122294247414-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294247414",
+    "service": "type-type-check",
+    "name": "Set up job",
+    "start": "2026-10-27T15:44:50Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294247414-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294247414",
+    "service": "type-type-check",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:44:51Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294247414-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294247414",
+    "service": "type-type-check",
+    "name": "Setup Python 3.15",
+    "start": "2026-10-27T15:44:52Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294247414-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294247414",
+    "service": "type-type-check",
+    "name": "Install tox",
+    "start": "2026-10-27T15:44:54Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294247414-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294247414",
+    "service": "type-type-check",
+    "name": "Setup run environment",
+    "start": "2026-10-27T15:44:55Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294247414-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294247414",
+    "service": "type-type-check",
+    "name": "Run check for type",
+    "start": "2026-10-27T15:44:58Z",
+    "duration_ms": 0.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-122294247414-step-12",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294247414",
+    "service": "type-type-check",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:44:58Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294247414-step-13",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294247414",
+    "service": "type-type-check",
+    "name": "Complete job",
+    "start": "2026-10-27T15:44:59Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294247707",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-download-integration-sources",
+    "name": "pytest / Download integration sources",
+    "start": "2026-10-27T15:44:50Z",
+    "duration_ms": 17000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294247707-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294247707",
+    "service": "pytest-download-integration-sources",
+    "name": "Set up job",
+    "start": "2026-10-27T15:44:51Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294247707-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294247707",
+    "service": "pytest-download-integration-sources",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:44:53Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294247707-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294247707",
+    "service": "pytest-download-integration-sources",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:44:54Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294247707-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294247707",
+    "service": "pytest-download-integration-sources",
+    "name": "Download the sources",
+    "start": "2026-10-27T15:44:57Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294247707-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294247707",
+    "service": "pytest-download-integration-sources",
+    "name": "Share the sources with the test matrix",
+    "start": "2026-10-27T15:45:02Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294247707-step-9",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294247707",
+    "service": "pytest-download-integration-sources",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:45:04Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294247707-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294247707",
+    "service": "pytest-download-integration-sources",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:04Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294247707-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294247707",
+    "service": "pytest-download-integration-sources",
+    "name": "Complete job",
+    "start": "2026-10-27T15:45:04Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294249205",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "check-docs",
+    "name": "check-docs",
+    "start": "2026-10-27T15:44:47Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294441978",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-macos-26-pypy3-12-tox",
+    "name": "pytest / Run tests (macos-26, pypy3.12, tox)",
+    "start": "2026-10-27T15:45:10Z",
+    "duration_ms": 229000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294441978-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294441978",
+    "service": "pytest-run-tests-macos-26-pypy3-12-tox",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:12Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294441978-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294441978",
+    "service": "pytest-run-tests-macos-26-pypy3-12-tox",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:15Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294441978-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294441978",
+    "service": "pytest-run-tests-macos-26-pypy3-12-tox",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:17Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294441978-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294441978",
+    "service": "pytest-run-tests-macos-26-pypy3-12-tox",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:17Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294441978-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294441978",
+    "service": "pytest-run-tests-macos-26-pypy3-12-tox",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:24Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294441978-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294441978",
+    "service": "pytest-run-tests-macos-26-pypy3-12-tox",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294441978-step-7",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294441978",
+    "service": "pytest-run-tests-macos-26-pypy3-12-tox",
+    "name": "Run test suite via tox",
+    "start": "2026-10-27T15:45:29Z",
+    "duration_ms": 196000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294441978-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294441978",
+    "service": "pytest-run-tests-macos-26-pypy3-12-tox",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:48:45Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294441978-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294441978",
+    "service": "pytest-run-tests-macos-26-pypy3-12-tox",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:48:50Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294441978-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294441978",
+    "service": "pytest-run-tests-macos-26-pypy3-12-tox",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:48:54Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294441978-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294441978",
+    "service": "pytest-run-tests-macos-26-pypy3-12-tox",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:48:54Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294441978-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294441978",
+    "service": "pytest-run-tests-macos-26-pypy3-12-tox",
+    "name": "Complete job",
+    "start": "2026-10-27T15:48:55Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294441998",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-12-tox",
+    "name": "pytest / Run tests (ubuntu-26.04, pypy3.12, tox)",
+    "start": "2026-10-27T15:45:10Z",
+    "duration_ms": 211000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294441998-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294441998",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-12-tox",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294441998-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294441998",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-12-tox",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:14Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294441998-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294441998",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-12-tox",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:16Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294441998-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294441998",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-12-tox",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:16Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294441998-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294441998",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-12-tox",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:19Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294441998-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294441998",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-12-tox",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:20Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294441998-step-7",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294441998",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-12-tox",
+    "name": "Run test suite via tox",
+    "start": "2026-10-27T15:45:20Z",
+    "duration_ms": 192000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294441998-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294441998",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-12-tox",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:48:32Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294441998-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294441998",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-12-tox",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:48:35Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294441998-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294441998",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-12-tox",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:48:37Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294441998-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294441998",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-12-tox",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:48:37Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294441998-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294441998",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-12-tox",
+    "name": "Complete job",
+    "start": "2026-10-27T15:48:38Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442003",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-ubuntu-26-04-3-15-min",
+    "name": "pytest / Run tests (ubuntu-26.04, 3.15, min)",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 88000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442003-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442003",
+    "service": "pytest-run-tests-ubuntu-26-04-3-15-min",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:12Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442003-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442003",
+    "service": "pytest-run-tests-ubuntu-26-04-3-15-min",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:15Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442003-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442003",
+    "service": "pytest-run-tests-ubuntu-26-04-3-15-min",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:17Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442003-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442003",
+    "service": "pytest-run-tests-ubuntu-26-04-3-15-min",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:17Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442003-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442003",
+    "service": "pytest-run-tests-ubuntu-26-04-3-15-min",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:21Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442003-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442003",
+    "service": "pytest-run-tests-ubuntu-26-04-3-15-min",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442003-step-8",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442003",
+    "service": "pytest-run-tests-ubuntu-26-04-3-15-min",
+    "name": "Run minimum version test",
+    "start": "2026-10-27T15:45:22Z",
+    "duration_ms": 69000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442003-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442003",
+    "service": "pytest-run-tests-ubuntu-26-04-3-15-min",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:46:31Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442003-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442003",
+    "service": "pytest-run-tests-ubuntu-26-04-3-15-min",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:46:33Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442003-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442003",
+    "service": "pytest-run-tests-ubuntu-26-04-3-15-min",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:46:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442003-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442003",
+    "service": "pytest-run-tests-ubuntu-26-04-3-15-min",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:46:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442003-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442003",
+    "service": "pytest-run-tests-ubuntu-26-04-3-15-min",
+    "name": "Complete job",
+    "start": "2026-10-27T15:46:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442037",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-11-tox",
+    "name": "pytest / Run tests (ubuntu-26.04, pypy3.11, tox)",
+    "start": "2026-10-27T15:45:10Z",
+    "duration_ms": 168000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442037-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442037",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-11-tox",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442037-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442037",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-11-tox",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:14Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442037-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442037",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-11-tox",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:16Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442037-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442037",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-11-tox",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:16Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442037-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442037",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-11-tox",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:19Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442037-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442037",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-11-tox",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:20Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442037-step-7",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442037",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-11-tox",
+    "name": "Run test suite via tox",
+    "start": "2026-10-27T15:45:20Z",
+    "duration_ms": 149000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442037-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442037",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-11-tox",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:47:49Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442037-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442037",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-11-tox",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:47:51Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442037-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442037",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-11-tox",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:47:54Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442037-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442037",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-11-tox",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:47:54Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442037-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442037",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-11-tox",
+    "name": "Complete job",
+    "start": "2026-10-27T15:47:54Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442038",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-ubuntu-26-04-3-11-tox",
+    "name": "pytest / Run tests (ubuntu-26.04, 3.11, tox)",
+    "start": "2026-10-27T15:45:10Z",
+    "duration_ms": 87000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442038-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442038",
+    "service": "pytest-run-tests-ubuntu-26-04-3-11-tox",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:10Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442038-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442038",
+    "service": "pytest-run-tests-ubuntu-26-04-3-11-tox",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:12Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442038-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442038",
+    "service": "pytest-run-tests-ubuntu-26-04-3-11-tox",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:13Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442038-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442038",
+    "service": "pytest-run-tests-ubuntu-26-04-3-11-tox",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:13Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442038-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442038",
+    "service": "pytest-run-tests-ubuntu-26-04-3-11-tox",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:15Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442038-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442038",
+    "service": "pytest-run-tests-ubuntu-26-04-3-11-tox",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:16Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442038-step-7",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442038",
+    "service": "pytest-run-tests-ubuntu-26-04-3-11-tox",
+    "name": "Run test suite via tox",
+    "start": "2026-10-27T15:45:16Z",
+    "duration_ms": 74000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442038-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442038",
+    "service": "pytest-run-tests-ubuntu-26-04-3-11-tox",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:46:30Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442038-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442038",
+    "service": "pytest-run-tests-ubuntu-26-04-3-11-tox",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:46:32Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442038-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442038",
+    "service": "pytest-run-tests-ubuntu-26-04-3-11-tox",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:46:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442038-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442038",
+    "service": "pytest-run-tests-ubuntu-26-04-3-11-tox",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:46:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442038-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442038",
+    "service": "pytest-run-tests-ubuntu-26-04-3-11-tox",
+    "name": "Complete job",
+    "start": "2026-10-27T15:46:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442059",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-ubuntu-26-04-3-13-min",
+    "name": "pytest / Run tests (ubuntu-26.04, 3.13, min)",
+    "start": "2026-10-27T15:45:09Z",
+    "duration_ms": 89000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442059-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442059",
+    "service": "pytest-run-tests-ubuntu-26-04-3-13-min",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:10Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442059-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442059",
+    "service": "pytest-run-tests-ubuntu-26-04-3-13-min",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442059-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442059",
+    "service": "pytest-run-tests-ubuntu-26-04-3-13-min",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:13Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442059-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442059",
+    "service": "pytest-run-tests-ubuntu-26-04-3-13-min",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:13Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442059-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442059",
+    "service": "pytest-run-tests-ubuntu-26-04-3-13-min",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:15Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442059-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442059",
+    "service": "pytest-run-tests-ubuntu-26-04-3-13-min",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:16Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442059-step-8",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442059",
+    "service": "pytest-run-tests-ubuntu-26-04-3-13-min",
+    "name": "Run minimum version test",
+    "start": "2026-10-27T15:45:16Z",
+    "duration_ms": 76000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442059-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442059",
+    "service": "pytest-run-tests-ubuntu-26-04-3-13-min",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:46:32Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442059-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442059",
+    "service": "pytest-run-tests-ubuntu-26-04-3-13-min",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:46:34Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442059-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442059",
+    "service": "pytest-run-tests-ubuntu-26-04-3-13-min",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:46:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442059-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442059",
+    "service": "pytest-run-tests-ubuntu-26-04-3-13-min",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:46:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442059-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442059",
+    "service": "pytest-run-tests-ubuntu-26-04-3-13-min",
+    "name": "Complete job",
+    "start": "2026-10-27T15:46:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442069",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-macos-26-3-14-min",
+    "name": "pytest / Run tests (macos-26, 3.14, min)",
+    "start": "2026-10-27T15:45:10Z",
+    "duration_ms": 133000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442069-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442069",
+    "service": "pytest-run-tests-macos-26-3-14-min",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442069-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442069",
+    "service": "pytest-run-tests-macos-26-3-14-min",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:15Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442069-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442069",
+    "service": "pytest-run-tests-macos-26-3-14-min",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:18Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442069-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442069",
+    "service": "pytest-run-tests-macos-26-3-14-min",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:18Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442069-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442069",
+    "service": "pytest-run-tests-macos-26-3-14-min",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:23Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442069-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442069",
+    "service": "pytest-run-tests-macos-26-3-14-min",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442069-step-8",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442069",
+    "service": "pytest-run-tests-macos-26-3-14-min",
+    "name": "Run minimum version test",
+    "start": "2026-10-27T15:45:24Z",
+    "duration_ms": 107000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442069-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442069",
+    "service": "pytest-run-tests-macos-26-3-14-min",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:47:11Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442069-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442069",
+    "service": "pytest-run-tests-macos-26-3-14-min",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:47:13Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442069-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442069",
+    "service": "pytest-run-tests-macos-26-3-14-min",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:47:18Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442069-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442069",
+    "service": "pytest-run-tests-macos-26-3-14-min",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:47:18Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442069-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442069",
+    "service": "pytest-run-tests-macos-26-3-14-min",
+    "name": "Complete job",
+    "start": "2026-10-27T15:47:19Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442077",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-ubuntu-26-04-3-14-min",
+    "name": "pytest / Run tests (ubuntu-26.04, 3.14, min)",
+    "start": "2026-10-27T15:45:10Z",
+    "duration_ms": 67000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442077-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442077",
+    "service": "pytest-run-tests-ubuntu-26-04-3-14-min",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:10Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442077-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442077",
+    "service": "pytest-run-tests-ubuntu-26-04-3-14-min",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:13Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442077-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442077",
+    "service": "pytest-run-tests-ubuntu-26-04-3-14-min",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:14Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442077-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442077",
+    "service": "pytest-run-tests-ubuntu-26-04-3-14-min",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:14Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442077-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442077",
+    "service": "pytest-run-tests-ubuntu-26-04-3-14-min",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:16Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442077-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442077",
+    "service": "pytest-run-tests-ubuntu-26-04-3-14-min",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:17Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442077-step-8",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442077",
+    "service": "pytest-run-tests-ubuntu-26-04-3-14-min",
+    "name": "Run minimum version test",
+    "start": "2026-10-27T15:45:17Z",
+    "duration_ms": 52000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442077-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442077",
+    "service": "pytest-run-tests-ubuntu-26-04-3-14-min",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:46:09Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442077-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442077",
+    "service": "pytest-run-tests-ubuntu-26-04-3-14-min",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:46:11Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442077-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442077",
+    "service": "pytest-run-tests-ubuntu-26-04-3-14-min",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:46:13Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442077-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442077",
+    "service": "pytest-run-tests-ubuntu-26-04-3-14-min",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:46:13Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442077-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442077",
+    "service": "pytest-run-tests-ubuntu-26-04-3-14-min",
+    "name": "Complete job",
+    "start": "2026-10-27T15:46:14Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442089",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-ubuntu-26-04-3-13-tox",
+    "name": "pytest / Run tests (ubuntu-26.04, 3.13, tox)",
+    "start": "2026-10-27T15:45:10Z",
+    "duration_ms": 90000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442089-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442089",
+    "service": "pytest-run-tests-ubuntu-26-04-3-13-tox",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442089-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442089",
+    "service": "pytest-run-tests-ubuntu-26-04-3-13-tox",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:13Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442089-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442089",
+    "service": "pytest-run-tests-ubuntu-26-04-3-13-tox",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:14Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442089-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442089",
+    "service": "pytest-run-tests-ubuntu-26-04-3-13-tox",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:14Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442089-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442089",
+    "service": "pytest-run-tests-ubuntu-26-04-3-13-tox",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:18Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442089-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442089",
+    "service": "pytest-run-tests-ubuntu-26-04-3-13-tox",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:19Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442089-step-7",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442089",
+    "service": "pytest-run-tests-ubuntu-26-04-3-13-tox",
+    "name": "Run test suite via tox",
+    "start": "2026-10-27T15:45:19Z",
+    "duration_ms": 72000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442089-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442089",
+    "service": "pytest-run-tests-ubuntu-26-04-3-13-tox",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:46:31Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442089-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442089",
+    "service": "pytest-run-tests-ubuntu-26-04-3-13-tox",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:46:33Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442089-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442089",
+    "service": "pytest-run-tests-ubuntu-26-04-3-13-tox",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:46:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442089-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442089",
+    "service": "pytest-run-tests-ubuntu-26-04-3-13-tox",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:46:36Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442089-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442089",
+    "service": "pytest-run-tests-ubuntu-26-04-3-13-tox",
+    "name": "Complete job",
+    "start": "2026-10-27T15:46:37Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442095",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-ubuntu-26-04-3-12-tox",
+    "name": "pytest / Run tests (ubuntu-26.04, 3.12, tox)",
+    "start": "2026-10-27T15:45:10Z",
+    "duration_ms": 89000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442095-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442095",
+    "service": "pytest-run-tests-ubuntu-26-04-3-12-tox",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442095-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442095",
+    "service": "pytest-run-tests-ubuntu-26-04-3-12-tox",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:14Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442095-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442095",
+    "service": "pytest-run-tests-ubuntu-26-04-3-12-tox",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:15Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442095-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442095",
+    "service": "pytest-run-tests-ubuntu-26-04-3-12-tox",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:15Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442095-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442095",
+    "service": "pytest-run-tests-ubuntu-26-04-3-12-tox",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:19Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442095-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442095",
+    "service": "pytest-run-tests-ubuntu-26-04-3-12-tox",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:20Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442095-step-7",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442095",
+    "service": "pytest-run-tests-ubuntu-26-04-3-12-tox",
+    "name": "Run test suite via tox",
+    "start": "2026-10-27T15:45:20Z",
+    "duration_ms": 71000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442095-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442095",
+    "service": "pytest-run-tests-ubuntu-26-04-3-12-tox",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:46:31Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442095-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442095",
+    "service": "pytest-run-tests-ubuntu-26-04-3-12-tox",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:46:33Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442095-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442095",
+    "service": "pytest-run-tests-ubuntu-26-04-3-12-tox",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:46:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442095-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442095",
+    "service": "pytest-run-tests-ubuntu-26-04-3-12-tox",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:46:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442095-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442095",
+    "service": "pytest-run-tests-ubuntu-26-04-3-12-tox",
+    "name": "Complete job",
+    "start": "2026-10-27T15:46:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442114",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-macos-26-3-12-min",
+    "name": "pytest / Run tests (macos-26, 3.12, min)",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 138000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442114-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442114",
+    "service": "pytest-run-tests-macos-26-3-12-min",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:12Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442114-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442114",
+    "service": "pytest-run-tests-macos-26-3-12-min",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:15Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442114-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442114",
+    "service": "pytest-run-tests-macos-26-3-12-min",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:19Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442114-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442114",
+    "service": "pytest-run-tests-macos-26-3-12-min",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:19Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442114-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442114",
+    "service": "pytest-run-tests-macos-26-3-12-min",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:23Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442114-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442114",
+    "service": "pytest-run-tests-macos-26-3-12-min",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442114-step-8",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442114",
+    "service": "pytest-run-tests-macos-26-3-12-min",
+    "name": "Run minimum version test",
+    "start": "2026-10-27T15:45:24Z",
+    "duration_ms": 111000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442114-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442114",
+    "service": "pytest-run-tests-macos-26-3-12-min",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:47:15Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442114-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442114",
+    "service": "pytest-run-tests-macos-26-3-12-min",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:47:18Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442114-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442114",
+    "service": "pytest-run-tests-macos-26-3-12-min",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:47:23Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442114-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442114",
+    "service": "pytest-run-tests-macos-26-3-12-min",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:47:23Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442114-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442114",
+    "service": "pytest-run-tests-macos-26-3-12-min",
+    "name": "Complete job",
+    "start": "2026-10-27T15:47:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442118",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-ubuntu-26-04-3-11-min",
+    "name": "pytest / Run tests (ubuntu-26.04, 3.11, min)",
+    "start": "2026-10-27T15:45:10Z",
+    "duration_ms": 81000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442118-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442118",
+    "service": "pytest-run-tests-ubuntu-26-04-3-11-min",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442118-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442118",
+    "service": "pytest-run-tests-ubuntu-26-04-3-11-min",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:13Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442118-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442118",
+    "service": "pytest-run-tests-ubuntu-26-04-3-11-min",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:15Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442118-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442118",
+    "service": "pytest-run-tests-ubuntu-26-04-3-11-min",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:15Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442118-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442118",
+    "service": "pytest-run-tests-ubuntu-26-04-3-11-min",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:17Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442118-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442118",
+    "service": "pytest-run-tests-ubuntu-26-04-3-11-min",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:19Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442118-step-8",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442118",
+    "service": "pytest-run-tests-ubuntu-26-04-3-11-min",
+    "name": "Run minimum version test",
+    "start": "2026-10-27T15:45:19Z",
+    "duration_ms": 65000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442118-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442118",
+    "service": "pytest-run-tests-ubuntu-26-04-3-11-min",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:46:24Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442118-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442118",
+    "service": "pytest-run-tests-ubuntu-26-04-3-11-min",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:46:26Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442118-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442118",
+    "service": "pytest-run-tests-ubuntu-26-04-3-11-min",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:46:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442118-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442118",
+    "service": "pytest-run-tests-ubuntu-26-04-3-11-min",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:46:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442118-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442118",
+    "service": "pytest-run-tests-ubuntu-26-04-3-11-min",
+    "name": "Complete job",
+    "start": "2026-10-27T15:46:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442135",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-12-min",
+    "name": "pytest / Run tests (ubuntu-26.04, pypy3.12, min)",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 243000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442135-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442135",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-12-min",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:12Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442135-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442135",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-12-min",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:14Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442135-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442135",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-12-min",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:15Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442135-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442135",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-12-min",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:15Z",
+    "duration_ms": 15000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442135-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442135",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-12-min",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:30Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442135-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442135",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-12-min",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:31Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442135-step-8",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442135",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-12-min",
+    "name": "Run minimum version test",
+    "start": "2026-10-27T15:45:31Z",
+    "duration_ms": 214000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442135-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442135",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-12-min",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:49:05Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442135-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442135",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-12-min",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:49:07Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442135-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442135",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-12-min",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:49:10Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442135-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442135",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-12-min",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:49:10Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442135-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442135",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-12-min",
+    "name": "Complete job",
+    "start": "2026-10-27T15:49:10Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442140",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-windows-2025-pypy3-12-tox",
+    "name": "pytest / Run tests (windows-2025, pypy3.12, tox)",
+    "start": "2026-10-27T15:45:34Z",
+    "duration_ms": 322000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442140-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442140",
+    "service": "pytest-run-tests-windows-2025-pypy3-12-tox",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:35Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442140-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442140",
+    "service": "pytest-run-tests-windows-2025-pypy3-12-tox",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:38Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442140-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442140",
+    "service": "pytest-run-tests-windows-2025-pypy3-12-tox",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:47Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442140-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442140",
+    "service": "pytest-run-tests-windows-2025-pypy3-12-tox",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:47Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442140-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442140",
+    "service": "pytest-run-tests-windows-2025-pypy3-12-tox",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:50Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442140-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442140",
+    "service": "pytest-run-tests-windows-2025-pypy3-12-tox",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:54Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442140-step-7",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442140",
+    "service": "pytest-run-tests-windows-2025-pypy3-12-tox",
+    "name": "Run test suite via tox",
+    "start": "2026-10-27T15:45:54Z",
+    "duration_ms": 284000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442140-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442140",
+    "service": "pytest-run-tests-windows-2025-pypy3-12-tox",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:50:38Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442140-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442140",
+    "service": "pytest-run-tests-windows-2025-pypy3-12-tox",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:50:43Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442140-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442140",
+    "service": "pytest-run-tests-windows-2025-pypy3-12-tox",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:50:51Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442140-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442140",
+    "service": "pytest-run-tests-windows-2025-pypy3-12-tox",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:50:52Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442140-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442140",
+    "service": "pytest-run-tests-windows-2025-pypy3-12-tox",
+    "name": "Complete job",
+    "start": "2026-10-27T15:50:54Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442142",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-macos-26-3-13-tox",
+    "name": "pytest / Run tests (macos-26, 3.13, tox)",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 113000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442142-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442142",
+    "service": "pytest-run-tests-macos-26-3-13-tox",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:12Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442142-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442142",
+    "service": "pytest-run-tests-macos-26-3-13-tox",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:16Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442142-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442142",
+    "service": "pytest-run-tests-macos-26-3-13-tox",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:19Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442142-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442142",
+    "service": "pytest-run-tests-macos-26-3-13-tox",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:19Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442142-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442142",
+    "service": "pytest-run-tests-macos-26-3-13-tox",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:23Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442142-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442142",
+    "service": "pytest-run-tests-macos-26-3-13-tox",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442142-step-7",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442142",
+    "service": "pytest-run-tests-macos-26-3-13-tox",
+    "name": "Run test suite via tox",
+    "start": "2026-10-27T15:45:24Z",
+    "duration_ms": 90000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442142-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442142",
+    "service": "pytest-run-tests-macos-26-3-13-tox",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:46:54Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442142-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442142",
+    "service": "pytest-run-tests-macos-26-3-13-tox",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:46:57Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442142-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442142",
+    "service": "pytest-run-tests-macos-26-3-13-tox",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:47:00Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442142-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442142",
+    "service": "pytest-run-tests-macos-26-3-13-tox",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:47:00Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442142-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442142",
+    "service": "pytest-run-tests-macos-26-3-13-tox",
+    "name": "Complete job",
+    "start": "2026-10-27T15:47:01Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442143",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-macos-26-3-15-min",
+    "name": "pytest / Run tests (macos-26, 3.15, min)",
+    "start": "2026-10-27T15:45:10Z",
+    "duration_ms": 102000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442143-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442143",
+    "service": "pytest-run-tests-macos-26-3-15-min",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442143-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442143",
+    "service": "pytest-run-tests-macos-26-3-15-min",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:15Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442143-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442143",
+    "service": "pytest-run-tests-macos-26-3-15-min",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:18Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442143-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442143",
+    "service": "pytest-run-tests-macos-26-3-15-min",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:18Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442143-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442143",
+    "service": "pytest-run-tests-macos-26-3-15-min",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:21Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442143-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442143",
+    "service": "pytest-run-tests-macos-26-3-15-min",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442143-step-8",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442143",
+    "service": "pytest-run-tests-macos-26-3-15-min",
+    "name": "Run minimum version test",
+    "start": "2026-10-27T15:45:22Z",
+    "duration_ms": 80000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442143-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442143",
+    "service": "pytest-run-tests-macos-26-3-15-min",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:46:42Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442143-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442143",
+    "service": "pytest-run-tests-macos-26-3-15-min",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:46:45Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442143-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442143",
+    "service": "pytest-run-tests-macos-26-3-15-min",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:46:48Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442143-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442143",
+    "service": "pytest-run-tests-macos-26-3-15-min",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:46:49Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442143-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442143",
+    "service": "pytest-run-tests-macos-26-3-15-min",
+    "name": "Complete job",
+    "start": "2026-10-27T15:46:49Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442144",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-macos-26-3-15-tox",
+    "name": "pytest / Run tests (macos-26, 3.15, tox)",
+    "start": "2026-10-27T15:45:12Z",
+    "duration_ms": 240000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442144-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442144",
+    "service": "pytest-run-tests-macos-26-3-15-tox",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:13Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442144-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442144",
+    "service": "pytest-run-tests-macos-26-3-15-tox",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:16Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442144-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442144",
+    "service": "pytest-run-tests-macos-26-3-15-tox",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:20Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442144-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442144",
+    "service": "pytest-run-tests-macos-26-3-15-tox",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:20Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442144-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442144",
+    "service": "pytest-run-tests-macos-26-3-15-tox",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:26Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442144-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442144",
+    "service": "pytest-run-tests-macos-26-3-15-tox",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:27Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442144-step-7",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442144",
+    "service": "pytest-run-tests-macos-26-3-15-tox",
+    "name": "Run test suite via tox",
+    "start": "2026-10-27T15:45:27Z",
+    "duration_ms": 114000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442144-step-9",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442144",
+    "service": "pytest-run-tests-macos-26-3-15-tox",
+    "name": "Run path test",
+    "start": "2026-10-27T15:47:21Z",
+    "duration_ms": 95000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442144-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442144",
+    "service": "pytest-run-tests-macos-26-3-15-tox",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:48:56Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442144-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442144",
+    "service": "pytest-run-tests-macos-26-3-15-tox",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:49:00Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442144-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442144",
+    "service": "pytest-run-tests-macos-26-3-15-tox",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:49:06Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442144-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442144",
+    "service": "pytest-run-tests-macos-26-3-15-tox",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:49:07Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442144-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442144",
+    "service": "pytest-run-tests-macos-26-3-15-tox",
+    "name": "Complete job",
+    "start": "2026-10-27T15:49:08Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442145",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-windows-2025-3-15-tox",
+    "name": "pytest / Run tests (windows-2025, 3.15, tox)",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 408000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442145-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442145",
+    "service": "pytest-run-tests-windows-2025-3-15-tox",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:12Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442145-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442145",
+    "service": "pytest-run-tests-windows-2025-3-15-tox",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:14Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442145-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442145",
+    "service": "pytest-run-tests-windows-2025-3-15-tox",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:22Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442145-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442145",
+    "service": "pytest-run-tests-windows-2025-3-15-tox",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:22Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442145-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442145",
+    "service": "pytest-run-tests-windows-2025-3-15-tox",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:26Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442145-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442145",
+    "service": "pytest-run-tests-windows-2025-3-15-tox",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:30Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442145-step-7",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442145",
+    "service": "pytest-run-tests-windows-2025-3-15-tox",
+    "name": "Run test suite via tox",
+    "start": "2026-10-27T15:45:30Z",
+    "duration_ms": 208000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442145-step-9",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442145",
+    "service": "pytest-run-tests-windows-2025-3-15-tox",
+    "name": "Run path test",
+    "start": "2026-10-27T15:48:58Z",
+    "duration_ms": 164000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442145-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442145",
+    "service": "pytest-run-tests-windows-2025-3-15-tox",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:51:42Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442145-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442145",
+    "service": "pytest-run-tests-windows-2025-3-15-tox",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:51:46Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442145-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442145",
+    "service": "pytest-run-tests-windows-2025-3-15-tox",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:51:55Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442145-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442145",
+    "service": "pytest-run-tests-windows-2025-3-15-tox",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:51:55Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442145-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442145",
+    "service": "pytest-run-tests-windows-2025-3-15-tox",
+    "name": "Complete job",
+    "start": "2026-10-27T15:51:57Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442164",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-macos-26-pypy3-11-tox",
+    "name": "pytest / Run tests (macos-26, pypy3.11, tox)",
+    "start": "2026-10-27T15:45:12Z",
+    "duration_ms": 218000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442164-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442164",
+    "service": "pytest-run-tests-macos-26-pypy3-11-tox",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:13Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442164-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442164",
+    "service": "pytest-run-tests-macos-26-pypy3-11-tox",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:16Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442164-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442164",
+    "service": "pytest-run-tests-macos-26-pypy3-11-tox",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:19Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442164-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442164",
+    "service": "pytest-run-tests-macos-26-pypy3-11-tox",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:19Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442164-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442164",
+    "service": "pytest-run-tests-macos-26-pypy3-11-tox",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:24Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442164-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442164",
+    "service": "pytest-run-tests-macos-26-pypy3-11-tox",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442164-step-7",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442164",
+    "service": "pytest-run-tests-macos-26-pypy3-11-tox",
+    "name": "Run test suite via tox",
+    "start": "2026-10-27T15:45:28Z",
+    "duration_ms": 189000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442164-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442164",
+    "service": "pytest-run-tests-macos-26-pypy3-11-tox",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:48:37Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442164-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442164",
+    "service": "pytest-run-tests-macos-26-pypy3-11-tox",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:48:41Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442164-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442164",
+    "service": "pytest-run-tests-macos-26-pypy3-11-tox",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:48:46Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442164-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442164",
+    "service": "pytest-run-tests-macos-26-pypy3-11-tox",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:48:46Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442164-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442164",
+    "service": "pytest-run-tests-macos-26-pypy3-11-tox",
+    "name": "Complete job",
+    "start": "2026-10-27T15:48:46Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442179",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-windows-2025-pypy3-11-min",
+    "name": "pytest / Run tests (windows-2025, pypy3.11, min)",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 446000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442179-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442179",
+    "service": "pytest-run-tests-windows-2025-pypy3-11-min",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442179-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442179",
+    "service": "pytest-run-tests-windows-2025-pypy3-11-min",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:13Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442179-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442179",
+    "service": "pytest-run-tests-windows-2025-pypy3-11-min",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:21Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442179-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442179",
+    "service": "pytest-run-tests-windows-2025-pypy3-11-min",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:21Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442179-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442179",
+    "service": "pytest-run-tests-windows-2025-pypy3-11-min",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:24Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442179-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442179",
+    "service": "pytest-run-tests-windows-2025-pypy3-11-min",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442179-step-8",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442179",
+    "service": "pytest-run-tests-windows-2025-pypy3-11-min",
+    "name": "Run minimum version test",
+    "start": "2026-10-27T15:45:28Z",
+    "duration_ms": 414000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442179-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442179",
+    "service": "pytest-run-tests-windows-2025-pypy3-11-min",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:52:22Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442179-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442179",
+    "service": "pytest-run-tests-windows-2025-pypy3-11-min",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:52:26Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442179-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442179",
+    "service": "pytest-run-tests-windows-2025-pypy3-11-min",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:52:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442179-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442179",
+    "service": "pytest-run-tests-windows-2025-pypy3-11-min",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:52:34Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442179-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442179",
+    "service": "pytest-run-tests-windows-2025-pypy3-11-min",
+    "name": "Complete job",
+    "start": "2026-10-27T15:52:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442181",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-windows-2025-3-12-min",
+    "name": "pytest / Run tests (windows-2025, 3.12, min)",
+    "start": "2026-10-27T15:45:10Z",
+    "duration_ms": 255000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442181-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442181",
+    "service": "pytest-run-tests-windows-2025-3-12-min",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442181-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442181",
+    "service": "pytest-run-tests-windows-2025-3-12-min",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:14Z",
+    "duration_ms": 13000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442181-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442181",
+    "service": "pytest-run-tests-windows-2025-3-12-min",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:27Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442181-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442181",
+    "service": "pytest-run-tests-windows-2025-3-12-min",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:27Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442181-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442181",
+    "service": "pytest-run-tests-windows-2025-3-12-min",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:31Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442181-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442181",
+    "service": "pytest-run-tests-windows-2025-3-12-min",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:33Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442181-step-8",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442181",
+    "service": "pytest-run-tests-windows-2025-3-12-min",
+    "name": "Run minimum version test",
+    "start": "2026-10-27T15:45:33Z",
+    "duration_ms": 216000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442181-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442181",
+    "service": "pytest-run-tests-windows-2025-3-12-min",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:49:09Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442181-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442181",
+    "service": "pytest-run-tests-windows-2025-3-12-min",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:49:14Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442181-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442181",
+    "service": "pytest-run-tests-windows-2025-3-12-min",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:49:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442181-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442181",
+    "service": "pytest-run-tests-windows-2025-3-12-min",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:49:22Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442181-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442181",
+    "service": "pytest-run-tests-windows-2025-3-12-min",
+    "name": "Complete job",
+    "start": "2026-10-27T15:49:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442215",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-windows-2025-3-12-tox",
+    "name": "pytest / Run tests (windows-2025, 3.12, tox)",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 243000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442215-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442215",
+    "service": "pytest-run-tests-windows-2025-3-12-tox",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:12Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442215-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442215",
+    "service": "pytest-run-tests-windows-2025-3-12-tox",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:15Z",
+    "duration_ms": 13000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442215-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442215",
+    "service": "pytest-run-tests-windows-2025-3-12-tox",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:28Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442215-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442215",
+    "service": "pytest-run-tests-windows-2025-3-12-tox",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:28Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442215-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442215",
+    "service": "pytest-run-tests-windows-2025-3-12-tox",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:32Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442215-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442215",
+    "service": "pytest-run-tests-windows-2025-3-12-tox",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442215-step-7",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442215",
+    "service": "pytest-run-tests-windows-2025-3-12-tox",
+    "name": "Run test suite via tox",
+    "start": "2026-10-27T15:45:34Z",
+    "duration_ms": 203000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442215-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442215",
+    "service": "pytest-run-tests-windows-2025-3-12-tox",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:48:57Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442215-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442215",
+    "service": "pytest-run-tests-windows-2025-3-12-tox",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:49:01Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442215-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442215",
+    "service": "pytest-run-tests-windows-2025-3-12-tox",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:49:10Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442215-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442215",
+    "service": "pytest-run-tests-windows-2025-3-12-tox",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:49:10Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442215-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442215",
+    "service": "pytest-run-tests-windows-2025-3-12-tox",
+    "name": "Complete job",
+    "start": "2026-10-27T15:49:12Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442229",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-windows-2025-3-14-min",
+    "name": "pytest / Run tests (windows-2025, 3.14, min)",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 191000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442229-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442229",
+    "service": "pytest-run-tests-windows-2025-3-14-min",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442229-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442229",
+    "service": "pytest-run-tests-windows-2025-3-14-min",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:13Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442229-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442229",
+    "service": "pytest-run-tests-windows-2025-3-14-min",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:20Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442229-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442229",
+    "service": "pytest-run-tests-windows-2025-3-14-min",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:20Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442229-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442229",
+    "service": "pytest-run-tests-windows-2025-3-14-min",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:23Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442229-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442229",
+    "service": "pytest-run-tests-windows-2025-3-14-min",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:26Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442229-step-8",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442229",
+    "service": "pytest-run-tests-windows-2025-3-14-min",
+    "name": "Run minimum version test",
+    "start": "2026-10-27T15:45:26Z",
+    "duration_ms": 162000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442229-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442229",
+    "service": "pytest-run-tests-windows-2025-3-14-min",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:48:08Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442229-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442229",
+    "service": "pytest-run-tests-windows-2025-3-14-min",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:48:11Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442229-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442229",
+    "service": "pytest-run-tests-windows-2025-3-14-min",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:48:18Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442229-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442229",
+    "service": "pytest-run-tests-windows-2025-3-14-min",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:48:18Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442229-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442229",
+    "service": "pytest-run-tests-windows-2025-3-14-min",
+    "name": "Complete job",
+    "start": "2026-10-27T15:48:20Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442239",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-macos-26-pypy3-12-min",
+    "name": "pytest / Run tests (macos-26, pypy3.12, min)",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 235000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442239-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442239",
+    "service": "pytest-run-tests-macos-26-pypy3-12-min",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:12Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442239-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442239",
+    "service": "pytest-run-tests-macos-26-pypy3-12-min",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:16Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442239-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442239",
+    "service": "pytest-run-tests-macos-26-pypy3-12-min",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:19Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442239-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442239",
+    "service": "pytest-run-tests-macos-26-pypy3-12-min",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:19Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442239-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442239",
+    "service": "pytest-run-tests-macos-26-pypy3-12-min",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:22Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442239-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442239",
+    "service": "pytest-run-tests-macos-26-pypy3-12-min",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:27Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442239-step-8",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442239",
+    "service": "pytest-run-tests-macos-26-pypy3-12-min",
+    "name": "Run minimum version test",
+    "start": "2026-10-27T15:45:27Z",
+    "duration_ms": 206000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442239-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442239",
+    "service": "pytest-run-tests-macos-26-pypy3-12-min",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:48:53Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442239-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442239",
+    "service": "pytest-run-tests-macos-26-pypy3-12-min",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:48:58Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442239-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442239",
+    "service": "pytest-run-tests-macos-26-pypy3-12-min",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:49:01Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442239-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442239",
+    "service": "pytest-run-tests-macos-26-pypy3-12-min",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:49:02Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442239-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442239",
+    "service": "pytest-run-tests-macos-26-pypy3-12-min",
+    "name": "Complete job",
+    "start": "2026-10-27T15:49:03Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442255",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-macos-26-3-11-tox",
+    "name": "pytest / Run tests (macos-26, 3.11, tox)",
+    "start": "2026-10-27T15:45:10Z",
+    "duration_ms": 318000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442255-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442255",
+    "service": "pytest-run-tests-macos-26-3-11-tox",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442255-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442255",
+    "service": "pytest-run-tests-macos-26-3-11-tox",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:15Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442255-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442255",
+    "service": "pytest-run-tests-macos-26-3-11-tox",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:18Z",
+    "duration_ms": 181000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442255-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442255",
+    "service": "pytest-run-tests-macos-26-3-11-tox",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:18Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442255-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442255",
+    "service": "pytest-run-tests-macos-26-3-11-tox",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:22Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442255-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442255",
+    "service": "pytest-run-tests-macos-26-3-11-tox",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:23Z",
+    "duration_ms": 176000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442255-step-7",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442255",
+    "service": "pytest-run-tests-macos-26-3-11-tox",
+    "name": "Run test suite via tox",
+    "start": "2026-10-27T15:48:19Z",
+    "duration_ms": 112000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442255-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442255",
+    "service": "pytest-run-tests-macos-26-3-11-tox",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:50:11Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442255-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442255",
+    "service": "pytest-run-tests-macos-26-3-11-tox",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:50:15Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442255-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442255",
+    "service": "pytest-run-tests-macos-26-3-11-tox",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:50:20Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442255-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442255",
+    "service": "pytest-run-tests-macos-26-3-11-tox",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:50:20Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442255-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442255",
+    "service": "pytest-run-tests-macos-26-3-11-tox",
+    "name": "Complete job",
+    "start": "2026-10-27T15:50:21Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442269",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-11-min",
+    "name": "pytest / Run tests (ubuntu-26.04, pypy3.11, min)",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 239000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442269-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442269",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-11-min",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:12Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442269-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442269",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-11-min",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:15Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442269-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442269",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-11-min",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:17Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442269-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442269",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-11-min",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:17Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442269-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442269",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-11-min",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:20Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442269-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442269",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-11-min",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:21Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442269-step-8",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442269",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-11-min",
+    "name": "Run minimum version test",
+    "start": "2026-10-27T15:45:21Z",
+    "duration_ms": 221000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442269-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442269",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-11-min",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:49:02Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442269-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442269",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-11-min",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:49:05Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442269-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442269",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-11-min",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:49:07Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442269-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442269",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-11-min",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:49:07Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442269-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442269",
+    "service": "pytest-run-tests-ubuntu-26-04-pypy3-11-min",
+    "name": "Complete job",
+    "start": "2026-10-27T15:49:07Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442283",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-windows-2025-pypy3-11-tox",
+    "name": "pytest / Run tests (windows-2025, pypy3.11, tox)",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 407000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442283-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442283",
+    "service": "pytest-run-tests-windows-2025-pypy3-11-tox",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:12Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442283-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442283",
+    "service": "pytest-run-tests-windows-2025-pypy3-11-tox",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:15Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442283-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442283",
+    "service": "pytest-run-tests-windows-2025-pypy3-11-tox",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:23Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442283-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442283",
+    "service": "pytest-run-tests-windows-2025-pypy3-11-tox",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:23Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442283-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442283",
+    "service": "pytest-run-tests-windows-2025-pypy3-11-tox",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:27Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442283-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442283",
+    "service": "pytest-run-tests-windows-2025-pypy3-11-tox",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442283-step-7",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442283",
+    "service": "pytest-run-tests-windows-2025-pypy3-11-tox",
+    "name": "Run test suite via tox",
+    "start": "2026-10-27T15:45:32Z",
+    "duration_ms": 367000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442283-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442283",
+    "service": "pytest-run-tests-windows-2025-pypy3-11-tox",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:51:39Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442283-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442283",
+    "service": "pytest-run-tests-windows-2025-pypy3-11-tox",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:51:44Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442283-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442283",
+    "service": "pytest-run-tests-windows-2025-pypy3-11-tox",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:51:52Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442283-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442283",
+    "service": "pytest-run-tests-windows-2025-pypy3-11-tox",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:51:53Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442283-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442283",
+    "service": "pytest-run-tests-windows-2025-pypy3-11-tox",
+    "name": "Complete job",
+    "start": "2026-10-27T15:51:55Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442289",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-windows-2025-3-11-min",
+    "name": "pytest / Run tests (windows-2025, 3.11, min)",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 265000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442289-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442289",
+    "service": "pytest-run-tests-windows-2025-3-11-min",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:12Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442289-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442289",
+    "service": "pytest-run-tests-windows-2025-3-11-min",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:14Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442289-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442289",
+    "service": "pytest-run-tests-windows-2025-3-11-min",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:22Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442289-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442289",
+    "service": "pytest-run-tests-windows-2025-3-11-min",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:22Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442289-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442289",
+    "service": "pytest-run-tests-windows-2025-3-11-min",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:25Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442289-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442289",
+    "service": "pytest-run-tests-windows-2025-3-11-min",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442289-step-8",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442289",
+    "service": "pytest-run-tests-windows-2025-3-11-min",
+    "name": "Run minimum version test",
+    "start": "2026-10-27T15:45:28Z",
+    "duration_ms": 231000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442289-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442289",
+    "service": "pytest-run-tests-windows-2025-3-11-min",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:49:19Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442289-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442289",
+    "service": "pytest-run-tests-windows-2025-3-11-min",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:49:23Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442289-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442289",
+    "service": "pytest-run-tests-windows-2025-3-11-min",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:49:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442289-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442289",
+    "service": "pytest-run-tests-windows-2025-3-11-min",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:49:32Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442289-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442289",
+    "service": "pytest-run-tests-windows-2025-3-11-min",
+    "name": "Complete job",
+    "start": "2026-10-27T15:49:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442290",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-ubuntu-26-04-3-15-tox",
+    "name": "pytest / Run tests (ubuntu-26.04, 3.15, tox)",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 134000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442290-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442290",
+    "service": "pytest-run-tests-ubuntu-26-04-3-15-tox",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:12Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442290-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442290",
+    "service": "pytest-run-tests-ubuntu-26-04-3-15-tox",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:14Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442290-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442290",
+    "service": "pytest-run-tests-ubuntu-26-04-3-15-tox",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:16Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442290-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442290",
+    "service": "pytest-run-tests-ubuntu-26-04-3-15-tox",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:16Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442290-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442290",
+    "service": "pytest-run-tests-ubuntu-26-04-3-15-tox",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:19Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442290-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442290",
+    "service": "pytest-run-tests-ubuntu-26-04-3-15-tox",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:20Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442290-step-7",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442290",
+    "service": "pytest-run-tests-ubuntu-26-04-3-15-tox",
+    "name": "Run test suite via tox",
+    "start": "2026-10-27T15:45:20Z",
+    "duration_ms": 64000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442290-step-9",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442290",
+    "service": "pytest-run-tests-ubuntu-26-04-3-15-tox",
+    "name": "Run path test",
+    "start": "2026-10-27T15:46:24Z",
+    "duration_ms": 53000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442290-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442290",
+    "service": "pytest-run-tests-ubuntu-26-04-3-15-tox",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:47:17Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442290-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442290",
+    "service": "pytest-run-tests-ubuntu-26-04-3-15-tox",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:47:19Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442290-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442290",
+    "service": "pytest-run-tests-ubuntu-26-04-3-15-tox",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:47:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442290-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442290",
+    "service": "pytest-run-tests-ubuntu-26-04-3-15-tox",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:47:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442290-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442290",
+    "service": "pytest-run-tests-ubuntu-26-04-3-15-tox",
+    "name": "Complete job",
+    "start": "2026-10-27T15:47:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442307",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-windows-2025-3-14-tox",
+    "name": "pytest / Run tests (windows-2025, 3.14, tox)",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 448000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442307-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442307",
+    "service": "pytest-run-tests-windows-2025-3-14-tox",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442307-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442307",
+    "service": "pytest-run-tests-windows-2025-3-14-tox",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:14Z",
+    "duration_ms": 10000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442307-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442307",
+    "service": "pytest-run-tests-windows-2025-3-14-tox",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:24Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442307-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442307",
+    "service": "pytest-run-tests-windows-2025-3-14-tox",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:24Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442307-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442307",
+    "service": "pytest-run-tests-windows-2025-3-14-tox",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:28Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442307-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442307",
+    "service": "pytest-run-tests-windows-2025-3-14-tox",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:33Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442307-step-7",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442307",
+    "service": "pytest-run-tests-windows-2025-3-14-tox",
+    "name": "Run test suite via tox",
+    "start": "2026-10-27T15:45:33Z",
+    "duration_ms": 400000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442307-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442307",
+    "service": "pytest-run-tests-windows-2025-3-14-tox",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:52:13Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442307-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442307",
+    "service": "pytest-run-tests-windows-2025-3-14-tox",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:52:19Z",
+    "duration_ms": 16000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442307-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442307",
+    "service": "pytest-run-tests-windows-2025-3-14-tox",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:52:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442307-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442307",
+    "service": "pytest-run-tests-windows-2025-3-14-tox",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:52:35Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442307-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442307",
+    "service": "pytest-run-tests-windows-2025-3-14-tox",
+    "name": "Complete job",
+    "start": "2026-10-27T15:52:37Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442332",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-ubuntu-26-04-3-14-tox",
+    "name": "pytest / Run tests (ubuntu-26.04, 3.14, tox)",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 72000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442332-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442332",
+    "service": "pytest-run-tests-ubuntu-26-04-3-14-tox",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:12Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442332-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442332",
+    "service": "pytest-run-tests-ubuntu-26-04-3-14-tox",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:15Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442332-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442332",
+    "service": "pytest-run-tests-ubuntu-26-04-3-14-tox",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:17Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442332-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442332",
+    "service": "pytest-run-tests-ubuntu-26-04-3-14-tox",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:17Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442332-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442332",
+    "service": "pytest-run-tests-ubuntu-26-04-3-14-tox",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:20Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442332-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442332",
+    "service": "pytest-run-tests-ubuntu-26-04-3-14-tox",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:21Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442332-step-7",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442332",
+    "service": "pytest-run-tests-ubuntu-26-04-3-14-tox",
+    "name": "Run test suite via tox",
+    "start": "2026-10-27T15:45:21Z",
+    "duration_ms": 54000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442332-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442332",
+    "service": "pytest-run-tests-ubuntu-26-04-3-14-tox",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:46:15Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442332-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442332",
+    "service": "pytest-run-tests-ubuntu-26-04-3-14-tox",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:46:17Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442332-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442332",
+    "service": "pytest-run-tests-ubuntu-26-04-3-14-tox",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:46:20Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442332-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442332",
+    "service": "pytest-run-tests-ubuntu-26-04-3-14-tox",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:46:20Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442332-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442332",
+    "service": "pytest-run-tests-ubuntu-26-04-3-14-tox",
+    "name": "Complete job",
+    "start": "2026-10-27T15:46:20Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442346",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-macos-26-3-12-tox",
+    "name": "pytest / Run tests (macos-26, 3.12, tox)",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 115000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442346-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442346",
+    "service": "pytest-run-tests-macos-26-3-12-tox",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442346-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442346",
+    "service": "pytest-run-tests-macos-26-3-12-tox",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:14Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442346-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442346",
+    "service": "pytest-run-tests-macos-26-3-12-tox",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:18Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442346-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442346",
+    "service": "pytest-run-tests-macos-26-3-12-tox",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:18Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442346-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442346",
+    "service": "pytest-run-tests-macos-26-3-12-tox",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:21Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442346-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442346",
+    "service": "pytest-run-tests-macos-26-3-12-tox",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442346-step-7",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442346",
+    "service": "pytest-run-tests-macos-26-3-12-tox",
+    "name": "Run test suite via tox",
+    "start": "2026-10-27T15:45:22Z",
+    "duration_ms": 93000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442346-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442346",
+    "service": "pytest-run-tests-macos-26-3-12-tox",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:46:55Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442346-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442346",
+    "service": "pytest-run-tests-macos-26-3-12-tox",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:46:58Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442346-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442346",
+    "service": "pytest-run-tests-macos-26-3-12-tox",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:47:01Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442346-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442346",
+    "service": "pytest-run-tests-macos-26-3-12-tox",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:47:02Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442346-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442346",
+    "service": "pytest-run-tests-macos-26-3-12-tox",
+    "name": "Complete job",
+    "start": "2026-10-27T15:47:02Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442379",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-macos-26-3-11-min",
+    "name": "pytest / Run tests (macos-26, 3.11, min)",
+    "start": "2026-10-27T15:45:12Z",
+    "duration_ms": 133000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442379-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442379",
+    "service": "pytest-run-tests-macos-26-3-11-min",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:12Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442379-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442379",
+    "service": "pytest-run-tests-macos-26-3-11-min",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:16Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442379-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442379",
+    "service": "pytest-run-tests-macos-26-3-11-min",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:19Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442379-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442379",
+    "service": "pytest-run-tests-macos-26-3-11-min",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:19Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442379-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442379",
+    "service": "pytest-run-tests-macos-26-3-11-min",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:25Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442379-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442379",
+    "service": "pytest-run-tests-macos-26-3-11-min",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:26Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442379-step-8",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442379",
+    "service": "pytest-run-tests-macos-26-3-11-min",
+    "name": "Run minimum version test",
+    "start": "2026-10-27T15:45:26Z",
+    "duration_ms": 107000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442379-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442379",
+    "service": "pytest-run-tests-macos-26-3-11-min",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:47:13Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442379-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442379",
+    "service": "pytest-run-tests-macos-26-3-11-min",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:47:17Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442379-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442379",
+    "service": "pytest-run-tests-macos-26-3-11-min",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:47:21Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442379-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442379",
+    "service": "pytest-run-tests-macos-26-3-11-min",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:47:21Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442379-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442379",
+    "service": "pytest-run-tests-macos-26-3-11-min",
+    "name": "Complete job",
+    "start": "2026-10-27T15:47:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442383",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-macos-26-pypy3-11-min",
+    "name": "pytest / Run tests (macos-26, pypy3.11, min)",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 274000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442383-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442383",
+    "service": "pytest-run-tests-macos-26-pypy3-11-min",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:12Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442383-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442383",
+    "service": "pytest-run-tests-macos-26-pypy3-11-min",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:16Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442383-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442383",
+    "service": "pytest-run-tests-macos-26-pypy3-11-min",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:19Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442383-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442383",
+    "service": "pytest-run-tests-macos-26-pypy3-11-min",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:19Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442383-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442383",
+    "service": "pytest-run-tests-macos-26-pypy3-11-min",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:23Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442383-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442383",
+    "service": "pytest-run-tests-macos-26-pypy3-11-min",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:27Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442383-step-8",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442383",
+    "service": "pytest-run-tests-macos-26-pypy3-11-min",
+    "name": "Run minimum version test",
+    "start": "2026-10-27T15:45:27Z",
+    "duration_ms": 240000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442383-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442383",
+    "service": "pytest-run-tests-macos-26-pypy3-11-min",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:49:27Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442383-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442383",
+    "service": "pytest-run-tests-macos-26-pypy3-11-min",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:49:32Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442383-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442383",
+    "service": "pytest-run-tests-macos-26-pypy3-11-min",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:49:37Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442383-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442383",
+    "service": "pytest-run-tests-macos-26-pypy3-11-min",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:49:38Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442383-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442383",
+    "service": "pytest-run-tests-macos-26-pypy3-11-min",
+    "name": "Complete job",
+    "start": "2026-10-27T15:49:39Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442397",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-windows-2025-pypy3-12-min",
+    "name": "pytest / Run tests (windows-2025, pypy3.12, min)",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 343000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442397-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442397",
+    "service": "pytest-run-tests-windows-2025-pypy3-12-min",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:12Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442397-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442397",
+    "service": "pytest-run-tests-windows-2025-pypy3-12-min",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:15Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442397-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442397",
+    "service": "pytest-run-tests-windows-2025-pypy3-12-min",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:23Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442397-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442397",
+    "service": "pytest-run-tests-windows-2025-pypy3-12-min",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:23Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442397-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442397",
+    "service": "pytest-run-tests-windows-2025-pypy3-12-min",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:27Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442397-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442397",
+    "service": "pytest-run-tests-windows-2025-pypy3-12-min",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442397-step-8",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442397",
+    "service": "pytest-run-tests-windows-2025-pypy3-12-min",
+    "name": "Run minimum version test",
+    "start": "2026-10-27T15:45:32Z",
+    "duration_ms": 300000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442397-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442397",
+    "service": "pytest-run-tests-windows-2025-pypy3-12-min",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:50:32Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442397-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442397",
+    "service": "pytest-run-tests-windows-2025-pypy3-12-min",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:50:41Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442397-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442397",
+    "service": "pytest-run-tests-windows-2025-pypy3-12-min",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:50:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442397-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442397",
+    "service": "pytest-run-tests-windows-2025-pypy3-12-min",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:50:50Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442397-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442397",
+    "service": "pytest-run-tests-windows-2025-pypy3-12-min",
+    "name": "Complete job",
+    "start": "2026-10-27T15:50:52Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442435",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-windows-2025-3-11-tox",
+    "name": "pytest / Run tests (windows-2025, 3.11, tox)",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 300000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442435-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442435",
+    "service": "pytest-run-tests-windows-2025-3-11-tox",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:12Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442435-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442435",
+    "service": "pytest-run-tests-windows-2025-3-11-tox",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:13Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442435-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442435",
+    "service": "pytest-run-tests-windows-2025-3-11-tox",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:21Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442435-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442435",
+    "service": "pytest-run-tests-windows-2025-3-11-tox",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:21Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442435-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442435",
+    "service": "pytest-run-tests-windows-2025-3-11-tox",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:25Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442435-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442435",
+    "service": "pytest-run-tests-windows-2025-3-11-tox",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442435-step-7",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442435",
+    "service": "pytest-run-tests-windows-2025-3-11-tox",
+    "name": "Run test suite via tox",
+    "start": "2026-10-27T15:45:28Z",
+    "duration_ms": 266000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442435-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442435",
+    "service": "pytest-run-tests-windows-2025-3-11-tox",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:49:54Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442435-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442435",
+    "service": "pytest-run-tests-windows-2025-3-11-tox",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:49:58Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442435-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442435",
+    "service": "pytest-run-tests-windows-2025-3-11-tox",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:50:06Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442435-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442435",
+    "service": "pytest-run-tests-windows-2025-3-11-tox",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:50:07Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442435-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442435",
+    "service": "pytest-run-tests-windows-2025-3-11-tox",
+    "name": "Complete job",
+    "start": "2026-10-27T15:50:09Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442437",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-windows-2025-3-15-min",
+    "name": "pytest / Run tests (windows-2025, 3.15, min)",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 275000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442437-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442437",
+    "service": "pytest-run-tests-windows-2025-3-15-min",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442437-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442437",
+    "service": "pytest-run-tests-windows-2025-3-15-min",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:13Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442437-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442437",
+    "service": "pytest-run-tests-windows-2025-3-15-min",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:21Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442437-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442437",
+    "service": "pytest-run-tests-windows-2025-3-15-min",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:21Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442437-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442437",
+    "service": "pytest-run-tests-windows-2025-3-15-min",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:25Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442437-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442437",
+    "service": "pytest-run-tests-windows-2025-3-15-min",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442437-step-8",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442437",
+    "service": "pytest-run-tests-windows-2025-3-15-min",
+    "name": "Run minimum version test",
+    "start": "2026-10-27T15:45:28Z",
+    "duration_ms": 242000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442437-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442437",
+    "service": "pytest-run-tests-windows-2025-3-15-min",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:49:30Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442437-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442437",
+    "service": "pytest-run-tests-windows-2025-3-15-min",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:49:33Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442437-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442437",
+    "service": "pytest-run-tests-windows-2025-3-15-min",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:49:41Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442437-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442437",
+    "service": "pytest-run-tests-windows-2025-3-15-min",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:49:41Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442437-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442437",
+    "service": "pytest-run-tests-windows-2025-3-15-min",
+    "name": "Complete job",
+    "start": "2026-10-27T15:49:44Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442479",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-windows-2025-3-13-tox",
+    "name": "pytest / Run tests (windows-2025, 3.13, tox)",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 197000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442479-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442479",
+    "service": "pytest-run-tests-windows-2025-3-13-tox",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442479-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442479",
+    "service": "pytest-run-tests-windows-2025-3-13-tox",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:13Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442479-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442479",
+    "service": "pytest-run-tests-windows-2025-3-13-tox",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:20Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442479-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442479",
+    "service": "pytest-run-tests-windows-2025-3-13-tox",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:20Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442479-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442479",
+    "service": "pytest-run-tests-windows-2025-3-13-tox",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:25Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442479-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442479",
+    "service": "pytest-run-tests-windows-2025-3-13-tox",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442479-step-7",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442479",
+    "service": "pytest-run-tests-windows-2025-3-13-tox",
+    "name": "Run test suite via tox",
+    "start": "2026-10-27T15:45:28Z",
+    "duration_ms": 165000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442479-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442479",
+    "service": "pytest-run-tests-windows-2025-3-13-tox",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:48:13Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442479-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442479",
+    "service": "pytest-run-tests-windows-2025-3-13-tox",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:48:17Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442479-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442479",
+    "service": "pytest-run-tests-windows-2025-3-13-tox",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:48:24Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442479-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442479",
+    "service": "pytest-run-tests-windows-2025-3-13-tox",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:48:25Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442479-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442479",
+    "service": "pytest-run-tests-windows-2025-3-13-tox",
+    "name": "Complete job",
+    "start": "2026-10-27T15:48:26Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442483",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-macos-26-3-13-min",
+    "name": "pytest / Run tests (macos-26, 3.13, min)",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 128000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442483-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442483",
+    "service": "pytest-run-tests-macos-26-3-13-min",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442483-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442483",
+    "service": "pytest-run-tests-macos-26-3-13-min",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:15Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442483-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442483",
+    "service": "pytest-run-tests-macos-26-3-13-min",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:19Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442483-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442483",
+    "service": "pytest-run-tests-macos-26-3-13-min",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:19Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442483-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442483",
+    "service": "pytest-run-tests-macos-26-3-13-min",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:22Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442483-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442483",
+    "service": "pytest-run-tests-macos-26-3-13-min",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:23Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442483-step-8",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442483",
+    "service": "pytest-run-tests-macos-26-3-13-min",
+    "name": "Run minimum version test",
+    "start": "2026-10-27T15:45:23Z",
+    "duration_ms": 106000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442483-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442483",
+    "service": "pytest-run-tests-macos-26-3-13-min",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:47:09Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442483-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442483",
+    "service": "pytest-run-tests-macos-26-3-13-min",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:47:12Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442483-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442483",
+    "service": "pytest-run-tests-macos-26-3-13-min",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:47:15Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442483-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442483",
+    "service": "pytest-run-tests-macos-26-3-13-min",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:47:16Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442483-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442483",
+    "service": "pytest-run-tests-macos-26-3-13-min",
+    "name": "Complete job",
+    "start": "2026-10-27T15:47:16Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442551",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-windows-2025-3-13-min",
+    "name": "pytest / Run tests (windows-2025, 3.13, min)",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 283000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442551-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442551",
+    "service": "pytest-run-tests-windows-2025-3-13-min",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:12Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442551-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442551",
+    "service": "pytest-run-tests-windows-2025-3-13-min",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:15Z",
+    "duration_ms": 10000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442551-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442551",
+    "service": "pytest-run-tests-windows-2025-3-13-min",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:25Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442551-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442551",
+    "service": "pytest-run-tests-windows-2025-3-13-min",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:25Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442551-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442551",
+    "service": "pytest-run-tests-windows-2025-3-13-min",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:29Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442551-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442551",
+    "service": "pytest-run-tests-windows-2025-3-13-min",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442551-step-8",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442551",
+    "service": "pytest-run-tests-windows-2025-3-13-min",
+    "name": "Run minimum version test",
+    "start": "2026-10-27T15:45:32Z",
+    "duration_ms": 245000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442551-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442551",
+    "service": "pytest-run-tests-windows-2025-3-13-min",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:49:37Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442551-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442551",
+    "service": "pytest-run-tests-windows-2025-3-13-min",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:49:41Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442551-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442551",
+    "service": "pytest-run-tests-windows-2025-3-13-min",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:49:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442551-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442551",
+    "service": "pytest-run-tests-windows-2025-3-13-min",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:49:50Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442551-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442551",
+    "service": "pytest-run-tests-windows-2025-3-13-min",
+    "name": "Complete job",
+    "start": "2026-10-27T15:49:52Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442555",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-ubuntu-26-04-3-12-min",
+    "name": "pytest / Run tests (ubuntu-26.04, 3.12, min)",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 78000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442555-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442555",
+    "service": "pytest-run-tests-ubuntu-26-04-3-12-min",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:12Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442555-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442555",
+    "service": "pytest-run-tests-ubuntu-26-04-3-12-min",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:15Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442555-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442555",
+    "service": "pytest-run-tests-ubuntu-26-04-3-12-min",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:16Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442555-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442555",
+    "service": "pytest-run-tests-ubuntu-26-04-3-12-min",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:16Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442555-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442555",
+    "service": "pytest-run-tests-ubuntu-26-04-3-12-min",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:20Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442555-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442555",
+    "service": "pytest-run-tests-ubuntu-26-04-3-12-min",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:21Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442555-step-8",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442555",
+    "service": "pytest-run-tests-ubuntu-26-04-3-12-min",
+    "name": "Run minimum version test",
+    "start": "2026-10-27T15:45:21Z",
+    "duration_ms": 60000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442555-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442555",
+    "service": "pytest-run-tests-ubuntu-26-04-3-12-min",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:46:21Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442555-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442555",
+    "service": "pytest-run-tests-ubuntu-26-04-3-12-min",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:46:23Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442555-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442555",
+    "service": "pytest-run-tests-ubuntu-26-04-3-12-min",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:46:25Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442555-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442555",
+    "service": "pytest-run-tests-ubuntu-26-04-3-12-min",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:46:25Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294442555-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294442555",
+    "service": "pytest-run-tests-ubuntu-26-04-3-12-min",
+    "name": "Complete job",
+    "start": "2026-10-27T15:46:25Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294443007",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "pytest-run-tests-macos-26-3-14-tox",
+    "name": "pytest / Run tests (macos-26, 3.14, tox)",
+    "start": "2026-10-27T15:45:11Z",
+    "duration_ms": 133000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294443007-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294443007",
+    "service": "pytest-run-tests-macos-26-3-14-tox",
+    "name": "Set up job",
+    "start": "2026-10-27T15:45:13Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294443007-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294443007",
+    "service": "pytest-run-tests-macos-26-3-14-tox",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:45:16Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294443007-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294443007",
+    "service": "pytest-run-tests-macos-26-3-14-tox",
+    "name": "Get the integration sources",
+    "start": "2026-10-27T15:45:19Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294443007-step-4",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294443007",
+    "service": "pytest-run-tests-macos-26-3-14-tox",
+    "name": "Setup uv",
+    "start": "2026-10-27T15:45:19Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294443007-step-5",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294443007",
+    "service": "pytest-run-tests-macos-26-3-14-tox",
+    "name": "Install tox",
+    "start": "2026-10-27T15:45:23Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294443007-step-6",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294443007",
+    "service": "pytest-run-tests-macos-26-3-14-tox",
+    "name": "Wait",
+    "start": "2026-10-27T15:45:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294443007-step-7",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294443007",
+    "service": "pytest-run-tests-macos-26-3-14-tox",
+    "name": "Run test suite via tox",
+    "start": "2026-10-27T15:45:24Z",
+    "duration_ms": 107000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294443007-step-10",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294443007",
+    "service": "pytest-run-tests-macos-26-3-14-tox",
+    "name": "Combine coverage files",
+    "start": "2026-10-27T15:47:11Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294443007-step-11",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294443007",
+    "service": "pytest-run-tests-macos-26-3-14-tox",
+    "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+    "start": "2026-10-27T15:47:15Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294443007-step-21",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294443007",
+    "service": "pytest-run-tests-macos-26-3-14-tox",
+    "name": "Post Setup uv",
+    "start": "2026-10-27T15:47:19Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294443007-step-22",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294443007",
+    "service": "pytest-run-tests-macos-26-3-14-tox",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-27T15:47:19Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122294443007-step-23",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122294443007",
+    "service": "pytest-run-tests-macos-26-3-14-tox",
+    "name": "Complete job",
+    "start": "2026-10-27T15:47:20Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122298901912",
+    "trace_id": "run-40533998006",
+    "parent_id": "run-40533998006",
+    "service": "required-checks-pass",
+    "name": "Required checks pass",
+    "start": "2026-10-27T15:52:42Z",
+    "duration_ms": 4000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-122298901912-step-1",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122298901912",
+    "service": "required-checks-pass",
+    "name": "Set up job",
+    "start": "2026-10-27T15:52:43Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122298901912-step-2",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122298901912",
+    "service": "required-checks-pass",
+    "name": "Decide whether the needed jobs succeeded or failed",
+    "start": "2026-10-27T15:52:44Z",
+    "duration_ms": 0.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-122298901912-step-3",
+    "trace_id": "run-40533998006",
+    "parent_id": "job-122298901912",
+    "service": "required-checks-pass",
+    "name": "Complete job",
+    "start": "2026-10-27T15:52:44Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

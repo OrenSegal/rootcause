@@ -1,0 +1,18 @@
+[
+  {
+    "id": "5b7cd71b3b",
+    "service": "pandas",
+    "version": "5b7cd71b3b",
+    "ts": "2026-11-19T02:45:28Z",
+    "author": "jbrockmendel",
+    "summary": "BUG: place off-period datetimes between ordinals on a period axis (GH#18467)",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "doc/source/whatsnew/v3.2.0.rst",
+      "pandas/plotting/_matplotlib/converter.py",
+      "pandas/tests/plotting/test_converter.py",
+      "pandas/tests/plotting/test_datetimelike.py"
+    ]
+  }
+]

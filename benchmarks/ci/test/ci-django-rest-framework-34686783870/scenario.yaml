@@ -1,0 +1,13 @@
+id: ci-django-rest-framework-34686783870
+title: 'Fix unique_for_<range> validation on partial serializer updates (refs #6341)'
+alert:
+  severity: ci
+  service: pre-commit
+  summary: 'workflow CI failed on fix-unique-for-date-partial-update at b5c3cbe896: step ''Run
+    j178/prek-action@v3.0.0'' in job ''pre-commit'' failed.'
+truth:
+  category: bad_code_deploy
+  service: django-rest-framework
+  required_evidence_any:
+  - b5c3cbe896
+provenance: recorded

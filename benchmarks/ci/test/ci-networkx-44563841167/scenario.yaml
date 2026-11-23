@@ -1,0 +1,13 @@
+id: ci-networkx-44563841167
+title: Update milestone-merged-prs.yaml
+alert:
+  severity: ci
+  service: format
+  summary: 'workflow style failed on dschult-patch-1 at 92ce603506: step ''Lint'' in job ''format''
+    failed.'
+truth:
+  category: config_change
+  service: networkx
+  required_evidence_any:
+  - 92ce603506
+provenance: recorded

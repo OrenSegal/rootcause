@@ -1,0 +1,26 @@
+[
+  {
+    "author": "pre-commit-ci[bot]",
+    "committedDate": "2026-10-22T13:53:27Z",
+    "messageHeadline": "[pre-commit.ci] pre-commit autoupdate (#1380)",
+    "oid": "131c214540984c3fddaaec82f43fbf1e9254d926",
+    "files": [
+      {
+        "filename": ".pre-commit-config.yaml",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "SAY-5",
+    "committedDate": "2026-10-25T05:42:20Z",
+    "messageHeadline": "Merge branch 'master' into fix-respect-no-header-20261001",
+    "oid": "ae3f31bf37a56dda47d57e57e0a3990b2ddb3397",
+    "files": [
+      {
+        "filename": ".pre-commit-config.yaml",
+        "status": "modified"
+      }
+    ]
+  }
+]

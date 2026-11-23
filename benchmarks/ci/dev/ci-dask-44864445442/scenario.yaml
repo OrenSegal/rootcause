@@ -1,0 +1,13 @@
+id: ci-dask-44864445442
+title: Fix groupby idxmin/idxmax returning the label from the first partition
+alert:
+  severity: ci
+  service: ubuntu-latest-py310-test-ci
+  summary: 'workflow Tests failed on fix/groupby-idxminmax-across-partitions at 39141b3e6d:
+    step ''Run tests'' in job ''ubuntu-latest py310 test-ci'' failed.'
+truth:
+  category: bad_code_deploy
+  service: dask
+  required_evidence_any:
+  - 39141b3e6d
+provenance: recorded

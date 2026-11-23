@@ -1,0 +1,17 @@
+# Mined from https://github.com/Kludex/starlette/actions/runs/39717936532
+# (encode/starlette, licence BSD-3-Clause). Fixed by run
+# https://github.com/Kludex/starlette/actions/runs/39748882239. Label rule: the fix
+# changed files exactly one tested commit touched. Fix touched: tests/test_config.py.
+id: ci-starlette-39717936532
+title: 'fix: preserve inner quotes when stripping env-file values'
+alert:
+  severity: ci
+  service: python-3-12
+  summary: 'workflow Test Suite failed on fix/config-quote-stripping at 93d4eb9385: step ''Run
+    linting checks'' in job ''Python 3.12'' failed.'
+truth:
+  category: bad_code_deploy
+  service: starlette
+  required_evidence_any:
+  - 93d4eb9385
+provenance: recorded

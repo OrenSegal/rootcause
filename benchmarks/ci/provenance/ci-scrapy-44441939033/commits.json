@@ -1,0 +1,30 @@
+[
+  {
+    "author": "ethancyyiu",
+    "committedDate": "2026-11-19T01:49:07Z",
+    "messageHeadline": "Allow configured URL schemes in commands",
+    "oid": "81477728f60b957aa0a0c71e5663a8d973eb54d5",
+    "files": [
+      {
+        "filename": "scrapy/commands/fetch.py",
+        "status": "modified"
+      },
+      {
+        "filename": "scrapy/commands/parse.py",
+        "status": "modified"
+      },
+      {
+        "filename": "scrapy/utils/url.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_command_fetch.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_command_parse.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

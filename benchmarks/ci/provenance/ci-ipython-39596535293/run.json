@@ -1,0 +1,130 @@
+{
+  "attempt": 1,
+  "conclusion": "failure",
+  "createdAt": "2026-10-21T12:03:02Z",
+  "databaseId": 39596535293,
+  "displayTitle": "Clean docs",
+  "event": "pull_request",
+  "headBranch": "clean-docs",
+  "headSha": "dcd1daacbd9b3b70d568e42ab0f4dd01d765f1df",
+  "jobs": [
+    {
+      "completedAt": "2026-10-21T12:03:58Z",
+      "conclusion": "failure",
+      "databaseId": 119210120905,
+      "name": "build",
+      "startedAt": "2026-10-21T12:03:05Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-21T12:03:07Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-21T12:03:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-21T12:03:08Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-21T12:03:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-21T12:03:10Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-10-21T12:03:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-21T12:03:11Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 4,
+          "startedAt": "2026-10-21T12:03:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-21T12:03:18Z",
+          "conclusion": "success",
+          "name": "Install Graphviz",
+          "number": 5,
+          "startedAt": "2026-10-21T12:03:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-21T12:03:20Z",
+          "conclusion": "success",
+          "name": "Install Python dependencies",
+          "number": 6,
+          "startedAt": "2026-10-21T12:03:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-21T12:03:56Z",
+          "conclusion": "failure",
+          "name": "Build docs",
+          "number": 7,
+          "startedAt": "2026-10-21T12:03:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-21T12:03:56Z",
+          "conclusion": "skipped",
+          "name": "Generate coverage xml",
+          "number": 8,
+          "startedAt": "2026-10-21T12:03:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-21T12:03:56Z",
+          "conclusion": "skipped",
+          "name": "Upload coverage to Codecov",
+          "number": 9,
+          "startedAt": "2026-10-21T12:03:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-21T12:03:56Z",
+          "conclusion": "skipped",
+          "name": "Post Install uv",
+          "number": 16,
+          "startedAt": "2026-10-21T12:03:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-21T12:03:56Z",
+          "conclusion": "skipped",
+          "name": "Post Set up Python",
+          "number": 17,
+          "startedAt": "2026-10-21T12:03:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-21T12:03:56Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-10-21T12:03:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-21T12:03:56Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-10-21T12:03:56Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/ipython/ipython/actions/runs/39596535293/job/119210120905"
+    }
+  ],
+  "name": "Build docs",
+  "updatedAt": "2026-10-21T12:03:58Z",
+  "repository": "ipython/ipython"
+}

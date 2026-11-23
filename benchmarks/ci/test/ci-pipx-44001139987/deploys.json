@@ -1,0 +1,18 @@
+[
+  {
+    "id": "9e15af1ef8",
+    "service": "pipx",
+    "version": "9e15af1ef8",
+    "ts": "2026-11-17T02:11:22Z",
+    "author": "gaborbernat",
+    "summary": "\ud83d\udc1b fix(fanout): defer Ctrl-C to the fan-out's own loop",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "changelog.d/+fanout-interrupt-deadlock.bugfix.rst",
+      "src/pipx/fanout.py",
+      "src/pipx/main.py",
+      "tests/test_fanout.py"
+    ]
+  }
+]

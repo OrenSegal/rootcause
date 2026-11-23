@@ -1,0 +1,13 @@
+{
+  "fixed_run": "https://github.com/ipython/ipython/actions/runs/40257385086",
+  "fixed_sha": "7352e0228477d463270b95b44cfa96260b96931d",
+  "commits": [
+    "eb582fbe3ad1181c021bd37d5a36306da94c0f14",
+    "6ed6699f5652b8889cc7a6e7e920a57e8ff893b5",
+    "7352e0228477d463270b95b44cfa96260b96931d"
+  ],
+  "files": [
+    "IPython/core/inputtransformer2.py"
+  ],
+  "status": "ahead"
+}

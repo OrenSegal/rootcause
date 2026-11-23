@@ -1,0 +1,15 @@
+[
+  {
+    "id": "b5cabc1f72",
+    "service": "django-rest-framework",
+    "version": "b5cabc1f72",
+    "ts": "2026-09-07T07:03:18Z",
+    "author": "auvipy",
+    "summary": "Refactor display value assignment in relations.py",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "rest_framework/relations.py"
+    ]
+  }
+]

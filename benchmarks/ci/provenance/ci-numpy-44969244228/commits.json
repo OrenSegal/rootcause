@@ -1,0 +1,42 @@
+[
+  {
+    "author": "ngoldbaum",
+    "committedDate": "2026-11-22T00:42:37Z",
+    "messageHeadline": "BUG: add and use checked helpers for converting doubles to integers",
+    "oid": "e1a3a6162397720235aa7e1e24d63721fbf1bdc6",
+    "files": [
+      {
+        "filename": "numpy/_core/src/multiarray/common.h",
+        "status": "modified"
+      },
+      {
+        "filename": "numpy/_core/src/multiarray/ctors.c",
+        "status": "modified"
+      },
+      {
+        "filename": "numpy/_core/src/multiarray/datetime.c",
+        "status": "modified"
+      },
+      {
+        "filename": "numpy/_core/src/multiarray/lowlevel_strided_loops.c.src",
+        "status": "modified"
+      },
+      {
+        "filename": "numpy/_core/src/umath/loops.c.src",
+        "status": "modified"
+      },
+      {
+        "filename": "numpy/_core/tests/test_casting_unittests.py",
+        "status": "modified"
+      },
+      {
+        "filename": "numpy/_core/tests/test_datetime.py",
+        "status": "modified"
+      },
+      {
+        "filename": "numpy/_core/tests/test_multiarray.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

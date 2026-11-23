@@ -1,0 +1,3043 @@
+{
+  "attempt": 2,
+  "conclusion": "failure",
+  "createdAt": "2026-11-07T01:35:19Z",
+  "databaseId": 42324865667,
+  "displayTitle": "Do not warn about requests built by get_retry_request()",
+  "event": "pull_request",
+  "headBranch": "metacopy-retry-requests",
+  "headSha": "03e1f94e9658b8433d16130c148ae39936f394a3",
+  "jobs": [
+    {
+      "completedAt": "2026-11-07T08:31:13Z",
+      "conclusion": "success",
+      "databaseId": 128353539658,
+      "name": "pre-commit",
+      "startedAt": "2026-11-07T08:31:01Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-07T08:31:02Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-07T08:31:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:04Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-07T08:31:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:11Z",
+          "conclusion": "success",
+          "name": "Run pre-commit/action@2c7b3805fd2a0fd8c1884dcaebf91fc102a13ecd",
+          "number": 3,
+          "startedAt": "2026-11-07T08:31:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:11Z",
+          "conclusion": "skipped",
+          "name": "Explain the failure",
+          "number": 4,
+          "startedAt": "2026-11-07T08:31:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:11Z",
+          "conclusion": "success",
+          "name": "Post Run pre-commit/action@2c7b3805fd2a0fd8c1884dcaebf91fc102a13ecd",
+          "number": 7,
+          "startedAt": "2026-11-07T08:31:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:11Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 8,
+          "startedAt": "2026-11-07T08:31:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:11Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 9,
+          "startedAt": "2026-11-07T08:31:11Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/scrapy/scrapy/actions/runs/42324865667/job/128353539658"
+    },
+    {
+      "completedAt": "2026-11-07T08:31:20Z",
+      "conclusion": "success",
+      "databaseId": 128353539754,
+      "name": "checks (3.15, twinecheck)",
+      "startedAt": "2026-11-07T08:31:00Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-07T08:31:02Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-07T08:31:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:04Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-07T08:31:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:04Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.15",
+          "number": 3,
+          "startedAt": "2026-11-07T08:31:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:07Z",
+          "conclusion": "success",
+          "name": "Set up uv",
+          "number": 4,
+          "startedAt": "2026-11-07T08:31:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:17Z",
+          "conclusion": "success",
+          "name": "Run check",
+          "number": 5,
+          "startedAt": "2026-11-07T08:31:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:18Z",
+          "conclusion": "skipped",
+          "name": "Explain the failure",
+          "number": 6,
+          "startedAt": "2026-11-07T08:31:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:18Z",
+          "conclusion": "success",
+          "name": "Post Set up uv",
+          "number": 10,
+          "startedAt": "2026-11-07T08:31:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:18Z",
+          "conclusion": "success",
+          "name": "Post Set up Python 3.15",
+          "number": 11,
+          "startedAt": "2026-11-07T08:31:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:18Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 12,
+          "startedAt": "2026-11-07T08:31:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:18Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-11-07T08:31:18Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/scrapy/scrapy/actions/runs/42324865667/job/128353539754"
+    },
+    {
+      "completedAt": "2026-11-07T08:31:52Z",
+      "conclusion": "success",
+      "databaseId": 128353539812,
+      "name": "checks (3.11, mypy-tests)",
+      "startedAt": "2026-11-07T08:31:01Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-07T08:31:03Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-07T08:31:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:04Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-07T08:31:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:04Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.11",
+          "number": 3,
+          "startedAt": "2026-11-07T08:31:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:08Z",
+          "conclusion": "success",
+          "name": "Set up uv",
+          "number": 4,
+          "startedAt": "2026-11-07T08:31:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:50Z",
+          "conclusion": "success",
+          "name": "Run check",
+          "number": 5,
+          "startedAt": "2026-11-07T08:31:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:50Z",
+          "conclusion": "skipped",
+          "name": "Explain the failure",
+          "number": 6,
+          "startedAt": "2026-11-07T08:31:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:50Z",
+          "conclusion": "success",
+          "name": "Post Set up uv",
+          "number": 10,
+          "startedAt": "2026-11-07T08:31:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:50Z",
+          "conclusion": "success",
+          "name": "Post Set up Python 3.11",
+          "number": 11,
+          "startedAt": "2026-11-07T08:31:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:50Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 12,
+          "startedAt": "2026-11-07T08:31:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:50Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-11-07T08:31:50Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/scrapy/scrapy/actions/runs/42324865667/job/128353539812"
+    },
+    {
+      "completedAt": "2026-11-07T08:31:37Z",
+      "conclusion": "success",
+      "databaseId": 128353539832,
+      "name": "checks (3.14, docs)",
+      "startedAt": "2026-11-07T08:31:01Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-07T08:31:03Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-07T08:31:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:04Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-07T08:31:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:04Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.14",
+          "number": 3,
+          "startedAt": "2026-11-07T08:31:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:08Z",
+          "conclusion": "success",
+          "name": "Set up uv",
+          "number": 4,
+          "startedAt": "2026-11-07T08:31:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:34Z",
+          "conclusion": "success",
+          "name": "Run check",
+          "number": 5,
+          "startedAt": "2026-11-07T08:31:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:34Z",
+          "conclusion": "skipped",
+          "name": "Explain the failure",
+          "number": 6,
+          "startedAt": "2026-11-07T08:31:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:34Z",
+          "conclusion": "success",
+          "name": "Post Set up uv",
+          "number": 10,
+          "startedAt": "2026-11-07T08:31:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:35Z",
+          "conclusion": "success",
+          "name": "Post Set up Python 3.14",
+          "number": 11,
+          "startedAt": "2026-11-07T08:31:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:35Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 12,
+          "startedAt": "2026-11-07T08:31:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:35Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-11-07T08:31:35Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/scrapy/scrapy/actions/runs/42324865667/job/128353539832"
+    },
+    {
+      "completedAt": "2026-11-07T08:31:17Z",
+      "conclusion": "success",
+      "databaseId": 128353539835,
+      "name": "checks (3.14, docs-tests)",
+      "startedAt": "2026-11-07T08:31:01Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-07T08:31:02Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-07T08:31:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:04Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-07T08:31:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:04Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.14",
+          "number": 3,
+          "startedAt": "2026-11-07T08:31:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:06Z",
+          "conclusion": "success",
+          "name": "Set up uv",
+          "number": 4,
+          "startedAt": "2026-11-07T08:31:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:15Z",
+          "conclusion": "success",
+          "name": "Run check",
+          "number": 5,
+          "startedAt": "2026-11-07T08:31:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:15Z",
+          "conclusion": "skipped",
+          "name": "Explain the failure",
+          "number": 6,
+          "startedAt": "2026-11-07T08:31:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:15Z",
+          "conclusion": "success",
+          "name": "Post Set up uv",
+          "number": 10,
+          "startedAt": "2026-11-07T08:31:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:16Z",
+          "conclusion": "success",
+          "name": "Post Set up Python 3.14",
+          "number": 11,
+          "startedAt": "2026-11-07T08:31:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:16Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 12,
+          "startedAt": "2026-11-07T08:31:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:16Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-11-07T08:31:16Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/scrapy/scrapy/actions/runs/42324865667/job/128353539835"
+    },
+    {
+      "completedAt": "2026-11-07T08:31:21Z",
+      "conclusion": "success",
+      "databaseId": 128353539864,
+      "name": "checks (3.11, mypy)",
+      "startedAt": "2026-11-07T08:31:00Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-07T08:31:02Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-07T08:31:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:03Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-07T08:31:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:03Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.11",
+          "number": 3,
+          "startedAt": "2026-11-07T08:31:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:06Z",
+          "conclusion": "success",
+          "name": "Set up uv",
+          "number": 4,
+          "startedAt": "2026-11-07T08:31:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:18Z",
+          "conclusion": "success",
+          "name": "Run check",
+          "number": 5,
+          "startedAt": "2026-11-07T08:31:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:18Z",
+          "conclusion": "skipped",
+          "name": "Explain the failure",
+          "number": 6,
+          "startedAt": "2026-11-07T08:31:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:18Z",
+          "conclusion": "success",
+          "name": "Post Set up uv",
+          "number": 10,
+          "startedAt": "2026-11-07T08:31:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:18Z",
+          "conclusion": "success",
+          "name": "Post Set up Python 3.11",
+          "number": 11,
+          "startedAt": "2026-11-07T08:31:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:19Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 12,
+          "startedAt": "2026-11-07T08:31:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:19Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-11-07T08:31:19Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/scrapy/scrapy/actions/runs/42324865667/job/128353539864"
+    },
+    {
+      "completedAt": "2026-11-07T08:31:57Z",
+      "conclusion": "success",
+      "databaseId": 128353539893,
+      "name": "checks (3.14, pylint)",
+      "startedAt": "2026-11-07T08:31:01Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-07T08:31:02Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-07T08:31:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:03Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-07T08:31:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:04Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.14",
+          "number": 3,
+          "startedAt": "2026-11-07T08:31:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:06Z",
+          "conclusion": "success",
+          "name": "Set up uv",
+          "number": 4,
+          "startedAt": "2026-11-07T08:31:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:54Z",
+          "conclusion": "success",
+          "name": "Run check",
+          "number": 5,
+          "startedAt": "2026-11-07T08:31:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:54Z",
+          "conclusion": "skipped",
+          "name": "Explain the failure",
+          "number": 6,
+          "startedAt": "2026-11-07T08:31:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:54Z",
+          "conclusion": "success",
+          "name": "Post Set up uv",
+          "number": 10,
+          "startedAt": "2026-11-07T08:31:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:55Z",
+          "conclusion": "success",
+          "name": "Post Set up Python 3.14",
+          "number": 11,
+          "startedAt": "2026-11-07T08:31:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:55Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 12,
+          "startedAt": "2026-11-07T08:31:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:31:55Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-11-07T08:31:55Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/scrapy/scrapy/actions/runs/42324865667/job/128353539893"
+    },
+    {
+      "completedAt": "2026-11-07T08:35:45Z",
+      "conclusion": "success",
+      "databaseId": 128353751913,
+      "name": "tests (macos, 3.11, py)",
+      "startedAt": "2026-11-07T08:32:00Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-07T08:32:06Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-07T08:32:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:11Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-07T08:32:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:11Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.11",
+          "number": 3,
+          "startedAt": "2026-11-07T08:32:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:11Z",
+          "conclusion": "skipped",
+          "name": "Install system libraries",
+          "number": 4,
+          "startedAt": "2026-11-07T08:32:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:18Z",
+          "conclusion": "success",
+          "name": "Set up uv",
+          "number": 5,
+          "startedAt": "2026-11-07T08:32:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:18Z",
+          "conclusion": "success",
+          "name": "Install mitmproxy",
+          "number": 6,
+          "startedAt": "2026-11-07T08:32:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:35:33Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-11-07T08:32:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:35:33Z",
+          "conclusion": "skipped",
+          "name": "Upload coverage report",
+          "number": 8,
+          "startedAt": "2026-11-07T08:35:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:35:38Z",
+          "conclusion": "success",
+          "name": "Upload test results",
+          "number": 9,
+          "startedAt": "2026-11-07T08:35:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:35:38Z",
+          "conclusion": "success",
+          "name": "Post Set up uv",
+          "number": 16,
+          "startedAt": "2026-11-07T08:35:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:35:38Z",
+          "conclusion": "success",
+          "name": "Post Set up Python 3.11",
+          "number": 17,
+          "startedAt": "2026-11-07T08:35:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:35:39Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-07T08:35:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:35:42Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-07T08:35:39Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/scrapy/scrapy/actions/runs/42324865667/job/128353751913"
+    },
+    {
+      "completedAt": "2026-11-07T08:36:36Z",
+      "conclusion": "success",
+      "databaseId": 128353751936,
+      "name": "tests (macos, 3.15, no-reactor)",
+      "startedAt": "2026-11-07T08:32:00Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-07T08:32:03Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-07T08:32:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:06Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-07T08:32:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:51Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.15",
+          "number": 3,
+          "startedAt": "2026-11-07T08:32:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:51Z",
+          "conclusion": "skipped",
+          "name": "Install system libraries",
+          "number": 4,
+          "startedAt": "2026-11-07T08:32:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:54Z",
+          "conclusion": "success",
+          "name": "Set up uv",
+          "number": 5,
+          "startedAt": "2026-11-07T08:32:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:55Z",
+          "conclusion": "success",
+          "name": "Install mitmproxy",
+          "number": 6,
+          "startedAt": "2026-11-07T08:32:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:19Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-11-07T08:32:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:19Z",
+          "conclusion": "skipped",
+          "name": "Upload coverage report",
+          "number": 8,
+          "startedAt": "2026-11-07T08:36:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:26Z",
+          "conclusion": "success",
+          "name": "Upload test results",
+          "number": 9,
+          "startedAt": "2026-11-07T08:36:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:26Z",
+          "conclusion": "success",
+          "name": "Post Set up uv",
+          "number": 16,
+          "startedAt": "2026-11-07T08:36:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:26Z",
+          "conclusion": "success",
+          "name": "Post Set up Python 3.15",
+          "number": 17,
+          "startedAt": "2026-11-07T08:36:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:28Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-07T08:36:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:32Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-07T08:36:28Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/scrapy/scrapy/actions/runs/42324865667/job/128353751936"
+    },
+    {
+      "completedAt": "2026-11-07T08:38:34Z",
+      "conclusion": "success",
+      "databaseId": 128353751957,
+      "name": "tests (macos, 3.15, py)",
+      "startedAt": "2026-11-07T08:32:00Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-07T08:32:05Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-07T08:32:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:09Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-07T08:32:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:33:03Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.15",
+          "number": 3,
+          "startedAt": "2026-11-07T08:32:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:33:03Z",
+          "conclusion": "skipped",
+          "name": "Install system libraries",
+          "number": 4,
+          "startedAt": "2026-11-07T08:33:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:33:08Z",
+          "conclusion": "success",
+          "name": "Set up uv",
+          "number": 5,
+          "startedAt": "2026-11-07T08:33:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:33:09Z",
+          "conclusion": "success",
+          "name": "Install mitmproxy",
+          "number": 6,
+          "startedAt": "2026-11-07T08:33:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:38:23Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-11-07T08:33:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:38:26Z",
+          "conclusion": "success",
+          "name": "Upload coverage report",
+          "number": 8,
+          "startedAt": "2026-11-07T08:38:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:38:29Z",
+          "conclusion": "success",
+          "name": "Upload test results",
+          "number": 9,
+          "startedAt": "2026-11-07T08:38:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:38:30Z",
+          "conclusion": "success",
+          "name": "Post Set up uv",
+          "number": 16,
+          "startedAt": "2026-11-07T08:38:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:38:30Z",
+          "conclusion": "success",
+          "name": "Post Set up Python 3.15",
+          "number": 17,
+          "startedAt": "2026-11-07T08:38:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:38:31Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-07T08:38:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:38:32Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-07T08:38:31Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/scrapy/scrapy/actions/runs/42324865667/job/128353751957"
+    },
+    {
+      "completedAt": "2026-11-07T08:38:56Z",
+      "conclusion": "success",
+      "databaseId": 128353751972,
+      "name": "tests (windows, 3.11.9, min-extra-deps)",
+      "startedAt": "2026-11-07T08:31:59Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-07T08:32:03Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-07T08:32:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:11Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-07T08:32:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:11Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.11.9",
+          "number": 3,
+          "startedAt": "2026-11-07T08:32:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:11Z",
+          "conclusion": "skipped",
+          "name": "Install system libraries",
+          "number": 4,
+          "startedAt": "2026-11-07T08:32:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:19Z",
+          "conclusion": "success",
+          "name": "Set up uv",
+          "number": 5,
+          "startedAt": "2026-11-07T08:32:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:20Z",
+          "conclusion": "success",
+          "name": "Install mitmproxy",
+          "number": 6,
+          "startedAt": "2026-11-07T08:32:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:38:41Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-11-07T08:32:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:38:41Z",
+          "conclusion": "skipped",
+          "name": "Upload coverage report",
+          "number": 8,
+          "startedAt": "2026-11-07T08:38:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:38:50Z",
+          "conclusion": "success",
+          "name": "Upload test results",
+          "number": 9,
+          "startedAt": "2026-11-07T08:38:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:38:50Z",
+          "conclusion": "success",
+          "name": "Post Set up uv",
+          "number": 16,
+          "startedAt": "2026-11-07T08:38:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:38:50Z",
+          "conclusion": "success",
+          "name": "Post Set up Python 3.11.9",
+          "number": 17,
+          "startedAt": "2026-11-07T08:38:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:38:52Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-07T08:38:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:38:53Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-07T08:38:52Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/scrapy/scrapy/actions/runs/42324865667/job/128353751972"
+    },
+    {
+      "completedAt": "2026-11-07T08:38:19Z",
+      "conclusion": "success",
+      "databaseId": 128353752027,
+      "name": "tests (windows, 3.15, extra-deps)",
+      "startedAt": "2026-11-07T08:31:59Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-07T08:32:01Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-07T08:32:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:09Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-07T08:32:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:09Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.15",
+          "number": 3,
+          "startedAt": "2026-11-07T08:32:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:09Z",
+          "conclusion": "skipped",
+          "name": "Install system libraries",
+          "number": 4,
+          "startedAt": "2026-11-07T08:32:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:16Z",
+          "conclusion": "success",
+          "name": "Set up uv",
+          "number": 5,
+          "startedAt": "2026-11-07T08:32:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:17Z",
+          "conclusion": "success",
+          "name": "Install mitmproxy",
+          "number": 6,
+          "startedAt": "2026-11-07T08:32:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:38:06Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-11-07T08:32:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:38:06Z",
+          "conclusion": "skipped",
+          "name": "Upload coverage report",
+          "number": 8,
+          "startedAt": "2026-11-07T08:38:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:38:13Z",
+          "conclusion": "success",
+          "name": "Upload test results",
+          "number": 9,
+          "startedAt": "2026-11-07T08:38:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:38:14Z",
+          "conclusion": "success",
+          "name": "Post Set up uv",
+          "number": 16,
+          "startedAt": "2026-11-07T08:38:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:38:14Z",
+          "conclusion": "success",
+          "name": "Post Set up Python 3.15",
+          "number": 17,
+          "startedAt": "2026-11-07T08:38:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:38:16Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-07T08:38:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:38:16Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-07T08:38:16Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/scrapy/scrapy/actions/runs/42324865667/job/128353752027"
+    },
+    {
+      "completedAt": "2026-11-07T08:36:59Z",
+      "conclusion": "success",
+      "databaseId": 128353752054,
+      "name": "tests (windows, 3.11, py)",
+      "startedAt": "2026-11-07T08:32:47Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-07T08:32:51Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-07T08:32:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:59Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-07T08:32:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:59Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.11",
+          "number": 3,
+          "startedAt": "2026-11-07T08:32:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:59Z",
+          "conclusion": "skipped",
+          "name": "Install system libraries",
+          "number": 4,
+          "startedAt": "2026-11-07T08:32:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:33:05Z",
+          "conclusion": "success",
+          "name": "Set up uv",
+          "number": 5,
+          "startedAt": "2026-11-07T08:32:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:33:05Z",
+          "conclusion": "success",
+          "name": "Install mitmproxy",
+          "number": 6,
+          "startedAt": "2026-11-07T08:33:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:47Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-11-07T08:33:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:47Z",
+          "conclusion": "skipped",
+          "name": "Upload coverage report",
+          "number": 8,
+          "startedAt": "2026-11-07T08:36:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:55Z",
+          "conclusion": "success",
+          "name": "Upload test results",
+          "number": 9,
+          "startedAt": "2026-11-07T08:36:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:55Z",
+          "conclusion": "success",
+          "name": "Post Set up uv",
+          "number": 16,
+          "startedAt": "2026-11-07T08:36:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:55Z",
+          "conclusion": "success",
+          "name": "Post Set up Python 3.11",
+          "number": 17,
+          "startedAt": "2026-11-07T08:36:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:56Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-07T08:36:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:57Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-07T08:36:56Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/scrapy/scrapy/actions/runs/42324865667/job/128353752054"
+    },
+    {
+      "completedAt": "2026-11-07T08:36:47Z",
+      "conclusion": "success",
+      "databaseId": 128353752059,
+      "name": "tests (windows, 3.15, default-reactor)",
+      "startedAt": "2026-11-07T08:31:59Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-07T08:32:02Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-07T08:32:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:11Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-07T08:32:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:12Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.15",
+          "number": 3,
+          "startedAt": "2026-11-07T08:32:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:12Z",
+          "conclusion": "skipped",
+          "name": "Install system libraries",
+          "number": 4,
+          "startedAt": "2026-11-07T08:32:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:19Z",
+          "conclusion": "success",
+          "name": "Set up uv",
+          "number": 5,
+          "startedAt": "2026-11-07T08:32:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:20Z",
+          "conclusion": "success",
+          "name": "Install mitmproxy",
+          "number": 6,
+          "startedAt": "2026-11-07T08:32:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:34Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-11-07T08:32:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:34Z",
+          "conclusion": "skipped",
+          "name": "Upload coverage report",
+          "number": 8,
+          "startedAt": "2026-11-07T08:36:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:42Z",
+          "conclusion": "success",
+          "name": "Upload test results",
+          "number": 9,
+          "startedAt": "2026-11-07T08:36:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:42Z",
+          "conclusion": "success",
+          "name": "Post Set up uv",
+          "number": 16,
+          "startedAt": "2026-11-07T08:36:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:42Z",
+          "conclusion": "success",
+          "name": "Post Set up Python 3.15",
+          "number": 17,
+          "startedAt": "2026-11-07T08:36:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:44Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-07T08:36:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:44Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-07T08:36:44Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/scrapy/scrapy/actions/runs/42324865667/job/128353752059"
+    },
+    {
+      "completedAt": "2026-11-07T08:36:42Z",
+      "conclusion": "success",
+      "databaseId": 128353752088,
+      "name": "tests (ubuntu, 3.11.17, min-extra-deps)",
+      "startedAt": "2026-11-07T08:31:59Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-07T08:32:03Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-07T08:32:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:04Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-07T08:32:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:10Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.11.17",
+          "number": 3,
+          "startedAt": "2026-11-07T08:32:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:17Z",
+          "conclusion": "success",
+          "name": "Install system libraries",
+          "number": 4,
+          "startedAt": "2026-11-07T08:32:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:20Z",
+          "conclusion": "success",
+          "name": "Set up uv",
+          "number": 5,
+          "startedAt": "2026-11-07T08:32:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:21Z",
+          "conclusion": "success",
+          "name": "Install mitmproxy",
+          "number": 6,
+          "startedAt": "2026-11-07T08:32:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:34Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-11-07T08:32:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:37Z",
+          "conclusion": "success",
+          "name": "Upload coverage report",
+          "number": 8,
+          "startedAt": "2026-11-07T08:36:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:39Z",
+          "conclusion": "success",
+          "name": "Upload test results",
+          "number": 9,
+          "startedAt": "2026-11-07T08:36:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:40Z",
+          "conclusion": "success",
+          "name": "Post Set up uv",
+          "number": 16,
+          "startedAt": "2026-11-07T08:36:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:40Z",
+          "conclusion": "success",
+          "name": "Post Set up Python 3.11.17",
+          "number": 17,
+          "startedAt": "2026-11-07T08:36:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:40Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-07T08:36:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:40Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-07T08:36:40Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/scrapy/scrapy/actions/runs/42324865667/job/128353752088"
+    },
+    {
+      "completedAt": "2026-11-07T08:37:51Z",
+      "conclusion": "success",
+      "databaseId": 128353752089,
+      "name": "tests (windows, 3.15, py)",
+      "startedAt": "2026-11-07T08:31:59Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-07T08:32:02Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-07T08:32:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:08Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-07T08:32:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:08Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.15",
+          "number": 3,
+          "startedAt": "2026-11-07T08:32:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:08Z",
+          "conclusion": "skipped",
+          "name": "Install system libraries",
+          "number": 4,
+          "startedAt": "2026-11-07T08:32:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:14Z",
+          "conclusion": "success",
+          "name": "Set up uv",
+          "number": 5,
+          "startedAt": "2026-11-07T08:32:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:15Z",
+          "conclusion": "success",
+          "name": "Install mitmproxy",
+          "number": 6,
+          "startedAt": "2026-11-07T08:32:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:37:31Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-11-07T08:32:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:37:41Z",
+          "conclusion": "success",
+          "name": "Upload coverage report",
+          "number": 8,
+          "startedAt": "2026-11-07T08:37:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:37:47Z",
+          "conclusion": "success",
+          "name": "Upload test results",
+          "number": 9,
+          "startedAt": "2026-11-07T08:37:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:37:47Z",
+          "conclusion": "success",
+          "name": "Post Set up uv",
+          "number": 16,
+          "startedAt": "2026-11-07T08:37:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:37:47Z",
+          "conclusion": "success",
+          "name": "Post Set up Python 3.15",
+          "number": 17,
+          "startedAt": "2026-11-07T08:37:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:37:49Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-07T08:37:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:37:49Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-07T08:37:49Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/scrapy/scrapy/actions/runs/42324865667/job/128353752089"
+    },
+    {
+      "completedAt": "2026-11-07T08:35:20Z",
+      "conclusion": "success",
+      "databaseId": 128353752098,
+      "name": "tests (ubuntu, 3.15, no-reactor)",
+      "startedAt": "2026-11-07T08:31:59Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-07T08:32:03Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-07T08:32:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:04Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-07T08:32:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:05Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.15",
+          "number": 3,
+          "startedAt": "2026-11-07T08:32:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:05Z",
+          "conclusion": "skipped",
+          "name": "Install system libraries",
+          "number": 4,
+          "startedAt": "2026-11-07T08:32:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:08Z",
+          "conclusion": "success",
+          "name": "Set up uv",
+          "number": 5,
+          "startedAt": "2026-11-07T08:32:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:08Z",
+          "conclusion": "success",
+          "name": "Install mitmproxy",
+          "number": 6,
+          "startedAt": "2026-11-07T08:32:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:35:12Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-11-07T08:32:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:35:14Z",
+          "conclusion": "success",
+          "name": "Upload coverage report",
+          "number": 8,
+          "startedAt": "2026-11-07T08:35:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:35:16Z",
+          "conclusion": "success",
+          "name": "Upload test results",
+          "number": 9,
+          "startedAt": "2026-11-07T08:35:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:35:17Z",
+          "conclusion": "success",
+          "name": "Post Set up uv",
+          "number": 16,
+          "startedAt": "2026-11-07T08:35:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:35:17Z",
+          "conclusion": "success",
+          "name": "Post Set up Python 3.15",
+          "number": 17,
+          "startedAt": "2026-11-07T08:35:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:35:17Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-07T08:35:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:35:17Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-07T08:35:17Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/scrapy/scrapy/actions/runs/42324865667/job/128353752098"
+    },
+    {
+      "completedAt": "2026-11-07T08:32:45Z",
+      "conclusion": "success",
+      "databaseId": 128353752100,
+      "name": "tests (ubuntu, 3.15, botocore)",
+      "startedAt": "2026-11-07T08:31:59Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-07T08:32:02Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-07T08:32:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:03Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-07T08:32:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:03Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.15",
+          "number": 3,
+          "startedAt": "2026-11-07T08:32:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:03Z",
+          "conclusion": "skipped",
+          "name": "Install system libraries",
+          "number": 4,
+          "startedAt": "2026-11-07T08:32:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:06Z",
+          "conclusion": "success",
+          "name": "Set up uv",
+          "number": 5,
+          "startedAt": "2026-11-07T08:32:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:07Z",
+          "conclusion": "success",
+          "name": "Install mitmproxy",
+          "number": 6,
+          "startedAt": "2026-11-07T08:32:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:38Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-11-07T08:32:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:40Z",
+          "conclusion": "success",
+          "name": "Upload coverage report",
+          "number": 8,
+          "startedAt": "2026-11-07T08:32:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:43Z",
+          "conclusion": "success",
+          "name": "Upload test results",
+          "number": 9,
+          "startedAt": "2026-11-07T08:32:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:43Z",
+          "conclusion": "success",
+          "name": "Post Set up uv",
+          "number": 16,
+          "startedAt": "2026-11-07T08:32:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:43Z",
+          "conclusion": "success",
+          "name": "Post Set up Python 3.15",
+          "number": 17,
+          "startedAt": "2026-11-07T08:32:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:43Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-07T08:32:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:43Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-07T08:32:43Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/scrapy/scrapy/actions/runs/42324865667/job/128353752100"
+    },
+    {
+      "completedAt": "2026-11-07T08:36:22Z",
+      "conclusion": "success",
+      "databaseId": 128353752119,
+      "name": "tests (windows, 3.11.9, min)",
+      "startedAt": "2026-11-07T08:32:00Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-07T08:32:03Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-07T08:32:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:09Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-07T08:32:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:09Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.11.9",
+          "number": 3,
+          "startedAt": "2026-11-07T08:32:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:09Z",
+          "conclusion": "skipped",
+          "name": "Install system libraries",
+          "number": 4,
+          "startedAt": "2026-11-07T08:32:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:17Z",
+          "conclusion": "success",
+          "name": "Set up uv",
+          "number": 5,
+          "startedAt": "2026-11-07T08:32:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:18Z",
+          "conclusion": "success",
+          "name": "Install mitmproxy",
+          "number": 6,
+          "startedAt": "2026-11-07T08:32:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:10Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-11-07T08:32:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:10Z",
+          "conclusion": "skipped",
+          "name": "Upload coverage report",
+          "number": 8,
+          "startedAt": "2026-11-07T08:36:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:18Z",
+          "conclusion": "success",
+          "name": "Upload test results",
+          "number": 9,
+          "startedAt": "2026-11-07T08:36:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:18Z",
+          "conclusion": "success",
+          "name": "Post Set up uv",
+          "number": 16,
+          "startedAt": "2026-11-07T08:36:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:18Z",
+          "conclusion": "success",
+          "name": "Post Set up Python 3.11.9",
+          "number": 17,
+          "startedAt": "2026-11-07T08:36:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:20Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-07T08:36:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:20Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-07T08:36:20Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/scrapy/scrapy/actions/runs/42324865667/job/128353752119"
+    },
+    {
+      "completedAt": "2026-11-07T08:35:37Z",
+      "conclusion": "failure",
+      "databaseId": 128353752120,
+      "name": "tests (ubuntu, 3.15, default-reactor)",
+      "startedAt": "2026-11-07T08:31:59Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-07T08:32:02Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-07T08:32:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:04Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-07T08:32:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:04Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.15",
+          "number": 3,
+          "startedAt": "2026-11-07T08:32:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:04Z",
+          "conclusion": "skipped",
+          "name": "Install system libraries",
+          "number": 4,
+          "startedAt": "2026-11-07T08:32:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:07Z",
+          "conclusion": "success",
+          "name": "Set up uv",
+          "number": 5,
+          "startedAt": "2026-11-07T08:32:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:08Z",
+          "conclusion": "success",
+          "name": "Install mitmproxy",
+          "number": 6,
+          "startedAt": "2026-11-07T08:32:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:35:30Z",
+          "conclusion": "failure",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-11-07T08:32:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:35:33Z",
+          "conclusion": "success",
+          "name": "Upload coverage report",
+          "number": 8,
+          "startedAt": "2026-11-07T08:35:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:35:35Z",
+          "conclusion": "success",
+          "name": "Upload test results",
+          "number": 9,
+          "startedAt": "2026-11-07T08:35:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:35:35Z",
+          "conclusion": "skipped",
+          "name": "Post Set up uv",
+          "number": 16,
+          "startedAt": "2026-11-07T08:35:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:35:35Z",
+          "conclusion": "skipped",
+          "name": "Post Set up Python 3.15",
+          "number": 17,
+          "startedAt": "2026-11-07T08:35:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:35:35Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-07T08:35:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:35:35Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-07T08:35:35Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/scrapy/scrapy/actions/runs/42324865667/job/128353752120"
+    },
+    {
+      "completedAt": "2026-11-07T08:37:19Z",
+      "conclusion": "success",
+      "databaseId": 128353752146,
+      "name": "tests (ubuntu, 3.11.17, min)",
+      "startedAt": "2026-11-07T08:32:00Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-07T08:32:03Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-07T08:32:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:04Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-07T08:32:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:11Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.11.17",
+          "number": 3,
+          "startedAt": "2026-11-07T08:32:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:18Z",
+          "conclusion": "success",
+          "name": "Install system libraries",
+          "number": 4,
+          "startedAt": "2026-11-07T08:32:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:22Z",
+          "conclusion": "success",
+          "name": "Set up uv",
+          "number": 5,
+          "startedAt": "2026-11-07T08:32:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:22Z",
+          "conclusion": "success",
+          "name": "Install mitmproxy",
+          "number": 6,
+          "startedAt": "2026-11-07T08:32:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:37:09Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-11-07T08:32:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:37:12Z",
+          "conclusion": "success",
+          "name": "Upload coverage report",
+          "number": 8,
+          "startedAt": "2026-11-07T08:37:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:37:15Z",
+          "conclusion": "success",
+          "name": "Upload test results",
+          "number": 9,
+          "startedAt": "2026-11-07T08:37:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:37:15Z",
+          "conclusion": "success",
+          "name": "Post Set up uv",
+          "number": 16,
+          "startedAt": "2026-11-07T08:37:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:37:15Z",
+          "conclusion": "success",
+          "name": "Post Set up Python 3.11.17",
+          "number": 17,
+          "startedAt": "2026-11-07T08:37:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:37:15Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-07T08:37:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:37:15Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-07T08:37:15Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/scrapy/scrapy/actions/runs/42324865667/job/128353752146"
+    },
+    {
+      "completedAt": "2026-11-07T08:35:45Z",
+      "conclusion": "failure",
+      "databaseId": 128353752152,
+      "name": "tests (ubuntu, 3.11.17, min-default-reactor)",
+      "startedAt": "2026-11-07T08:32:00Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-07T08:32:03Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-07T08:32:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:04Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-07T08:32:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:10Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.11.17",
+          "number": 3,
+          "startedAt": "2026-11-07T08:32:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:17Z",
+          "conclusion": "success",
+          "name": "Install system libraries",
+          "number": 4,
+          "startedAt": "2026-11-07T08:32:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:21Z",
+          "conclusion": "success",
+          "name": "Set up uv",
+          "number": 5,
+          "startedAt": "2026-11-07T08:32:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:21Z",
+          "conclusion": "success",
+          "name": "Install mitmproxy",
+          "number": 6,
+          "startedAt": "2026-11-07T08:32:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:35:36Z",
+          "conclusion": "failure",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-11-07T08:32:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:35:39Z",
+          "conclusion": "success",
+          "name": "Upload coverage report",
+          "number": 8,
+          "startedAt": "2026-11-07T08:35:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:35:42Z",
+          "conclusion": "success",
+          "name": "Upload test results",
+          "number": 9,
+          "startedAt": "2026-11-07T08:35:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:35:42Z",
+          "conclusion": "skipped",
+          "name": "Post Set up uv",
+          "number": 16,
+          "startedAt": "2026-11-07T08:35:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:35:42Z",
+          "conclusion": "skipped",
+          "name": "Post Set up Python 3.11.17",
+          "number": 17,
+          "startedAt": "2026-11-07T08:35:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:35:42Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-07T08:35:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:35:42Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-07T08:35:42Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/scrapy/scrapy/actions/runs/42324865667/job/128353752152"
+    },
+    {
+      "completedAt": "2026-11-07T08:37:03Z",
+      "conclusion": "success",
+      "databaseId": 128353752176,
+      "name": "tests (ubuntu, 3.15, no-reactor-extra-deps)",
+      "startedAt": "2026-11-07T08:32:00Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-07T08:32:03Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-07T08:32:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:04Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-07T08:32:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:04Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.15",
+          "number": 3,
+          "startedAt": "2026-11-07T08:32:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:04Z",
+          "conclusion": "skipped",
+          "name": "Install system libraries",
+          "number": 4,
+          "startedAt": "2026-11-07T08:32:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:08Z",
+          "conclusion": "success",
+          "name": "Set up uv",
+          "number": 5,
+          "startedAt": "2026-11-07T08:32:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:09Z",
+          "conclusion": "success",
+          "name": "Install mitmproxy",
+          "number": 6,
+          "startedAt": "2026-11-07T08:32:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:53Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-11-07T08:32:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:56Z",
+          "conclusion": "success",
+          "name": "Upload coverage report",
+          "number": 8,
+          "startedAt": "2026-11-07T08:36:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:59Z",
+          "conclusion": "success",
+          "name": "Upload test results",
+          "number": 9,
+          "startedAt": "2026-11-07T08:36:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:59Z",
+          "conclusion": "success",
+          "name": "Post Set up uv",
+          "number": 16,
+          "startedAt": "2026-11-07T08:36:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:59Z",
+          "conclusion": "success",
+          "name": "Post Set up Python 3.15",
+          "number": 17,
+          "startedAt": "2026-11-07T08:36:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:59Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-07T08:36:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:59Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-07T08:36:59Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/scrapy/scrapy/actions/runs/42324865667/job/128353752176"
+    },
+    {
+      "completedAt": "2026-11-07T08:34:57Z",
+      "conclusion": "success",
+      "databaseId": 128353752177,
+      "name": "tests (ubuntu, 3.11, py)",
+      "startedAt": "2026-11-07T08:31:59Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-07T08:32:01Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-07T08:32:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:02Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-07T08:32:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:02Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.11",
+          "number": 3,
+          "startedAt": "2026-11-07T08:32:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:02Z",
+          "conclusion": "skipped",
+          "name": "Install system libraries",
+          "number": 4,
+          "startedAt": "2026-11-07T08:32:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:05Z",
+          "conclusion": "success",
+          "name": "Set up uv",
+          "number": 5,
+          "startedAt": "2026-11-07T08:32:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:07Z",
+          "conclusion": "success",
+          "name": "Install mitmproxy",
+          "number": 6,
+          "startedAt": "2026-11-07T08:32:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:34:51Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-11-07T08:32:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:34:51Z",
+          "conclusion": "skipped",
+          "name": "Upload coverage report",
+          "number": 8,
+          "startedAt": "2026-11-07T08:34:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:34:54Z",
+          "conclusion": "success",
+          "name": "Upload test results",
+          "number": 9,
+          "startedAt": "2026-11-07T08:34:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:34:54Z",
+          "conclusion": "success",
+          "name": "Post Set up uv",
+          "number": 16,
+          "startedAt": "2026-11-07T08:34:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:34:54Z",
+          "conclusion": "success",
+          "name": "Post Set up Python 3.11",
+          "number": 17,
+          "startedAt": "2026-11-07T08:34:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:34:55Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-07T08:34:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:34:55Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-07T08:34:55Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/scrapy/scrapy/actions/runs/42324865667/job/128353752177"
+    },
+    {
+      "completedAt": "2026-11-07T08:36:17Z",
+      "conclusion": "failure",
+      "databaseId": 128353752183,
+      "name": "tests (ubuntu, 3.15, extra-deps)",
+      "startedAt": "2026-11-07T08:31:59Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-07T08:32:02Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-07T08:32:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:03Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-07T08:32:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:03Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.15",
+          "number": 3,
+          "startedAt": "2026-11-07T08:32:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:03Z",
+          "conclusion": "skipped",
+          "name": "Install system libraries",
+          "number": 4,
+          "startedAt": "2026-11-07T08:32:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:06Z",
+          "conclusion": "success",
+          "name": "Set up uv",
+          "number": 5,
+          "startedAt": "2026-11-07T08:32:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:06Z",
+          "conclusion": "success",
+          "name": "Install mitmproxy",
+          "number": 6,
+          "startedAt": "2026-11-07T08:32:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:10Z",
+          "conclusion": "failure",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-11-07T08:32:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:12Z",
+          "conclusion": "success",
+          "name": "Upload coverage report",
+          "number": 8,
+          "startedAt": "2026-11-07T08:36:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:15Z",
+          "conclusion": "success",
+          "name": "Upload test results",
+          "number": 9,
+          "startedAt": "2026-11-07T08:36:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:15Z",
+          "conclusion": "skipped",
+          "name": "Post Set up uv",
+          "number": 16,
+          "startedAt": "2026-11-07T08:36:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:15Z",
+          "conclusion": "skipped",
+          "name": "Post Set up Python 3.15",
+          "number": 17,
+          "startedAt": "2026-11-07T08:36:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:15Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-07T08:36:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:15Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-07T08:36:15Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/scrapy/scrapy/actions/runs/42324865667/job/128353752183"
+    },
+    {
+      "completedAt": "2026-11-07T08:33:16Z",
+      "conclusion": "success",
+      "databaseId": 128353752195,
+      "name": "tests (ubuntu, 3.11.17, min-botocore)",
+      "startedAt": "2026-11-07T08:31:59Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-07T08:32:03Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-07T08:32:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:04Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-07T08:32:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:11Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.11.17",
+          "number": 3,
+          "startedAt": "2026-11-07T08:32:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:29Z",
+          "conclusion": "success",
+          "name": "Install system libraries",
+          "number": 4,
+          "startedAt": "2026-11-07T08:32:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:33Z",
+          "conclusion": "success",
+          "name": "Set up uv",
+          "number": 5,
+          "startedAt": "2026-11-07T08:32:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:33Z",
+          "conclusion": "success",
+          "name": "Install mitmproxy",
+          "number": 6,
+          "startedAt": "2026-11-07T08:32:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:33:07Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-11-07T08:32:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:33:09Z",
+          "conclusion": "success",
+          "name": "Upload coverage report",
+          "number": 8,
+          "startedAt": "2026-11-07T08:33:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:33:12Z",
+          "conclusion": "success",
+          "name": "Upload test results",
+          "number": 9,
+          "startedAt": "2026-11-07T08:33:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:33:12Z",
+          "conclusion": "success",
+          "name": "Post Set up uv",
+          "number": 16,
+          "startedAt": "2026-11-07T08:33:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:33:12Z",
+          "conclusion": "success",
+          "name": "Post Set up Python 3.11.17",
+          "number": 17,
+          "startedAt": "2026-11-07T08:33:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:33:12Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-07T08:33:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:33:12Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-07T08:33:12Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/scrapy/scrapy/actions/runs/42324865667/job/128353752195"
+    },
+    {
+      "completedAt": "2026-11-07T08:36:56Z",
+      "conclusion": "success",
+      "databaseId": 128353752222,
+      "name": "tests (ubuntu, 3.15, py)",
+      "startedAt": "2026-11-07T08:31:59Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-07T08:32:02Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-07T08:32:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:03Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-07T08:32:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:04Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.15",
+          "number": 3,
+          "startedAt": "2026-11-07T08:32:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:04Z",
+          "conclusion": "skipped",
+          "name": "Install system libraries",
+          "number": 4,
+          "startedAt": "2026-11-07T08:32:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:09Z",
+          "conclusion": "success",
+          "name": "Set up uv",
+          "number": 5,
+          "startedAt": "2026-11-07T08:32:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:32:09Z",
+          "conclusion": "success",
+          "name": "Install mitmproxy",
+          "number": 6,
+          "startedAt": "2026-11-07T08:32:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:47Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-11-07T08:32:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:50Z",
+          "conclusion": "success",
+          "name": "Upload coverage report",
+          "number": 8,
+          "startedAt": "2026-11-07T08:36:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:52Z",
+          "conclusion": "success",
+          "name": "Upload test results",
+          "number": 9,
+          "startedAt": "2026-11-07T08:36:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:52Z",
+          "conclusion": "success",
+          "name": "Post Set up uv",
+          "number": 16,
+          "startedAt": "2026-11-07T08:36:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:53Z",
+          "conclusion": "success",
+          "name": "Post Set up Python 3.15",
+          "number": 17,
+          "startedAt": "2026-11-07T08:36:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:53Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-07T08:36:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:53Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-07T08:36:53Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/scrapy/scrapy/actions/runs/42324865667/job/128353752222"
+    },
+    {
+      "completedAt": "2026-11-07T08:36:52Z",
+      "conclusion": "failure",
+      "databaseId": 128353752342,
+      "name": "tests (windows, 3.15, no-reactor)",
+      "startedAt": "2026-11-07T08:33:17Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-07T08:33:20Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-07T08:33:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:33:26Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-07T08:33:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:33:26Z",
+          "conclusion": "success",
+          "name": "Set up Python 3.15",
+          "number": 3,
+          "startedAt": "2026-11-07T08:33:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:33:26Z",
+          "conclusion": "skipped",
+          "name": "Install system libraries",
+          "number": 4,
+          "startedAt": "2026-11-07T08:33:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:33:32Z",
+          "conclusion": "success",
+          "name": "Set up uv",
+          "number": 5,
+          "startedAt": "2026-11-07T08:33:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:33:32Z",
+          "conclusion": "success",
+          "name": "Install mitmproxy",
+          "number": 6,
+          "startedAt": "2026-11-07T08:33:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:42Z",
+          "conclusion": "failure",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-11-07T08:33:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:42Z",
+          "conclusion": "skipped",
+          "name": "Upload coverage report",
+          "number": 8,
+          "startedAt": "2026-11-07T08:36:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:48Z",
+          "conclusion": "success",
+          "name": "Upload test results",
+          "number": 9,
+          "startedAt": "2026-11-07T08:36:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:48Z",
+          "conclusion": "skipped",
+          "name": "Post Set up uv",
+          "number": 16,
+          "startedAt": "2026-11-07T08:36:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:48Z",
+          "conclusion": "skipped",
+          "name": "Post Set up Python 3.15",
+          "number": 17,
+          "startedAt": "2026-11-07T08:36:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:50Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "startedAt": "2026-11-07T08:36:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-07T08:36:50Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-07T08:36:50Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/scrapy/scrapy/actions/runs/42324865667/job/128353752342"
+    }
+  ],
+  "name": "CI",
+  "updatedAt": "2026-11-07T08:38:57Z",
+  "repository": "scrapy/scrapy"
+}

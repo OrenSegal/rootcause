@@ -1,0 +1,26 @@
+[
+  {
+    "author": "Thanatos9404",
+    "committedDate": "2026-10-31T13:16:50Z",
+    "messageHeadline": "fix(plugins): name the plugin that fails to load or activate",
+    "oid": "61ecdaf5344d0191b0ac54fab0ecaf8c3de85e7d",
+    "files": [
+      {
+        "filename": "docs/plugins.md",
+        "status": "modified"
+      },
+      {
+        "filename": "src/poetry/plugins/plugin_manager.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/console/test_application.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/plugins/test_plugin_manager.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

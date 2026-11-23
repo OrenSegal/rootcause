@@ -1,0 +1,12 @@
+{
+  "fixed_run": "https://github.com/urllib3/urllib3/actions/runs/44346125999",
+  "fixed_sha": "c42b20b9208d020a27dcae847eba6560ae450126",
+  "commits": [
+    "c42b20b9208d020a27dcae847eba6560ae450126"
+  ],
+  "files": [
+    "test/test_proxymanager.py"
+  ],
+  "merges": [],
+  "status": "ahead"
+}

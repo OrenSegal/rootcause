@@ -1,0 +1,12 @@
+{
+  "fixed_run": "https://github.com/pallets/jinja/actions/runs/33426624500",
+  "fixed_sha": "978761e8fdd083057b6bb53d6e5414b159f671f6",
+  "commits": [
+    "978761e8fdd083057b6bb53d6e5414b159f671f6"
+  ],
+  "files": [
+    "src/jinja2/utils.py",
+    "tests/test_filters.py"
+  ],
+  "status": "ahead"
+}

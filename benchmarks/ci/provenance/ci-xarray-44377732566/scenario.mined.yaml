@@ -1,0 +1,17 @@
+# Mined from https://github.com/pydata/xarray/actions/runs/44377732566 (pydata/xarray,
+# licence Apache-2.0). Fixed by run
+# https://github.com/pydata/xarray/actions/runs/44389577957. Label rule: the fix changed
+# files exactly one tested commit touched. Fix touched: xarray/tests/test_interp.py.
+id: ci-xarray-44377732566
+title: Allow interp along dimensions with a single coordinate value
+alert:
+  severity: ci
+  service: ubuntu-latest-test-py315-with-typing
+  summary: 'workflow CI failed on interp-single-point-10747 at 9ae0e3ad9c: step ''Run tests''
+    in job ''ubuntu-latest | test-py315-with-typing'' failed.'
+truth:
+  category: bad_code_deploy
+  service: xarray
+  required_evidence_any:
+  - 4e702a98c8
+provenance: recorded

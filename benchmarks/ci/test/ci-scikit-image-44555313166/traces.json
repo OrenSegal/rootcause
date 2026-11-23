@@ -1,0 +1,92 @@
+[
+  {
+    "span_id": "run-44555313166",
+    "trace_id": "run-44555313166",
+    "parent_id": null,
+    "service": "typing",
+    "name": "Typing",
+    "start": "2026-11-19T15:29:13Z",
+    "duration_ms": 22000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-135669694093",
+    "trace_id": "run-44555313166",
+    "parent_id": "run-44555313166",
+    "service": "test-docstub",
+    "name": "Test docstub",
+    "start": "2026-11-19T15:29:17Z",
+    "duration_ms": 17000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-135669694093-step-1",
+    "trace_id": "run-44555313166",
+    "parent_id": "job-135669694093",
+    "service": "test-docstub",
+    "name": "Set up job",
+    "start": "2026-11-19T15:29:18Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135669694093-step-2",
+    "trace_id": "run-44555313166",
+    "parent_id": "job-135669694093",
+    "service": "test-docstub",
+    "name": "Clone scikit-image",
+    "start": "2026-11-19T15:29:18Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135669694093-step-3",
+    "trace_id": "run-44555313166",
+    "parent_id": "job-135669694093",
+    "service": "test-docstub",
+    "name": "Set up Python",
+    "start": "2026-11-19T15:29:21Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135669694093-step-4",
+    "trace_id": "run-44555313166",
+    "parent_id": "job-135669694093",
+    "service": "test-docstub",
+    "name": "Install docstub",
+    "start": "2026-11-19T15:29:24Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135669694093-step-5",
+    "trace_id": "run-44555313166",
+    "parent_id": "job-135669694093",
+    "service": "test-docstub",
+    "name": "Create skimage-stubs with docstub",
+    "start": "2026-11-19T15:29:30Z",
+    "duration_ms": 2000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-135669694093-step-14",
+    "trace_id": "run-44555313166",
+    "parent_id": "job-135669694093",
+    "service": "test-docstub",
+    "name": "Post Clone scikit-image",
+    "start": "2026-11-19T15:29:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135669694093-step-15",
+    "trace_id": "run-44555313166",
+    "parent_id": "job-135669694093",
+    "service": "test-docstub",
+    "name": "Complete job",
+    "start": "2026-11-19T15:29:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

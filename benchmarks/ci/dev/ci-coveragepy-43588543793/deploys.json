@@ -1,0 +1,17 @@
+[
+  {
+    "id": "e571532dd2",
+    "service": "coveragepy",
+    "version": "e571532dd2",
+    "ts": "2026-11-14T10:56:17Z",
+    "author": "ychampion",
+    "summary": "fix: preserve data recorded by other threads during flush_data",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "coverage/collector.py",
+      "news/20261114_161400_ychampion_flush_data_threads.rst",
+      "tests/test_collector.py"
+    ]
+  }
+]

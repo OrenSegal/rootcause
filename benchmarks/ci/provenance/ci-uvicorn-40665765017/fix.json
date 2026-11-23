@@ -1,0 +1,11 @@
+{
+  "fixed_run": "https://github.com/Kludex/uvicorn/actions/runs/40667066630",
+  "fixed_sha": "681cbcad67ed2c3d72d72255f4c51ca257e4d6ca",
+  "commits": [
+    "681cbcad67ed2c3d72d72255f4c51ca257e4d6ca"
+  ],
+  "files": [
+    "tests/protocols/test_websocket.py"
+  ],
+  "status": "ahead"
+}

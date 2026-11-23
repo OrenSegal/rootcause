@@ -1,0 +1,18 @@
+# Mined from https://github.com/fastapi/fastapi/actions/runs/43088004454
+# (fastapi/fastapi, licence MIT). Fixed by run
+# https://github.com/fastapi/fastapi/actions/runs/43105971258. Label rule: the fix
+# changed files exactly one tested commit touched. Fix touched:
+# tests/test_concurrency.py.
+id: ci-fastapi-43088004454
+title: "\U0001F41B Fix synchronous dependency cleanup on cancellation"
+alert:
+  severity: ci
+  service: coverage-combine
+  summary: 'workflow Test failed on codex/fix-sync-dependency-cancellation at c31ee07649:
+    step ''Run uv run coverage report --fail-under=100'' in job ''coverage-combine'' failed.'
+truth:
+  category: bad_code_deploy
+  service: fastapi
+  required_evidence_any:
+  - c31ee07649
+provenance: recorded

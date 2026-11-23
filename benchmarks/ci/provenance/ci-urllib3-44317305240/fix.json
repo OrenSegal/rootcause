@@ -1,0 +1,12 @@
+{
+  "fixed_run": "https://github.com/urllib3/urllib3/actions/runs/44345882498",
+  "fixed_sha": "6f0a944c3d9e5e88430e8d547aafc7539b403cd9",
+  "commits": [
+    "6f0a944c3d9e5e88430e8d547aafc7539b403cd9"
+  ],
+  "files": [
+    "test/test_collections.py"
+  ],
+  "merges": [],
+  "status": "ahead"
+}

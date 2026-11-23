@@ -1,0 +1,1672 @@
+[
+  {
+    "span_id": "run-42514756929",
+    "trace_id": "run-42514756929",
+    "parent_id": null,
+    "service": "tests",
+    "name": "Tests",
+    "start": "2026-11-08T19:22:57Z",
+    "duration_ms": 1987000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-128835296933",
+    "trace_id": "run-42514756929",
+    "parent_id": "run-42514756929",
+    "service": "mypyc-runtime-tests-with-py310-ubuntu",
+    "name": "mypyc runtime tests with py310-ubuntu",
+    "start": "2026-11-08T19:23:17Z",
+    "duration_ms": 587000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835296933-step-1",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835296933",
+    "service": "mypyc-runtime-tests-with-py310-ubuntu",
+    "name": "Set up job",
+    "start": "2026-11-08T19:23:18Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835296933-step-2",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835296933",
+    "service": "mypyc-runtime-tests-with-py310-ubuntu",
+    "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+    "start": "2026-11-08T19:23:19Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835296933-step-5",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835296933",
+    "service": "mypyc-runtime-tests-with-py310-ubuntu",
+    "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+    "start": "2026-11-08T19:23:21Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835296933-step-6",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835296933",
+    "service": "mypyc-runtime-tests-with-py310-ubuntu",
+    "name": "Install tox",
+    "start": "2026-11-08T19:23:27Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835296933-step-8",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835296933",
+    "service": "mypyc-runtime-tests-with-py310-ubuntu",
+    "name": "Setup tox environment",
+    "start": "2026-11-08T19:23:29Z",
+    "duration_ms": 17000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835296933-step-9",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835296933",
+    "service": "mypyc-runtime-tests-with-py310-ubuntu",
+    "name": "Test",
+    "start": "2026-11-08T19:23:46Z",
+    "duration_ms": 554000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835296933-step-19",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835296933",
+    "service": "mypyc-runtime-tests-with-py310-ubuntu",
+    "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+    "start": "2026-11-08T19:33:00Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835296933-step-20",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835296933",
+    "service": "mypyc-runtime-tests-with-py310-ubuntu",
+    "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+    "start": "2026-11-08T19:33:00Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835296933-step-21",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835296933",
+    "service": "mypyc-runtime-tests-with-py310-ubuntu",
+    "name": "Complete job",
+    "start": "2026-11-08T19:33:01Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835296973",
+    "trace_id": "run-42514756929",
+    "parent_id": "run-42514756929",
+    "service": "mypyc-runtime-tests-with-py313-macos",
+    "name": "mypyc runtime tests with py313-macos",
+    "start": "2026-11-08T19:23:19Z",
+    "duration_ms": 846000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835296973-step-1",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835296973",
+    "service": "mypyc-runtime-tests-with-py313-macos",
+    "name": "Set up job",
+    "start": "2026-11-08T19:23:19Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835296973-step-2",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835296973",
+    "service": "mypyc-runtime-tests-with-py313-macos",
+    "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+    "start": "2026-11-08T19:23:20Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835296973-step-5",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835296973",
+    "service": "mypyc-runtime-tests-with-py313-macos",
+    "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+    "start": "2026-11-08T19:23:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835296973-step-6",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835296973",
+    "service": "mypyc-runtime-tests-with-py313-macos",
+    "name": "Install tox",
+    "start": "2026-11-08T19:23:24Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835296973-step-8",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835296973",
+    "service": "mypyc-runtime-tests-with-py313-macos",
+    "name": "Setup tox environment",
+    "start": "2026-11-08T19:23:29Z",
+    "duration_ms": 21000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835296973-step-9",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835296973",
+    "service": "mypyc-runtime-tests-with-py313-macos",
+    "name": "Test",
+    "start": "2026-11-08T19:23:50Z",
+    "duration_ms": 810000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835296973-step-19",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835296973",
+    "service": "mypyc-runtime-tests-with-py313-macos",
+    "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+    "start": "2026-11-08T19:37:20Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835296973-step-20",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835296973",
+    "service": "mypyc-runtime-tests-with-py313-macos",
+    "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+    "start": "2026-11-08T19:37:21Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835296973-step-21",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835296973",
+    "service": "mypyc-runtime-tests-with-py313-macos",
+    "name": "Complete job",
+    "start": "2026-11-08T19:37:22Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297046",
+    "trace_id": "run-42514756929",
+    "parent_id": "run-42514756929",
+    "service": "test-suite-with-py313-ubuntu-mypyc-compiled",
+    "name": "Test suite with py313-ubuntu, mypyc-compiled",
+    "start": "2026-11-08T19:23:20Z",
+    "duration_ms": 1158000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-128835297046-step-1",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297046",
+    "service": "test-suite-with-py313-ubuntu-mypyc-compiled",
+    "name": "Set up job",
+    "start": "2026-11-08T19:23:21Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297046-step-2",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297046",
+    "service": "test-suite-with-py313-ubuntu-mypyc-compiled",
+    "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+    "start": "2026-11-08T19:23:21Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297046-step-5",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297046",
+    "service": "test-suite-with-py313-ubuntu-mypyc-compiled",
+    "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+    "start": "2026-11-08T19:23:23Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297046-step-6",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297046",
+    "service": "test-suite-with-py313-ubuntu-mypyc-compiled",
+    "name": "Install tox",
+    "start": "2026-11-08T19:23:23Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297046-step-7",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297046",
+    "service": "test-suite-with-py313-ubuntu-mypyc-compiled",
+    "name": "Compiled with mypyc",
+    "start": "2026-11-08T19:23:28Z",
+    "duration_ms": 435000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297046-step-8",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297046",
+    "service": "test-suite-with-py313-ubuntu-mypyc-compiled",
+    "name": "Setup tox environment",
+    "start": "2026-11-08T19:30:43Z",
+    "duration_ms": 16000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297046-step-9",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297046",
+    "service": "test-suite-with-py313-ubuntu-mypyc-compiled",
+    "name": "Test",
+    "start": "2026-11-08T19:30:59Z",
+    "duration_ms": 696000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-128835297046-step-20",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297046",
+    "service": "test-suite-with-py313-ubuntu-mypyc-compiled",
+    "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+    "start": "2026-11-08T19:42:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297046-step-21",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297046",
+    "service": "test-suite-with-py313-ubuntu-mypyc-compiled",
+    "name": "Complete job",
+    "start": "2026-11-08T19:42:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297052",
+    "trace_id": "run-42514756929",
+    "parent_id": "run-42514756929",
+    "service": "test-suite-with-py314t-ubuntu-mypyc-compiled",
+    "name": "Test suite with py314t-ubuntu, mypyc-compiled",
+    "start": "2026-11-08T19:23:19Z",
+    "duration_ms": 1267000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-128835297052-step-1",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297052",
+    "service": "test-suite-with-py314t-ubuntu-mypyc-compiled",
+    "name": "Set up job",
+    "start": "2026-11-08T19:23:20Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297052-step-2",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297052",
+    "service": "test-suite-with-py314t-ubuntu-mypyc-compiled",
+    "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+    "start": "2026-11-08T19:23:21Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297052-step-5",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297052",
+    "service": "test-suite-with-py314t-ubuntu-mypyc-compiled",
+    "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+    "start": "2026-11-08T19:23:23Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297052-step-6",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297052",
+    "service": "test-suite-with-py314t-ubuntu-mypyc-compiled",
+    "name": "Install tox",
+    "start": "2026-11-08T19:23:30Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297052-step-7",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297052",
+    "service": "test-suite-with-py314t-ubuntu-mypyc-compiled",
+    "name": "Compiled with mypyc",
+    "start": "2026-11-08T19:23:36Z",
+    "duration_ms": 466000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297052-step-8",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297052",
+    "service": "test-suite-with-py314t-ubuntu-mypyc-compiled",
+    "name": "Setup tox environment",
+    "start": "2026-11-08T19:31:22Z",
+    "duration_ms": 17000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297052-step-9",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297052",
+    "service": "test-suite-with-py314t-ubuntu-mypyc-compiled",
+    "name": "Test",
+    "start": "2026-11-08T19:31:39Z",
+    "duration_ms": 765000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-128835297052-step-20",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297052",
+    "service": "test-suite-with-py314t-ubuntu-mypyc-compiled",
+    "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+    "start": "2026-11-08T19:44:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297052-step-21",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297052",
+    "service": "test-suite-with-py314t-ubuntu-mypyc-compiled",
+    "name": "Complete job",
+    "start": "2026-11-08T19:44:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297062",
+    "trace_id": "run-42514756929",
+    "parent_id": "run-42514756929",
+    "service": "parallel-tests-with-py314-ubuntu-mypyc-compiled",
+    "name": "Parallel tests with py314-ubuntu, mypyc-compiled",
+    "start": "2026-11-08T19:23:20Z",
+    "duration_ms": 1762000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-128835297062-step-1",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297062",
+    "service": "parallel-tests-with-py314-ubuntu-mypyc-compiled",
+    "name": "Set up job",
+    "start": "2026-11-08T19:23:21Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297062-step-2",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297062",
+    "service": "parallel-tests-with-py314-ubuntu-mypyc-compiled",
+    "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+    "start": "2026-11-08T19:23:21Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297062-step-5",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297062",
+    "service": "parallel-tests-with-py314-ubuntu-mypyc-compiled",
+    "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+    "start": "2026-11-08T19:23:23Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297062-step-6",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297062",
+    "service": "parallel-tests-with-py314-ubuntu-mypyc-compiled",
+    "name": "Install tox",
+    "start": "2026-11-08T19:23:23Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297062-step-7",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297062",
+    "service": "parallel-tests-with-py314-ubuntu-mypyc-compiled",
+    "name": "Compiled with mypyc",
+    "start": "2026-11-08T19:23:28Z",
+    "duration_ms": 396000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297062-step-8",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297062",
+    "service": "parallel-tests-with-py314-ubuntu-mypyc-compiled",
+    "name": "Setup tox environment",
+    "start": "2026-11-08T19:30:04Z",
+    "duration_ms": 14000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297062-step-9",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297062",
+    "service": "parallel-tests-with-py314-ubuntu-mypyc-compiled",
+    "name": "Test",
+    "start": "2026-11-08T19:30:18Z",
+    "duration_ms": 1342000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-128835297062-step-20",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297062",
+    "service": "parallel-tests-with-py314-ubuntu-mypyc-compiled",
+    "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+    "start": "2026-11-08T19:52:40Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297062-step-21",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297062",
+    "service": "parallel-tests-with-py314-ubuntu-mypyc-compiled",
+    "name": "Complete job",
+    "start": "2026-11-08T19:52:40Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297074",
+    "trace_id": "run-42514756929",
+    "parent_id": "run-42514756929",
+    "service": "parallel-tests-with-py314-ubuntu-interpreted",
+    "name": "Parallel tests with py314-ubuntu, interpreted",
+    "start": "2026-11-08T19:23:20Z",
+    "duration_ms": 1750000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-128835297074-step-1",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297074",
+    "service": "parallel-tests-with-py314-ubuntu-interpreted",
+    "name": "Set up job",
+    "start": "2026-11-08T19:23:20Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297074-step-2",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297074",
+    "service": "parallel-tests-with-py314-ubuntu-interpreted",
+    "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+    "start": "2026-11-08T19:23:21Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297074-step-5",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297074",
+    "service": "parallel-tests-with-py314-ubuntu-interpreted",
+    "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+    "start": "2026-11-08T19:23:23Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297074-step-6",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297074",
+    "service": "parallel-tests-with-py314-ubuntu-interpreted",
+    "name": "Install tox",
+    "start": "2026-11-08T19:23:23Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297074-step-8",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297074",
+    "service": "parallel-tests-with-py314-ubuntu-interpreted",
+    "name": "Setup tox environment",
+    "start": "2026-11-08T19:23:27Z",
+    "duration_ms": 16000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297074-step-9",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297074",
+    "service": "parallel-tests-with-py314-ubuntu-interpreted",
+    "name": "Test",
+    "start": "2026-11-08T19:23:43Z",
+    "duration_ms": 1725000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-128835297074-step-20",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297074",
+    "service": "parallel-tests-with-py314-ubuntu-interpreted",
+    "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+    "start": "2026-11-08T19:52:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297074-step-21",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297074",
+    "service": "parallel-tests-with-py314-ubuntu-interpreted",
+    "name": "Complete job",
+    "start": "2026-11-08T19:52:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297076",
+    "trace_id": "run-42514756929",
+    "parent_id": "run-42514756929",
+    "service": "type-check-our-own-code-py310-windows-64",
+    "name": "Type check our own code (py310-windows-64)",
+    "start": "2026-11-08T19:23:18Z",
+    "duration_ms": 144000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297076-step-1",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297076",
+    "service": "type-check-our-own-code-py310-windows-64",
+    "name": "Set up job",
+    "start": "2026-11-08T19:23:19Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297076-step-2",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297076",
+    "service": "type-check-our-own-code-py310-windows-64",
+    "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+    "start": "2026-11-08T19:23:20Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297076-step-5",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297076",
+    "service": "type-check-our-own-code-py310-windows-64",
+    "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+    "start": "2026-11-08T19:23:27Z",
+    "duration_ms": 46000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297076-step-6",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297076",
+    "service": "type-check-our-own-code-py310-windows-64",
+    "name": "Install tox",
+    "start": "2026-11-08T19:24:13Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297076-step-8",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297076",
+    "service": "type-check-our-own-code-py310-windows-64",
+    "name": "Setup tox environment",
+    "start": "2026-11-08T19:24:18Z",
+    "duration_ms": 38000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297076-step-9",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297076",
+    "service": "type-check-our-own-code-py310-windows-64",
+    "name": "Test",
+    "start": "2026-11-08T19:24:56Z",
+    "duration_ms": 42000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297076-step-19",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297076",
+    "service": "type-check-our-own-code-py310-windows-64",
+    "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+    "start": "2026-11-08T19:25:38Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297076-step-20",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297076",
+    "service": "type-check-our-own-code-py310-windows-64",
+    "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+    "start": "2026-11-08T19:25:38Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297076-step-21",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297076",
+    "service": "type-check-our-own-code-py310-windows-64",
+    "name": "Complete job",
+    "start": "2026-11-08T19:25:40Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297099",
+    "trace_id": "run-42514756929",
+    "parent_id": "run-42514756929",
+    "service": "test-suite-with-py312-ubuntu",
+    "name": "Test suite with py312-ubuntu",
+    "start": "2026-11-08T19:23:19Z",
+    "duration_ms": 772000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-128835297099-step-1",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297099",
+    "service": "test-suite-with-py312-ubuntu",
+    "name": "Set up job",
+    "start": "2026-11-08T19:23:20Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297099-step-2",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297099",
+    "service": "test-suite-with-py312-ubuntu",
+    "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+    "start": "2026-11-08T19:23:21Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297099-step-5",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297099",
+    "service": "test-suite-with-py312-ubuntu",
+    "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+    "start": "2026-11-08T19:23:23Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297099-step-6",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297099",
+    "service": "test-suite-with-py312-ubuntu",
+    "name": "Install tox",
+    "start": "2026-11-08T19:23:23Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297099-step-8",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297099",
+    "service": "test-suite-with-py312-ubuntu",
+    "name": "Setup tox environment",
+    "start": "2026-11-08T19:23:26Z",
+    "duration_ms": 18000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297099-step-9",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297099",
+    "service": "test-suite-with-py312-ubuntu",
+    "name": "Test",
+    "start": "2026-11-08T19:23:44Z",
+    "duration_ms": 745000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-128835297099-step-20",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297099",
+    "service": "test-suite-with-py312-ubuntu",
+    "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+    "start": "2026-11-08T19:36:09Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297099-step-21",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297099",
+    "service": "test-suite-with-py312-ubuntu",
+    "name": "Complete job",
+    "start": "2026-11-08T19:36:09Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297134",
+    "trace_id": "run-42514756929",
+    "parent_id": "run-42514756929",
+    "service": "formatting-and-code-style-with-black-ruff",
+    "name": "Formatting and code style with Black + ruff",
+    "start": "2026-11-08T19:23:17Z",
+    "duration_ms": 121000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297134-step-1",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297134",
+    "service": "formatting-and-code-style-with-black-ruff",
+    "name": "Set up job",
+    "start": "2026-11-08T19:23:18Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297134-step-2",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297134",
+    "service": "formatting-and-code-style-with-black-ruff",
+    "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+    "start": "2026-11-08T19:23:19Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297134-step-5",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297134",
+    "service": "formatting-and-code-style-with-black-ruff",
+    "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+    "start": "2026-11-08T19:23:21Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297134-step-6",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297134",
+    "service": "formatting-and-code-style-with-black-ruff",
+    "name": "Install tox",
+    "start": "2026-11-08T19:23:26Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297134-step-8",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297134",
+    "service": "formatting-and-code-style-with-black-ruff",
+    "name": "Setup tox environment",
+    "start": "2026-11-08T19:23:30Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297134-step-9",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297134",
+    "service": "formatting-and-code-style-with-black-ruff",
+    "name": "Test",
+    "start": "2026-11-08T19:23:34Z",
+    "duration_ms": 102000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297134-step-19",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297134",
+    "service": "formatting-and-code-style-with-black-ruff",
+    "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+    "start": "2026-11-08T19:25:16Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297134-step-20",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297134",
+    "service": "formatting-and-code-style-with-black-ruff",
+    "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+    "start": "2026-11-08T19:25:16Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297134-step-21",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297134",
+    "service": "formatting-and-code-style-with-black-ruff",
+    "name": "Complete job",
+    "start": "2026-11-08T19:25:16Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297135",
+    "trace_id": "run-42514756929",
+    "parent_id": "run-42514756929",
+    "service": "test-suite-with-py314-windows-64",
+    "name": "Test suite with py314-windows-64",
+    "start": "2026-11-08T19:23:18Z",
+    "duration_ms": 1965000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-128835297135-step-1",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297135",
+    "service": "test-suite-with-py314-windows-64",
+    "name": "Set up job",
+    "start": "2026-11-08T19:23:19Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297135-step-2",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297135",
+    "service": "test-suite-with-py314-windows-64",
+    "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+    "start": "2026-11-08T19:23:21Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297135-step-5",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297135",
+    "service": "test-suite-with-py314-windows-64",
+    "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+    "start": "2026-11-08T19:23:30Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297135-step-6",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297135",
+    "service": "test-suite-with-py314-windows-64",
+    "name": "Install tox",
+    "start": "2026-11-08T19:23:30Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297135-step-8",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297135",
+    "service": "test-suite-with-py314-windows-64",
+    "name": "Setup tox environment",
+    "start": "2026-11-08T19:23:39Z",
+    "duration_ms": 45000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297135-step-9",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297135",
+    "service": "test-suite-with-py314-windows-64",
+    "name": "Test",
+    "start": "2026-11-08T19:24:24Z",
+    "duration_ms": 1895000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-128835297135-step-20",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297135",
+    "service": "test-suite-with-py314-windows-64",
+    "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+    "start": "2026-11-08T19:55:59Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297135-step-21",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297135",
+    "service": "test-suite-with-py314-windows-64",
+    "name": "Complete job",
+    "start": "2026-11-08T19:56:01Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297155",
+    "trace_id": "run-42514756929",
+    "parent_id": "run-42514756929",
+    "service": "parallel-tests-with-py314-windows-64-interpreted",
+    "name": "Parallel tests with py314-windows-64, interpreted",
+    "start": "2026-11-08T19:23:18Z",
+    "duration_ms": 541000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297155-step-1",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297155",
+    "service": "parallel-tests-with-py314-windows-64-interpreted",
+    "name": "Set up job",
+    "start": "2026-11-08T19:23:18Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297155-step-2",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297155",
+    "service": "parallel-tests-with-py314-windows-64-interpreted",
+    "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+    "start": "2026-11-08T19:23:19Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297155-step-5",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297155",
+    "service": "parallel-tests-with-py314-windows-64-interpreted",
+    "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+    "start": "2026-11-08T19:23:26Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297155-step-6",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297155",
+    "service": "parallel-tests-with-py314-windows-64-interpreted",
+    "name": "Install tox",
+    "start": "2026-11-08T19:23:26Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297155-step-8",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297155",
+    "service": "parallel-tests-with-py314-windows-64-interpreted",
+    "name": "Setup tox environment",
+    "start": "2026-11-08T19:23:34Z",
+    "duration_ms": 35000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297155-step-9",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297155",
+    "service": "parallel-tests-with-py314-windows-64-interpreted",
+    "name": "Test",
+    "start": "2026-11-08T19:24:09Z",
+    "duration_ms": 487000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297155-step-19",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297155",
+    "service": "parallel-tests-with-py314-windows-64-interpreted",
+    "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+    "start": "2026-11-08T19:32:16Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297155-step-20",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297155",
+    "service": "parallel-tests-with-py314-windows-64-interpreted",
+    "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+    "start": "2026-11-08T19:32:16Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297155-step-21",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297155",
+    "service": "parallel-tests-with-py314-windows-64-interpreted",
+    "name": "Complete job",
+    "start": "2026-11-08T19:32:18Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297157",
+    "trace_id": "run-42514756929",
+    "parent_id": "run-42514756929",
+    "service": "test-mypyc-suite-with-32-bit-python",
+    "name": "Test mypyc suite with 32-bit Python",
+    "start": "2026-11-08T19:23:23Z",
+    "duration_ms": 1041000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297157-step-1",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297157",
+    "service": "test-mypyc-suite-with-32-bit-python",
+    "name": "Set up job",
+    "start": "2026-11-08T19:23:24Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297157-step-2",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297157",
+    "service": "test-mypyc-suite-with-32-bit-python",
+    "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+    "start": "2026-11-08T19:23:25Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297157-step-3",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297157",
+    "service": "test-mypyc-suite-with-32-bit-python",
+    "name": "Install 32-bit build dependencies",
+    "start": "2026-11-08T19:23:26Z",
+    "duration_ms": 22000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297157-step-4",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297157",
+    "service": "test-mypyc-suite-with-32-bit-python",
+    "name": "Compile, install, and activate 32-bit Python",
+    "start": "2026-11-08T19:23:48Z",
+    "duration_ms": 143000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297157-step-5",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297157",
+    "service": "test-mypyc-suite-with-32-bit-python",
+    "name": "Install tox",
+    "start": "2026-11-08T19:26:11Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297157-step-6",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297157",
+    "service": "test-mypyc-suite-with-32-bit-python",
+    "name": "Setup tox environment",
+    "start": "2026-11-08T19:26:15Z",
+    "duration_ms": 26000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297157-step-7",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297157",
+    "service": "test-mypyc-suite-with-32-bit-python",
+    "name": "Test",
+    "start": "2026-11-08T19:26:41Z",
+    "duration_ms": 841000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297157-step-14",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297157",
+    "service": "test-mypyc-suite-with-32-bit-python",
+    "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+    "start": "2026-11-08T19:40:42Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297157-step-15",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297157",
+    "service": "test-mypyc-suite-with-32-bit-python",
+    "name": "Complete job",
+    "start": "2026-11-08T19:40:42Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297232",
+    "trace_id": "run-42514756929",
+    "parent_id": "run-42514756929",
+    "service": "type-check-our-own-code-py310-ubuntu",
+    "name": "Type check our own code (py310-ubuntu)",
+    "start": "2026-11-08T19:23:18Z",
+    "duration_ms": 62000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297232-step-1",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297232",
+    "service": "type-check-our-own-code-py310-ubuntu",
+    "name": "Set up job",
+    "start": "2026-11-08T19:23:18Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297232-step-2",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297232",
+    "service": "type-check-our-own-code-py310-ubuntu",
+    "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+    "start": "2026-11-08T19:23:19Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297232-step-5",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297232",
+    "service": "type-check-our-own-code-py310-ubuntu",
+    "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+    "start": "2026-11-08T19:23:22Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297232-step-6",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297232",
+    "service": "type-check-our-own-code-py310-ubuntu",
+    "name": "Install tox",
+    "start": "2026-11-08T19:23:27Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297232-step-8",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297232",
+    "service": "type-check-our-own-code-py310-ubuntu",
+    "name": "Setup tox environment",
+    "start": "2026-11-08T19:23:29Z",
+    "duration_ms": 16000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297232-step-9",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297232",
+    "service": "type-check-our-own-code-py310-ubuntu",
+    "name": "Test",
+    "start": "2026-11-08T19:23:45Z",
+    "duration_ms": 31000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297232-step-19",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297232",
+    "service": "type-check-our-own-code-py310-ubuntu",
+    "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+    "start": "2026-11-08T19:24:16Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297232-step-20",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297232",
+    "service": "type-check-our-own-code-py310-ubuntu",
+    "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+    "start": "2026-11-08T19:24:16Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297232-step-21",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297232",
+    "service": "type-check-our-own-code-py310-ubuntu",
+    "name": "Complete job",
+    "start": "2026-11-08T19:24:17Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297247",
+    "trace_id": "run-42514756929",
+    "parent_id": "run-42514756929",
+    "service": "test-suite-with-py310-ubuntu-mypyc-compiled",
+    "name": "Test suite with py310-ubuntu, mypyc-compiled",
+    "start": "2026-11-08T19:23:20Z",
+    "duration_ms": 1123000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-128835297247-step-1",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297247",
+    "service": "test-suite-with-py310-ubuntu-mypyc-compiled",
+    "name": "Set up job",
+    "start": "2026-11-08T19:23:21Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297247-step-2",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297247",
+    "service": "test-suite-with-py310-ubuntu-mypyc-compiled",
+    "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+    "start": "2026-11-08T19:23:21Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297247-step-5",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297247",
+    "service": "test-suite-with-py310-ubuntu-mypyc-compiled",
+    "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+    "start": "2026-11-08T19:23:23Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297247-step-6",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297247",
+    "service": "test-suite-with-py310-ubuntu-mypyc-compiled",
+    "name": "Install tox",
+    "start": "2026-11-08T19:23:28Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297247-step-7",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297247",
+    "service": "test-suite-with-py310-ubuntu-mypyc-compiled",
+    "name": "Compiled with mypyc",
+    "start": "2026-11-08T19:23:31Z",
+    "duration_ms": 499000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297247-step-8",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297247",
+    "service": "test-suite-with-py310-ubuntu-mypyc-compiled",
+    "name": "Setup tox environment",
+    "start": "2026-11-08T19:31:50Z",
+    "duration_ms": 14000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297247-step-9",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297247",
+    "service": "test-suite-with-py310-ubuntu-mypyc-compiled",
+    "name": "Test",
+    "start": "2026-11-08T19:32:04Z",
+    "duration_ms": 596000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-128835297247-step-20",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297247",
+    "service": "test-suite-with-py310-ubuntu-mypyc-compiled",
+    "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+    "start": "2026-11-08T19:42:00Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297247-step-21",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297247",
+    "service": "test-suite-with-py310-ubuntu-mypyc-compiled",
+    "name": "Complete job",
+    "start": "2026-11-08T19:42:00Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297251",
+    "trace_id": "run-42514756929",
+    "parent_id": "run-42514756929",
+    "service": "test-suite-with-py311-ubuntu",
+    "name": "Test suite with py311-ubuntu",
+    "start": "2026-11-08T19:23:20Z",
+    "duration_ms": 730000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-128835297251-step-1",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297251",
+    "service": "test-suite-with-py311-ubuntu",
+    "name": "Set up job",
+    "start": "2026-11-08T19:23:21Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297251-step-2",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297251",
+    "service": "test-suite-with-py311-ubuntu",
+    "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+    "start": "2026-11-08T19:23:22Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297251-step-5",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297251",
+    "service": "test-suite-with-py311-ubuntu",
+    "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+    "start": "2026-11-08T19:23:23Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297251-step-6",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297251",
+    "service": "test-suite-with-py311-ubuntu",
+    "name": "Install tox",
+    "start": "2026-11-08T19:23:23Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297251-step-8",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297251",
+    "service": "test-suite-with-py311-ubuntu",
+    "name": "Setup tox environment",
+    "start": "2026-11-08T19:23:28Z",
+    "duration_ms": 16000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297251-step-9",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297251",
+    "service": "test-suite-with-py311-ubuntu",
+    "name": "Test",
+    "start": "2026-11-08T19:23:44Z",
+    "duration_ms": 704000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-128835297251-step-20",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297251",
+    "service": "test-suite-with-py311-ubuntu",
+    "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+    "start": "2026-11-08T19:35:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297251-step-21",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297251",
+    "service": "test-suite-with-py311-ubuntu",
+    "name": "Complete job",
+    "start": "2026-11-08T19:35:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297255",
+    "trace_id": "run-42514756929",
+    "parent_id": "run-42514756929",
+    "service": "test-suite-with-py315-ubuntu-mypyc-compiled",
+    "name": "Test suite with py315-ubuntu, mypyc-compiled",
+    "start": "2026-11-08T19:23:20Z",
+    "duration_ms": 1057000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-128835297255-step-1",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297255",
+    "service": "test-suite-with-py315-ubuntu-mypyc-compiled",
+    "name": "Set up job",
+    "start": "2026-11-08T19:23:20Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297255-step-2",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297255",
+    "service": "test-suite-with-py315-ubuntu-mypyc-compiled",
+    "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+    "start": "2026-11-08T19:23:21Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297255-step-5",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297255",
+    "service": "test-suite-with-py315-ubuntu-mypyc-compiled",
+    "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+    "start": "2026-11-08T19:23:23Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297255-step-6",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297255",
+    "service": "test-suite-with-py315-ubuntu-mypyc-compiled",
+    "name": "Install tox",
+    "start": "2026-11-08T19:23:23Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297255-step-7",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297255",
+    "service": "test-suite-with-py315-ubuntu-mypyc-compiled",
+    "name": "Compiled with mypyc",
+    "start": "2026-11-08T19:23:29Z",
+    "duration_ms": 398000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297255-step-8",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297255",
+    "service": "test-suite-with-py315-ubuntu-mypyc-compiled",
+    "name": "Setup tox environment",
+    "start": "2026-11-08T19:30:07Z",
+    "duration_ms": 12000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297255-step-9",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297255",
+    "service": "test-suite-with-py315-ubuntu-mypyc-compiled",
+    "name": "Test",
+    "start": "2026-11-08T19:30:19Z",
+    "duration_ms": 636000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-128835297255-step-20",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297255",
+    "service": "test-suite-with-py315-ubuntu-mypyc-compiled",
+    "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+    "start": "2026-11-08T19:40:55Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297255-step-21",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297255",
+    "service": "test-suite-with-py315-ubuntu-mypyc-compiled",
+    "name": "Complete job",
+    "start": "2026-11-08T19:40:55Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297304",
+    "trace_id": "run-42514756929",
+    "parent_id": "run-42514756929",
+    "service": "test-suite-with-py314-ubuntu-mypyc-compiled",
+    "name": "Test suite with py314-ubuntu, mypyc-compiled",
+    "start": "2026-11-08T19:23:20Z",
+    "duration_ms": 1054000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-128835297304-step-1",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297304",
+    "service": "test-suite-with-py314-ubuntu-mypyc-compiled",
+    "name": "Set up job",
+    "start": "2026-11-08T19:23:21Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297304-step-2",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297304",
+    "service": "test-suite-with-py314-ubuntu-mypyc-compiled",
+    "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+    "start": "2026-11-08T19:23:21Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297304-step-5",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297304",
+    "service": "test-suite-with-py314-ubuntu-mypyc-compiled",
+    "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+    "start": "2026-11-08T19:23:23Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297304-step-6",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297304",
+    "service": "test-suite-with-py314-ubuntu-mypyc-compiled",
+    "name": "Install tox",
+    "start": "2026-11-08T19:23:23Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297304-step-7",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297304",
+    "service": "test-suite-with-py314-ubuntu-mypyc-compiled",
+    "name": "Compiled with mypyc",
+    "start": "2026-11-08T19:23:25Z",
+    "duration_ms": 393000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297304-step-8",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297304",
+    "service": "test-suite-with-py314-ubuntu-mypyc-compiled",
+    "name": "Setup tox environment",
+    "start": "2026-11-08T19:29:58Z",
+    "duration_ms": 14000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297304-step-9",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297304",
+    "service": "test-suite-with-py314-ubuntu-mypyc-compiled",
+    "name": "Test",
+    "start": "2026-11-08T19:30:12Z",
+    "duration_ms": 640000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-128835297304-step-20",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297304",
+    "service": "test-suite-with-py314-ubuntu-mypyc-compiled",
+    "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+    "start": "2026-11-08T19:40:52Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128835297304-step-21",
+    "trace_id": "run-42514756929",
+    "parent_id": "job-128835297304",
+    "service": "test-suite-with-py314-ubuntu-mypyc-compiled",
+    "name": "Complete job",
+    "start": "2026-11-08T19:40:52Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

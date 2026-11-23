@@ -1,0 +1,16 @@
+[
+  {
+    "id": "64ea25d66b",
+    "service": "uvicorn",
+    "version": "64ea25d66b",
+    "ts": "2026-10-28T09:17:02Z",
+    "author": "nxvvvv",
+    "summary": "Half-close instead of resetting on websockets-sansio frame parser errors",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "tests/protocols/test_websocket.py",
+      "uvicorn/protocols/websockets/websockets_sansio_impl.py"
+    ]
+  }
+]

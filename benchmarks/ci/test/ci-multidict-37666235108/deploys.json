@@ -1,0 +1,16 @@
+[
+  {
+    "id": "862acaf16a",
+    "service": "multidict",
+    "version": "862acaf16a",
+    "ts": "2026-10-07T18:21:20Z",
+    "author": "asvetlov",
+    "summary": "Rewrite md_repr() on top of md_walk_all()",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "CHANGES/1742.misc.rst",
+      "multidict/_multilib/hashtable.h"
+    ]
+  }
+]

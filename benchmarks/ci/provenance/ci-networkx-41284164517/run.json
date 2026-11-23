@@ -1,0 +1,82 @@
+{
+  "attempt": 1,
+  "conclusion": "failure",
+  "createdAt": "2026-11-01T07:17:04Z",
+  "databaseId": 41284164517,
+  "displayTitle": "Fix ZeroDivisionError in current_flow_betweenness for small graphs",
+  "event": "pull_request",
+  "headBranch": "fix/current-flow-betweenness-small-graphs",
+  "headSha": "3c1969356f712b312862cae9c91524f8cca6bc9f",
+  "jobs": [
+    {
+      "completedAt": "2026-11-01T07:17:41Z",
+      "conclusion": "failure",
+      "databaseId": 124781963016,
+      "name": "format",
+      "startedAt": "2026-11-01T07:17:08Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-01T07:17:10Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-01T07:17:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-01T07:17:11Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-01T07:17:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-01T07:17:24Z",
+          "conclusion": "success",
+          "name": "Run prefix-dev/setup-pixi@ad1da6449d9e506fd127fd67ab2d054a769f6a94",
+          "number": 3,
+          "startedAt": "2026-11-01T07:17:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-01T07:17:38Z",
+          "conclusion": "failure",
+          "name": "Lint",
+          "number": 4,
+          "startedAt": "2026-11-01T07:17:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-01T07:17:38Z",
+          "conclusion": "success",
+          "name": "Post Run prefix-dev/setup-pixi@ad1da6449d9e506fd127fd67ab2d054a769f6a94",
+          "number": 7,
+          "startedAt": "2026-11-01T07:17:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-01T07:17:38Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 8,
+          "startedAt": "2026-11-01T07:17:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-01T07:17:38Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 9,
+          "startedAt": "2026-11-01T07:17:38Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/networkx/networkx/actions/runs/41284164517/job/124781963016"
+    }
+  ],
+  "name": "style",
+  "updatedAt": "2026-11-01T07:17:41Z",
+  "repository": "networkx/networkx"
+}

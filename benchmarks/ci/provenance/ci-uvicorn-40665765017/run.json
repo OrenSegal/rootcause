@@ -1,0 +1,2040 @@
+{
+  "attempt": 1,
+  "conclusion": "failure",
+  "createdAt": "2026-10-28T09:38:02Z",
+  "databaseId": 40665765017,
+  "displayTitle": "Half-close instead of resetting on websockets-sansio frame parser errors",
+  "event": "pull_request",
+  "headBranch": "sansio-close-on-oversize-frame",
+  "headSha": "64ea25d66bbeabea2cf06bdeb8a0abeaf3772263",
+  "jobs": [
+    {
+      "completedAt": "2026-10-28T09:38:56Z",
+      "conclusion": "failure",
+      "databaseId": 122739714155,
+      "name": "Python 3.11 ubuntu-latest",
+      "startedAt": "2026-10-28T09:38:05Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-28T09:38:07Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-28T09:38:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:08Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-28T09:38:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:11Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 3,
+          "startedAt": "2026-10-28T09:38:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:12Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-10-28T09:38:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:15Z",
+          "conclusion": "success",
+          "name": "Run linting checks",
+          "number": 5,
+          "startedAt": "2026-10-28T09:38:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:17Z",
+          "conclusion": "success",
+          "name": "Build package & docs",
+          "number": 6,
+          "startedAt": "2026-10-28T09:38:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:54Z",
+          "conclusion": "failure",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-10-28T09:38:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:54Z",
+          "conclusion": "skipped",
+          "name": "Enforce coverage",
+          "number": 8,
+          "startedAt": "2026-10-28T09:38:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:54Z",
+          "conclusion": "skipped",
+          "name": "Post Install uv",
+          "number": 15,
+          "startedAt": "2026-10-28T09:38:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:54Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 16,
+          "startedAt": "2026-10-28T09:38:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:54Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-28T09:38:54Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/Kludex/uvicorn/actions/runs/40665765017/job/122739714155"
+    },
+    {
+      "completedAt": "2026-10-28T09:39:02Z",
+      "conclusion": "failure",
+      "databaseId": 122739714446,
+      "name": "Python 3.13 macos-latest",
+      "startedAt": "2026-10-28T09:38:06Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-28T09:38:09Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-28T09:38:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:12Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-28T09:38:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:20Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 3,
+          "startedAt": "2026-10-28T09:38:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:23Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-10-28T09:38:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:23Z",
+          "conclusion": "skipped",
+          "name": "Run linting checks",
+          "number": 5,
+          "startedAt": "2026-10-28T09:38:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:28Z",
+          "conclusion": "success",
+          "name": "Build package & docs",
+          "number": 6,
+          "startedAt": "2026-10-28T09:38:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:57Z",
+          "conclusion": "failure",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-10-28T09:38:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:57Z",
+          "conclusion": "skipped",
+          "name": "Enforce coverage",
+          "number": 8,
+          "startedAt": "2026-10-28T09:38:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:57Z",
+          "conclusion": "skipped",
+          "name": "Post Install uv",
+          "number": 15,
+          "startedAt": "2026-10-28T09:38:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:58Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 16,
+          "startedAt": "2026-10-28T09:38:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:58Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-28T09:38:58Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/Kludex/uvicorn/actions/runs/40665765017/job/122739714446"
+    },
+    {
+      "completedAt": "2026-10-28T09:39:06Z",
+      "conclusion": "failure",
+      "databaseId": 122739714472,
+      "name": "Python 3.12 macos-latest",
+      "startedAt": "2026-10-28T09:38:06Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-28T09:38:08Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-28T09:38:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:10Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-28T09:38:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:17Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 3,
+          "startedAt": "2026-10-28T09:38:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:19Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-10-28T09:38:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:19Z",
+          "conclusion": "skipped",
+          "name": "Run linting checks",
+          "number": 5,
+          "startedAt": "2026-10-28T09:38:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:23Z",
+          "conclusion": "success",
+          "name": "Build package & docs",
+          "number": 6,
+          "startedAt": "2026-10-28T09:38:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:01Z",
+          "conclusion": "failure",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-10-28T09:38:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:01Z",
+          "conclusion": "skipped",
+          "name": "Enforce coverage",
+          "number": 8,
+          "startedAt": "2026-10-28T09:39:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:01Z",
+          "conclusion": "skipped",
+          "name": "Post Install uv",
+          "number": 15,
+          "startedAt": "2026-10-28T09:39:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:02Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 16,
+          "startedAt": "2026-10-28T09:39:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:02Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-28T09:39:02Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/Kludex/uvicorn/actions/runs/40665765017/job/122739714472"
+    },
+    {
+      "completedAt": "2026-10-28T09:39:10Z",
+      "conclusion": "success",
+      "databaseId": 122739714529,
+      "name": "Python 3.15t ubuntu-latest",
+      "startedAt": "2026-10-28T09:38:05Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-28T09:38:07Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-28T09:38:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:08Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-28T09:38:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:16Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 3,
+          "startedAt": "2026-10-28T09:38:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:18Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-10-28T09:38:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:25Z",
+          "conclusion": "success",
+          "name": "Run linting checks",
+          "number": 5,
+          "startedAt": "2026-10-28T09:38:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:28Z",
+          "conclusion": "success",
+          "name": "Build package & docs",
+          "number": 6,
+          "startedAt": "2026-10-28T09:38:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:06Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-10-28T09:38:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:06Z",
+          "conclusion": "success",
+          "name": "Enforce coverage",
+          "number": 8,
+          "startedAt": "2026-10-28T09:39:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:07Z",
+          "conclusion": "success",
+          "name": "Post Install uv",
+          "number": 15,
+          "startedAt": "2026-10-28T09:39:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:07Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 16,
+          "startedAt": "2026-10-28T09:39:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:07Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-28T09:39:07Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/Kludex/uvicorn/actions/runs/40665765017/job/122739714529"
+    },
+    {
+      "completedAt": "2026-10-28T09:39:19Z",
+      "conclusion": "success",
+      "databaseId": 122739714543,
+      "name": "Python 3.12 windows-latest",
+      "startedAt": "2026-10-28T09:38:05Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-28T09:38:07Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-28T09:38:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:14Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-28T09:38:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:22Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 3,
+          "startedAt": "2026-10-28T09:38:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:26Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-10-28T09:38:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:26Z",
+          "conclusion": "skipped",
+          "name": "Run linting checks",
+          "number": 5,
+          "startedAt": "2026-10-28T09:38:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:32Z",
+          "conclusion": "success",
+          "name": "Build package & docs",
+          "number": 6,
+          "startedAt": "2026-10-28T09:38:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:13Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-10-28T09:38:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:14Z",
+          "conclusion": "success",
+          "name": "Enforce coverage",
+          "number": 8,
+          "startedAt": "2026-10-28T09:39:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:14Z",
+          "conclusion": "success",
+          "name": "Post Install uv",
+          "number": 15,
+          "startedAt": "2026-10-28T09:39:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:16Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 16,
+          "startedAt": "2026-10-28T09:39:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:16Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-28T09:39:16Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/Kludex/uvicorn/actions/runs/40665765017/job/122739714543"
+    },
+    {
+      "completedAt": "2026-10-28T09:38:56Z",
+      "conclusion": "failure",
+      "databaseId": 122739714554,
+      "name": "Python 3.13 ubuntu-latest",
+      "startedAt": "2026-10-28T09:38:05Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-28T09:38:07Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-28T09:38:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:08Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-28T09:38:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:11Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 3,
+          "startedAt": "2026-10-28T09:38:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:12Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-10-28T09:38:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:16Z",
+          "conclusion": "success",
+          "name": "Run linting checks",
+          "number": 5,
+          "startedAt": "2026-10-28T09:38:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:18Z",
+          "conclusion": "success",
+          "name": "Build package & docs",
+          "number": 6,
+          "startedAt": "2026-10-28T09:38:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:54Z",
+          "conclusion": "failure",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-10-28T09:38:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:54Z",
+          "conclusion": "skipped",
+          "name": "Enforce coverage",
+          "number": 8,
+          "startedAt": "2026-10-28T09:38:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:54Z",
+          "conclusion": "skipped",
+          "name": "Post Install uv",
+          "number": 15,
+          "startedAt": "2026-10-28T09:38:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:54Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 16,
+          "startedAt": "2026-10-28T09:38:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:54Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-28T09:38:54Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/Kludex/uvicorn/actions/runs/40665765017/job/122739714554"
+    },
+    {
+      "completedAt": "2026-10-28T09:39:04Z",
+      "conclusion": "success",
+      "databaseId": 122739714576,
+      "name": "Python 3.14 ubuntu-latest",
+      "startedAt": "2026-10-28T09:38:05Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-28T09:38:08Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-28T09:38:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:09Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-28T09:38:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:12Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 3,
+          "startedAt": "2026-10-28T09:38:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:14Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-10-28T09:38:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:21Z",
+          "conclusion": "success",
+          "name": "Run linting checks",
+          "number": 5,
+          "startedAt": "2026-10-28T09:38:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:24Z",
+          "conclusion": "success",
+          "name": "Build package & docs",
+          "number": 6,
+          "startedAt": "2026-10-28T09:38:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:00Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-10-28T09:38:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:01Z",
+          "conclusion": "success",
+          "name": "Enforce coverage",
+          "number": 8,
+          "startedAt": "2026-10-28T09:39:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:01Z",
+          "conclusion": "success",
+          "name": "Post Install uv",
+          "number": 15,
+          "startedAt": "2026-10-28T09:39:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:02Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 16,
+          "startedAt": "2026-10-28T09:39:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:02Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-28T09:39:02Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/Kludex/uvicorn/actions/runs/40665765017/job/122739714576"
+    },
+    {
+      "completedAt": "2026-10-28T09:39:14Z",
+      "conclusion": "failure",
+      "databaseId": 122739714602,
+      "name": "Python 3.11 macos-latest",
+      "startedAt": "2026-10-28T09:38:06Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-28T09:38:10Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-28T09:38:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:13Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-28T09:38:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:24Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 3,
+          "startedAt": "2026-10-28T09:38:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:27Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-10-28T09:38:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:27Z",
+          "conclusion": "skipped",
+          "name": "Run linting checks",
+          "number": 5,
+          "startedAt": "2026-10-28T09:38:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:32Z",
+          "conclusion": "success",
+          "name": "Build package & docs",
+          "number": 6,
+          "startedAt": "2026-10-28T09:38:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:08Z",
+          "conclusion": "failure",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-10-28T09:38:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:08Z",
+          "conclusion": "skipped",
+          "name": "Enforce coverage",
+          "number": 8,
+          "startedAt": "2026-10-28T09:39:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:08Z",
+          "conclusion": "skipped",
+          "name": "Post Install uv",
+          "number": 15,
+          "startedAt": "2026-10-28T09:39:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:09Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 16,
+          "startedAt": "2026-10-28T09:39:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:09Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-28T09:39:09Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/Kludex/uvicorn/actions/runs/40665765017/job/122739714602"
+    },
+    {
+      "completedAt": "2026-10-28T09:39:18Z",
+      "conclusion": "success",
+      "databaseId": 122739714604,
+      "name": "Python 3.15 windows-latest",
+      "startedAt": "2026-10-28T09:38:05Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-28T09:38:08Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-28T09:38:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:15Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-28T09:38:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:25Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 3,
+          "startedAt": "2026-10-28T09:38:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:30Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-10-28T09:38:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:30Z",
+          "conclusion": "skipped",
+          "name": "Run linting checks",
+          "number": 5,
+          "startedAt": "2026-10-28T09:38:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:36Z",
+          "conclusion": "success",
+          "name": "Build package & docs",
+          "number": 6,
+          "startedAt": "2026-10-28T09:38:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:10Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-10-28T09:38:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:12Z",
+          "conclusion": "success",
+          "name": "Enforce coverage",
+          "number": 8,
+          "startedAt": "2026-10-28T09:39:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:12Z",
+          "conclusion": "success",
+          "name": "Post Install uv",
+          "number": 15,
+          "startedAt": "2026-10-28T09:39:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:14Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 16,
+          "startedAt": "2026-10-28T09:39:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:14Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-28T09:39:14Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/Kludex/uvicorn/actions/runs/40665765017/job/122739714604"
+    },
+    {
+      "completedAt": "2026-10-28T09:39:23Z",
+      "conclusion": "success",
+      "databaseId": 122739714632,
+      "name": "Python 3.14t windows-latest",
+      "startedAt": "2026-10-28T09:38:05Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-28T09:38:07Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-28T09:38:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:15Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-28T09:38:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:30Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 3,
+          "startedAt": "2026-10-28T09:38:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:34Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-10-28T09:38:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:34Z",
+          "conclusion": "skipped",
+          "name": "Run linting checks",
+          "number": 5,
+          "startedAt": "2026-10-28T09:38:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:40Z",
+          "conclusion": "success",
+          "name": "Build package & docs",
+          "number": 6,
+          "startedAt": "2026-10-28T09:38:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:15Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-10-28T09:38:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:16Z",
+          "conclusion": "success",
+          "name": "Enforce coverage",
+          "number": 8,
+          "startedAt": "2026-10-28T09:39:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:17Z",
+          "conclusion": "success",
+          "name": "Post Install uv",
+          "number": 15,
+          "startedAt": "2026-10-28T09:39:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:19Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 16,
+          "startedAt": "2026-10-28T09:39:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:19Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-28T09:39:19Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/Kludex/uvicorn/actions/runs/40665765017/job/122739714632"
+    },
+    {
+      "completedAt": "2026-10-28T09:38:45Z",
+      "conclusion": "success",
+      "databaseId": 122739714649,
+      "name": "Python 3.14 macos-latest",
+      "startedAt": "2026-10-28T09:38:05Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-28T09:38:07Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-28T09:38:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:08Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-28T09:38:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:12Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 3,
+          "startedAt": "2026-10-28T09:38:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:13Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-10-28T09:38:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:13Z",
+          "conclusion": "skipped",
+          "name": "Run linting checks",
+          "number": 5,
+          "startedAt": "2026-10-28T09:38:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:15Z",
+          "conclusion": "success",
+          "name": "Build package & docs",
+          "number": 6,
+          "startedAt": "2026-10-28T09:38:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:41Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-10-28T09:38:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:42Z",
+          "conclusion": "success",
+          "name": "Enforce coverage",
+          "number": 8,
+          "startedAt": "2026-10-28T09:38:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:42Z",
+          "conclusion": "success",
+          "name": "Post Install uv",
+          "number": 15,
+          "startedAt": "2026-10-28T09:38:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:43Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 16,
+          "startedAt": "2026-10-28T09:38:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:43Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-28T09:38:43Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/Kludex/uvicorn/actions/runs/40665765017/job/122739714649"
+    },
+    {
+      "completedAt": "2026-10-28T09:39:06Z",
+      "conclusion": "success",
+      "databaseId": 122739714653,
+      "name": "Python 3.15 ubuntu-latest",
+      "startedAt": "2026-10-28T09:38:06Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-28T09:38:08Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-28T09:38:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:09Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-28T09:38:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:14Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 3,
+          "startedAt": "2026-10-28T09:38:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:16Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-10-28T09:38:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:22Z",
+          "conclusion": "success",
+          "name": "Run linting checks",
+          "number": 5,
+          "startedAt": "2026-10-28T09:38:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:25Z",
+          "conclusion": "success",
+          "name": "Build package & docs",
+          "number": 6,
+          "startedAt": "2026-10-28T09:38:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:01Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-10-28T09:38:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:02Z",
+          "conclusion": "success",
+          "name": "Enforce coverage",
+          "number": 8,
+          "startedAt": "2026-10-28T09:39:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:02Z",
+          "conclusion": "success",
+          "name": "Post Install uv",
+          "number": 15,
+          "startedAt": "2026-10-28T09:39:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:03Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 16,
+          "startedAt": "2026-10-28T09:39:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:03Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-28T09:39:03Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/Kludex/uvicorn/actions/runs/40665765017/job/122739714653"
+    },
+    {
+      "completedAt": "2026-10-28T09:39:57Z",
+      "conclusion": "success",
+      "databaseId": 122739714667,
+      "name": "Python 3.15t macos-latest",
+      "startedAt": "2026-10-28T09:39:04Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-28T09:39:06Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-28T09:39:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:07Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-28T09:39:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:17Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 3,
+          "startedAt": "2026-10-28T09:39:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:21Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-10-28T09:39:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:21Z",
+          "conclusion": "skipped",
+          "name": "Run linting checks",
+          "number": 5,
+          "startedAt": "2026-10-28T09:39:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:25Z",
+          "conclusion": "success",
+          "name": "Build package & docs",
+          "number": 6,
+          "startedAt": "2026-10-28T09:39:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:52Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-10-28T09:39:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:52Z",
+          "conclusion": "success",
+          "name": "Enforce coverage",
+          "number": 8,
+          "startedAt": "2026-10-28T09:39:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:52Z",
+          "conclusion": "success",
+          "name": "Post Install uv",
+          "number": 15,
+          "startedAt": "2026-10-28T09:39:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:53Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 16,
+          "startedAt": "2026-10-28T09:39:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:54Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-28T09:39:53Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/Kludex/uvicorn/actions/runs/40665765017/job/122739714667"
+    },
+    {
+      "completedAt": "2026-10-28T09:39:17Z",
+      "conclusion": "success",
+      "databaseId": 122739714672,
+      "name": "Python 3.11 windows-latest",
+      "startedAt": "2026-10-28T09:38:05Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-28T09:38:07Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-28T09:38:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:15Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-28T09:38:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:23Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 3,
+          "startedAt": "2026-10-28T09:38:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:27Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-10-28T09:38:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:27Z",
+          "conclusion": "skipped",
+          "name": "Run linting checks",
+          "number": 5,
+          "startedAt": "2026-10-28T09:38:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:33Z",
+          "conclusion": "success",
+          "name": "Build package & docs",
+          "number": 6,
+          "startedAt": "2026-10-28T09:38:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:10Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-10-28T09:38:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:11Z",
+          "conclusion": "success",
+          "name": "Enforce coverage",
+          "number": 8,
+          "startedAt": "2026-10-28T09:39:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:11Z",
+          "conclusion": "success",
+          "name": "Post Install uv",
+          "number": 15,
+          "startedAt": "2026-10-28T09:39:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:14Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 16,
+          "startedAt": "2026-10-28T09:39:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:14Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-28T09:39:14Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/Kludex/uvicorn/actions/runs/40665765017/job/122739714672"
+    },
+    {
+      "completedAt": "2026-10-28T09:39:07Z",
+      "conclusion": "success",
+      "databaseId": 122739714680,
+      "name": "Python 3.15 macos-latest",
+      "startedAt": "2026-10-28T09:38:06Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-28T09:38:08Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-28T09:38:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:11Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-28T09:38:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:18Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 3,
+          "startedAt": "2026-10-28T09:38:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:20Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-10-28T09:38:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:20Z",
+          "conclusion": "skipped",
+          "name": "Run linting checks",
+          "number": 5,
+          "startedAt": "2026-10-28T09:38:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:25Z",
+          "conclusion": "success",
+          "name": "Build package & docs",
+          "number": 6,
+          "startedAt": "2026-10-28T09:38:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:01Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-10-28T09:38:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:02Z",
+          "conclusion": "success",
+          "name": "Enforce coverage",
+          "number": 8,
+          "startedAt": "2026-10-28T09:39:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:02Z",
+          "conclusion": "success",
+          "name": "Post Install uv",
+          "number": 15,
+          "startedAt": "2026-10-28T09:39:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:03Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 16,
+          "startedAt": "2026-10-28T09:39:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:04Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-28T09:39:03Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/Kludex/uvicorn/actions/runs/40665765017/job/122739714680"
+    },
+    {
+      "completedAt": "2026-10-28T09:39:11Z",
+      "conclusion": "failure",
+      "databaseId": 122739714702,
+      "name": "Python 3.12 ubuntu-latest",
+      "startedAt": "2026-10-28T09:38:06Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-28T09:38:08Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-28T09:38:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:10Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-28T09:38:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:14Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 3,
+          "startedAt": "2026-10-28T09:38:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:15Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-10-28T09:38:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:21Z",
+          "conclusion": "success",
+          "name": "Run linting checks",
+          "number": 5,
+          "startedAt": "2026-10-28T09:38:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:25Z",
+          "conclusion": "success",
+          "name": "Build package & docs",
+          "number": 6,
+          "startedAt": "2026-10-28T09:38:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:08Z",
+          "conclusion": "failure",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-10-28T09:38:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:08Z",
+          "conclusion": "skipped",
+          "name": "Enforce coverage",
+          "number": 8,
+          "startedAt": "2026-10-28T09:39:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:08Z",
+          "conclusion": "skipped",
+          "name": "Post Install uv",
+          "number": 15,
+          "startedAt": "2026-10-28T09:39:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:08Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 16,
+          "startedAt": "2026-10-28T09:39:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:08Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-28T09:39:08Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/Kludex/uvicorn/actions/runs/40665765017/job/122739714702"
+    },
+    {
+      "completedAt": "2026-10-28T09:39:19Z",
+      "conclusion": "success",
+      "databaseId": 122739714710,
+      "name": "Python 3.14 windows-latest",
+      "startedAt": "2026-10-28T09:38:06Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-28T09:38:09Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-28T09:38:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:18Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-28T09:38:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:25Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 3,
+          "startedAt": "2026-10-28T09:38:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:30Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-10-28T09:38:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:30Z",
+          "conclusion": "skipped",
+          "name": "Run linting checks",
+          "number": 5,
+          "startedAt": "2026-10-28T09:38:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:38Z",
+          "conclusion": "success",
+          "name": "Build package & docs",
+          "number": 6,
+          "startedAt": "2026-10-28T09:38:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:13Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-10-28T09:38:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:14Z",
+          "conclusion": "success",
+          "name": "Enforce coverage",
+          "number": 8,
+          "startedAt": "2026-10-28T09:39:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:15Z",
+          "conclusion": "success",
+          "name": "Post Install uv",
+          "number": 15,
+          "startedAt": "2026-10-28T09:39:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:17Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 16,
+          "startedAt": "2026-10-28T09:39:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:17Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-28T09:39:17Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/Kludex/uvicorn/actions/runs/40665765017/job/122739714710"
+    },
+    {
+      "completedAt": "2026-10-28T09:39:14Z",
+      "conclusion": "success",
+      "databaseId": 122739714728,
+      "name": "Python 3.13 windows-latest",
+      "startedAt": "2026-10-28T09:38:05Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-28T09:38:07Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-28T09:38:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:18Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-28T09:38:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:26Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 3,
+          "startedAt": "2026-10-28T09:38:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:31Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-10-28T09:38:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:31Z",
+          "conclusion": "skipped",
+          "name": "Run linting checks",
+          "number": 5,
+          "startedAt": "2026-10-28T09:38:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:36Z",
+          "conclusion": "success",
+          "name": "Build package & docs",
+          "number": 6,
+          "startedAt": "2026-10-28T09:38:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:09Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-10-28T09:38:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:10Z",
+          "conclusion": "success",
+          "name": "Enforce coverage",
+          "number": 8,
+          "startedAt": "2026-10-28T09:39:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:10Z",
+          "conclusion": "success",
+          "name": "Post Install uv",
+          "number": 15,
+          "startedAt": "2026-10-28T09:39:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:12Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 16,
+          "startedAt": "2026-10-28T09:39:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:12Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-28T09:39:12Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/Kludex/uvicorn/actions/runs/40665765017/job/122739714728"
+    },
+    {
+      "completedAt": "2026-10-28T09:39:03Z",
+      "conclusion": "success",
+      "databaseId": 122739714779,
+      "name": "Python 3.14t ubuntu-latest",
+      "startedAt": "2026-10-28T09:38:05Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-28T09:38:07Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-28T09:38:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:09Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-28T09:38:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:14Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 3,
+          "startedAt": "2026-10-28T09:38:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:16Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-10-28T09:38:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:21Z",
+          "conclusion": "success",
+          "name": "Run linting checks",
+          "number": 5,
+          "startedAt": "2026-10-28T09:38:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:23Z",
+          "conclusion": "success",
+          "name": "Build package & docs",
+          "number": 6,
+          "startedAt": "2026-10-28T09:38:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:59Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-10-28T09:38:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:59Z",
+          "conclusion": "success",
+          "name": "Enforce coverage",
+          "number": 8,
+          "startedAt": "2026-10-28T09:38:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:59Z",
+          "conclusion": "success",
+          "name": "Post Install uv",
+          "number": 15,
+          "startedAt": "2026-10-28T09:38:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:59Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 16,
+          "startedAt": "2026-10-28T09:38:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:38:59Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-28T09:38:59Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/Kludex/uvicorn/actions/runs/40665765017/job/122739714779"
+    },
+    {
+      "completedAt": "2026-10-28T09:40:22Z",
+      "conclusion": "success",
+      "databaseId": 122739714933,
+      "name": "Python 3.14t macos-latest",
+      "startedAt": "2026-10-28T09:39:09Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-28T09:39:11Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-28T09:39:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:14Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-28T09:39:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:29Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 3,
+          "startedAt": "2026-10-28T09:39:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:35Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-10-28T09:39:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:35Z",
+          "conclusion": "skipped",
+          "name": "Run linting checks",
+          "number": 5,
+          "startedAt": "2026-10-28T09:39:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:39:40Z",
+          "conclusion": "success",
+          "name": "Build package & docs",
+          "number": 6,
+          "startedAt": "2026-10-28T09:39:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:40:13Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-10-28T09:39:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:40:14Z",
+          "conclusion": "success",
+          "name": "Enforce coverage",
+          "number": 8,
+          "startedAt": "2026-10-28T09:40:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:40:14Z",
+          "conclusion": "success",
+          "name": "Post Install uv",
+          "number": 15,
+          "startedAt": "2026-10-28T09:40:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:40:15Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 16,
+          "startedAt": "2026-10-28T09:40:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:40:16Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-28T09:40:15Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/Kludex/uvicorn/actions/runs/40665765017/job/122739714933"
+    },
+    {
+      "completedAt": "2026-10-28T09:38:03Z",
+      "conclusion": "skipped",
+      "databaseId": 122739715677,
+      "name": "docs-preview",
+      "startedAt": "2026-10-28T09:38:03Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/Kludex/uvicorn/actions/runs/40665765017/job/122739715677"
+    },
+    {
+      "completedAt": "2026-10-28T09:40:27Z",
+      "conclusion": "failure",
+      "databaseId": 122740733697,
+      "name": "check",
+      "startedAt": "2026-10-28T09:40:24Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-28T09:40:25Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-28T09:40:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:40:25Z",
+          "conclusion": "failure",
+          "name": "Decide whether the needed jobs succeeded or failed",
+          "number": 2,
+          "startedAt": "2026-10-28T09:40:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-28T09:40:25Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 3,
+          "startedAt": "2026-10-28T09:40:25Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/Kludex/uvicorn/actions/runs/40665765017/job/122740733697"
+    }
+  ],
+  "name": "Test Suite",
+  "updatedAt": "2026-10-28T09:40:28Z",
+  "repository": "encode/uvicorn"
+}

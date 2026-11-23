@@ -1,0 +1,21 @@
+# Mined from https://github.com/numpy/numpy/actions/runs/44969244228 (numpy/numpy,
+# licence NOASSERTION). Fixed by run
+# https://github.com/numpy/numpy/actions/runs/44970609288. Label rule: the fix changed
+# files exactly one tested commit touched. Fix touched:
+# numpy/_core/src/common/npy_float_to_int.h, numpy/_core/src/multiarray/common.h,
+# numpy/_core/src/multiarray/ctors.c, numpy/_core/src/multiarray/datetime.c,
+# numpy/_core/src/multiarray/lowlevel_strided_loops.c.src,
+# numpy/_core/src/umath/loops.c.src.
+id: ci-numpy-44969244228
+title: 'BUG: add and use checked helpers for converting doubles to integers'
+alert:
+  severity: ci
+  service: build-wheel-cp313-android-arm64-v8a
+  summary: 'workflow Wheel builder failed on double-to-int-helpers at e1a3a61623: step ''Build
+    wheels'' in job ''Build wheel cp313-android_arm64_v8a-'' failed.'
+truth:
+  category: bad_code_deploy
+  service: numpy
+  required_evidence_any:
+  - e1a3a61623
+provenance: recorded

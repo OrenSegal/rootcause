@@ -1,0 +1,90 @@
+{
+  "attempt": 1,
+  "conclusion": "failure",
+  "createdAt": "2026-11-20T13:13:51Z",
+  "databaseId": 44742477660,
+  "displayTitle": "[unsupervised AI] Fix array assignment graph dependencies",
+  "event": "pull_request",
+  "headBranch": "oss/dask-9415-setitem-graph",
+  "headSha": "f993a0ff6bb8169f37899ddbc6ee684352a36592",
+  "jobs": [
+    {
+      "completedAt": "2026-11-20T13:14:40Z",
+      "conclusion": "failure",
+      "databaseId": 136309318350,
+      "name": "pre-commit hooks",
+      "startedAt": "2026-11-20T13:13:55Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T13:13:57Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T13:13:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T13:13:58Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-20T13:13:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T13:13:58Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@v7",
+          "number": 3,
+          "startedAt": "2026-11-20T13:13:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T13:14:38Z",
+          "conclusion": "failure",
+          "name": "Run pre-commit/action@v3.0.1",
+          "number": 4,
+          "startedAt": "2026-11-20T13:13:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T13:14:38Z",
+          "conclusion": "success",
+          "name": "Post Run pre-commit/action@v3.0.1",
+          "number": 6,
+          "startedAt": "2026-11-20T13:14:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T13:14:38Z",
+          "conclusion": "skipped",
+          "name": "Post Run actions/setup-python@v7",
+          "number": 7,
+          "startedAt": "2026-11-20T13:14:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T13:14:38Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 8,
+          "startedAt": "2026-11-20T13:14:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T13:14:38Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 9,
+          "startedAt": "2026-11-20T13:14:38Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/dask/dask/actions/runs/44742477660/job/136309318350"
+    }
+  ],
+  "name": "Linting",
+  "updatedAt": "2026-11-20T13:14:41Z",
+  "repository": "dask/dask"
+}

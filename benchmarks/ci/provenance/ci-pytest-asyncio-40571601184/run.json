@@ -1,0 +1,2092 @@
+{
+  "attempt": 1,
+  "conclusion": "failure",
+  "createdAt": "2026-10-27T19:43:01Z",
+  "databaseId": 40571601184,
+  "displayTitle": "fix(plugin): validate asyncio marker loop_scope with UsageError",
+  "event": "pull_request",
+  "headBranch": "fix/validate-marker-loop-scope",
+  "headSha": "5c58517276426145ae949e9c690d9ab7dfadc3a1",
+  "jobs": [
+    {
+      "completedAt": "2026-10-27T19:44:07Z",
+      "conclusion": "failure",
+      "databaseId": 122426959645,
+      "name": "Run linters",
+      "startedAt": "2026-10-27T19:43:04Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T19:43:05Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T19:43:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:07Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T19:43:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:07Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 3,
+          "startedAt": "2026-10-27T19:43:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:07Z",
+          "conclusion": "success",
+          "name": "Install GitHub matcher for ActionLint checker",
+          "number": 4,
+          "startedAt": "2026-10-27T19:43:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:10Z",
+          "conclusion": "success",
+          "name": "Install pre-commit",
+          "number": 5,
+          "startedAt": "2026-10-27T19:43:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:05Z",
+          "conclusion": "failure",
+          "name": "Run pre-commit checks",
+          "number": 6,
+          "startedAt": "2026-10-27T19:43:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:05Z",
+          "conclusion": "skipped",
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 11,
+          "startedAt": "2026-10-27T19:44:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:05Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 12,
+          "startedAt": "2026-10-27T19:44:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:05Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-10-27T19:44:05Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-asyncio/actions/runs/40571601184/job/122426959645"
+    },
+    {
+      "completedAt": "2026-10-27T19:44:13Z",
+      "conclusion": "success",
+      "databaseId": 122426960112,
+      "name": "ubuntu - Python 3.11",
+      "startedAt": "2026-10-27T19:43:04Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T19:43:06Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T19:43:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:07Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T19:43:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:07Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 3,
+          "startedAt": "2026-10-27T19:43:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:09Z",
+          "conclusion": "success",
+          "name": "Set up the latest version of uv",
+          "number": 4,
+          "startedAt": "2026-10-27T19:43:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:09Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T19:43:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:09Z",
+          "conclusion": "success",
+          "name": "Run tox targets for 3.11",
+          "number": 6,
+          "startedAt": "2026-10-27T19:43:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:10Z",
+          "conclusion": "success",
+          "name": "Store coverage data",
+          "number": 7,
+          "startedAt": "2026-10-27T19:44:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:10Z",
+          "conclusion": "success",
+          "name": "Post Set up the latest version of uv",
+          "number": 12,
+          "startedAt": "2026-10-27T19:44:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:10Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 13,
+          "startedAt": "2026-10-27T19:44:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:10Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 14,
+          "startedAt": "2026-10-27T19:44:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:11Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-10-27T19:44:10Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-asyncio/actions/runs/40571601184/job/122426960112"
+    },
+    {
+      "completedAt": "2026-10-27T19:47:26Z",
+      "conclusion": "success",
+      "databaseId": 122426960134,
+      "name": "windows - Python 3.10",
+      "startedAt": "2026-10-27T19:43:03Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T19:43:06Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T19:43:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:14Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T19:43:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:14Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 3,
+          "startedAt": "2026-10-27T19:43:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:16Z",
+          "conclusion": "success",
+          "name": "Set up the latest version of uv",
+          "number": 4,
+          "startedAt": "2026-10-27T19:44:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:18Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T19:44:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:47:21Z",
+          "conclusion": "success",
+          "name": "Run tox targets for 3.10",
+          "number": 6,
+          "startedAt": "2026-10-27T19:44:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:47:21Z",
+          "conclusion": "skipped",
+          "name": "Store coverage data",
+          "number": 7,
+          "startedAt": "2026-10-27T19:47:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:47:21Z",
+          "conclusion": "success",
+          "name": "Post Set up the latest version of uv",
+          "number": 12,
+          "startedAt": "2026-10-27T19:47:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:47:22Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 13,
+          "startedAt": "2026-10-27T19:47:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:47:24Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 14,
+          "startedAt": "2026-10-27T19:47:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:47:24Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-10-27T19:47:24Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-asyncio/actions/runs/40571601184/job/122426960134"
+    },
+    {
+      "completedAt": "2026-10-27T19:44:51Z",
+      "conclusion": "success",
+      "databaseId": 122426960138,
+      "name": "ubuntu - Python 3.10",
+      "startedAt": "2026-10-27T19:43:03Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T19:43:05Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T19:43:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:07Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T19:43:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:12Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 3,
+          "startedAt": "2026-10-27T19:43:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:13Z",
+          "conclusion": "success",
+          "name": "Set up the latest version of uv",
+          "number": 4,
+          "startedAt": "2026-10-27T19:43:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:13Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T19:43:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:47Z",
+          "conclusion": "success",
+          "name": "Run tox targets for 3.10",
+          "number": 6,
+          "startedAt": "2026-10-27T19:43:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:48Z",
+          "conclusion": "success",
+          "name": "Store coverage data",
+          "number": 7,
+          "startedAt": "2026-10-27T19:44:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:48Z",
+          "conclusion": "success",
+          "name": "Post Set up the latest version of uv",
+          "number": 12,
+          "startedAt": "2026-10-27T19:44:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:48Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 13,
+          "startedAt": "2026-10-27T19:44:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:49Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 14,
+          "startedAt": "2026-10-27T19:44:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:49Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-10-27T19:44:49Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-asyncio/actions/runs/40571601184/job/122426960138"
+    },
+    {
+      "completedAt": "2026-10-27T19:45:36Z",
+      "conclusion": "success",
+      "databaseId": 122426960148,
+      "name": "windows - Python 3.13",
+      "startedAt": "2026-10-27T19:43:06Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T19:43:09Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T19:43:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:18Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T19:43:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:18Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 3,
+          "startedAt": "2026-10-27T19:43:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:21Z",
+          "conclusion": "success",
+          "name": "Set up the latest version of uv",
+          "number": 4,
+          "startedAt": "2026-10-27T19:43:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:22Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T19:43:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:45:31Z",
+          "conclusion": "success",
+          "name": "Run tox targets for 3.13",
+          "number": 6,
+          "startedAt": "2026-10-27T19:43:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:45:31Z",
+          "conclusion": "skipped",
+          "name": "Store coverage data",
+          "number": 7,
+          "startedAt": "2026-10-27T19:45:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:45:32Z",
+          "conclusion": "success",
+          "name": "Post Set up the latest version of uv",
+          "number": 12,
+          "startedAt": "2026-10-27T19:45:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:45:32Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 13,
+          "startedAt": "2026-10-27T19:45:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:45:34Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 14,
+          "startedAt": "2026-10-27T19:45:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:45:34Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-10-27T19:45:34Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-asyncio/actions/runs/40571601184/job/122426960148"
+    },
+    {
+      "completedAt": "2026-10-27T19:44:24Z",
+      "conclusion": "success",
+      "databaseId": 122426960184,
+      "name": "ubuntu - Python latest - pytest main",
+      "startedAt": "2026-10-27T19:43:03Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T19:43:05Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T19:43:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:06Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T19:43:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:06Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 3,
+          "startedAt": "2026-10-27T19:43:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:07Z",
+          "conclusion": "success",
+          "name": "Set up the latest version of uv",
+          "number": 4,
+          "startedAt": "2026-10-27T19:43:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:08Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T19:43:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:22Z",
+          "conclusion": "success",
+          "name": "Run tests against pytest main",
+          "number": 6,
+          "startedAt": "2026-10-27T19:43:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:22Z",
+          "conclusion": "success",
+          "name": "Post Set up the latest version of uv",
+          "number": 10,
+          "startedAt": "2026-10-27T19:44:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:22Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 11,
+          "startedAt": "2026-10-27T19:44:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:22Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 12,
+          "startedAt": "2026-10-27T19:44:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:22Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-10-27T19:44:22Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-asyncio/actions/runs/40571601184/job/122426960184"
+    },
+    {
+      "completedAt": "2026-10-27T19:45:13Z",
+      "conclusion": "success",
+      "databaseId": 122426960234,
+      "name": "windows - Python 3.12",
+      "startedAt": "2026-10-27T19:43:04Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T19:43:06Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T19:43:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:17Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T19:43:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:17Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 3,
+          "startedAt": "2026-10-27T19:43:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:19Z",
+          "conclusion": "success",
+          "name": "Set up the latest version of uv",
+          "number": 4,
+          "startedAt": "2026-10-27T19:43:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:21Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T19:43:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:45:09Z",
+          "conclusion": "success",
+          "name": "Run tox targets for 3.12",
+          "number": 6,
+          "startedAt": "2026-10-27T19:43:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:45:09Z",
+          "conclusion": "skipped",
+          "name": "Store coverage data",
+          "number": 7,
+          "startedAt": "2026-10-27T19:45:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:45:09Z",
+          "conclusion": "success",
+          "name": "Post Set up the latest version of uv",
+          "number": 12,
+          "startedAt": "2026-10-27T19:45:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:45:09Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 13,
+          "startedAt": "2026-10-27T19:45:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:45:11Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 14,
+          "startedAt": "2026-10-27T19:45:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:45:11Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-10-27T19:45:11Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-asyncio/actions/runs/40571601184/job/122426960234"
+    },
+    {
+      "completedAt": "2026-10-27T19:44:44Z",
+      "conclusion": "success",
+      "databaseId": 122426960261,
+      "name": "ubuntu - Python 3.12",
+      "startedAt": "2026-10-27T19:43:04Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T19:43:06Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T19:43:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:07Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T19:43:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:07Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 3,
+          "startedAt": "2026-10-27T19:43:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:08Z",
+          "conclusion": "success",
+          "name": "Set up the latest version of uv",
+          "number": 4,
+          "startedAt": "2026-10-27T19:43:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:09Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T19:43:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:42Z",
+          "conclusion": "success",
+          "name": "Run tox targets for 3.12",
+          "number": 6,
+          "startedAt": "2026-10-27T19:43:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:43Z",
+          "conclusion": "success",
+          "name": "Store coverage data",
+          "number": 7,
+          "startedAt": "2026-10-27T19:44:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:43Z",
+          "conclusion": "success",
+          "name": "Post Set up the latest version of uv",
+          "number": 12,
+          "startedAt": "2026-10-27T19:44:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:43Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 13,
+          "startedAt": "2026-10-27T19:44:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:43Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 14,
+          "startedAt": "2026-10-27T19:44:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:43Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-10-27T19:44:43Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-asyncio/actions/runs/40571601184/job/122426960261"
+    },
+    {
+      "completedAt": "2026-10-27T19:44:11Z",
+      "conclusion": "success",
+      "databaseId": 122426960300,
+      "name": "ubuntu - Python 3.15t",
+      "startedAt": "2026-10-27T19:43:03Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T19:43:06Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T19:43:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:07Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T19:43:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:13Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 3,
+          "startedAt": "2026-10-27T19:43:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:15Z",
+          "conclusion": "success",
+          "name": "Set up the latest version of uv",
+          "number": 4,
+          "startedAt": "2026-10-27T19:43:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:15Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T19:43:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:07Z",
+          "conclusion": "success",
+          "name": "Run tox targets for 3.15t",
+          "number": 6,
+          "startedAt": "2026-10-27T19:43:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:08Z",
+          "conclusion": "success",
+          "name": "Store coverage data",
+          "number": 7,
+          "startedAt": "2026-10-27T19:44:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:08Z",
+          "conclusion": "success",
+          "name": "Post Set up the latest version of uv",
+          "number": 12,
+          "startedAt": "2026-10-27T19:44:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:08Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 13,
+          "startedAt": "2026-10-27T19:44:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:08Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 14,
+          "startedAt": "2026-10-27T19:44:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:08Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-10-27T19:44:08Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-asyncio/actions/runs/40571601184/job/122426960300"
+    },
+    {
+      "completedAt": "2026-10-27T19:43:29Z",
+      "conclusion": "success",
+      "databaseId": 122426960360,
+      "name": "Build package",
+      "startedAt": "2026-10-27T19:43:04Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T19:43:06Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T19:43:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:09Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T19:43:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:09Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 3,
+          "startedAt": "2026-10-27T19:43:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:10Z",
+          "conclusion": "success",
+          "name": "Set up the latest version of uv",
+          "number": 4,
+          "startedAt": "2026-10-27T19:43:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:10Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T19:43:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:20Z",
+          "conclusion": "success",
+          "name": "Build package and check distributions",
+          "number": 6,
+          "startedAt": "2026-10-27T19:43:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:20Z",
+          "conclusion": "success",
+          "name": "List result",
+          "number": 7,
+          "startedAt": "2026-10-27T19:43:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:25Z",
+          "conclusion": "success",
+          "name": "Install pytest-asyncio",
+          "number": 8,
+          "startedAt": "2026-10-27T19:43:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:25Z",
+          "conclusion": "success",
+          "name": "Get version info",
+          "number": 9,
+          "startedAt": "2026-10-27T19:43:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:26Z",
+          "conclusion": "success",
+          "name": "Upload artifacts",
+          "number": 10,
+          "startedAt": "2026-10-27T19:43:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:27Z",
+          "conclusion": "success",
+          "name": "Post Set up the latest version of uv",
+          "number": 18,
+          "startedAt": "2026-10-27T19:43:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:27Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 19,
+          "startedAt": "2026-10-27T19:43:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:27Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 20,
+          "startedAt": "2026-10-27T19:43:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:27Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "startedAt": "2026-10-27T19:43:27Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-asyncio/actions/runs/40571601184/job/122426960360"
+    },
+    {
+      "completedAt": "2026-10-27T19:43:27Z",
+      "conclusion": "success",
+      "databaseId": 122426960396,
+      "name": "Lint GitHub Actions / \ud83d\udd10 Analyze repo with zizmor \ud83c\udf08",
+      "startedAt": "2026-10-27T19:43:04Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T19:43:07Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T19:43:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:08Z",
+          "conclusion": "success",
+          "name": "Get the current repository from GitHub",
+          "number": 2,
+          "startedAt": "2026-10-27T19:43:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:10Z",
+          "conclusion": "success",
+          "name": "Install the latest version of uv",
+          "number": 3,
+          "startedAt": "2026-10-27T19:43:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:16Z",
+          "conclusion": "success",
+          "name": "Analyze GitHub Actions and workflow definitions with zizmor \ud83c\udf08",
+          "number": 4,
+          "startedAt": "2026-10-27T19:43:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:24Z",
+          "conclusion": "success",
+          "name": "Upload SARIF report into the GitHub repo code scanning",
+          "number": 5,
+          "startedAt": "2026-10-27T19:43:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:24Z",
+          "conclusion": "success",
+          "name": "Post Upload SARIF report into the GitHub repo code scanning",
+          "number": 8,
+          "startedAt": "2026-10-27T19:43:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:24Z",
+          "conclusion": "success",
+          "name": "Post Install the latest version of uv",
+          "number": 9,
+          "startedAt": "2026-10-27T19:43:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:24Z",
+          "conclusion": "success",
+          "name": "Post Get the current repository from GitHub",
+          "number": 10,
+          "startedAt": "2026-10-27T19:43:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:24Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "startedAt": "2026-10-27T19:43:24Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-asyncio/actions/runs/40571601184/job/122426960396"
+    },
+    {
+      "completedAt": "2026-10-27T19:45:16Z",
+      "conclusion": "success",
+      "databaseId": 122426960398,
+      "name": "windows - Python 3.11",
+      "startedAt": "2026-10-27T19:43:03Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T19:43:05Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T19:43:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:14Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T19:43:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:14Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 3,
+          "startedAt": "2026-10-27T19:43:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:17Z",
+          "conclusion": "success",
+          "name": "Set up the latest version of uv",
+          "number": 4,
+          "startedAt": "2026-10-27T19:43:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:18Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T19:43:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:45:12Z",
+          "conclusion": "success",
+          "name": "Run tox targets for 3.11",
+          "number": 6,
+          "startedAt": "2026-10-27T19:43:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:45:12Z",
+          "conclusion": "skipped",
+          "name": "Store coverage data",
+          "number": 7,
+          "startedAt": "2026-10-27T19:45:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:45:12Z",
+          "conclusion": "success",
+          "name": "Post Set up the latest version of uv",
+          "number": 12,
+          "startedAt": "2026-10-27T19:45:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:45:13Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 13,
+          "startedAt": "2026-10-27T19:45:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:45:15Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 14,
+          "startedAt": "2026-10-27T19:45:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:45:15Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-10-27T19:45:15Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-asyncio/actions/runs/40571601184/job/122426960398"
+    },
+    {
+      "completedAt": "2026-10-27T19:44:54Z",
+      "conclusion": "success",
+      "databaseId": 122426960406,
+      "name": "windows - Python 3.14",
+      "startedAt": "2026-10-27T19:43:03Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T19:43:06Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T19:43:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:13Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T19:43:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:13Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 3,
+          "startedAt": "2026-10-27T19:43:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:16Z",
+          "conclusion": "success",
+          "name": "Set up the latest version of uv",
+          "number": 4,
+          "startedAt": "2026-10-27T19:43:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:17Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T19:43:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:50Z",
+          "conclusion": "success",
+          "name": "Run tox targets for 3.14",
+          "number": 6,
+          "startedAt": "2026-10-27T19:43:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:50Z",
+          "conclusion": "skipped",
+          "name": "Store coverage data",
+          "number": 7,
+          "startedAt": "2026-10-27T19:44:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:50Z",
+          "conclusion": "success",
+          "name": "Post Set up the latest version of uv",
+          "number": 12,
+          "startedAt": "2026-10-27T19:44:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:50Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 13,
+          "startedAt": "2026-10-27T19:44:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:52Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 14,
+          "startedAt": "2026-10-27T19:44:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:52Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-10-27T19:44:52Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-asyncio/actions/runs/40571601184/job/122426960406"
+    },
+    {
+      "completedAt": "2026-10-27T19:44:35Z",
+      "conclusion": "success",
+      "databaseId": 122426960465,
+      "name": "ubuntu - Python 3.14",
+      "startedAt": "2026-10-27T19:43:04Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T19:43:05Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T19:43:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:06Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T19:43:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:06Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 3,
+          "startedAt": "2026-10-27T19:43:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:08Z",
+          "conclusion": "success",
+          "name": "Set up the latest version of uv",
+          "number": 4,
+          "startedAt": "2026-10-27T19:43:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:08Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T19:43:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:32Z",
+          "conclusion": "success",
+          "name": "Run tox targets for 3.14",
+          "number": 6,
+          "startedAt": "2026-10-27T19:43:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:33Z",
+          "conclusion": "success",
+          "name": "Store coverage data",
+          "number": 7,
+          "startedAt": "2026-10-27T19:44:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:33Z",
+          "conclusion": "success",
+          "name": "Post Set up the latest version of uv",
+          "number": 12,
+          "startedAt": "2026-10-27T19:44:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:33Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 13,
+          "startedAt": "2026-10-27T19:44:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:34Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 14,
+          "startedAt": "2026-10-27T19:44:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:34Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-10-27T19:44:34Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-asyncio/actions/runs/40571601184/job/122426960465"
+    },
+    {
+      "completedAt": "2026-10-27T19:45:37Z",
+      "conclusion": "success",
+      "databaseId": 122426960466,
+      "name": "windows - Python 3.14t",
+      "startedAt": "2026-10-27T19:43:03Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T19:43:05Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T19:43:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:13Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T19:43:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:57Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 3,
+          "startedAt": "2026-10-27T19:43:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:58Z",
+          "conclusion": "success",
+          "name": "Set up the latest version of uv",
+          "number": 4,
+          "startedAt": "2026-10-27T19:43:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:59Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T19:43:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:45:33Z",
+          "conclusion": "success",
+          "name": "Run tox targets for 3.14t",
+          "number": 6,
+          "startedAt": "2026-10-27T19:43:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:45:33Z",
+          "conclusion": "skipped",
+          "name": "Store coverage data",
+          "number": 7,
+          "startedAt": "2026-10-27T19:45:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:45:33Z",
+          "conclusion": "success",
+          "name": "Post Set up the latest version of uv",
+          "number": 12,
+          "startedAt": "2026-10-27T19:45:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:45:33Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 13,
+          "startedAt": "2026-10-27T19:45:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:45:35Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 14,
+          "startedAt": "2026-10-27T19:45:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:45:35Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-10-27T19:45:35Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-asyncio/actions/runs/40571601184/job/122426960466"
+    },
+    {
+      "completedAt": "2026-10-27T19:44:20Z",
+      "conclusion": "success",
+      "databaseId": 122426960511,
+      "name": "ubuntu - Python 3.14t",
+      "startedAt": "2026-10-27T19:43:04Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T19:43:06Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T19:43:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:08Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T19:43:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:15Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 3,
+          "startedAt": "2026-10-27T19:43:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:16Z",
+          "conclusion": "success",
+          "name": "Set up the latest version of uv",
+          "number": 4,
+          "startedAt": "2026-10-27T19:43:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:16Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T19:43:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:15Z",
+          "conclusion": "success",
+          "name": "Run tox targets for 3.14t",
+          "number": 6,
+          "startedAt": "2026-10-27T19:43:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:17Z",
+          "conclusion": "success",
+          "name": "Store coverage data",
+          "number": 7,
+          "startedAt": "2026-10-27T19:44:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:17Z",
+          "conclusion": "success",
+          "name": "Post Set up the latest version of uv",
+          "number": 12,
+          "startedAt": "2026-10-27T19:44:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:17Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 13,
+          "startedAt": "2026-10-27T19:44:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:17Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 14,
+          "startedAt": "2026-10-27T19:44:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:17Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-10-27T19:44:17Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-asyncio/actions/runs/40571601184/job/122426960511"
+    },
+    {
+      "completedAt": "2026-10-27T19:44:30Z",
+      "conclusion": "success",
+      "databaseId": 122426960514,
+      "name": "ubuntu - Python 3.13",
+      "startedAt": "2026-10-27T19:43:04Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T19:43:06Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T19:43:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:07Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T19:43:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:07Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 3,
+          "startedAt": "2026-10-27T19:43:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:08Z",
+          "conclusion": "success",
+          "name": "Set up the latest version of uv",
+          "number": 4,
+          "startedAt": "2026-10-27T19:43:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:09Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T19:43:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:26Z",
+          "conclusion": "success",
+          "name": "Run tox targets for 3.13",
+          "number": 6,
+          "startedAt": "2026-10-27T19:43:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:27Z",
+          "conclusion": "success",
+          "name": "Store coverage data",
+          "number": 7,
+          "startedAt": "2026-10-27T19:44:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:28Z",
+          "conclusion": "success",
+          "name": "Post Set up the latest version of uv",
+          "number": 12,
+          "startedAt": "2026-10-27T19:44:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:28Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 13,
+          "startedAt": "2026-10-27T19:44:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:28Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 14,
+          "startedAt": "2026-10-27T19:44:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:28Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-10-27T19:44:28Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-asyncio/actions/runs/40571601184/job/122426960514"
+    },
+    {
+      "completedAt": "2026-10-27T19:44:33Z",
+      "conclusion": "success",
+      "databaseId": 122426960582,
+      "name": "windows - Python 3.15",
+      "startedAt": "2026-10-27T19:43:04Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T19:43:06Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T19:43:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:12Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T19:43:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:12Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 3,
+          "startedAt": "2026-10-27T19:43:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:15Z",
+          "conclusion": "success",
+          "name": "Set up the latest version of uv",
+          "number": 4,
+          "startedAt": "2026-10-27T19:43:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:17Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T19:43:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:29Z",
+          "conclusion": "success",
+          "name": "Run tox targets for 3.15",
+          "number": 6,
+          "startedAt": "2026-10-27T19:43:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:29Z",
+          "conclusion": "skipped",
+          "name": "Store coverage data",
+          "number": 7,
+          "startedAt": "2026-10-27T19:44:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:29Z",
+          "conclusion": "success",
+          "name": "Post Set up the latest version of uv",
+          "number": 12,
+          "startedAt": "2026-10-27T19:44:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:29Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 13,
+          "startedAt": "2026-10-27T19:44:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:31Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 14,
+          "startedAt": "2026-10-27T19:44:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:31Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-10-27T19:44:31Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-asyncio/actions/runs/40571601184/job/122426960582"
+    },
+    {
+      "completedAt": "2026-10-27T19:44:23Z",
+      "conclusion": "success",
+      "databaseId": 122426960584,
+      "name": "ubuntu - Python 3.15",
+      "startedAt": "2026-10-27T19:43:04Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T19:43:06Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T19:43:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:08Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T19:43:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:17Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 3,
+          "startedAt": "2026-10-27T19:43:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:17Z",
+          "conclusion": "success",
+          "name": "Set up the latest version of uv",
+          "number": 4,
+          "startedAt": "2026-10-27T19:43:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:18Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T19:43:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:18Z",
+          "conclusion": "success",
+          "name": "Run tox targets for 3.15",
+          "number": 6,
+          "startedAt": "2026-10-27T19:43:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:20Z",
+          "conclusion": "success",
+          "name": "Store coverage data",
+          "number": 7,
+          "startedAt": "2026-10-27T19:44:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:20Z",
+          "conclusion": "success",
+          "name": "Post Set up the latest version of uv",
+          "number": 12,
+          "startedAt": "2026-10-27T19:44:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:20Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 13,
+          "startedAt": "2026-10-27T19:44:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:20Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 14,
+          "startedAt": "2026-10-27T19:44:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:20Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-10-27T19:44:20Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-asyncio/actions/runs/40571601184/job/122426960584"
+    },
+    {
+      "completedAt": "2026-10-27T19:45:37Z",
+      "conclusion": "success",
+      "databaseId": 122426960701,
+      "name": "windows - Python 3.15t",
+      "startedAt": "2026-10-27T19:43:03Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T19:43:06Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T19:43:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:43:14Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T19:43:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:00Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 3,
+          "startedAt": "2026-10-27T19:43:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:02Z",
+          "conclusion": "success",
+          "name": "Set up the latest version of uv",
+          "number": 4,
+          "startedAt": "2026-10-27T19:44:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:44:03Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T19:44:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:45:33Z",
+          "conclusion": "success",
+          "name": "Run tox targets for 3.15t",
+          "number": 6,
+          "startedAt": "2026-10-27T19:44:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:45:33Z",
+          "conclusion": "skipped",
+          "name": "Store coverage data",
+          "number": 7,
+          "startedAt": "2026-10-27T19:45:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:45:33Z",
+          "conclusion": "success",
+          "name": "Post Set up the latest version of uv",
+          "number": 12,
+          "startedAt": "2026-10-27T19:45:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:45:33Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 13,
+          "startedAt": "2026-10-27T19:45:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:45:35Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 14,
+          "startedAt": "2026-10-27T19:45:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:45:35Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-10-27T19:45:35Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-asyncio/actions/runs/40571601184/job/122426960701"
+    },
+    {
+      "completedAt": "2026-10-27T19:47:33Z",
+      "conclusion": "failure",
+      "databaseId": 122429263462,
+      "name": "Check",
+      "startedAt": "2026-10-27T19:47:28Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T19:47:31Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T19:47:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:47:31Z",
+          "conclusion": "failure",
+          "name": "Decide whether the needed jobs succeeded or failed",
+          "number": 2,
+          "startedAt": "2026-10-27T19:47:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:47:31Z",
+          "conclusion": "skipped",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 3,
+          "startedAt": "2026-10-27T19:47:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:47:31Z",
+          "conclusion": "skipped",
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 4,
+          "startedAt": "2026-10-27T19:47:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:47:31Z",
+          "conclusion": "skipped",
+          "name": "Install Coverage.py",
+          "number": 5,
+          "startedAt": "2026-10-27T19:47:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:47:31Z",
+          "conclusion": "skipped",
+          "name": "Download coverage data for all test runs",
+          "number": 6,
+          "startedAt": "2026-10-27T19:47:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:47:31Z",
+          "conclusion": "skipped",
+          "name": "Combine coverage data and create report",
+          "number": 7,
+          "startedAt": "2026-10-27T19:47:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:47:31Z",
+          "conclusion": "skipped",
+          "name": "Upload coverage report",
+          "number": 8,
+          "startedAt": "2026-10-27T19:47:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T19:47:31Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 9,
+          "startedAt": "2026-10-27T19:47:31Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-asyncio/actions/runs/40571601184/job/122429263462"
+    },
+    {
+      "completedAt": "2026-10-27T19:47:33Z",
+      "conclusion": "skipped",
+      "databaseId": 122429327169,
+      "name": "Create GitHub release",
+      "startedAt": "2026-10-27T19:47:33Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/pytest-dev/pytest-asyncio/actions/runs/40571601184/job/122429327169"
+    },
+    {
+      "completedAt": "2026-10-27T19:47:33Z",
+      "conclusion": "skipped",
+      "databaseId": 122429328057,
+      "name": "Publish packages to pypi.org",
+      "startedAt": "2026-10-27T19:47:34Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/pytest-dev/pytest-asyncio/actions/runs/40571601184/job/122429328057"
+    },
+    {
+      "completedAt": "2026-10-27T19:47:33Z",
+      "conclusion": "skipped",
+      "databaseId": 122429328949,
+      "name": "Publish packages to test.pypi.org",
+      "startedAt": "2026-10-27T19:47:34Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/pytest-dev/pytest-asyncio/actions/runs/40571601184/job/122429328949"
+    }
+  ],
+  "name": "CI",
+  "updatedAt": "2026-10-27T19:47:34Z",
+  "repository": "pytest-dev/pytest-asyncio"
+}

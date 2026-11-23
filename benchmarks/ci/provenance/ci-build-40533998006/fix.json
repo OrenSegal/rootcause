@@ -1,0 +1,13 @@
+{
+  "fixed_run": "https://github.com/pypa/build/actions/runs/40536434549",
+  "fixed_sha": "fd95f9d6307a56203a9756559af79573b069ce7e",
+  "commits": [
+    "fd95f9d6307a56203a9756559af79573b069ce7e"
+  ],
+  "files": [
+    "docs/reference/api.rst",
+    "pyproject.toml",
+    "src/build/_types.py"
+  ],
+  "status": "ahead"
+}

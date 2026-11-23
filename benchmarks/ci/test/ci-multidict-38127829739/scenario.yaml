@@ -1,0 +1,13 @@
+id: ci-multidict-38127829739
+title: Pass one batch state through update() and merge(), give extend() its own helpers
+alert:
+  severity: ci
+  service: inlining
+  summary: 'workflow CI/CD failed on claude/generalize-md-update-state-t-2753d0 at 2d488dc335:
+    step ''Check that the hot paths keep their helpers inlined'' in job ''Inlining'' failed.'
+truth:
+  category: bad_code_deploy
+  service: multidict
+  required_evidence_any:
+  - f6502e433e
+provenance: recorded

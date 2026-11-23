@@ -1,0 +1,17 @@
+[
+  {
+    "id": "d523f7ab7d",
+    "service": "multidict",
+    "version": "d523f7ab7d",
+    "ts": "2026-10-08T06:35:12Z",
+    "author": "asvetlov",
+    "summary": "Drop the extra key and value references in md_update_from_dict()",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "CHANGES/1747.misc.rst",
+      "multidict/_multilib/bulk_update.h",
+      "tests/test_update.py"
+    ]
+  }
+]

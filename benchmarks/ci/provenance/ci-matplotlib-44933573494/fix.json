@@ -1,0 +1,11 @@
+{
+  "fixed_run": "https://github.com/matplotlib/matplotlib/actions/runs/44934344521",
+  "fixed_sha": "809ae3e7848fea49064f5a0ae2ea03a25a640d2d",
+  "commits": [
+    "809ae3e7848fea49064f5a0ae2ea03a25a640d2d"
+  ],
+  "files": [
+    "lib/matplotlib/tests/test_axes.py"
+  ],
+  "status": "ahead"
+}

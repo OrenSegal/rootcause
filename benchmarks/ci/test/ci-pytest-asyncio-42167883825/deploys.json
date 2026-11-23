@@ -1,0 +1,17 @@
+[
+  {
+    "id": "578e233989",
+    "service": "pytest-asyncio",
+    "version": "578e233989",
+    "ts": "2026-11-06T05:20:19Z",
+    "author": "devin-ai-integration[bot]",
+    "summary": "Warn about unset fixture loop scope only for async fixtures",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "changelog.d/1033.fixed.rst",
+      "pytest_asyncio/plugin.py",
+      "tests/test_config_warnings.py"
+    ]
+  }
+]

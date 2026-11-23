@@ -1,0 +1,1952 @@
+[
+  {
+    "span_id": "run-43909716468",
+    "trace_id": "run-43909716468",
+    "parent_id": null,
+    "service": "ci",
+    "name": "CI",
+    "start": "2026-11-16T16:38:24Z",
+    "duration_ms": 99000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-133447985206",
+    "trace_id": "run-43909716468",
+    "parent_id": "run-43909716468",
+    "service": "ubuntu-python-latest-pytest-main",
+    "name": "ubuntu - Python latest - pytest main",
+    "start": "2026-11-16T16:38:27Z",
+    "duration_ms": 77000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985206-step-1",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985206",
+    "service": "ubuntu-python-latest-pytest-main",
+    "name": "Set up job",
+    "start": "2026-11-16T16:38:27Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985206-step-2",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985206",
+    "service": "ubuntu-python-latest-pytest-main",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:38:31Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985206-step-3",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985206",
+    "service": "ubuntu-python-latest-pytest-main",
+    "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+    "start": "2026-11-16T16:38:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985206-step-4",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985206",
+    "service": "ubuntu-python-latest-pytest-main",
+    "name": "Set up the latest version of uv",
+    "start": "2026-11-16T16:38:36Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985206-step-5",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985206",
+    "service": "ubuntu-python-latest-pytest-main",
+    "name": "Install tox",
+    "start": "2026-11-16T16:38:39Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985206-step-6",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985206",
+    "service": "ubuntu-python-latest-pytest-main",
+    "name": "Run tests against pytest main",
+    "start": "2026-11-16T16:38:40Z",
+    "duration_ms": 61000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985206-step-10",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985206",
+    "service": "ubuntu-python-latest-pytest-main",
+    "name": "Post Set up the latest version of uv",
+    "start": "2026-11-16T16:39:41Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985206-step-11",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985206",
+    "service": "ubuntu-python-latest-pytest-main",
+    "name": "Post Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+    "start": "2026-11-16T16:39:41Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985206-step-12",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985206",
+    "service": "ubuntu-python-latest-pytest-main",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:39:41Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985206-step-13",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985206",
+    "service": "ubuntu-python-latest-pytest-main",
+    "name": "Complete job",
+    "start": "2026-11-16T16:39:41Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985516",
+    "trace_id": "run-43909716468",
+    "parent_id": "run-43909716468",
+    "service": "ubuntu-python-3-14t",
+    "name": "ubuntu - Python 3.14t",
+    "start": "2026-11-16T16:38:26Z",
+    "duration_ms": 73000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985516-step-1",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985516",
+    "service": "ubuntu-python-3-14t",
+    "name": "Set up job",
+    "start": "2026-11-16T16:38:27Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985516-step-2",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985516",
+    "service": "ubuntu-python-3-14t",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:38:30Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985516-step-3",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985516",
+    "service": "ubuntu-python-3-14t",
+    "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+    "start": "2026-11-16T16:38:35Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985516-step-4",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985516",
+    "service": "ubuntu-python-3-14t",
+    "name": "Set up the latest version of uv",
+    "start": "2026-11-16T16:38:41Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985516-step-5",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985516",
+    "service": "ubuntu-python-3-14t",
+    "name": "Install tox",
+    "start": "2026-11-16T16:38:41Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985516-step-6",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985516",
+    "service": "ubuntu-python-3-14t",
+    "name": "Run tox targets for 3.14t",
+    "start": "2026-11-16T16:38:42Z",
+    "duration_ms": 55000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985516-step-14",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985516",
+    "service": "ubuntu-python-3-14t",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:39:37Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985516-step-15",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985516",
+    "service": "ubuntu-python-3-14t",
+    "name": "Complete job",
+    "start": "2026-11-16T16:39:37Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985580",
+    "trace_id": "run-43909716468",
+    "parent_id": "run-43909716468",
+    "service": "windows-python-3-14",
+    "name": "windows - Python 3.14",
+    "start": "2026-11-16T16:38:26Z",
+    "duration_ms": 83000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985580-step-1",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985580",
+    "service": "windows-python-3-14",
+    "name": "Set up job",
+    "start": "2026-11-16T16:38:27Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985580-step-2",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985580",
+    "service": "windows-python-3-14",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:38:29Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985580-step-3",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985580",
+    "service": "windows-python-3-14",
+    "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+    "start": "2026-11-16T16:38:37Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985580-step-4",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985580",
+    "service": "windows-python-3-14",
+    "name": "Set up the latest version of uv",
+    "start": "2026-11-16T16:38:37Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985580-step-5",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985580",
+    "service": "windows-python-3-14",
+    "name": "Install tox",
+    "start": "2026-11-16T16:38:40Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985580-step-14",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985580",
+    "service": "windows-python-3-14",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:39:45Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985580-step-15",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985580",
+    "service": "windows-python-3-14",
+    "name": "Complete job",
+    "start": "2026-11-16T16:39:47Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985612",
+    "trace_id": "run-43909716468",
+    "parent_id": "run-43909716468",
+    "service": "windows-python-3-15",
+    "name": "windows - Python 3.15",
+    "start": "2026-11-16T16:38:26Z",
+    "duration_ms": 81000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985612-step-1",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985612",
+    "service": "windows-python-3-15",
+    "name": "Set up job",
+    "start": "2026-11-16T16:38:26Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985612-step-2",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985612",
+    "service": "windows-python-3-15",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:38:28Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985612-step-3",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985612",
+    "service": "windows-python-3-15",
+    "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+    "start": "2026-11-16T16:38:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985612-step-4",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985612",
+    "service": "windows-python-3-15",
+    "name": "Set up the latest version of uv",
+    "start": "2026-11-16T16:38:35Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985612-step-5",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985612",
+    "service": "windows-python-3-15",
+    "name": "Install tox",
+    "start": "2026-11-16T16:38:37Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985612-step-14",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985612",
+    "service": "windows-python-3-15",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:39:44Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985612-step-15",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985612",
+    "service": "windows-python-3-15",
+    "name": "Complete job",
+    "start": "2026-11-16T16:39:46Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985617",
+    "trace_id": "run-43909716468",
+    "parent_id": "run-43909716468",
+    "service": "windows-python-3-13",
+    "name": "windows - Python 3.13",
+    "start": "2026-11-16T16:38:26Z",
+    "duration_ms": 76000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985617-step-1",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985617",
+    "service": "windows-python-3-13",
+    "name": "Set up job",
+    "start": "2026-11-16T16:38:27Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985617-step-2",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985617",
+    "service": "windows-python-3-13",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:38:29Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985617-step-3",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985617",
+    "service": "windows-python-3-13",
+    "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+    "start": "2026-11-16T16:38:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985617-step-4",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985617",
+    "service": "windows-python-3-13",
+    "name": "Set up the latest version of uv",
+    "start": "2026-11-16T16:38:35Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985617-step-5",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985617",
+    "service": "windows-python-3-13",
+    "name": "Install tox",
+    "start": "2026-11-16T16:38:37Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985617-step-14",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985617",
+    "service": "windows-python-3-13",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:39:38Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985617-step-15",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985617",
+    "service": "windows-python-3-13",
+    "name": "Complete job",
+    "start": "2026-11-16T16:39:40Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985636",
+    "trace_id": "run-43909716468",
+    "parent_id": "run-43909716468",
+    "service": "build-package",
+    "name": "Build package",
+    "start": "2026-11-16T16:38:26Z",
+    "duration_ms": 29000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985636-step-1",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985636",
+    "service": "build-package",
+    "name": "Set up job",
+    "start": "2026-11-16T16:38:27Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985636-step-2",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985636",
+    "service": "build-package",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:38:29Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985636-step-3",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985636",
+    "service": "build-package",
+    "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+    "start": "2026-11-16T16:38:30Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985636-step-4",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985636",
+    "service": "build-package",
+    "name": "Set up the latest version of uv",
+    "start": "2026-11-16T16:38:30Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985636-step-5",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985636",
+    "service": "build-package",
+    "name": "Install tox",
+    "start": "2026-11-16T16:38:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985636-step-6",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985636",
+    "service": "build-package",
+    "name": "Build package and check distributions",
+    "start": "2026-11-16T16:38:34Z",
+    "duration_ms": 11000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985636-step-7",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985636",
+    "service": "build-package",
+    "name": "List result",
+    "start": "2026-11-16T16:38:45Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985636-step-8",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985636",
+    "service": "build-package",
+    "name": "Install pytest-asyncio",
+    "start": "2026-11-16T16:38:46Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985636-step-9",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985636",
+    "service": "build-package",
+    "name": "Get version info",
+    "start": "2026-11-16T16:38:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985636-step-10",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985636",
+    "service": "build-package",
+    "name": "Upload artifacts",
+    "start": "2026-11-16T16:38:50Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985636-step-18",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985636",
+    "service": "build-package",
+    "name": "Post Set up the latest version of uv",
+    "start": "2026-11-16T16:38:51Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985636-step-19",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985636",
+    "service": "build-package",
+    "name": "Post Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+    "start": "2026-11-16T16:38:52Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985636-step-20",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985636",
+    "service": "build-package",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:38:52Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985636-step-21",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985636",
+    "service": "build-package",
+    "name": "Complete job",
+    "start": "2026-11-16T16:38:52Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985655",
+    "trace_id": "run-43909716468",
+    "parent_id": "run-43909716468",
+    "service": "windows-python-3-15t",
+    "name": "windows - Python 3.15t",
+    "start": "2026-11-16T16:38:26Z",
+    "duration_ms": 83000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985655-step-1",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985655",
+    "service": "windows-python-3-15t",
+    "name": "Set up job",
+    "start": "2026-11-16T16:38:27Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985655-step-2",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985655",
+    "service": "windows-python-3-15t",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:38:28Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985655-step-3",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985655",
+    "service": "windows-python-3-15t",
+    "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+    "start": "2026-11-16T16:38:34Z",
+    "duration_ms": 37000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985655-step-4",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985655",
+    "service": "windows-python-3-15t",
+    "name": "Set up the latest version of uv",
+    "start": "2026-11-16T16:39:11Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985655-step-5",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985655",
+    "service": "windows-python-3-15t",
+    "name": "Install tox",
+    "start": "2026-11-16T16:39:13Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985655-step-14",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985655",
+    "service": "windows-python-3-15t",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:39:45Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985655-step-15",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985655",
+    "service": "windows-python-3-15t",
+    "name": "Complete job",
+    "start": "2026-11-16T16:39:47Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985661",
+    "trace_id": "run-43909716468",
+    "parent_id": "run-43909716468",
+    "service": "ubuntu-python-3-16t",
+    "name": "ubuntu - Python 3.16t",
+    "start": "2026-11-16T16:38:27Z",
+    "duration_ms": 72000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985661-step-1",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985661",
+    "service": "ubuntu-python-3-16t",
+    "name": "Set up job",
+    "start": "2026-11-16T16:38:28Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985661-step-2",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985661",
+    "service": "ubuntu-python-3-16t",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:38:32Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985661-step-3",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985661",
+    "service": "ubuntu-python-3-16t",
+    "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+    "start": "2026-11-16T16:38:36Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985661-step-4",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985661",
+    "service": "ubuntu-python-3-16t",
+    "name": "Set up the latest version of uv",
+    "start": "2026-11-16T16:38:44Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985661-step-5",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985661",
+    "service": "ubuntu-python-3-16t",
+    "name": "Install tox",
+    "start": "2026-11-16T16:38:45Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985661-step-6",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985661",
+    "service": "ubuntu-python-3-16t",
+    "name": "Run tox targets for 3.16t",
+    "start": "2026-11-16T16:38:45Z",
+    "duration_ms": 52000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-133447985661-step-14",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985661",
+    "service": "ubuntu-python-3-16t",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:39:37Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985661-step-15",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985661",
+    "service": "ubuntu-python-3-16t",
+    "name": "Complete job",
+    "start": "2026-11-16T16:39:37Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985683",
+    "trace_id": "run-43909716468",
+    "parent_id": "run-43909716468",
+    "service": "windows-python-3-16",
+    "name": "windows - Python 3.16",
+    "start": "2026-11-16T16:38:27Z",
+    "duration_ms": 75000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985683-step-1",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985683",
+    "service": "windows-python-3-16",
+    "name": "Set up job",
+    "start": "2026-11-16T16:38:27Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985683-step-2",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985683",
+    "service": "windows-python-3-16",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:38:30Z",
+    "duration_ms": 10000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985683-step-14",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985683",
+    "service": "windows-python-3-16",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:39:37Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985683-step-15",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985683",
+    "service": "windows-python-3-16",
+    "name": "Complete job",
+    "start": "2026-11-16T16:39:40Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985765",
+    "trace_id": "run-43909716468",
+    "parent_id": "run-43909716468",
+    "service": "windows-python-3-16t",
+    "name": "windows - Python 3.16t",
+    "start": "2026-11-16T16:38:26Z",
+    "duration_ms": 76000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985765-step-1",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985765",
+    "service": "windows-python-3-16t",
+    "name": "Set up job",
+    "start": "2026-11-16T16:38:27Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985765-step-2",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985765",
+    "service": "windows-python-3-16t",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:38:29Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985765-step-14",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985765",
+    "service": "windows-python-3-16t",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:39:37Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985765-step-15",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985765",
+    "service": "windows-python-3-16t",
+    "name": "Complete job",
+    "start": "2026-11-16T16:39:40Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985881",
+    "trace_id": "run-43909716468",
+    "parent_id": "run-43909716468",
+    "service": "windows-python-3-14t",
+    "name": "windows - Python 3.14t",
+    "start": "2026-11-16T16:38:26Z",
+    "duration_ms": 76000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985881-step-1",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985881",
+    "service": "windows-python-3-14t",
+    "name": "Set up job",
+    "start": "2026-11-16T16:38:27Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985881-step-2",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985881",
+    "service": "windows-python-3-14t",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:38:28Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985881-step-3",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985881",
+    "service": "windows-python-3-14t",
+    "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+    "start": "2026-11-16T16:38:35Z",
+    "duration_ms": 36000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985881-step-4",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985881",
+    "service": "windows-python-3-14t",
+    "name": "Set up the latest version of uv",
+    "start": "2026-11-16T16:39:11Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985881-step-5",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985881",
+    "service": "windows-python-3-14t",
+    "name": "Install tox",
+    "start": "2026-11-16T16:39:13Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985881-step-14",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985881",
+    "service": "windows-python-3-14t",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:39:39Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985881-step-15",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985881",
+    "service": "windows-python-3-14t",
+    "name": "Complete job",
+    "start": "2026-11-16T16:39:41Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985931",
+    "trace_id": "run-43909716468",
+    "parent_id": "run-43909716468",
+    "service": "ubuntu-python-3-15t",
+    "name": "ubuntu - Python 3.15t",
+    "start": "2026-11-16T16:38:27Z",
+    "duration_ms": 80000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985931-step-1",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985931",
+    "service": "ubuntu-python-3-15t",
+    "name": "Set up job",
+    "start": "2026-11-16T16:38:28Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985931-step-2",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985931",
+    "service": "ubuntu-python-3-15t",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:38:32Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985931-step-3",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985931",
+    "service": "ubuntu-python-3-15t",
+    "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+    "start": "2026-11-16T16:38:39Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985931-step-4",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985931",
+    "service": "ubuntu-python-3-15t",
+    "name": "Set up the latest version of uv",
+    "start": "2026-11-16T16:38:46Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985931-step-5",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985931",
+    "service": "ubuntu-python-3-15t",
+    "name": "Install tox",
+    "start": "2026-11-16T16:38:48Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985931-step-14",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985931",
+    "service": "ubuntu-python-3-15t",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:39:45Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447985931-step-15",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447985931",
+    "service": "ubuntu-python-3-15t",
+    "name": "Complete job",
+    "start": "2026-11-16T16:39:45Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986045",
+    "trace_id": "run-43909716468",
+    "parent_id": "run-43909716468",
+    "service": "lint-github-actions-analyze-repo-with-zizmor",
+    "name": "Lint GitHub Actions / \ud83d\udd10 Analyze repo with zizmor \ud83c\udf08",
+    "start": "2026-11-16T16:38:26Z",
+    "duration_ms": 21000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986045-step-1",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986045",
+    "service": "lint-github-actions-analyze-repo-with-zizmor",
+    "name": "Set up job",
+    "start": "2026-11-16T16:38:27Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986045-step-2",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986045",
+    "service": "lint-github-actions-analyze-repo-with-zizmor",
+    "name": "Get the current repository from GitHub",
+    "start": "2026-11-16T16:38:28Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986045-step-3",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986045",
+    "service": "lint-github-actions-analyze-repo-with-zizmor",
+    "name": "Install the latest version of uv",
+    "start": "2026-11-16T16:38:30Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986045-step-4",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986045",
+    "service": "lint-github-actions-analyze-repo-with-zizmor",
+    "name": "Analyze GitHub Actions and workflow definitions with zizmor \ud83c\udf08",
+    "start": "2026-11-16T16:38:31Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986045-step-5",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986045",
+    "service": "lint-github-actions-analyze-repo-with-zizmor",
+    "name": "Upload SARIF report into the GitHub repo code scanning",
+    "start": "2026-11-16T16:38:35Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986045-step-8",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986045",
+    "service": "lint-github-actions-analyze-repo-with-zizmor",
+    "name": "Post Upload SARIF report into the GitHub repo code scanning",
+    "start": "2026-11-16T16:38:43Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986045-step-9",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986045",
+    "service": "lint-github-actions-analyze-repo-with-zizmor",
+    "name": "Post Install the latest version of uv",
+    "start": "2026-11-16T16:38:43Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986045-step-10",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986045",
+    "service": "lint-github-actions-analyze-repo-with-zizmor",
+    "name": "Post Get the current repository from GitHub",
+    "start": "2026-11-16T16:38:43Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986045-step-11",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986045",
+    "service": "lint-github-actions-analyze-repo-with-zizmor",
+    "name": "Complete job",
+    "start": "2026-11-16T16:38:44Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986047",
+    "trace_id": "run-43909716468",
+    "parent_id": "run-43909716468",
+    "service": "windows-python-3-11",
+    "name": "windows - Python 3.11",
+    "start": "2026-11-16T16:38:27Z",
+    "duration_ms": 74000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986047-step-1",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986047",
+    "service": "windows-python-3-11",
+    "name": "Set up job",
+    "start": "2026-11-16T16:38:28Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986047-step-2",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986047",
+    "service": "windows-python-3-11",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:38:30Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986047-step-3",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986047",
+    "service": "windows-python-3-11",
+    "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+    "start": "2026-11-16T16:38:37Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986047-step-4",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986047",
+    "service": "windows-python-3-11",
+    "name": "Set up the latest version of uv",
+    "start": "2026-11-16T16:38:38Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986047-step-5",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986047",
+    "service": "windows-python-3-11",
+    "name": "Install tox",
+    "start": "2026-11-16T16:38:40Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986047-step-14",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986047",
+    "service": "windows-python-3-11",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:39:39Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986047-step-15",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986047",
+    "service": "windows-python-3-11",
+    "name": "Complete job",
+    "start": "2026-11-16T16:39:40Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986083",
+    "trace_id": "run-43909716468",
+    "parent_id": "run-43909716468",
+    "service": "run-linters",
+    "name": "Run linters",
+    "start": "2026-11-16T16:38:49Z",
+    "duration_ms": 59000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986083-step-1",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986083",
+    "service": "run-linters",
+    "name": "Set up job",
+    "start": "2026-11-16T16:38:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986083-step-2",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986083",
+    "service": "run-linters",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:38:50Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986083-step-3",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986083",
+    "service": "run-linters",
+    "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+    "start": "2026-11-16T16:38:52Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986083-step-4",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986083",
+    "service": "run-linters",
+    "name": "Install GitHub matcher for ActionLint checker",
+    "start": "2026-11-16T16:38:52Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986083-step-5",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986083",
+    "service": "run-linters",
+    "name": "Install pre-commit",
+    "start": "2026-11-16T16:38:53Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986083-step-6",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986083",
+    "service": "run-linters",
+    "name": "Run pre-commit checks",
+    "start": "2026-11-16T16:38:58Z",
+    "duration_ms": 47000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986083-step-11",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986083",
+    "service": "run-linters",
+    "name": "Post Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+    "start": "2026-11-16T16:39:45Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986083-step-12",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986083",
+    "service": "run-linters",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:39:45Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986083-step-13",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986083",
+    "service": "run-linters",
+    "name": "Complete job",
+    "start": "2026-11-16T16:39:45Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986376",
+    "trace_id": "run-43909716468",
+    "parent_id": "run-43909716468",
+    "service": "ubuntu-python-3-14",
+    "name": "ubuntu - Python 3.14",
+    "start": "2026-11-16T16:38:26Z",
+    "duration_ms": 83000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986376-step-1",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986376",
+    "service": "ubuntu-python-3-14",
+    "name": "Set up job",
+    "start": "2026-11-16T16:38:27Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986376-step-2",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986376",
+    "service": "ubuntu-python-3-14",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:38:29Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986376-step-3",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986376",
+    "service": "ubuntu-python-3-14",
+    "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+    "start": "2026-11-16T16:38:30Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986376-step-4",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986376",
+    "service": "ubuntu-python-3-14",
+    "name": "Set up the latest version of uv",
+    "start": "2026-11-16T16:38:30Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986376-step-5",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986376",
+    "service": "ubuntu-python-3-14",
+    "name": "Install tox",
+    "start": "2026-11-16T16:38:31Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986376-step-14",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986376",
+    "service": "ubuntu-python-3-14",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:39:47Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986376-step-15",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986376",
+    "service": "ubuntu-python-3-14",
+    "name": "Complete job",
+    "start": "2026-11-16T16:39:47Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986430",
+    "trace_id": "run-43909716468",
+    "parent_id": "run-43909716468",
+    "service": "ubuntu-python-3-12",
+    "name": "ubuntu - Python 3.12",
+    "start": "2026-11-16T16:38:26Z",
+    "duration_ms": 85000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986430-step-1",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986430",
+    "service": "ubuntu-python-3-12",
+    "name": "Set up job",
+    "start": "2026-11-16T16:38:27Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986430-step-2",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986430",
+    "service": "ubuntu-python-3-12",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:38:28Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986430-step-3",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986430",
+    "service": "ubuntu-python-3-12",
+    "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+    "start": "2026-11-16T16:38:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986430-step-4",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986430",
+    "service": "ubuntu-python-3-12",
+    "name": "Set up the latest version of uv",
+    "start": "2026-11-16T16:38:29Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986430-step-5",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986430",
+    "service": "ubuntu-python-3-12",
+    "name": "Install tox",
+    "start": "2026-11-16T16:38:30Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986430-step-14",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986430",
+    "service": "ubuntu-python-3-12",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:39:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986430-step-15",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986430",
+    "service": "ubuntu-python-3-12",
+    "name": "Complete job",
+    "start": "2026-11-16T16:39:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986438",
+    "trace_id": "run-43909716468",
+    "parent_id": "run-43909716468",
+    "service": "ubuntu-python-3-13",
+    "name": "ubuntu - Python 3.13",
+    "start": "2026-11-16T16:38:27Z",
+    "duration_ms": 85000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986438-step-1",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986438",
+    "service": "ubuntu-python-3-13",
+    "name": "Set up job",
+    "start": "2026-11-16T16:38:28Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986438-step-2",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986438",
+    "service": "ubuntu-python-3-13",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:38:29Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986438-step-3",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986438",
+    "service": "ubuntu-python-3-13",
+    "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+    "start": "2026-11-16T16:38:30Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986438-step-4",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986438",
+    "service": "ubuntu-python-3-13",
+    "name": "Set up the latest version of uv",
+    "start": "2026-11-16T16:38:30Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986438-step-5",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986438",
+    "service": "ubuntu-python-3-13",
+    "name": "Install tox",
+    "start": "2026-11-16T16:38:31Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986438-step-14",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986438",
+    "service": "ubuntu-python-3-13",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:39:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986438-step-15",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986438",
+    "service": "ubuntu-python-3-13",
+    "name": "Complete job",
+    "start": "2026-11-16T16:39:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986577",
+    "trace_id": "run-43909716468",
+    "parent_id": "run-43909716468",
+    "service": "windows-python-3-12",
+    "name": "windows - Python 3.12",
+    "start": "2026-11-16T16:38:26Z",
+    "duration_ms": 76000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986577-step-1",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986577",
+    "service": "windows-python-3-12",
+    "name": "Set up job",
+    "start": "2026-11-16T16:38:27Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986577-step-2",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986577",
+    "service": "windows-python-3-12",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:38:28Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986577-step-3",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986577",
+    "service": "windows-python-3-12",
+    "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+    "start": "2026-11-16T16:38:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986577-step-4",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986577",
+    "service": "windows-python-3-12",
+    "name": "Set up the latest version of uv",
+    "start": "2026-11-16T16:38:35Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986577-step-5",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986577",
+    "service": "windows-python-3-12",
+    "name": "Install tox",
+    "start": "2026-11-16T16:38:38Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986577-step-14",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986577",
+    "service": "windows-python-3-12",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:39:38Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986577-step-15",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986577",
+    "service": "windows-python-3-12",
+    "name": "Complete job",
+    "start": "2026-11-16T16:39:40Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986588",
+    "trace_id": "run-43909716468",
+    "parent_id": "run-43909716468",
+    "service": "ubuntu-python-3-11",
+    "name": "ubuntu - Python 3.11",
+    "start": "2026-11-16T16:38:26Z",
+    "duration_ms": 87000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986588-step-1",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986588",
+    "service": "ubuntu-python-3-11",
+    "name": "Set up job",
+    "start": "2026-11-16T16:38:28Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986588-step-2",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986588",
+    "service": "ubuntu-python-3-11",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:38:29Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986588-step-3",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986588",
+    "service": "ubuntu-python-3-11",
+    "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+    "start": "2026-11-16T16:38:30Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986588-step-4",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986588",
+    "service": "ubuntu-python-3-11",
+    "name": "Set up the latest version of uv",
+    "start": "2026-11-16T16:38:30Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986588-step-5",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986588",
+    "service": "ubuntu-python-3-11",
+    "name": "Install tox",
+    "start": "2026-11-16T16:38:31Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986588-step-14",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986588",
+    "service": "ubuntu-python-3-11",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:39:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986588-step-15",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986588",
+    "service": "ubuntu-python-3-11",
+    "name": "Complete job",
+    "start": "2026-11-16T16:39:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986613",
+    "trace_id": "run-43909716468",
+    "parent_id": "run-43909716468",
+    "service": "ubuntu-python-3-16",
+    "name": "ubuntu - Python 3.16",
+    "start": "2026-11-16T16:38:26Z",
+    "duration_ms": 71000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-133447986613-step-1",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986613",
+    "service": "ubuntu-python-3-16",
+    "name": "Set up job",
+    "start": "2026-11-16T16:38:27Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986613-step-2",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986613",
+    "service": "ubuntu-python-3-16",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:38:28Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986613-step-3",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986613",
+    "service": "ubuntu-python-3-16",
+    "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+    "start": "2026-11-16T16:38:30Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986613-step-4",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986613",
+    "service": "ubuntu-python-3-16",
+    "name": "Set up the latest version of uv",
+    "start": "2026-11-16T16:38:36Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986613-step-5",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986613",
+    "service": "ubuntu-python-3-16",
+    "name": "Install tox",
+    "start": "2026-11-16T16:38:38Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986613-step-6",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986613",
+    "service": "ubuntu-python-3-16",
+    "name": "Run tox targets for 3.16",
+    "start": "2026-11-16T16:38:38Z",
+    "duration_ms": 56000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-133447986613-step-14",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986613",
+    "service": "ubuntu-python-3-16",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:39:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986613-step-15",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986613",
+    "service": "ubuntu-python-3-16",
+    "name": "Complete job",
+    "start": "2026-11-16T16:39:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986692",
+    "trace_id": "run-43909716468",
+    "parent_id": "run-43909716468",
+    "service": "ubuntu-python-3-15",
+    "name": "ubuntu - Python 3.15",
+    "start": "2026-11-16T16:38:57Z",
+    "duration_ms": 55000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986692-step-1",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986692",
+    "service": "ubuntu-python-3-15",
+    "name": "Set up job",
+    "start": "2026-11-16T16:38:58Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986692-step-2",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986692",
+    "service": "ubuntu-python-3-15",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:38:59Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986692-step-3",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986692",
+    "service": "ubuntu-python-3-15",
+    "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+    "start": "2026-11-16T16:39:00Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986692-step-4",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986692",
+    "service": "ubuntu-python-3-15",
+    "name": "Set up the latest version of uv",
+    "start": "2026-11-16T16:39:00Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986692-step-5",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986692",
+    "service": "ubuntu-python-3-15",
+    "name": "Install tox",
+    "start": "2026-11-16T16:39:03Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986692-step-14",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986692",
+    "service": "ubuntu-python-3-15",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T16:39:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133447986692-step-15",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133447986692",
+    "service": "ubuntu-python-3-15",
+    "name": "Complete job",
+    "start": "2026-11-16T16:39:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133448951953",
+    "trace_id": "run-43909716468",
+    "parent_id": "run-43909716468",
+    "service": "check",
+    "name": "Check",
+    "start": "2026-11-16T16:39:55Z",
+    "duration_ms": 7000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-133448951953-step-1",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133448951953",
+    "service": "check",
+    "name": "Set up job",
+    "start": "2026-11-16T16:39:57Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133448951953-step-2",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133448951953",
+    "service": "check",
+    "name": "Decide whether the needed jobs succeeded or failed",
+    "start": "2026-11-16T16:39:59Z",
+    "duration_ms": 0.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-133448951953-step-9",
+    "trace_id": "run-43909716468",
+    "parent_id": "job-133448951953",
+    "service": "check",
+    "name": "Complete job",
+    "start": "2026-11-16T16:39:59Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133449052302",
+    "trace_id": "run-43909716468",
+    "parent_id": "run-43909716468",
+    "service": "create-github-release",
+    "name": "Create GitHub release",
+    "start": "2026-11-16T16:40:02Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133449053269",
+    "trace_id": "run-43909716468",
+    "parent_id": "run-43909716468",
+    "service": "publish-packages-to-test-pypi-org",
+    "name": "Publish packages to test.pypi.org",
+    "start": "2026-11-16T16:40:02Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133449054718",
+    "trace_id": "run-43909716468",
+    "parent_id": "run-43909716468",
+    "service": "publish-packages-to-pypi-org",
+    "name": "Publish packages to pypi.org",
+    "start": "2026-11-16T16:40:02Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

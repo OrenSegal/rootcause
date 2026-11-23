@@ -1,0 +1,15 @@
+[
+  {
+    "id": "9205686bc5",
+    "service": "bokeh",
+    "version": "9205686bc5",
+    "ts": "2026-11-16T23:38:43Z",
+    "author": "bryevdv",
+    "summary": "Apply suggestion from @mattpap",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "bokehjs/src/lib/document/defs.ts"
+    ]
+  }
+]

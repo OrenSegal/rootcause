@@ -1,0 +1,16 @@
+[
+  {
+    "id": "1a42905d42",
+    "service": "fastapi",
+    "version": "1a42905d42",
+    "ts": "2026-11-17T17:32:03Z",
+    "author": "tiangolo",
+    "summary": "\u267b\ufe0f Refactor query, header, and form parameter extraction",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "fastapi/dependencies/utils.py",
+      "tests/test_parameter_extraction.py"
+    ]
+  }
+]

@@ -1,0 +1,18 @@
+# Mined from https://github.com/networkx/networkx/actions/runs/40431246296
+# (networkx/networkx, licence NOASSERTION). Fixed by run
+# https://github.com/networkx/networkx/actions/runs/40435433706. Label rule: the fix
+# only changed config one tested commit touched. Fix touched:
+# .github/workflows/release.yml.
+id: ci-networkx-40431246296
+title: Remediate the emSign CA incident
+alert:
+  severity: ci
+  service: format
+  summary: 'workflow style failed on emSign at 6d68381c78: step ''Lint'' in job ''format''
+    failed.'
+truth:
+  category: config_change
+  service: networkx
+  required_evidence_any:
+  - 6d68381c78
+provenance: recorded

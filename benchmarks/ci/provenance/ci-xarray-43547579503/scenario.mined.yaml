@@ -1,0 +1,17 @@
+# Mined from https://github.com/pydata/xarray/actions/runs/43547579503 (pydata/xarray,
+# licence Apache-2.0). Fixed by run
+# https://github.com/pydata/xarray/actions/runs/43554386884. Label rule: the fix changed
+# files exactly one tested commit touched. Fix touched: xarray/core/parallel.py.
+id: ci-xarray-43547579503
+title: Fix map_blocks reconstruction of MultiIndex coordinates
+alert:
+  severity: ci
+  service: stubtest
+  summary: 'workflow CI Additional failed on fix-map-blocks-multiindex-8745 at a4b90cb203:
+    step ''Run stubtest (core modules)'' in job ''Stubtest'' failed.'
+truth:
+  category: bad_code_deploy
+  service: xarray
+  required_evidence_any:
+  - a4b90cb203
+provenance: recorded

@@ -1,0 +1,15 @@
+id: ci-pydantic-44749339872
+title: Stream container union branches on the existing validator graph
+alert:
+  severity: ci
+  service: test-macos-latest-pypy3-11
+  summary: 'workflow CI failed on codex/json-cursor-expand-unions at fe5cff33bb: step ''Run
+    pytest (no coverage)'' in job ''Test macos-latest / pypy3.11'' failed.'
+truth:
+  category: infrastructure
+  service: pydantic
+  required_evidence_any:
+  - log-0857
+  - log-0564
+  - log-0939
+provenance: recorded

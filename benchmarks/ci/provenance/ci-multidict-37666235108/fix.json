@@ -1,0 +1,12 @@
+{
+  "fixed_run": "https://github.com/aio-libs/multidict/actions/runs/37671246560",
+  "fixed_sha": "e4e6bb2161ad0b63970b9c52fa6253ee3854184a",
+  "commits": [
+    "e4e6bb2161ad0b63970b9c52fa6253ee3854184a"
+  ],
+  "files": [
+    "CHANGES/1742.misc.rst",
+    "multidict/_multilib/hashtable.h"
+  ],
+  "status": "ahead"
+}

@@ -1,0 +1,15 @@
+{
+  "fixed_run": "https://github.com/scikit-image/scikit-image/actions/runs/44557187787",
+  "fixed_sha": "adb5eaf1a0acef34beedf797bd5f44957cac06fc",
+  "commits": [
+    "6202c784c66ea135680084952af3044f8e01280f",
+    "adb5eaf1a0acef34beedf797bd5f44957cac06fc"
+  ],
+  "files": [
+    "src/skimage/filters/ridges.py",
+    "tests/skimage/filters/test_ridges.py",
+    "tests/skimage2/filters/test_ridges.py"
+  ],
+  "merges": [],
+  "status": "ahead"
+}

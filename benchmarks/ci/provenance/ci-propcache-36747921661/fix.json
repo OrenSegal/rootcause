@@ -1,0 +1,12 @@
+{
+  "fixed_run": "https://github.com/aio-libs/propcache/actions/runs/36781248007",
+  "fixed_sha": "a5f0e469b324d5a1e8c0bb1b97ebece625a56140",
+  "commits": [
+    "a5f0e469b324d5a1e8c0bb1b97ebece625a56140"
+  ],
+  "files": [
+    "CHANGES/312.packaging.rst",
+    "pyproject.toml"
+  ],
+  "status": "ahead"
+}

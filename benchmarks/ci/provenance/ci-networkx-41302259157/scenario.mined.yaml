@@ -1,0 +1,18 @@
+# Mined from https://github.com/networkx/networkx/actions/runs/41302259157
+# (networkx/networkx, licence NOASSERTION). Fixed by run
+# https://github.com/networkx/networkx/actions/runs/41303768656. Label rule: the fix
+# changed files exactly one tested commit touched. Fix touched:
+# networkx/algorithms/centrality/katz.py.
+id: ci-networkx-41302259157
+title: 'BUG: preserve 1D array in katz_centrality_numpy for single-node graphs (fixes #8977)'
+alert:
+  severity: ci
+  service: format
+  summary: 'workflow style failed on fix/katz-centrality-numpy-single-node at 5a57813d4e:
+    step ''Lint'' in job ''format'' failed.'
+truth:
+  category: bad_code_deploy
+  service: networkx
+  required_evidence_any:
+  - 5a57813d4e
+provenance: recorded

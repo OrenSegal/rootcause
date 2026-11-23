@@ -1,0 +1,13 @@
+id: ci-scrapy-44441939033
+title: Allow configured URL schemes in commands
+alert:
+  severity: ci
+  service: tests-ubuntu-3-15-no-reactor-extra-deps
+  summary: 'workflow CI failed on fix-custom-url-command-schemes-pr at 81477728f6: step ''Run
+    tests'' in job ''tests (ubuntu, 3.15, no-reactor-extra-deps)'' failed.'
+truth:
+  category: infrastructure
+  service: scrapy
+  required_evidence_any:
+  - log-0687
+provenance: recorded

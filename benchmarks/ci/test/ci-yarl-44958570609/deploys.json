@@ -1,0 +1,32 @@
+[
+  {
+    "id": "e8345221ce",
+    "service": "yarl",
+    "version": "e8345221ce",
+    "ts": "2026-11-19T15:07:33Z",
+    "author": "DeviousCardi",
+    "summary": "Keep URL.__str__ on its original path when masking repr",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "tests/test_url.py",
+      "yarl/_url.py"
+    ]
+  },
+  {
+    "id": "5d1d230f41",
+    "service": "yarl",
+    "version": "5d1d230f41",
+    "ts": "2026-11-21T22:47:23Z",
+    "author": "DeviousCardi",
+    "summary": "Make password masking in URL.__repr__ opt-in",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "CHANGES/1629.feature.rst",
+      "docs/api.rst",
+      "tests/test_url.py",
+      "yarl/_url.py"
+    ]
+  }
+]

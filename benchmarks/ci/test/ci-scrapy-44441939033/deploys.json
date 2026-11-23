@@ -1,0 +1,19 @@
+[
+  {
+    "id": "81477728f6",
+    "service": "scrapy",
+    "version": "81477728f6",
+    "ts": "2026-11-19T01:49:07Z",
+    "author": "ethancyyiu",
+    "summary": "Allow configured URL schemes in commands",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "scrapy/commands/fetch.py",
+      "scrapy/commands/parse.py",
+      "scrapy/utils/url.py",
+      "tests/test_command_fetch.py",
+      "tests/test_command_parse.py"
+    ]
+  }
+]

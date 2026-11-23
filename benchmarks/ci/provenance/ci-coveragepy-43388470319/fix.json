@@ -1,0 +1,13 @@
+{
+  "fixed_run": "https://github.com/coveragepy/coveragepy/actions/runs/43389365528",
+  "fixed_sha": "af9bec0e9fca0c9a5608912bfbaf62055d66e304",
+  "commits": [
+    "af9bec0e9fca0c9a5608912bfbaf62055d66e304"
+  ],
+  "files": [
+    "coverage/tracer.pyi",
+    "tests/test_concurrency.py"
+  ],
+  "merges": [],
+  "status": "ahead"
+}

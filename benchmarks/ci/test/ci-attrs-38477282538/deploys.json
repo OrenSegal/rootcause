@@ -1,0 +1,16 @@
+[
+  {
+    "id": "dc3658d6c2",
+    "service": "attrs",
+    "version": "dc3658d6c2",
+    "ts": "2026-10-13T22:21:25Z",
+    "author": "DawnofGenX",
+    "summary": "fix: preserve slots declared on slotted attrs classes",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "src/attr/_make.py",
+      "tests/test_slots.py"
+    ]
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "fixed_run": "https://github.com/pytest-dev/pytest-xdist/actions/runs/43965393518",
+  "fixed_sha": "79c85bc042e4f7be29f85b6c3f4f6b97d66920aa",
+  "commits": [
+    "eb73050a148896cc4fd4962cf92d7ec564e462b9",
+    "8cadc971e2fe58fd5958118b2aeedeb7258b838b",
+    "1710344f19318014f1b9836b03c226fbbda620ac",
+    "79c85bc042e4f7be29f85b6c3f4f6b97d66920aa"
+  ],
+  "files": [
+    ".github/workflows/deploy.yml",
+    ".github/workflows/test.yml",
+    ".pre-commit-config.yaml",
+    "changelog/1410.feature.rst",
+    "docs/how-to.rst",
+    "docs/subprocess.rst",
+    "pyproject.toml",
+    "src/xdist/_path.py",
+    "src/xdist/remote.py",
+    "src/xdist/scheduler/loadgroup.py",
+    "src/xdist/workermanage.py",
+    "testing/conftest.py",
+    "testing/test_remote.py",
+    "tox.ini"
+  ],
+  "merges": [
+    "79c85bc042e4f7be29f85b6c3f4f6b97d66920aa"
+  ],
+  "status": "ahead"
+}

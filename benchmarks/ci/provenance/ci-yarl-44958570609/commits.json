@@ -1,0 +1,42 @@
+[
+  {
+    "author": "DeviousCardi",
+    "committedDate": "2026-11-19T15:07:33Z",
+    "messageHeadline": "Keep URL.__str__ on its original path when masking repr",
+    "oid": "e8345221ce23204bcc6601800e9b94a6adad9d10",
+    "files": [
+      {
+        "filename": "tests/test_url.py",
+        "status": "modified"
+      },
+      {
+        "filename": "yarl/_url.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "DeviousCardi",
+    "committedDate": "2026-11-21T22:47:23Z",
+    "messageHeadline": "Make password masking in URL.__repr__ opt-in",
+    "oid": "5d1d230f41583cbcb2c5b5e271854fbaeffb55fd",
+    "files": [
+      {
+        "filename": "CHANGES/1629.feature.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "docs/api.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_url.py",
+        "status": "modified"
+      },
+      {
+        "filename": "yarl/_url.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

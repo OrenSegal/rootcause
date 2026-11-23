@@ -1,0 +1,12 @@
+{
+  "fixed_run": "https://github.com/pydata/xarray/actions/runs/44000812093",
+  "fixed_sha": "c1641147daf7c3115011a95941113593bc9a7e42",
+  "commits": [
+    "a1977cf47ebc07e7fed9bd7a0bb2c237cf9c7e33",
+    "c1641147daf7c3115011a95941113593bc9a7e42"
+  ],
+  "files": [
+    "xarray/core/missing.py"
+  ],
+  "status": "ahead"
+}

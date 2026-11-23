@@ -1,0 +1,18 @@
+[
+  {
+    "author": "jaharoni",
+    "committedDate": "2026-11-02T11:36:53Z",
+    "messageHeadline": "fix: Support async context manager and async generator ASGI application factories (Fixes #1151)",
+    "oid": "10986fad5f251c8324e9efbfcf691567155e8e0d",
+    "files": [
+      {
+        "filename": "tests/test_config.py",
+        "status": "modified"
+      },
+      {
+        "filename": "uvicorn/config.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

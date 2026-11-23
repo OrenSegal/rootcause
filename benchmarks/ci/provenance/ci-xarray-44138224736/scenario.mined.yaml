@@ -1,0 +1,17 @@
+# Mined from https://github.com/pydata/xarray/actions/runs/44138224736 (pydata/xarray,
+# licence Apache-2.0). Fixed by run
+# https://github.com/pydata/xarray/actions/runs/44143780126. Label rule: the fix changed
+# files exactly one tested commit touched. Fix touched: xarray/tests/test_dataset.py.
+id: ci-xarray-44138224736
+title: 'TST: regression tests for Dataset from DataFrame with CategoricalIndex of Intervals'
+alert:
+  severity: ci
+  service: mypy-3-12
+  summary: 'workflow CI Additional failed on fix/dataset-categorical-interval-index at a6dbb66309:
+    step ''Run mypy'' in job ''Mypy 3.12'' failed.'
+truth:
+  category: bad_code_deploy
+  service: xarray
+  required_evidence_any:
+  - a6dbb66309
+provenance: recorded

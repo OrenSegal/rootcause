@@ -1,0 +1,100 @@
+{
+  "attempt": 1,
+  "conclusion": "failure",
+  "createdAt": "2026-11-13T01:19:24Z",
+  "databaseId": 43344036689,
+  "displayTitle": "NumPy 2.6: Fix `__array_wrap__` method name detection",
+  "event": "pull_request",
+  "headBranch": "fix/array-wrap-stack-inspection",
+  "headSha": "5b4630d57b2afb1c1dff73ab515732a057f0c5d5",
+  "jobs": [
+    {
+      "completedAt": "2026-11-13T01:31:43Z",
+      "conclusion": "failure",
+      "databaseId": 131618944271,
+      "name": "pre-commit hooks",
+      "startedAt": "2026-11-13T01:30:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-13T01:30:34Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-13T01:30:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-13T01:30:35Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-13T01:30:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-13T01:30:36Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@v7",
+          "number": 3,
+          "startedAt": "2026-11-13T01:30:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-13T01:31:41Z",
+          "conclusion": "failure",
+          "name": "Run pre-commit/action@v3.0.1",
+          "number": 4,
+          "startedAt": "2026-11-13T01:30:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-13T01:31:41Z",
+          "conclusion": "success",
+          "name": "Post Run pre-commit/action@v3.0.1",
+          "number": 6,
+          "startedAt": "2026-11-13T01:31:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-13T01:31:41Z",
+          "conclusion": "skipped",
+          "name": "Post Run actions/setup-python@v7",
+          "number": 7,
+          "startedAt": "2026-11-13T01:31:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-13T01:31:41Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 8,
+          "startedAt": "2026-11-13T01:31:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-13T01:31:42Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 9,
+          "startedAt": "2026-11-13T01:31:41Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/dask/dask/actions/runs/43344036689/job/131618944271"
+    },
+    {
+      "completedAt": "2026-11-13T01:40:39Z",
+      "conclusion": "neutral",
+      "databaseId": 131627597921,
+      "name": "Unit Test Results",
+      "startedAt": "2026-11-13T01:40:39Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/dask/dask/runs/131627597921"
+    }
+  ],
+  "name": "Linting",
+  "updatedAt": "2026-11-13T01:31:44Z",
+  "repository": "dask/dask"
+}

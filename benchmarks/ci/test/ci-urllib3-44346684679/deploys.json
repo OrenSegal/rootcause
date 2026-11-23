@@ -1,0 +1,15 @@
+[
+  {
+    "id": "2152da6cbc",
+    "service": "urllib3",
+    "version": "2152da6cbc",
+    "ts": "2026-11-18T16:23:19Z",
+    "author": "ferly7",
+    "summary": "Add tests covering decoder LF endings, broken streams, seek/readable",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "test/test_multipart.py"
+    ]
+  }
+]

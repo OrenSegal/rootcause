@@ -1,0 +1,22 @@
+[
+  {
+    "author": "Samuel-Hills",
+    "committedDate": "2026-10-03T01:12:24Z",
+    "messageHeadline": "fix: preserve explicitly declared slots",
+    "oid": "2751a66ea88aff146136db11e91b6fdf6476c909",
+    "files": [
+      {
+        "filename": "changelog.d/1637.change.md",
+        "status": "added"
+      },
+      {
+        "filename": "src/attr/_make.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_slots.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

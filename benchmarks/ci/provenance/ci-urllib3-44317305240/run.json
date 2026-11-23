@@ -1,0 +1,98 @@
+{
+  "attempt": 1,
+  "conclusion": "failure",
+  "createdAt": "2026-11-18T13:47:28Z",
+  "databaseId": 44317305240,
+  "displayTitle": "Support bytes values in HTTPHeaderDict",
+  "event": "pull_request",
+  "headBranch": "fix-3072-headerdict-bytes-values",
+  "headSha": "366010bc6129d01133a85ea5b8df6534305215db",
+  "jobs": [
+    {
+      "completedAt": "2026-11-18T13:48:51Z",
+      "conclusion": "failure",
+      "databaseId": 134846700821,
+      "name": "lint",
+      "startedAt": "2026-11-18T13:47:30Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-18T13:47:32Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-18T13:47:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T13:47:34Z",
+          "conclusion": "success",
+          "name": "Checkout repository",
+          "number": 2,
+          "startedAt": "2026-11-18T13:47:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T13:47:34Z",
+          "conclusion": "success",
+          "name": "Setup Python",
+          "number": 3,
+          "startedAt": "2026-11-18T13:47:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T13:47:37Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 4,
+          "startedAt": "2026-11-18T13:47:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T13:48:49Z",
+          "conclusion": "failure",
+          "name": "Lint code",
+          "number": 5,
+          "startedAt": "2026-11-18T13:47:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T13:48:49Z",
+          "conclusion": "skipped",
+          "name": "Post Install uv",
+          "number": 8,
+          "startedAt": "2026-11-18T13:48:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T13:48:49Z",
+          "conclusion": "skipped",
+          "name": "Post Setup Python",
+          "number": 9,
+          "startedAt": "2026-11-18T13:48:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T13:48:49Z",
+          "conclusion": "success",
+          "name": "Post Checkout repository",
+          "number": 10,
+          "startedAt": "2026-11-18T13:48:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T13:48:49Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "startedAt": "2026-11-18T13:48:49Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/urllib3/urllib3/actions/runs/44317305240/job/134846700821"
+    }
+  ],
+  "name": "lint",
+  "updatedAt": "2026-11-18T13:48:51Z",
+  "repository": "urllib3/urllib3"
+}

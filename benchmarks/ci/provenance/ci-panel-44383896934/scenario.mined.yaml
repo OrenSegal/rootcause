@@ -1,0 +1,21 @@
+# Mined from https://github.com/holoviz/panel/actions/runs/44383896934 (holoviz/panel,
+# licence BSD-3-Clause). Fixed by run
+# https://github.com/holoviz/panel/actions/runs/44391374267. Label rule: the fix changed
+# files exactly one tested commit touched. Fix touched: panel/io/fastapi.py,
+# panel/io/location.py, panel/tests/io/test_location.py,
+# panel/tests/ui/io/assets/theme.css, panel/tests/ui/io/test_location.py,
+# panel/tests/ui/io/test_resources.py, panel/theme/base.py.
+id: ci-panel-44383896934
+title: 'fix: Resolve relative resource urls against the route a session is on'
+alert:
+  severity: ci
+  service: run-pre-commit
+  summary: 'workflow tests failed on fix/nested-route-resources at 5276946581: step ''Run
+    holoviz-dev/holoviz_tasks/pre-commit@11eb638302f76ec64217e2eeddfb11df1f788b54'' in job
+    ''Run pre-commit'' failed.'
+truth:
+  category: bad_code_deploy
+  service: panel
+  required_evidence_any:
+  - '5276946581'
+provenance: recorded

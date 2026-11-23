@@ -1,0 +1,12 @@
+{
+  "fixed_run": "https://github.com/dask/dask/actions/runs/44743600618",
+  "fixed_sha": "e5f192f82cb6b61c978a5253a19b38ce42e4d509",
+  "commits": [
+    "e5f192f82cb6b61c978a5253a19b38ce42e4d509"
+  ],
+  "files": [
+    "dask/array/slicing.py"
+  ],
+  "merges": [],
+  "status": "ahead"
+}

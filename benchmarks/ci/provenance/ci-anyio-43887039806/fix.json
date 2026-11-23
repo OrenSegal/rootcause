@@ -1,0 +1,12 @@
+{
+  "fixed_run": "https://github.com/agronholm/anyio/actions/runs/43887713243",
+  "fixed_sha": "b8cfc47f5c97347bcc758e22d6521fd77bd46e20",
+  "commits": [
+    "b8cfc47f5c97347bcc758e22d6521fd77bd46e20"
+  ],
+  "files": [
+    "changelog.d/1493.added.rst",
+    "docs/signals.rst"
+  ],
+  "status": "ahead"
+}

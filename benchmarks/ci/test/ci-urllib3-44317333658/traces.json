@@ -1,0 +1,92 @@
+[
+  {
+    "span_id": "run-44317333658",
+    "trace_id": "run-44317333658",
+    "parent_id": null,
+    "service": "lint",
+    "name": "lint",
+    "start": "2026-11-18T13:47:38Z",
+    "duration_ms": 146000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-134846805418",
+    "trace_id": "run-44317333658",
+    "parent_id": "run-44317333658",
+    "service": "lint",
+    "name": "lint",
+    "start": "2026-11-18T13:48:53Z",
+    "duration_ms": 70000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-134846805418-step-1",
+    "trace_id": "run-44317333658",
+    "parent_id": "job-134846805418",
+    "service": "lint",
+    "name": "Set up job",
+    "start": "2026-11-18T13:48:53Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134846805418-step-2",
+    "trace_id": "run-44317333658",
+    "parent_id": "job-134846805418",
+    "service": "lint",
+    "name": "Checkout repository",
+    "start": "2026-11-18T13:48:55Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134846805418-step-3",
+    "trace_id": "run-44317333658",
+    "parent_id": "job-134846805418",
+    "service": "lint",
+    "name": "Setup Python",
+    "start": "2026-11-18T13:48:57Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134846805418-step-4",
+    "trace_id": "run-44317333658",
+    "parent_id": "job-134846805418",
+    "service": "lint",
+    "name": "Install uv",
+    "start": "2026-11-18T13:48:57Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134846805418-step-5",
+    "trace_id": "run-44317333658",
+    "parent_id": "job-134846805418",
+    "service": "lint",
+    "name": "Lint code",
+    "start": "2026-11-18T13:49:00Z",
+    "duration_ms": 61000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-134846805418-step-10",
+    "trace_id": "run-44317333658",
+    "parent_id": "job-134846805418",
+    "service": "lint",
+    "name": "Post Checkout repository",
+    "start": "2026-11-18T13:50:01Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134846805418-step-11",
+    "trace_id": "run-44317333658",
+    "parent_id": "job-134846805418",
+    "service": "lint",
+    "name": "Complete job",
+    "start": "2026-11-18T13:50:01Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

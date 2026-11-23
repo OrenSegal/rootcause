@@ -1,0 +1,14 @@
+id: ci-networkx-44360486498
+title: Make Cytoscape edge endpoints reference the exported node IDs; map IDs back on import
+  and restore tuple nodes after JSON conversion.
+alert:
+  severity: ci
+  service: format
+  summary: 'workflow style failed on first-fix at e14db0e50e: step ''Lint'' in job ''format''
+    failed.'
+truth:
+  category: bad_code_deploy
+  service: networkx
+  required_evidence_any:
+  - e14db0e50e
+provenance: recorded

@@ -1,0 +1,1972 @@
+[
+  {
+    "span_id": "run-40254609405",
+    "trace_id": "run-40254609405",
+    "parent_id": null,
+    "service": "run-tests",
+    "name": "Run tests",
+    "start": "2026-10-26T01:31:07Z",
+    "duration_ms": 247000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-121353655151",
+    "trace_id": "run-40254609405",
+    "parent_id": "run-40254609405",
+    "service": "oldest-deps-ubuntu-latest",
+    "name": "oldest-deps (ubuntu-latest)",
+    "start": "2026-10-26T01:31:10Z",
+    "duration_ms": 84000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-121353655151-step-1",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655151",
+    "service": "oldest-deps-ubuntu-latest",
+    "name": "Set up job",
+    "start": "2026-10-26T01:31:11Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655151-step-2",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655151",
+    "service": "oldest-deps-ubuntu-latest",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-26T01:31:13Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655151-step-3",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655151",
+    "service": "oldest-deps-ubuntu-latest",
+    "name": "Set up uv with Python 3.11",
+    "start": "2026-10-26T01:31:14Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655151-step-4",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655151",
+    "service": "oldest-deps-ubuntu-latest",
+    "name": "Install Python dependencies (oldest supported versions)",
+    "start": "2026-10-26T01:31:16Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655151-step-5",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655151",
+    "service": "oldest-deps-ubuntu-latest",
+    "name": "Try building with uv build",
+    "start": "2026-10-26T01:31:18Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655151-step-6",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655151",
+    "service": "oldest-deps-ubuntu-latest",
+    "name": "Check manifest",
+    "start": "2026-10-26T01:31:20Z",
+    "duration_ms": 11000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655151-step-7",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655151",
+    "service": "oldest-deps-ubuntu-latest",
+    "name": "Cache pytest last-failed",
+    "start": "2026-10-26T01:31:31Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655151-step-8",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655151",
+    "service": "oldest-deps-ubuntu-latest",
+    "name": "pytest",
+    "start": "2026-10-26T01:31:31Z",
+    "duration_ms": 61000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-121353655151-step-16",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655151",
+    "service": "oldest-deps-ubuntu-latest",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-26T01:32:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655151-step-17",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655151",
+    "service": "oldest-deps-ubuntu-latest",
+    "name": "Complete job",
+    "start": "2026-10-26T01:32:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655329",
+    "trace_id": "run-40254609405",
+    "parent_id": "run-40254609405",
+    "service": "test-windows-latest-3-14-test-extra",
+    "name": "test (windows-latest, 3.14, test_extra)",
+    "start": "2026-10-26T01:31:11Z",
+    "duration_ms": 206000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655329-step-1",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655329",
+    "service": "test-windows-latest-3-14-test-extra",
+    "name": "Set up job",
+    "start": "2026-10-26T01:31:12Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655329-step-2",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655329",
+    "service": "test-windows-latest-3-14-test-extra",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-26T01:31:14Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655329-step-3",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655329",
+    "service": "test-windows-latest-3-14-test-extra",
+    "name": "Set up Python 3.14",
+    "start": "2026-10-26T01:31:22Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655329-step-4",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655329",
+    "service": "test-windows-latest-3-14-test-extra",
+    "name": "Install uv",
+    "start": "2026-10-26T01:31:25Z",
+    "duration_ms": 12000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655329-step-6",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655329",
+    "service": "test-windows-latest-3-14-test-extra",
+    "name": "Install and update Python dependencies (binary only)",
+    "start": "2026-10-26T01:31:37Z",
+    "duration_ms": 51000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655329-step-11",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655329",
+    "service": "test-windows-latest-3-14-test-extra",
+    "name": "Cache pytest last-failed",
+    "start": "2026-10-26T01:32:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655329-step-12",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655329",
+    "service": "test-windows-latest-3-14-test-extra",
+    "name": "pytest",
+    "start": "2026-10-26T01:32:28Z",
+    "duration_ms": 111000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655329-step-13",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655329",
+    "service": "test-windows-latest-3-14-test-extra",
+    "name": "Upload coverage to Codecov",
+    "start": "2026-10-26T01:34:19Z",
+    "duration_ms": 12000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655329-step-23",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655329",
+    "service": "test-windows-latest-3-14-test-extra",
+    "name": "Post Cache pytest last-failed",
+    "start": "2026-10-26T01:34:31Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655329-step-24",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655329",
+    "service": "test-windows-latest-3-14-test-extra",
+    "name": "Post Install uv",
+    "start": "2026-10-26T01:34:31Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655329-step-25",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655329",
+    "service": "test-windows-latest-3-14-test-extra",
+    "name": "Post Set up Python 3.14",
+    "start": "2026-10-26T01:34:31Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655329-step-26",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655329",
+    "service": "test-windows-latest-3-14-test-extra",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-26T01:34:32Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655329-step-27",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655329",
+    "service": "test-windows-latest-3-14-test-extra",
+    "name": "Complete job",
+    "start": "2026-10-26T01:34:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655353",
+    "trace_id": "run-40254609405",
+    "parent_id": "run-40254609405",
+    "service": "test-ubuntu-latest-3-15-test-extra",
+    "name": "test (ubuntu-latest, 3.15, test_extra)",
+    "start": "2026-10-26T01:31:10Z",
+    "duration_ms": 134000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655353-step-1",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655353",
+    "service": "test-ubuntu-latest-3-15-test-extra",
+    "name": "Set up job",
+    "start": "2026-10-26T01:31:11Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655353-step-2",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655353",
+    "service": "test-ubuntu-latest-3-15-test-extra",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-26T01:31:13Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655353-step-3",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655353",
+    "service": "test-ubuntu-latest-3-15-test-extra",
+    "name": "Set up Python 3.15",
+    "start": "2026-10-26T01:31:14Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655353-step-4",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655353",
+    "service": "test-ubuntu-latest-3-15-test-extra",
+    "name": "Install uv",
+    "start": "2026-10-26T01:31:21Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655353-step-5",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655353",
+    "service": "test-ubuntu-latest-3-15-test-extra",
+    "name": "Install latex",
+    "start": "2026-10-26T01:31:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655353-step-6",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655353",
+    "service": "test-ubuntu-latest-3-15-test-extra",
+    "name": "Install and update Python dependencies (binary only)",
+    "start": "2026-10-26T01:31:24Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655353-step-8",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655353",
+    "service": "test-ubuntu-latest-3-15-test-extra",
+    "name": "Try building with Python build",
+    "start": "2026-10-26T01:31:27Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655353-step-9",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655353",
+    "service": "test-ubuntu-latest-3-15-test-extra",
+    "name": "Check manifest",
+    "start": "2026-10-26T01:31:30Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655353-step-11",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655353",
+    "service": "test-ubuntu-latest-3-15-test-extra",
+    "name": "Cache pytest last-failed",
+    "start": "2026-10-26T01:31:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655353-step-12",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655353",
+    "service": "test-ubuntu-latest-3-15-test-extra",
+    "name": "pytest",
+    "start": "2026-10-26T01:31:34Z",
+    "duration_ms": 101000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655353-step-13",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655353",
+    "service": "test-ubuntu-latest-3-15-test-extra",
+    "name": "Upload coverage to Codecov",
+    "start": "2026-10-26T01:33:15Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655353-step-23",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655353",
+    "service": "test-ubuntu-latest-3-15-test-extra",
+    "name": "Post Cache pytest last-failed",
+    "start": "2026-10-26T01:33:20Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655353-step-24",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655353",
+    "service": "test-ubuntu-latest-3-15-test-extra",
+    "name": "Post Install uv",
+    "start": "2026-10-26T01:33:20Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655353-step-25",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655353",
+    "service": "test-ubuntu-latest-3-15-test-extra",
+    "name": "Post Set up Python 3.15",
+    "start": "2026-10-26T01:33:20Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655353-step-26",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655353",
+    "service": "test-ubuntu-latest-3-15-test-extra",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-26T01:33:20Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655353-step-27",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655353",
+    "service": "test-ubuntu-latest-3-15-test-extra",
+    "name": "Complete job",
+    "start": "2026-10-26T01:33:20Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655361",
+    "trace_id": "run-40254609405",
+    "parent_id": "run-40254609405",
+    "service": "oldest-deps-windows-latest",
+    "name": "oldest-deps (windows-latest)",
+    "start": "2026-10-26T01:31:11Z",
+    "duration_ms": 88000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-121353655361-step-1",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655361",
+    "service": "oldest-deps-windows-latest",
+    "name": "Set up job",
+    "start": "2026-10-26T01:31:12Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655361-step-2",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655361",
+    "service": "oldest-deps-windows-latest",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-26T01:31:13Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655361-step-3",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655361",
+    "service": "oldest-deps-windows-latest",
+    "name": "Set up uv with Python 3.11",
+    "start": "2026-10-26T01:31:22Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655361-step-4",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655361",
+    "service": "oldest-deps-windows-latest",
+    "name": "Install Python dependencies (oldest supported versions)",
+    "start": "2026-10-26T01:31:29Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655361-step-7",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655361",
+    "service": "oldest-deps-windows-latest",
+    "name": "Cache pytest last-failed",
+    "start": "2026-10-26T01:31:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655361-step-8",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655361",
+    "service": "oldest-deps-windows-latest",
+    "name": "pytest",
+    "start": "2026-10-26T01:31:32Z",
+    "duration_ms": 63000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-121353655361-step-16",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655361",
+    "service": "oldest-deps-windows-latest",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-26T01:32:35Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655361-step-17",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655361",
+    "service": "oldest-deps-windows-latest",
+    "name": "Complete job",
+    "start": "2026-10-26T01:32:37Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655398",
+    "trace_id": "run-40254609405",
+    "parent_id": "run-40254609405",
+    "service": "test-windows-latest-3-15-test-extra",
+    "name": "test (windows-latest, 3.15, test_extra)",
+    "start": "2026-10-26T01:31:11Z",
+    "duration_ms": 139000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655398-step-1",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655398",
+    "service": "test-windows-latest-3-15-test-extra",
+    "name": "Set up job",
+    "start": "2026-10-26T01:31:11Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655398-step-2",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655398",
+    "service": "test-windows-latest-3-15-test-extra",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-26T01:31:13Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655398-step-3",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655398",
+    "service": "test-windows-latest-3-15-test-extra",
+    "name": "Set up Python 3.15",
+    "start": "2026-10-26T01:31:20Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655398-step-4",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655398",
+    "service": "test-windows-latest-3-15-test-extra",
+    "name": "Install uv",
+    "start": "2026-10-26T01:31:23Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655398-step-6",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655398",
+    "service": "test-windows-latest-3-15-test-extra",
+    "name": "Install and update Python dependencies (binary only)",
+    "start": "2026-10-26T01:31:30Z",
+    "duration_ms": 20000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655398-step-11",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655398",
+    "service": "test-windows-latest-3-15-test-extra",
+    "name": "Cache pytest last-failed",
+    "start": "2026-10-26T01:31:50Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655398-step-12",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655398",
+    "service": "test-windows-latest-3-15-test-extra",
+    "name": "pytest",
+    "start": "2026-10-26T01:31:51Z",
+    "duration_ms": 84000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655398-step-13",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655398",
+    "service": "test-windows-latest-3-15-test-extra",
+    "name": "Upload coverage to Codecov",
+    "start": "2026-10-26T01:33:15Z",
+    "duration_ms": 10000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655398-step-23",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655398",
+    "service": "test-windows-latest-3-15-test-extra",
+    "name": "Post Cache pytest last-failed",
+    "start": "2026-10-26T01:33:25Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655398-step-24",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655398",
+    "service": "test-windows-latest-3-15-test-extra",
+    "name": "Post Install uv",
+    "start": "2026-10-26T01:33:26Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655398-step-25",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655398",
+    "service": "test-windows-latest-3-15-test-extra",
+    "name": "Post Set up Python 3.15",
+    "start": "2026-10-26T01:33:26Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655398-step-26",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655398",
+    "service": "test-windows-latest-3-15-test-extra",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-26T01:33:26Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655398-step-27",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655398",
+    "service": "test-windows-latest-3-15-test-extra",
+    "name": "Complete job",
+    "start": "2026-10-26T01:33:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655418",
+    "trace_id": "run-40254609405",
+    "parent_id": "run-40254609405",
+    "service": "test-ubuntu-latest-3-14-test-extra",
+    "name": "test (ubuntu-latest, 3.14, test_extra)",
+    "start": "2026-10-26T01:31:11Z",
+    "duration_ms": 140000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655418-step-1",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655418",
+    "service": "test-ubuntu-latest-3-14-test-extra",
+    "name": "Set up job",
+    "start": "2026-10-26T01:31:11Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655418-step-2",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655418",
+    "service": "test-ubuntu-latest-3-14-test-extra",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-26T01:31:13Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655418-step-3",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655418",
+    "service": "test-ubuntu-latest-3-14-test-extra",
+    "name": "Set up Python 3.14",
+    "start": "2026-10-26T01:31:14Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655418-step-4",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655418",
+    "service": "test-ubuntu-latest-3-14-test-extra",
+    "name": "Install uv",
+    "start": "2026-10-26T01:31:16Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655418-step-5",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655418",
+    "service": "test-ubuntu-latest-3-14-test-extra",
+    "name": "Install latex",
+    "start": "2026-10-26T01:31:17Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655418-step-6",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655418",
+    "service": "test-ubuntu-latest-3-14-test-extra",
+    "name": "Install and update Python dependencies (binary only)",
+    "start": "2026-10-26T01:31:17Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655418-step-8",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655418",
+    "service": "test-ubuntu-latest-3-14-test-extra",
+    "name": "Try building with Python build",
+    "start": "2026-10-26T01:31:22Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655418-step-9",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655418",
+    "service": "test-ubuntu-latest-3-14-test-extra",
+    "name": "Check manifest",
+    "start": "2026-10-26T01:31:26Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655418-step-11",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655418",
+    "service": "test-ubuntu-latest-3-14-test-extra",
+    "name": "Cache pytest last-failed",
+    "start": "2026-10-26T01:31:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655418-step-12",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655418",
+    "service": "test-ubuntu-latest-3-14-test-extra",
+    "name": "pytest",
+    "start": "2026-10-26T01:31:32Z",
+    "duration_ms": 110000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655418-step-13",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655418",
+    "service": "test-ubuntu-latest-3-14-test-extra",
+    "name": "Upload coverage to Codecov",
+    "start": "2026-10-26T01:33:22Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655418-step-23",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655418",
+    "service": "test-ubuntu-latest-3-14-test-extra",
+    "name": "Post Cache pytest last-failed",
+    "start": "2026-10-26T01:33:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655418-step-24",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655418",
+    "service": "test-ubuntu-latest-3-14-test-extra",
+    "name": "Post Install uv",
+    "start": "2026-10-26T01:33:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655418-step-25",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655418",
+    "service": "test-ubuntu-latest-3-14-test-extra",
+    "name": "Post Set up Python 3.14",
+    "start": "2026-10-26T01:33:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655418-step-26",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655418",
+    "service": "test-ubuntu-latest-3-14-test-extra",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-26T01:33:28Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655418-step-27",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655418",
+    "service": "test-ubuntu-latest-3-14-test-extra",
+    "name": "Complete job",
+    "start": "2026-10-26T01:33:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655456",
+    "trace_id": "run-40254609405",
+    "parent_id": "run-40254609405",
+    "service": "test-windows-latest-3-12-test-extra",
+    "name": "test (windows-latest, 3.12, test_extra)",
+    "start": "2026-10-26T01:31:11Z",
+    "duration_ms": 243000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655456-step-1",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655456",
+    "service": "test-windows-latest-3-12-test-extra",
+    "name": "Set up job",
+    "start": "2026-10-26T01:31:11Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655456-step-2",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655456",
+    "service": "test-windows-latest-3-12-test-extra",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-26T01:31:13Z",
+    "duration_ms": 10000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655456-step-3",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655456",
+    "service": "test-windows-latest-3-12-test-extra",
+    "name": "Set up Python 3.12",
+    "start": "2026-10-26T01:31:23Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655456-step-4",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655456",
+    "service": "test-windows-latest-3-12-test-extra",
+    "name": "Install uv",
+    "start": "2026-10-26T01:31:26Z",
+    "duration_ms": 10000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655456-step-6",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655456",
+    "service": "test-windows-latest-3-12-test-extra",
+    "name": "Install and update Python dependencies (binary only)",
+    "start": "2026-10-26T01:31:37Z",
+    "duration_ms": 39000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655456-step-11",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655456",
+    "service": "test-windows-latest-3-12-test-extra",
+    "name": "Cache pytest last-failed",
+    "start": "2026-10-26T01:32:16Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655456-step-12",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655456",
+    "service": "test-windows-latest-3-12-test-extra",
+    "name": "pytest",
+    "start": "2026-10-26T01:32:16Z",
+    "duration_ms": 159000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655456-step-13",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655456",
+    "service": "test-windows-latest-3-12-test-extra",
+    "name": "Upload coverage to Codecov",
+    "start": "2026-10-26T01:34:55Z",
+    "duration_ms": 13000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655456-step-23",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655456",
+    "service": "test-windows-latest-3-12-test-extra",
+    "name": "Post Cache pytest last-failed",
+    "start": "2026-10-26T01:35:08Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655456-step-24",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655456",
+    "service": "test-windows-latest-3-12-test-extra",
+    "name": "Post Install uv",
+    "start": "2026-10-26T01:35:08Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655456-step-25",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655456",
+    "service": "test-windows-latest-3-12-test-extra",
+    "name": "Post Set up Python 3.12",
+    "start": "2026-10-26T01:35:08Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655456-step-26",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655456",
+    "service": "test-windows-latest-3-12-test-extra",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-26T01:35:09Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655456-step-27",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655456",
+    "service": "test-windows-latest-3-12-test-extra",
+    "name": "Complete job",
+    "start": "2026-10-26T01:35:11Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655468",
+    "trace_id": "run-40254609405",
+    "parent_id": "run-40254609405",
+    "service": "test-windows-latest-3-11-test-extra",
+    "name": "test (windows-latest, 3.11, test_extra)",
+    "start": "2026-10-26T01:31:11Z",
+    "duration_ms": 161000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-121353655468-step-1",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655468",
+    "service": "test-windows-latest-3-11-test-extra",
+    "name": "Set up job",
+    "start": "2026-10-26T01:31:11Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655468-step-2",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655468",
+    "service": "test-windows-latest-3-11-test-extra",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-26T01:31:13Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655468-step-3",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655468",
+    "service": "test-windows-latest-3-11-test-extra",
+    "name": "Set up Python 3.11",
+    "start": "2026-10-26T01:31:20Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655468-step-4",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655468",
+    "service": "test-windows-latest-3-11-test-extra",
+    "name": "Install uv",
+    "start": "2026-10-26T01:31:22Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655468-step-6",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655468",
+    "service": "test-windows-latest-3-11-test-extra",
+    "name": "Install and update Python dependencies (binary only)",
+    "start": "2026-10-26T01:31:31Z",
+    "duration_ms": 29000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655468-step-11",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655468",
+    "service": "test-windows-latest-3-11-test-extra",
+    "name": "Cache pytest last-failed",
+    "start": "2026-10-26T01:32:00Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655468-step-12",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655468",
+    "service": "test-windows-latest-3-11-test-extra",
+    "name": "pytest",
+    "start": "2026-10-26T01:32:00Z",
+    "duration_ms": 109000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-121353655468-step-26",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655468",
+    "service": "test-windows-latest-3-11-test-extra",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-26T01:33:49Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655468-step-27",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655468",
+    "service": "test-windows-latest-3-11-test-extra",
+    "name": "Complete job",
+    "start": "2026-10-26T01:33:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655480",
+    "trace_id": "run-40254609405",
+    "parent_id": "run-40254609405",
+    "service": "test-macos-latest-3-11-test-extra",
+    "name": "test (macos-latest, 3.11, test_extra)",
+    "start": "2026-10-26T01:31:11Z",
+    "duration_ms": 173000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-121353655480-step-1",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655480",
+    "service": "test-macos-latest-3-11-test-extra",
+    "name": "Set up job",
+    "start": "2026-10-26T01:31:12Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655480-step-2",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655480",
+    "service": "test-macos-latest-3-11-test-extra",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-26T01:31:15Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655480-step-3",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655480",
+    "service": "test-macos-latest-3-11-test-extra",
+    "name": "Set up Python 3.11",
+    "start": "2026-10-26T01:31:18Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655480-step-4",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655480",
+    "service": "test-macos-latest-3-11-test-extra",
+    "name": "Install uv",
+    "start": "2026-10-26T01:31:20Z",
+    "duration_ms": 11000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655480-step-6",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655480",
+    "service": "test-macos-latest-3-11-test-extra",
+    "name": "Install and update Python dependencies (binary only)",
+    "start": "2026-10-26T01:31:31Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655480-step-8",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655480",
+    "service": "test-macos-latest-3-11-test-extra",
+    "name": "Try building with Python build",
+    "start": "2026-10-26T01:31:34Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655480-step-9",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655480",
+    "service": "test-macos-latest-3-11-test-extra",
+    "name": "Check manifest",
+    "start": "2026-10-26T01:31:39Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655480-step-11",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655480",
+    "service": "test-macos-latest-3-11-test-extra",
+    "name": "Cache pytest last-failed",
+    "start": "2026-10-26T01:31:43Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655480-step-12",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655480",
+    "service": "test-macos-latest-3-11-test-extra",
+    "name": "pytest",
+    "start": "2026-10-26T01:31:43Z",
+    "duration_ms": 134000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-121353655480-step-26",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655480",
+    "service": "test-macos-latest-3-11-test-extra",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-26T01:33:57Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655480-step-27",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655480",
+    "service": "test-macos-latest-3-11-test-extra",
+    "name": "Complete job",
+    "start": "2026-10-26T01:33:58Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655486",
+    "trace_id": "run-40254609405",
+    "parent_id": "run-40254609405",
+    "service": "test-ubuntu-latest-3-12-test-extra",
+    "name": "test (ubuntu-latest, 3.12, test_extra)",
+    "start": "2026-10-26T01:31:10Z",
+    "duration_ms": 156000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655486-step-1",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655486",
+    "service": "test-ubuntu-latest-3-12-test-extra",
+    "name": "Set up job",
+    "start": "2026-10-26T01:31:11Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655486-step-2",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655486",
+    "service": "test-ubuntu-latest-3-12-test-extra",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-26T01:31:13Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655486-step-3",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655486",
+    "service": "test-ubuntu-latest-3-12-test-extra",
+    "name": "Set up Python 3.12",
+    "start": "2026-10-26T01:31:14Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655486-step-4",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655486",
+    "service": "test-ubuntu-latest-3-12-test-extra",
+    "name": "Install uv",
+    "start": "2026-10-26T01:31:15Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655486-step-5",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655486",
+    "service": "test-ubuntu-latest-3-12-test-extra",
+    "name": "Install latex",
+    "start": "2026-10-26T01:31:19Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655486-step-6",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655486",
+    "service": "test-ubuntu-latest-3-12-test-extra",
+    "name": "Install and update Python dependencies (binary only)",
+    "start": "2026-10-26T01:31:19Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655486-step-8",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655486",
+    "service": "test-ubuntu-latest-3-12-test-extra",
+    "name": "Try building with Python build",
+    "start": "2026-10-26T01:31:20Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655486-step-9",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655486",
+    "service": "test-ubuntu-latest-3-12-test-extra",
+    "name": "Check manifest",
+    "start": "2026-10-26T01:31:26Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655486-step-10",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655486",
+    "service": "test-ubuntu-latest-3-12-test-extra",
+    "name": "Install entry point compatible code (TEMPORARY, April 2024)",
+    "start": "2026-10-26T01:31:31Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655486-step-11",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655486",
+    "service": "test-ubuntu-latest-3-12-test-extra",
+    "name": "Cache pytest last-failed",
+    "start": "2026-10-26T01:31:31Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655486-step-12",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655486",
+    "service": "test-ubuntu-latest-3-12-test-extra",
+    "name": "pytest",
+    "start": "2026-10-26T01:31:31Z",
+    "duration_ms": 126000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655486-step-13",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655486",
+    "service": "test-ubuntu-latest-3-12-test-extra",
+    "name": "Upload coverage to Codecov",
+    "start": "2026-10-26T01:33:37Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655486-step-23",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655486",
+    "service": "test-ubuntu-latest-3-12-test-extra",
+    "name": "Post Cache pytest last-failed",
+    "start": "2026-10-26T01:33:42Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655486-step-24",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655486",
+    "service": "test-ubuntu-latest-3-12-test-extra",
+    "name": "Post Install uv",
+    "start": "2026-10-26T01:33:43Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655486-step-25",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655486",
+    "service": "test-ubuntu-latest-3-12-test-extra",
+    "name": "Post Set up Python 3.12",
+    "start": "2026-10-26T01:33:43Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655486-step-26",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655486",
+    "service": "test-ubuntu-latest-3-12-test-extra",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-26T01:33:43Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655486-step-27",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655486",
+    "service": "test-ubuntu-latest-3-12-test-extra",
+    "name": "Complete job",
+    "start": "2026-10-26T01:33:43Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655519",
+    "trace_id": "run-40254609405",
+    "parent_id": "run-40254609405",
+    "service": "test-windows-latest-3-13-test-extra",
+    "name": "test (windows-latest, 3.13, test_extra)",
+    "start": "2026-10-26T01:31:11Z",
+    "duration_ms": 208000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655519-step-1",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655519",
+    "service": "test-windows-latest-3-13-test-extra",
+    "name": "Set up job",
+    "start": "2026-10-26T01:31:11Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655519-step-2",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655519",
+    "service": "test-windows-latest-3-13-test-extra",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-26T01:31:13Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655519-step-3",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655519",
+    "service": "test-windows-latest-3-13-test-extra",
+    "name": "Set up Python 3.13",
+    "start": "2026-10-26T01:31:21Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655519-step-4",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655519",
+    "service": "test-windows-latest-3-13-test-extra",
+    "name": "Install uv",
+    "start": "2026-10-26T01:31:23Z",
+    "duration_ms": 10000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655519-step-6",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655519",
+    "service": "test-windows-latest-3-13-test-extra",
+    "name": "Install and update Python dependencies (binary only)",
+    "start": "2026-10-26T01:31:33Z",
+    "duration_ms": 35000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655519-step-11",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655519",
+    "service": "test-windows-latest-3-13-test-extra",
+    "name": "Cache pytest last-failed",
+    "start": "2026-10-26T01:32:08Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655519-step-12",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655519",
+    "service": "test-windows-latest-3-13-test-extra",
+    "name": "pytest",
+    "start": "2026-10-26T01:32:08Z",
+    "duration_ms": 134000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655519-step-13",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655519",
+    "service": "test-windows-latest-3-13-test-extra",
+    "name": "Upload coverage to Codecov",
+    "start": "2026-10-26T01:34:22Z",
+    "duration_ms": 11000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655519-step-23",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655519",
+    "service": "test-windows-latest-3-13-test-extra",
+    "name": "Post Cache pytest last-failed",
+    "start": "2026-10-26T01:34:33Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655519-step-24",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655519",
+    "service": "test-windows-latest-3-13-test-extra",
+    "name": "Post Install uv",
+    "start": "2026-10-26T01:34:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655519-step-25",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655519",
+    "service": "test-windows-latest-3-13-test-extra",
+    "name": "Post Set up Python 3.13",
+    "start": "2026-10-26T01:34:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655519-step-26",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655519",
+    "service": "test-windows-latest-3-13-test-extra",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-26T01:34:34Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655519-step-27",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655519",
+    "service": "test-windows-latest-3-13-test-extra",
+    "name": "Complete job",
+    "start": "2026-10-26T01:34:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655521",
+    "trace_id": "run-40254609405",
+    "parent_id": "run-40254609405",
+    "service": "test-ubuntu-latest-3-11-test-extra",
+    "name": "test (ubuntu-latest, 3.11, test_extra)",
+    "start": "2026-10-26T01:31:10Z",
+    "duration_ms": 144000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-121353655521-step-1",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655521",
+    "service": "test-ubuntu-latest-3-11-test-extra",
+    "name": "Set up job",
+    "start": "2026-10-26T01:31:11Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655521-step-2",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655521",
+    "service": "test-ubuntu-latest-3-11-test-extra",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-26T01:31:12Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655521-step-3",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655521",
+    "service": "test-ubuntu-latest-3-11-test-extra",
+    "name": "Set up Python 3.11",
+    "start": "2026-10-26T01:31:13Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655521-step-4",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655521",
+    "service": "test-ubuntu-latest-3-11-test-extra",
+    "name": "Install uv",
+    "start": "2026-10-26T01:31:14Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655521-step-5",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655521",
+    "service": "test-ubuntu-latest-3-11-test-extra",
+    "name": "Install latex",
+    "start": "2026-10-26T01:31:17Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655521-step-6",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655521",
+    "service": "test-ubuntu-latest-3-11-test-extra",
+    "name": "Install and update Python dependencies (binary only)",
+    "start": "2026-10-26T01:31:17Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655521-step-8",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655521",
+    "service": "test-ubuntu-latest-3-11-test-extra",
+    "name": "Try building with Python build",
+    "start": "2026-10-26T01:31:21Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655521-step-9",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655521",
+    "service": "test-ubuntu-latest-3-11-test-extra",
+    "name": "Check manifest",
+    "start": "2026-10-26T01:31:26Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655521-step-11",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655521",
+    "service": "test-ubuntu-latest-3-11-test-extra",
+    "name": "Cache pytest last-failed",
+    "start": "2026-10-26T01:31:30Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655521-step-12",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655521",
+    "service": "test-ubuntu-latest-3-11-test-extra",
+    "name": "pytest",
+    "start": "2026-10-26T01:31:30Z",
+    "duration_ms": 122000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-121353655521-step-26",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655521",
+    "service": "test-ubuntu-latest-3-11-test-extra",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-26T01:33:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655521-step-27",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655521",
+    "service": "test-ubuntu-latest-3-11-test-extra",
+    "name": "Complete job",
+    "start": "2026-10-26T01:33:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655593",
+    "trace_id": "run-40254609405",
+    "parent_id": "run-40254609405",
+    "service": "test-ubuntu-latest-3-13-test-extra",
+    "name": "test (ubuntu-latest, 3.13, test_extra)",
+    "start": "2026-10-26T01:31:10Z",
+    "duration_ms": 144000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655593-step-1",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655593",
+    "service": "test-ubuntu-latest-3-13-test-extra",
+    "name": "Set up job",
+    "start": "2026-10-26T01:31:11Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655593-step-2",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655593",
+    "service": "test-ubuntu-latest-3-13-test-extra",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-26T01:31:14Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655593-step-3",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655593",
+    "service": "test-ubuntu-latest-3-13-test-extra",
+    "name": "Set up Python 3.13",
+    "start": "2026-10-26T01:31:16Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655593-step-4",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655593",
+    "service": "test-ubuntu-latest-3-13-test-extra",
+    "name": "Install uv",
+    "start": "2026-10-26T01:31:18Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655593-step-5",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655593",
+    "service": "test-ubuntu-latest-3-13-test-extra",
+    "name": "Install latex",
+    "start": "2026-10-26T01:31:21Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655593-step-6",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655593",
+    "service": "test-ubuntu-latest-3-13-test-extra",
+    "name": "Install and update Python dependencies (binary only)",
+    "start": "2026-10-26T01:31:21Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655593-step-8",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655593",
+    "service": "test-ubuntu-latest-3-13-test-extra",
+    "name": "Try building with Python build",
+    "start": "2026-10-26T01:31:23Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655593-step-9",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655593",
+    "service": "test-ubuntu-latest-3-13-test-extra",
+    "name": "Check manifest",
+    "start": "2026-10-26T01:31:27Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655593-step-11",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655593",
+    "service": "test-ubuntu-latest-3-13-test-extra",
+    "name": "Cache pytest last-failed",
+    "start": "2026-10-26T01:31:31Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655593-step-12",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655593",
+    "service": "test-ubuntu-latest-3-13-test-extra",
+    "name": "pytest",
+    "start": "2026-10-26T01:31:31Z",
+    "duration_ms": 115000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655593-step-13",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655593",
+    "service": "test-ubuntu-latest-3-13-test-extra",
+    "name": "Upload coverage to Codecov",
+    "start": "2026-10-26T01:33:26Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655593-step-23",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655593",
+    "service": "test-ubuntu-latest-3-13-test-extra",
+    "name": "Post Cache pytest last-failed",
+    "start": "2026-10-26T01:33:30Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655593-step-24",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655593",
+    "service": "test-ubuntu-latest-3-13-test-extra",
+    "name": "Post Install uv",
+    "start": "2026-10-26T01:33:31Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655593-step-25",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655593",
+    "service": "test-ubuntu-latest-3-13-test-extra",
+    "name": "Post Set up Python 3.13",
+    "start": "2026-10-26T01:33:31Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655593-step-26",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655593",
+    "service": "test-ubuntu-latest-3-13-test-extra",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-26T01:33:31Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655593-step-27",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655593",
+    "service": "test-ubuntu-latest-3-13-test-extra",
+    "name": "Complete job",
+    "start": "2026-10-26T01:33:31Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655614",
+    "trace_id": "run-40254609405",
+    "parent_id": "run-40254609405",
+    "service": "test-ubuntu-latest-3-14t-test",
+    "name": "test (ubuntu-latest, 3.14t, test)",
+    "start": "2026-10-26T01:31:11Z",
+    "duration_ms": 89000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655614-step-1",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655614",
+    "service": "test-ubuntu-latest-3-14t-test",
+    "name": "Set up job",
+    "start": "2026-10-26T01:31:11Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655614-step-2",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655614",
+    "service": "test-ubuntu-latest-3-14t-test",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-26T01:31:14Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655614-step-3",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655614",
+    "service": "test-ubuntu-latest-3-14t-test",
+    "name": "Set up Python 3.14t",
+    "start": "2026-10-26T01:31:15Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655614-step-4",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655614",
+    "service": "test-ubuntu-latest-3-14t-test",
+    "name": "Install uv",
+    "start": "2026-10-26T01:31:22Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655614-step-6",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655614",
+    "service": "test-ubuntu-latest-3-14t-test",
+    "name": "Install and update Python dependencies (binary only)",
+    "start": "2026-10-26T01:31:25Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655614-step-8",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655614",
+    "service": "test-ubuntu-latest-3-14t-test",
+    "name": "Try building with Python build",
+    "start": "2026-10-26T01:31:27Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655614-step-9",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655614",
+    "service": "test-ubuntu-latest-3-14t-test",
+    "name": "Check manifest",
+    "start": "2026-10-26T01:31:30Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655614-step-11",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655614",
+    "service": "test-ubuntu-latest-3-14t-test",
+    "name": "Cache pytest last-failed",
+    "start": "2026-10-26T01:31:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655614-step-12",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655614",
+    "service": "test-ubuntu-latest-3-14t-test",
+    "name": "pytest",
+    "start": "2026-10-26T01:31:34Z",
+    "duration_ms": 57000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655614-step-13",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655614",
+    "service": "test-ubuntu-latest-3-14t-test",
+    "name": "Upload coverage to Codecov",
+    "start": "2026-10-26T01:32:31Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655614-step-23",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655614",
+    "service": "test-ubuntu-latest-3-14t-test",
+    "name": "Post Cache pytest last-failed",
+    "start": "2026-10-26T01:32:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655614-step-24",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655614",
+    "service": "test-ubuntu-latest-3-14t-test",
+    "name": "Post Install uv",
+    "start": "2026-10-26T01:32:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655614-step-25",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655614",
+    "service": "test-ubuntu-latest-3-14t-test",
+    "name": "Post Set up Python 3.14t",
+    "start": "2026-10-26T01:32:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655614-step-26",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655614",
+    "service": "test-ubuntu-latest-3-14t-test",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-26T01:32:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-121353655614-step-27",
+    "trace_id": "run-40254609405",
+    "parent_id": "job-121353655614",
+    "service": "test-ubuntu-latest-3-14t-test",
+    "name": "Complete job",
+    "start": "2026-10-26T01:32:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

@@ -1,0 +1,18 @@
+# Mined from https://github.com/pydantic/pydantic/actions/runs/44767659644
+# (pydantic/pydantic, licence MIT). Fixed by run
+# https://github.com/pydantic/pydantic/actions/runs/44767659644. Label rule: a rerun of
+# the same commit passed. Fix touched: nothing (rerun).
+id: ci-pydantic-44767659644
+title: Retain document recursion limits across cursor subtrees
+alert:
+  severity: ci
+  service: test-macos-15-intel-3-15
+  summary: 'workflow CI failed on codex/json-cursor-document-depth at 26f74193d7: step ''Store
+    coverage files'' in job ''Test macos-15-intel / 3.15'' failed.'
+truth:
+  category: infrastructure
+  service: pydantic
+  required_evidence_any:
+  - log-0752
+  - log-0834
+provenance: recorded

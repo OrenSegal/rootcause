@@ -1,0 +1,13 @@
+{
+  "fixed_run": "https://github.com/pandas-dev/pandas/actions/runs/44928189428",
+  "fixed_sha": "ac5b06ffb3c946f81912b221aeccf66510ac069b",
+  "commits": [
+    "d7d92d2912a5212e1cfbe1958510042a105438cc",
+    "ac5b06ffb3c946f81912b221aeccf66510ac069b"
+  ],
+  "files": [
+    "pandas/plotting/_matplotlib/converter.py",
+    "pandas/tests/plotting/test_converter.py"
+  ],
+  "status": "ahead"
+}

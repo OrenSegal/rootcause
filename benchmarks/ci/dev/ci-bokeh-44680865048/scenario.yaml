@@ -1,0 +1,13 @@
+id: ci-bokeh-44680865048
+title: Fix nightly docs failures and improve model structure plots
+alert:
+  severity: ci
+  service: minimal-deps
+  summary: 'workflow Bokeh-CI failed on codex/fix-nightly-docs-ci at 1882cc34fb: step ''Run
+    dependency tests'' in job ''minimal-deps'' failed.'
+truth:
+  category: bad_code_deploy
+  service: bokeh
+  required_evidence_any:
+  - 1882cc34fb
+provenance: recorded

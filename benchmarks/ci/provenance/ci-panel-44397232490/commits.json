@@ -1,0 +1,30 @@
+[
+  {
+    "author": "philippjfr",
+    "committedDate": "2026-11-18T21:01:45Z",
+    "messageHeadline": "fix: Do not sync the design parameter onto wrapped Bokeh models",
+    "oid": "a2ea8cbb017fa8f58786ca8a12ce9229d405d59a",
+    "files": [
+      {
+        "filename": "panel/pane/holoviews.py",
+        "status": "modified"
+      },
+      {
+        "filename": "panel/pane/plot.py",
+        "status": "modified"
+      },
+      {
+        "filename": "panel/tests/pane/test_holoviews.py",
+        "status": "modified"
+      },
+      {
+        "filename": "panel/tests/pane/test_plot.py",
+        "status": "modified"
+      },
+      {
+        "filename": "panel/tests/test_server.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

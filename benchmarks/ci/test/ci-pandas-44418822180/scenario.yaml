@@ -1,0 +1,13 @@
+id: ci-pandas-44418822180
+title: 'BUG: length-1 value silently dropped by .loc[:, col] on an empty DataFrame (GH#56203)'
+alert:
+  severity: ci
+  service: linux-32-bit
+  summary: 'workflow Unit Tests failed on bug-56203 at 2d83fe6f96: step ''Run Tests'' in job
+    ''Linux-32-bit'' failed.'
+truth:
+  category: bad_code_deploy
+  service: pandas
+  required_evidence_any:
+  - 2d83fe6f96
+provenance: recorded

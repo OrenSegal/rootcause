@@ -1,0 +1,92 @@
+[
+  {
+    "span_id": "run-41284164517",
+    "trace_id": "run-41284164517",
+    "parent_id": null,
+    "service": "style",
+    "name": "style",
+    "start": "2026-11-01T07:17:04Z",
+    "duration_ms": 37000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-124781963016",
+    "trace_id": "run-41284164517",
+    "parent_id": "run-41284164517",
+    "service": "format",
+    "name": "format",
+    "start": "2026-11-01T07:17:08Z",
+    "duration_ms": 33000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-124781963016-step-1",
+    "trace_id": "run-41284164517",
+    "parent_id": "job-124781963016",
+    "service": "format",
+    "name": "Set up job",
+    "start": "2026-11-01T07:17:09Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-124781963016-step-2",
+    "trace_id": "run-41284164517",
+    "parent_id": "job-124781963016",
+    "service": "format",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-01T07:17:10Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-124781963016-step-3",
+    "trace_id": "run-41284164517",
+    "parent_id": "job-124781963016",
+    "service": "format",
+    "name": "Run prefix-dev/setup-pixi@ad1da6449d9e506fd127fd67ab2d054a769f6a94",
+    "start": "2026-11-01T07:17:11Z",
+    "duration_ms": 13000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-124781963016-step-4",
+    "trace_id": "run-41284164517",
+    "parent_id": "job-124781963016",
+    "service": "format",
+    "name": "Lint",
+    "start": "2026-11-01T07:17:24Z",
+    "duration_ms": 14000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-124781963016-step-7",
+    "trace_id": "run-41284164517",
+    "parent_id": "job-124781963016",
+    "service": "format",
+    "name": "Post Run prefix-dev/setup-pixi@ad1da6449d9e506fd127fd67ab2d054a769f6a94",
+    "start": "2026-11-01T07:17:38Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-124781963016-step-8",
+    "trace_id": "run-41284164517",
+    "parent_id": "job-124781963016",
+    "service": "format",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-01T07:17:38Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-124781963016-step-9",
+    "trace_id": "run-41284164517",
+    "parent_id": "job-124781963016",
+    "service": "format",
+    "name": "Complete job",
+    "start": "2026-11-01T07:17:38Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

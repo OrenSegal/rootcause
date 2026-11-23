@@ -1,0 +1,18 @@
+[
+  {
+    "id": "662ce62760",
+    "service": "starlette",
+    "version": "662ce62760",
+    "ts": "2026-10-29T19:33:19Z",
+    "author": "voidstackloop",
+    "summary": "fix(routing,url): strip leading slash on mount url_path_for, fix double port in replace(), and add multi-value query param support (#3686, #3684, #3528)",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "starlette/datastructures.py",
+      "starlette/routing.py",
+      "tests/test_datastructures.py",
+      "tests/test_routing.py"
+    ]
+  }
+]

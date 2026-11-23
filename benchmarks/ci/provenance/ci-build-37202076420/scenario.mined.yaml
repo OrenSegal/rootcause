@@ -1,0 +1,17 @@
+# Mined from https://github.com/pypa/build/actions/runs/37202076420 (pypa/build, licence
+# MIT). Fixed by run https://github.com/pypa/build/actions/runs/37205365845. Label rule:
+# the fix changed files exactly one tested commit touched. Fix touched:
+# src/build/_compat/tarfile.py, tests/test_compat_tarfile.py, tests/test_main.py.
+id: ci-build-37202076420
+title: Reject sdists whose top-level directory escapes --sdist-extract-dir
+alert:
+  severity: ci
+  service: pytest-run-tests-windows-3-11-tox
+  summary: 'workflow test failed on fix/sdist-top-level-escapes-extract-dir at c8e36bc75b:
+    step ''Run test suite via tox'' in job ''pytest / Run tests (windows, 3.11, tox)'' failed.'
+truth:
+  category: bad_code_deploy
+  service: build
+  required_evidence_any:
+  - c8e36bc75b
+provenance: recorded

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "e094e87c5e",
+    "service": "xarray",
+    "version": "e094e87c5e",
+    "ts": "2026-11-14T12:12:42Z",
+    "author": "PStarH",
+    "summary": "Speed up interp at a few points of a chunked array",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "doc/whats-new.rst",
+      "xarray/core/missing.py",
+      "xarray/tests/test_missing.py"
+    ]
+  }
+]

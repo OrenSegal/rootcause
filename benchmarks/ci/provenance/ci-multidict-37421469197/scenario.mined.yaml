@@ -1,0 +1,20 @@
+# Mined from https://github.com/aio-libs/multidict/actions/runs/37421469197 (aio-
+# libs/multidict, licence Apache-2.0). Fixed by run https://github.com/aio-
+# libs/multidict/actions/runs/37615823216. Label rule: the fix changed files exactly one
+# tested commit touched. Fix touched: .claude/skills/perf-measurement/SKILL.md,
+# .claude/skills/sanitizer-builds/SKILL.md, .pre-commit-config.yaml, AGENTS.md,
+# CHANGES/1687.misc.rst, CHANGES/1688.misc.rst, CHANGES/1689.misc.rst,
+# CHANGES/1690.misc.rst.
+id: ci-multidict-37421469197
+title: Fail check_inlining.py on out-of-line copies of CPython inlines
+alert:
+  severity: ci
+  service: inlining
+  summary: 'workflow CI/CD failed on guard-cpython-inlines at e7a010d1f9: step ''Check that
+    the hot paths keep their helpers inlined'' in job ''Inlining'' failed.'
+truth:
+  category: bad_code_deploy
+  service: multidict
+  required_evidence_any:
+  - e7a010d1f9
+provenance: recorded

@@ -1,0 +1,12 @@
+{
+  "fixed_run": "https://github.com/python-attrs/attrs/actions/runs/38872225905",
+  "fixed_sha": "8ce3ee7defe52d53e719ea6b989b8b24dcbe9959",
+  "commits": [
+    "8ce3ee7defe52d53e719ea6b989b8b24dcbe9959"
+  ],
+  "files": [
+    "changelog.d/1642.change.md",
+    "src/attr/_make.py"
+  ],
+  "status": "ahead"
+}

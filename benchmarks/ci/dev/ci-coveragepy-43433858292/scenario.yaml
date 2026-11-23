@@ -1,0 +1,14 @@
+id: ci-coveragepy-43433858292
+title: 'Fix json: filter contexts by region statements when show_contexts is enabled (fixes
+  #2374)'
+alert:
+  severity: ci
+  service: pylint-etc
+  summary: 'workflow Quality failed on fix/json-show-contexts-region at f059db2da6: step ''Tox
+    lint'' in job ''Pylint etc'' failed.'
+truth:
+  category: bad_code_deploy
+  service: coveragepy
+  required_evidence_any:
+  - f059db2da6
+provenance: recorded

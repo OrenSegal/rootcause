@@ -1,0 +1,27 @@
+[
+  {
+    "id": "dcd1daacbd",
+    "service": "ipython",
+    "version": "dcd1daacbd",
+    "ts": "2026-10-21T12:02:55Z",
+    "author": "Carreau",
+    "summary": "REmove github stats, and fix some double backticks",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "docs/source/whatsnew/github-stats-0.11.rst",
+      "docs/source/whatsnew/github-stats-0.12.rst",
+      "docs/source/whatsnew/github-stats-0.13.rst",
+      "docs/source/whatsnew/github-stats-1.0.rst",
+      "docs/source/whatsnew/github-stats-2.0.rst",
+      "docs/source/whatsnew/github-stats-3.rst",
+      "docs/source/whatsnew/github-stats-4.rst",
+      "docs/source/whatsnew/github-stats-5.rst",
+      "docs/source/whatsnew/github-stats-6.rst",
+      "docs/source/whatsnew/github-stats-7.rst",
+      "docs/source/whatsnew/github-stats-8.rst",
+      "docs/source/whatsnew/index.rst",
+      "docs/source/whatsnew/version3.rst"
+    ]
+  }
+]

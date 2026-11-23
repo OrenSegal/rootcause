@@ -1,0 +1,1209 @@
+{
+  "attempt": 1,
+  "conclusion": "failure",
+  "createdAt": "2026-10-13T22:21:51Z",
+  "databaseId": 38477282538,
+  "displayTitle": "fix: preserve slots declared on slotted attrs classes",
+  "event": "pull_request",
+  "headBranch": "fix/slotted-attrs-preserve-own-slots",
+  "headSha": "dc3658d6c22495fcc06bde5d94968f01854b052a",
+  "jobs": [
+    {
+      "completedAt": "2026-10-13T22:22:13Z",
+      "conclusion": "success",
+      "databaseId": 115570976276,
+      "name": "Check types using supported type checkers",
+      "startedAt": "2026-10-13T22:21:54Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-13T22:21:57Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-13T22:21:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:21:59Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-13T22:21:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:21:59Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 3,
+          "startedAt": "2026-10-13T22:21:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:03Z",
+          "conclusion": "success",
+          "name": "Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+          "number": 4,
+          "startedAt": "2026-10-13T22:21:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:11Z",
+          "conclusion": "success",
+          "name": "Run uv run --only-group tox tox run -f typing",
+          "number": 5,
+          "startedAt": "2026-10-13T22:22:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:11Z",
+          "conclusion": "success",
+          "name": "Post Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+          "number": 8,
+          "startedAt": "2026-10-13T22:22:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:11Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 9,
+          "startedAt": "2026-10-13T22:22:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:12Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 10,
+          "startedAt": "2026-10-13T22:22:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:12Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "startedAt": "2026-10-13T22:22:12Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/python-attrs/attrs/actions/runs/38477282538/job/115570976276"
+    },
+    {
+      "completedAt": "2026-10-13T22:22:12Z",
+      "conclusion": "success",
+      "databaseId": 115570976588,
+      "name": "Build & verify package",
+      "startedAt": "2026-10-13T22:21:54Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-13T22:21:57Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-13T22:21:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:21:59Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-13T22:21:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:09Z",
+          "conclusion": "success",
+          "name": "Run hynek/build-and-inspect-python-package@2abe76da66d0a6a4a227101f9348ee855797cfa5",
+          "number": 3,
+          "startedAt": "2026-10-13T22:21:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:09Z",
+          "conclusion": "success",
+          "name": "Post Run hynek/build-and-inspect-python-package@2abe76da66d0a6a4a227101f9348ee855797cfa5",
+          "number": 5,
+          "startedAt": "2026-10-13T22:22:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:10Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 6,
+          "startedAt": "2026-10-13T22:22:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:10Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 7,
+          "startedAt": "2026-10-13T22:22:10Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/python-attrs/attrs/actions/runs/38477282538/job/115570976588"
+    },
+    {
+      "completedAt": "2026-10-13T22:22:02Z",
+      "conclusion": "success",
+      "databaseId": 115570976629,
+      "name": "Verify dev env",
+      "startedAt": "2026-10-13T22:21:54Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-13T22:21:55Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-13T22:21:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:21:56Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-13T22:21:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:21:58Z",
+          "conclusion": "success",
+          "name": "Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+          "number": 3,
+          "startedAt": "2026-10-13T22:21:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:00Z",
+          "conclusion": "success",
+          "name": "Run uv sync --python $(cat .python-version-default)",
+          "number": 4,
+          "startedAt": "2026-10-13T22:21:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:00Z",
+          "conclusion": "success",
+          "name": "Ensure we can import attr and attrs packages",
+          "number": 5,
+          "startedAt": "2026-10-13T22:22:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:00Z",
+          "conclusion": "success",
+          "name": "Post Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+          "number": 9,
+          "startedAt": "2026-10-13T22:22:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:00Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 10,
+          "startedAt": "2026-10-13T22:22:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:00Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "startedAt": "2026-10-13T22:22:00Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/python-attrs/attrs/actions/runs/38477282538/job/115570976629"
+    },
+    {
+      "completedAt": "2026-10-13T22:22:17Z",
+      "conclusion": "success",
+      "databaseId": 115570976809,
+      "name": "Run linters",
+      "startedAt": "2026-10-13T22:21:54Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-13T22:21:57Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-13T22:21:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:21:57Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-13T22:21:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:21:58Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 3,
+          "startedAt": "2026-10-13T22:21:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:01Z",
+          "conclusion": "success",
+          "name": "Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+          "number": 4,
+          "startedAt": "2026-10-13T22:21:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:13Z",
+          "conclusion": "success",
+          "name": "Run uv run --only-group tox tox run -f lint",
+          "number": 5,
+          "startedAt": "2026-10-13T22:22:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:13Z",
+          "conclusion": "success",
+          "name": "Post Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+          "number": 8,
+          "startedAt": "2026-10-13T22:22:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:13Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 9,
+          "startedAt": "2026-10-13T22:22:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:14Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 10,
+          "startedAt": "2026-10-13T22:22:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:14Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "startedAt": "2026-10-13T22:22:14Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/python-attrs/attrs/actions/runs/38477282538/job/115570976809"
+    },
+    {
+      "completedAt": "2026-10-13T22:22:33Z",
+      "conclusion": "success",
+      "databaseId": 115571107522,
+      "name": "Run doctests & render changelog",
+      "startedAt": "2026-10-13T22:22:14Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-13T22:22:18Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-13T22:22:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:19Z",
+          "conclusion": "success",
+          "name": "Download pre-built packages",
+          "number": 2,
+          "startedAt": "2026-10-13T22:22:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:19Z",
+          "conclusion": "success",
+          "name": "Run tar xf dist/*.tar.gz --strip-components=1",
+          "number": 3,
+          "startedAt": "2026-10-13T22:22:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:23Z",
+          "conclusion": "success",
+          "name": "Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+          "number": 4,
+          "startedAt": "2026-10-13T22:22:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:31Z",
+          "conclusion": "success",
+          "name": "Run uv run --only-group tox tox run -e docs-doctests,changelog",
+          "number": 5,
+          "startedAt": "2026-10-13T22:22:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:31Z",
+          "conclusion": "success",
+          "name": "Post Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+          "number": 10,
+          "startedAt": "2026-10-13T22:22:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:31Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "startedAt": "2026-10-13T22:22:31Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/python-attrs/attrs/actions/runs/38477282538/job/115571107522"
+    },
+    {
+      "completedAt": "2026-10-13T22:22:30Z",
+      "conclusion": "success",
+      "databaseId": 115571107541,
+      "name": "Tests on pypy-3.11",
+      "startedAt": "2026-10-13T22:22:14Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-13T22:22:16Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-13T22:22:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:17Z",
+          "conclusion": "success",
+          "name": "Download pre-built packages",
+          "number": 2,
+          "startedAt": "2026-10-13T22:22:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:17Z",
+          "conclusion": "success",
+          "name": "Run tar xf dist/*.tar.gz --strip-components=1",
+          "number": 3,
+          "startedAt": "2026-10-13T22:22:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:20Z",
+          "conclusion": "success",
+          "name": "Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+          "number": 4,
+          "startedAt": "2026-10-13T22:22:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:29Z",
+          "conclusion": "success",
+          "name": "Run limited tests on PyPy",
+          "number": 5,
+          "startedAt": "2026-10-13T22:22:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:29Z",
+          "conclusion": "success",
+          "name": "Post Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+          "number": 10,
+          "startedAt": "2026-10-13T22:22:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:29Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "startedAt": "2026-10-13T22:22:29Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/python-attrs/attrs/actions/runs/38477282538/job/115571107541"
+    },
+    {
+      "completedAt": "2026-10-13T22:23:00Z",
+      "conclusion": "success",
+      "databaseId": 115571107664,
+      "name": "Tests & Mypy on 3.11",
+      "startedAt": "2026-10-13T22:22:14Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-13T22:22:16Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-13T22:22:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:17Z",
+          "conclusion": "success",
+          "name": "Download pre-built packages",
+          "number": 2,
+          "startedAt": "2026-10-13T22:22:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:17Z",
+          "conclusion": "success",
+          "name": "Run tar xf dist/*.tar.gz --strip-components=1",
+          "number": 3,
+          "startedAt": "2026-10-13T22:22:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:17Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 4,
+          "startedAt": "2026-10-13T22:22:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:20Z",
+          "conclusion": "success",
+          "name": "Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+          "number": 5,
+          "startedAt": "2026-10-13T22:22:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:47Z",
+          "conclusion": "success",
+          "name": "Run uv run --only-group tox tox run -e $PYTHON-mypy",
+          "number": 6,
+          "startedAt": "2026-10-13T22:22:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:47Z",
+          "conclusion": "success",
+          "name": "Remove src to ensure tests run against wheel",
+          "number": 7,
+          "startedAt": "2026-10-13T22:22:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:57Z",
+          "conclusion": "success",
+          "name": "Run uv run --only-group tox tox run --installpkg dist/*.whl -e $PYTHON-tests",
+          "number": 8,
+          "startedAt": "2026-10-13T22:22:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:58Z",
+          "conclusion": "success",
+          "name": "Upload coverage data",
+          "number": 9,
+          "startedAt": "2026-10-13T22:22:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:58Z",
+          "conclusion": "success",
+          "name": "Post Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+          "number": 17,
+          "startedAt": "2026-10-13T22:22:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:58Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 18,
+          "startedAt": "2026-10-13T22:22:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:58Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-10-13T22:22:58Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/python-attrs/attrs/actions/runs/38477282538/job/115571107664"
+    },
+    {
+      "completedAt": "2026-10-13T22:23:03Z",
+      "conclusion": "success",
+      "databaseId": 115571107674,
+      "name": "Tests & Mypy on 3.14",
+      "startedAt": "2026-10-13T22:22:14Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-13T22:22:17Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-13T22:22:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:18Z",
+          "conclusion": "success",
+          "name": "Download pre-built packages",
+          "number": 2,
+          "startedAt": "2026-10-13T22:22:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:19Z",
+          "conclusion": "success",
+          "name": "Run tar xf dist/*.tar.gz --strip-components=1",
+          "number": 3,
+          "startedAt": "2026-10-13T22:22:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:19Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 4,
+          "startedAt": "2026-10-13T22:22:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:22Z",
+          "conclusion": "success",
+          "name": "Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+          "number": 5,
+          "startedAt": "2026-10-13T22:22:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:48Z",
+          "conclusion": "success",
+          "name": "Run uv run --only-group tox tox run -e $PYTHON-mypy",
+          "number": 6,
+          "startedAt": "2026-10-13T22:22:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:48Z",
+          "conclusion": "success",
+          "name": "Remove src to ensure tests run against wheel",
+          "number": 7,
+          "startedAt": "2026-10-13T22:22:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:59Z",
+          "conclusion": "success",
+          "name": "Run uv run --only-group tox tox run --installpkg dist/*.whl -e $PYTHON-tests",
+          "number": 8,
+          "startedAt": "2026-10-13T22:22:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:23:00Z",
+          "conclusion": "success",
+          "name": "Upload coverage data",
+          "number": 9,
+          "startedAt": "2026-10-13T22:22:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:23:00Z",
+          "conclusion": "success",
+          "name": "Post Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+          "number": 17,
+          "startedAt": "2026-10-13T22:23:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:23:01Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 18,
+          "startedAt": "2026-10-13T22:23:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:23:01Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-10-13T22:23:01Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/python-attrs/attrs/actions/runs/38477282538/job/115571107674"
+    },
+    {
+      "completedAt": "2026-10-13T22:23:19Z",
+      "conclusion": "success",
+      "databaseId": 115571107720,
+      "name": "Tests & Mypy on 3.15",
+      "startedAt": "2026-10-13T22:22:14Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-13T22:22:16Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-13T22:22:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:17Z",
+          "conclusion": "success",
+          "name": "Download pre-built packages",
+          "number": 2,
+          "startedAt": "2026-10-13T22:22:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:17Z",
+          "conclusion": "success",
+          "name": "Run tar xf dist/*.tar.gz --strip-components=1",
+          "number": 3,
+          "startedAt": "2026-10-13T22:22:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:27Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 4,
+          "startedAt": "2026-10-13T22:22:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:29Z",
+          "conclusion": "success",
+          "name": "Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+          "number": 5,
+          "startedAt": "2026-10-13T22:22:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:23:06Z",
+          "conclusion": "success",
+          "name": "Run uv run --only-group tox tox run -e $PYTHON-mypy",
+          "number": 6,
+          "startedAt": "2026-10-13T22:22:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:23:06Z",
+          "conclusion": "success",
+          "name": "Remove src to ensure tests run against wheel",
+          "number": 7,
+          "startedAt": "2026-10-13T22:23:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:23:17Z",
+          "conclusion": "success",
+          "name": "Run uv run --only-group tox tox run --installpkg dist/*.whl -e $PYTHON-tests",
+          "number": 8,
+          "startedAt": "2026-10-13T22:23:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:23:17Z",
+          "conclusion": "success",
+          "name": "Upload coverage data",
+          "number": 9,
+          "startedAt": "2026-10-13T22:23:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:23:17Z",
+          "conclusion": "success",
+          "name": "Post Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+          "number": 17,
+          "startedAt": "2026-10-13T22:23:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:23:18Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 18,
+          "startedAt": "2026-10-13T22:23:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:23:18Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-10-13T22:23:18Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/python-attrs/attrs/actions/runs/38477282538/job/115571107720"
+    },
+    {
+      "completedAt": "2026-10-13T22:23:07Z",
+      "conclusion": "success",
+      "databaseId": 115571107870,
+      "name": "Tests & Mypy on 3.10",
+      "startedAt": "2026-10-13T22:22:14Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-13T22:22:16Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-13T22:22:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:17Z",
+          "conclusion": "success",
+          "name": "Download pre-built packages",
+          "number": 2,
+          "startedAt": "2026-10-13T22:22:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:17Z",
+          "conclusion": "success",
+          "name": "Run tar xf dist/*.tar.gz --strip-components=1",
+          "number": 3,
+          "startedAt": "2026-10-13T22:22:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:17Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 4,
+          "startedAt": "2026-10-13T22:22:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:19Z",
+          "conclusion": "success",
+          "name": "Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+          "number": 5,
+          "startedAt": "2026-10-13T22:22:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:46Z",
+          "conclusion": "success",
+          "name": "Run uv run --only-group tox tox run -e $PYTHON-mypy",
+          "number": 6,
+          "startedAt": "2026-10-13T22:22:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:46Z",
+          "conclusion": "success",
+          "name": "Remove src to ensure tests run against wheel",
+          "number": 7,
+          "startedAt": "2026-10-13T22:22:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:23:05Z",
+          "conclusion": "success",
+          "name": "Run uv run --only-group tox tox run --installpkg dist/*.whl -e $PYTHON-tests",
+          "number": 8,
+          "startedAt": "2026-10-13T22:22:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:23:06Z",
+          "conclusion": "success",
+          "name": "Upload coverage data",
+          "number": 9,
+          "startedAt": "2026-10-13T22:23:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:23:06Z",
+          "conclusion": "success",
+          "name": "Post Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+          "number": 17,
+          "startedAt": "2026-10-13T22:23:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:23:06Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 18,
+          "startedAt": "2026-10-13T22:23:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:23:06Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-10-13T22:23:06Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/python-attrs/attrs/actions/runs/38477282538/job/115571107870"
+    },
+    {
+      "completedAt": "2026-10-13T22:22:59Z",
+      "conclusion": "success",
+      "databaseId": 115571107943,
+      "name": "Tests & Mypy on 3.13",
+      "startedAt": "2026-10-13T22:22:14Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-13T22:22:17Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-13T22:22:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:18Z",
+          "conclusion": "success",
+          "name": "Download pre-built packages",
+          "number": 2,
+          "startedAt": "2026-10-13T22:22:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:18Z",
+          "conclusion": "success",
+          "name": "Run tar xf dist/*.tar.gz --strip-components=1",
+          "number": 3,
+          "startedAt": "2026-10-13T22:22:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:18Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 4,
+          "startedAt": "2026-10-13T22:22:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:21Z",
+          "conclusion": "success",
+          "name": "Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+          "number": 5,
+          "startedAt": "2026-10-13T22:22:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:47Z",
+          "conclusion": "success",
+          "name": "Run uv run --only-group tox tox run -e $PYTHON-mypy",
+          "number": 6,
+          "startedAt": "2026-10-13T22:22:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:47Z",
+          "conclusion": "success",
+          "name": "Remove src to ensure tests run against wheel",
+          "number": 7,
+          "startedAt": "2026-10-13T22:22:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:57Z",
+          "conclusion": "success",
+          "name": "Run uv run --only-group tox tox run --installpkg dist/*.whl -e $PYTHON-tests",
+          "number": 8,
+          "startedAt": "2026-10-13T22:22:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:57Z",
+          "conclusion": "success",
+          "name": "Upload coverage data",
+          "number": 9,
+          "startedAt": "2026-10-13T22:22:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:57Z",
+          "conclusion": "success",
+          "name": "Post Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+          "number": 17,
+          "startedAt": "2026-10-13T22:22:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:58Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 18,
+          "startedAt": "2026-10-13T22:22:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:58Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-10-13T22:22:58Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/python-attrs/attrs/actions/runs/38477282538/job/115571107943"
+    },
+    {
+      "completedAt": "2026-10-13T22:23:05Z",
+      "conclusion": "success",
+      "databaseId": 115571107950,
+      "name": "Tests & Mypy on 3.12",
+      "startedAt": "2026-10-13T22:22:15Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-13T22:22:17Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-13T22:22:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:19Z",
+          "conclusion": "success",
+          "name": "Download pre-built packages",
+          "number": 2,
+          "startedAt": "2026-10-13T22:22:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:19Z",
+          "conclusion": "success",
+          "name": "Run tar xf dist/*.tar.gz --strip-components=1",
+          "number": 3,
+          "startedAt": "2026-10-13T22:22:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:19Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 4,
+          "startedAt": "2026-10-13T22:22:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:22Z",
+          "conclusion": "success",
+          "name": "Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+          "number": 5,
+          "startedAt": "2026-10-13T22:22:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:50Z",
+          "conclusion": "success",
+          "name": "Run uv run --only-group tox tox run -e $PYTHON-mypy",
+          "number": 6,
+          "startedAt": "2026-10-13T22:22:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:22:50Z",
+          "conclusion": "success",
+          "name": "Remove src to ensure tests run against wheel",
+          "number": 7,
+          "startedAt": "2026-10-13T22:22:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:23:01Z",
+          "conclusion": "success",
+          "name": "Run uv run --only-group tox tox run --installpkg dist/*.whl -e $PYTHON-tests",
+          "number": 8,
+          "startedAt": "2026-10-13T22:22:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:23:02Z",
+          "conclusion": "success",
+          "name": "Upload coverage data",
+          "number": 9,
+          "startedAt": "2026-10-13T22:23:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:23:02Z",
+          "conclusion": "success",
+          "name": "Post Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+          "number": 17,
+          "startedAt": "2026-10-13T22:23:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:23:02Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 18,
+          "startedAt": "2026-10-13T22:23:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:23:02Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-10-13T22:23:02Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/python-attrs/attrs/actions/runs/38477282538/job/115571107950"
+    },
+    {
+      "completedAt": "2026-10-13T22:23:36Z",
+      "conclusion": "failure",
+      "databaseId": 115571537315,
+      "name": "Combine & check coverage",
+      "startedAt": "2026-10-13T22:23:22Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-13T22:23:24Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-13T22:23:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:23:26Z",
+          "conclusion": "success",
+          "name": "Download pre-built packages",
+          "number": 2,
+          "startedAt": "2026-10-13T22:23:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:23:26Z",
+          "conclusion": "success",
+          "name": "Run tar xf dist/*.tar.gz --strip-components=1",
+          "number": 3,
+          "startedAt": "2026-10-13T22:23:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:23:28Z",
+          "conclusion": "success",
+          "name": "Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+          "number": 4,
+          "startedAt": "2026-10-13T22:23:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:23:30Z",
+          "conclusion": "success",
+          "name": "Download coverage data",
+          "number": 5,
+          "startedAt": "2026-10-13T22:23:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:23:32Z",
+          "conclusion": "failure",
+          "name": "Combine coverage & fail if it's <100%.",
+          "number": 6,
+          "startedAt": "2026-10-13T22:23:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:23:34Z",
+          "conclusion": "success",
+          "name": "Upload HTML report if check failed.",
+          "number": 7,
+          "startedAt": "2026-10-13T22:23:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:23:34Z",
+          "conclusion": "success",
+          "name": "Post Run hynek/setup-cached-uv@34e35d30f1ebc7421a5cc733bca38dcc62603960",
+          "number": 14,
+          "startedAt": "2026-10-13T22:23:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:23:34Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-10-13T22:23:34Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/python-attrs/attrs/actions/runs/38477282538/job/115571537315"
+    },
+    {
+      "completedAt": "2026-10-13T22:23:41Z",
+      "conclusion": "failure",
+      "databaseId": 115571643472,
+      "name": "Ensure everything required is passing for branch protection",
+      "startedAt": "2026-10-13T22:23:38Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-13T22:23:39Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-13T22:23:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:23:40Z",
+          "conclusion": "failure",
+          "name": "Decide whether the needed jobs succeeded or failed",
+          "number": 2,
+          "startedAt": "2026-10-13T22:23:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T22:23:40Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 3,
+          "startedAt": "2026-10-13T22:23:40Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/python-attrs/attrs/actions/runs/38477282538/job/115571643472"
+    }
+  ],
+  "name": "CI",
+  "updatedAt": "2026-10-13T22:23:42Z",
+  "repository": "python-attrs/attrs"
+}

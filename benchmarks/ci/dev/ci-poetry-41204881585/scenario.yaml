@@ -1,0 +1,13 @@
+id: ci-poetry-41204881585
+title: 'fix(plugins): name the plugin that fails to load or activate'
+alert:
+  severity: ci
+  service: windows-python-3-11-mypy
+  summary: 'workflow Tests failed on fix-plugin-error-names at 61ecdaf534: step ''Run poetry
+    run mypy'' in job ''Windows (Python 3.11) / mypy'' failed.'
+truth:
+  category: bad_code_deploy
+  service: poetry
+  required_evidence_any:
+  - 61ecdaf534
+provenance: recorded

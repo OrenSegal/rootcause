@@ -1,0 +1,34 @@
+[
+  {
+    "author": "KRRT7",
+    "committedDate": "2026-11-13T07:46:34Z",
+    "messageHeadline": "fix: follow greenlet switches so lines aren't recorded in the wrong file",
+    "oid": "a446dc9f3511b48889262dcceb0cd6fd454fce2f",
+    "files": [
+      {
+        "filename": "coverage/collector.py",
+        "status": "modified"
+      },
+      {
+        "filename": "coverage/ctracer/tracer.c",
+        "status": "modified"
+      },
+      {
+        "filename": "coverage/ctracer/tracer.h",
+        "status": "modified"
+      },
+      {
+        "filename": "coverage/tracer.pyi",
+        "status": "modified"
+      },
+      {
+        "filename": "news/20261113_150000_turcioskevinr_greenlet_switch_lines.rst",
+        "status": "added"
+      },
+      {
+        "filename": "tests/test_concurrency.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

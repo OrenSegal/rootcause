@@ -1,0 +1,106 @@
+{
+  "attempt": 1,
+  "conclusion": "failure",
+  "createdAt": "2026-11-19T15:29:13Z",
+  "databaseId": 44555313166,
+  "displayTitle": "Fix and test various Frangi bugs",
+  "event": "pull_request",
+  "headBranch": "frangi-fixes",
+  "headSha": "99df232ff52b3098e9464989eebcb6ecb22f2d19",
+  "jobs": [
+    {
+      "completedAt": "2026-11-19T15:29:34Z",
+      "conclusion": "failure",
+      "databaseId": 135669694093,
+      "name": "Test docstub",
+      "startedAt": "2026-11-19T15:29:17Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-19T15:29:18Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-19T15:29:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-19T15:29:21Z",
+          "conclusion": "success",
+          "name": "Clone scikit-image",
+          "number": 2,
+          "startedAt": "2026-11-19T15:29:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-19T15:29:24Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-11-19T15:29:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-19T15:29:30Z",
+          "conclusion": "success",
+          "name": "Install docstub",
+          "number": 4,
+          "startedAt": "2026-11-19T15:29:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-19T15:29:32Z",
+          "conclusion": "failure",
+          "name": "Create skimage-stubs with docstub",
+          "number": 5,
+          "startedAt": "2026-11-19T15:29:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-19T15:29:32Z",
+          "conclusion": "skipped",
+          "name": "Create _skimage2-stubs with docstub",
+          "number": 6,
+          "startedAt": "2026-11-19T15:29:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-19T15:29:32Z",
+          "conclusion": "skipped",
+          "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+          "number": 7,
+          "startedAt": "2026-11-19T15:29:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-19T15:29:32Z",
+          "conclusion": "skipped",
+          "name": "Post Set up Python",
+          "number": 13,
+          "startedAt": "2026-11-19T15:29:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-19T15:29:32Z",
+          "conclusion": "success",
+          "name": "Post Clone scikit-image",
+          "number": 14,
+          "startedAt": "2026-11-19T15:29:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-19T15:29:32Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-19T15:29:32Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/scikit-image/scikit-image/actions/runs/44555313166/job/135669694093"
+    }
+  ],
+  "name": "Typing",
+  "updatedAt": "2026-11-19T15:29:35Z",
+  "repository": "scikit-image/scikit-image"
+}

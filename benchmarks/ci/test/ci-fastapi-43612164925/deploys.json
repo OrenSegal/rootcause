@@ -1,0 +1,21 @@
+[
+  {
+    "id": "b0608a7331",
+    "service": "fastapi",
+    "version": "b0608a7331",
+    "ts": "2026-11-14T15:47:43Z",
+    "author": "tiangolo",
+    "summary": "\u2728 Add dependency concurrency limits with `Depends(max_concurrency=...)`",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "docs/en/docs/advanced/advanced-dependencies.md",
+      "fastapi/concurrency.py",
+      "fastapi/dependencies/models.py",
+      "fastapi/dependencies/utils.py",
+      "fastapi/param_functions.py",
+      "fastapi/params.py",
+      "tests/test_dependency_concurrency.py"
+    ]
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "fixed_run": "https://github.com/aio-libs/multidict/actions/runs/37650596942",
+  "fixed_sha": "7f7c7c414325470acb8f3284c9eaf8244b36af58",
+  "commits": [
+    "7f7c7c414325470acb8f3284c9eaf8244b36af58"
+  ],
+  "files": [
+    "CHANGES/1740.misc.rst",
+    "multidict/_multilib/bulk_update.h",
+    "multidict/_multilib/debug.h",
+    "multidict/_multilib/hashtable.h",
+    "multidict/_multilib/htkeys.h",
+    "multidict/_multilib/walk.h",
+    "tests/test_multidict.py",
+    "tools/check_inlining.py"
+  ],
+  "status": "ahead"
+}

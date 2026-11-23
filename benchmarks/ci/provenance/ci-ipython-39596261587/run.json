@@ -1,0 +1,106 @@
+{
+  "attempt": 1,
+  "conclusion": "failure",
+  "createdAt": "2026-10-21T12:00:54Z",
+  "databaseId": 39596261587,
+  "displayTitle": "Accept a quoted FILE:LINE in %debug --breakpoint",
+  "event": "pull_request",
+  "headBranch": "fix/debug-breakpoint-quoted-path",
+  "headSha": "94c7262ef283efa6ff309431f2cf4dda319fc744",
+  "jobs": [
+    {
+      "completedAt": "2026-10-21T12:01:13Z",
+      "conclusion": "failure",
+      "databaseId": 119209203464,
+      "name": "formatting",
+      "startedAt": "2026-10-21T12:00:58Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-21T12:00:59Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-21T12:00:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-21T12:01:05Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-21T12:00:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-21T12:01:05Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-10-21T12:01:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-21T12:01:07Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 4,
+          "startedAt": "2026-10-21T12:01:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-21T12:01:07Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "startedAt": "2026-10-21T12:01:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-21T12:01:11Z",
+          "conclusion": "failure",
+          "name": "Lint with darker",
+          "number": 6,
+          "startedAt": "2026-10-21T12:01:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-21T12:01:11Z",
+          "conclusion": "skipped",
+          "name": "Post Install uv",
+          "number": 10,
+          "startedAt": "2026-10-21T12:01:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-21T12:01:11Z",
+          "conclusion": "skipped",
+          "name": "Post Set up Python",
+          "number": 11,
+          "startedAt": "2026-10-21T12:01:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-21T12:01:11Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 12,
+          "startedAt": "2026-10-21T12:01:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-21T12:01:12Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-10-21T12:01:11Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/ipython/ipython/actions/runs/39596261587/job/119209203464"
+    }
+  ],
+  "name": "Python package",
+  "updatedAt": "2026-10-21T12:01:13Z",
+  "repository": "ipython/ipython"
+}

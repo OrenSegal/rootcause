@@ -1,0 +1,17 @@
+[
+  {
+    "id": "37ad69262e",
+    "service": "urllib3",
+    "version": "37ad69262e",
+    "ts": "2026-11-20T14:28:24Z",
+    "author": "Giriprasada",
+    "summary": "Reject decode-mode switches in read_chunked before consuming body data.",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "changelog/+read-chunked-decode-toggle.bugfix.rst",
+      "src/urllib3/response.py",
+      "test/test_response.py"
+    ]
+  }
+]

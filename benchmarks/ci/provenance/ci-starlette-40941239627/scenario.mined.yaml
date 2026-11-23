@@ -1,0 +1,19 @@
+# Mined from https://github.com/Kludex/starlette/actions/runs/40941239627
+# (encode/starlette, licence BSD-3-Clause). Fixed by run
+# https://github.com/Kludex/starlette/actions/runs/40948755741. Label rule: the fix
+# changed files exactly one tested commit touched. Fix touched:
+# tests/test_datastructures.py.
+id: ci-starlette-40941239627
+title: 'fix(routing,url): strip leading slash in Mount.url_path_for, fix double port in URL.replace,
+  and support multi-value query params'
+alert:
+  severity: ci
+  service: python-3-15
+  summary: 'workflow Test Suite failed on fix/url-and-routing-params at 662ce62760: step ''Enforce
+    coverage'' in job ''Python 3.15'' failed.'
+truth:
+  category: bad_code_deploy
+  service: starlette
+  required_evidence_any:
+  - 662ce62760
+provenance: recorded

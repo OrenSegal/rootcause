@@ -1,0 +1,22 @@
+[
+  {
+    "author": "DYNOSuprovo",
+    "committedDate": "2026-09-17T01:57:21Z",
+    "messageHeadline": "support arbitrary Mapping in urlencode filter",
+    "oid": "60ee3fe11a1338d9f742fa2df672cd70d2fbc00b",
+    "files": [
+      {
+        "filename": "CHANGES.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "src/jinja2/filters.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_filters.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

@@ -1,6 +1,7 @@
 """Reads and writes scenario directories. `write_case` is the inverse of
 `load_case`, and the only place the on-disk format is written."""
 
+import gzip
 import json
 import textwrap
 from pathlib import Path
@@ -25,11 +26,18 @@ def load_scenario(path: Path) -> Scenario:
     return Scenario.model_validate(yaml.safe_load((path / SCENARIO_FILE).read_text()))
 
 
+def _read_logs(path: Path) -> str:
+    """`logs.jsonl`, or `logs.jsonl.gz` when the plain file is absent. Recorded CI logs
+    run to tens of megabytes, so a committed benchmark stores them compressed."""
+    plain = path / LOGS
+    if plain.exists():
+        return plain.read_text()
+    return gzip.decompress((path / f"{LOGS}.gz").read_bytes()).decode()
+
+
 def load_case(path: Path) -> Case:
     logs = [
-        LogLine.model_validate_json(line)
-        for line in (path / LOGS).read_text().splitlines()
-        if line.strip()
+        LogLine.model_validate_json(line) for line in _read_logs(path).splitlines() if line.strip()
     ]
     store = TelemetryStore(
         logs=logs,

@@ -1,0 +1,11 @@
+{
+  "fixed_run": "https://github.com/ipython/ipython/actions/runs/39596760281",
+  "fixed_sha": "f24c0bcd86c3f32856f5c44d18d4910e53e28d96",
+  "commits": [
+    "f24c0bcd86c3f32856f5c44d18d4910e53e28d96"
+  ],
+  "files": [
+    "IPython/core/magics/execution.py"
+  ],
+  "status": "ahead"
+}

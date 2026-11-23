@@ -1,0 +1,14 @@
+{
+  "fixed_run": "https://github.com/pyca/cryptography/actions/runs/44029014208",
+  "fixed_sha": "66c434f1c8f648ce28a959921f65b14b43e5ab4f",
+  "commits": [
+    "66c434f1c8f648ce28a959921f65b14b43e5ab4f"
+  ],
+  "files": [
+    "docs/development/test-vectors.rst",
+    "tests/hazmat/primitives/test_dsa.py",
+    "vectors/cryptography_vectors/asymmetric/DSA/custom/nilpotent-pkcs8.pem"
+  ],
+  "merges": [],
+  "status": "ahead"
+}

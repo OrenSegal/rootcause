@@ -1,0 +1,16 @@
+[
+  {
+    "id": "757845f1ed",
+    "service": "matplotlib",
+    "version": "757845f1ed",
+    "ts": "2026-11-16T19:19:24Z",
+    "author": "klnmurthi12345",
+    "summary": "FIX: validate empty cellText and cellColours in table()",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "lib/matplotlib/table.py",
+      "lib/matplotlib/tests/test_table.py"
+    ]
+  }
+]

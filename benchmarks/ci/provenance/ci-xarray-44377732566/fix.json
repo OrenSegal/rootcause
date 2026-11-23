@@ -1,0 +1,11 @@
+{
+  "fixed_run": "https://github.com/pydata/xarray/actions/runs/44389577957",
+  "fixed_sha": "dddc790d9124f6dd243c726c16c6e1aea94cb789",
+  "commits": [
+    "dddc790d9124f6dd243c726c16c6e1aea94cb789"
+  ],
+  "files": [
+    "xarray/tests/test_interp.py"
+  ],
+  "status": "ahead"
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "author": "paul-eclipse",
+    "committedDate": "2026-11-18T16:08:53Z",
+    "messageHeadline": "Fixed 27514 -- Requires Change user permission to add user when using saveasnew.",
+    "oid": "15f1bdfc1f6cda86514a30053780d2676699d4ac",
+    "files": [
+      {
+        "filename": "django/contrib/auth/admin.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/auth_tests/test_views.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

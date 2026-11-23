@@ -1,0 +1,14 @@
+id: ci-pydantic-44623649807
+title: Prototype direct JSON cursors on the existing validator graph
+alert:
+  severity: ci
+  service: test-macos-15-intel-3-15t
+  summary: 'workflow CI failed on codex/json-cursor-prototype at 051023fad1: step ''Store
+    coverage files'' in job ''Test macos-15-intel / 3.15t'' failed.'
+truth:
+  category: infrastructure
+  service: pydantic
+  required_evidence_any:
+  - log-0747
+  - log-0829
+provenance: recorded

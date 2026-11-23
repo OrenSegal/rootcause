@@ -1,0 +1,12 @@
+{
+  "fixed_run": "https://github.com/matplotlib/matplotlib/actions/runs/43947880912",
+  "fixed_sha": "beddcd216a4089d5a795ff1a8e61f7e38af27ea1",
+  "commits": [
+    "07622f6fe1bd91cd6f5aeb00907ca76d87bac5f5",
+    "beddcd216a4089d5a795ff1a8e61f7e38af27ea1"
+  ],
+  "files": [
+    "lib/matplotlib/tests/test_table.py"
+  ],
+  "status": "ahead"
+}

@@ -1,0 +1,13 @@
+id: ci-uvicorn-40673038906
+title: Wait for the client's close on oversized wsproto messages
+alert:
+  severity: ci
+  service: python-3-12-windows-latest
+  summary: 'workflow Test Suite failed on wsproto-close-on-oversize-frame at 0884039004: step
+    ''Enforce coverage'' in job ''Python 3.12 windows-latest'' failed.'
+truth:
+  category: bad_code_deploy
+  service: uvicorn
+  required_evidence_any:
+  - 0884039004
+provenance: recorded

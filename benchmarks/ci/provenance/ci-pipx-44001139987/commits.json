@@ -1,0 +1,26 @@
+[
+  {
+    "author": "gaborbernat",
+    "committedDate": "2026-11-17T02:11:22Z",
+    "messageHeadline": "\ud83d\udc1b fix(fanout): defer Ctrl-C to the fan-out's own loop",
+    "oid": "9e15af1ef884a164fba48a159e5687b64d75ecdc",
+    "files": [
+      {
+        "filename": "changelog.d/+fanout-interrupt-deadlock.bugfix.rst",
+        "status": "added"
+      },
+      {
+        "filename": "src/pipx/fanout.py",
+        "status": "modified"
+      },
+      {
+        "filename": "src/pipx/main.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_fanout.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

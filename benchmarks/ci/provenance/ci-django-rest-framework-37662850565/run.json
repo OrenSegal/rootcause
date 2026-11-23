@@ -1,0 +1,871 @@
+{
+  "attempt": 1,
+  "conclusion": "failure",
+  "createdAt": "2026-10-07T17:55:36Z",
+  "databaseId": 37662850565,
+  "displayTitle": "Preserve custom ChoiceField mappings for model choices",
+  "event": "pull_request",
+  "headBranch": "fix/9179-choice-field-mapping",
+  "headSha": "2832c2ed2ee18d2da429d0b1db03f2f6573fbbfb",
+  "jobs": [
+    {
+      "completedAt": "2026-10-07T17:56:07Z",
+      "conclusion": "success",
+      "databaseId": 112934473842,
+      "name": "Test documentation links",
+      "startedAt": "2026-10-07T17:55:39Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-07T17:55:41Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-07T17:55:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:55:42Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-10-07T17:55:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:55:42Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@v7.0.0",
+          "number": 3,
+          "startedAt": "2026-10-07T17:55:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:55:53Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-10-07T17:55:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:55:58Z",
+          "conclusion": "success",
+          "name": "Run mkdocs serve &",
+          "number": 5,
+          "startedAt": "2026-10-07T17:55:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:55:58Z",
+          "conclusion": "success",
+          "name": "Run WAIT_TIME=0 && until nc -vzw 2 localhost 8000 || [ $WAIT_TIME -eq 5 ]; do sleep $(( WAIT_TIME++ )); done",
+          "number": 6,
+          "startedAt": "2026-10-07T17:55:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:55:58Z",
+          "conclusion": "success",
+          "name": "Run if [ $WAIT_TIME == 5 ]; then echo cannot start mkdocs server on http://localhost:8000; exit 1; fi",
+          "number": 7,
+          "startedAt": "2026-10-07T17:55:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:04Z",
+          "conclusion": "success",
+          "name": "Check links",
+          "number": 8,
+          "startedAt": "2026-10-07T17:55:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:04Z",
+          "conclusion": "success",
+          "name": "Run echo \"Done\"",
+          "number": 9,
+          "startedAt": "2026-10-07T17:56:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:04Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@v7.0.0",
+          "number": 17,
+          "startedAt": "2026-10-07T17:56:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:04Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 18,
+          "startedAt": "2026-10-07T17:56:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:04Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-10-07T17:56:04Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/encode/django-rest-framework/actions/runs/37662850565/job/112934473842"
+    },
+    {
+      "completedAt": "2026-10-07T17:57:09Z",
+      "conclusion": "cancelled",
+      "databaseId": 112934474297,
+      "name": "Python 3.12",
+      "startedAt": "2026-10-07T17:55:39Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-07T17:55:41Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-07T17:55:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:02Z",
+          "conclusion": "success",
+          "name": "Initialize containers",
+          "number": 2,
+          "startedAt": "2026-10-07T17:55:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:04Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 3,
+          "startedAt": "2026-10-07T17:56:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:06Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@v7.0.0",
+          "number": 4,
+          "startedAt": "2026-10-07T17:56:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:09Z",
+          "conclusion": "success",
+          "name": "Upgrade packaging tools",
+          "number": 5,
+          "startedAt": "2026-10-07T17:56:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:10Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 6,
+          "startedAt": "2026-10-07T17:56:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:57:07Z",
+          "conclusion": "cancelled",
+          "name": "Run tox targets for 3.12",
+          "number": 7,
+          "startedAt": "2026-10-07T17:56:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:57:07Z",
+          "conclusion": "skipped",
+          "name": "Run extra tox targets",
+          "number": 8,
+          "startedAt": "2026-10-07T17:57:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:57:07Z",
+          "conclusion": "skipped",
+          "name": "Upload coverage",
+          "number": 9,
+          "startedAt": "2026-10-07T17:57:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:57:07Z",
+          "conclusion": "skipped",
+          "name": "Post Run actions/setup-python@v7.0.0",
+          "number": 16,
+          "startedAt": "2026-10-07T17:57:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:57:07Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 17,
+          "startedAt": "2026-10-07T17:57:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:57:08Z",
+          "conclusion": "success",
+          "name": "Stop containers",
+          "number": 18,
+          "startedAt": "2026-10-07T17:57:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:57:08Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-10-07T17:57:08Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/encode/django-rest-framework/actions/runs/37662850565/job/112934474297"
+    },
+    {
+      "completedAt": "2026-10-07T17:55:56Z",
+      "conclusion": "success",
+      "databaseId": 112934474333,
+      "name": "pre-commit",
+      "startedAt": "2026-10-07T17:55:40Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-07T17:55:42Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-07T17:55:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:55:43Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-10-07T17:55:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:55:53Z",
+          "conclusion": "success",
+          "name": "Run j178/prek-action@v3.0.0",
+          "number": 3,
+          "startedAt": "2026-10-07T17:55:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:55:53Z",
+          "conclusion": "success",
+          "name": "Post Run j178/prek-action@v3.0.0",
+          "number": 5,
+          "startedAt": "2026-10-07T17:55:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:55:53Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 6,
+          "startedAt": "2026-10-07T17:55:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:55:53Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 7,
+          "startedAt": "2026-10-07T17:55:53Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/encode/django-rest-framework/actions/runs/37662850565/job/112934474333"
+    },
+    {
+      "completedAt": "2026-10-07T17:57:14Z",
+      "conclusion": "cancelled",
+      "databaseId": 112934474400,
+      "name": "Python 3.15",
+      "startedAt": "2026-10-07T17:55:40Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-07T17:55:42Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-07T17:55:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:05Z",
+          "conclusion": "success",
+          "name": "Initialize containers",
+          "number": 2,
+          "startedAt": "2026-10-07T17:55:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:07Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 3,
+          "startedAt": "2026-10-07T17:56:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:18Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@v7.0.0",
+          "number": 4,
+          "startedAt": "2026-10-07T17:56:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:20Z",
+          "conclusion": "success",
+          "name": "Upgrade packaging tools",
+          "number": 5,
+          "startedAt": "2026-10-07T17:56:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:22Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 6,
+          "startedAt": "2026-10-07T17:56:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:57:08Z",
+          "conclusion": "cancelled",
+          "name": "Run tox targets for 3.15",
+          "number": 7,
+          "startedAt": "2026-10-07T17:56:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:57:08Z",
+          "conclusion": "skipped",
+          "name": "Run extra tox targets",
+          "number": 8,
+          "startedAt": "2026-10-07T17:57:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:57:08Z",
+          "conclusion": "skipped",
+          "name": "Upload coverage",
+          "number": 9,
+          "startedAt": "2026-10-07T17:57:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:57:08Z",
+          "conclusion": "skipped",
+          "name": "Post Run actions/setup-python@v7.0.0",
+          "number": 16,
+          "startedAt": "2026-10-07T17:57:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:57:08Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 17,
+          "startedAt": "2026-10-07T17:57:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:57:08Z",
+          "conclusion": "success",
+          "name": "Stop containers",
+          "number": 18,
+          "startedAt": "2026-10-07T17:57:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:57:09Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-10-07T17:57:08Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/encode/django-rest-framework/actions/runs/37662850565/job/112934474400"
+    },
+    {
+      "completedAt": "2026-10-07T17:57:13Z",
+      "conclusion": "cancelled",
+      "databaseId": 112934474409,
+      "name": "Python 3.14",
+      "startedAt": "2026-10-07T17:55:39Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-07T17:55:41Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-07T17:55:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:02Z",
+          "conclusion": "success",
+          "name": "Initialize containers",
+          "number": 2,
+          "startedAt": "2026-10-07T17:55:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:03Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 3,
+          "startedAt": "2026-10-07T17:56:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:05Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@v7.0.0",
+          "number": 4,
+          "startedAt": "2026-10-07T17:56:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:07Z",
+          "conclusion": "success",
+          "name": "Upgrade packaging tools",
+          "number": 5,
+          "startedAt": "2026-10-07T17:56:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:08Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 6,
+          "startedAt": "2026-10-07T17:56:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:57:07Z",
+          "conclusion": "cancelled",
+          "name": "Run tox targets for 3.14",
+          "number": 7,
+          "startedAt": "2026-10-07T17:56:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:57:07Z",
+          "conclusion": "skipped",
+          "name": "Run extra tox targets",
+          "number": 8,
+          "startedAt": "2026-10-07T17:57:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:57:07Z",
+          "conclusion": "skipped",
+          "name": "Upload coverage",
+          "number": 9,
+          "startedAt": "2026-10-07T17:57:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:57:07Z",
+          "conclusion": "skipped",
+          "name": "Post Run actions/setup-python@v7.0.0",
+          "number": 16,
+          "startedAt": "2026-10-07T17:57:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:57:07Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 17,
+          "startedAt": "2026-10-07T17:57:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:57:08Z",
+          "conclusion": "success",
+          "name": "Stop containers",
+          "number": 18,
+          "startedAt": "2026-10-07T17:57:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:57:08Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-10-07T17:57:08Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/encode/django-rest-framework/actions/runs/37662850565/job/112934474409"
+    },
+    {
+      "completedAt": "2026-10-07T17:57:12Z",
+      "conclusion": "cancelled",
+      "databaseId": 112934474515,
+      "name": "Python 3.13",
+      "startedAt": "2026-10-07T17:55:41Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-07T17:55:44Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-07T17:55:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:07Z",
+          "conclusion": "success",
+          "name": "Initialize containers",
+          "number": 2,
+          "startedAt": "2026-10-07T17:55:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:09Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 3,
+          "startedAt": "2026-10-07T17:56:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:14Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@v7.0.0",
+          "number": 4,
+          "startedAt": "2026-10-07T17:56:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:16Z",
+          "conclusion": "success",
+          "name": "Upgrade packaging tools",
+          "number": 5,
+          "startedAt": "2026-10-07T17:56:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:17Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 6,
+          "startedAt": "2026-10-07T17:56:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:57:09Z",
+          "conclusion": "cancelled",
+          "name": "Run tox targets for 3.13",
+          "number": 7,
+          "startedAt": "2026-10-07T17:56:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:57:09Z",
+          "conclusion": "skipped",
+          "name": "Run extra tox targets",
+          "number": 8,
+          "startedAt": "2026-10-07T17:57:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:57:09Z",
+          "conclusion": "skipped",
+          "name": "Upload coverage",
+          "number": 9,
+          "startedAt": "2026-10-07T17:57:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:57:09Z",
+          "conclusion": "skipped",
+          "name": "Post Run actions/setup-python@v7.0.0",
+          "number": 16,
+          "startedAt": "2026-10-07T17:57:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:57:09Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 17,
+          "startedAt": "2026-10-07T17:57:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:57:10Z",
+          "conclusion": "success",
+          "name": "Stop containers",
+          "number": 18,
+          "startedAt": "2026-10-07T17:57:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:57:10Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-10-07T17:57:10Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/encode/django-rest-framework/actions/runs/37662850565/job/112934474515"
+    },
+    {
+      "completedAt": "2026-10-07T17:56:44Z",
+      "conclusion": "failure",
+      "databaseId": 112934474575,
+      "name": "Python 3.10",
+      "startedAt": "2026-10-07T17:55:39Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-07T17:55:42Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-07T17:55:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:03Z",
+          "conclusion": "success",
+          "name": "Initialize containers",
+          "number": 2,
+          "startedAt": "2026-10-07T17:55:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:05Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 3,
+          "startedAt": "2026-10-07T17:56:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:08Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@v7.0.0",
+          "number": 4,
+          "startedAt": "2026-10-07T17:56:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:10Z",
+          "conclusion": "success",
+          "name": "Upgrade packaging tools",
+          "number": 5,
+          "startedAt": "2026-10-07T17:56:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:10Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 6,
+          "startedAt": "2026-10-07T17:56:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:39Z",
+          "conclusion": "failure",
+          "name": "Run tox targets for 3.10",
+          "number": 7,
+          "startedAt": "2026-10-07T17:56:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:39Z",
+          "conclusion": "skipped",
+          "name": "Run extra tox targets",
+          "number": 8,
+          "startedAt": "2026-10-07T17:56:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:39Z",
+          "conclusion": "skipped",
+          "name": "Upload coverage",
+          "number": 9,
+          "startedAt": "2026-10-07T17:56:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:39Z",
+          "conclusion": "skipped",
+          "name": "Post Run actions/setup-python@v7.0.0",
+          "number": 16,
+          "startedAt": "2026-10-07T17:56:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:39Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 17,
+          "startedAt": "2026-10-07T17:56:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:39Z",
+          "conclusion": "success",
+          "name": "Stop containers",
+          "number": 18,
+          "startedAt": "2026-10-07T17:56:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:39Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-10-07T17:56:39Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/encode/django-rest-framework/actions/runs/37662850565/job/112934474575"
+    },
+    {
+      "completedAt": "2026-10-07T17:56:55Z",
+      "conclusion": "cancelled",
+      "databaseId": 112934474576,
+      "name": "Python 3.11",
+      "startedAt": "2026-10-07T17:55:39Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-07T17:55:41Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-07T17:55:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:02Z",
+          "conclusion": "success",
+          "name": "Initialize containers",
+          "number": 2,
+          "startedAt": "2026-10-07T17:55:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:04Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 3,
+          "startedAt": "2026-10-07T17:56:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:06Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@v7.0.0",
+          "number": 4,
+          "startedAt": "2026-10-07T17:56:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:08Z",
+          "conclusion": "success",
+          "name": "Upgrade packaging tools",
+          "number": 5,
+          "startedAt": "2026-10-07T17:56:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:09Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 6,
+          "startedAt": "2026-10-07T17:56:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:54Z",
+          "conclusion": "failure",
+          "name": "Run tox targets for 3.11",
+          "number": 7,
+          "startedAt": "2026-10-07T17:56:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:54Z",
+          "conclusion": "skipped",
+          "name": "Run extra tox targets",
+          "number": 8,
+          "startedAt": "2026-10-07T17:56:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:54Z",
+          "conclusion": "skipped",
+          "name": "Upload coverage",
+          "number": 9,
+          "startedAt": "2026-10-07T17:56:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:54Z",
+          "conclusion": "skipped",
+          "name": "Post Run actions/setup-python@v7.0.0",
+          "number": 16,
+          "startedAt": "2026-10-07T17:56:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:54Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 17,
+          "startedAt": "2026-10-07T17:56:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:54Z",
+          "conclusion": "success",
+          "name": "Stop containers",
+          "number": 18,
+          "startedAt": "2026-10-07T17:56:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-07T17:56:54Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-10-07T17:56:54Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/encode/django-rest-framework/actions/runs/37662850565/job/112934474576"
+    }
+  ],
+  "name": "CI",
+  "updatedAt": "2026-10-07T17:57:15Z",
+  "repository": "encode/django-rest-framework"
+}

@@ -1,0 +1,18 @@
+# Mined from https://github.com/aio-libs/yarl/actions/runs/44958570609 (aio-libs/yarl,
+# licence Apache-2.0). Fixed by run https://github.com/aio-
+# libs/yarl/actions/runs/44959469683. Label rule: the fix changed files exactly one
+# tested commit touched. Fix touched: docs/api.rst.
+id: ci-yarl-44958570609
+title: Mask password in URL.__repr__
+alert:
+  severity: ci
+  service: linters-build-docs-3-14-ubuntu-latest
+  summary: "workflow CI/CD failed on fix/mask-password-in-repr at 5d1d230f41: step 'Run tox\
+    \ envs: `build-docs`' in job '\U0001F9F9 Linters / build-docs@\U0001F40D3.14@\U0001F4BB\
+    ubuntu-latest' failed."
+truth:
+  category: bad_code_deploy
+  service: yarl
+  required_evidence_any:
+  - 5d1d230f41
+provenance: recorded

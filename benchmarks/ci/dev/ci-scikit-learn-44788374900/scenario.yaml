@@ -1,0 +1,13 @@
+id: ci-scikit-learn-44788374900
+title: FIX move_estimator_to should not convert non-numeric/non-boolean array attributes
+alert:
+  severity: ci
+  service: lint
+  summary: 'workflow Unit tests failed on fix-35109-move-estimator-to-non-numeric at d34a8b11f9:
+    step ''Run linters'' in job ''Lint'' failed.'
+truth:
+  category: bad_code_deploy
+  service: scikit-learn
+  required_evidence_any:
+  - d34a8b11f9
+provenance: recorded

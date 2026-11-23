@@ -1,0 +1,11 @@
+{
+  "fixed_run": "https://github.com/Kludex/starlette/actions/runs/39748882239",
+  "fixed_sha": "fc4a35c1f05c98f09f48bcde227a7c7de4b428fc",
+  "commits": [
+    "fc4a35c1f05c98f09f48bcde227a7c7de4b428fc"
+  ],
+  "files": [
+    "tests/test_config.py"
+  ],
+  "status": "ahead"
+}

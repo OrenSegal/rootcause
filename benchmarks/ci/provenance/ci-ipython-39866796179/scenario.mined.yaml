@@ -1,0 +1,18 @@
+# Mined from https://github.com/ipython/ipython/actions/runs/39866796179
+# (ipython/ipython, licence BSD-3-Clause). Fixed by run
+# https://github.com/ipython/ipython/actions/runs/39876347814. Label rule: the fix
+# changed files exactly one tested commit touched. Fix touched:
+# IPython/utils/_process_posix.py.
+id: ci-ipython-39866796179
+title: "Fix UnboundLocalError when system() is interrupted during spawn \U0001F916\U0001F916"
+alert:
+  severity: ci
+  service: formatting
+  summary: 'workflow Python package failed on fix-system-interrupt-during-spawn at 9bddbb8104:
+    step ''Lint with darker'' in job ''formatting'' failed.'
+truth:
+  category: bad_code_deploy
+  service: ipython
+  required_evidence_any:
+  - 9bddbb8104
+provenance: recorded

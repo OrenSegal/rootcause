@@ -1,0 +1,30 @@
+[
+  {
+    "author": "asvetlov",
+    "committedDate": "2026-10-11T09:09:45Z",
+    "messageHeadline": "Share one sequence loop and pin the helpers it crowded out",
+    "oid": "f6502e433e73093804b8eead905b17b4a8447543",
+    "files": [
+      {
+        "filename": "multidict/_multilib/bulk_update.h",
+        "status": "modified"
+      },
+      {
+        "filename": "tools/check_inlining.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "asvetlov",
+    "committedDate": "2026-10-11T09:17:07Z",
+    "messageHeadline": "Correct the news fragment's numbers for the shared sequence loop",
+    "oid": "2d488dc3352d7834b9dcdb797ea9e7cd56b9fc8c",
+    "files": [
+      {
+        "filename": "CHANGES/1763.misc.rst",
+        "status": "modified"
+      }
+    ]
+  }
+]

@@ -1,0 +1,13 @@
+id: ci-bokeh-44361105539
+title: Serve notebook applications over Jupyter comms
+alert:
+  severity: ci
+  service: core-deps-3-13-core-py313
+  summary: 'workflow Bokeh-CI failed on feat/notebook-two-way-documents at abd57f8de6: step
+    ''Run dependency tests'' in job ''core-deps (3.13, core-py313)'' failed.'
+truth:
+  category: bad_code_deploy
+  service: bokeh
+  required_evidence_any:
+  - abd57f8de6
+provenance: recorded

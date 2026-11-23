@@ -1,0 +1,18 @@
+[
+  {
+    "author": "asvetlov",
+    "committedDate": "2026-10-07T18:21:20Z",
+    "messageHeadline": "Rewrite md_repr() on top of md_walk_all()",
+    "oid": "862acaf16a34db6b61d8b15a7b4aa1607a39209a",
+    "files": [
+      {
+        "filename": "CHANGES/1742.misc.rst",
+        "status": "added"
+      },
+      {
+        "filename": "multidict/_multilib/hashtable.h",
+        "status": "modified"
+      }
+    ]
+  }
+]

@@ -1,0 +1,118 @@
+[
+  {
+    "author": "jules-ch",
+    "committedDate": "2026-11-17T16:45:29Z",
+    "messageHeadline": "feat: add Arrow PyCapsule support for Dataset",
+    "oid": "6991fb7ba1549a96d754cfb76ce2f6d7ddf15283",
+    "files": [
+      {
+        "filename": "_stubtest/allowlist.txt",
+        "status": "modified"
+      },
+      {
+        "filename": "asv_bench/benchmarks/__init__.py",
+        "status": "modified"
+      },
+      {
+        "filename": "asv_bench/benchmarks/arrow.py",
+        "status": "added"
+      },
+      {
+        "filename": "doc/api/io.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "doc/conf.py",
+        "status": "modified"
+      },
+      {
+        "filename": "doc/user-guide/arrow.md",
+        "status": "added"
+      },
+      {
+        "filename": "doc/user-guide/index.md",
+        "status": "modified"
+      },
+      {
+        "filename": "doc/user-guide/io.md",
+        "status": "modified"
+      },
+      {
+        "filename": "doc/whats-new.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "pixi.toml",
+        "status": "modified"
+      },
+      {
+        "filename": "xarray/core/arrow.py",
+        "status": "added"
+      },
+      {
+        "filename": "xarray/core/dataarray.py",
+        "status": "modified"
+      },
+      {
+        "filename": "xarray/core/dataset.py",
+        "status": "modified"
+      },
+      {
+        "filename": "xarray/tests/test_dataarray.py",
+        "status": "modified"
+      },
+      {
+        "filename": "xarray/tests/test_dataset.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "jules-ch",
+    "committedDate": "2026-11-17T16:45:29Z",
+    "messageHeadline": "chore: raise on unamed and chunked dataset",
+    "oid": "6b9c45af61ca78d9edd74b622e218fabf69b6dfd",
+    "files": [
+      {
+        "filename": "xarray/core/arrow.py",
+        "status": "modified"
+      },
+      {
+        "filename": "xarray/core/dataarray.py",
+        "status": "modified"
+      },
+      {
+        "filename": "xarray/core/dataset.py",
+        "status": "modified"
+      },
+      {
+        "filename": "xarray/tests/test_dataarray.py",
+        "status": "modified"
+      },
+      {
+        "filename": "xarray/tests/test_dataset.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "jules-ch",
+    "committedDate": "2026-11-17T16:45:29Z",
+    "messageHeadline": "chore: move tests",
+    "oid": "fbe0781773d92fd3a7660ed580ec39d81c3ede9e",
+    "files": [
+      {
+        "filename": "xarray/tests/test_arrow.py",
+        "status": "added"
+      },
+      {
+        "filename": "xarray/tests/test_dataarray.py",
+        "status": "modified"
+      },
+      {
+        "filename": "xarray/tests/test_dataset.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

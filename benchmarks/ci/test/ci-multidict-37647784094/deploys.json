@@ -1,0 +1,25 @@
+[
+  {
+    "id": "b1660cc5b4",
+    "service": "multidict",
+    "version": "b1660cc5b4",
+    "ts": "2026-10-07T15:53:49Z",
+    "author": "asvetlov",
+    "summary": "Drop ALWAYS_INLINE from the C extension",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "AGENTS.md",
+      "CHANGES/1740.misc.rst",
+      "multidict/_multilib/bitmap.h",
+      "multidict/_multilib/bulk_update.h",
+      "multidict/_multilib/compiler.h",
+      "multidict/_multilib/dict.h",
+      "multidict/_multilib/hashtable.h",
+      "multidict/_multilib/htkeys.h",
+      "multidict/_multilib/identity.h",
+      "multidict/_multilib/unpack.h",
+      "tools/check_inlining.py"
+    ]
+  }
+]

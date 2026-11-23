@@ -1,0 +1,19 @@
+# Mined from https://github.com/pandas-dev/pandas/actions/runs/44420380546 (pandas-
+# dev/pandas, licence BSD-3-Clause). Fixed by run https://github.com/pandas-
+# dev/pandas/actions/runs/44584723193. Label rule: the fix changed files exactly one
+# tested commit touched. Fix touched: doc/source/whatsnew/v3.2.0.rst,
+# pandas/plotting/_core.py, pandas/plotting/_matplotlib/core.py,
+# pandas/plotting/_matplotlib/tools.py, pandas/tests/plotting/test_misc.py.
+id: ci-pandas-44420380546
+title: 'BUG: plotting into one shared axes hid tick labels on its siblings (GH#27052)'
+alert:
+  severity: ci
+  service: type-checking
+  summary: 'workflow Code Checks failed on bug-27052 at b47335b45f: step ''Typing Checks''
+    in job ''Type Checking'' failed.'
+truth:
+  category: bad_code_deploy
+  service: pandas
+  required_evidence_any:
+  - b47335b45f
+provenance: recorded

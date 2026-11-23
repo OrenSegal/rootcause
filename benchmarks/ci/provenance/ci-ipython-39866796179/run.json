@@ -1,0 +1,106 @@
+{
+  "attempt": 1,
+  "conclusion": "failure",
+  "createdAt": "2026-10-22T22:41:45Z",
+  "databaseId": 39866796179,
+  "displayTitle": "Fix UnboundLocalError when system() is interrupted during spawn \ud83e\udd16\ud83e\udd16",
+  "event": "pull_request",
+  "headBranch": "fix-system-interrupt-during-spawn",
+  "headSha": "9bddbb810454010e5b6ab2f4624170f6e7201eb1",
+  "jobs": [
+    {
+      "completedAt": "2026-10-22T22:42:07Z",
+      "conclusion": "failure",
+      "databaseId": 120130894201,
+      "name": "formatting",
+      "startedAt": "2026-10-22T22:41:48Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-22T22:41:50Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-22T22:41:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-22T22:41:55Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-22T22:41:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-22T22:41:58Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-10-22T22:41:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-22T22:42:00Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 4,
+          "startedAt": "2026-10-22T22:41:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-22T22:42:01Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "startedAt": "2026-10-22T22:42:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-22T22:42:06Z",
+          "conclusion": "failure",
+          "name": "Lint with darker",
+          "number": 6,
+          "startedAt": "2026-10-22T22:42:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-22T22:42:06Z",
+          "conclusion": "skipped",
+          "name": "Post Install uv",
+          "number": 10,
+          "startedAt": "2026-10-22T22:42:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-22T22:42:06Z",
+          "conclusion": "skipped",
+          "name": "Post Set up Python",
+          "number": 11,
+          "startedAt": "2026-10-22T22:42:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-22T22:42:06Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 12,
+          "startedAt": "2026-10-22T22:42:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-22T22:42:06Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-10-22T22:42:06Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/ipython/ipython/actions/runs/39866796179/job/120130894201"
+    }
+  ],
+  "name": "Python package",
+  "updatedAt": "2026-10-22T22:42:08Z",
+  "repository": "ipython/ipython"
+}

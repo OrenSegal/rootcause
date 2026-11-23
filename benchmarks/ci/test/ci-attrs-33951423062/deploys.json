@@ -1,0 +1,16 @@
+[
+  {
+    "id": "a636abe97f",
+    "service": "attrs",
+    "version": "a636abe97f",
+    "ts": "2026-09-04T16:44:44Z",
+    "author": "Nikhi00718",
+    "summary": "Resolve forward references in generated init annotations",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "src/attr/_make.py",
+      "tests/test_annotations.py"
+    ]
+  }
+]

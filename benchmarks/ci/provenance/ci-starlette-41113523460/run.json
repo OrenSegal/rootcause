@@ -1,0 +1,555 @@
+{
+  "attempt": 1,
+  "conclusion": "failure",
+  "createdAt": "2026-10-30T19:13:49Z",
+  "databaseId": 41113523460,
+  "displayTitle": "feat: add url_path_for to HTTPConnection and Jinja2Templates (#843)",
+  "event": "pull_request",
+  "headBranch": "fix/request-url-path-for-843",
+  "headSha": "7acdf700fb8b4050151c025b7fdd98c95f808dee",
+  "jobs": [
+    {
+      "completedAt": "2026-10-30T19:14:09Z",
+      "conclusion": "cancelled",
+      "databaseId": 124261718772,
+      "name": "Python 3.11",
+      "startedAt": "2026-10-30T19:13:52Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-30T19:13:54Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-30T19:13:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:13:55Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-30T19:13:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:14:04Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 3,
+          "startedAt": "2026-10-30T19:13:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:14:06Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-10-30T19:14:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:14:06Z",
+          "conclusion": "failure",
+          "name": "Run linting checks",
+          "number": 5,
+          "startedAt": "2026-10-30T19:14:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:14:06Z",
+          "conclusion": "skipped",
+          "name": "Build package & docs",
+          "number": 6,
+          "startedAt": "2026-10-30T19:14:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:14:06Z",
+          "conclusion": "skipped",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-10-30T19:14:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:14:06Z",
+          "conclusion": "skipped",
+          "name": "Enforce coverage",
+          "number": 8,
+          "startedAt": "2026-10-30T19:14:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:14:06Z",
+          "conclusion": "skipped",
+          "name": "Post Install uv",
+          "number": 15,
+          "startedAt": "2026-10-30T19:14:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:14:06Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 16,
+          "startedAt": "2026-10-30T19:14:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:14:06Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-30T19:14:06Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/Kludex/starlette/actions/runs/41113523460/job/124261718772"
+    },
+    {
+      "completedAt": "2026-10-30T19:14:00Z",
+      "conclusion": "cancelled",
+      "databaseId": 124261719047,
+      "name": "Python 3.13",
+      "startedAt": "2026-10-30T19:13:51Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-30T19:13:53Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-30T19:13:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:13:54Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-30T19:13:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:13:57Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 3,
+          "startedAt": "2026-10-30T19:13:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:13:58Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-10-30T19:13:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:13:59Z",
+          "conclusion": "failure",
+          "name": "Run linting checks",
+          "number": 5,
+          "startedAt": "2026-10-30T19:13:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:13:59Z",
+          "conclusion": "skipped",
+          "name": "Build package & docs",
+          "number": 6,
+          "startedAt": "2026-10-30T19:13:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:13:59Z",
+          "conclusion": "skipped",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-10-30T19:13:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:13:59Z",
+          "conclusion": "skipped",
+          "name": "Enforce coverage",
+          "number": 8,
+          "startedAt": "2026-10-30T19:13:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:13:59Z",
+          "conclusion": "skipped",
+          "name": "Post Install uv",
+          "number": 15,
+          "startedAt": "2026-10-30T19:13:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:13:59Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 16,
+          "startedAt": "2026-10-30T19:13:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:13:59Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-30T19:13:59Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/Kludex/starlette/actions/runs/41113523460/job/124261719047"
+    },
+    {
+      "completedAt": "2026-10-30T19:14:00Z",
+      "conclusion": "failure",
+      "databaseId": 124261719059,
+      "name": "Python 3.15",
+      "startedAt": "2026-10-30T19:13:51Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-30T19:13:52Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-30T19:13:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:13:54Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-30T19:13:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:13:56Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 3,
+          "startedAt": "2026-10-30T19:13:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:13:57Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-10-30T19:13:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:13:57Z",
+          "conclusion": "failure",
+          "name": "Run linting checks",
+          "number": 5,
+          "startedAt": "2026-10-30T19:13:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:13:57Z",
+          "conclusion": "skipped",
+          "name": "Build package & docs",
+          "number": 6,
+          "startedAt": "2026-10-30T19:13:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:13:57Z",
+          "conclusion": "skipped",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-10-30T19:13:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:13:57Z",
+          "conclusion": "skipped",
+          "name": "Enforce coverage",
+          "number": 8,
+          "startedAt": "2026-10-30T19:13:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:13:57Z",
+          "conclusion": "skipped",
+          "name": "Post Install uv",
+          "number": 15,
+          "startedAt": "2026-10-30T19:13:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:13:58Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 16,
+          "startedAt": "2026-10-30T19:13:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:13:58Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-30T19:13:58Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/Kludex/starlette/actions/runs/41113523460/job/124261719059"
+    },
+    {
+      "completedAt": "2026-10-30T19:14:14Z",
+      "conclusion": "cancelled",
+      "databaseId": 124261719079,
+      "name": "Python 3.14",
+      "startedAt": "2026-10-30T19:13:51Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-30T19:13:53Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-30T19:13:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:13:54Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-30T19:13:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:13:56Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 3,
+          "startedAt": "2026-10-30T19:13:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:13:58Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-10-30T19:13:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:13:58Z",
+          "conclusion": "skipped",
+          "name": "Run linting checks",
+          "number": 5,
+          "startedAt": "2026-10-30T19:13:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:14:01Z",
+          "conclusion": "success",
+          "name": "Build package & docs",
+          "number": 6,
+          "startedAt": "2026-10-30T19:13:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:14:10Z",
+          "conclusion": "success",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-10-30T19:14:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:14:11Z",
+          "conclusion": "failure",
+          "name": "Enforce coverage",
+          "number": 8,
+          "startedAt": "2026-10-30T19:14:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:14:11Z",
+          "conclusion": "skipped",
+          "name": "Post Install uv",
+          "number": 15,
+          "startedAt": "2026-10-30T19:14:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:14:11Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 16,
+          "startedAt": "2026-10-30T19:14:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:14:11Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-30T19:14:11Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/Kludex/starlette/actions/runs/41113523460/job/124261719079"
+    },
+    {
+      "completedAt": "2026-10-30T19:14:00Z",
+      "conclusion": "cancelled",
+      "databaseId": 124261719120,
+      "name": "Python 3.12",
+      "startedAt": "2026-10-30T19:13:51Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-30T19:13:53Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-30T19:13:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:13:54Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-30T19:13:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:13:57Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 3,
+          "startedAt": "2026-10-30T19:13:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:13:57Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "startedAt": "2026-10-30T19:13:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:13:57Z",
+          "conclusion": "failure",
+          "name": "Run linting checks",
+          "number": 5,
+          "startedAt": "2026-10-30T19:13:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:13:57Z",
+          "conclusion": "skipped",
+          "name": "Build package & docs",
+          "number": 6,
+          "startedAt": "2026-10-30T19:13:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:13:57Z",
+          "conclusion": "skipped",
+          "name": "Run tests",
+          "number": 7,
+          "startedAt": "2026-10-30T19:13:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:13:57Z",
+          "conclusion": "skipped",
+          "name": "Enforce coverage",
+          "number": 8,
+          "startedAt": "2026-10-30T19:13:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:13:57Z",
+          "conclusion": "skipped",
+          "name": "Post Install uv",
+          "number": 15,
+          "startedAt": "2026-10-30T19:13:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:13:58Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 16,
+          "startedAt": "2026-10-30T19:13:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:13:58Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-30T19:13:58Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/Kludex/starlette/actions/runs/41113523460/job/124261719120"
+    },
+    {
+      "completedAt": "2026-10-30T19:13:49Z",
+      "conclusion": "skipped",
+      "databaseId": 124261720205,
+      "name": "Docs preview (Cloudflare)",
+      "startedAt": "2026-10-30T19:13:50Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/Kludex/starlette/actions/runs/41113523460/job/124261720205"
+    },
+    {
+      "completedAt": "2026-10-30T19:14:19Z",
+      "conclusion": "failure",
+      "databaseId": 124261918220,
+      "name": "check",
+      "startedAt": "2026-10-30T19:14:16Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-30T19:14:17Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-30T19:14:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:14:17Z",
+          "conclusion": "failure",
+          "name": "Decide whether the needed jobs succeeded or failed",
+          "number": 2,
+          "startedAt": "2026-10-30T19:14:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-30T19:14:17Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 3,
+          "startedAt": "2026-10-30T19:14:17Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/Kludex/starlette/actions/runs/41113523460/job/124261918220"
+    }
+  ],
+  "name": "Test Suite",
+  "updatedAt": "2026-10-30T19:14:19Z",
+  "repository": "encode/starlette"
+}

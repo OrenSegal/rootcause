@@ -1,0 +1,11 @@
+{
+  "fixed_run": "https://github.com/fastapi/fastapi/actions/runs/44140625044",
+  "fixed_sha": "05f1dd0d97ab054790701ed8909aff6243e1f191",
+  "commits": [
+    "05f1dd0d97ab054790701ed8909aff6243e1f191"
+  ],
+  "files": [
+    "tests/test_parameter_extraction.py"
+  ],
+  "status": "ahead"
+}

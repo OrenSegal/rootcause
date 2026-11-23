@@ -1,0 +1,19 @@
+[
+  {
+    "id": "f005d1f095",
+    "service": "pytest-xdist",
+    "version": "f005d1f095",
+    "ts": "2026-11-11T17:11:14Z",
+    "author": "claude",
+    "summary": "Keep the worker interpreter's own sys.path for local workers",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "changelog/1049.bugfix.rst",
+      "src/xdist/plugin.py",
+      "src/xdist/remote.py",
+      "src/xdist/workermanage.py",
+      "testing/test_remote.py"
+    ]
+  }
+]

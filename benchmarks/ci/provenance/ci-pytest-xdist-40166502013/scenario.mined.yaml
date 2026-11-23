@@ -1,0 +1,21 @@
+# Mined from https://github.com/pytest-dev/pytest-xdist/actions/runs/40166502013
+# (pytest-dev/pytest-xdist, licence MIT). Fixed by run https://github.com/pytest-
+# dev/pytest-xdist/actions/runs/43965393518. Label rule: the failed log shows an
+# environment error: "version '3.9' with architecture 'x64' was not found". Fix touched:
+# .github/workflows/deploy.yml, .github/workflows/test.yml, .pre-commit-config.yaml,
+# changelog/1410.feature.rst, docs/how-to.rst, docs/subprocess.rst, pyproject.toml,
+# src/xdist/_path.py.
+id: ci-pytest-xdist-40166502013
+title: Honor --no-header in distributed terminal reporting
+alert:
+  severity: ci
+  service: test-py39-pytestmin-ubuntu-latest
+  summary: 'workflow test failed on fix-respect-no-header-20261001 at ae3f31bf37: step ''Set
+    up Python'' in job ''test (py39-pytestmin, ubuntu-latest)'' failed.'
+truth:
+  category: infrastructure
+  service: pytest-xdist
+  required_evidence_any:
+  - log-0237
+  - log-0507
+provenance: recorded

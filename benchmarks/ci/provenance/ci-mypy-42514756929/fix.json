@@ -1,0 +1,11 @@
+{
+  "fixed_run": "https://github.com/python/mypy/actions/runs/42527312373",
+  "fixed_sha": "6f2ce327028106e9e23f2c946ac7f2ab62b1c561",
+  "commits": [
+    "6f2ce327028106e9e23f2c946ac7f2ab62b1c561"
+  ],
+  "files": [
+    "test-data/unit/check-custom-plugin.test"
+  ],
+  "status": "ahead"
+}

@@ -1,0 +1,13 @@
+id: ci-networkx-42599643490
+title: Fix DFS traversal behavior when depth_limit is 0
+alert:
+  severity: ci
+  service: format
+  summary: 'workflow style failed on fix-dfs-depth-limit-zero at b9500b54de: step ''Lint''
+    in job ''format'' failed.'
+truth:
+  category: bad_code_deploy
+  service: networkx
+  required_evidence_any:
+  - b9500b54de
+provenance: recorded

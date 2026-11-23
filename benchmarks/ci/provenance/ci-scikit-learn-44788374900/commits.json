@@ -1,0 +1,22 @@
+[
+  {
+    "author": "Alok-Yadav25",
+    "committedDate": "2026-11-20T17:58:11Z",
+    "messageHeadline": "FIX move_estimator_to should not convert non-numeric/non-boolean array attributes (#35109)",
+    "oid": "d34a8b11f9bca91d39959181133725c3b86b03a6",
+    "files": [
+      {
+        "filename": "doc/whats_new/upcoming_changes/sklearn.utils/35109.fix.rst",
+        "status": "added"
+      },
+      {
+        "filename": "sklearn/utils/_array_api.py",
+        "status": "modified"
+      },
+      {
+        "filename": "sklearn/utils/tests/test_array_api.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

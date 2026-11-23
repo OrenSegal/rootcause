@@ -1,0 +1,22 @@
+[
+  {
+    "author": "ViktorBystrov72",
+    "committedDate": "2026-11-20T13:13:40Z",
+    "messageHeadline": "[unsupervised AI] \u0418\u0441\u043f\u0440\u0430\u0432\u0438\u0442\u044c \u0437\u0430\u0432\u0438\u0441\u0438\u043c\u043e\u0441\u0442\u0438 \u0433\u0440\u0430\u0444\u0430 \u043f\u0440\u0438 \u043f\u0440\u0438\u0441\u0432\u0430\u0438\u0432\u0430\u043d\u0438\u0438 \u0441\u0440\u0435\u0437\u0443",
+    "oid": "f993a0ff6bb8169f37899ddbc6ee684352a36592",
+    "files": [
+      {
+        "filename": "dask/array/core.py",
+        "status": "modified"
+      },
+      {
+        "filename": "dask/array/slicing.py",
+        "status": "modified"
+      },
+      {
+        "filename": "dask/array/tests/test_array_core.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

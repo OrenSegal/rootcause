@@ -1,0 +1,13 @@
+id: ci-urllib3-44754535247
+title: Reject decode-mode switches in read_chunked before consuming body data.
+alert:
+  severity: ci
+  service: coverage
+  summary: 'workflow CI failed on fix/read-chunked-decode-mode-switch at 37ad69262e: step
+    ''Combine & check coverage'' in job ''coverage'' failed.'
+truth:
+  category: bad_code_deploy
+  service: urllib3
+  required_evidence_any:
+  - 37ad69262e
+provenance: recorded

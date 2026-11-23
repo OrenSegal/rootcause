@@ -1,0 +1,14 @@
+{
+  "fixed_run": "https://github.com/holoviz/panel/actions/runs/44341803603",
+  "fixed_sha": "d7db7c614abefbbb082d3655dcf2c1d1ad986e39",
+  "commits": [
+    "7baead75c1d0b546e1458f7973b4f2aa17fae784",
+    "d7db7c614abefbbb082d3655dcf2c1d1ad986e39"
+  ],
+  "files": [
+    "panel/io/document.py",
+    "panel/tests/io/test_document.py"
+  ],
+  "merges": [],
+  "status": "ahead"
+}

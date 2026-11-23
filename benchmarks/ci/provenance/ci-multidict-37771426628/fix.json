@@ -1,0 +1,11 @@
+{
+  "fixed_run": "https://github.com/aio-libs/multidict/actions/runs/37773485134",
+  "fixed_sha": "cd6a3306676ba14d80c1d3b4e9b76df53298caed",
+  "commits": [
+    "cd6a3306676ba14d80c1d3b4e9b76df53298caed"
+  ],
+  "files": [
+    "tests/test_keys_dedup.py"
+  ],
+  "status": "ahead"
+}

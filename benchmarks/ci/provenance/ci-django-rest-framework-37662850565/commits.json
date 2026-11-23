@@ -1,0 +1,18 @@
+[
+  {
+    "author": "G-Glitch404",
+    "committedDate": "2026-10-07T17:39:04Z",
+    "messageHeadline": "Fix custom ChoiceField mappings for model choices",
+    "oid": "2832c2ed2ee18d2da429d0b1db03f2f6573fbbfb",
+    "files": [
+      {
+        "filename": "rest_framework/serializers.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_model_serializer.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

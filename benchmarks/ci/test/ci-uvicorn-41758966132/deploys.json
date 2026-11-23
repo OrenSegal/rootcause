@@ -1,0 +1,17 @@
+[
+  {
+    "id": "1aa219c8e5",
+    "service": "uvicorn",
+    "version": "1aa219c8e5",
+    "ts": "2026-11-04T02:10:07Z",
+    "author": "feiiiiii5",
+    "summary": "fix: preserve color overrides for compatible formatter factories",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "docs/settings.md",
+      "tests/test_config.py",
+      "uvicorn/config.py"
+    ]
+  }
+]

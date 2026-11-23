@@ -1,0 +1,13 @@
+id: ci-pytest-asyncio-40571601184
+title: 'fix(plugin): validate asyncio marker loop_scope with UsageError'
+alert:
+  severity: ci
+  service: run-linters
+  summary: 'workflow CI failed on fix/validate-marker-loop-scope at 5c58517276: step ''Run
+    pre-commit checks'' in job ''Run linters'' failed.'
+truth:
+  category: bad_code_deploy
+  service: pytest-asyncio
+  required_evidence_any:
+  - 5c58517276
+provenance: recorded

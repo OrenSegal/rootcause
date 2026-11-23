@@ -1,0 +1,18 @@
+[
+  {
+    "author": "VimalN2005",
+    "committedDate": "2026-09-12T09:29:37Z",
+    "messageHeadline": "Fix unique_for_<range> validation on partial serializer updates (refs #6341)",
+    "oid": "b5c3cbe896972c34269c1015d469f9535ac50972",
+    "files": [
+      {
+        "filename": "rest_framework/validators.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_validators.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

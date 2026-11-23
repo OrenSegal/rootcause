@@ -1,0 +1,13 @@
+id: ci-scrapy-42716259868
+title: Skip the empty LogStats and PeriodicLog lines on spider open
+alert:
+  severity: ci
+  service: tests-windows-3-11-9-min-extra-deps
+  summary: 'workflow CI failed on logstats-skip-first-line at 9902ebb9da: step ''Run tests''
+    in job ''tests (windows, 3.11.9, min-extra-deps)'' failed.'
+truth:
+  category: infrastructure
+  service: scrapy
+  required_evidence_any:
+  - log-0670
+provenance: recorded

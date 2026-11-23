@@ -1,0 +1,17 @@
+# Mined from https://github.com/dask/dask/actions/runs/43458367591 (dask/dask, licence
+# BSD-3-Clause). Fixed by run https://github.com/dask/dask/actions/runs/43462483522.
+# Label rule: the fix changed files exactly one tested commit touched. Fix touched:
+# dask/array/core.py.
+id: ci-dask-43458367591
+title: Use numeric gufunc core dimensions for dtype inference
+alert:
+  severity: ci
+  service: pre-commit-hooks
+  summary: 'workflow Linting failed on fix/gufunc-fixed-core-inference at 23f2677287: step
+    ''Run pre-commit/action@v3.0.1'' in job ''pre-commit hooks'' failed.'
+truth:
+  category: bad_code_deploy
+  service: dask
+  required_evidence_any:
+  - 23f2677287
+provenance: recorded

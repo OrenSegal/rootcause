@@ -1,0 +1,17 @@
+# Mined from https://github.com/aio-libs/multidict/actions/runs/38127829739 (aio-
+# libs/multidict, licence Apache-2.0). Fixed by run https://github.com/aio-
+# libs/multidict/actions/runs/38129649721. Label rule: the fix changed files exactly one
+# tested commit touched. Fix touched: tools/check_inlining.py.
+id: ci-multidict-38127829739
+title: Pass one batch state through update() and merge(), give extend() its own helpers
+alert:
+  severity: ci
+  service: inlining
+  summary: 'workflow CI/CD failed on claude/generalize-md-update-state-t-2753d0 at 2d488dc335:
+    step ''Check that the hot paths keep their helpers inlined'' in job ''Inlining'' failed.'
+truth:
+  category: bad_code_deploy
+  service: multidict
+  required_evidence_any:
+  - f6502e433e
+provenance: recorded

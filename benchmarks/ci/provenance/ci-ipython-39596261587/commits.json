@@ -1,0 +1,14 @@
+[
+  {
+    "author": "Carreau",
+    "committedDate": "2026-10-21T12:00:49Z",
+    "messageHeadline": "Apply suggestion from @Carreau",
+    "oid": "94c7262ef283efa6ff309431f2cf4dda319fc744",
+    "files": [
+      {
+        "filename": "IPython/core/magics/execution.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "fixed_run": "https://github.com/encode/django-rest-framework/actions/runs/37664201078",
+  "fixed_sha": "3de78e3305471994556d502dad6b917a9d891af9",
+  "commits": [
+    "3de78e3305471994556d502dad6b917a9d891af9"
+  ],
+  "files": [
+    "tests/test_model_serializer.py"
+  ],
+  "merges": [],
+  "status": "ahead"
+}

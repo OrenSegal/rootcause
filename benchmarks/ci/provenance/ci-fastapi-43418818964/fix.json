@@ -1,0 +1,15 @@
+{
+  "fixed_run": "https://github.com/fastapi/fastapi/actions/runs/43421096992",
+  "fixed_sha": "30d30475e7923ccc564ae83c21ce57210bdadc3a",
+  "commits": [
+    "be1584998c530d88dababb9a071d4d6bb22eceba",
+    "30d30475e7923ccc564ae83c21ce57210bdadc3a"
+  ],
+  "files": [
+    ".github/workflows/actions.lock",
+    ".github/workflows/zizmor.yml",
+    "pyproject.toml",
+    "uv.lock"
+  ],
+  "status": "ahead"
+}

@@ -1,0 +1,55 @@
+[
+  {
+    "id": "58572a0f43",
+    "service": "pydantic",
+    "version": "58572a0f43",
+    "ts": "2026-11-20T13:56:27Z",
+    "author": "alexmojaki",
+    "summary": "Benchmark JSON container union branch selection",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "tests/benchmarks/test_json_unions.py"
+    ]
+  },
+  {
+    "id": "f2b71eeea6",
+    "service": "pydantic",
+    "version": "f2b71eeea6",
+    "ts": "2026-11-20T13:56:41Z",
+    "author": "alexmojaki",
+    "summary": "Benchmark checked JSON skips for bytes and strings",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "tests/benchmarks/test_json_checked_skip.py"
+    ]
+  },
+  {
+    "id": "91667d013b",
+    "service": "pydantic",
+    "version": "91667d013b",
+    "ts": "2026-11-20T13:57:04Z",
+    "author": "alexmojaki",
+    "summary": "Benchmark after validators on JSON containers",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "tests/benchmarks/test_json_wrappers.py"
+    ]
+  },
+  {
+    "id": "fe5cff33bb",
+    "service": "pydantic",
+    "version": "fe5cff33bb",
+    "ts": "2026-11-20T14:00:20Z",
+    "author": "alexmojaki",
+    "summary": "Merge commit '91667' into codex/json-cursor-expand-unions",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "tests/benchmarks/test_json_checked_skip.py",
+      "tests/benchmarks/test_json_wrappers.py"
+    ]
+  }
+]

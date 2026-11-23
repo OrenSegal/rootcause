@@ -1,0 +1,16 @@
+[
+  {
+    "id": "39141b3e6d",
+    "service": "dask",
+    "version": "39141b3e6d",
+    "ts": "2026-11-20T22:44:55Z",
+    "author": "sohailshk",
+    "summary": "Fix groupby idxmin/idxmax picking the label from the first partition",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "dask/dataframe/dask_expr/_groupby.py",
+      "dask/dataframe/tests/test_groupby.py"
+    ]
+  }
+]

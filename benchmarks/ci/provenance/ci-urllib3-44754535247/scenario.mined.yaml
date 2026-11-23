@@ -1,0 +1,17 @@
+# Mined from https://github.com/urllib3/urllib3/actions/runs/44754535247
+# (urllib3/urllib3, licence MIT). Fixed by run
+# https://github.com/urllib3/urllib3/actions/runs/44757515906. Label rule: the fix
+# changed files exactly one tested commit touched. Fix touched: test/test_response.py.
+id: ci-urllib3-44754535247
+title: Reject decode-mode switches in read_chunked before consuming body data.
+alert:
+  severity: ci
+  service: coverage
+  summary: 'workflow CI failed on fix/read-chunked-decode-mode-switch at 37ad69262e: step
+    ''Combine & check coverage'' in job ''coverage'' failed.'
+truth:
+  category: bad_code_deploy
+  service: urllib3
+  required_evidence_any:
+  - 37ad69262e
+provenance: recorded

@@ -1,0 +1,14 @@
+{
+  "fixed_run": "https://github.com/pypa/pipx/actions/runs/44663152514",
+  "fixed_sha": "bbd36cbebdc7aa8184c0492993748fd4030f84c7",
+  "commits": [
+    "bbd36cbebdc7aa8184c0492993748fd4030f84c7"
+  ],
+  "files": [
+    "changelog.d/+upgrade-suffix-remedy.bugfix.rst",
+    "tests/test_upgrade.py",
+    "tests/test_upgrade_all.py"
+  ],
+  "merges": [],
+  "status": "ahead"
+}

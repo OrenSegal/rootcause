@@ -1,0 +1,15 @@
+{
+  "fixed_run": "https://github.com/bokeh/bokeh/actions/runs/44682827696",
+  "fixed_sha": "81f89675ad624f5ddf6bdf0a3f1c4299f2571366",
+  "commits": [
+    "81f89675ad624f5ddf6bdf0a3f1c4299f2571366"
+  ],
+  "files": [
+    ".github/workflows/bokeh-ci-full.yml",
+    "src/bokeh/models/util/structure.py",
+    "src/bokeh/sphinxext/bokeh_plot.py",
+    "tests/unit/bokeh/sphinxext/test_bokeh_plot.py"
+  ],
+  "merges": [],
+  "status": "ahead"
+}

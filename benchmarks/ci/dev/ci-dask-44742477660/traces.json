@@ -1,0 +1,92 @@
+[
+  {
+    "span_id": "run-44742477660",
+    "trace_id": "run-44742477660",
+    "parent_id": null,
+    "service": "linting",
+    "name": "Linting",
+    "start": "2026-11-20T13:13:51Z",
+    "duration_ms": 50000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-136309318350",
+    "trace_id": "run-44742477660",
+    "parent_id": "run-44742477660",
+    "service": "pre-commit-hooks",
+    "name": "pre-commit hooks",
+    "start": "2026-11-20T13:13:55Z",
+    "duration_ms": 45000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-136309318350-step-1",
+    "trace_id": "run-44742477660",
+    "parent_id": "job-136309318350",
+    "service": "pre-commit-hooks",
+    "name": "Set up job",
+    "start": "2026-11-20T13:13:56Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136309318350-step-2",
+    "trace_id": "run-44742477660",
+    "parent_id": "job-136309318350",
+    "service": "pre-commit-hooks",
+    "name": "Run actions/checkout@v7",
+    "start": "2026-11-20T13:13:57Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136309318350-step-3",
+    "trace_id": "run-44742477660",
+    "parent_id": "job-136309318350",
+    "service": "pre-commit-hooks",
+    "name": "Run actions/setup-python@v7",
+    "start": "2026-11-20T13:13:58Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136309318350-step-4",
+    "trace_id": "run-44742477660",
+    "parent_id": "job-136309318350",
+    "service": "pre-commit-hooks",
+    "name": "Run pre-commit/action@v3.0.1",
+    "start": "2026-11-20T13:13:58Z",
+    "duration_ms": 40000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-136309318350-step-6",
+    "trace_id": "run-44742477660",
+    "parent_id": "job-136309318350",
+    "service": "pre-commit-hooks",
+    "name": "Post Run pre-commit/action@v3.0.1",
+    "start": "2026-11-20T13:14:38Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136309318350-step-8",
+    "trace_id": "run-44742477660",
+    "parent_id": "job-136309318350",
+    "service": "pre-commit-hooks",
+    "name": "Post Run actions/checkout@v7",
+    "start": "2026-11-20T13:14:38Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136309318350-step-9",
+    "trace_id": "run-44742477660",
+    "parent_id": "job-136309318350",
+    "service": "pre-commit-hooks",
+    "name": "Complete job",
+    "start": "2026-11-20T13:14:38Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

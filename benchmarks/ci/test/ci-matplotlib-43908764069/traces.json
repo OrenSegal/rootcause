@@ -1,0 +1,212 @@
+[
+  {
+    "span_id": "run-43908764069",
+    "trace_id": "run-43908764069",
+    "parent_id": null,
+    "service": "tests",
+    "name": "Tests",
+    "start": "2026-11-16T16:33:16Z",
+    "duration_ms": 19000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-133444633636",
+    "trace_id": "run-43908764069",
+    "parent_id": "run-43908764069",
+    "service": "build-homebrew-cache-macos-26",
+    "name": "Build Homebrew cache (macos-26)",
+    "start": "2026-11-16T16:33:19Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133444633636-step-1",
+    "trace_id": "run-43908764069",
+    "parent_id": "job-133444633636",
+    "service": "build-homebrew-cache-macos-26",
+    "name": "Set up job",
+    "start": "2026-11-16T16:33:19Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133444633636-step-2",
+    "trace_id": "run-43908764069",
+    "parent_id": "job-133444633636",
+    "service": "build-homebrew-cache-macos-26",
+    "name": "Check for existing cache",
+    "start": "2026-11-16T16:33:20Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133444633636-step-13",
+    "trace_id": "run-43908764069",
+    "parent_id": "job-133444633636",
+    "service": "build-homebrew-cache-macos-26",
+    "name": "Complete job",
+    "start": "2026-11-16T16:33:21Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133444634176",
+    "trace_id": "run-43908764069",
+    "parent_id": "run-43908764069",
+    "service": "build-homebrew-cache-macos-15",
+    "name": "Build Homebrew cache (macos-15)",
+    "start": "2026-11-16T16:33:19Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133444634176-step-1",
+    "trace_id": "run-43908764069",
+    "parent_id": "job-133444634176",
+    "service": "build-homebrew-cache-macos-15",
+    "name": "Set up job",
+    "start": "2026-11-16T16:33:19Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133444634176-step-2",
+    "trace_id": "run-43908764069",
+    "parent_id": "job-133444634176",
+    "service": "build-homebrew-cache-macos-15",
+    "name": "Check for existing cache",
+    "start": "2026-11-16T16:33:20Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133444634176-step-13",
+    "trace_id": "run-43908764069",
+    "parent_id": "job-133444634176",
+    "service": "build-homebrew-cache-macos-15",
+    "name": "Complete job",
+    "start": "2026-11-16T16:33:21Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133444718594",
+    "trace_id": "run-43908764069",
+    "parent_id": "run-43908764069",
+    "service": "python-3-14-on-macos-26",
+    "name": "Python 3.14 on macos-26",
+    "start": "2026-11-16T16:33:27Z",
+    "duration_ms": 6000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-133444718594-step-1",
+    "trace_id": "run-43908764069",
+    "parent_id": "job-133444718594",
+    "service": "python-3-14-on-macos-26",
+    "name": "Set up job",
+    "start": "2026-11-16T16:33:27Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133444718594-step-2",
+    "trace_id": "run-43908764069",
+    "parent_id": "job-133444718594",
+    "service": "python-3-14-on-macos-26",
+    "name": "Disable unneeded macOS services",
+    "start": "2026-11-16T16:33:29Z",
+    "duration_ms": 1000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-133444718594-step-18",
+    "trace_id": "run-43908764069",
+    "parent_id": "job-133444718594",
+    "service": "python-3-14-on-macos-26",
+    "name": "Stop CPU monitor",
+    "start": "2026-11-16T16:33:30Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133444718594-step-19",
+    "trace_id": "run-43908764069",
+    "parent_id": "job-133444718594",
+    "service": "python-3-14-on-macos-26",
+    "name": "Upload CPU monitor log",
+    "start": "2026-11-16T16:33:30Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133444718594-step-20",
+    "trace_id": "run-43908764069",
+    "parent_id": "job-133444718594",
+    "service": "python-3-14-on-macos-26",
+    "name": "Complete job",
+    "start": "2026-11-16T16:33:30Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133444718622",
+    "trace_id": "run-43908764069",
+    "parent_id": "run-43908764069",
+    "service": "python-3-14-on-macos-15",
+    "name": "Python 3.14 on macos-15",
+    "start": "2026-11-16T16:33:28Z",
+    "duration_ms": 7000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-133444718622-step-1",
+    "trace_id": "run-43908764069",
+    "parent_id": "job-133444718622",
+    "service": "python-3-14-on-macos-15",
+    "name": "Set up job",
+    "start": "2026-11-16T16:33:29Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133444718622-step-2",
+    "trace_id": "run-43908764069",
+    "parent_id": "job-133444718622",
+    "service": "python-3-14-on-macos-15",
+    "name": "Disable unneeded macOS services",
+    "start": "2026-11-16T16:33:31Z",
+    "duration_ms": 1000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-133444718622-step-18",
+    "trace_id": "run-43908764069",
+    "parent_id": "job-133444718622",
+    "service": "python-3-14-on-macos-15",
+    "name": "Stop CPU monitor",
+    "start": "2026-11-16T16:33:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133444718622-step-19",
+    "trace_id": "run-43908764069",
+    "parent_id": "job-133444718622",
+    "service": "python-3-14-on-macos-15",
+    "name": "Upload CPU monitor log",
+    "start": "2026-11-16T16:33:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133444718622-step-20",
+    "trace_id": "run-43908764069",
+    "parent_id": "job-133444718622",
+    "service": "python-3-14-on-macos-15",
+    "name": "Complete job",
+    "start": "2026-11-16T16:33:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

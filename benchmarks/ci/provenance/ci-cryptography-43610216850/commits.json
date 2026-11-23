@@ -1,0 +1,34 @@
+[
+  {
+    "author": "jmestwa-coder",
+    "committedDate": "2026-11-14T15:26:33Z",
+    "messageHeadline": "check traditional dsa private keys match their public key",
+    "oid": "a2dbabd65444307f68fd678488221768e2dfb328",
+    "files": [
+      {
+        "filename": "CHANGELOG.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "docs/development/test-vectors.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "src/rust/cryptography-key-parsing/src/dsa.rs",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/hazmat/primitives/test_dsa.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/hazmat/primitives/test_serialization.py",
+        "status": "modified"
+      },
+      {
+        "filename": "vectors/cryptography_vectors/asymmetric/Traditional_OpenSSL_Serialization/dsa-inconsistent-public-key.pem",
+        "status": "added"
+      }
+    ]
+  }
+]

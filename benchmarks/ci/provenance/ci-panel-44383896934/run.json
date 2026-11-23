@@ -1,0 +1,294 @@
+{
+  "attempt": 1,
+  "conclusion": "failure",
+  "createdAt": "2026-11-18T19:47:04Z",
+  "databaseId": 44383896934,
+  "displayTitle": "fix: Resolve relative resource urls against the route a session is on",
+  "event": "pull_request",
+  "headBranch": "fix/nested-route-resources",
+  "headSha": "52769465812503f635b39f7714b2e2cfe789f672",
+  "jobs": [
+    {
+      "completedAt": "2026-11-18T19:47:13Z",
+      "conclusion": "success",
+      "databaseId": 135083143618,
+      "name": "Setup workflow",
+      "startedAt": "2026-11-18T19:47:07Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-18T19:47:09Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-18T19:47:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T19:47:09Z",
+          "conclusion": "skipped",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-11-18T19:47:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T19:47:10Z",
+          "conclusion": "success",
+          "name": "Check for code changes",
+          "number": 3,
+          "startedAt": "2026-11-18T19:47:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T19:47:10Z",
+          "conclusion": "success",
+          "name": "Set matrix option",
+          "number": 4,
+          "startedAt": "2026-11-18T19:47:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T19:47:10Z",
+          "conclusion": "success",
+          "name": "Set test matrix with 'default' option",
+          "number": 5,
+          "startedAt": "2026-11-18T19:47:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T19:47:10Z",
+          "conclusion": "skipped",
+          "name": "Set test matrix with 'full' option",
+          "number": 6,
+          "startedAt": "2026-11-18T19:47:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T19:47:10Z",
+          "conclusion": "skipped",
+          "name": "Set test matrix with 'downstream' option",
+          "number": 7,
+          "startedAt": "2026-11-18T19:47:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T19:47:10Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 8,
+          "startedAt": "2026-11-18T19:47:10Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/holoviz/panel/actions/runs/44383896934/job/135083143618"
+    },
+    {
+      "completedAt": "2026-11-18T19:47:24Z",
+      "conclusion": "success",
+      "databaseId": 135083144004,
+      "name": "Pixi lock",
+      "startedAt": "2026-11-18T19:47:07Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-18T19:47:11Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-18T19:47:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T19:47:21Z",
+          "conclusion": "success",
+          "name": "Run holoviz-dev/holoviz_tasks/pixi-lock@11eb638302f76ec64217e2eeddfb11df1f788b54",
+          "number": 2,
+          "startedAt": "2026-11-18T19:47:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T19:47:22Z",
+          "conclusion": "success",
+          "name": "Post Run holoviz-dev/holoviz_tasks/pixi-lock@11eb638302f76ec64217e2eeddfb11df1f788b54",
+          "number": 4,
+          "startedAt": "2026-11-18T19:47:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T19:47:22Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 5,
+          "startedAt": "2026-11-18T19:47:22Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/holoviz/panel/actions/runs/44383896934/job/135083144004"
+    },
+    {
+      "completedAt": "2026-11-18T19:47:12Z",
+      "conclusion": "success",
+      "databaseId": 135083144230,
+      "name": "optimize-png",
+      "startedAt": "2026-11-18T19:47:07Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-18T19:47:09Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-18T19:47:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T19:47:10Z",
+          "conclusion": "success",
+          "name": "Run holoviz-dev/holoviz_tasks/optimize-png@e9aaca7738db5d27bf34d0f69e25990b74a85eaf",
+          "number": 2,
+          "startedAt": "2026-11-18T19:47:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T19:47:10Z",
+          "conclusion": "success",
+          "name": "Post Run holoviz-dev/holoviz_tasks/optimize-png@e9aaca7738db5d27bf34d0f69e25990b74a85eaf",
+          "number": 4,
+          "startedAt": "2026-11-18T19:47:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T19:47:10Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 5,
+          "startedAt": "2026-11-18T19:47:10Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/holoviz/panel/actions/runs/44383896934/job/135083144230"
+    },
+    {
+      "completedAt": "2026-11-18T19:47:45Z",
+      "conclusion": "failure",
+      "databaseId": 135083227942,
+      "name": "Run pre-commit",
+      "startedAt": "2026-11-18T19:47:15Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-18T19:47:17Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-18T19:47:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T19:47:42Z",
+          "conclusion": "failure",
+          "name": "Run holoviz-dev/holoviz_tasks/pre-commit@11eb638302f76ec64217e2eeddfb11df1f788b54",
+          "number": 2,
+          "startedAt": "2026-11-18T19:47:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T19:47:43Z",
+          "conclusion": "success",
+          "name": "Post Run holoviz-dev/holoviz_tasks/pre-commit@11eb638302f76ec64217e2eeddfb11df1f788b54",
+          "number": 4,
+          "startedAt": "2026-11-18T19:47:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T19:47:43Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 5,
+          "startedAt": "2026-11-18T19:47:43Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/holoviz/panel/actions/runs/44383896934/job/135083227942"
+    },
+    {
+      "completedAt": "2026-11-18T19:47:52Z",
+      "conclusion": "success",
+      "databaseId": 135083592690,
+      "name": "result:test",
+      "startedAt": "2026-11-18T19:47:48Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-18T19:47:49Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-18T19:47:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T19:47:49Z",
+          "conclusion": "skipped",
+          "name": "check for failures",
+          "number": 2,
+          "startedAt": "2026-11-18T19:47:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-18T19:47:49Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 3,
+          "startedAt": "2026-11-18T19:47:49Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/holoviz/panel/actions/runs/44383896934/job/135083592690"
+    },
+    {
+      "completedAt": "2026-11-18T19:47:45Z",
+      "conclusion": "skipped",
+      "databaseId": 135083593282,
+      "name": "type:${{ matrix.environment }}:${{ matrix.os }}",
+      "startedAt": "2026-11-18T19:47:46Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/holoviz/panel/actions/runs/44383896934/job/135083593282"
+    },
+    {
+      "completedAt": "2026-11-18T19:47:45Z",
+      "conclusion": "skipped",
+      "databaseId": 135083593489,
+      "name": "ui:${{ matrix.environment }}:${{ matrix.os }}",
+      "startedAt": "2026-11-18T19:47:46Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/holoviz/panel/actions/runs/44383896934/job/135083593489"
+    },
+    {
+      "completedAt": "2026-11-18T19:47:45Z",
+      "conclusion": "skipped",
+      "databaseId": 135083593552,
+      "name": "unit:${{ matrix.environment }}:${{ matrix.os }}",
+      "startedAt": "2026-11-18T19:47:46Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/holoviz/panel/actions/runs/44383896934/job/135083593552"
+    },
+    {
+      "completedAt": "2026-11-18T19:47:45Z",
+      "conclusion": "skipped",
+      "databaseId": 135083594050,
+      "name": "core:${{ matrix.environment }}:${{ matrix.os }}",
+      "startedAt": "2026-11-18T19:47:46Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/holoviz/panel/actions/runs/44383896934/job/135083594050"
+    }
+  ],
+  "name": "tests",
+  "updatedAt": "2026-11-18T19:47:52Z",
+  "repository": "holoviz/panel"
+}

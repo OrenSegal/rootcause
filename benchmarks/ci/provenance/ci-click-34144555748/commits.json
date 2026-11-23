@@ -1,0 +1,18 @@
+[
+  {
+    "author": "seethinajayadileep",
+    "committedDate": "2026-09-07T16:42:52Z",
+    "messageHeadline": "Fix Windows click.edit notepad launch failures",
+    "oid": "3068b299db706b947165d3fe3bb56aaad256ff3c",
+    "files": [
+      {
+        "filename": "src/click/_termui_impl.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_termui.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

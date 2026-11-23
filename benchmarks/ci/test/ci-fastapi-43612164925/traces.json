@@ -1,0 +1,4022 @@
+[
+  {
+    "span_id": "run-43612164925",
+    "trace_id": "run-43612164925",
+    "parent_id": null,
+    "service": "test",
+    "name": "Test",
+    "start": "2026-11-14T15:48:37Z",
+    "duration_ms": 739000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-132499344543",
+    "trace_id": "run-43612164925",
+    "parent_id": "run-43612164925",
+    "service": "regression-test",
+    "name": "regression-test",
+    "start": "2026-11-14T15:48:40Z",
+    "duration_ms": 28000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499344543-step-1",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499344543",
+    "service": "regression-test",
+    "name": "Set up job",
+    "start": "2026-11-14T15:48:41Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499344543-step-2",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499344543",
+    "service": "regression-test",
+    "name": "Check out the pull request",
+    "start": "2026-11-14T15:48:43Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499344543-step-3",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499344543",
+    "service": "regression-test",
+    "name": "Find changed tests",
+    "start": "2026-11-14T15:48:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499344543-step-4",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499344543",
+    "service": "regression-test",
+    "name": "Check out the base revision",
+    "start": "2026-11-14T15:48:50Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499344543-step-5",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499344543",
+    "service": "regression-test",
+    "name": "Set up Python",
+    "start": "2026-11-14T15:48:53Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499344543-step-6",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499344543",
+    "service": "regression-test",
+    "name": "Setup uv",
+    "start": "2026-11-14T15:48:53Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499344543-step-7",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499344543",
+    "service": "regression-test",
+    "name": "Run the changed tests against the base code",
+    "start": "2026-11-14T15:48:55Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499344543-step-11",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499344543",
+    "service": "regression-test",
+    "name": "Post Setup uv",
+    "start": "2026-11-14T15:49:02Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499344543-step-12",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499344543",
+    "service": "regression-test",
+    "name": "Post Set up Python",
+    "start": "2026-11-14T15:49:05Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499344543-step-13",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499344543",
+    "service": "regression-test",
+    "name": "Post Check out the base revision",
+    "start": "2026-11-14T15:49:05Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499344543-step-14",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499344543",
+    "service": "regression-test",
+    "name": "Post Check out the pull request",
+    "start": "2026-11-14T15:49:05Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499344543-step-15",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499344543",
+    "service": "regression-test",
+    "name": "Complete job",
+    "start": "2026-11-14T15:49:05Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499344857",
+    "trace_id": "run-43612164925",
+    "parent_id": "run-43612164925",
+    "service": "changes",
+    "name": "changes",
+    "start": "2026-11-14T15:48:40Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499344857-step-1",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499344857",
+    "service": "changes",
+    "name": "Set up job",
+    "start": "2026-11-14T15:48:41Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499344857-step-2",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499344857",
+    "service": "changes",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:48:42Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499344857-step-3",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499344857",
+    "service": "changes",
+    "name": "Run dorny/paths-filter@v4.0.3",
+    "start": "2026-11-14T15:48:44Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499344857-step-6",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499344857",
+    "service": "changes",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:48:45Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499344857-step-7",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499344857",
+    "service": "changes",
+    "name": "Complete job",
+    "start": "2026-11-14T15:48:45Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499392738",
+    "trace_id": "run-43612164925",
+    "parent_id": "run-43612164925",
+    "service": "benchmark",
+    "name": "benchmark",
+    "start": "2026-11-14T15:48:50Z",
+    "duration_ms": 97000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499392738-step-1",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499392738",
+    "service": "benchmark",
+    "name": "Set up job",
+    "start": "2026-11-14T15:48:51Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499392738-step-2",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499392738",
+    "service": "benchmark",
+    "name": "Dump GitHub context",
+    "start": "2026-11-14T15:48:53Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499392738-step-3",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499392738",
+    "service": "benchmark",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:48:53Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499392738-step-4",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499392738",
+    "service": "benchmark",
+    "name": "Set up Python",
+    "start": "2026-11-14T15:48:55Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499392738-step-5",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499392738",
+    "service": "benchmark",
+    "name": "Setup uv",
+    "start": "2026-11-14T15:48:56Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499392738-step-6",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499392738",
+    "service": "benchmark",
+    "name": "Install Dependencies",
+    "start": "2026-11-14T15:48:58Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499392738-step-7",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499392738",
+    "service": "benchmark",
+    "name": "CodSpeed benchmarks",
+    "start": "2026-11-14T15:48:59Z",
+    "duration_ms": 70000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499392738-step-8",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499392738",
+    "service": "benchmark",
+    "name": "CodSpeed memory benchmark",
+    "start": "2026-11-14T15:50:09Z",
+    "duration_ms": 14000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499392738-step-12",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499392738",
+    "service": "benchmark",
+    "name": "Post CodSpeed memory benchmark",
+    "start": "2026-11-14T15:50:23Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499392738-step-13",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499392738",
+    "service": "benchmark",
+    "name": "Post CodSpeed benchmarks",
+    "start": "2026-11-14T15:50:23Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499392738-step-14",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499392738",
+    "service": "benchmark",
+    "name": "Post Setup uv",
+    "start": "2026-11-14T15:50:23Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499392738-step-15",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499392738",
+    "service": "benchmark",
+    "name": "Post Set up Python",
+    "start": "2026-11-14T15:50:23Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499392738-step-16",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499392738",
+    "service": "benchmark",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:50:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499392738-step-17",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499392738",
+    "service": "benchmark",
+    "name": "Complete job",
+    "start": "2026-11-14T15:50:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393083",
+    "trace_id": "run-43612164925",
+    "parent_id": "run-43612164925",
+    "service": "test-windows-latest-3-14-no-deprecation-highest-starlette-pypi",
+    "name": "test (windows-latest, 3.14, no-deprecation, highest, starlette-pypi)",
+    "start": "2026-11-14T15:48:51Z",
+    "duration_ms": 156000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393083-step-1",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393083",
+    "service": "test-windows-latest-3-14-no-deprecation-highest-starlette-pypi",
+    "name": "Set up job",
+    "start": "2026-11-14T15:48:52Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393083-step-2",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393083",
+    "service": "test-windows-latest-3-14-no-deprecation-highest-starlette-pypi",
+    "name": "Dump GitHub context",
+    "start": "2026-11-14T15:48:54Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393083-step-3",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393083",
+    "service": "test-windows-latest-3-14-no-deprecation-highest-starlette-pypi",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:48:55Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393083-step-4",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393083",
+    "service": "test-windows-latest-3-14-no-deprecation-highest-starlette-pypi",
+    "name": "Set up Python",
+    "start": "2026-11-14T15:49:03Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393083-step-5",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393083",
+    "service": "test-windows-latest-3-14-no-deprecation-highest-starlette-pypi",
+    "name": "Setup uv",
+    "start": "2026-11-14T15:49:03Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393083-step-6",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393083",
+    "service": "test-windows-latest-3-14-no-deprecation-highest-starlette-pypi",
+    "name": "Install Dependencies",
+    "start": "2026-11-14T15:49:09Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393083-step-12",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393083",
+    "service": "test-windows-latest-3-14-no-deprecation-highest-starlette-pypi",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-14T15:49:12Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393083-step-13",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393083",
+    "service": "test-windows-latest-3-14-no-deprecation-highest-starlette-pypi",
+    "name": "Test",
+    "start": "2026-11-14T15:49:12Z",
+    "duration_ms": 131000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393083-step-26",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393083",
+    "service": "test-windows-latest-3-14-no-deprecation-highest-starlette-pypi",
+    "name": "Post Setup uv",
+    "start": "2026-11-14T15:51:23Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393083-step-27",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393083",
+    "service": "test-windows-latest-3-14-no-deprecation-highest-starlette-pypi",
+    "name": "Post Set up Python",
+    "start": "2026-11-14T15:51:23Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393083-step-28",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393083",
+    "service": "test-windows-latest-3-14-no-deprecation-highest-starlette-pypi",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:51:24Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393083-step-29",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393083",
+    "service": "test-windows-latest-3-14-no-deprecation-highest-starlette-pypi",
+    "name": "Complete job",
+    "start": "2026-11-14T15:51:25Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393135",
+    "trace_id": "run-43612164925",
+    "parent_id": "run-43612164925",
+    "service": "test-windows-latest-3-15-no-deprecation-highest-starlette-git",
+    "name": "test (windows-latest, 3.15, no-deprecation, highest, starlette-git)",
+    "start": "2026-11-14T15:48:50Z",
+    "duration_ms": 200000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393135-step-1",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393135",
+    "service": "test-windows-latest-3-15-no-deprecation-highest-starlette-git",
+    "name": "Set up job",
+    "start": "2026-11-14T15:48:51Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393135-step-2",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393135",
+    "service": "test-windows-latest-3-15-no-deprecation-highest-starlette-git",
+    "name": "Dump GitHub context",
+    "start": "2026-11-14T15:48:52Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393135-step-3",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393135",
+    "service": "test-windows-latest-3-15-no-deprecation-highest-starlette-git",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:48:53Z",
+    "duration_ms": 10000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393135-step-4",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393135",
+    "service": "test-windows-latest-3-15-no-deprecation-highest-starlette-git",
+    "name": "Set up Python",
+    "start": "2026-11-14T15:49:03Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393135-step-5",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393135",
+    "service": "test-windows-latest-3-15-no-deprecation-highest-starlette-git",
+    "name": "Setup uv",
+    "start": "2026-11-14T15:49:03Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393135-step-6",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393135",
+    "service": "test-windows-latest-3-15-no-deprecation-highest-starlette-git",
+    "name": "Install Dependencies",
+    "start": "2026-11-14T15:49:11Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393135-step-8",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393135",
+    "service": "test-windows-latest-3-15-no-deprecation-highest-starlette-git",
+    "name": "Install Starlette from source",
+    "start": "2026-11-14T15:49:14Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393135-step-12",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393135",
+    "service": "test-windows-latest-3-15-no-deprecation-highest-starlette-git",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-14T15:49:18Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393135-step-13",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393135",
+    "service": "test-windows-latest-3-15-no-deprecation-highest-starlette-git",
+    "name": "Test",
+    "start": "2026-11-14T15:49:19Z",
+    "duration_ms": 167000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393135-step-26",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393135",
+    "service": "test-windows-latest-3-15-no-deprecation-highest-starlette-git",
+    "name": "Post Setup uv",
+    "start": "2026-11-14T15:52:06Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393135-step-27",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393135",
+    "service": "test-windows-latest-3-15-no-deprecation-highest-starlette-git",
+    "name": "Post Set up Python",
+    "start": "2026-11-14T15:52:06Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393135-step-28",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393135",
+    "service": "test-windows-latest-3-15-no-deprecation-highest-starlette-git",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:52:06Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393135-step-29",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393135",
+    "service": "test-windows-latest-3-15-no-deprecation-highest-starlette-git",
+    "name": "Complete job",
+    "start": "2026-11-14T15:52:08Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393150",
+    "trace_id": "run-43612164925",
+    "parent_id": "run-43612164925",
+    "service": "test-macos-latest-3-15t-no-deprecation-highest-starlette-pypi",
+    "name": "test (macos-latest, 3.15t, no-deprecation, highest, starlette-pypi)",
+    "start": "2026-11-14T15:48:54Z",
+    "duration_ms": 344000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393150-step-1",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393150",
+    "service": "test-macos-latest-3-15t-no-deprecation-highest-starlette-pypi",
+    "name": "Set up job",
+    "start": "2026-11-14T15:48:55Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393150-step-2",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393150",
+    "service": "test-macos-latest-3-15t-no-deprecation-highest-starlette-pypi",
+    "name": "Dump GitHub context",
+    "start": "2026-11-14T15:48:57Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393150-step-3",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393150",
+    "service": "test-macos-latest-3-15t-no-deprecation-highest-starlette-pypi",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:48:57Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393150-step-4",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393150",
+    "service": "test-macos-latest-3-15t-no-deprecation-highest-starlette-pypi",
+    "name": "Set up Python",
+    "start": "2026-11-14T15:49:02Z",
+    "duration_ms": 57000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393150-step-5",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393150",
+    "service": "test-macos-latest-3-15t-no-deprecation-highest-starlette-pypi",
+    "name": "Setup uv",
+    "start": "2026-11-14T15:49:59Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393150-step-6",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393150",
+    "service": "test-macos-latest-3-15t-no-deprecation-highest-starlette-pypi",
+    "name": "Install Dependencies",
+    "start": "2026-11-14T15:50:06Z",
+    "duration_ms": 103000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393150-step-12",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393150",
+    "service": "test-macos-latest-3-15t-no-deprecation-highest-starlette-pypi",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-14T15:51:49Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393150-step-13",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393150",
+    "service": "test-macos-latest-3-15t-no-deprecation-highest-starlette-pypi",
+    "name": "Test",
+    "start": "2026-11-14T15:51:49Z",
+    "duration_ms": 158000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393150-step-26",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393150",
+    "service": "test-macos-latest-3-15t-no-deprecation-highest-starlette-pypi",
+    "name": "Post Setup uv",
+    "start": "2026-11-14T15:54:27Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393150-step-27",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393150",
+    "service": "test-macos-latest-3-15t-no-deprecation-highest-starlette-pypi",
+    "name": "Post Set up Python",
+    "start": "2026-11-14T15:54:27Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393150-step-28",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393150",
+    "service": "test-macos-latest-3-15t-no-deprecation-highest-starlette-pypi",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:54:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393150-step-29",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393150",
+    "service": "test-macos-latest-3-15t-no-deprecation-highest-starlette-pypi",
+    "name": "Complete job",
+    "start": "2026-11-14T15:54:28Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393152",
+    "trace_id": "run-43612164925",
+    "parent_id": "run-43612164925",
+    "service": "test-windows-latest-3-14-no-deprecation-highest-starlette-git",
+    "name": "test (windows-latest, 3.14, no-deprecation, highest, starlette-git)",
+    "start": "2026-11-14T15:48:50Z",
+    "duration_ms": 156000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393152-step-1",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393152",
+    "service": "test-windows-latest-3-14-no-deprecation-highest-starlette-git",
+    "name": "Set up job",
+    "start": "2026-11-14T15:48:51Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393152-step-2",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393152",
+    "service": "test-windows-latest-3-14-no-deprecation-highest-starlette-git",
+    "name": "Dump GitHub context",
+    "start": "2026-11-14T15:48:53Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393152-step-3",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393152",
+    "service": "test-windows-latest-3-14-no-deprecation-highest-starlette-git",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:48:53Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393152-step-4",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393152",
+    "service": "test-windows-latest-3-14-no-deprecation-highest-starlette-git",
+    "name": "Set up Python",
+    "start": "2026-11-14T15:49:02Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393152-step-5",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393152",
+    "service": "test-windows-latest-3-14-no-deprecation-highest-starlette-git",
+    "name": "Setup uv",
+    "start": "2026-11-14T15:49:02Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393152-step-6",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393152",
+    "service": "test-windows-latest-3-14-no-deprecation-highest-starlette-git",
+    "name": "Install Dependencies",
+    "start": "2026-11-14T15:49:09Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393152-step-8",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393152",
+    "service": "test-windows-latest-3-14-no-deprecation-highest-starlette-git",
+    "name": "Install Starlette from source",
+    "start": "2026-11-14T15:49:12Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393152-step-12",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393152",
+    "service": "test-windows-latest-3-14-no-deprecation-highest-starlette-git",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-14T15:49:16Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393152-step-13",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393152",
+    "service": "test-windows-latest-3-14-no-deprecation-highest-starlette-git",
+    "name": "Test",
+    "start": "2026-11-14T15:49:16Z",
+    "duration_ms": 126000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393152-step-26",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393152",
+    "service": "test-windows-latest-3-14-no-deprecation-highest-starlette-git",
+    "name": "Post Setup uv",
+    "start": "2026-11-14T15:51:22Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393152-step-27",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393152",
+    "service": "test-windows-latest-3-14-no-deprecation-highest-starlette-git",
+    "name": "Post Set up Python",
+    "start": "2026-11-14T15:51:23Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393152-step-28",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393152",
+    "service": "test-windows-latest-3-14-no-deprecation-highest-starlette-git",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:51:23Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393152-step-29",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393152",
+    "service": "test-windows-latest-3-14-no-deprecation-highest-starlette-git",
+    "name": "Complete job",
+    "start": "2026-11-14T15:51:25Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393154",
+    "trace_id": "run-43612164925",
+    "parent_id": "run-43612164925",
+    "service": "test-windows-latest-3-15t-no-deprecation-highest-starlette-pypi",
+    "name": "test (windows-latest, 3.15t, no-deprecation, highest, starlette-pypi)",
+    "start": "2026-11-14T15:48:51Z",
+    "duration_ms": 454000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393154-step-1",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393154",
+    "service": "test-windows-latest-3-15t-no-deprecation-highest-starlette-pypi",
+    "name": "Set up job",
+    "start": "2026-11-14T15:48:52Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393154-step-2",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393154",
+    "service": "test-windows-latest-3-15t-no-deprecation-highest-starlette-pypi",
+    "name": "Dump GitHub context",
+    "start": "2026-11-14T15:48:53Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393154-step-3",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393154",
+    "service": "test-windows-latest-3-15t-no-deprecation-highest-starlette-pypi",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:48:54Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393154-step-4",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393154",
+    "service": "test-windows-latest-3-15t-no-deprecation-highest-starlette-pypi",
+    "name": "Set up Python",
+    "start": "2026-11-14T15:49:03Z",
+    "duration_ms": 44000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393154-step-5",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393154",
+    "service": "test-windows-latest-3-15t-no-deprecation-highest-starlette-pypi",
+    "name": "Setup uv",
+    "start": "2026-11-14T15:49:47Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393154-step-6",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393154",
+    "service": "test-windows-latest-3-15t-no-deprecation-highest-starlette-pypi",
+    "name": "Install Dependencies",
+    "start": "2026-11-14T15:49:54Z",
+    "duration_ms": 126000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393154-step-12",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393154",
+    "service": "test-windows-latest-3-15t-no-deprecation-highest-starlette-pypi",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-14T15:52:00Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393154-step-13",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393154",
+    "service": "test-windows-latest-3-15t-no-deprecation-highest-starlette-pypi",
+    "name": "Test",
+    "start": "2026-11-14T15:52:00Z",
+    "duration_ms": 260000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393154-step-26",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393154",
+    "service": "test-windows-latest-3-15t-no-deprecation-highest-starlette-pypi",
+    "name": "Post Setup uv",
+    "start": "2026-11-14T15:56:20Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393154-step-27",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393154",
+    "service": "test-windows-latest-3-15t-no-deprecation-highest-starlette-pypi",
+    "name": "Post Set up Python",
+    "start": "2026-11-14T15:56:20Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393154-step-28",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393154",
+    "service": "test-windows-latest-3-15t-no-deprecation-highest-starlette-pypi",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:56:21Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393154-step-29",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393154",
+    "service": "test-windows-latest-3-15t-no-deprecation-highest-starlette-pypi",
+    "name": "Complete job",
+    "start": "2026-11-14T15:56:23Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393162",
+    "trace_id": "run-43612164925",
+    "parent_id": "run-43612164925",
+    "service": "test-windows-latest-3-15t-no-deprecation-highest-starlette-git",
+    "name": "test (windows-latest, 3.15t, no-deprecation, highest, starlette-git)",
+    "start": "2026-11-14T15:48:51Z",
+    "duration_ms": 517000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393162-step-1",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393162",
+    "service": "test-windows-latest-3-15t-no-deprecation-highest-starlette-git",
+    "name": "Set up job",
+    "start": "2026-11-14T15:48:52Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393162-step-2",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393162",
+    "service": "test-windows-latest-3-15t-no-deprecation-highest-starlette-git",
+    "name": "Dump GitHub context",
+    "start": "2026-11-14T15:48:54Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393162-step-3",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393162",
+    "service": "test-windows-latest-3-15t-no-deprecation-highest-starlette-git",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:48:55Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393162-step-4",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393162",
+    "service": "test-windows-latest-3-15t-no-deprecation-highest-starlette-git",
+    "name": "Set up Python",
+    "start": "2026-11-14T15:49:04Z",
+    "duration_ms": 47000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393162-step-5",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393162",
+    "service": "test-windows-latest-3-15t-no-deprecation-highest-starlette-git",
+    "name": "Setup uv",
+    "start": "2026-11-14T15:49:51Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393162-step-6",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393162",
+    "service": "test-windows-latest-3-15t-no-deprecation-highest-starlette-git",
+    "name": "Install Dependencies",
+    "start": "2026-11-14T15:49:59Z",
+    "duration_ms": 127000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393162-step-8",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393162",
+    "service": "test-windows-latest-3-15t-no-deprecation-highest-starlette-git",
+    "name": "Install Starlette from source",
+    "start": "2026-11-14T15:52:06Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393162-step-12",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393162",
+    "service": "test-windows-latest-3-15t-no-deprecation-highest-starlette-git",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-14T15:52:10Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393162-step-13",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393162",
+    "service": "test-windows-latest-3-15t-no-deprecation-highest-starlette-git",
+    "name": "Test",
+    "start": "2026-11-14T15:52:11Z",
+    "duration_ms": 311000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393162-step-26",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393162",
+    "service": "test-windows-latest-3-15t-no-deprecation-highest-starlette-git",
+    "name": "Post Setup uv",
+    "start": "2026-11-14T15:57:22Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393162-step-27",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393162",
+    "service": "test-windows-latest-3-15t-no-deprecation-highest-starlette-git",
+    "name": "Post Set up Python",
+    "start": "2026-11-14T15:57:23Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393162-step-28",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393162",
+    "service": "test-windows-latest-3-15t-no-deprecation-highest-starlette-git",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:57:23Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393162-step-29",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393162",
+    "service": "test-windows-latest-3-15t-no-deprecation-highest-starlette-git",
+    "name": "Complete job",
+    "start": "2026-11-14T15:57:25Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393163",
+    "trace_id": "run-43612164925",
+    "parent_id": "run-43612164925",
+    "service": "test-macos-latest-3-14-no-deprecation-highest-starlette-pypi",
+    "name": "test (macos-latest, 3.14, no-deprecation, highest, starlette-pypi)",
+    "start": "2026-11-14T15:49:04Z",
+    "duration_ms": 149000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393163-step-1",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393163",
+    "service": "test-macos-latest-3-14-no-deprecation-highest-starlette-pypi",
+    "name": "Set up job",
+    "start": "2026-11-14T15:49:04Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393163-step-2",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393163",
+    "service": "test-macos-latest-3-14-no-deprecation-highest-starlette-pypi",
+    "name": "Dump GitHub context",
+    "start": "2026-11-14T15:49:07Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393163-step-3",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393163",
+    "service": "test-macos-latest-3-14-no-deprecation-highest-starlette-pypi",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:49:07Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393163-step-4",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393163",
+    "service": "test-macos-latest-3-14-no-deprecation-highest-starlette-pypi",
+    "name": "Set up Python",
+    "start": "2026-11-14T15:49:11Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393163-step-5",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393163",
+    "service": "test-macos-latest-3-14-no-deprecation-highest-starlette-pypi",
+    "name": "Setup uv",
+    "start": "2026-11-14T15:49:11Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393163-step-6",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393163",
+    "service": "test-macos-latest-3-14-no-deprecation-highest-starlette-pypi",
+    "name": "Install Dependencies",
+    "start": "2026-11-14T15:49:19Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393163-step-12",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393163",
+    "service": "test-macos-latest-3-14-no-deprecation-highest-starlette-pypi",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-14T15:49:21Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393163-step-13",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393163",
+    "service": "test-macos-latest-3-14-no-deprecation-highest-starlette-pypi",
+    "name": "Test",
+    "start": "2026-11-14T15:49:21Z",
+    "duration_ms": 124000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393163-step-26",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393163",
+    "service": "test-macos-latest-3-14-no-deprecation-highest-starlette-pypi",
+    "name": "Post Setup uv",
+    "start": "2026-11-14T15:51:25Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393163-step-27",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393163",
+    "service": "test-macos-latest-3-14-no-deprecation-highest-starlette-pypi",
+    "name": "Post Set up Python",
+    "start": "2026-11-14T15:51:25Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393163-step-28",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393163",
+    "service": "test-macos-latest-3-14-no-deprecation-highest-starlette-pypi",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:51:26Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393163-step-29",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393163",
+    "service": "test-macos-latest-3-14-no-deprecation-highest-starlette-pypi",
+    "name": "Complete job",
+    "start": "2026-11-14T15:51:27Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393177",
+    "trace_id": "run-43612164925",
+    "parent_id": "run-43612164925",
+    "service": "test-macos-latest-3-15-no-deprecation-highest-starlette-pypi",
+    "name": "test (macos-latest, 3.15, no-deprecation, highest, starlette-pypi)",
+    "start": "2026-11-14T15:49:11Z",
+    "duration_ms": 174000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393177-step-1",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393177",
+    "service": "test-macos-latest-3-15-no-deprecation-highest-starlette-pypi",
+    "name": "Set up job",
+    "start": "2026-11-14T15:49:12Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393177-step-2",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393177",
+    "service": "test-macos-latest-3-15-no-deprecation-highest-starlette-pypi",
+    "name": "Dump GitHub context",
+    "start": "2026-11-14T15:49:14Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393177-step-3",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393177",
+    "service": "test-macos-latest-3-15-no-deprecation-highest-starlette-pypi",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:49:14Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393177-step-4",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393177",
+    "service": "test-macos-latest-3-15-no-deprecation-highest-starlette-pypi",
+    "name": "Set up Python",
+    "start": "2026-11-14T15:49:19Z",
+    "duration_ms": 42000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393177-step-5",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393177",
+    "service": "test-macos-latest-3-15-no-deprecation-highest-starlette-pypi",
+    "name": "Setup uv",
+    "start": "2026-11-14T15:50:01Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393177-step-6",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393177",
+    "service": "test-macos-latest-3-15-no-deprecation-highest-starlette-pypi",
+    "name": "Install Dependencies",
+    "start": "2026-11-14T15:50:09Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393177-step-12",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393177",
+    "service": "test-macos-latest-3-15-no-deprecation-highest-starlette-pypi",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-14T15:50:18Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393177-step-13",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393177",
+    "service": "test-macos-latest-3-15-no-deprecation-highest-starlette-pypi",
+    "name": "Test",
+    "start": "2026-11-14T15:50:18Z",
+    "duration_ms": 103000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393177-step-26",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393177",
+    "service": "test-macos-latest-3-15-no-deprecation-highest-starlette-pypi",
+    "name": "Post Setup uv",
+    "start": "2026-11-14T15:52:01Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393177-step-27",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393177",
+    "service": "test-macos-latest-3-15-no-deprecation-highest-starlette-pypi",
+    "name": "Post Set up Python",
+    "start": "2026-11-14T15:52:01Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393177-step-28",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393177",
+    "service": "test-macos-latest-3-15-no-deprecation-highest-starlette-pypi",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:52:01Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393177-step-29",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393177",
+    "service": "test-macos-latest-3-15-no-deprecation-highest-starlette-pypi",
+    "name": "Complete job",
+    "start": "2026-11-14T15:52:02Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393178",
+    "trace_id": "run-43612164925",
+    "parent_id": "run-43612164925",
+    "service": "test-macos-latest-3-15-no-deprecation-highest-starlette-git",
+    "name": "test (macos-latest, 3.15, no-deprecation, highest, starlette-git)",
+    "start": "2026-11-14T15:49:05Z",
+    "duration_ms": 137000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393178-step-1",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393178",
+    "service": "test-macos-latest-3-15-no-deprecation-highest-starlette-git",
+    "name": "Set up job",
+    "start": "2026-11-14T15:49:06Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393178-step-2",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393178",
+    "service": "test-macos-latest-3-15-no-deprecation-highest-starlette-git",
+    "name": "Dump GitHub context",
+    "start": "2026-11-14T15:49:08Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393178-step-3",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393178",
+    "service": "test-macos-latest-3-15-no-deprecation-highest-starlette-git",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:49:08Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393178-step-4",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393178",
+    "service": "test-macos-latest-3-15-no-deprecation-highest-starlette-git",
+    "name": "Set up Python",
+    "start": "2026-11-14T15:49:10Z",
+    "duration_ms": 38000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393178-step-5",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393178",
+    "service": "test-macos-latest-3-15-no-deprecation-highest-starlette-git",
+    "name": "Setup uv",
+    "start": "2026-11-14T15:49:48Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393178-step-6",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393178",
+    "service": "test-macos-latest-3-15-no-deprecation-highest-starlette-git",
+    "name": "Install Dependencies",
+    "start": "2026-11-14T15:49:52Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393178-step-8",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393178",
+    "service": "test-macos-latest-3-15-no-deprecation-highest-starlette-git",
+    "name": "Install Starlette from source",
+    "start": "2026-11-14T15:49:56Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393178-step-12",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393178",
+    "service": "test-macos-latest-3-15-no-deprecation-highest-starlette-git",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-14T15:49:59Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393178-step-13",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393178",
+    "service": "test-macos-latest-3-15-no-deprecation-highest-starlette-git",
+    "name": "Test",
+    "start": "2026-11-14T15:49:59Z",
+    "duration_ms": 77000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393178-step-26",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393178",
+    "service": "test-macos-latest-3-15-no-deprecation-highest-starlette-git",
+    "name": "Post Setup uv",
+    "start": "2026-11-14T15:51:16Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393178-step-27",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393178",
+    "service": "test-macos-latest-3-15-no-deprecation-highest-starlette-git",
+    "name": "Post Set up Python",
+    "start": "2026-11-14T15:51:17Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393178-step-28",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393178",
+    "service": "test-macos-latest-3-15-no-deprecation-highest-starlette-git",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:51:17Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393178-step-29",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393178",
+    "service": "test-macos-latest-3-15-no-deprecation-highest-starlette-git",
+    "name": "Complete job",
+    "start": "2026-11-14T15:51:18Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393183",
+    "trace_id": "run-43612164925",
+    "parent_id": "run-43612164925",
+    "service": "test-windows-latest-3-14t-no-deprecation-highest-starlette-pypi",
+    "name": "test (windows-latest, 3.14t, no-deprecation, highest, starlette-pypi)",
+    "start": "2026-11-14T15:48:50Z",
+    "duration_ms": 226000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393183-step-1",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393183",
+    "service": "test-windows-latest-3-14t-no-deprecation-highest-starlette-pypi",
+    "name": "Set up job",
+    "start": "2026-11-14T15:48:51Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393183-step-2",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393183",
+    "service": "test-windows-latest-3-14t-no-deprecation-highest-starlette-pypi",
+    "name": "Dump GitHub context",
+    "start": "2026-11-14T15:48:53Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393183-step-3",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393183",
+    "service": "test-windows-latest-3-14t-no-deprecation-highest-starlette-pypi",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:48:53Z",
+    "duration_ms": 11000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393183-step-4",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393183",
+    "service": "test-windows-latest-3-14t-no-deprecation-highest-starlette-pypi",
+    "name": "Set up Python",
+    "start": "2026-11-14T15:49:04Z",
+    "duration_ms": 51000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393183-step-5",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393183",
+    "service": "test-windows-latest-3-14t-no-deprecation-highest-starlette-pypi",
+    "name": "Setup uv",
+    "start": "2026-11-14T15:49:55Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393183-step-6",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393183",
+    "service": "test-windows-latest-3-14t-no-deprecation-highest-starlette-pypi",
+    "name": "Install Dependencies",
+    "start": "2026-11-14T15:50:03Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393183-step-12",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393183",
+    "service": "test-windows-latest-3-14t-no-deprecation-highest-starlette-pypi",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-14T15:50:04Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393183-step-13",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393183",
+    "service": "test-windows-latest-3-14t-no-deprecation-highest-starlette-pypi",
+    "name": "Test",
+    "start": "2026-11-14T15:50:05Z",
+    "duration_ms": 147000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393183-step-26",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393183",
+    "service": "test-windows-latest-3-14t-no-deprecation-highest-starlette-pypi",
+    "name": "Post Setup uv",
+    "start": "2026-11-14T15:52:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393183-step-27",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393183",
+    "service": "test-windows-latest-3-14t-no-deprecation-highest-starlette-pypi",
+    "name": "Post Set up Python",
+    "start": "2026-11-14T15:52:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393183-step-28",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393183",
+    "service": "test-windows-latest-3-14t-no-deprecation-highest-starlette-pypi",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:52:32Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393183-step-29",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393183",
+    "service": "test-windows-latest-3-14t-no-deprecation-highest-starlette-pypi",
+    "name": "Complete job",
+    "start": "2026-11-14T15:52:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393186",
+    "trace_id": "run-43612164925",
+    "parent_id": "run-43612164925",
+    "service": "test-macos-latest-3-14-no-deprecation-highest-starlette-git",
+    "name": "test (macos-latest, 3.14, no-deprecation, highest, starlette-git)",
+    "start": "2026-11-14T15:52:08Z",
+    "duration_ms": 120000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393186-step-1",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393186",
+    "service": "test-macos-latest-3-14-no-deprecation-highest-starlette-git",
+    "name": "Set up job",
+    "start": "2026-11-14T15:52:10Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393186-step-2",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393186",
+    "service": "test-macos-latest-3-14-no-deprecation-highest-starlette-git",
+    "name": "Dump GitHub context",
+    "start": "2026-11-14T15:52:12Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393186-step-3",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393186",
+    "service": "test-macos-latest-3-14-no-deprecation-highest-starlette-git",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:52:12Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393186-step-4",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393186",
+    "service": "test-macos-latest-3-14-no-deprecation-highest-starlette-git",
+    "name": "Set up Python",
+    "start": "2026-11-14T15:52:16Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393186-step-5",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393186",
+    "service": "test-macos-latest-3-14-no-deprecation-highest-starlette-git",
+    "name": "Setup uv",
+    "start": "2026-11-14T15:52:16Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393186-step-6",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393186",
+    "service": "test-macos-latest-3-14-no-deprecation-highest-starlette-git",
+    "name": "Install Dependencies",
+    "start": "2026-11-14T15:52:22Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393186-step-8",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393186",
+    "service": "test-macos-latest-3-14-no-deprecation-highest-starlette-git",
+    "name": "Install Starlette from source",
+    "start": "2026-11-14T15:52:24Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393186-step-12",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393186",
+    "service": "test-macos-latest-3-14-no-deprecation-highest-starlette-git",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-14T15:52:26Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393186-step-13",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393186",
+    "service": "test-macos-latest-3-14-no-deprecation-highest-starlette-git",
+    "name": "Test",
+    "start": "2026-11-14T15:52:26Z",
+    "duration_ms": 97000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393186-step-26",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393186",
+    "service": "test-macos-latest-3-14-no-deprecation-highest-starlette-git",
+    "name": "Post Setup uv",
+    "start": "2026-11-14T15:54:03Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393186-step-27",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393186",
+    "service": "test-macos-latest-3-14-no-deprecation-highest-starlette-git",
+    "name": "Post Set up Python",
+    "start": "2026-11-14T15:54:03Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393186-step-28",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393186",
+    "service": "test-macos-latest-3-14-no-deprecation-highest-starlette-git",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:54:03Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393186-step-29",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393186",
+    "service": "test-macos-latest-3-14-no-deprecation-highest-starlette-git",
+    "name": "Complete job",
+    "start": "2026-11-14T15:54:04Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393199",
+    "trace_id": "run-43612164925",
+    "parent_id": "run-43612164925",
+    "service": "test-macos-latest-3-14t-no-deprecation-highest-starlette-pypi",
+    "name": "test (macos-latest, 3.14t, no-deprecation, highest, starlette-pypi)",
+    "start": "2026-11-14T15:51:51Z",
+    "duration_ms": 95000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393199-step-1",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393199",
+    "service": "test-macos-latest-3-14t-no-deprecation-highest-starlette-pypi",
+    "name": "Set up job",
+    "start": "2026-11-14T15:51:51Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393199-step-2",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393199",
+    "service": "test-macos-latest-3-14t-no-deprecation-highest-starlette-pypi",
+    "name": "Dump GitHub context",
+    "start": "2026-11-14T15:51:53Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393199-step-3",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393199",
+    "service": "test-macos-latest-3-14t-no-deprecation-highest-starlette-pypi",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:51:53Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393199-step-4",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393199",
+    "service": "test-macos-latest-3-14t-no-deprecation-highest-starlette-pypi",
+    "name": "Set up Python",
+    "start": "2026-11-14T15:51:56Z",
+    "duration_ms": 29000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393199-step-5",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393199",
+    "service": "test-macos-latest-3-14t-no-deprecation-highest-starlette-pypi",
+    "name": "Setup uv",
+    "start": "2026-11-14T15:52:25Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393199-step-6",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393199",
+    "service": "test-macos-latest-3-14t-no-deprecation-highest-starlette-pypi",
+    "name": "Install Dependencies",
+    "start": "2026-11-14T15:52:28Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393199-step-12",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393199",
+    "service": "test-macos-latest-3-14t-no-deprecation-highest-starlette-pypi",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-14T15:52:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393199-step-13",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393199",
+    "service": "test-macos-latest-3-14t-no-deprecation-highest-starlette-pypi",
+    "name": "Test",
+    "start": "2026-11-14T15:52:29Z",
+    "duration_ms": 53000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393199-step-26",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393199",
+    "service": "test-macos-latest-3-14t-no-deprecation-highest-starlette-pypi",
+    "name": "Post Setup uv",
+    "start": "2026-11-14T15:53:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393199-step-27",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393199",
+    "service": "test-macos-latest-3-14t-no-deprecation-highest-starlette-pypi",
+    "name": "Post Set up Python",
+    "start": "2026-11-14T15:53:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393199-step-28",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393199",
+    "service": "test-macos-latest-3-14t-no-deprecation-highest-starlette-pypi",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:53:23Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393199-step-29",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393199",
+    "service": "test-macos-latest-3-14t-no-deprecation-highest-starlette-pypi",
+    "name": "Complete job",
+    "start": "2026-11-14T15:53:23Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393203",
+    "trace_id": "run-43612164925",
+    "parent_id": "run-43612164925",
+    "service": "test-windows-latest-3-15-no-deprecation-highest-starlette-pypi",
+    "name": "test (windows-latest, 3.15, no-deprecation, highest, starlette-pypi)",
+    "start": "2026-11-14T15:48:51Z",
+    "duration_ms": 154000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393203-step-1",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393203",
+    "service": "test-windows-latest-3-15-no-deprecation-highest-starlette-pypi",
+    "name": "Set up job",
+    "start": "2026-11-14T15:48:52Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393203-step-2",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393203",
+    "service": "test-windows-latest-3-15-no-deprecation-highest-starlette-pypi",
+    "name": "Dump GitHub context",
+    "start": "2026-11-14T15:48:53Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393203-step-3",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393203",
+    "service": "test-windows-latest-3-15-no-deprecation-highest-starlette-pypi",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:48:53Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393203-step-4",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393203",
+    "service": "test-windows-latest-3-15-no-deprecation-highest-starlette-pypi",
+    "name": "Set up Python",
+    "start": "2026-11-14T15:49:01Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393203-step-5",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393203",
+    "service": "test-windows-latest-3-15-no-deprecation-highest-starlette-pypi",
+    "name": "Setup uv",
+    "start": "2026-11-14T15:49:02Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393203-step-6",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393203",
+    "service": "test-windows-latest-3-15-no-deprecation-highest-starlette-pypi",
+    "name": "Install Dependencies",
+    "start": "2026-11-14T15:49:11Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393203-step-12",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393203",
+    "service": "test-windows-latest-3-15-no-deprecation-highest-starlette-pypi",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-14T15:49:14Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393203-step-13",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393203",
+    "service": "test-windows-latest-3-15-no-deprecation-highest-starlette-pypi",
+    "name": "Test",
+    "start": "2026-11-14T15:49:14Z",
+    "duration_ms": 126000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393203-step-26",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393203",
+    "service": "test-windows-latest-3-15-no-deprecation-highest-starlette-pypi",
+    "name": "Post Setup uv",
+    "start": "2026-11-14T15:51:20Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393203-step-27",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393203",
+    "service": "test-windows-latest-3-15-no-deprecation-highest-starlette-pypi",
+    "name": "Post Set up Python",
+    "start": "2026-11-14T15:51:21Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393203-step-28",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393203",
+    "service": "test-windows-latest-3-15-no-deprecation-highest-starlette-pypi",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:51:21Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393203-step-29",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393203",
+    "service": "test-windows-latest-3-15-no-deprecation-highest-starlette-pypi",
+    "name": "Complete job",
+    "start": "2026-11-14T15:51:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393207",
+    "trace_id": "run-43612164925",
+    "parent_id": "run-43612164925",
+    "service": "test-windows-latest-3-12-lowest-direct-no-deprecation-coverage",
+    "name": "test (windows-latest, 3.12, lowest-direct, no-deprecation, coverage)",
+    "start": "2026-11-14T15:48:51Z",
+    "duration_ms": 196000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393207-step-1",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393207",
+    "service": "test-windows-latest-3-12-lowest-direct-no-deprecation-coverage",
+    "name": "Set up job",
+    "start": "2026-11-14T15:48:52Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393207-step-2",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393207",
+    "service": "test-windows-latest-3-12-lowest-direct-no-deprecation-coverage",
+    "name": "Dump GitHub context",
+    "start": "2026-11-14T15:48:53Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393207-step-3",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393207",
+    "service": "test-windows-latest-3-12-lowest-direct-no-deprecation-coverage",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:48:54Z",
+    "duration_ms": 10000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393207-step-4",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393207",
+    "service": "test-windows-latest-3-12-lowest-direct-no-deprecation-coverage",
+    "name": "Set up Python",
+    "start": "2026-11-14T15:49:04Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393207-step-5",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393207",
+    "service": "test-windows-latest-3-12-lowest-direct-no-deprecation-coverage",
+    "name": "Setup uv",
+    "start": "2026-11-14T15:49:04Z",
+    "duration_ms": 12000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393207-step-6",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393207",
+    "service": "test-windows-latest-3-12-lowest-direct-no-deprecation-coverage",
+    "name": "Install Dependencies",
+    "start": "2026-11-14T15:49:16Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393207-step-7",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393207",
+    "service": "test-windows-latest-3-12-lowest-direct-no-deprecation-coverage",
+    "name": "Ensure that we have the lowest supported Pydantic version",
+    "start": "2026-11-14T15:49:23Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393207-step-12",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393207",
+    "service": "test-windows-latest-3-12-lowest-direct-no-deprecation-coverage",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-14T15:49:23Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393207-step-13",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393207",
+    "service": "test-windows-latest-3-12-lowest-direct-no-deprecation-coverage",
+    "name": "Test",
+    "start": "2026-11-14T15:49:24Z",
+    "duration_ms": 156000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393207-step-14",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393207",
+    "service": "test-windows-latest-3-12-lowest-direct-no-deprecation-coverage",
+    "name": "Store coverage files",
+    "start": "2026-11-14T15:52:00Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393207-step-26",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393207",
+    "service": "test-windows-latest-3-12-lowest-direct-no-deprecation-coverage",
+    "name": "Post Setup uv",
+    "start": "2026-11-14T15:52:03Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393207-step-27",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393207",
+    "service": "test-windows-latest-3-12-lowest-direct-no-deprecation-coverage",
+    "name": "Post Set up Python",
+    "start": "2026-11-14T15:52:03Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393207-step-28",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393207",
+    "service": "test-windows-latest-3-12-lowest-direct-no-deprecation-coverage",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:52:03Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393207-step-29",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393207",
+    "service": "test-windows-latest-3-12-lowest-direct-no-deprecation-coverage",
+    "name": "Complete job",
+    "start": "2026-11-14T15:52:05Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393213",
+    "trace_id": "run-43612164925",
+    "parent_id": "run-43612164925",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-codspeed",
+    "name": "test (ubuntu-latest, 3.13, highest, no-deprecation, codspeed)",
+    "start": "2026-11-14T15:49:25Z",
+    "duration_ms": 126000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393213-step-1",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393213",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-codspeed",
+    "name": "Set up job",
+    "start": "2026-11-14T15:49:25Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393213-step-2",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393213",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-codspeed",
+    "name": "Dump GitHub context",
+    "start": "2026-11-14T15:49:27Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393213-step-3",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393213",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-codspeed",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:49:27Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393213-step-4",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393213",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-codspeed",
+    "name": "Set up Python",
+    "start": "2026-11-14T15:49:30Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393213-step-5",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393213",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-codspeed",
+    "name": "Setup uv",
+    "start": "2026-11-14T15:49:30Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393213-step-6",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393213",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-codspeed",
+    "name": "Install Dependencies",
+    "start": "2026-11-14T15:49:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393213-step-12",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393213",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-codspeed",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-14T15:49:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393213-step-13",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393213",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-codspeed",
+    "name": "Test",
+    "start": "2026-11-14T15:49:34Z",
+    "duration_ms": 114000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393213-step-26",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393213",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-codspeed",
+    "name": "Post Setup uv",
+    "start": "2026-11-14T15:51:28Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393213-step-27",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393213",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-codspeed",
+    "name": "Post Set up Python",
+    "start": "2026-11-14T15:51:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393213-step-28",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393213",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-codspeed",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:51:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393213-step-29",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393213",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-codspeed",
+    "name": "Complete job",
+    "start": "2026-11-14T15:51:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393217",
+    "trace_id": "run-43612164925",
+    "parent_id": "run-43612164925",
+    "service": "test-macos-latest-3-14t-no-deprecation-highest-starlette-git",
+    "name": "test (macos-latest, 3.14t, no-deprecation, highest, starlette-git)",
+    "start": "2026-11-14T15:49:28Z",
+    "duration_ms": 201000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393217-step-1",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393217",
+    "service": "test-macos-latest-3-14t-no-deprecation-highest-starlette-git",
+    "name": "Set up job",
+    "start": "2026-11-14T15:49:29Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393217-step-2",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393217",
+    "service": "test-macos-latest-3-14t-no-deprecation-highest-starlette-git",
+    "name": "Dump GitHub context",
+    "start": "2026-11-14T15:49:33Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393217-step-3",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393217",
+    "service": "test-macos-latest-3-14t-no-deprecation-highest-starlette-git",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:49:33Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393217-step-4",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393217",
+    "service": "test-macos-latest-3-14t-no-deprecation-highest-starlette-git",
+    "name": "Set up Python",
+    "start": "2026-11-14T15:49:36Z",
+    "duration_ms": 54000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393217-step-5",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393217",
+    "service": "test-macos-latest-3-14t-no-deprecation-highest-starlette-git",
+    "name": "Setup uv",
+    "start": "2026-11-14T15:50:30Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393217-step-6",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393217",
+    "service": "test-macos-latest-3-14t-no-deprecation-highest-starlette-git",
+    "name": "Install Dependencies",
+    "start": "2026-11-14T15:50:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393217-step-8",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393217",
+    "service": "test-macos-latest-3-14t-no-deprecation-highest-starlette-git",
+    "name": "Install Starlette from source",
+    "start": "2026-11-14T15:50:35Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393217-step-12",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393217",
+    "service": "test-macos-latest-3-14t-no-deprecation-highest-starlette-git",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-14T15:50:38Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393217-step-13",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393217",
+    "service": "test-macos-latest-3-14t-no-deprecation-highest-starlette-git",
+    "name": "Test",
+    "start": "2026-11-14T15:50:38Z",
+    "duration_ms": 126000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393217-step-26",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393217",
+    "service": "test-macos-latest-3-14t-no-deprecation-highest-starlette-git",
+    "name": "Post Setup uv",
+    "start": "2026-11-14T15:52:44Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393217-step-27",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393217",
+    "service": "test-macos-latest-3-14t-no-deprecation-highest-starlette-git",
+    "name": "Post Set up Python",
+    "start": "2026-11-14T15:52:44Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393217-step-28",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393217",
+    "service": "test-macos-latest-3-14t-no-deprecation-highest-starlette-git",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:52:45Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393217-step-29",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393217",
+    "service": "test-macos-latest-3-14t-no-deprecation-highest-starlette-git",
+    "name": "Complete job",
+    "start": "2026-11-14T15:52:45Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393233",
+    "trace_id": "run-43612164925",
+    "parent_id": "run-43612164925",
+    "service": "test-macos-latest-3-11-lowest-direct-no-deprecation-coverage",
+    "name": "test (macos-latest, 3.11, lowest-direct, no-deprecation, coverage)",
+    "start": "2026-11-14T15:51:30Z",
+    "duration_ms": 149000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393233-step-1",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393233",
+    "service": "test-macos-latest-3-11-lowest-direct-no-deprecation-coverage",
+    "name": "Set up job",
+    "start": "2026-11-14T15:51:31Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393233-step-2",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393233",
+    "service": "test-macos-latest-3-11-lowest-direct-no-deprecation-coverage",
+    "name": "Dump GitHub context",
+    "start": "2026-11-14T15:51:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393233-step-3",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393233",
+    "service": "test-macos-latest-3-11-lowest-direct-no-deprecation-coverage",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:51:34Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393233-step-4",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393233",
+    "service": "test-macos-latest-3-11-lowest-direct-no-deprecation-coverage",
+    "name": "Set up Python",
+    "start": "2026-11-14T15:51:39Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393233-step-5",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393233",
+    "service": "test-macos-latest-3-11-lowest-direct-no-deprecation-coverage",
+    "name": "Setup uv",
+    "start": "2026-11-14T15:51:39Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393233-step-6",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393233",
+    "service": "test-macos-latest-3-11-lowest-direct-no-deprecation-coverage",
+    "name": "Install Dependencies",
+    "start": "2026-11-14T15:51:44Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393233-step-7",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393233",
+    "service": "test-macos-latest-3-11-lowest-direct-no-deprecation-coverage",
+    "name": "Ensure that we have the lowest supported Pydantic version",
+    "start": "2026-11-14T15:51:49Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393233-step-12",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393233",
+    "service": "test-macos-latest-3-11-lowest-direct-no-deprecation-coverage",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-14T15:51:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393233-step-13",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393233",
+    "service": "test-macos-latest-3-11-lowest-direct-no-deprecation-coverage",
+    "name": "Test",
+    "start": "2026-11-14T15:51:50Z",
+    "duration_ms": 121000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393233-step-14",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393233",
+    "service": "test-macos-latest-3-11-lowest-direct-no-deprecation-coverage",
+    "name": "Store coverage files",
+    "start": "2026-11-14T15:53:51Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393233-step-26",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393233",
+    "service": "test-macos-latest-3-11-lowest-direct-no-deprecation-coverage",
+    "name": "Post Setup uv",
+    "start": "2026-11-14T15:53:54Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393233-step-27",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393233",
+    "service": "test-macos-latest-3-11-lowest-direct-no-deprecation-coverage",
+    "name": "Post Set up Python",
+    "start": "2026-11-14T15:53:54Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393233-step-28",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393233",
+    "service": "test-macos-latest-3-11-lowest-direct-no-deprecation-coverage",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:53:54Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393233-step-29",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393233",
+    "service": "test-macos-latest-3-11-lowest-direct-no-deprecation-coverage",
+    "name": "Complete job",
+    "start": "2026-11-14T15:53:55Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393240",
+    "trace_id": "run-43612164925",
+    "parent_id": "run-43612164925",
+    "service": "test-macos-latest-3-15t-no-deprecation-highest-starlette-git",
+    "name": "test (macos-latest, 3.15t, no-deprecation, highest, starlette-git)",
+    "start": "2026-11-14T15:52:52Z",
+    "duration_ms": 330000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393240-step-1",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393240",
+    "service": "test-macos-latest-3-15t-no-deprecation-highest-starlette-git",
+    "name": "Set up job",
+    "start": "2026-11-14T15:52:52Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393240-step-2",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393240",
+    "service": "test-macos-latest-3-15t-no-deprecation-highest-starlette-git",
+    "name": "Dump GitHub context",
+    "start": "2026-11-14T15:52:54Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393240-step-3",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393240",
+    "service": "test-macos-latest-3-15t-no-deprecation-highest-starlette-git",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:52:54Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393240-step-4",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393240",
+    "service": "test-macos-latest-3-15t-no-deprecation-highest-starlette-git",
+    "name": "Set up Python",
+    "start": "2026-11-14T15:53:01Z",
+    "duration_ms": 41000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393240-step-5",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393240",
+    "service": "test-macos-latest-3-15t-no-deprecation-highest-starlette-git",
+    "name": "Setup uv",
+    "start": "2026-11-14T15:53:42Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393240-step-6",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393240",
+    "service": "test-macos-latest-3-15t-no-deprecation-highest-starlette-git",
+    "name": "Install Dependencies",
+    "start": "2026-11-14T15:53:46Z",
+    "duration_ms": 94000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393240-step-8",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393240",
+    "service": "test-macos-latest-3-15t-no-deprecation-highest-starlette-git",
+    "name": "Install Starlette from source",
+    "start": "2026-11-14T15:55:20Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393240-step-12",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393240",
+    "service": "test-macos-latest-3-15t-no-deprecation-highest-starlette-git",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-14T15:55:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393240-step-13",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393240",
+    "service": "test-macos-latest-3-15t-no-deprecation-highest-starlette-git",
+    "name": "Test",
+    "start": "2026-11-14T15:55:24Z",
+    "duration_ms": 170000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393240-step-26",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393240",
+    "service": "test-macos-latest-3-15t-no-deprecation-highest-starlette-git",
+    "name": "Post Setup uv",
+    "start": "2026-11-14T15:58:14Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393240-step-27",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393240",
+    "service": "test-macos-latest-3-15t-no-deprecation-highest-starlette-git",
+    "name": "Post Set up Python",
+    "start": "2026-11-14T15:58:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393240-step-28",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393240",
+    "service": "test-macos-latest-3-15t-no-deprecation-highest-starlette-git",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:58:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393240-step-29",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393240",
+    "service": "test-macos-latest-3-15t-no-deprecation-highest-starlette-git",
+    "name": "Complete job",
+    "start": "2026-11-14T15:58:15Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393262",
+    "trace_id": "run-43612164925",
+    "parent_id": "run-43612164925",
+    "service": "test-ubuntu-latest-3-15t-highest-no-deprecation-coverage",
+    "name": "test (ubuntu-latest, 3.15t, highest, no-deprecation, coverage)",
+    "start": "2026-11-14T15:49:07Z",
+    "duration_ms": 173000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393262-step-1",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393262",
+    "service": "test-ubuntu-latest-3-15t-highest-no-deprecation-coverage",
+    "name": "Set up job",
+    "start": "2026-11-14T15:49:07Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393262-step-2",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393262",
+    "service": "test-ubuntu-latest-3-15t-highest-no-deprecation-coverage",
+    "name": "Dump GitHub context",
+    "start": "2026-11-14T15:49:10Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393262-step-3",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393262",
+    "service": "test-ubuntu-latest-3-15t-highest-no-deprecation-coverage",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:49:10Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393262-step-4",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393262",
+    "service": "test-ubuntu-latest-3-15t-highest-no-deprecation-coverage",
+    "name": "Set up Python",
+    "start": "2026-11-14T15:49:14Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393262-step-5",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393262",
+    "service": "test-ubuntu-latest-3-15t-highest-no-deprecation-coverage",
+    "name": "Setup uv",
+    "start": "2026-11-14T15:49:21Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393262-step-6",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393262",
+    "service": "test-ubuntu-latest-3-15t-highest-no-deprecation-coverage",
+    "name": "Install Dependencies",
+    "start": "2026-11-14T15:49:22Z",
+    "duration_ms": 56000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393262-step-12",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393262",
+    "service": "test-ubuntu-latest-3-15t-highest-no-deprecation-coverage",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-14T15:50:18Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393262-step-13",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393262",
+    "service": "test-ubuntu-latest-3-15t-highest-no-deprecation-coverage",
+    "name": "Test",
+    "start": "2026-11-14T15:50:18Z",
+    "duration_ms": 99000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393262-step-14",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393262",
+    "service": "test-ubuntu-latest-3-15t-highest-no-deprecation-coverage",
+    "name": "Store coverage files",
+    "start": "2026-11-14T15:51:57Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393262-step-26",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393262",
+    "service": "test-ubuntu-latest-3-15t-highest-no-deprecation-coverage",
+    "name": "Post Setup uv",
+    "start": "2026-11-14T15:51:58Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393262-step-27",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393262",
+    "service": "test-ubuntu-latest-3-15t-highest-no-deprecation-coverage",
+    "name": "Post Set up Python",
+    "start": "2026-11-14T15:51:58Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393262-step-28",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393262",
+    "service": "test-ubuntu-latest-3-15t-highest-no-deprecation-coverage",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:51:58Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393262-step-29",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393262",
+    "service": "test-ubuntu-latest-3-15t-highest-no-deprecation-coverage",
+    "name": "Complete job",
+    "start": "2026-11-14T15:51:59Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393279",
+    "trace_id": "run-43612164925",
+    "parent_id": "run-43612164925",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-coverage",
+    "name": "test (ubuntu-latest, 3.13, highest, no-deprecation, coverage)",
+    "start": "2026-11-14T15:51:31Z",
+    "duration_ms": 119000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393279-step-1",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393279",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-coverage",
+    "name": "Set up job",
+    "start": "2026-11-14T15:51:32Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393279-step-2",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393279",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-coverage",
+    "name": "Dump GitHub context",
+    "start": "2026-11-14T15:51:33Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393279-step-3",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393279",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-coverage",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:51:33Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393279-step-4",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393279",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-coverage",
+    "name": "Set up Python",
+    "start": "2026-11-14T15:51:35Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393279-step-5",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393279",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-coverage",
+    "name": "Setup uv",
+    "start": "2026-11-14T15:51:36Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393279-step-6",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393279",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-coverage",
+    "name": "Install Dependencies",
+    "start": "2026-11-14T15:51:38Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393279-step-12",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393279",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-coverage",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-14T15:51:38Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393279-step-13",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393279",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-coverage",
+    "name": "Test",
+    "start": "2026-11-14T15:51:38Z",
+    "duration_ms": 108000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393279-step-14",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393279",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-coverage",
+    "name": "Store coverage files",
+    "start": "2026-11-14T15:53:26Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393279-step-26",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393279",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-coverage",
+    "name": "Post Setup uv",
+    "start": "2026-11-14T15:53:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393279-step-27",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393279",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-coverage",
+    "name": "Post Set up Python",
+    "start": "2026-11-14T15:53:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393279-step-28",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393279",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-coverage",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:53:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393279-step-29",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393279",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-coverage",
+    "name": "Complete job",
+    "start": "2026-11-14T15:53:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393280",
+    "trace_id": "run-43612164925",
+    "parent_id": "run-43612164925",
+    "service": "test-ubuntu-latest-3-14-highest-starlette-git-test-deprecation-coverage",
+    "name": "test (ubuntu-latest, 3.14, highest, starlette-git, test-deprecation, coverage)",
+    "start": "2026-11-14T15:51:34Z",
+    "duration_ms": 145000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393280-step-1",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393280",
+    "service": "test-ubuntu-latest-3-14-highest-starlette-git-test-deprecation-coverage",
+    "name": "Set up job",
+    "start": "2026-11-14T15:51:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393280-step-2",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393280",
+    "service": "test-ubuntu-latest-3-14-highest-starlette-git-test-deprecation-coverage",
+    "name": "Dump GitHub context",
+    "start": "2026-11-14T15:51:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393280-step-3",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393280",
+    "service": "test-ubuntu-latest-3-14-highest-starlette-git-test-deprecation-coverage",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:51:35Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393280-step-4",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393280",
+    "service": "test-ubuntu-latest-3-14-highest-starlette-git-test-deprecation-coverage",
+    "name": "Set up Python",
+    "start": "2026-11-14T15:51:38Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393280-step-5",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393280",
+    "service": "test-ubuntu-latest-3-14-highest-starlette-git-test-deprecation-coverage",
+    "name": "Setup uv",
+    "start": "2026-11-14T15:51:38Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393280-step-6",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393280",
+    "service": "test-ubuntu-latest-3-14-highest-starlette-git-test-deprecation-coverage",
+    "name": "Install Dependencies",
+    "start": "2026-11-14T15:51:40Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393280-step-8",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393280",
+    "service": "test-ubuntu-latest-3-14-highest-starlette-git-test-deprecation-coverage",
+    "name": "Install Starlette from source",
+    "start": "2026-11-14T15:51:41Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393280-step-9",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393280",
+    "service": "test-ubuntu-latest-3-14-highest-starlette-git-test-deprecation-coverage",
+    "name": "Install deprecated libraries just for testing",
+    "start": "2026-11-14T15:51:43Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393280-step-12",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393280",
+    "service": "test-ubuntu-latest-3-14-highest-starlette-git-test-deprecation-coverage",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-14T15:51:43Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393280-step-13",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393280",
+    "service": "test-ubuntu-latest-3-14-highest-starlette-git-test-deprecation-coverage",
+    "name": "Test",
+    "start": "2026-11-14T15:51:43Z",
+    "duration_ms": 131000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393280-step-14",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393280",
+    "service": "test-ubuntu-latest-3-14-highest-starlette-git-test-deprecation-coverage",
+    "name": "Store coverage files",
+    "start": "2026-11-14T15:53:54Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393280-step-26",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393280",
+    "service": "test-ubuntu-latest-3-14-highest-starlette-git-test-deprecation-coverage",
+    "name": "Post Setup uv",
+    "start": "2026-11-14T15:53:56Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393280-step-27",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393280",
+    "service": "test-ubuntu-latest-3-14-highest-starlette-git-test-deprecation-coverage",
+    "name": "Post Set up Python",
+    "start": "2026-11-14T15:53:57Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393280-step-28",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393280",
+    "service": "test-ubuntu-latest-3-14-highest-starlette-git-test-deprecation-coverage",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:53:57Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393280-step-29",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393280",
+    "service": "test-ubuntu-latest-3-14-highest-starlette-git-test-deprecation-coverage",
+    "name": "Complete job",
+    "start": "2026-11-14T15:53:57Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393285",
+    "trace_id": "run-43612164925",
+    "parent_id": "run-43612164925",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-true",
+    "name": "test (ubuntu-latest, 3.13, highest, no-deprecation, true)",
+    "start": "2026-11-14T15:51:32Z",
+    "duration_ms": 107000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393285-step-1",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393285",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-true",
+    "name": "Set up job",
+    "start": "2026-11-14T15:51:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393285-step-2",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393285",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-true",
+    "name": "Dump GitHub context",
+    "start": "2026-11-14T15:51:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393285-step-3",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393285",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-true",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:51:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393285-step-4",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393285",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-true",
+    "name": "Set up Python",
+    "start": "2026-11-14T15:51:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393285-step-5",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393285",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-true",
+    "name": "Setup uv",
+    "start": "2026-11-14T15:51:35Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393285-step-6",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393285",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-true",
+    "name": "Install Dependencies",
+    "start": "2026-11-14T15:51:39Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393285-step-12",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393285",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-true",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-14T15:51:40Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393285-step-13",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393285",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-true",
+    "name": "Test",
+    "start": "2026-11-14T15:51:40Z",
+    "duration_ms": 95000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393285-step-26",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393285",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-true",
+    "name": "Post Setup uv",
+    "start": "2026-11-14T15:53:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393285-step-27",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393285",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-true",
+    "name": "Post Set up Python",
+    "start": "2026-11-14T15:53:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393285-step-28",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393285",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-true",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:53:15Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393285-step-29",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393285",
+    "service": "test-ubuntu-latest-3-13-highest-no-deprecation-true",
+    "name": "Complete job",
+    "start": "2026-11-14T15:53:16Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393287",
+    "trace_id": "run-43612164925",
+    "parent_id": "run-43612164925",
+    "service": "test-windows-latest-3-14t-no-deprecation-highest-starlette-git",
+    "name": "test (windows-latest, 3.14t, no-deprecation, highest, starlette-git)",
+    "start": "2026-11-14T15:48:51Z",
+    "duration_ms": 273000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393287-step-1",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393287",
+    "service": "test-windows-latest-3-14t-no-deprecation-highest-starlette-git",
+    "name": "Set up job",
+    "start": "2026-11-14T15:48:52Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393287-step-2",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393287",
+    "service": "test-windows-latest-3-14t-no-deprecation-highest-starlette-git",
+    "name": "Dump GitHub context",
+    "start": "2026-11-14T15:48:53Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393287-step-3",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393287",
+    "service": "test-windows-latest-3-14t-no-deprecation-highest-starlette-git",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:48:54Z",
+    "duration_ms": 12000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393287-step-4",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393287",
+    "service": "test-windows-latest-3-14t-no-deprecation-highest-starlette-git",
+    "name": "Set up Python",
+    "start": "2026-11-14T15:49:06Z",
+    "duration_ms": 45000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393287-step-5",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393287",
+    "service": "test-windows-latest-3-14t-no-deprecation-highest-starlette-git",
+    "name": "Setup uv",
+    "start": "2026-11-14T15:49:51Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393287-step-6",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393287",
+    "service": "test-windows-latest-3-14t-no-deprecation-highest-starlette-git",
+    "name": "Install Dependencies",
+    "start": "2026-11-14T15:49:59Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393287-step-8",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393287",
+    "service": "test-windows-latest-3-14t-no-deprecation-highest-starlette-git",
+    "name": "Install Starlette from source",
+    "start": "2026-11-14T15:50:02Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393287-step-12",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393287",
+    "service": "test-windows-latest-3-14t-no-deprecation-highest-starlette-git",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-14T15:50:07Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393287-step-13",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393287",
+    "service": "test-windows-latest-3-14t-no-deprecation-highest-starlette-git",
+    "name": "Test",
+    "start": "2026-11-14T15:50:07Z",
+    "duration_ms": 192000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393287-step-26",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393287",
+    "service": "test-windows-latest-3-14t-no-deprecation-highest-starlette-git",
+    "name": "Post Setup uv",
+    "start": "2026-11-14T15:53:19Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393287-step-27",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393287",
+    "service": "test-windows-latest-3-14t-no-deprecation-highest-starlette-git",
+    "name": "Post Set up Python",
+    "start": "2026-11-14T15:53:19Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393287-step-28",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393287",
+    "service": "test-windows-latest-3-14t-no-deprecation-highest-starlette-git",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:53:19Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393287-step-29",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393287",
+    "service": "test-windows-latest-3-14t-no-deprecation-highest-starlette-git",
+    "name": "Complete job",
+    "start": "2026-11-14T15:53:21Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393302",
+    "trace_id": "run-43612164925",
+    "parent_id": "run-43612164925",
+    "service": "test-ubuntu-latest-3-14t-highest-no-deprecation-coverage",
+    "name": "test (ubuntu-latest, 3.14t, highest, no-deprecation, coverage)",
+    "start": "2026-11-14T15:50:13Z",
+    "duration_ms": 145000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393302-step-1",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393302",
+    "service": "test-ubuntu-latest-3-14t-highest-no-deprecation-coverage",
+    "name": "Set up job",
+    "start": "2026-11-14T15:50:14Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393302-step-2",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393302",
+    "service": "test-ubuntu-latest-3-14t-highest-no-deprecation-coverage",
+    "name": "Dump GitHub context",
+    "start": "2026-11-14T15:50:16Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393302-step-3",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393302",
+    "service": "test-ubuntu-latest-3-14t-highest-no-deprecation-coverage",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:50:16Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393302-step-4",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393302",
+    "service": "test-ubuntu-latest-3-14t-highest-no-deprecation-coverage",
+    "name": "Set up Python",
+    "start": "2026-11-14T15:50:21Z",
+    "duration_ms": 10000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393302-step-5",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393302",
+    "service": "test-ubuntu-latest-3-14t-highest-no-deprecation-coverage",
+    "name": "Setup uv",
+    "start": "2026-11-14T15:50:31Z",
+    "duration_ms": 12000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393302-step-6",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393302",
+    "service": "test-ubuntu-latest-3-14t-highest-no-deprecation-coverage",
+    "name": "Install Dependencies",
+    "start": "2026-11-14T15:50:43Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393302-step-11",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393302",
+    "service": "test-ubuntu-latest-3-14t-highest-no-deprecation-coverage",
+    "name": "Reinstall SQLAlchemy without Cython extensions",
+    "start": "2026-11-14T15:50:43Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393302-step-12",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393302",
+    "service": "test-ubuntu-latest-3-14t-highest-no-deprecation-coverage",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-14T15:50:48Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393302-step-13",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393302",
+    "service": "test-ubuntu-latest-3-14t-highest-no-deprecation-coverage",
+    "name": "Test",
+    "start": "2026-11-14T15:50:48Z",
+    "duration_ms": 105000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393302-step-14",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393302",
+    "service": "test-ubuntu-latest-3-14t-highest-no-deprecation-coverage",
+    "name": "Store coverage files",
+    "start": "2026-11-14T15:52:33Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393302-step-26",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393302",
+    "service": "test-ubuntu-latest-3-14t-highest-no-deprecation-coverage",
+    "name": "Post Setup uv",
+    "start": "2026-11-14T15:52:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393302-step-27",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393302",
+    "service": "test-ubuntu-latest-3-14t-highest-no-deprecation-coverage",
+    "name": "Post Set up Python",
+    "start": "2026-11-14T15:52:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393302-step-28",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393302",
+    "service": "test-ubuntu-latest-3-14t-highest-no-deprecation-coverage",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:52:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393302-step-29",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393302",
+    "service": "test-ubuntu-latest-3-14t-highest-no-deprecation-coverage",
+    "name": "Complete job",
+    "start": "2026-11-14T15:52:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393305",
+    "trace_id": "run-43612164925",
+    "parent_id": "run-43612164925",
+    "service": "test-ubuntu-latest-3-15-highest-starlette-git-test-deprecation-coverage",
+    "name": "test (ubuntu-latest, 3.15, highest, starlette-git, test-deprecation, coverage)",
+    "start": "2026-11-14T15:49:45Z",
+    "duration_ms": 155000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393305-step-1",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393305",
+    "service": "test-ubuntu-latest-3-15-highest-starlette-git-test-deprecation-coverage",
+    "name": "Set up job",
+    "start": "2026-11-14T15:49:46Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393305-step-2",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393305",
+    "service": "test-ubuntu-latest-3-15-highest-starlette-git-test-deprecation-coverage",
+    "name": "Dump GitHub context",
+    "start": "2026-11-14T15:49:47Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393305-step-3",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393305",
+    "service": "test-ubuntu-latest-3-15-highest-starlette-git-test-deprecation-coverage",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:49:47Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393305-step-4",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393305",
+    "service": "test-ubuntu-latest-3-15-highest-starlette-git-test-deprecation-coverage",
+    "name": "Set up Python",
+    "start": "2026-11-14T15:49:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393305-step-5",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393305",
+    "service": "test-ubuntu-latest-3-15-highest-starlette-git-test-deprecation-coverage",
+    "name": "Setup uv",
+    "start": "2026-11-14T15:49:50Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393305-step-6",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393305",
+    "service": "test-ubuntu-latest-3-15-highest-starlette-git-test-deprecation-coverage",
+    "name": "Install Dependencies",
+    "start": "2026-11-14T15:49:54Z",
+    "duration_ms": 10000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393305-step-8",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393305",
+    "service": "test-ubuntu-latest-3-15-highest-starlette-git-test-deprecation-coverage",
+    "name": "Install Starlette from source",
+    "start": "2026-11-14T15:50:04Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393305-step-9",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393305",
+    "service": "test-ubuntu-latest-3-15-highest-starlette-git-test-deprecation-coverage",
+    "name": "Install deprecated libraries just for testing",
+    "start": "2026-11-14T15:50:07Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393305-step-12",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393305",
+    "service": "test-ubuntu-latest-3-15-highest-starlette-git-test-deprecation-coverage",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-14T15:50:07Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393305-step-13",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393305",
+    "service": "test-ubuntu-latest-3-15-highest-starlette-git-test-deprecation-coverage",
+    "name": "Test",
+    "start": "2026-11-14T15:50:07Z",
+    "duration_ms": 127000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393305-step-14",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393305",
+    "service": "test-ubuntu-latest-3-15-highest-starlette-git-test-deprecation-coverage",
+    "name": "Store coverage files",
+    "start": "2026-11-14T15:52:14Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393305-step-26",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393305",
+    "service": "test-ubuntu-latest-3-15-highest-starlette-git-test-deprecation-coverage",
+    "name": "Post Setup uv",
+    "start": "2026-11-14T15:52:16Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393305-step-27",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393305",
+    "service": "test-ubuntu-latest-3-15-highest-starlette-git-test-deprecation-coverage",
+    "name": "Post Set up Python",
+    "start": "2026-11-14T15:52:17Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393305-step-28",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393305",
+    "service": "test-ubuntu-latest-3-15-highest-starlette-git-test-deprecation-coverage",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:52:17Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132499393305-step-29",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132499393305",
+    "service": "test-ubuntu-latest-3-15-highest-starlette-git-test-deprecation-coverage",
+    "name": "Complete job",
+    "start": "2026-11-14T15:52:17Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132501981716",
+    "trace_id": "run-43612164925",
+    "parent_id": "run-43612164925",
+    "service": "coverage-combine",
+    "name": "coverage-combine",
+    "start": "2026-11-14T15:58:25Z",
+    "duration_ms": 100000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-132501981716-step-1",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132501981716",
+    "service": "coverage-combine",
+    "name": "Set up job",
+    "start": "2026-11-14T15:58:25Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132501981716-step-2",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132501981716",
+    "service": "coverage-combine",
+    "name": "Dump GitHub context",
+    "start": "2026-11-14T15:58:27Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132501981716-step-3",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132501981716",
+    "service": "coverage-combine",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T15:58:27Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132501981716-step-4",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132501981716",
+    "service": "coverage-combine",
+    "name": "Run actions/setup-python@v7.1.0",
+    "start": "2026-11-14T15:58:30Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132501981716-step-5",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132501981716",
+    "service": "coverage-combine",
+    "name": "Setup uv",
+    "start": "2026-11-14T15:58:30Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132501981716-step-6",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132501981716",
+    "service": "coverage-combine",
+    "name": "Install Dependencies",
+    "start": "2026-11-14T15:58:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132501981716-step-7",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132501981716",
+    "service": "coverage-combine",
+    "name": "Get coverage files",
+    "start": "2026-11-14T15:58:35Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132501981716-step-8",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132501981716",
+    "service": "coverage-combine",
+    "name": "Run ls -la coverage",
+    "start": "2026-11-14T15:58:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132501981716-step-9",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132501981716",
+    "service": "coverage-combine",
+    "name": "Run uv run coverage combine coverage",
+    "start": "2026-11-14T15:58:36Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132501981716-step-10",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132501981716",
+    "service": "coverage-combine",
+    "name": "Run uv run coverage html --title \"Coverage for ff92877b8c0ce4a934486c510f5872b60e328fab\"",
+    "start": "2026-11-14T15:58:39Z",
+    "duration_ms": 67000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132501981716-step-11",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132501981716",
+    "service": "coverage-combine",
+    "name": "Store coverage HTML",
+    "start": "2026-11-14T15:59:46Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132501981716-step-12",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132501981716",
+    "service": "coverage-combine",
+    "name": "Run uv run coverage report --fail-under=100",
+    "start": "2026-11-14T15:59:50Z",
+    "duration_ms": 13000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-132501981716-step-24",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132501981716",
+    "service": "coverage-combine",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-14T16:00:03Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132501981716-step-25",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132501981716",
+    "service": "coverage-combine",
+    "name": "Complete job",
+    "start": "2026-11-14T16:00:03Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132502441287",
+    "trace_id": "run-43612164925",
+    "parent_id": "run-43612164925",
+    "service": "test-alls-green",
+    "name": "test-alls-green",
+    "start": "2026-11-14T16:00:51Z",
+    "duration_ms": 4000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-132502441287-step-1",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132502441287",
+    "service": "test-alls-green",
+    "name": "Set up job",
+    "start": "2026-11-14T16:00:52Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132502441287-step-2",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132502441287",
+    "service": "test-alls-green",
+    "name": "Dump GitHub context",
+    "start": "2026-11-14T16:00:52Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-132502441287-step-3",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132502441287",
+    "service": "test-alls-green",
+    "name": "Decide whether the needed jobs succeeded or failed",
+    "start": "2026-11-14T16:00:52Z",
+    "duration_ms": 0.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-132502441287-step-4",
+    "trace_id": "run-43612164925",
+    "parent_id": "job-132502441287",
+    "service": "test-alls-green",
+    "name": "Complete job",
+    "start": "2026-11-14T16:00:52Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

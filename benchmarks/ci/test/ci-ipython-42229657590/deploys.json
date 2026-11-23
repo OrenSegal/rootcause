@@ -1,0 +1,16 @@
+[
+  {
+    "id": "e11b13a5f8",
+    "service": "ipython",
+    "version": "e11b13a5f8",
+    "ts": "2026-11-06T13:54:32Z",
+    "author": "Parinika",
+    "summary": "Fix dictionary mutation during pretty printing",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "IPython/lib/pretty.py",
+      "tests/test_pretty.py"
+    ]
+  }
+]

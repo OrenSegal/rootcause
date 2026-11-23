@@ -1,0 +1,18 @@
+# Mined from https://github.com/pytest-dev/pytest-asyncio/actions/runs/40571601184
+# (pytest-dev/pytest-asyncio, licence Apache-2.0). Fixed by run
+# https://github.com/pytest-dev/pytest-asyncio/actions/runs/40573292070. Label rule: the
+# fix changed files exactly one tested commit touched. Fix touched:
+# tests/test_asyncio_mark.py.
+id: ci-pytest-asyncio-40571601184
+title: 'fix(plugin): validate asyncio marker loop_scope with UsageError'
+alert:
+  severity: ci
+  service: run-linters
+  summary: 'workflow CI failed on fix/validate-marker-loop-scope at 5c58517276: step ''Run
+    pre-commit checks'' in job ''Run linters'' failed.'
+truth:
+  category: bad_code_deploy
+  service: pytest-asyncio
+  required_evidence_any:
+  - 5c58517276
+provenance: recorded

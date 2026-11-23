@@ -1,0 +1,17 @@
+# Mined from https://github.com/pydata/xarray/actions/runs/43753183483 (pydata/xarray,
+# licence Apache-2.0). Fixed by run
+# https://github.com/pydata/xarray/actions/runs/43757002973. Label rule: the fix changed
+# files exactly one tested commit touched. Fix touched: xarray/tests/test_weighted.py.
+id: ci-xarray-43753183483
+title: Treat missing dimensions as size 1 in weighted Dataset reductions
+alert:
+  severity: ci
+  service: ubuntu-latest-test-py312-min-versions
+  summary: 'workflow CI failed on weighted-dataset-dims at 9e5756ac33: step ''Run tests''
+    in job ''ubuntu-latest | test-py312-min-versions'' failed.'
+truth:
+  category: bad_code_deploy
+  service: xarray
+  required_evidence_any:
+  - 71eccfdb8a
+provenance: recorded

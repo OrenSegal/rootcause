@@ -1,0 +1,90 @@
+{
+  "attempt": 1,
+  "conclusion": "failure",
+  "createdAt": "2026-09-27T12:49:46Z",
+  "databaseId": 36320289935,
+  "displayTitle": "Add has_scheduler_plugin() to check plugin registration",
+  "event": "pull_request",
+  "headBranch": "add-has-scheduler-plugin",
+  "headSha": "2926d28f4e6fceb1e0fd689b0684c13c6577f2ec",
+  "jobs": [
+    {
+      "completedAt": "2026-09-27T12:50:31Z",
+      "conclusion": "failure",
+      "databaseId": 108622695983,
+      "name": "pre-commit hooks",
+      "startedAt": "2026-09-27T12:49:49Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-09-27T12:49:51Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-09-27T12:49:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-27T12:49:53Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7.0.0",
+          "number": 2,
+          "startedAt": "2026-09-27T12:49:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-27T12:49:53Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@v6",
+          "number": 3,
+          "startedAt": "2026-09-27T12:49:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-27T12:50:28Z",
+          "conclusion": "failure",
+          "name": "Run pre-commit/action@v3.0.1",
+          "number": 4,
+          "startedAt": "2026-09-27T12:49:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-27T12:50:28Z",
+          "conclusion": "success",
+          "name": "Post Run pre-commit/action@v3.0.1",
+          "number": 6,
+          "startedAt": "2026-09-27T12:50:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-27T12:50:28Z",
+          "conclusion": "skipped",
+          "name": "Post Run actions/setup-python@v6",
+          "number": 7,
+          "startedAt": "2026-09-27T12:50:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-27T12:50:28Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7.0.0",
+          "number": 8,
+          "startedAt": "2026-09-27T12:50:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-27T12:50:28Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 9,
+          "startedAt": "2026-09-27T12:50:28Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/dask/distributed/actions/runs/36320289935/job/108622695983"
+    }
+  ],
+  "name": "Linting",
+  "updatedAt": "2026-09-27T12:50:32Z",
+  "repository": "dask/distributed"
+}

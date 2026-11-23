@@ -1,0 +1,54 @@
+[
+  {
+    "author": "asvetlov",
+    "committedDate": "2026-10-07T15:53:49Z",
+    "messageHeadline": "Drop ALWAYS_INLINE from the C extension",
+    "oid": "b1660cc5b4c2ca5dbdd3edc04e16a4b178d9bc42",
+    "files": [
+      {
+        "filename": "AGENTS.md",
+        "status": "modified"
+      },
+      {
+        "filename": "CHANGES/1740.misc.rst",
+        "status": "added"
+      },
+      {
+        "filename": "multidict/_multilib/bitmap.h",
+        "status": "modified"
+      },
+      {
+        "filename": "multidict/_multilib/bulk_update.h",
+        "status": "modified"
+      },
+      {
+        "filename": "multidict/_multilib/compiler.h",
+        "status": "modified"
+      },
+      {
+        "filename": "multidict/_multilib/dict.h",
+        "status": "modified"
+      },
+      {
+        "filename": "multidict/_multilib/hashtable.h",
+        "status": "modified"
+      },
+      {
+        "filename": "multidict/_multilib/htkeys.h",
+        "status": "modified"
+      },
+      {
+        "filename": "multidict/_multilib/identity.h",
+        "status": "modified"
+      },
+      {
+        "filename": "multidict/_multilib/unpack.h",
+        "status": "modified"
+      },
+      {
+        "filename": "tools/check_inlining.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

@@ -1,0 +1,13 @@
+id: ci-panel-44339476406
+title: 'fix: Keep unlocked writes streaming while a busy callback holds the lock'
+alert:
+  severity: ci
+  service: run-pre-commit
+  summary: 'workflow tests failed on fix/unlocked-write-stall at 49f0f11ada: step ''Run holoviz-dev/holoviz_tasks/pre-commit@11eb638302f76ec64217e2eeddfb11df1f788b54''
+    in job ''Run pre-commit'' failed.'
+truth:
+  category: bad_code_deploy
+  service: panel
+  required_evidence_any:
+  - 49f0f11ada
+provenance: recorded

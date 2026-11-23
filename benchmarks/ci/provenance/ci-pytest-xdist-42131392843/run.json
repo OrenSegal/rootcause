@@ -1,0 +1,1734 @@
+{
+  "attempt": 1,
+  "conclusion": "failure",
+  "createdAt": "2026-11-05T23:42:09Z",
+  "databaseId": 42131392843,
+  "displayTitle": "fix(workers): preserve usage-error diagnostics and exit status",
+  "event": "pull_request",
+  "headBranch": "contribution/15346-worker-usage-errors",
+  "headSha": "ab56651595c3fb795323147583e134bfd6603203",
+  "jobs": [
+    {
+      "completedAt": "2026-11-05T23:42:27Z",
+      "conclusion": "success",
+      "databaseId": 127608609631,
+      "name": "package",
+      "startedAt": "2026-11-05T23:42:12Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-05T23:42:14Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-05T23:42:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:15Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-05T23:42:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:25Z",
+          "conclusion": "success",
+          "name": "Build and Check Package",
+          "number": 3,
+          "startedAt": "2026-11-05T23:42:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:26Z",
+          "conclusion": "success",
+          "name": "Post Build and Check Package",
+          "number": 5,
+          "startedAt": "2026-11-05T23:42:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:26Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 6,
+          "startedAt": "2026-11-05T23:42:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:26Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 7,
+          "startedAt": "2026-11-05T23:42:26Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-xdist/actions/runs/42131392843/job/127608609631"
+    },
+    {
+      "completedAt": "2026-11-05T23:42:38Z",
+      "conclusion": "failure",
+      "databaseId": 127608733634,
+      "name": "test (py39-pytestlatest, ubuntu-latest)",
+      "startedAt": "2026-11-05T23:42:30Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-05T23:42:32Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-05T23:42:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:33Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-05T23:42:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:35Z",
+          "conclusion": "success",
+          "name": "Download Package",
+          "number": 3,
+          "startedAt": "2026-11-05T23:42:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:36Z",
+          "conclusion": "failure",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-05T23:42:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:36Z",
+          "conclusion": "skipped",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-11-05T23:42:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:36Z",
+          "conclusion": "skipped",
+          "name": "Test",
+          "number": 6,
+          "startedAt": "2026-11-05T23:42:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:36Z",
+          "conclusion": "skipped",
+          "name": "Post Set up Python",
+          "number": 11,
+          "startedAt": "2026-11-05T23:42:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:36Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 12,
+          "startedAt": "2026-11-05T23:42:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:36Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-11-05T23:42:36Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-xdist/actions/runs/42131392843/job/127608733634"
+    },
+    {
+      "completedAt": "2026-11-05T23:42:36Z",
+      "conclusion": "failure",
+      "databaseId": 127608733638,
+      "name": "test (py39-pytestmin, ubuntu-latest)",
+      "startedAt": "2026-11-05T23:42:29Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-05T23:42:31Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-05T23:42:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:32Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-05T23:42:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:33Z",
+          "conclusion": "success",
+          "name": "Download Package",
+          "number": 3,
+          "startedAt": "2026-11-05T23:42:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:34Z",
+          "conclusion": "failure",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-05T23:42:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:34Z",
+          "conclusion": "skipped",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-11-05T23:42:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:34Z",
+          "conclusion": "skipped",
+          "name": "Test",
+          "number": 6,
+          "startedAt": "2026-11-05T23:42:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:34Z",
+          "conclusion": "skipped",
+          "name": "Post Set up Python",
+          "number": 11,
+          "startedAt": "2026-11-05T23:42:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:34Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 12,
+          "startedAt": "2026-11-05T23:42:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:34Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-11-05T23:42:34Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-xdist/actions/runs/42131392843/job/127608733638"
+    },
+    {
+      "completedAt": "2026-11-05T23:44:20Z",
+      "conclusion": "success",
+      "databaseId": 127608733672,
+      "name": "test (py39-pytestlatest, windows-latest)",
+      "startedAt": "2026-11-05T23:42:29Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-05T23:42:31Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-05T23:42:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:37Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-05T23:42:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:38Z",
+          "conclusion": "success",
+          "name": "Download Package",
+          "number": 3,
+          "startedAt": "2026-11-05T23:42:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:09Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-05T23:42:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:15Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-11-05T23:43:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:44:16Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 6,
+          "startedAt": "2026-11-05T23:43:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:44:16Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 11,
+          "startedAt": "2026-11-05T23:44:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:44:18Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 12,
+          "startedAt": "2026-11-05T23:44:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:44:18Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-11-05T23:44:18Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-xdist/actions/runs/42131392843/job/127608733672"
+    },
+    {
+      "completedAt": "2026-11-05T23:43:28Z",
+      "conclusion": "success",
+      "databaseId": 127608733681,
+      "name": "test (py312-pytestlatest, ubuntu-latest)",
+      "startedAt": "2026-11-05T23:42:30Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-05T23:42:31Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-05T23:42:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:32Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-05T23:42:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:34Z",
+          "conclusion": "success",
+          "name": "Download Package",
+          "number": 3,
+          "startedAt": "2026-11-05T23:42:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:34Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-05T23:42:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:37Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-11-05T23:42:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:26Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 6,
+          "startedAt": "2026-11-05T23:42:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:26Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 11,
+          "startedAt": "2026-11-05T23:43:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:26Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 12,
+          "startedAt": "2026-11-05T23:43:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:26Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-11-05T23:43:26Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-xdist/actions/runs/42131392843/job/127608733681"
+    },
+    {
+      "completedAt": "2026-11-05T23:44:33Z",
+      "conclusion": "success",
+      "databaseId": 127608733685,
+      "name": "test (py312-pytestlatest, windows-latest)",
+      "startedAt": "2026-11-05T23:42:30Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-05T23:42:32Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-05T23:42:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:38Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-05T23:42:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:39Z",
+          "conclusion": "success",
+          "name": "Download Package",
+          "number": 3,
+          "startedAt": "2026-11-05T23:42:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:39Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-05T23:42:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:53Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-11-05T23:42:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:44:29Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 6,
+          "startedAt": "2026-11-05T23:42:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:44:29Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 11,
+          "startedAt": "2026-11-05T23:44:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:44:31Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 12,
+          "startedAt": "2026-11-05T23:44:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:44:32Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-11-05T23:44:31Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-xdist/actions/runs/42131392843/job/127608733685"
+    },
+    {
+      "completedAt": "2026-11-05T23:44:36Z",
+      "conclusion": "success",
+      "databaseId": 127608733695,
+      "name": "test (py310-setproctitle, windows-latest)",
+      "startedAt": "2026-11-05T23:42:30Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-05T23:42:32Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-05T23:42:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:36Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-05T23:42:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:38Z",
+          "conclusion": "success",
+          "name": "Download Package",
+          "number": 3,
+          "startedAt": "2026-11-05T23:42:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:13Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-05T23:42:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:18Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-11-05T23:43:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:44:32Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 6,
+          "startedAt": "2026-11-05T23:43:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:44:32Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 11,
+          "startedAt": "2026-11-05T23:44:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:44:34Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 12,
+          "startedAt": "2026-11-05T23:44:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:44:34Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-11-05T23:44:34Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-xdist/actions/runs/42131392843/job/127608733695"
+    },
+    {
+      "completedAt": "2026-11-05T23:44:31Z",
+      "conclusion": "success",
+      "databaseId": 127608733696,
+      "name": "test (py313-pytestlatest, windows-latest)",
+      "startedAt": "2026-11-05T23:42:29Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-05T23:42:32Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-05T23:42:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:37Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-05T23:42:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:38Z",
+          "conclusion": "success",
+          "name": "Download Package",
+          "number": 3,
+          "startedAt": "2026-11-05T23:42:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:38Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-05T23:42:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:48Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-11-05T23:42:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:44:27Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 6,
+          "startedAt": "2026-11-05T23:42:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:44:27Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 11,
+          "startedAt": "2026-11-05T23:44:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:44:30Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 12,
+          "startedAt": "2026-11-05T23:44:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:44:30Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-11-05T23:44:30Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-xdist/actions/runs/42131392843/job/127608733696"
+    },
+    {
+      "completedAt": "2026-11-05T23:43:39Z",
+      "conclusion": "success",
+      "databaseId": 127608733697,
+      "name": "test (py313-pytestlatest, ubuntu-latest)",
+      "startedAt": "2026-11-05T23:42:30Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-05T23:42:32Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-05T23:42:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:33Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-05T23:42:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:34Z",
+          "conclusion": "success",
+          "name": "Download Package",
+          "number": 3,
+          "startedAt": "2026-11-05T23:42:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:35Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-05T23:42:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:45Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-11-05T23:42:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:37Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 6,
+          "startedAt": "2026-11-05T23:42:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:37Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 11,
+          "startedAt": "2026-11-05T23:43:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:37Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 12,
+          "startedAt": "2026-11-05T23:43:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:37Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-11-05T23:43:37Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-xdist/actions/runs/42131392843/job/127608733697"
+    },
+    {
+      "completedAt": "2026-11-05T23:43:54Z",
+      "conclusion": "success",
+      "databaseId": 127608733700,
+      "name": "test (py314-pytestlatest, ubuntu-latest)",
+      "startedAt": "2026-11-05T23:42:30Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-05T23:42:32Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-05T23:42:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:33Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-05T23:42:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:34Z",
+          "conclusion": "success",
+          "name": "Download Package",
+          "number": 3,
+          "startedAt": "2026-11-05T23:42:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:34Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-05T23:42:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:41Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-11-05T23:42:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:51Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 6,
+          "startedAt": "2026-11-05T23:42:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:51Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 11,
+          "startedAt": "2026-11-05T23:43:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:51Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 12,
+          "startedAt": "2026-11-05T23:43:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:52Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-11-05T23:43:51Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-xdist/actions/runs/42131392843/job/127608733700"
+    },
+    {
+      "completedAt": "2026-11-05T23:44:44Z",
+      "conclusion": "success",
+      "databaseId": 127608733715,
+      "name": "test (py314-pytestlatest, windows-latest)",
+      "startedAt": "2026-11-05T23:42:30Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-05T23:42:32Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-05T23:42:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:38Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-05T23:42:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:40Z",
+          "conclusion": "success",
+          "name": "Download Package",
+          "number": 3,
+          "startedAt": "2026-11-05T23:42:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:40Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-05T23:42:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:50Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-11-05T23:42:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:44:39Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 6,
+          "startedAt": "2026-11-05T23:42:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:44:40Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 11,
+          "startedAt": "2026-11-05T23:44:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:44:42Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 12,
+          "startedAt": "2026-11-05T23:44:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:44:42Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-11-05T23:44:42Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-xdist/actions/runs/42131392843/job/127608733715"
+    },
+    {
+      "completedAt": "2026-11-05T23:43:44Z",
+      "conclusion": "success",
+      "databaseId": 127608733728,
+      "name": "test (py311-pytestmain, ubuntu-latest)",
+      "startedAt": "2026-11-05T23:42:30Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-05T23:42:32Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-05T23:42:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:33Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-05T23:42:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:35Z",
+          "conclusion": "success",
+          "name": "Download Package",
+          "number": 3,
+          "startedAt": "2026-11-05T23:42:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:35Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-05T23:42:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:47Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-11-05T23:42:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:41Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 6,
+          "startedAt": "2026-11-05T23:42:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:41Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 11,
+          "startedAt": "2026-11-05T23:43:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:41Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 12,
+          "startedAt": "2026-11-05T23:43:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:41Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-11-05T23:43:41Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-xdist/actions/runs/42131392843/job/127608733728"
+    },
+    {
+      "completedAt": "2026-11-05T23:43:46Z",
+      "conclusion": "success",
+      "databaseId": 127608733731,
+      "name": "test (py310-pytestlatest, ubuntu-latest)",
+      "startedAt": "2026-11-05T23:42:29Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-05T23:42:31Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-05T23:42:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:32Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-05T23:42:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:33Z",
+          "conclusion": "success",
+          "name": "Download Package",
+          "number": 3,
+          "startedAt": "2026-11-05T23:42:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:38Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-05T23:42:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:42Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-11-05T23:42:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:44Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 6,
+          "startedAt": "2026-11-05T23:42:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:44Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 11,
+          "startedAt": "2026-11-05T23:43:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:45Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 12,
+          "startedAt": "2026-11-05T23:43:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:45Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-11-05T23:43:45Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-xdist/actions/runs/42131392843/job/127608733731"
+    },
+    {
+      "completedAt": "2026-11-05T23:43:51Z",
+      "conclusion": "success",
+      "databaseId": 127608733745,
+      "name": "test (py310-psutil, windows-latest)",
+      "startedAt": "2026-11-05T23:42:30Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-05T23:42:32Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-05T23:42:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:38Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-05T23:42:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:40Z",
+          "conclusion": "success",
+          "name": "Download Package",
+          "number": 3,
+          "startedAt": "2026-11-05T23:42:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:30Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-05T23:42:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:36Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-11-05T23:43:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:46Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 6,
+          "startedAt": "2026-11-05T23:43:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:47Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 11,
+          "startedAt": "2026-11-05T23:43:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:49Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 12,
+          "startedAt": "2026-11-05T23:43:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:49Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-11-05T23:43:49Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-xdist/actions/runs/42131392843/job/127608733745"
+    },
+    {
+      "completedAt": "2026-11-05T23:44:43Z",
+      "conclusion": "success",
+      "databaseId": 127608733764,
+      "name": "test (py39-pytestmin, windows-latest)",
+      "startedAt": "2026-11-05T23:42:30Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-05T23:42:32Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-05T23:42:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:37Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-05T23:42:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:38Z",
+          "conclusion": "success",
+          "name": "Download Package",
+          "number": 3,
+          "startedAt": "2026-11-05T23:42:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:18Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-05T23:42:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:24Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-11-05T23:43:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:44:39Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 6,
+          "startedAt": "2026-11-05T23:43:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:44:39Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 11,
+          "startedAt": "2026-11-05T23:44:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:44:41Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 12,
+          "startedAt": "2026-11-05T23:44:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:44:42Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-11-05T23:44:41Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-xdist/actions/runs/42131392843/job/127608733764"
+    },
+    {
+      "completedAt": "2026-11-05T23:44:21Z",
+      "conclusion": "success",
+      "databaseId": 127608733775,
+      "name": "test (py311-pytestmain, windows-latest)",
+      "startedAt": "2026-11-05T23:42:30Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-05T23:42:31Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-05T23:42:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:37Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-05T23:42:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:37Z",
+          "conclusion": "success",
+          "name": "Download Package",
+          "number": 3,
+          "startedAt": "2026-11-05T23:42:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:38Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-05T23:42:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:48Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-11-05T23:42:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:44:17Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 6,
+          "startedAt": "2026-11-05T23:42:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:44:17Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 11,
+          "startedAt": "2026-11-05T23:44:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:44:19Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 12,
+          "startedAt": "2026-11-05T23:44:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:44:19Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-11-05T23:44:19Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-xdist/actions/runs/42131392843/job/127608733775"
+    },
+    {
+      "completedAt": "2026-11-05T23:44:29Z",
+      "conclusion": "success",
+      "databaseId": 127608733778,
+      "name": "test (py311-pytestlatest, windows-latest)",
+      "startedAt": "2026-11-05T23:42:30Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-05T23:42:32Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-05T23:42:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:38Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-05T23:42:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:39Z",
+          "conclusion": "success",
+          "name": "Download Package",
+          "number": 3,
+          "startedAt": "2026-11-05T23:42:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:39Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-05T23:42:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:52Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-11-05T23:42:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:44:25Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 6,
+          "startedAt": "2026-11-05T23:42:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:44:25Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 11,
+          "startedAt": "2026-11-05T23:44:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:44:28Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 12,
+          "startedAt": "2026-11-05T23:44:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:44:28Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-11-05T23:44:28Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-xdist/actions/runs/42131392843/job/127608733778"
+    },
+    {
+      "completedAt": "2026-11-05T23:45:06Z",
+      "conclusion": "success",
+      "databaseId": 127608733788,
+      "name": "test (py310-pytestlatest, windows-latest)",
+      "startedAt": "2026-11-05T23:42:29Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-05T23:42:32Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-05T23:42:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:40Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-05T23:42:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:41Z",
+          "conclusion": "success",
+          "name": "Download Package",
+          "number": 3,
+          "startedAt": "2026-11-05T23:42:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:34Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-05T23:42:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:40Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-11-05T23:43:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:45:02Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 6,
+          "startedAt": "2026-11-05T23:43:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:45:02Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 11,
+          "startedAt": "2026-11-05T23:45:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:45:05Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 12,
+          "startedAt": "2026-11-05T23:45:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:45:05Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-11-05T23:45:05Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-xdist/actions/runs/42131392843/job/127608733788"
+    },
+    {
+      "completedAt": "2026-11-05T23:43:40Z",
+      "conclusion": "success",
+      "databaseId": 127608733789,
+      "name": "test (py311-pytestlatest, ubuntu-latest)",
+      "startedAt": "2026-11-05T23:42:30Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-05T23:42:32Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-05T23:42:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:33Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-05T23:42:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:34Z",
+          "conclusion": "success",
+          "name": "Download Package",
+          "number": 3,
+          "startedAt": "2026-11-05T23:42:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:35Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-05T23:42:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:44Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-11-05T23:42:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:37Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 6,
+          "startedAt": "2026-11-05T23:42:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:37Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 11,
+          "startedAt": "2026-11-05T23:43:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:38Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 12,
+          "startedAt": "2026-11-05T23:43:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:38Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-11-05T23:43:38Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-xdist/actions/runs/42131392843/job/127608733789"
+    },
+    {
+      "completedAt": "2026-11-05T23:42:48Z",
+      "conclusion": "success",
+      "databaseId": 127608733822,
+      "name": "test (py310-psutil, ubuntu-latest)",
+      "startedAt": "2026-11-05T23:42:30Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-05T23:42:32Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-05T23:42:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:33Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-05T23:42:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:34Z",
+          "conclusion": "success",
+          "name": "Download Package",
+          "number": 3,
+          "startedAt": "2026-11-05T23:42:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:39Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-05T23:42:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:42Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-11-05T23:42:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:45Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 6,
+          "startedAt": "2026-11-05T23:42:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:45Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 11,
+          "startedAt": "2026-11-05T23:42:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:46Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 12,
+          "startedAt": "2026-11-05T23:42:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:46Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-11-05T23:42:46Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-xdist/actions/runs/42131392843/job/127608733822"
+    },
+    {
+      "completedAt": "2026-11-05T23:43:44Z",
+      "conclusion": "success",
+      "databaseId": 127608733844,
+      "name": "test (py310-setproctitle, ubuntu-latest)",
+      "startedAt": "2026-11-05T23:42:30Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-05T23:42:31Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-05T23:42:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:32Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-11-05T23:42:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:33Z",
+          "conclusion": "success",
+          "name": "Download Package",
+          "number": 3,
+          "startedAt": "2026-11-05T23:42:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:39Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 4,
+          "startedAt": "2026-11-05T23:42:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:42:41Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-11-05T23:42:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:42Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 6,
+          "startedAt": "2026-11-05T23:42:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:43Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 11,
+          "startedAt": "2026-11-05T23:43:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:43Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 12,
+          "startedAt": "2026-11-05T23:43:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-05T23:43:43Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-11-05T23:43:43Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pytest-dev/pytest-xdist/actions/runs/42131392843/job/127608733844"
+    }
+  ],
+  "name": "test",
+  "updatedAt": "2026-11-05T23:45:07Z",
+  "repository": "pytest-dev/pytest-xdist"
+}

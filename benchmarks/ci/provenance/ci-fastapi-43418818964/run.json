@@ -1,0 +1,213 @@
+{
+  "attempt": 1,
+  "conclusion": "failure",
+  "createdAt": "2026-11-13T11:39:33Z",
+  "databaseId": 43418818964,
+  "displayTitle": "\ud83d\udd12\ufe0f Generate GH actions worklow lockfile and bump Zizmor",
+  "event": "pull_request",
+  "headBranch": "gh-actions-lockfile",
+  "headSha": "8c59d8c7c5bb1a646585e3a753849c0cb337361f",
+  "jobs": [
+    {
+      "completedAt": "2026-11-13T11:40:17Z",
+      "conclusion": "failure",
+      "databaseId": 131863376734,
+      "name": "pre-commit",
+      "startedAt": "2026-11-13T11:39:36Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-13T11:39:37Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-13T11:39:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-13T11:39:46Z",
+          "conclusion": "success",
+          "name": "Build tiangolo/pr-push@0.0.4",
+          "number": 2,
+          "startedAt": "2026-11-13T11:39:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-13T11:39:46Z",
+          "conclusion": "success",
+          "name": "Dump GitHub context",
+          "number": 3,
+          "startedAt": "2026-11-13T11:39:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-13T11:39:52Z",
+          "conclusion": "success",
+          "name": "Checkout PR for own repo",
+          "number": 4,
+          "startedAt": "2026-11-13T11:39:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-13T11:39:52Z",
+          "conclusion": "skipped",
+          "name": "Checkout PR for fork",
+          "number": 5,
+          "startedAt": "2026-11-13T11:39:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-13T11:39:52Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 6,
+          "startedAt": "2026-11-13T11:39:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-13T11:39:56Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 7,
+          "startedAt": "2026-11-13T11:39:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-13T11:39:57Z",
+          "conclusion": "success",
+          "name": "Install Dependencies",
+          "number": 8,
+          "startedAt": "2026-11-13T11:39:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-13T11:40:15Z",
+          "conclusion": "success",
+          "name": "Run prek - pre-commit",
+          "number": 9,
+          "startedAt": "2026-11-13T11:39:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-13T11:40:15Z",
+          "conclusion": "success",
+          "name": "Check for changes",
+          "number": 10,
+          "startedAt": "2026-11-13T11:40:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-13T11:40:15Z",
+          "conclusion": "skipped",
+          "name": "Get PR Push token",
+          "number": 11,
+          "startedAt": "2026-11-13T11:40:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-13T11:40:15Z",
+          "conclusion": "skipped",
+          "name": "Commit and push changes",
+          "number": 12,
+          "startedAt": "2026-11-13T11:40:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-13T11:40:15Z",
+          "conclusion": "skipped",
+          "name": "Run pre-commit-ci/lite-action@v1.2.0",
+          "number": 13,
+          "startedAt": "2026-11-13T11:40:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-13T11:40:15Z",
+          "conclusion": "failure",
+          "name": "Error out on pre-commit errors",
+          "number": 14,
+          "startedAt": "2026-11-13T11:40:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-13T11:40:15Z",
+          "conclusion": "skipped",
+          "name": "Post Setup uv",
+          "number": 26,
+          "startedAt": "2026-11-13T11:40:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-13T11:40:15Z",
+          "conclusion": "skipped",
+          "name": "Post Set up Python",
+          "number": 27,
+          "startedAt": "2026-11-13T11:40:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-13T11:40:16Z",
+          "conclusion": "success",
+          "name": "Post Checkout PR for own repo",
+          "number": 28,
+          "startedAt": "2026-11-13T11:40:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-13T11:40:16Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 29,
+          "startedAt": "2026-11-13T11:40:16Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/fastapi/fastapi/actions/runs/43418818964/job/131863376734"
+    },
+    {
+      "completedAt": "2026-11-13T11:41:50Z",
+      "conclusion": "failure",
+      "databaseId": 131863693992,
+      "name": "pre-commit-alls-green",
+      "startedAt": "2026-11-13T11:41:45Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-13T11:41:47Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-13T11:41:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-13T11:41:47Z",
+          "conclusion": "success",
+          "name": "Dump GitHub context",
+          "number": 2,
+          "startedAt": "2026-11-13T11:41:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-13T11:41:47Z",
+          "conclusion": "failure",
+          "name": "Decide whether the needed jobs succeeded or failed",
+          "number": 3,
+          "startedAt": "2026-11-13T11:41:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-13T11:41:47Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 4,
+          "startedAt": "2026-11-13T11:41:47Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/fastapi/fastapi/actions/runs/43418818964/job/131863693992"
+    }
+  ],
+  "name": "pre-commit",
+  "updatedAt": "2026-11-13T11:41:50Z",
+  "repository": "fastapi/fastapi"
+}

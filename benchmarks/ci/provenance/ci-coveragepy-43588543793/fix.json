@@ -1,0 +1,12 @@
+{
+  "fixed_run": "https://github.com/coveragepy/coveragepy/actions/runs/43643581497",
+  "fixed_sha": "3902dfd321c64a32d0fbfb69e107b100a5399333",
+  "commits": [
+    "3902dfd321c64a32d0fbfb69e107b100a5399333"
+  ],
+  "files": [
+    "tests/test_collector.py"
+  ],
+  "merges": [],
+  "status": "ahead"
+}

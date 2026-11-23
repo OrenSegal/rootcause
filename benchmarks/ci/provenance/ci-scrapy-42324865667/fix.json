@@ -1,0 +1,11 @@
+{
+  "fixed_run": "https://github.com/scrapy/scrapy/actions/runs/42545862103",
+  "fixed_sha": "a4f3b175e4669a38bd5fa554212f271aa0100aac",
+  "commits": [
+    "a4f3b175e4669a38bd5fa554212f271aa0100aac"
+  ],
+  "files": [
+    "tests/test_spidermiddleware_metacopy.py"
+  ],
+  "status": "ahead"
+}

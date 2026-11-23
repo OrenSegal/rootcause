@@ -1,0 +1,19 @@
+[
+  {
+    "id": "b47335b45f",
+    "service": "pandas",
+    "version": "b47335b45f",
+    "ts": "2026-11-18T23:23:25Z",
+    "author": "jbrockmendel",
+    "summary": "BUG: plotting into one shared axes hid tick labels on its siblings (GH#27052)",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "doc/source/whatsnew/v3.2.0.rst",
+      "pandas/plotting/_core.py",
+      "pandas/plotting/_matplotlib/core.py",
+      "pandas/plotting/_matplotlib/tools.py",
+      "pandas/tests/plotting/test_misc.py"
+    ]
+  }
+]

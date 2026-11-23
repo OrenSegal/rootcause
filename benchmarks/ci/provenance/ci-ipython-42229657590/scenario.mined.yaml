@@ -1,0 +1,17 @@
+# Mined from https://github.com/ipython/ipython/actions/runs/42229657590
+# (ipython/ipython, licence BSD-3-Clause). Fixed by run
+# https://github.com/ipython/ipython/actions/runs/42230847838. Label rule: the fix
+# changed files exactly one tested commit touched. Fix touched: tests/test_pretty.py.
+id: ci-ipython-42229657590
+title: Fix dictionary mutation during pretty printing
+alert:
+  severity: ci
+  service: oldest-deps-windows-latest
+  summary: 'workflow Run tests failed on fix/dict-pretty-print-mutation at e11b13a5f8: step
+    ''pytest'' in job ''oldest-deps (windows-latest)'' failed.'
+truth:
+  category: bad_code_deploy
+  service: ipython
+  required_evidence_any:
+  - e11b13a5f8
+provenance: recorded

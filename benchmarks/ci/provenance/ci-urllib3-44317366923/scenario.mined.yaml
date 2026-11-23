@@ -1,0 +1,17 @@
+# Mined from https://github.com/urllib3/urllib3/actions/runs/44317366923
+# (urllib3/urllib3, licence MIT). Fixed by run
+# https://github.com/urllib3/urllib3/actions/runs/44346129620. Label rule: the fix
+# changed files exactly one tested commit touched. Fix touched: test/test_multipart.py.
+id: ci-urllib3-44317366923
+title: Add streaming multipart encoder and decoder in urllib3.multipart
+alert:
+  severity: ci
+  service: lint
+  summary: 'workflow lint failed on fix-624-streaming-multipart at 20374a9e39: step ''Lint
+    code'' in job ''lint'' failed.'
+truth:
+  category: bad_code_deploy
+  service: urllib3
+  required_evidence_any:
+  - 20374a9e39
+provenance: recorded

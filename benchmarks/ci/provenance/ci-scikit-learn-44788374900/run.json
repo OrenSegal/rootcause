@@ -1,0 +1,277 @@
+{
+  "attempt": 1,
+  "conclusion": "failure",
+  "createdAt": "2026-11-20T17:58:40Z",
+  "databaseId": 44788374900,
+  "displayTitle": "FIX move_estimator_to should not convert non-numeric/non-boolean array attributes",
+  "event": "pull_request",
+  "headBranch": "fix-35109-move-estimator-to-non-numeric",
+  "headSha": "d34a8b11f9bca91d39959181133725c3b86b03a6",
+  "jobs": [
+    {
+      "completedAt": "2026-11-20T17:59:03Z",
+      "conclusion": "failure",
+      "databaseId": 136469203022,
+      "name": "Lint",
+      "startedAt": "2026-11-20T17:58:44Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T17:58:45Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T17:58:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T17:58:47Z",
+          "conclusion": "success",
+          "name": "Checkout",
+          "number": 2,
+          "startedAt": "2026-11-20T17:58:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T17:58:49Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@v7.1.0",
+          "number": 3,
+          "startedAt": "2026-11-20T17:58:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T17:58:50Z",
+          "conclusion": "success",
+          "name": "Update pip >= 26.2.2",
+          "number": 4,
+          "startedAt": "2026-11-20T17:58:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T17:58:53Z",
+          "conclusion": "success",
+          "name": "Install linters",
+          "number": 5,
+          "startedAt": "2026-11-20T17:58:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T17:59:01Z",
+          "conclusion": "failure",
+          "name": "Run linters",
+          "number": 6,
+          "startedAt": "2026-11-20T17:58:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T17:59:01Z",
+          "conclusion": "skipped",
+          "name": "Run Meson OpenMP checks",
+          "number": 7,
+          "startedAt": "2026-11-20T17:59:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T17:59:01Z",
+          "conclusion": "skipped",
+          "name": "Post Run actions/setup-python@v7.1.0",
+          "number": 13,
+          "startedAt": "2026-11-20T17:59:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T17:59:02Z",
+          "conclusion": "success",
+          "name": "Post Checkout",
+          "number": 14,
+          "startedAt": "2026-11-20T17:59:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T17:59:02Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-20T17:59:02Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/scikit-learn/scikit-learn/actions/runs/44788374900/job/136469203022"
+    },
+    {
+      "completedAt": "2026-11-20T17:58:51Z",
+      "conclusion": "success",
+      "databaseId": 136469203346,
+      "name": "Retrieve the latest commit message",
+      "startedAt": "2026-11-20T17:58:44Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T17:58:46Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T17:58:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T17:58:48Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7.0.1",
+          "number": 2,
+          "startedAt": "2026-11-20T17:58:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T17:58:48Z",
+          "conclusion": "success",
+          "name": "Retrieve the latest commit message",
+          "number": 3,
+          "startedAt": "2026-11-20T17:58:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T17:58:48Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7.0.1",
+          "number": 6,
+          "startedAt": "2026-11-20T17:58:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T17:58:48Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 7,
+          "startedAt": "2026-11-20T17:58:48Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/scikit-learn/scikit-learn/actions/runs/44788374900/job/136469203346"
+    },
+    {
+      "completedAt": "2026-11-20T17:58:56Z",
+      "conclusion": "success",
+      "databaseId": 136469292816,
+      "name": "Retrieve the selected tests",
+      "startedAt": "2026-11-20T17:58:53Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T17:58:54Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T17:58:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T17:58:54Z",
+          "conclusion": "success",
+          "name": "Retrieve the selected tests",
+          "number": 2,
+          "startedAt": "2026-11-20T17:58:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T17:58:54Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 3,
+          "startedAt": "2026-11-20T17:58:54Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/scikit-learn/scikit-learn/actions/runs/44788374900/job/136469292816"
+    },
+    {
+      "completedAt": "2026-11-20T17:59:10Z",
+      "conclusion": "failure",
+      "databaseId": 136469406686,
+      "name": "Check all job statuses",
+      "startedAt": "2026-11-20T17:59:06Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-20T17:59:08Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-20T17:59:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T17:59:08Z",
+          "conclusion": "failure",
+          "name": "Run re-actors/alls-green@v1.3.0",
+          "number": 2,
+          "startedAt": "2026-11-20T17:59:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-20T17:59:08Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 3,
+          "startedAt": "2026-11-20T17:59:08Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/scikit-learn/scikit-learn/actions/runs/44788374900/job/136469406686"
+    },
+    {
+      "completedAt": "2026-11-20T17:59:04Z",
+      "conclusion": "skipped",
+      "databaseId": 136469407103,
+      "name": "Linux x86-64 pylatest_pip_scipy_dev",
+      "startedAt": "2026-11-20T17:59:04Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/scikit-learn/scikit-learn/actions/runs/44788374900/job/136469407103"
+    },
+    {
+      "completedAt": "2026-11-20T17:59:04Z",
+      "conclusion": "skipped",
+      "databaseId": 136469407341,
+      "name": "Linux x86-64 pylatest_free_threaded",
+      "startedAt": "2026-11-20T17:59:04Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/scikit-learn/scikit-learn/actions/runs/44788374900/job/136469407341"
+    },
+    {
+      "completedAt": "2026-11-20T17:59:04Z",
+      "conclusion": "skipped",
+      "databaseId": 136469407362,
+      "name": "matrix.name",
+      "startedAt": "2026-11-20T17:59:04Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/scikit-learn/scikit-learn/actions/runs/44788374900/job/136469407362"
+    },
+    {
+      "completedAt": "2026-11-20T17:59:04Z",
+      "conclusion": "skipped",
+      "databaseId": 136469408600,
+      "name": "Linux i386 debian_32bit",
+      "startedAt": "2026-11-20T17:59:04Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/scikit-learn/scikit-learn/actions/runs/44788374900/job/136469408600"
+    },
+    {
+      "completedAt": "2026-11-20T17:59:04Z",
+      "conclusion": "skipped",
+      "databaseId": 136469408866,
+      "name": "Linux x86-64 pylatest_free_threaded_parallelism",
+      "startedAt": "2026-11-20T17:59:04Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/scikit-learn/scikit-learn/actions/runs/44788374900/job/136469408866"
+    }
+  ],
+  "name": "Unit tests",
+  "updatedAt": "2026-11-20T17:59:10Z",
+  "repository": "scikit-learn/scikit-learn"
+}

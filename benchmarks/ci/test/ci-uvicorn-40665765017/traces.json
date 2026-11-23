@@ -1,0 +1,2212 @@
+[
+  {
+    "span_id": "run-40665765017",
+    "trace_id": "run-40665765017",
+    "parent_id": null,
+    "service": "test-suite",
+    "name": "Test Suite",
+    "start": "2026-10-28T09:38:02Z",
+    "duration_ms": 146000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-122739714155",
+    "trace_id": "run-40665765017",
+    "parent_id": "run-40665765017",
+    "service": "python-3-11-ubuntu-latest",
+    "name": "Python 3.11 ubuntu-latest",
+    "start": "2026-10-28T09:38:05Z",
+    "duration_ms": 51000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-122739714155-step-1",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714155",
+    "service": "python-3-11-ubuntu-latest",
+    "name": "Set up job",
+    "start": "2026-10-28T09:38:06Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714155-step-2",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714155",
+    "service": "python-3-11-ubuntu-latest",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:38:07Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714155-step-3",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714155",
+    "service": "python-3-11-ubuntu-latest",
+    "name": "Install uv",
+    "start": "2026-10-28T09:38:08Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714155-step-4",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714155",
+    "service": "python-3-11-ubuntu-latest",
+    "name": "Install dependencies",
+    "start": "2026-10-28T09:38:11Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714155-step-5",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714155",
+    "service": "python-3-11-ubuntu-latest",
+    "name": "Run linting checks",
+    "start": "2026-10-28T09:38:12Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714155-step-6",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714155",
+    "service": "python-3-11-ubuntu-latest",
+    "name": "Build package & docs",
+    "start": "2026-10-28T09:38:15Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714155-step-7",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714155",
+    "service": "python-3-11-ubuntu-latest",
+    "name": "Run tests",
+    "start": "2026-10-28T09:38:17Z",
+    "duration_ms": 37000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-122739714155-step-16",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714155",
+    "service": "python-3-11-ubuntu-latest",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:38:54Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714155-step-17",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714155",
+    "service": "python-3-11-ubuntu-latest",
+    "name": "Complete job",
+    "start": "2026-10-28T09:38:54Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714446",
+    "trace_id": "run-40665765017",
+    "parent_id": "run-40665765017",
+    "service": "python-3-13-macos-latest",
+    "name": "Python 3.13 macos-latest",
+    "start": "2026-10-28T09:38:06Z",
+    "duration_ms": 56000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-122739714446-step-1",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714446",
+    "service": "python-3-13-macos-latest",
+    "name": "Set up job",
+    "start": "2026-10-28T09:38:08Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714446-step-2",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714446",
+    "service": "python-3-13-macos-latest",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:38:09Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714446-step-3",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714446",
+    "service": "python-3-13-macos-latest",
+    "name": "Install uv",
+    "start": "2026-10-28T09:38:12Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714446-step-4",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714446",
+    "service": "python-3-13-macos-latest",
+    "name": "Install dependencies",
+    "start": "2026-10-28T09:38:20Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714446-step-6",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714446",
+    "service": "python-3-13-macos-latest",
+    "name": "Build package & docs",
+    "start": "2026-10-28T09:38:23Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714446-step-7",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714446",
+    "service": "python-3-13-macos-latest",
+    "name": "Run tests",
+    "start": "2026-10-28T09:38:28Z",
+    "duration_ms": 29000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-122739714446-step-16",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714446",
+    "service": "python-3-13-macos-latest",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:38:57Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714446-step-17",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714446",
+    "service": "python-3-13-macos-latest",
+    "name": "Complete job",
+    "start": "2026-10-28T09:38:58Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714472",
+    "trace_id": "run-40665765017",
+    "parent_id": "run-40665765017",
+    "service": "python-3-12-macos-latest",
+    "name": "Python 3.12 macos-latest",
+    "start": "2026-10-28T09:38:06Z",
+    "duration_ms": 60000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-122739714472-step-1",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714472",
+    "service": "python-3-12-macos-latest",
+    "name": "Set up job",
+    "start": "2026-10-28T09:38:07Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714472-step-2",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714472",
+    "service": "python-3-12-macos-latest",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:38:08Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714472-step-3",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714472",
+    "service": "python-3-12-macos-latest",
+    "name": "Install uv",
+    "start": "2026-10-28T09:38:10Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714472-step-4",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714472",
+    "service": "python-3-12-macos-latest",
+    "name": "Install dependencies",
+    "start": "2026-10-28T09:38:17Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714472-step-6",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714472",
+    "service": "python-3-12-macos-latest",
+    "name": "Build package & docs",
+    "start": "2026-10-28T09:38:19Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714472-step-7",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714472",
+    "service": "python-3-12-macos-latest",
+    "name": "Run tests",
+    "start": "2026-10-28T09:38:23Z",
+    "duration_ms": 38000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-122739714472-step-16",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714472",
+    "service": "python-3-12-macos-latest",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:39:01Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714472-step-17",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714472",
+    "service": "python-3-12-macos-latest",
+    "name": "Complete job",
+    "start": "2026-10-28T09:39:02Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714529",
+    "trace_id": "run-40665765017",
+    "parent_id": "run-40665765017",
+    "service": "python-3-15t-ubuntu-latest",
+    "name": "Python 3.15t ubuntu-latest",
+    "start": "2026-10-28T09:38:05Z",
+    "duration_ms": 65000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714529-step-1",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714529",
+    "service": "python-3-15t-ubuntu-latest",
+    "name": "Set up job",
+    "start": "2026-10-28T09:38:06Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714529-step-2",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714529",
+    "service": "python-3-15t-ubuntu-latest",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:38:07Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714529-step-3",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714529",
+    "service": "python-3-15t-ubuntu-latest",
+    "name": "Install uv",
+    "start": "2026-10-28T09:38:08Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714529-step-4",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714529",
+    "service": "python-3-15t-ubuntu-latest",
+    "name": "Install dependencies",
+    "start": "2026-10-28T09:38:16Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714529-step-5",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714529",
+    "service": "python-3-15t-ubuntu-latest",
+    "name": "Run linting checks",
+    "start": "2026-10-28T09:38:18Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714529-step-6",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714529",
+    "service": "python-3-15t-ubuntu-latest",
+    "name": "Build package & docs",
+    "start": "2026-10-28T09:38:25Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714529-step-7",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714529",
+    "service": "python-3-15t-ubuntu-latest",
+    "name": "Run tests",
+    "start": "2026-10-28T09:38:28Z",
+    "duration_ms": 38000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714529-step-8",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714529",
+    "service": "python-3-15t-ubuntu-latest",
+    "name": "Enforce coverage",
+    "start": "2026-10-28T09:39:06Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714529-step-15",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714529",
+    "service": "python-3-15t-ubuntu-latest",
+    "name": "Post Install uv",
+    "start": "2026-10-28T09:39:06Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714529-step-16",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714529",
+    "service": "python-3-15t-ubuntu-latest",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:39:07Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714529-step-17",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714529",
+    "service": "python-3-15t-ubuntu-latest",
+    "name": "Complete job",
+    "start": "2026-10-28T09:39:07Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714543",
+    "trace_id": "run-40665765017",
+    "parent_id": "run-40665765017",
+    "service": "python-3-12-windows-latest",
+    "name": "Python 3.12 windows-latest",
+    "start": "2026-10-28T09:38:05Z",
+    "duration_ms": 74000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714543-step-1",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714543",
+    "service": "python-3-12-windows-latest",
+    "name": "Set up job",
+    "start": "2026-10-28T09:38:06Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714543-step-2",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714543",
+    "service": "python-3-12-windows-latest",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:38:07Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714543-step-3",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714543",
+    "service": "python-3-12-windows-latest",
+    "name": "Install uv",
+    "start": "2026-10-28T09:38:14Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714543-step-4",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714543",
+    "service": "python-3-12-windows-latest",
+    "name": "Install dependencies",
+    "start": "2026-10-28T09:38:22Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714543-step-6",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714543",
+    "service": "python-3-12-windows-latest",
+    "name": "Build package & docs",
+    "start": "2026-10-28T09:38:26Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714543-step-7",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714543",
+    "service": "python-3-12-windows-latest",
+    "name": "Run tests",
+    "start": "2026-10-28T09:38:32Z",
+    "duration_ms": 41000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714543-step-8",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714543",
+    "service": "python-3-12-windows-latest",
+    "name": "Enforce coverage",
+    "start": "2026-10-28T09:39:13Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714543-step-15",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714543",
+    "service": "python-3-12-windows-latest",
+    "name": "Post Install uv",
+    "start": "2026-10-28T09:39:14Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714543-step-16",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714543",
+    "service": "python-3-12-windows-latest",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:39:14Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714543-step-17",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714543",
+    "service": "python-3-12-windows-latest",
+    "name": "Complete job",
+    "start": "2026-10-28T09:39:16Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714554",
+    "trace_id": "run-40665765017",
+    "parent_id": "run-40665765017",
+    "service": "python-3-13-ubuntu-latest",
+    "name": "Python 3.13 ubuntu-latest",
+    "start": "2026-10-28T09:38:05Z",
+    "duration_ms": 51000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-122739714554-step-1",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714554",
+    "service": "python-3-13-ubuntu-latest",
+    "name": "Set up job",
+    "start": "2026-10-28T09:38:06Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714554-step-2",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714554",
+    "service": "python-3-13-ubuntu-latest",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:38:07Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714554-step-3",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714554",
+    "service": "python-3-13-ubuntu-latest",
+    "name": "Install uv",
+    "start": "2026-10-28T09:38:08Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714554-step-4",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714554",
+    "service": "python-3-13-ubuntu-latest",
+    "name": "Install dependencies",
+    "start": "2026-10-28T09:38:11Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714554-step-5",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714554",
+    "service": "python-3-13-ubuntu-latest",
+    "name": "Run linting checks",
+    "start": "2026-10-28T09:38:12Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714554-step-6",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714554",
+    "service": "python-3-13-ubuntu-latest",
+    "name": "Build package & docs",
+    "start": "2026-10-28T09:38:16Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714554-step-7",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714554",
+    "service": "python-3-13-ubuntu-latest",
+    "name": "Run tests",
+    "start": "2026-10-28T09:38:18Z",
+    "duration_ms": 36000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-122739714554-step-16",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714554",
+    "service": "python-3-13-ubuntu-latest",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:38:54Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714554-step-17",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714554",
+    "service": "python-3-13-ubuntu-latest",
+    "name": "Complete job",
+    "start": "2026-10-28T09:38:54Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714576",
+    "trace_id": "run-40665765017",
+    "parent_id": "run-40665765017",
+    "service": "python-3-14-ubuntu-latest",
+    "name": "Python 3.14 ubuntu-latest",
+    "start": "2026-10-28T09:38:05Z",
+    "duration_ms": 59000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714576-step-1",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714576",
+    "service": "python-3-14-ubuntu-latest",
+    "name": "Set up job",
+    "start": "2026-10-28T09:38:06Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714576-step-2",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714576",
+    "service": "python-3-14-ubuntu-latest",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:38:08Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714576-step-3",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714576",
+    "service": "python-3-14-ubuntu-latest",
+    "name": "Install uv",
+    "start": "2026-10-28T09:38:09Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714576-step-4",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714576",
+    "service": "python-3-14-ubuntu-latest",
+    "name": "Install dependencies",
+    "start": "2026-10-28T09:38:12Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714576-step-5",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714576",
+    "service": "python-3-14-ubuntu-latest",
+    "name": "Run linting checks",
+    "start": "2026-10-28T09:38:14Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714576-step-6",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714576",
+    "service": "python-3-14-ubuntu-latest",
+    "name": "Build package & docs",
+    "start": "2026-10-28T09:38:21Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714576-step-7",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714576",
+    "service": "python-3-14-ubuntu-latest",
+    "name": "Run tests",
+    "start": "2026-10-28T09:38:24Z",
+    "duration_ms": 36000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714576-step-8",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714576",
+    "service": "python-3-14-ubuntu-latest",
+    "name": "Enforce coverage",
+    "start": "2026-10-28T09:39:00Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714576-step-15",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714576",
+    "service": "python-3-14-ubuntu-latest",
+    "name": "Post Install uv",
+    "start": "2026-10-28T09:39:01Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714576-step-16",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714576",
+    "service": "python-3-14-ubuntu-latest",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:39:01Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714576-step-17",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714576",
+    "service": "python-3-14-ubuntu-latest",
+    "name": "Complete job",
+    "start": "2026-10-28T09:39:02Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714602",
+    "trace_id": "run-40665765017",
+    "parent_id": "run-40665765017",
+    "service": "python-3-11-macos-latest",
+    "name": "Python 3.11 macos-latest",
+    "start": "2026-10-28T09:38:06Z",
+    "duration_ms": 68000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-122739714602-step-1",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714602",
+    "service": "python-3-11-macos-latest",
+    "name": "Set up job",
+    "start": "2026-10-28T09:38:08Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714602-step-2",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714602",
+    "service": "python-3-11-macos-latest",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:38:10Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714602-step-3",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714602",
+    "service": "python-3-11-macos-latest",
+    "name": "Install uv",
+    "start": "2026-10-28T09:38:13Z",
+    "duration_ms": 11000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714602-step-4",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714602",
+    "service": "python-3-11-macos-latest",
+    "name": "Install dependencies",
+    "start": "2026-10-28T09:38:24Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714602-step-6",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714602",
+    "service": "python-3-11-macos-latest",
+    "name": "Build package & docs",
+    "start": "2026-10-28T09:38:27Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714602-step-7",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714602",
+    "service": "python-3-11-macos-latest",
+    "name": "Run tests",
+    "start": "2026-10-28T09:38:32Z",
+    "duration_ms": 36000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-122739714602-step-16",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714602",
+    "service": "python-3-11-macos-latest",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:39:08Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714602-step-17",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714602",
+    "service": "python-3-11-macos-latest",
+    "name": "Complete job",
+    "start": "2026-10-28T09:39:09Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714604",
+    "trace_id": "run-40665765017",
+    "parent_id": "run-40665765017",
+    "service": "python-3-15-windows-latest",
+    "name": "Python 3.15 windows-latest",
+    "start": "2026-10-28T09:38:05Z",
+    "duration_ms": 73000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714604-step-1",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714604",
+    "service": "python-3-15-windows-latest",
+    "name": "Set up job",
+    "start": "2026-10-28T09:38:07Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714604-step-2",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714604",
+    "service": "python-3-15-windows-latest",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:38:08Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714604-step-3",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714604",
+    "service": "python-3-15-windows-latest",
+    "name": "Install uv",
+    "start": "2026-10-28T09:38:15Z",
+    "duration_ms": 10000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714604-step-4",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714604",
+    "service": "python-3-15-windows-latest",
+    "name": "Install dependencies",
+    "start": "2026-10-28T09:38:25Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714604-step-6",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714604",
+    "service": "python-3-15-windows-latest",
+    "name": "Build package & docs",
+    "start": "2026-10-28T09:38:30Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714604-step-7",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714604",
+    "service": "python-3-15-windows-latest",
+    "name": "Run tests",
+    "start": "2026-10-28T09:38:36Z",
+    "duration_ms": 34000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714604-step-8",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714604",
+    "service": "python-3-15-windows-latest",
+    "name": "Enforce coverage",
+    "start": "2026-10-28T09:39:10Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714604-step-15",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714604",
+    "service": "python-3-15-windows-latest",
+    "name": "Post Install uv",
+    "start": "2026-10-28T09:39:12Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714604-step-16",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714604",
+    "service": "python-3-15-windows-latest",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:39:12Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714604-step-17",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714604",
+    "service": "python-3-15-windows-latest",
+    "name": "Complete job",
+    "start": "2026-10-28T09:39:14Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714632",
+    "trace_id": "run-40665765017",
+    "parent_id": "run-40665765017",
+    "service": "python-3-14t-windows-latest",
+    "name": "Python 3.14t windows-latest",
+    "start": "2026-10-28T09:38:05Z",
+    "duration_ms": 78000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714632-step-1",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714632",
+    "service": "python-3-14t-windows-latest",
+    "name": "Set up job",
+    "start": "2026-10-28T09:38:06Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714632-step-2",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714632",
+    "service": "python-3-14t-windows-latest",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:38:07Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714632-step-3",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714632",
+    "service": "python-3-14t-windows-latest",
+    "name": "Install uv",
+    "start": "2026-10-28T09:38:15Z",
+    "duration_ms": 15000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714632-step-4",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714632",
+    "service": "python-3-14t-windows-latest",
+    "name": "Install dependencies",
+    "start": "2026-10-28T09:38:30Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714632-step-6",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714632",
+    "service": "python-3-14t-windows-latest",
+    "name": "Build package & docs",
+    "start": "2026-10-28T09:38:34Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714632-step-7",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714632",
+    "service": "python-3-14t-windows-latest",
+    "name": "Run tests",
+    "start": "2026-10-28T09:38:40Z",
+    "duration_ms": 35000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714632-step-8",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714632",
+    "service": "python-3-14t-windows-latest",
+    "name": "Enforce coverage",
+    "start": "2026-10-28T09:39:15Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714632-step-15",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714632",
+    "service": "python-3-14t-windows-latest",
+    "name": "Post Install uv",
+    "start": "2026-10-28T09:39:16Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714632-step-16",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714632",
+    "service": "python-3-14t-windows-latest",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:39:17Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714632-step-17",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714632",
+    "service": "python-3-14t-windows-latest",
+    "name": "Complete job",
+    "start": "2026-10-28T09:39:19Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714649",
+    "trace_id": "run-40665765017",
+    "parent_id": "run-40665765017",
+    "service": "python-3-14-macos-latest",
+    "name": "Python 3.14 macos-latest",
+    "start": "2026-10-28T09:38:05Z",
+    "duration_ms": 40000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714649-step-1",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714649",
+    "service": "python-3-14-macos-latest",
+    "name": "Set up job",
+    "start": "2026-10-28T09:38:05Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714649-step-2",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714649",
+    "service": "python-3-14-macos-latest",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:38:07Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714649-step-3",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714649",
+    "service": "python-3-14-macos-latest",
+    "name": "Install uv",
+    "start": "2026-10-28T09:38:08Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714649-step-4",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714649",
+    "service": "python-3-14-macos-latest",
+    "name": "Install dependencies",
+    "start": "2026-10-28T09:38:12Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714649-step-6",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714649",
+    "service": "python-3-14-macos-latest",
+    "name": "Build package & docs",
+    "start": "2026-10-28T09:38:13Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714649-step-7",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714649",
+    "service": "python-3-14-macos-latest",
+    "name": "Run tests",
+    "start": "2026-10-28T09:38:15Z",
+    "duration_ms": 26000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714649-step-8",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714649",
+    "service": "python-3-14-macos-latest",
+    "name": "Enforce coverage",
+    "start": "2026-10-28T09:38:41Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714649-step-15",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714649",
+    "service": "python-3-14-macos-latest",
+    "name": "Post Install uv",
+    "start": "2026-10-28T09:38:42Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714649-step-16",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714649",
+    "service": "python-3-14-macos-latest",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:38:42Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714649-step-17",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714649",
+    "service": "python-3-14-macos-latest",
+    "name": "Complete job",
+    "start": "2026-10-28T09:38:43Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714653",
+    "trace_id": "run-40665765017",
+    "parent_id": "run-40665765017",
+    "service": "python-3-15-ubuntu-latest",
+    "name": "Python 3.15 ubuntu-latest",
+    "start": "2026-10-28T09:38:06Z",
+    "duration_ms": 60000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714653-step-1",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714653",
+    "service": "python-3-15-ubuntu-latest",
+    "name": "Set up job",
+    "start": "2026-10-28T09:38:07Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714653-step-2",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714653",
+    "service": "python-3-15-ubuntu-latest",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:38:08Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714653-step-3",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714653",
+    "service": "python-3-15-ubuntu-latest",
+    "name": "Install uv",
+    "start": "2026-10-28T09:38:09Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714653-step-4",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714653",
+    "service": "python-3-15-ubuntu-latest",
+    "name": "Install dependencies",
+    "start": "2026-10-28T09:38:14Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714653-step-5",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714653",
+    "service": "python-3-15-ubuntu-latest",
+    "name": "Run linting checks",
+    "start": "2026-10-28T09:38:16Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714653-step-6",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714653",
+    "service": "python-3-15-ubuntu-latest",
+    "name": "Build package & docs",
+    "start": "2026-10-28T09:38:22Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714653-step-7",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714653",
+    "service": "python-3-15-ubuntu-latest",
+    "name": "Run tests",
+    "start": "2026-10-28T09:38:25Z",
+    "duration_ms": 36000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714653-step-8",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714653",
+    "service": "python-3-15-ubuntu-latest",
+    "name": "Enforce coverage",
+    "start": "2026-10-28T09:39:01Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714653-step-15",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714653",
+    "service": "python-3-15-ubuntu-latest",
+    "name": "Post Install uv",
+    "start": "2026-10-28T09:39:02Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714653-step-16",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714653",
+    "service": "python-3-15-ubuntu-latest",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:39:02Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714653-step-17",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714653",
+    "service": "python-3-15-ubuntu-latest",
+    "name": "Complete job",
+    "start": "2026-10-28T09:39:03Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714667",
+    "trace_id": "run-40665765017",
+    "parent_id": "run-40665765017",
+    "service": "python-3-15t-macos-latest",
+    "name": "Python 3.15t macos-latest",
+    "start": "2026-10-28T09:39:04Z",
+    "duration_ms": 53000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714667-step-1",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714667",
+    "service": "python-3-15t-macos-latest",
+    "name": "Set up job",
+    "start": "2026-10-28T09:39:04Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714667-step-2",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714667",
+    "service": "python-3-15t-macos-latest",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:39:06Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714667-step-3",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714667",
+    "service": "python-3-15t-macos-latest",
+    "name": "Install uv",
+    "start": "2026-10-28T09:39:07Z",
+    "duration_ms": 10000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714667-step-4",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714667",
+    "service": "python-3-15t-macos-latest",
+    "name": "Install dependencies",
+    "start": "2026-10-28T09:39:17Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714667-step-6",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714667",
+    "service": "python-3-15t-macos-latest",
+    "name": "Build package & docs",
+    "start": "2026-10-28T09:39:21Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714667-step-7",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714667",
+    "service": "python-3-15t-macos-latest",
+    "name": "Run tests",
+    "start": "2026-10-28T09:39:25Z",
+    "duration_ms": 27000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714667-step-8",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714667",
+    "service": "python-3-15t-macos-latest",
+    "name": "Enforce coverage",
+    "start": "2026-10-28T09:39:52Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714667-step-15",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714667",
+    "service": "python-3-15t-macos-latest",
+    "name": "Post Install uv",
+    "start": "2026-10-28T09:39:52Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714667-step-16",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714667",
+    "service": "python-3-15t-macos-latest",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:39:52Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714667-step-17",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714667",
+    "service": "python-3-15t-macos-latest",
+    "name": "Complete job",
+    "start": "2026-10-28T09:39:53Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714672",
+    "trace_id": "run-40665765017",
+    "parent_id": "run-40665765017",
+    "service": "python-3-11-windows-latest",
+    "name": "Python 3.11 windows-latest",
+    "start": "2026-10-28T09:38:05Z",
+    "duration_ms": 72000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714672-step-1",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714672",
+    "service": "python-3-11-windows-latest",
+    "name": "Set up job",
+    "start": "2026-10-28T09:38:06Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714672-step-2",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714672",
+    "service": "python-3-11-windows-latest",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:38:07Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714672-step-3",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714672",
+    "service": "python-3-11-windows-latest",
+    "name": "Install uv",
+    "start": "2026-10-28T09:38:15Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714672-step-4",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714672",
+    "service": "python-3-11-windows-latest",
+    "name": "Install dependencies",
+    "start": "2026-10-28T09:38:23Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714672-step-6",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714672",
+    "service": "python-3-11-windows-latest",
+    "name": "Build package & docs",
+    "start": "2026-10-28T09:38:27Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714672-step-7",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714672",
+    "service": "python-3-11-windows-latest",
+    "name": "Run tests",
+    "start": "2026-10-28T09:38:33Z",
+    "duration_ms": 37000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714672-step-8",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714672",
+    "service": "python-3-11-windows-latest",
+    "name": "Enforce coverage",
+    "start": "2026-10-28T09:39:10Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714672-step-15",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714672",
+    "service": "python-3-11-windows-latest",
+    "name": "Post Install uv",
+    "start": "2026-10-28T09:39:11Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714672-step-16",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714672",
+    "service": "python-3-11-windows-latest",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:39:11Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714672-step-17",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714672",
+    "service": "python-3-11-windows-latest",
+    "name": "Complete job",
+    "start": "2026-10-28T09:39:14Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714680",
+    "trace_id": "run-40665765017",
+    "parent_id": "run-40665765017",
+    "service": "python-3-15-macos-latest",
+    "name": "Python 3.15 macos-latest",
+    "start": "2026-10-28T09:38:06Z",
+    "duration_ms": 61000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714680-step-1",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714680",
+    "service": "python-3-15-macos-latest",
+    "name": "Set up job",
+    "start": "2026-10-28T09:38:07Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714680-step-2",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714680",
+    "service": "python-3-15-macos-latest",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:38:08Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714680-step-3",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714680",
+    "service": "python-3-15-macos-latest",
+    "name": "Install uv",
+    "start": "2026-10-28T09:38:11Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714680-step-4",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714680",
+    "service": "python-3-15-macos-latest",
+    "name": "Install dependencies",
+    "start": "2026-10-28T09:38:18Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714680-step-6",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714680",
+    "service": "python-3-15-macos-latest",
+    "name": "Build package & docs",
+    "start": "2026-10-28T09:38:20Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714680-step-7",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714680",
+    "service": "python-3-15-macos-latest",
+    "name": "Run tests",
+    "start": "2026-10-28T09:38:25Z",
+    "duration_ms": 36000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714680-step-8",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714680",
+    "service": "python-3-15-macos-latest",
+    "name": "Enforce coverage",
+    "start": "2026-10-28T09:39:01Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714680-step-15",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714680",
+    "service": "python-3-15-macos-latest",
+    "name": "Post Install uv",
+    "start": "2026-10-28T09:39:02Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714680-step-16",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714680",
+    "service": "python-3-15-macos-latest",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:39:02Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714680-step-17",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714680",
+    "service": "python-3-15-macos-latest",
+    "name": "Complete job",
+    "start": "2026-10-28T09:39:03Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714702",
+    "trace_id": "run-40665765017",
+    "parent_id": "run-40665765017",
+    "service": "python-3-12-ubuntu-latest",
+    "name": "Python 3.12 ubuntu-latest",
+    "start": "2026-10-28T09:38:06Z",
+    "duration_ms": 65000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-122739714702-step-1",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714702",
+    "service": "python-3-12-ubuntu-latest",
+    "name": "Set up job",
+    "start": "2026-10-28T09:38:06Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714702-step-2",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714702",
+    "service": "python-3-12-ubuntu-latest",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:38:08Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714702-step-3",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714702",
+    "service": "python-3-12-ubuntu-latest",
+    "name": "Install uv",
+    "start": "2026-10-28T09:38:10Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714702-step-4",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714702",
+    "service": "python-3-12-ubuntu-latest",
+    "name": "Install dependencies",
+    "start": "2026-10-28T09:38:14Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714702-step-5",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714702",
+    "service": "python-3-12-ubuntu-latest",
+    "name": "Run linting checks",
+    "start": "2026-10-28T09:38:15Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714702-step-6",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714702",
+    "service": "python-3-12-ubuntu-latest",
+    "name": "Build package & docs",
+    "start": "2026-10-28T09:38:21Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714702-step-7",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714702",
+    "service": "python-3-12-ubuntu-latest",
+    "name": "Run tests",
+    "start": "2026-10-28T09:38:25Z",
+    "duration_ms": 43000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-122739714702-step-16",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714702",
+    "service": "python-3-12-ubuntu-latest",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:39:08Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714702-step-17",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714702",
+    "service": "python-3-12-ubuntu-latest",
+    "name": "Complete job",
+    "start": "2026-10-28T09:39:08Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714710",
+    "trace_id": "run-40665765017",
+    "parent_id": "run-40665765017",
+    "service": "python-3-14-windows-latest",
+    "name": "Python 3.14 windows-latest",
+    "start": "2026-10-28T09:38:06Z",
+    "duration_ms": 73000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714710-step-1",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714710",
+    "service": "python-3-14-windows-latest",
+    "name": "Set up job",
+    "start": "2026-10-28T09:38:07Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714710-step-2",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714710",
+    "service": "python-3-14-windows-latest",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:38:09Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714710-step-3",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714710",
+    "service": "python-3-14-windows-latest",
+    "name": "Install uv",
+    "start": "2026-10-28T09:38:18Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714710-step-4",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714710",
+    "service": "python-3-14-windows-latest",
+    "name": "Install dependencies",
+    "start": "2026-10-28T09:38:25Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714710-step-6",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714710",
+    "service": "python-3-14-windows-latest",
+    "name": "Build package & docs",
+    "start": "2026-10-28T09:38:30Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714710-step-7",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714710",
+    "service": "python-3-14-windows-latest",
+    "name": "Run tests",
+    "start": "2026-10-28T09:38:38Z",
+    "duration_ms": 35000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714710-step-8",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714710",
+    "service": "python-3-14-windows-latest",
+    "name": "Enforce coverage",
+    "start": "2026-10-28T09:39:13Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714710-step-15",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714710",
+    "service": "python-3-14-windows-latest",
+    "name": "Post Install uv",
+    "start": "2026-10-28T09:39:14Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714710-step-16",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714710",
+    "service": "python-3-14-windows-latest",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:39:15Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714710-step-17",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714710",
+    "service": "python-3-14-windows-latest",
+    "name": "Complete job",
+    "start": "2026-10-28T09:39:17Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714728",
+    "trace_id": "run-40665765017",
+    "parent_id": "run-40665765017",
+    "service": "python-3-13-windows-latest",
+    "name": "Python 3.13 windows-latest",
+    "start": "2026-10-28T09:38:05Z",
+    "duration_ms": 69000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714728-step-1",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714728",
+    "service": "python-3-13-windows-latest",
+    "name": "Set up job",
+    "start": "2026-10-28T09:38:06Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714728-step-2",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714728",
+    "service": "python-3-13-windows-latest",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:38:07Z",
+    "duration_ms": 11000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714728-step-3",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714728",
+    "service": "python-3-13-windows-latest",
+    "name": "Install uv",
+    "start": "2026-10-28T09:38:18Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714728-step-4",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714728",
+    "service": "python-3-13-windows-latest",
+    "name": "Install dependencies",
+    "start": "2026-10-28T09:38:26Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714728-step-6",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714728",
+    "service": "python-3-13-windows-latest",
+    "name": "Build package & docs",
+    "start": "2026-10-28T09:38:31Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714728-step-7",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714728",
+    "service": "python-3-13-windows-latest",
+    "name": "Run tests",
+    "start": "2026-10-28T09:38:36Z",
+    "duration_ms": 33000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714728-step-8",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714728",
+    "service": "python-3-13-windows-latest",
+    "name": "Enforce coverage",
+    "start": "2026-10-28T09:39:09Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714728-step-15",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714728",
+    "service": "python-3-13-windows-latest",
+    "name": "Post Install uv",
+    "start": "2026-10-28T09:39:10Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714728-step-16",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714728",
+    "service": "python-3-13-windows-latest",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:39:10Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714728-step-17",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714728",
+    "service": "python-3-13-windows-latest",
+    "name": "Complete job",
+    "start": "2026-10-28T09:39:12Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714779",
+    "trace_id": "run-40665765017",
+    "parent_id": "run-40665765017",
+    "service": "python-3-14t-ubuntu-latest",
+    "name": "Python 3.14t ubuntu-latest",
+    "start": "2026-10-28T09:38:05Z",
+    "duration_ms": 58000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714779-step-1",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714779",
+    "service": "python-3-14t-ubuntu-latest",
+    "name": "Set up job",
+    "start": "2026-10-28T09:38:06Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714779-step-2",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714779",
+    "service": "python-3-14t-ubuntu-latest",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:38:07Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714779-step-3",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714779",
+    "service": "python-3-14t-ubuntu-latest",
+    "name": "Install uv",
+    "start": "2026-10-28T09:38:09Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714779-step-4",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714779",
+    "service": "python-3-14t-ubuntu-latest",
+    "name": "Install dependencies",
+    "start": "2026-10-28T09:38:14Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714779-step-5",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714779",
+    "service": "python-3-14t-ubuntu-latest",
+    "name": "Run linting checks",
+    "start": "2026-10-28T09:38:16Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714779-step-6",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714779",
+    "service": "python-3-14t-ubuntu-latest",
+    "name": "Build package & docs",
+    "start": "2026-10-28T09:38:21Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714779-step-7",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714779",
+    "service": "python-3-14t-ubuntu-latest",
+    "name": "Run tests",
+    "start": "2026-10-28T09:38:23Z",
+    "duration_ms": 36000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714779-step-8",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714779",
+    "service": "python-3-14t-ubuntu-latest",
+    "name": "Enforce coverage",
+    "start": "2026-10-28T09:38:59Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714779-step-15",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714779",
+    "service": "python-3-14t-ubuntu-latest",
+    "name": "Post Install uv",
+    "start": "2026-10-28T09:38:59Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714779-step-16",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714779",
+    "service": "python-3-14t-ubuntu-latest",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:38:59Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714779-step-17",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714779",
+    "service": "python-3-14t-ubuntu-latest",
+    "name": "Complete job",
+    "start": "2026-10-28T09:38:59Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714933",
+    "trace_id": "run-40665765017",
+    "parent_id": "run-40665765017",
+    "service": "python-3-14t-macos-latest",
+    "name": "Python 3.14t macos-latest",
+    "start": "2026-10-28T09:39:09Z",
+    "duration_ms": 73000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714933-step-1",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714933",
+    "service": "python-3-14t-macos-latest",
+    "name": "Set up job",
+    "start": "2026-10-28T09:39:09Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714933-step-2",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714933",
+    "service": "python-3-14t-macos-latest",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:39:11Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714933-step-3",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714933",
+    "service": "python-3-14t-macos-latest",
+    "name": "Install uv",
+    "start": "2026-10-28T09:39:14Z",
+    "duration_ms": 15000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714933-step-4",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714933",
+    "service": "python-3-14t-macos-latest",
+    "name": "Install dependencies",
+    "start": "2026-10-28T09:39:29Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714933-step-6",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714933",
+    "service": "python-3-14t-macos-latest",
+    "name": "Build package & docs",
+    "start": "2026-10-28T09:39:35Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714933-step-7",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714933",
+    "service": "python-3-14t-macos-latest",
+    "name": "Run tests",
+    "start": "2026-10-28T09:39:40Z",
+    "duration_ms": 33000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714933-step-8",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714933",
+    "service": "python-3-14t-macos-latest",
+    "name": "Enforce coverage",
+    "start": "2026-10-28T09:40:13Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714933-step-15",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714933",
+    "service": "python-3-14t-macos-latest",
+    "name": "Post Install uv",
+    "start": "2026-10-28T09:40:14Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714933-step-16",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714933",
+    "service": "python-3-14t-macos-latest",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-28T09:40:14Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739714933-step-17",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122739714933",
+    "service": "python-3-14t-macos-latest",
+    "name": "Complete job",
+    "start": "2026-10-28T09:40:15Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122739715677",
+    "trace_id": "run-40665765017",
+    "parent_id": "run-40665765017",
+    "service": "docs-preview",
+    "name": "docs-preview",
+    "start": "2026-10-28T09:38:03Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122740733697",
+    "trace_id": "run-40665765017",
+    "parent_id": "run-40665765017",
+    "service": "check",
+    "name": "check",
+    "start": "2026-10-28T09:40:24Z",
+    "duration_ms": 3000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-122740733697-step-1",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122740733697",
+    "service": "check",
+    "name": "Set up job",
+    "start": "2026-10-28T09:40:25Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-122740733697-step-2",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122740733697",
+    "service": "check",
+    "name": "Decide whether the needed jobs succeeded or failed",
+    "start": "2026-10-28T09:40:25Z",
+    "duration_ms": 0.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-122740733697-step-3",
+    "trace_id": "run-40665765017",
+    "parent_id": "job-122740733697",
+    "service": "check",
+    "name": "Complete job",
+    "start": "2026-10-28T09:40:25Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

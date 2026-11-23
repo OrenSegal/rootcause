@@ -1,0 +1,26 @@
+[
+  {
+    "author": "philippjfr",
+    "committedDate": "2026-11-18T17:39:27Z",
+    "messageHeadline": "Test binary buffers and edge cases of comm sessions",
+    "oid": "abd57f8de671b06e49841ad5b6aa15784fe6e237",
+    "files": [
+      {
+        "filename": "bokehjs/test/unit/client/comm.ts",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/integration/test_jupyter_extension.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/unit/bokeh/io/test_notebook__io.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/unit/bokeh/server/test_comm.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

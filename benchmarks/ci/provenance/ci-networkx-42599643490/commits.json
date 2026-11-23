@@ -1,0 +1,18 @@
+[
+  {
+    "author": "HITESH4577",
+    "committedDate": "2026-11-09T10:12:46Z",
+    "messageHeadline": "Fix DFS traversal functions when depth_limit is 0",
+    "oid": "b9500b54debca525b34ac0bb1b894822dcdf59d9",
+    "files": [
+      {
+        "filename": "networkx/algorithms/traversal/depth_first_search.py",
+        "status": "modified"
+      },
+      {
+        "filename": "networkx/algorithms/traversal/tests/test_dfs.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

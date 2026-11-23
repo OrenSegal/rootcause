@@ -1,0 +1,13 @@
+{
+  "fixed_run": "https://github.com/python-attrs/attrs/actions/runs/39906334817",
+  "fixed_sha": "d96c51fef05df5e6715d7c1b4f6afec4491e449e",
+  "commits": [
+    "a514fb9d7b4c58d524396eccd3066b5d68ad8ed3",
+    "e80642262f067b61486008792e56381299615041",
+    "d96c51fef05df5e6715d7c1b4f6afec4491e449e"
+  ],
+  "files": [
+    "tests/test_slots.py"
+  ],
+  "status": "ahead"
+}

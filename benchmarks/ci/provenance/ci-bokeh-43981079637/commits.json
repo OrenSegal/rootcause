@@ -1,0 +1,14 @@
+[
+  {
+    "author": "bryevdv",
+    "committedDate": "2026-11-16T23:38:43Z",
+    "messageHeadline": "Apply suggestion from @mattpap",
+    "oid": "9205686bc5db45851c8035ec674ee097d0dd9e1e",
+    "files": [
+      {
+        "filename": "bokehjs/src/lib/document/defs.ts",
+        "status": "modified"
+      }
+    ]
+  }
+]

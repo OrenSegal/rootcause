@@ -1,0 +1,17 @@
+[
+  {
+    "id": "23f2677287",
+    "service": "dask",
+    "version": "23f2677287",
+    "ts": "2026-11-13T15:59:35Z",
+    "author": "jaesungkr",
+    "summary": "Use numeric gufunc core dimensions for dtype inference samples",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "dask/array/core.py",
+      "dask/array/gufunc.py",
+      "dask/array/tests/test_gufunc.py"
+    ]
+  }
+]

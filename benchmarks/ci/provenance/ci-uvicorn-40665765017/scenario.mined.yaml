@@ -1,0 +1,18 @@
+# Mined from https://github.com/Kludex/uvicorn/actions/runs/40665765017 (encode/uvicorn,
+# licence BSD-3-Clause). Fixed by run
+# https://github.com/Kludex/uvicorn/actions/runs/40667066630. Label rule: the fix
+# changed files exactly one tested commit touched. Fix touched:
+# tests/protocols/test_websocket.py.
+id: ci-uvicorn-40665765017
+title: Half-close instead of resetting on websockets-sansio frame parser errors
+alert:
+  severity: ci
+  service: python-3-11-ubuntu-latest
+  summary: 'workflow Test Suite failed on sansio-close-on-oversize-frame at 64ea25d66b: step
+    ''Run tests'' in job ''Python 3.11 ubuntu-latest'' failed.'
+truth:
+  category: bad_code_deploy
+  service: uvicorn
+  required_evidence_any:
+  - 64ea25d66b
+provenance: recorded

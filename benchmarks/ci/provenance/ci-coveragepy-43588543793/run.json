@@ -1,0 +1,2932 @@
+{
+  "attempt": 1,
+  "conclusion": "failure",
+  "createdAt": "2026-11-14T11:07:54Z",
+  "databaseId": 43588543793,
+  "displayTitle": "fix: preserve data recorded by other threads during flush_data",
+  "event": "pull_request",
+  "headBranch": "fix/flush-data-thread-loss-2384",
+  "headSha": "e571532dd2f9cc37f389ee87ce3267f8f4ac5e75",
+  "jobs": [
+    {
+      "completedAt": "2026-11-14T11:08:01Z",
+      "conclusion": "success",
+      "databaseId": 132428151601,
+      "name": "Check changed files",
+      "startedAt": "2026-11-14T11:07:56Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-14T11:07:58Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-14T11:07:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:07:59Z",
+          "conclusion": "success",
+          "name": "Check out the repo",
+          "number": 2,
+          "startedAt": "2026-11-14T11:07:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:07:59Z",
+          "conclusion": "success",
+          "name": "Examine changed files",
+          "number": 3,
+          "startedAt": "2026-11-14T11:07:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:08:00Z",
+          "conclusion": "success",
+          "name": "Post Check out the repo",
+          "number": 6,
+          "startedAt": "2026-11-14T11:07:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:08:00Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 7,
+          "startedAt": "2026-11-14T11:08:00Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/coveragepy/coveragepy/actions/runs/43588543793/job/132428151601"
+    },
+    {
+      "completedAt": "2026-11-14T11:10:28Z",
+      "conclusion": "success",
+      "databaseId": 132428181715,
+      "name": "3.12 on old SQLite 3.26",
+      "startedAt": "2026-11-14T11:08:04Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-14T11:08:05Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-14T11:08:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:08:11Z",
+          "conclusion": "success",
+          "name": "Initialize containers",
+          "number": 2,
+          "startedAt": "2026-11-14T11:08:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:08:41Z",
+          "conclusion": "success",
+          "name": "Install system packages",
+          "number": 3,
+          "startedAt": "2026-11-14T11:08:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:08:42Z",
+          "conclusion": "success",
+          "name": "Check out the repo",
+          "number": 4,
+          "startedAt": "2026-11-14T11:08:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:08:42Z",
+          "conclusion": "success",
+          "name": "Show environment",
+          "number": 5,
+          "startedAt": "2026-11-14T11:08:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:08:44Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 6,
+          "startedAt": "2026-11-14T11:08:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:10:16Z",
+          "conclusion": "success",
+          "name": "Run tox for 3.12",
+          "number": 7,
+          "startedAt": "2026-11-14T11:08:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:10:16Z",
+          "conclusion": "success",
+          "name": "Post Check out the repo",
+          "number": 13,
+          "startedAt": "2026-11-14T11:10:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:10:27Z",
+          "conclusion": "success",
+          "name": "Stop containers",
+          "number": 14,
+          "startedAt": "2026-11-14T11:10:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:10:27Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-14T11:10:27Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/coveragepy/coveragepy/actions/runs/43588543793/job/132428181715"
+    },
+    {
+      "completedAt": "2026-11-14T11:22:58Z",
+      "conclusion": "success",
+      "databaseId": 132428181958,
+      "name": "3.15t on macos",
+      "startedAt": "2026-11-14T11:18:02Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-14T11:18:05Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-14T11:18:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:18:08Z",
+          "conclusion": "success",
+          "name": "Check out the repo",
+          "number": 2,
+          "startedAt": "2026-11-14T11:18:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:19:01Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-11-14T11:18:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:19:01Z",
+          "conclusion": "success",
+          "name": "Show environment",
+          "number": 4,
+          "startedAt": "2026-11-14T11:19:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:19:05Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "startedAt": "2026-11-14T11:19:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:22:53Z",
+          "conclusion": "success",
+          "name": "Run tox for 3.15t",
+          "number": 6,
+          "startedAt": "2026-11-14T11:19:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:22:53Z",
+          "conclusion": "skipped",
+          "name": "Retry tox for 3.15t",
+          "number": 7,
+          "startedAt": "2026-11-14T11:22:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:22:54Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 13,
+          "startedAt": "2026-11-14T11:22:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:22:55Z",
+          "conclusion": "success",
+          "name": "Post Check out the repo",
+          "number": 14,
+          "startedAt": "2026-11-14T11:22:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:22:56Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-14T11:22:55Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/coveragepy/coveragepy/actions/runs/43588543793/job/132428181958"
+    },
+    {
+      "completedAt": "2026-11-14T11:15:52Z",
+      "conclusion": "success",
+      "databaseId": 132428181965,
+      "name": "3.14t on ubuntu",
+      "startedAt": "2026-11-14T11:13:16Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-14T11:13:17Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-14T11:13:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:13:19Z",
+          "conclusion": "success",
+          "name": "Check out the repo",
+          "number": 2,
+          "startedAt": "2026-11-14T11:13:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:13:28Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-11-14T11:13:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:13:28Z",
+          "conclusion": "success",
+          "name": "Show environment",
+          "number": 4,
+          "startedAt": "2026-11-14T11:13:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:13:29Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "startedAt": "2026-11-14T11:13:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:15:48Z",
+          "conclusion": "success",
+          "name": "Run tox for 3.14t",
+          "number": 6,
+          "startedAt": "2026-11-14T11:13:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:15:48Z",
+          "conclusion": "skipped",
+          "name": "Retry tox for 3.14t",
+          "number": 7,
+          "startedAt": "2026-11-14T11:15:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:15:48Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 13,
+          "startedAt": "2026-11-14T11:15:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:15:49Z",
+          "conclusion": "success",
+          "name": "Post Check out the repo",
+          "number": 14,
+          "startedAt": "2026-11-14T11:15:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:15:49Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-14T11:15:49Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/coveragepy/coveragepy/actions/runs/43588543793/job/132428181965"
+    },
+    {
+      "completedAt": "2026-11-14T11:21:56Z",
+      "conclusion": "failure",
+      "databaseId": 132428181978,
+      "name": "3.15t on ubuntu",
+      "startedAt": "2026-11-14T11:16:28Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-14T11:16:30Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-14T11:16:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:31Z",
+          "conclusion": "success",
+          "name": "Check out the repo",
+          "number": 2,
+          "startedAt": "2026-11-14T11:16:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:39Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-11-14T11:16:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:39Z",
+          "conclusion": "success",
+          "name": "Show environment",
+          "number": 4,
+          "startedAt": "2026-11-14T11:16:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:41Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "startedAt": "2026-11-14T11:16:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:19:50Z",
+          "conclusion": "failure",
+          "name": "Run tox for 3.15t",
+          "number": 6,
+          "startedAt": "2026-11-14T11:16:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:21:52Z",
+          "conclusion": "failure",
+          "name": "Retry tox for 3.15t",
+          "number": 7,
+          "startedAt": "2026-11-14T11:19:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:21:52Z",
+          "conclusion": "skipped",
+          "name": "Post Set up Python",
+          "number": 13,
+          "startedAt": "2026-11-14T11:21:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:21:52Z",
+          "conclusion": "success",
+          "name": "Post Check out the repo",
+          "number": 14,
+          "startedAt": "2026-11-14T11:21:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:21:52Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-14T11:21:52Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/coveragepy/coveragepy/actions/runs/43588543793/job/132428181978"
+    },
+    {
+      "completedAt": "2026-11-14T11:19:28Z",
+      "conclusion": "success",
+      "databaseId": 132428181981,
+      "name": "3.13 on ubuntu",
+      "startedAt": "2026-11-14T11:16:50Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-14T11:16:51Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-14T11:16:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:53Z",
+          "conclusion": "success",
+          "name": "Check out the repo",
+          "number": 2,
+          "startedAt": "2026-11-14T11:16:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:53Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-11-14T11:16:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:53Z",
+          "conclusion": "success",
+          "name": "Show environment",
+          "number": 4,
+          "startedAt": "2026-11-14T11:16:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:56Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "startedAt": "2026-11-14T11:16:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:19:25Z",
+          "conclusion": "success",
+          "name": "Run tox for 3.13",
+          "number": 6,
+          "startedAt": "2026-11-14T11:16:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:19:25Z",
+          "conclusion": "skipped",
+          "name": "Retry tox for 3.13",
+          "number": 7,
+          "startedAt": "2026-11-14T11:19:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:19:25Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 13,
+          "startedAt": "2026-11-14T11:19:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:19:25Z",
+          "conclusion": "success",
+          "name": "Post Check out the repo",
+          "number": 14,
+          "startedAt": "2026-11-14T11:19:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:19:25Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-14T11:19:25Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/coveragepy/coveragepy/actions/runs/43588543793/job/132428181981"
+    },
+    {
+      "completedAt": "2026-11-14T11:16:26Z",
+      "conclusion": "success",
+      "databaseId": 132428181990,
+      "name": "3.16t on ubuntu",
+      "startedAt": "2026-11-14T11:14:02Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-14T11:14:05Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-14T11:14:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:14:07Z",
+          "conclusion": "success",
+          "name": "Check out the repo",
+          "number": 2,
+          "startedAt": "2026-11-14T11:14:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:14:13Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-11-14T11:14:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:14:13Z",
+          "conclusion": "success",
+          "name": "Show environment",
+          "number": 4,
+          "startedAt": "2026-11-14T11:14:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:14:15Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "startedAt": "2026-11-14T11:14:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:23Z",
+          "conclusion": "success",
+          "name": "Run tox for 3.16t",
+          "number": 6,
+          "startedAt": "2026-11-14T11:14:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:23Z",
+          "conclusion": "skipped",
+          "name": "Retry tox for 3.16t",
+          "number": 7,
+          "startedAt": "2026-11-14T11:16:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:23Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 13,
+          "startedAt": "2026-11-14T11:16:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:23Z",
+          "conclusion": "success",
+          "name": "Post Check out the repo",
+          "number": 14,
+          "startedAt": "2026-11-14T11:16:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:23Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-14T11:16:23Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/coveragepy/coveragepy/actions/runs/43588543793/job/132428181990"
+    },
+    {
+      "completedAt": "2026-11-14T11:23:59Z",
+      "conclusion": "success",
+      "databaseId": 132428181991,
+      "name": "3.12 on macos",
+      "startedAt": "2026-11-14T11:21:24Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-14T11:21:27Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-14T11:21:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:21:29Z",
+          "conclusion": "success",
+          "name": "Check out the repo",
+          "number": 2,
+          "startedAt": "2026-11-14T11:21:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:21:30Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-11-14T11:21:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:21:30Z",
+          "conclusion": "success",
+          "name": "Show environment",
+          "number": 4,
+          "startedAt": "2026-11-14T11:21:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:21:33Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "startedAt": "2026-11-14T11:21:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:23:55Z",
+          "conclusion": "success",
+          "name": "Run tox for 3.12",
+          "number": 6,
+          "startedAt": "2026-11-14T11:21:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:23:55Z",
+          "conclusion": "skipped",
+          "name": "Retry tox for 3.12",
+          "number": 7,
+          "startedAt": "2026-11-14T11:23:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:23:56Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 13,
+          "startedAt": "2026-11-14T11:23:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:23:56Z",
+          "conclusion": "success",
+          "name": "Post Check out the repo",
+          "number": 14,
+          "startedAt": "2026-11-14T11:23:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:23:57Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-14T11:23:56Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/coveragepy/coveragepy/actions/runs/43588543793/job/132428181991"
+    },
+    {
+      "completedAt": "2026-11-14T11:15:51Z",
+      "conclusion": "success",
+      "databaseId": 132428181993,
+      "name": "3.14 on ubuntu",
+      "startedAt": "2026-11-14T11:13:06Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-14T11:13:08Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-14T11:13:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:13:10Z",
+          "conclusion": "success",
+          "name": "Check out the repo",
+          "number": 2,
+          "startedAt": "2026-11-14T11:13:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:13:10Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-11-14T11:13:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:13:10Z",
+          "conclusion": "success",
+          "name": "Show environment",
+          "number": 4,
+          "startedAt": "2026-11-14T11:13:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:13:15Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "startedAt": "2026-11-14T11:13:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:15:48Z",
+          "conclusion": "success",
+          "name": "Run tox for 3.14",
+          "number": 6,
+          "startedAt": "2026-11-14T11:13:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:15:48Z",
+          "conclusion": "skipped",
+          "name": "Retry tox for 3.14",
+          "number": 7,
+          "startedAt": "2026-11-14T11:15:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:15:49Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 13,
+          "startedAt": "2026-11-14T11:15:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:15:49Z",
+          "conclusion": "success",
+          "name": "Post Check out the repo",
+          "number": 14,
+          "startedAt": "2026-11-14T11:15:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:15:49Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-14T11:15:49Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/coveragepy/coveragepy/actions/runs/43588543793/job/132428181993"
+    },
+    {
+      "completedAt": "2026-11-14T11:21:55Z",
+      "conclusion": "success",
+      "databaseId": 132428182001,
+      "name": "3.15 on macos",
+      "startedAt": "2026-11-14T11:16:56Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-14T11:16:58Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-14T11:16:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:17:01Z",
+          "conclusion": "success",
+          "name": "Check out the repo",
+          "number": 2,
+          "startedAt": "2026-11-14T11:16:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:18:10Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-11-14T11:17:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:18:10Z",
+          "conclusion": "success",
+          "name": "Show environment",
+          "number": 4,
+          "startedAt": "2026-11-14T11:18:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:18:13Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "startedAt": "2026-11-14T11:18:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:21:51Z",
+          "conclusion": "success",
+          "name": "Run tox for 3.15",
+          "number": 6,
+          "startedAt": "2026-11-14T11:18:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:21:51Z",
+          "conclusion": "skipped",
+          "name": "Retry tox for 3.15",
+          "number": 7,
+          "startedAt": "2026-11-14T11:21:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:21:51Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 13,
+          "startedAt": "2026-11-14T11:21:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:21:52Z",
+          "conclusion": "success",
+          "name": "Post Check out the repo",
+          "number": 14,
+          "startedAt": "2026-11-14T11:21:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:21:53Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-14T11:21:52Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/coveragepy/coveragepy/actions/runs/43588543793/job/132428182001"
+    },
+    {
+      "completedAt": "2026-11-14T11:17:06Z",
+      "conclusion": "success",
+      "databaseId": 132428182002,
+      "name": "3.16 on ubuntu",
+      "startedAt": "2026-11-14T11:14:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-14T11:14:33Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-14T11:14:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:14:35Z",
+          "conclusion": "success",
+          "name": "Check out the repo",
+          "number": 2,
+          "startedAt": "2026-11-14T11:14:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:14:43Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-11-14T11:14:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:14:43Z",
+          "conclusion": "success",
+          "name": "Show environment",
+          "number": 4,
+          "startedAt": "2026-11-14T11:14:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:14:45Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "startedAt": "2026-11-14T11:14:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:17:02Z",
+          "conclusion": "success",
+          "name": "Run tox for 3.16",
+          "number": 6,
+          "startedAt": "2026-11-14T11:14:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:17:02Z",
+          "conclusion": "skipped",
+          "name": "Retry tox for 3.16",
+          "number": 7,
+          "startedAt": "2026-11-14T11:17:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:17:03Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 13,
+          "startedAt": "2026-11-14T11:17:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:17:03Z",
+          "conclusion": "success",
+          "name": "Post Check out the repo",
+          "number": 14,
+          "startedAt": "2026-11-14T11:17:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:17:03Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-14T11:17:03Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/coveragepy/coveragepy/actions/runs/43588543793/job/132428182002"
+    },
+    {
+      "completedAt": "2026-11-14T11:19:19Z",
+      "conclusion": "success",
+      "databaseId": 132428182003,
+      "name": "3.16 on macos",
+      "startedAt": "2026-11-14T11:16:27Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-14T11:16:30Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-14T11:16:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:32Z",
+          "conclusion": "success",
+          "name": "Check out the repo",
+          "number": 2,
+          "startedAt": "2026-11-14T11:16:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:17:10Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-11-14T11:16:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:17:11Z",
+          "conclusion": "success",
+          "name": "Show environment",
+          "number": 4,
+          "startedAt": "2026-11-14T11:17:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:17:13Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "startedAt": "2026-11-14T11:17:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:19:16Z",
+          "conclusion": "success",
+          "name": "Run tox for 3.16",
+          "number": 6,
+          "startedAt": "2026-11-14T11:17:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:19:16Z",
+          "conclusion": "skipped",
+          "name": "Retry tox for 3.16",
+          "number": 7,
+          "startedAt": "2026-11-14T11:19:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:19:16Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 13,
+          "startedAt": "2026-11-14T11:19:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:19:17Z",
+          "conclusion": "success",
+          "name": "Post Check out the repo",
+          "number": 14,
+          "startedAt": "2026-11-14T11:19:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:19:18Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-14T11:19:17Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/coveragepy/coveragepy/actions/runs/43588543793/job/132428182003"
+    },
+    {
+      "completedAt": "2026-11-14T11:16:38Z",
+      "conclusion": "success",
+      "databaseId": 132428182016,
+      "name": "pypy-3.11 on ubuntu",
+      "startedAt": "2026-11-14T11:13:22Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-14T11:13:24Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-14T11:13:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:13:25Z",
+          "conclusion": "success",
+          "name": "Check out the repo",
+          "number": 2,
+          "startedAt": "2026-11-14T11:13:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:13:25Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-11-14T11:13:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:13:28Z",
+          "conclusion": "success",
+          "name": "Show environment",
+          "number": 4,
+          "startedAt": "2026-11-14T11:13:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:13:37Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "startedAt": "2026-11-14T11:13:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:35Z",
+          "conclusion": "success",
+          "name": "Run tox for pypy-3.11",
+          "number": 6,
+          "startedAt": "2026-11-14T11:13:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:35Z",
+          "conclusion": "skipped",
+          "name": "Retry tox for pypy-3.11",
+          "number": 7,
+          "startedAt": "2026-11-14T11:16:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:35Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 13,
+          "startedAt": "2026-11-14T11:16:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:36Z",
+          "conclusion": "success",
+          "name": "Post Check out the repo",
+          "number": 14,
+          "startedAt": "2026-11-14T11:16:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:36Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-14T11:16:36Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/coveragepy/coveragepy/actions/runs/43588543793/job/132428182016"
+    },
+    {
+      "completedAt": "2026-11-14T11:18:28Z",
+      "conclusion": "success",
+      "databaseId": 132428182021,
+      "name": "3.14 on macos",
+      "startedAt": "2026-11-14T11:17:00Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-14T11:17:01Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-14T11:17:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:17:03Z",
+          "conclusion": "success",
+          "name": "Check out the repo",
+          "number": 2,
+          "startedAt": "2026-11-14T11:17:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:17:04Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-11-14T11:17:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:17:04Z",
+          "conclusion": "success",
+          "name": "Show environment",
+          "number": 4,
+          "startedAt": "2026-11-14T11:17:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:17:06Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "startedAt": "2026-11-14T11:17:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:18:24Z",
+          "conclusion": "success",
+          "name": "Run tox for 3.14",
+          "number": 6,
+          "startedAt": "2026-11-14T11:17:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:18:24Z",
+          "conclusion": "skipped",
+          "name": "Retry tox for 3.14",
+          "number": 7,
+          "startedAt": "2026-11-14T11:18:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:18:24Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 13,
+          "startedAt": "2026-11-14T11:18:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:18:24Z",
+          "conclusion": "success",
+          "name": "Post Check out the repo",
+          "number": 14,
+          "startedAt": "2026-11-14T11:18:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:18:25Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-14T11:18:24Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/coveragepy/coveragepy/actions/runs/43588543793/job/132428182021"
+    },
+    {
+      "completedAt": "2026-11-14T11:18:46Z",
+      "conclusion": "success",
+      "databaseId": 132428182025,
+      "name": "3.12 on ubuntu",
+      "startedAt": "2026-11-14T11:16:38Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-14T11:16:39Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-14T11:16:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:40Z",
+          "conclusion": "success",
+          "name": "Check out the repo",
+          "number": 2,
+          "startedAt": "2026-11-14T11:16:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:40Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-11-14T11:16:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:40Z",
+          "conclusion": "success",
+          "name": "Show environment",
+          "number": 4,
+          "startedAt": "2026-11-14T11:16:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:43Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "startedAt": "2026-11-14T11:16:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:18:44Z",
+          "conclusion": "success",
+          "name": "Run tox for 3.12",
+          "number": 6,
+          "startedAt": "2026-11-14T11:16:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:18:44Z",
+          "conclusion": "skipped",
+          "name": "Retry tox for 3.12",
+          "number": 7,
+          "startedAt": "2026-11-14T11:18:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:18:44Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 13,
+          "startedAt": "2026-11-14T11:18:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:18:44Z",
+          "conclusion": "success",
+          "name": "Post Check out the repo",
+          "number": 14,
+          "startedAt": "2026-11-14T11:18:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:18:44Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-14T11:18:44Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/coveragepy/coveragepy/actions/runs/43588543793/job/132428182025"
+    },
+    {
+      "completedAt": "2026-11-14T11:14:49Z",
+      "conclusion": "success",
+      "databaseId": 132428182030,
+      "name": "3.13 on macos",
+      "startedAt": "2026-11-14T11:11:40Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-14T11:11:41Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-14T11:11:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:11:44Z",
+          "conclusion": "success",
+          "name": "Check out the repo",
+          "number": 2,
+          "startedAt": "2026-11-14T11:11:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:11:44Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-11-14T11:11:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:11:44Z",
+          "conclusion": "success",
+          "name": "Show environment",
+          "number": 4,
+          "startedAt": "2026-11-14T11:11:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:11:47Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "startedAt": "2026-11-14T11:11:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:14:43Z",
+          "conclusion": "success",
+          "name": "Run tox for 3.13",
+          "number": 6,
+          "startedAt": "2026-11-14T11:11:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:14:43Z",
+          "conclusion": "skipped",
+          "name": "Retry tox for 3.13",
+          "number": 7,
+          "startedAt": "2026-11-14T11:14:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:14:44Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 13,
+          "startedAt": "2026-11-14T11:14:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:14:46Z",
+          "conclusion": "success",
+          "name": "Post Check out the repo",
+          "number": 14,
+          "startedAt": "2026-11-14T11:14:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:14:48Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-14T11:14:46Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/coveragepy/coveragepy/actions/runs/43588543793/job/132428182030"
+    },
+    {
+      "completedAt": "2026-11-14T11:25:18Z",
+      "conclusion": "success",
+      "databaseId": 132428182034,
+      "name": "3.11 on macos",
+      "startedAt": "2026-11-14T11:19:22Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-14T11:19:25Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-14T11:19:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:19:29Z",
+          "conclusion": "success",
+          "name": "Check out the repo",
+          "number": 2,
+          "startedAt": "2026-11-14T11:19:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:19:29Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-11-14T11:19:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:19:30Z",
+          "conclusion": "success",
+          "name": "Show environment",
+          "number": 4,
+          "startedAt": "2026-11-14T11:19:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:19:34Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "startedAt": "2026-11-14T11:19:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:25:12Z",
+          "conclusion": "success",
+          "name": "Run tox for 3.11",
+          "number": 6,
+          "startedAt": "2026-11-14T11:19:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:25:12Z",
+          "conclusion": "skipped",
+          "name": "Retry tox for 3.11",
+          "number": 7,
+          "startedAt": "2026-11-14T11:25:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:25:13Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 13,
+          "startedAt": "2026-11-14T11:25:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:25:13Z",
+          "conclusion": "success",
+          "name": "Post Check out the repo",
+          "number": 14,
+          "startedAt": "2026-11-14T11:25:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:25:15Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-14T11:25:13Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/coveragepy/coveragepy/actions/runs/43588543793/job/132428182034"
+    },
+    {
+      "completedAt": "2026-11-14T11:21:21Z",
+      "conclusion": "success",
+      "databaseId": 132428182040,
+      "name": "3.14t on macos",
+      "startedAt": "2026-11-14T11:15:46Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-14T11:15:48Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-14T11:15:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:15:51Z",
+          "conclusion": "success",
+          "name": "Check out the repo",
+          "number": 2,
+          "startedAt": "2026-11-14T11:15:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:52Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-11-14T11:15:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:52Z",
+          "conclusion": "success",
+          "name": "Show environment",
+          "number": 4,
+          "startedAt": "2026-11-14T11:16:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:56Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "startedAt": "2026-11-14T11:16:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:21:11Z",
+          "conclusion": "success",
+          "name": "Run tox for 3.14t",
+          "number": 6,
+          "startedAt": "2026-11-14T11:16:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:21:11Z",
+          "conclusion": "skipped",
+          "name": "Retry tox for 3.14t",
+          "number": 7,
+          "startedAt": "2026-11-14T11:21:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:21:12Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 13,
+          "startedAt": "2026-11-14T11:21:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:21:14Z",
+          "conclusion": "success",
+          "name": "Post Check out the repo",
+          "number": 14,
+          "startedAt": "2026-11-14T11:21:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:21:18Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-14T11:21:14Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/coveragepy/coveragepy/actions/runs/43588543793/job/132428182040"
+    },
+    {
+      "completedAt": "2026-11-14T11:17:39Z",
+      "conclusion": "success",
+      "databaseId": 132428182041,
+      "name": "3.16t on windows",
+      "startedAt": "2026-11-14T11:11:37Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-14T11:11:39Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-14T11:11:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:11:46Z",
+          "conclusion": "success",
+          "name": "Check out the repo",
+          "number": 2,
+          "startedAt": "2026-11-14T11:11:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:13:31Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-11-14T11:11:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:13:32Z",
+          "conclusion": "success",
+          "name": "Show environment",
+          "number": 4,
+          "startedAt": "2026-11-14T11:13:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:13:36Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "startedAt": "2026-11-14T11:13:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:17:34Z",
+          "conclusion": "success",
+          "name": "Run tox for 3.16t",
+          "number": 6,
+          "startedAt": "2026-11-14T11:13:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:17:34Z",
+          "conclusion": "skipped",
+          "name": "Retry tox for 3.16t",
+          "number": 7,
+          "startedAt": "2026-11-14T11:17:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:17:34Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 13,
+          "startedAt": "2026-11-14T11:17:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:17:36Z",
+          "conclusion": "success",
+          "name": "Post Check out the repo",
+          "number": 14,
+          "startedAt": "2026-11-14T11:17:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:17:36Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-14T11:17:36Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/coveragepy/coveragepy/actions/runs/43588543793/job/132428182041"
+    },
+    {
+      "completedAt": "2026-11-14T11:17:59Z",
+      "conclusion": "success",
+      "databaseId": 132428182047,
+      "name": "3.16t on macos",
+      "startedAt": "2026-11-14T11:14:49Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-14T11:14:50Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-14T11:14:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:14:52Z",
+          "conclusion": "success",
+          "name": "Check out the repo",
+          "number": 2,
+          "startedAt": "2026-11-14T11:14:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:15:27Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-11-14T11:14:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:15:27Z",
+          "conclusion": "success",
+          "name": "Show environment",
+          "number": 4,
+          "startedAt": "2026-11-14T11:15:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:15:28Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "startedAt": "2026-11-14T11:15:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:17:55Z",
+          "conclusion": "success",
+          "name": "Run tox for 3.16t",
+          "number": 6,
+          "startedAt": "2026-11-14T11:15:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:17:55Z",
+          "conclusion": "skipped",
+          "name": "Retry tox for 3.16t",
+          "number": 7,
+          "startedAt": "2026-11-14T11:17:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:17:56Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 13,
+          "startedAt": "2026-11-14T11:17:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:17:56Z",
+          "conclusion": "success",
+          "name": "Post Check out the repo",
+          "number": 14,
+          "startedAt": "2026-11-14T11:17:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:17:58Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-14T11:17:56Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/coveragepy/coveragepy/actions/runs/43588543793/job/132428182047"
+    },
+    {
+      "completedAt": "2026-11-14T11:13:20Z",
+      "conclusion": "success",
+      "databaseId": 132428182058,
+      "name": "3.15 on ubuntu",
+      "startedAt": "2026-11-14T11:11:08Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-14T11:11:12Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-14T11:11:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:11:17Z",
+          "conclusion": "success",
+          "name": "Check out the repo",
+          "number": 2,
+          "startedAt": "2026-11-14T11:11:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:11:18Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-11-14T11:11:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:11:19Z",
+          "conclusion": "success",
+          "name": "Show environment",
+          "number": 4,
+          "startedAt": "2026-11-14T11:11:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:11:24Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "startedAt": "2026-11-14T11:11:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:13:16Z",
+          "conclusion": "success",
+          "name": "Run tox for 3.15",
+          "number": 6,
+          "startedAt": "2026-11-14T11:11:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:13:16Z",
+          "conclusion": "skipped",
+          "name": "Retry tox for 3.15",
+          "number": 7,
+          "startedAt": "2026-11-14T11:13:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:13:16Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 13,
+          "startedAt": "2026-11-14T11:13:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:13:16Z",
+          "conclusion": "success",
+          "name": "Post Check out the repo",
+          "number": 14,
+          "startedAt": "2026-11-14T11:13:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:13:16Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-14T11:13:16Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/coveragepy/coveragepy/actions/runs/43588543793/job/132428182058"
+    },
+    {
+      "completedAt": "2026-11-14T11:13:44Z",
+      "conclusion": "success",
+      "databaseId": 132428182059,
+      "name": "pypy-3.11 on windows",
+      "startedAt": "2026-11-14T11:08:48Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-14T11:08:50Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-14T11:08:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:08:58Z",
+          "conclusion": "success",
+          "name": "Check out the repo",
+          "number": 2,
+          "startedAt": "2026-11-14T11:08:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:09:28Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-11-14T11:08:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:09:28Z",
+          "conclusion": "success",
+          "name": "Show environment",
+          "number": 4,
+          "startedAt": "2026-11-14T11:09:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:09:35Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "startedAt": "2026-11-14T11:09:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:13:39Z",
+          "conclusion": "success",
+          "name": "Run tox for pypy-3.11",
+          "number": 6,
+          "startedAt": "2026-11-14T11:09:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:13:39Z",
+          "conclusion": "skipped",
+          "name": "Retry tox for pypy-3.11",
+          "number": 7,
+          "startedAt": "2026-11-14T11:13:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:13:40Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 13,
+          "startedAt": "2026-11-14T11:13:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:13:42Z",
+          "conclusion": "success",
+          "name": "Post Check out the repo",
+          "number": 14,
+          "startedAt": "2026-11-14T11:13:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:13:42Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-14T11:13:42Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/coveragepy/coveragepy/actions/runs/43588543793/job/132428182059"
+    },
+    {
+      "completedAt": "2026-11-14T11:21:50Z",
+      "conclusion": "success",
+      "databaseId": 132428182076,
+      "name": "pypy-3.11 on macos",
+      "startedAt": "2026-11-14T11:18:30Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-14T11:18:32Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-14T11:18:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:18:36Z",
+          "conclusion": "success",
+          "name": "Check out the repo",
+          "number": 2,
+          "startedAt": "2026-11-14T11:18:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:18:55Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-11-14T11:18:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:18:55Z",
+          "conclusion": "success",
+          "name": "Show environment",
+          "number": 4,
+          "startedAt": "2026-11-14T11:18:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:18:59Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "startedAt": "2026-11-14T11:18:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:21:44Z",
+          "conclusion": "success",
+          "name": "Run tox for pypy-3.11",
+          "number": 6,
+          "startedAt": "2026-11-14T11:18:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:21:44Z",
+          "conclusion": "skipped",
+          "name": "Retry tox for pypy-3.11",
+          "number": 7,
+          "startedAt": "2026-11-14T11:21:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:21:45Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 13,
+          "startedAt": "2026-11-14T11:21:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:21:46Z",
+          "conclusion": "success",
+          "name": "Post Check out the repo",
+          "number": 14,
+          "startedAt": "2026-11-14T11:21:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:21:47Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-14T11:21:46Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/coveragepy/coveragepy/actions/runs/43588543793/job/132428182076"
+    },
+    {
+      "completedAt": "2026-11-14T11:16:24Z",
+      "conclusion": "success",
+      "databaseId": 132428182078,
+      "name": "3.16 on windows",
+      "startedAt": "2026-11-14T11:10:45Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-14T11:10:48Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-14T11:10:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:10:56Z",
+          "conclusion": "success",
+          "name": "Check out the repo",
+          "number": 2,
+          "startedAt": "2026-11-14T11:10:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:12:43Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-11-14T11:10:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:12:44Z",
+          "conclusion": "success",
+          "name": "Show environment",
+          "number": 4,
+          "startedAt": "2026-11-14T11:12:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:12:48Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "startedAt": "2026-11-14T11:12:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:20Z",
+          "conclusion": "success",
+          "name": "Run tox for 3.16",
+          "number": 6,
+          "startedAt": "2026-11-14T11:12:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:20Z",
+          "conclusion": "skipped",
+          "name": "Retry tox for 3.16",
+          "number": 7,
+          "startedAt": "2026-11-14T11:16:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:20Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 13,
+          "startedAt": "2026-11-14T11:16:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:22Z",
+          "conclusion": "success",
+          "name": "Post Check out the repo",
+          "number": 14,
+          "startedAt": "2026-11-14T11:16:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:22Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-14T11:16:22Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/coveragepy/coveragepy/actions/runs/43588543793/job/132428182078"
+    },
+    {
+      "completedAt": "2026-11-14T11:17:48Z",
+      "conclusion": "success",
+      "databaseId": 132428182079,
+      "name": "3.11 on windows",
+      "startedAt": "2026-11-14T11:13:55Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-14T11:13:58Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-14T11:13:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:14:06Z",
+          "conclusion": "success",
+          "name": "Check out the repo",
+          "number": 2,
+          "startedAt": "2026-11-14T11:13:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:14:06Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-11-14T11:14:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:14:07Z",
+          "conclusion": "success",
+          "name": "Show environment",
+          "number": 4,
+          "startedAt": "2026-11-14T11:14:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:14:15Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "startedAt": "2026-11-14T11:14:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:17:44Z",
+          "conclusion": "success",
+          "name": "Run tox for 3.11",
+          "number": 6,
+          "startedAt": "2026-11-14T11:14:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:17:44Z",
+          "conclusion": "skipped",
+          "name": "Retry tox for 3.11",
+          "number": 7,
+          "startedAt": "2026-11-14T11:17:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:17:44Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 13,
+          "startedAt": "2026-11-14T11:17:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:17:46Z",
+          "conclusion": "success",
+          "name": "Post Check out the repo",
+          "number": 14,
+          "startedAt": "2026-11-14T11:17:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:17:46Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-14T11:17:46Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/coveragepy/coveragepy/actions/runs/43588543793/job/132428182079"
+    },
+    {
+      "completedAt": "2026-11-14T11:19:19Z",
+      "conclusion": "success",
+      "databaseId": 132428182090,
+      "name": "3.14 on windows",
+      "startedAt": "2026-11-14T11:15:52Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-14T11:15:53Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-14T11:15:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:00Z",
+          "conclusion": "success",
+          "name": "Check out the repo",
+          "number": 2,
+          "startedAt": "2026-11-14T11:15:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:00Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-11-14T11:16:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:01Z",
+          "conclusion": "success",
+          "name": "Show environment",
+          "number": 4,
+          "startedAt": "2026-11-14T11:16:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:08Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "startedAt": "2026-11-14T11:16:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:19:15Z",
+          "conclusion": "success",
+          "name": "Run tox for 3.14",
+          "number": 6,
+          "startedAt": "2026-11-14T11:16:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:19:15Z",
+          "conclusion": "skipped",
+          "name": "Retry tox for 3.14",
+          "number": 7,
+          "startedAt": "2026-11-14T11:19:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:19:15Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 13,
+          "startedAt": "2026-11-14T11:19:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:19:17Z",
+          "conclusion": "success",
+          "name": "Post Check out the repo",
+          "number": 14,
+          "startedAt": "2026-11-14T11:19:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:19:17Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-14T11:19:17Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/coveragepy/coveragepy/actions/runs/43588543793/job/132428182090"
+    },
+    {
+      "completedAt": "2026-11-14T11:20:26Z",
+      "conclusion": "success",
+      "databaseId": 132428182095,
+      "name": "3.15 on windows",
+      "startedAt": "2026-11-14T11:15:54Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-14T11:15:57Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-14T11:15:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:06Z",
+          "conclusion": "success",
+          "name": "Check out the repo",
+          "number": 2,
+          "startedAt": "2026-11-14T11:15:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:06Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-11-14T11:16:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:07Z",
+          "conclusion": "success",
+          "name": "Show environment",
+          "number": 4,
+          "startedAt": "2026-11-14T11:16:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:15Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "startedAt": "2026-11-14T11:16:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:20:23Z",
+          "conclusion": "success",
+          "name": "Run tox for 3.15",
+          "number": 6,
+          "startedAt": "2026-11-14T11:16:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:20:23Z",
+          "conclusion": "skipped",
+          "name": "Retry tox for 3.15",
+          "number": 7,
+          "startedAt": "2026-11-14T11:20:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:20:23Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 13,
+          "startedAt": "2026-11-14T11:20:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:20:25Z",
+          "conclusion": "success",
+          "name": "Post Check out the repo",
+          "number": 14,
+          "startedAt": "2026-11-14T11:20:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:20:25Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-14T11:20:25Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/coveragepy/coveragepy/actions/runs/43588543793/job/132428182095"
+    },
+    {
+      "completedAt": "2026-11-14T11:20:46Z",
+      "conclusion": "success",
+      "databaseId": 132428182106,
+      "name": "3.12 on windows",
+      "startedAt": "2026-11-14T11:16:41Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-14T11:16:43Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-14T11:16:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:50Z",
+          "conclusion": "success",
+          "name": "Check out the repo",
+          "number": 2,
+          "startedAt": "2026-11-14T11:16:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:50Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-11-14T11:16:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:52Z",
+          "conclusion": "success",
+          "name": "Show environment",
+          "number": 4,
+          "startedAt": "2026-11-14T11:16:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:59Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "startedAt": "2026-11-14T11:16:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:20:42Z",
+          "conclusion": "success",
+          "name": "Run tox for 3.12",
+          "number": 6,
+          "startedAt": "2026-11-14T11:16:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:20:42Z",
+          "conclusion": "skipped",
+          "name": "Retry tox for 3.12",
+          "number": 7,
+          "startedAt": "2026-11-14T11:20:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:20:42Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 13,
+          "startedAt": "2026-11-14T11:20:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:20:44Z",
+          "conclusion": "success",
+          "name": "Post Check out the repo",
+          "number": 14,
+          "startedAt": "2026-11-14T11:20:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:20:44Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-14T11:20:44Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/coveragepy/coveragepy/actions/runs/43588543793/job/132428182106"
+    },
+    {
+      "completedAt": "2026-11-14T11:20:17Z",
+      "conclusion": "success",
+      "databaseId": 132428182110,
+      "name": "3.15t on windows",
+      "startedAt": "2026-11-14T11:15:54Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-14T11:15:56Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-14T11:15:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:02Z",
+          "conclusion": "success",
+          "name": "Check out the repo",
+          "number": 2,
+          "startedAt": "2026-11-14T11:15:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:45Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-11-14T11:16:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:45Z",
+          "conclusion": "success",
+          "name": "Show environment",
+          "number": 4,
+          "startedAt": "2026-11-14T11:16:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:49Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "startedAt": "2026-11-14T11:16:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:20:13Z",
+          "conclusion": "success",
+          "name": "Run tox for 3.15t",
+          "number": 6,
+          "startedAt": "2026-11-14T11:16:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:20:13Z",
+          "conclusion": "skipped",
+          "name": "Retry tox for 3.15t",
+          "number": 7,
+          "startedAt": "2026-11-14T11:20:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:20:13Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 13,
+          "startedAt": "2026-11-14T11:20:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:20:15Z",
+          "conclusion": "success",
+          "name": "Post Check out the repo",
+          "number": 14,
+          "startedAt": "2026-11-14T11:20:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:20:15Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-14T11:20:15Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/coveragepy/coveragepy/actions/runs/43588543793/job/132428182110"
+    },
+    {
+      "completedAt": "2026-11-14T11:19:37Z",
+      "conclusion": "success",
+      "databaseId": 132428182152,
+      "name": "3.14t on windows",
+      "startedAt": "2026-11-14T11:16:39Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-14T11:16:43Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-14T11:16:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:49Z",
+          "conclusion": "success",
+          "name": "Check out the repo",
+          "number": 2,
+          "startedAt": "2026-11-14T11:16:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:17:20Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-11-14T11:16:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:17:20Z",
+          "conclusion": "success",
+          "name": "Show environment",
+          "number": 4,
+          "startedAt": "2026-11-14T11:17:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:17:24Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "startedAt": "2026-11-14T11:17:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:19:35Z",
+          "conclusion": "success",
+          "name": "Run tox for 3.14t",
+          "number": 6,
+          "startedAt": "2026-11-14T11:17:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:19:35Z",
+          "conclusion": "skipped",
+          "name": "Retry tox for 3.14t",
+          "number": 7,
+          "startedAt": "2026-11-14T11:19:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:19:35Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 13,
+          "startedAt": "2026-11-14T11:19:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:19:36Z",
+          "conclusion": "success",
+          "name": "Post Check out the repo",
+          "number": 14,
+          "startedAt": "2026-11-14T11:19:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:19:37Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-14T11:19:36Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/coveragepy/coveragepy/actions/runs/43588543793/job/132428182152"
+    },
+    {
+      "completedAt": "2026-11-14T11:18:30Z",
+      "conclusion": "success",
+      "databaseId": 132428182154,
+      "name": "3.11 on ubuntu",
+      "startedAt": "2026-11-14T11:16:49Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-14T11:16:51Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-14T11:16:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:52Z",
+          "conclusion": "success",
+          "name": "Check out the repo",
+          "number": 2,
+          "startedAt": "2026-11-14T11:16:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:52Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-11-14T11:16:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:52Z",
+          "conclusion": "success",
+          "name": "Show environment",
+          "number": 4,
+          "startedAt": "2026-11-14T11:16:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:56Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "startedAt": "2026-11-14T11:16:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:18:27Z",
+          "conclusion": "success",
+          "name": "Run tox for 3.11",
+          "number": 6,
+          "startedAt": "2026-11-14T11:16:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:18:27Z",
+          "conclusion": "skipped",
+          "name": "Retry tox for 3.11",
+          "number": 7,
+          "startedAt": "2026-11-14T11:18:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:18:27Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 13,
+          "startedAt": "2026-11-14T11:18:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:18:27Z",
+          "conclusion": "success",
+          "name": "Post Check out the repo",
+          "number": 14,
+          "startedAt": "2026-11-14T11:18:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:18:27Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-14T11:18:27Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/coveragepy/coveragepy/actions/runs/43588543793/job/132428182154"
+    },
+    {
+      "completedAt": "2026-11-14T11:19:42Z",
+      "conclusion": "success",
+      "databaseId": 132428182163,
+      "name": "3.13 on windows",
+      "startedAt": "2026-11-14T11:16:10Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-14T11:16:12Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-14T11:16:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:21Z",
+          "conclusion": "success",
+          "name": "Check out the repo",
+          "number": 2,
+          "startedAt": "2026-11-14T11:16:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:21Z",
+          "conclusion": "success",
+          "name": "Set up Python",
+          "number": 3,
+          "startedAt": "2026-11-14T11:16:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:22Z",
+          "conclusion": "success",
+          "name": "Show environment",
+          "number": 4,
+          "startedAt": "2026-11-14T11:16:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:16:30Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "startedAt": "2026-11-14T11:16:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:19:38Z",
+          "conclusion": "success",
+          "name": "Run tox for 3.13",
+          "number": 6,
+          "startedAt": "2026-11-14T11:16:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:19:38Z",
+          "conclusion": "skipped",
+          "name": "Retry tox for 3.13",
+          "number": 7,
+          "startedAt": "2026-11-14T11:19:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:19:38Z",
+          "conclusion": "success",
+          "name": "Post Set up Python",
+          "number": 13,
+          "startedAt": "2026-11-14T11:19:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:19:40Z",
+          "conclusion": "success",
+          "name": "Post Check out the repo",
+          "number": 14,
+          "startedAt": "2026-11-14T11:19:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:19:40Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-14T11:19:40Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/coveragepy/coveragepy/actions/runs/43588543793/job/132428182163"
+    },
+    {
+      "completedAt": "2026-11-14T11:08:02Z",
+      "conclusion": "skipped",
+      "databaseId": 132428183076,
+      "name": "JavaScript tests",
+      "startedAt": "2026-11-14T11:08:02Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/coveragepy/coveragepy/actions/runs/43588543793/job/132428183076"
+    },
+    {
+      "completedAt": "2026-11-14T11:25:23Z",
+      "conclusion": "failure",
+      "databaseId": 132432315158,
+      "name": "Tests successful",
+      "startedAt": "2026-11-14T11:25:20Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-14T11:25:21Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-14T11:25:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:25:21Z",
+          "conclusion": "failure",
+          "name": "Decide success or failure",
+          "number": 2,
+          "startedAt": "2026-11-14T11:25:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T11:25:21Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 3,
+          "startedAt": "2026-11-14T11:25:21Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/coveragepy/coveragepy/actions/runs/43588543793/job/132432315158"
+    }
+  ],
+  "name": "Tests",
+  "updatedAt": "2026-11-14T11:25:24Z",
+  "repository": "nedbat/coveragepy"
+}

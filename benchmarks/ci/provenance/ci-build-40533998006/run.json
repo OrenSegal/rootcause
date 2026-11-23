@@ -1,0 +1,5459 @@
+{
+  "attempt": 1,
+  "conclusion": "failure",
+  "createdAt": "2026-10-27T15:44:37Z",
+  "databaseId": 40533998006,
+  "displayTitle": "docs: ignore undocumented pyproject_hooks SubprocessRunner",
+  "event": "pull_request",
+  "headBranch": "docs/nitpick-subprocessrunner",
+  "headSha": "3d5f34b76ce636950c85f49a0c66d123a08605e2",
+  "jobs": [
+    {
+      "completedAt": "2026-10-27T15:44:47Z",
+      "conclusion": "success",
+      "databaseId": 122294159179,
+      "name": "change-detection / Identify source changes",
+      "startedAt": "2026-10-27T15:44:41Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:44:43Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:44:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:44:43Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:44:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:44:44Z",
+          "conclusion": "success",
+          "name": "Get a list of the changed runtime-related files",
+          "number": 3,
+          "startedAt": "2026-10-27T15:44:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:44:44Z",
+          "conclusion": "success",
+          "name": "Set a flag for running the tests",
+          "number": 4,
+          "startedAt": "2026-10-27T15:44:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:44:45Z",
+          "conclusion": "success",
+          "name": "Get a list of the changed documentation-related files",
+          "number": 5,
+          "startedAt": "2026-10-27T15:44:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:44:45Z",
+          "conclusion": "skipped",
+          "name": "Set a flag for building the docs",
+          "number": 6,
+          "startedAt": "2026-10-27T15:44:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:44:45Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 12,
+          "startedAt": "2026-10-27T15:44:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:44:45Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-10-27T15:44:45Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294159179"
+    },
+    {
+      "completedAt": "2026-10-27T15:45:00Z",
+      "conclusion": "failure",
+      "databaseId": 122294247414,
+      "name": "type / Type check",
+      "startedAt": "2026-10-27T15:44:50Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:44:51Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:44:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:44:52Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:44:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:44:54Z",
+          "conclusion": "success",
+          "name": "Setup Python 3.15",
+          "number": 3,
+          "startedAt": "2026-10-27T15:44:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:44:55Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 4,
+          "startedAt": "2026-10-27T15:44:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:44:58Z",
+          "conclusion": "success",
+          "name": "Setup run environment",
+          "number": 5,
+          "startedAt": "2026-10-27T15:44:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:44:58Z",
+          "conclusion": "failure",
+          "name": "Run check for type",
+          "number": 6,
+          "startedAt": "2026-10-27T15:44:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:44:58Z",
+          "conclusion": "skipped",
+          "name": "Post Setup Python 3.15",
+          "number": 11,
+          "startedAt": "2026-10-27T15:44:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:44:59Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 12,
+          "startedAt": "2026-10-27T15:44:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:44:59Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-10-27T15:44:59Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294247414"
+    },
+    {
+      "completedAt": "2026-10-27T15:45:07Z",
+      "conclusion": "success",
+      "databaseId": 122294247707,
+      "name": "pytest / Download integration sources",
+      "startedAt": "2026-10-27T15:44:50Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:44:53Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:44:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:44:54Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:44:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:44:57Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 3,
+          "startedAt": "2026-10-27T15:44:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:02Z",
+          "conclusion": "success",
+          "name": "Download the sources",
+          "number": 4,
+          "startedAt": "2026-10-27T15:44:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:04Z",
+          "conclusion": "success",
+          "name": "Share the sources with the test matrix",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:04Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 9,
+          "startedAt": "2026-10-27T15:45:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:04Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 10,
+          "startedAt": "2026-10-27T15:45:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:04Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "startedAt": "2026-10-27T15:45:04Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294247707"
+    },
+    {
+      "completedAt": "2026-10-27T15:44:47Z",
+      "conclusion": "skipped",
+      "databaseId": 122294249205,
+      "name": "check-docs",
+      "startedAt": "2026-10-27T15:44:47Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294249205"
+    },
+    {
+      "completedAt": "2026-10-27T15:48:59Z",
+      "conclusion": "success",
+      "databaseId": 122294441978,
+      "name": "pytest / Run tests (macos-26, pypy3.12, tox)",
+      "startedAt": "2026-10-27T15:45:10Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:15Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:17Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:19Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:24Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:29Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:29Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:45Z",
+          "conclusion": "success",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:45Z",
+          "conclusion": "skipped",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:48:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:45Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:48:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:50Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:48:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:54Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:48:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:54Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:48:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:55Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:48:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:56Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:48:55Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294441978"
+    },
+    {
+      "completedAt": "2026-10-27T15:48:41Z",
+      "conclusion": "success",
+      "databaseId": 122294441998,
+      "name": "pytest / Run tests (ubuntu-26.04, pypy3.12, tox)",
+      "startedAt": "2026-10-27T15:45:10Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:14Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:16Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:18Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:19Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:20Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:20Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:32Z",
+          "conclusion": "success",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:32Z",
+          "conclusion": "skipped",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:48:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:32Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:48:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:35Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:48:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:37Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:48:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:37Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:48:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:38Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:48:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:38Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:48:38Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294441998"
+    },
+    {
+      "completedAt": "2026-10-27T15:46:39Z",
+      "conclusion": "success",
+      "databaseId": 122294442003,
+      "name": "pytest / Run tests (ubuntu-26.04, 3.15, min)",
+      "startedAt": "2026-10-27T15:45:11Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:15Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:17Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:19Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:21Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:22Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:22Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:22Z",
+          "conclusion": "skipped",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:31Z",
+          "conclusion": "success",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:45:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:31Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:46:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:33Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:46:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:35Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:46:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:35Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:46:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:35Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:46:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:35Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:46:35Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442003"
+    },
+    {
+      "completedAt": "2026-10-27T15:47:58Z",
+      "conclusion": "success",
+      "databaseId": 122294442037,
+      "name": "pytest / Run tests (ubuntu-26.04, pypy3.11, tox)",
+      "startedAt": "2026-10-27T15:45:10Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:14Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:16Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:18Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:19Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:20Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:20Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:49Z",
+          "conclusion": "success",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:49Z",
+          "conclusion": "skipped",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:47:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:49Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:47:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:51Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:47:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:54Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:47:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:54Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:47:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:54Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:47:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:55Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:47:54Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442037"
+    },
+    {
+      "completedAt": "2026-10-27T15:46:37Z",
+      "conclusion": "success",
+      "databaseId": 122294442038,
+      "name": "pytest / Run tests (ubuntu-26.04, 3.11, tox)",
+      "startedAt": "2026-10-27T15:45:10Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:12Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:13Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:14Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:15Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:16Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:16Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:30Z",
+          "conclusion": "success",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:30Z",
+          "conclusion": "skipped",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:46:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:30Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:46:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:32Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:46:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:34Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:46:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:34Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:46:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:35Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:46:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:35Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:46:35Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442038"
+    },
+    {
+      "completedAt": "2026-10-27T15:46:38Z",
+      "conclusion": "success",
+      "databaseId": 122294442059,
+      "name": "pytest / Run tests (ubuntu-26.04, 3.13, min)",
+      "startedAt": "2026-10-27T15:45:09Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:11Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:13Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:13Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:15Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:16Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:16Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:16Z",
+          "conclusion": "skipped",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:32Z",
+          "conclusion": "success",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:45:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:32Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:46:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:34Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:46:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:36Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:46:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:36Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:46:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:36Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:46:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:36Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:46:36Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442059"
+    },
+    {
+      "completedAt": "2026-10-27T15:47:23Z",
+      "conclusion": "success",
+      "databaseId": 122294442069,
+      "name": "pytest / Run tests (macos-26, 3.14, min)",
+      "startedAt": "2026-10-27T15:45:10Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:15Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:18Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:21Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:23Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:24Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:24Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:24Z",
+          "conclusion": "skipped",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:11Z",
+          "conclusion": "success",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:45:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:11Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:47:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:13Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:47:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:18Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:47:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:18Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:47:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:19Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:47:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:20Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:47:19Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442069"
+    },
+    {
+      "completedAt": "2026-10-27T15:46:17Z",
+      "conclusion": "success",
+      "databaseId": 122294442077,
+      "name": "pytest / Run tests (ubuntu-26.04, 3.14, min)",
+      "startedAt": "2026-10-27T15:45:10Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:12Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:14Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:15Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:16Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:17Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:17Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:17Z",
+          "conclusion": "skipped",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:09Z",
+          "conclusion": "success",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:45:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:09Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:46:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:11Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:46:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:13Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:46:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:13Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:46:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:14Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:46:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:14Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:46:14Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442077"
+    },
+    {
+      "completedAt": "2026-10-27T15:46:40Z",
+      "conclusion": "success",
+      "databaseId": 122294442089,
+      "name": "pytest / Run tests (ubuntu-26.04, 3.13, tox)",
+      "startedAt": "2026-10-27T15:45:10Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:13Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:14Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:17Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:18Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:19Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:19Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:31Z",
+          "conclusion": "success",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:31Z",
+          "conclusion": "skipped",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:46:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:31Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:46:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:33Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:46:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:36Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:46:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:36Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:46:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:37Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:46:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:37Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:46:37Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442089"
+    },
+    {
+      "completedAt": "2026-10-27T15:46:39Z",
+      "conclusion": "success",
+      "databaseId": 122294442095,
+      "name": "pytest / Run tests (ubuntu-26.04, 3.12, tox)",
+      "startedAt": "2026-10-27T15:45:10Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:14Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:15Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:17Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:19Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:20Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:20Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:31Z",
+          "conclusion": "success",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:31Z",
+          "conclusion": "skipped",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:46:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:31Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:46:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:33Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:46:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:36Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:46:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:36Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:46:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:36Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:46:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:36Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:46:36Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442095"
+    },
+    {
+      "completedAt": "2026-10-27T15:47:29Z",
+      "conclusion": "success",
+      "databaseId": 122294442114,
+      "name": "pytest / Run tests (macos-26, 3.12, min)",
+      "startedAt": "2026-10-27T15:45:11Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:15Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:19Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:22Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:23Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:24Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:24Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:24Z",
+          "conclusion": "skipped",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:15Z",
+          "conclusion": "success",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:45:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:15Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:47:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:18Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:47:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:23Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:47:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:23Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:47:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:24Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:47:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:24Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:47:24Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442114"
+    },
+    {
+      "completedAt": "2026-10-27T15:46:31Z",
+      "conclusion": "success",
+      "databaseId": 122294442118,
+      "name": "pytest / Run tests (ubuntu-26.04, 3.11, min)",
+      "startedAt": "2026-10-27T15:45:10Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:13Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:15Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:16Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:17Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:19Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:19Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:19Z",
+          "conclusion": "skipped",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:24Z",
+          "conclusion": "success",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:45:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:24Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:46:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:26Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:46:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:28Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:46:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:28Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:46:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:28Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:46:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:28Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:46:28Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442118"
+    },
+    {
+      "completedAt": "2026-10-27T15:49:14Z",
+      "conclusion": "success",
+      "databaseId": 122294442135,
+      "name": "pytest / Run tests (ubuntu-26.04, pypy3.12, min)",
+      "startedAt": "2026-10-27T15:45:11Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:14Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:15Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:18Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:30Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:31Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:31Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:31Z",
+          "conclusion": "skipped",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:05Z",
+          "conclusion": "success",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:45:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:05Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:49:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:07Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:49:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:10Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:49:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:10Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:49:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:10Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:49:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:11Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:49:10Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442135"
+    },
+    {
+      "completedAt": "2026-10-27T15:50:56Z",
+      "conclusion": "success",
+      "databaseId": 122294442140,
+      "name": "pytest / Run tests (windows-2025, pypy3.12, tox)",
+      "startedAt": "2026-10-27T15:45:34Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:38Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:47Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:48Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:50Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:54Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:54Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:50:38Z",
+          "conclusion": "success",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:50:38Z",
+          "conclusion": "skipped",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:50:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:50:38Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:50:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:50:43Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:50:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:50:51Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:50:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:50:52Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:50:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:50:54Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:50:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:50:54Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:50:54Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442140"
+    },
+    {
+      "completedAt": "2026-10-27T15:47:04Z",
+      "conclusion": "success",
+      "databaseId": 122294442142,
+      "name": "pytest / Run tests (macos-26, 3.13, tox)",
+      "startedAt": "2026-10-27T15:45:11Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:16Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:19Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:20Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:23Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:24Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:24Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:54Z",
+          "conclusion": "success",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:54Z",
+          "conclusion": "skipped",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:46:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:54Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:46:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:57Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:46:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:00Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:46:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:00Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:47:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:01Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:47:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:01Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:47:01Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442142"
+    },
+    {
+      "completedAt": "2026-10-27T15:46:52Z",
+      "conclusion": "success",
+      "databaseId": 122294442143,
+      "name": "pytest / Run tests (macos-26, 3.15, min)",
+      "startedAt": "2026-10-27T15:45:10Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:15Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:18Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:19Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:21Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:22Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:22Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:22Z",
+          "conclusion": "skipped",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:42Z",
+          "conclusion": "success",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:45:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:42Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:46:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:45Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:46:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:48Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:46:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:49Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:46:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:49Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:46:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:50Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:46:49Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442143"
+    },
+    {
+      "completedAt": "2026-10-27T15:49:12Z",
+      "conclusion": "success",
+      "databaseId": 122294442144,
+      "name": "pytest / Run tests (macos-26, 3.15, tox)",
+      "startedAt": "2026-10-27T15:45:12Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:16Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:20Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:24Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:26Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:27Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:27Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:21Z",
+          "conclusion": "success",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:21Z",
+          "conclusion": "skipped",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:47:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:56Z",
+          "conclusion": "success",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:47:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:00Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:48:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:06Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:49:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:07Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:49:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:08Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:49:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:09Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:49:08Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442144"
+    },
+    {
+      "completedAt": "2026-10-27T15:51:59Z",
+      "conclusion": "success",
+      "databaseId": 122294442145,
+      "name": "pytest / Run tests (windows-2025, 3.15, tox)",
+      "startedAt": "2026-10-27T15:45:11Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:14Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:22Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:23Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:26Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:30Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:30Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:58Z",
+          "conclusion": "success",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:58Z",
+          "conclusion": "skipped",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:48:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:51:42Z",
+          "conclusion": "success",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:48:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:51:46Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:51:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:51:55Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:51:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:51:55Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:51:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:51:57Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:51:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:51:57Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:51:57Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442145"
+    },
+    {
+      "completedAt": "2026-10-27T15:48:50Z",
+      "conclusion": "success",
+      "databaseId": 122294442164,
+      "name": "pytest / Run tests (macos-26, pypy3.11, tox)",
+      "startedAt": "2026-10-27T15:45:12Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:16Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:19Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:20Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:24Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:28Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:28Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:37Z",
+          "conclusion": "success",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:37Z",
+          "conclusion": "skipped",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:48:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:37Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:48:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:41Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:48:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:46Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:48:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:46Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:48:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:46Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:48:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:47Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:48:46Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442164"
+    },
+    {
+      "completedAt": "2026-10-27T15:52:37Z",
+      "conclusion": "success",
+      "databaseId": 122294442179,
+      "name": "pytest / Run tests (windows-2025, pypy3.11, min)",
+      "startedAt": "2026-10-27T15:45:11Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:13Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:21Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:21Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:24Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:28Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:28Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:28Z",
+          "conclusion": "skipped",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:52:22Z",
+          "conclusion": "success",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:45:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:52:22Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:52:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:52:26Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:52:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:52:34Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:52:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:52:34Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:52:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:52:36Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:52:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:52:36Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:52:36Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442179"
+    },
+    {
+      "completedAt": "2026-10-27T15:49:25Z",
+      "conclusion": "success",
+      "databaseId": 122294442181,
+      "name": "pytest / Run tests (windows-2025, 3.12, min)",
+      "startedAt": "2026-10-27T15:45:10Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:14Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:27Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:28Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:31Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:33Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:33Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:33Z",
+          "conclusion": "skipped",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:09Z",
+          "conclusion": "success",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:45:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:09Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:49:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:14Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:49:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:22Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:49:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:22Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:49:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:24Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:49:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:24Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:49:24Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442181"
+    },
+    {
+      "completedAt": "2026-10-27T15:49:14Z",
+      "conclusion": "success",
+      "databaseId": 122294442215,
+      "name": "pytest / Run tests (windows-2025, 3.12, tox)",
+      "startedAt": "2026-10-27T15:45:11Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:15Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:28Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:30Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:32Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:34Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:34Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:57Z",
+          "conclusion": "success",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:57Z",
+          "conclusion": "skipped",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:48:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:57Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:48:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:01Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:48:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:10Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:49:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:10Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:49:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:12Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:49:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:12Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:49:12Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442215"
+    },
+    {
+      "completedAt": "2026-10-27T15:48:22Z",
+      "conclusion": "success",
+      "databaseId": 122294442229,
+      "name": "pytest / Run tests (windows-2025, 3.14, min)",
+      "startedAt": "2026-10-27T15:45:11Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:13Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:20Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:22Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:23Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:26Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:26Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:26Z",
+          "conclusion": "skipped",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:08Z",
+          "conclusion": "success",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:45:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:08Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:48:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:11Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:48:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:18Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:48:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:18Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:48:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:20Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:48:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:20Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:48:20Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442229"
+    },
+    {
+      "completedAt": "2026-10-27T15:49:06Z",
+      "conclusion": "success",
+      "databaseId": 122294442239,
+      "name": "pytest / Run tests (macos-26, pypy3.12, min)",
+      "startedAt": "2026-10-27T15:45:11Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:16Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:19Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:20Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:22Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:27Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:27Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:27Z",
+          "conclusion": "skipped",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:53Z",
+          "conclusion": "success",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:45:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:53Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:48:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:58Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:48:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:01Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:48:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:02Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:49:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:03Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:49:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:03Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:49:03Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442239"
+    },
+    {
+      "completedAt": "2026-10-27T15:50:28Z",
+      "conclusion": "success",
+      "databaseId": 122294442255,
+      "name": "pytest / Run tests (macos-26, 3.11, tox)",
+      "startedAt": "2026-10-27T15:45:10Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:15Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:18Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:19Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:22Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:23Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:19Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:50:11Z",
+          "conclusion": "success",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:48:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:50:11Z",
+          "conclusion": "skipped",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:50:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:50:11Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:50:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:50:15Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:50:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:50:20Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:50:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:50:20Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:50:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:50:21Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:50:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:50:26Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:50:21Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442255"
+    },
+    {
+      "completedAt": "2026-10-27T15:49:10Z",
+      "conclusion": "success",
+      "databaseId": 122294442269,
+      "name": "pytest / Run tests (ubuntu-26.04, pypy3.11, min)",
+      "startedAt": "2026-10-27T15:45:11Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:15Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:17Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:19Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:20Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:21Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:21Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:21Z",
+          "conclusion": "skipped",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:02Z",
+          "conclusion": "success",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:45:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:02Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:49:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:05Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:49:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:07Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:49:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:07Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:49:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:07Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:49:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:07Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:49:07Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442269"
+    },
+    {
+      "completedAt": "2026-10-27T15:51:58Z",
+      "conclusion": "success",
+      "databaseId": 122294442283,
+      "name": "pytest / Run tests (windows-2025, pypy3.11, tox)",
+      "startedAt": "2026-10-27T15:45:11Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:15Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:23Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:25Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:27Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:32Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:32Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:51:39Z",
+          "conclusion": "success",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:51:39Z",
+          "conclusion": "skipped",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:51:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:51:39Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:51:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:51:44Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:51:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:51:52Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:51:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:51:53Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:51:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:51:55Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:51:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:51:55Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:51:55Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442283"
+    },
+    {
+      "completedAt": "2026-10-27T15:49:36Z",
+      "conclusion": "success",
+      "databaseId": 122294442289,
+      "name": "pytest / Run tests (windows-2025, 3.11, min)",
+      "startedAt": "2026-10-27T15:45:11Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:14Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:22Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:23Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:25Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:28Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:28Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:28Z",
+          "conclusion": "skipped",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:19Z",
+          "conclusion": "success",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:45:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:19Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:49:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:23Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:49:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:32Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:49:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:32Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:49:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:34Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:49:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:34Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:49:34Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442289"
+    },
+    {
+      "completedAt": "2026-10-27T15:47:25Z",
+      "conclusion": "success",
+      "databaseId": 122294442290,
+      "name": "pytest / Run tests (ubuntu-26.04, 3.15, tox)",
+      "startedAt": "2026-10-27T15:45:11Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:14Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:16Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:18Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:19Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:20Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:20Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:24Z",
+          "conclusion": "success",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:24Z",
+          "conclusion": "skipped",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:46:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:17Z",
+          "conclusion": "success",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:46:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:19Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:47:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:22Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:47:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:22Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:47:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:22Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:47:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:22Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:47:22Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442290"
+    },
+    {
+      "completedAt": "2026-10-27T15:52:39Z",
+      "conclusion": "success",
+      "databaseId": 122294442307,
+      "name": "pytest / Run tests (windows-2025, 3.14, tox)",
+      "startedAt": "2026-10-27T15:45:11Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:14Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:24Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:25Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:28Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:33Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:33Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:52:13Z",
+          "conclusion": "success",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:52:13Z",
+          "conclusion": "skipped",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:52:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:52:13Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:52:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:52:19Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:52:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:52:35Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:52:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:52:35Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:52:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:52:37Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:52:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:52:37Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:52:37Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442307"
+    },
+    {
+      "completedAt": "2026-10-27T15:46:23Z",
+      "conclusion": "success",
+      "databaseId": 122294442332,
+      "name": "pytest / Run tests (ubuntu-26.04, 3.14, tox)",
+      "startedAt": "2026-10-27T15:45:11Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:15Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:17Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:19Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:20Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:21Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:21Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:15Z",
+          "conclusion": "success",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:15Z",
+          "conclusion": "skipped",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:46:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:15Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:46:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:17Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:46:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:20Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:46:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:20Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:46:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:20Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:46:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:20Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:46:20Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442332"
+    },
+    {
+      "completedAt": "2026-10-27T15:47:06Z",
+      "conclusion": "success",
+      "databaseId": 122294442346,
+      "name": "pytest / Run tests (macos-26, 3.12, tox)",
+      "startedAt": "2026-10-27T15:45:11Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:14Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:18Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:19Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:21Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:22Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:22Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:55Z",
+          "conclusion": "success",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:55Z",
+          "conclusion": "skipped",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:46:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:55Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:46:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:58Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:46:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:01Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:46:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:02Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:47:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:02Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:47:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:03Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:47:02Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442346"
+    },
+    {
+      "completedAt": "2026-10-27T15:47:25Z",
+      "conclusion": "success",
+      "databaseId": 122294442379,
+      "name": "pytest / Run tests (macos-26, 3.11, min)",
+      "startedAt": "2026-10-27T15:45:12Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:16Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:19Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:23Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:25Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:26Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:26Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:26Z",
+          "conclusion": "skipped",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:13Z",
+          "conclusion": "success",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:45:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:13Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:47:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:17Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:47:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:21Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:47:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:21Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:47:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:22Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:47:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:22Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:47:22Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442379"
+    },
+    {
+      "completedAt": "2026-10-27T15:49:45Z",
+      "conclusion": "success",
+      "databaseId": 122294442383,
+      "name": "pytest / Run tests (macos-26, pypy3.11, min)",
+      "startedAt": "2026-10-27T15:45:11Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:16Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:19Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:22Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:23Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:27Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:27Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:27Z",
+          "conclusion": "skipped",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:27Z",
+          "conclusion": "success",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:45:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:27Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:49:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:32Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:49:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:37Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:49:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:38Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:49:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:39Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:49:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:42Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:49:39Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442383"
+    },
+    {
+      "completedAt": "2026-10-27T15:50:54Z",
+      "conclusion": "success",
+      "databaseId": 122294442397,
+      "name": "pytest / Run tests (windows-2025, pypy3.12, min)",
+      "startedAt": "2026-10-27T15:45:11Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:15Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:23Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:24Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:27Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:32Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:32Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:32Z",
+          "conclusion": "skipped",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:50:32Z",
+          "conclusion": "success",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:45:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:50:32Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:50:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:50:41Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:50:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:50:50Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:50:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:50:50Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:50:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:50:52Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:50:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:50:53Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:50:52Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442397"
+    },
+    {
+      "completedAt": "2026-10-27T15:50:11Z",
+      "conclusion": "success",
+      "databaseId": 122294442435,
+      "name": "pytest / Run tests (windows-2025, 3.11, tox)",
+      "startedAt": "2026-10-27T15:45:11Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:13Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:21Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:22Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:25Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:28Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:28Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:54Z",
+          "conclusion": "success",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:54Z",
+          "conclusion": "skipped",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:49:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:54Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:49:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:58Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:49:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:50:06Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:49:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:50:07Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:50:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:50:09Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:50:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:50:09Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:50:09Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442435"
+    },
+    {
+      "completedAt": "2026-10-27T15:49:46Z",
+      "conclusion": "success",
+      "databaseId": 122294442437,
+      "name": "pytest / Run tests (windows-2025, 3.15, min)",
+      "startedAt": "2026-10-27T15:45:11Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:13Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:21Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:22Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:25Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:28Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:28Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:28Z",
+          "conclusion": "skipped",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:30Z",
+          "conclusion": "success",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:45:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:30Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:49:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:33Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:49:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:41Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:49:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:41Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:49:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:43Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:49:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:44Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:49:44Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442437"
+    },
+    {
+      "completedAt": "2026-10-27T15:48:28Z",
+      "conclusion": "success",
+      "databaseId": 122294442479,
+      "name": "pytest / Run tests (windows-2025, 3.13, tox)",
+      "startedAt": "2026-10-27T15:45:11Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:13Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:20Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:22Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:25Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:28Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:28Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:13Z",
+          "conclusion": "success",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:13Z",
+          "conclusion": "skipped",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:48:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:13Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:48:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:17Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:48:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:24Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:48:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:25Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:48:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:26Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:48:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:48:26Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:48:26Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442479"
+    },
+    {
+      "completedAt": "2026-10-27T15:47:19Z",
+      "conclusion": "success",
+      "databaseId": 122294442483,
+      "name": "pytest / Run tests (macos-26, 3.13, min)",
+      "startedAt": "2026-10-27T15:45:11Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:15Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:19Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:20Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:22Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:23Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:23Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:23Z",
+          "conclusion": "skipped",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:09Z",
+          "conclusion": "success",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:45:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:09Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:47:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:12Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:47:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:15Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:47:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:16Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:47:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:16Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:47:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:17Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:47:16Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442483"
+    },
+    {
+      "completedAt": "2026-10-27T15:49:54Z",
+      "conclusion": "success",
+      "databaseId": 122294442551,
+      "name": "pytest / Run tests (windows-2025, 3.13, min)",
+      "startedAt": "2026-10-27T15:45:11Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:15Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:25Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:27Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:29Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:32Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:32Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:32Z",
+          "conclusion": "skipped",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:37Z",
+          "conclusion": "success",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:45:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:37Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:49:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:41Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:49:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:50Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:49:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:50Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:49:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:52Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:49:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:49:52Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:49:52Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442551"
+    },
+    {
+      "completedAt": "2026-10-27T15:46:29Z",
+      "conclusion": "success",
+      "databaseId": 122294442555,
+      "name": "pytest / Run tests (ubuntu-26.04, 3.12, min)",
+      "startedAt": "2026-10-27T15:45:11Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:15Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:16Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:18Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:20Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:21Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:21Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:21Z",
+          "conclusion": "skipped",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:21Z",
+          "conclusion": "success",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:45:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:21Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:46:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:23Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:46:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:25Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:46:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:25Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:46:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:25Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:46:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:46:25Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:46:25Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294442555"
+    },
+    {
+      "completedAt": "2026-10-27T15:47:24Z",
+      "conclusion": "success",
+      "databaseId": 122294443007,
+      "name": "pytest / Run tests (macos-26, 3.14, tox)",
+      "startedAt": "2026-10-27T15:45:11Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:45:16Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:45:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:19Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-27T15:45:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:21Z",
+          "conclusion": "success",
+          "name": "Get the integration sources",
+          "number": 3,
+          "startedAt": "2026-10-27T15:45:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:23Z",
+          "conclusion": "success",
+          "name": "Setup uv",
+          "number": 4,
+          "startedAt": "2026-10-27T15:45:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:24Z",
+          "conclusion": "success",
+          "name": "Install tox",
+          "number": 5,
+          "startedAt": "2026-10-27T15:45:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:45:24Z",
+          "conclusion": "success",
+          "name": "Wait",
+          "number": 6,
+          "startedAt": "2026-10-27T15:45:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:11Z",
+          "conclusion": "success",
+          "name": "Run test suite via tox",
+          "number": 7,
+          "startedAt": "2026-10-27T15:45:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:11Z",
+          "conclusion": "skipped",
+          "name": "Run minimum version test",
+          "number": 8,
+          "startedAt": "2026-10-27T15:47:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:11Z",
+          "conclusion": "skipped",
+          "name": "Run path test",
+          "number": 9,
+          "startedAt": "2026-10-27T15:47:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:15Z",
+          "conclusion": "success",
+          "name": "Combine coverage files",
+          "number": 10,
+          "startedAt": "2026-10-27T15:47:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:19Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5",
+          "number": 11,
+          "startedAt": "2026-10-27T15:47:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:19Z",
+          "conclusion": "success",
+          "name": "Post Setup uv",
+          "number": 21,
+          "startedAt": "2026-10-27T15:47:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:20Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 22,
+          "startedAt": "2026-10-27T15:47:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:47:21Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-10-27T15:47:20Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122294443007"
+    },
+    {
+      "completedAt": "2026-10-27T15:52:46Z",
+      "conclusion": "failure",
+      "databaseId": 122298901912,
+      "name": "Required checks pass",
+      "startedAt": "2026-10-27T15:52:42Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-27T15:52:43Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-27T15:52:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:52:44Z",
+          "conclusion": "failure",
+          "name": "Decide whether the needed jobs succeeded or failed",
+          "number": 2,
+          "startedAt": "2026-10-27T15:52:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-27T15:52:44Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 3,
+          "startedAt": "2026-10-27T15:52:44Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/pypa/build/actions/runs/40533998006/job/122298901912"
+    }
+  ],
+  "name": "test",
+  "updatedAt": "2026-10-27T15:52:47Z",
+  "repository": "pypa/build"
+}

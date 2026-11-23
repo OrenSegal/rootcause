@@ -1,0 +1,13 @@
+id: ci-starlette-41113523460
+title: 'feat: add url_path_for to HTTPConnection and Jinja2Templates (#843)'
+alert:
+  severity: ci
+  service: python-3-15
+  summary: 'workflow Test Suite failed on fix/request-url-path-for-843 at 7acdf700fb: step
+    ''Run linting checks'' in job ''Python 3.15'' failed.'
+truth:
+  category: bad_code_deploy
+  service: starlette
+  required_evidence_any:
+  - 7acdf700fb
+provenance: recorded

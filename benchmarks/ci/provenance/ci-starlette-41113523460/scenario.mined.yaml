@@ -1,0 +1,18 @@
+# Mined from https://github.com/Kludex/starlette/actions/runs/41113523460
+# (encode/starlette, licence BSD-3-Clause). Fixed by run
+# https://github.com/Kludex/starlette/actions/runs/41184070978. Label rule: the fix
+# changed files exactly one tested commit touched. Fix touched: starlette/requests.py,
+# tests/test_requests.py.
+id: ci-starlette-41113523460
+title: 'feat: add url_path_for to HTTPConnection and Jinja2Templates (#843)'
+alert:
+  severity: ci
+  service: python-3-15
+  summary: 'workflow Test Suite failed on fix/request-url-path-for-843 at 7acdf700fb: step
+    ''Run linting checks'' in job ''Python 3.15'' failed.'
+truth:
+  category: bad_code_deploy
+  service: starlette
+  required_evidence_any:
+  - 7acdf700fb
+provenance: recorded

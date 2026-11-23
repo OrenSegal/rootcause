@@ -1,0 +1,13 @@
+id: ci-attrs-39835343871
+title: 'fix: preserve explicitly declared slots'
+alert:
+  severity: ci
+  service: combine-check-coverage
+  summary: 'workflow CI failed on fix-preserve-declared-slots-1637 at 2751a66ea8: step ''Combine
+    coverage & fail if it''s <100%.'' in job ''Combine & check coverage'' failed.'
+truth:
+  category: bad_code_deploy
+  service: attrs
+  required_evidence_any:
+  - 2751a66ea8
+provenance: recorded

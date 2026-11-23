@@ -1,0 +1,20 @@
+[
+  {
+    "id": "a2dbabd654",
+    "service": "cryptography",
+    "version": "a2dbabd654",
+    "ts": "2026-11-14T15:26:33Z",
+    "author": "jmestwa-coder",
+    "summary": "check traditional dsa private keys match their public key",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "CHANGELOG.rst",
+      "docs/development/test-vectors.rst",
+      "src/rust/cryptography-key-parsing/src/dsa.rs",
+      "tests/hazmat/primitives/test_dsa.py",
+      "tests/hazmat/primitives/test_serialization.py",
+      "vectors/cryptography_vectors/asymmetric/Traditional_OpenSSL_Serialization/dsa-inconsistent-public-key.pem"
+    ]
+  }
+]

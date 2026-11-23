@@ -1,0 +1,12 @@
+{
+  "fixed_run": "https://github.com/pypa/pipx/actions/runs/44003153786",
+  "fixed_sha": "655247177922f1bb1c06e16237bf73ffea9ba52c",
+  "commits": [
+    "655247177922f1bb1c06e16237bf73ffea9ba52c"
+  ],
+  "files": [
+    "tests/test_fanout.py"
+  ],
+  "merges": [],
+  "status": "ahead"
+}

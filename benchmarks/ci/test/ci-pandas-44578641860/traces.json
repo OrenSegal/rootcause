@@ -1,0 +1,292 @@
+[
+  {
+    "span_id": "run-44578641860",
+    "trace_id": "run-44578641860",
+    "parent_id": null,
+    "service": "code-checks",
+    "name": "Code Checks",
+    "start": "2026-11-19T17:34:30Z",
+    "duration_ms": 1603000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-135752921713",
+    "trace_id": "run-44578641860",
+    "parent_id": "run-44578641860",
+    "service": "asv-benchmarks",
+    "name": "ASV Benchmarks",
+    "start": "2026-11-19T17:34:33Z",
+    "duration_ms": 1599000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135752921713-step-1",
+    "trace_id": "run-44578641860",
+    "parent_id": "job-135752921713",
+    "service": "asv-benchmarks",
+    "name": "Set up job",
+    "start": "2026-11-19T17:34:34Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135752921713-step-2",
+    "trace_id": "run-44578641860",
+    "parent_id": "job-135752921713",
+    "service": "asv-benchmarks",
+    "name": "Checkout",
+    "start": "2026-11-19T17:34:36Z",
+    "duration_ms": 25000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135752921713-step-3",
+    "trace_id": "run-44578641860",
+    "parent_id": "job-135752921713",
+    "service": "asv-benchmarks",
+    "name": "Create virtual environment with Pixi",
+    "start": "2026-11-19T17:35:01Z",
+    "duration_ms": 13000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135752921713-step-4",
+    "trace_id": "run-44578641860",
+    "parent_id": "job-135752921713",
+    "service": "asv-benchmarks",
+    "name": "Build pandas",
+    "start": "2026-11-19T17:35:14Z",
+    "duration_ms": 162000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135752921713-step-5",
+    "trace_id": "run-44578641860",
+    "parent_id": "job-135752921713",
+    "service": "asv-benchmarks",
+    "name": "Run ASV benchmarks",
+    "start": "2026-11-19T17:37:56Z",
+    "duration_ms": 1394000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135752921713-step-9",
+    "trace_id": "run-44578641860",
+    "parent_id": "job-135752921713",
+    "service": "asv-benchmarks",
+    "name": "Post Create virtual environment with Pixi",
+    "start": "2026-11-19T18:01:10Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135752921713-step-10",
+    "trace_id": "run-44578641860",
+    "parent_id": "job-135752921713",
+    "service": "asv-benchmarks",
+    "name": "Post Checkout",
+    "start": "2026-11-19T18:01:10Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135752921713-step-11",
+    "trace_id": "run-44578641860",
+    "parent_id": "job-135752921713",
+    "service": "asv-benchmarks",
+    "name": "Complete job",
+    "start": "2026-11-19T18:01:11Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135752922187",
+    "trace_id": "run-44578641860",
+    "parent_id": "run-44578641860",
+    "service": "doctests",
+    "name": "Doctests",
+    "start": "2026-11-19T17:34:34Z",
+    "duration_ms": 225000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135752922187-step-1",
+    "trace_id": "run-44578641860",
+    "parent_id": "job-135752922187",
+    "service": "doctests",
+    "name": "Set up job",
+    "start": "2026-11-19T17:34:34Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135752922187-step-2",
+    "trace_id": "run-44578641860",
+    "parent_id": "job-135752922187",
+    "service": "doctests",
+    "name": "Checkout",
+    "start": "2026-11-19T17:34:36Z",
+    "duration_ms": 25000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135752922187-step-3",
+    "trace_id": "run-44578641860",
+    "parent_id": "job-135752922187",
+    "service": "doctests",
+    "name": "Create virtual environment with Pixi",
+    "start": "2026-11-19T17:35:01Z",
+    "duration_ms": 20000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135752922187-step-4",
+    "trace_id": "run-44578641860",
+    "parent_id": "job-135752922187",
+    "service": "doctests",
+    "name": "Build pandas",
+    "start": "2026-11-19T17:35:21Z",
+    "duration_ms": 156000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135752922187-step-5",
+    "trace_id": "run-44578641860",
+    "parent_id": "job-135752922187",
+    "service": "doctests",
+    "name": "Run doctests",
+    "start": "2026-11-19T17:37:57Z",
+    "duration_ms": 15000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135752922187-step-6",
+    "trace_id": "run-44578641860",
+    "parent_id": "job-135752922187",
+    "service": "doctests",
+    "name": "Run scripts tests",
+    "start": "2026-11-19T17:38:12Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135752922187-step-11",
+    "trace_id": "run-44578641860",
+    "parent_id": "job-135752922187",
+    "service": "doctests",
+    "name": "Post Create virtual environment with Pixi",
+    "start": "2026-11-19T17:38:16Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135752922187-step-12",
+    "trace_id": "run-44578641860",
+    "parent_id": "job-135752922187",
+    "service": "doctests",
+    "name": "Post Checkout",
+    "start": "2026-11-19T17:38:16Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135752922187-step-13",
+    "trace_id": "run-44578641860",
+    "parent_id": "job-135752922187",
+    "service": "doctests",
+    "name": "Complete job",
+    "start": "2026-11-19T17:38:16Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135752922231",
+    "trace_id": "run-44578641860",
+    "parent_id": "run-44578641860",
+    "service": "type-checking",
+    "name": "Type Checking",
+    "start": "2026-11-19T17:34:33Z",
+    "duration_ms": 313000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-135752922231-step-1",
+    "trace_id": "run-44578641860",
+    "parent_id": "job-135752922231",
+    "service": "type-checking",
+    "name": "Set up job",
+    "start": "2026-11-19T17:34:34Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135752922231-step-2",
+    "trace_id": "run-44578641860",
+    "parent_id": "job-135752922231",
+    "service": "type-checking",
+    "name": "Checkout",
+    "start": "2026-11-19T17:34:36Z",
+    "duration_ms": 22000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135752922231-step-3",
+    "trace_id": "run-44578641860",
+    "parent_id": "job-135752922231",
+    "service": "type-checking",
+    "name": "Create virtual environment with Pixi",
+    "start": "2026-11-19T17:34:58Z",
+    "duration_ms": 14000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135752922231-step-4",
+    "trace_id": "run-44578641860",
+    "parent_id": "job-135752922231",
+    "service": "type-checking",
+    "name": "Build pandas",
+    "start": "2026-11-19T17:35:12Z",
+    "duration_ms": 160000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135752922231-step-5",
+    "trace_id": "run-44578641860",
+    "parent_id": "job-135752922231",
+    "service": "type-checking",
+    "name": "Typing Checks",
+    "start": "2026-11-19T17:37:52Z",
+    "duration_ms": 113000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-135752922231-step-9",
+    "trace_id": "run-44578641860",
+    "parent_id": "job-135752922231",
+    "service": "type-checking",
+    "name": "Post Create virtual environment with Pixi",
+    "start": "2026-11-19T17:39:45Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135752922231-step-10",
+    "trace_id": "run-44578641860",
+    "parent_id": "job-135752922231",
+    "service": "type-checking",
+    "name": "Post Checkout",
+    "start": "2026-11-19T17:39:45Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135752922231-step-11",
+    "trace_id": "run-44578641860",
+    "parent_id": "job-135752922231",
+    "service": "type-checking",
+    "name": "Complete job",
+    "start": "2026-11-19T17:39:45Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

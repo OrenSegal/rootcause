@@ -1,0 +1,122 @@
+[
+  {
+    "span_id": "run-35077114029",
+    "trace_id": "run-35077114029",
+    "parent_id": null,
+    "service": "pre-commit",
+    "name": "pre-commit",
+    "start": "2026-09-16T09:02:19Z",
+    "duration_ms": 34000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-104732045603",
+    "trace_id": "run-35077114029",
+    "parent_id": "run-35077114029",
+    "service": "main",
+    "name": "main",
+    "start": "2026-09-16T09:02:22Z",
+    "duration_ms": 31000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-104732045603-step-1",
+    "trace_id": "run-35077114029",
+    "parent_id": "job-104732045603",
+    "service": "main",
+    "name": "Set up job",
+    "start": "2026-09-16T09:02:22Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-104732045603-step-2",
+    "trace_id": "run-35077114029",
+    "parent_id": "job-104732045603",
+    "service": "main",
+    "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+    "start": "2026-09-16T09:02:26Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-104732045603-step-3",
+    "trace_id": "run-35077114029",
+    "parent_id": "job-104732045603",
+    "service": "main",
+    "name": "Run astral-sh/setup-uv@f0ec1fc3b38f5e7cd731bb6ce540c5af426746bb",
+    "start": "2026-09-16T09:02:27Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-104732045603-step-4",
+    "trace_id": "run-35077114029",
+    "parent_id": "job-104732045603",
+    "service": "main",
+    "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+    "start": "2026-09-16T09:02:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-104732045603-step-5",
+    "trace_id": "run-35077114029",
+    "parent_id": "job-104732045603",
+    "service": "main",
+    "name": "Run actions/cache@5a3ec84eff668545956fd18022155c47e93e2684",
+    "start": "2026-09-16T09:02:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-104732045603-step-6",
+    "trace_id": "run-35077114029",
+    "parent_id": "job-104732045603",
+    "service": "main",
+    "name": "Run uv run --locked --group pre-commit pre-commit run --show-diff-on-failure --color=always --all-files",
+    "start": "2026-09-16T09:02:29Z",
+    "duration_ms": 17000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-104732045603-step-7",
+    "trace_id": "run-35077114029",
+    "parent_id": "job-104732045603",
+    "service": "main",
+    "name": "Run pre-commit-ci/lite-action@5d6cc0eb514c891a40562a58a8e71576c5c7fb43",
+    "start": "2026-09-16T09:02:46Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-104732045603-step-10",
+    "trace_id": "run-35077114029",
+    "parent_id": "job-104732045603",
+    "service": "main",
+    "name": "Post Run pre-commit-ci/lite-action@5d6cc0eb514c891a40562a58a8e71576c5c7fb43",
+    "start": "2026-09-16T09:02:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-104732045603-step-14",
+    "trace_id": "run-35077114029",
+    "parent_id": "job-104732045603",
+    "service": "main",
+    "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+    "start": "2026-09-16T09:02:51Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-104732045603-step-15",
+    "trace_id": "run-35077114029",
+    "parent_id": "job-104732045603",
+    "service": "main",
+    "name": "Complete job",
+    "start": "2026-09-16T09:02:51Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

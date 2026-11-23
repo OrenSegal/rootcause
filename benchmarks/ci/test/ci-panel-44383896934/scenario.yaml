@@ -1,0 +1,14 @@
+id: ci-panel-44383896934
+title: 'fix: Resolve relative resource urls against the route a session is on'
+alert:
+  severity: ci
+  service: run-pre-commit
+  summary: 'workflow tests failed on fix/nested-route-resources at 5276946581: step ''Run
+    holoviz-dev/holoviz_tasks/pre-commit@11eb638302f76ec64217e2eeddfb11df1f788b54'' in job
+    ''Run pre-commit'' failed.'
+truth:
+  category: bad_code_deploy
+  service: panel
+  required_evidence_any:
+  - '5276946581'
+provenance: recorded

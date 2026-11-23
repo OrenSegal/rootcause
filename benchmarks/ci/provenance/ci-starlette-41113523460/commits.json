@@ -1,0 +1,26 @@
+[
+  {
+    "author": "Eronii",
+    "committedDate": "2026-10-30T19:13:41Z",
+    "messageHeadline": "feat: add url_path_for to HTTPConnection and Jinja2Templates (#843)",
+    "oid": "7acdf700fb8b4050151c025b7fdd98c95f808dee",
+    "files": [
+      {
+        "filename": "starlette/requests.py",
+        "status": "modified"
+      },
+      {
+        "filename": "starlette/templating.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_requests.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_templates.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

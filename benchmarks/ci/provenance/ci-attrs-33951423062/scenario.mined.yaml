@@ -1,0 +1,17 @@
+# Mined from https://github.com/python-attrs/attrs/actions/runs/33951423062 (python-
+# attrs/attrs, licence MIT). Fixed by run https://github.com/python-
+# attrs/attrs/actions/runs/33952800626. Label rule: the fix changed files exactly one
+# tested commit touched. Fix touched: src/attr/_make.py, tests/test_annotations.py.
+id: ci-attrs-33951423062
+title: Resolve forward references in generated init annotations
+alert:
+  severity: ci
+  service: run-linters
+  summary: 'workflow CI failed on codex/attrs-1596 at a636abe97f: step ''Run uv run --only-group
+    tox tox run -f lint'' in job ''Run linters'' failed.'
+truth:
+  category: bad_code_deploy
+  service: attrs
+  required_evidence_any:
+  - a636abe97f
+provenance: recorded
