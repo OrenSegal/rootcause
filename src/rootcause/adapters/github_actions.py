@@ -137,6 +137,7 @@ class GhCli:
         )
 
     def _commits(self, repo: str, run: dict[str, Any]) -> list[dict[str, Any]]:
+        prs: list[dict[str, Any]] = []
         if run["event"] == "pull_request":
             prs = json.loads(
                 self.gh(
@@ -150,14 +151,18 @@ class GhCli:
                         "--state",
                         "all",
                         "--json",
-                        "number",
+                        "number,headRefOid",
                     ]
                 )
             )
+        if prs:
+            # Forks can share a branch name: prefer the pull request at the tested commit.
+            pr = next((p for p in prs if p.get("headRefOid") == run["headSha"]), prs[0])
             listed = json.loads(
-                self.gh(["pr", "view", str(prs[0]["number"]), "--repo", repo, "--json", "commits"])
+                self.gh(["pr", "view", str(pr["number"]), "--repo", repo, "--json", "commits"])
             )["commits"]
         else:
+            # A push, or a pull request gh can't find: the tested commit is the only suspect.
             listed: list[dict[str, Any]] = [
                 {
                     "oid": run["headSha"],

@@ -2,6 +2,7 @@
 
 import asyncio
 import os
+from importlib import metadata
 from pathlib import Path
 from typing import Annotated
 
@@ -11,6 +12,7 @@ from rootcause.application.diff import compare as compare_results
 from rootcause.application.diff import diff_markdown, restrict
 from rootcause.application.evals import comparison_markdown
 from rootcause.application.lints import lint_markdown
+from rootcause.application.triage import failed_jobs, failed_steps, rule_of
 from rootcause.composition import (
     CORPUS,
     EffortLevel,
@@ -41,7 +43,7 @@ from rootcause.composition import (
     write_sweep_report,
 )
 from rootcause.domain.answers import Diagnosis, Outcome
-from rootcause.domain.scenario import TruthClass
+from rootcause.domain.scenario import Case, TruthClass, category_class
 
 app = typer.Typer(no_args_is_help=True, add_completion=False)
 
@@ -351,28 +353,80 @@ def ci_triage_cmd(
     result = asyncio.run(
         triage_ci(case, llm, events=open_events(runlog), budget_usd=budget_usd, mode=mode)
     )
-    body = ci_comment(result.answer, provider=llm.name, outcome=result.outcome)
+    body = ci_comment(case, result.answer, provider=llm.name, outcome=result.outcome)
     typer.echo(body)
     if comment_md:
         comment_md.write_text(body)
     raise typer.Exit(EXIT_CODES[result.outcome])
 
 
-def ci_comment(d: Diagnosis | None, *, provider: str, outcome: Outcome) -> str:
-    lines = ["### rootcause: likely cause of this CI failure", ""]
+CI_HEADING = "### CI failure triage"
+NO_RULE_FIRED = "No rule fired; this needs a person or a model."
+MAX_LOG_LINES = 5
+MAX_LINE_CHARS = 240
+
+
+def _plain(text: str) -> str:
+    """Text from a log, a commit or a model, made safe for a PR comment: it can't close a
+    code span or mention anyone. On a fork's pull request all of it is untrusted."""
+    return text.replace("`", "'").replace("@", "@​")
+
+
+def _version() -> str:
+    try:
+        return metadata.version("rootcause-agent")
+    except metadata.PackageNotFoundError:
+        return "dev"
+
+
+def _what_failed(case: Case) -> str:
+    spans = case.store.spans
+    failed = failed_jobs(spans)
+    if not failed:
+        return _plain(case.scenario.alert.summary)
+    names = [f"`{_plain(j.name)}`" for j in failed[:3]]
+    more = f" and {len(failed) - 3} more" if len(failed) > 3 else ""
+    steps = failed_steps(spans, failed[0])
+    at = f" at step `{_plain(steps[0])}`" if steps and len(failed) == 1 else ""
+    if len(names) == 1:
+        return f"Job {names[0]} failed{at}."
+    listed = f"{', '.join(names[:-1])} and {names[-1]}" if not more else ", ".join(names)
+    return f"Jobs {listed}{more} failed."
+
+
+def ci_comment(case: Case, d: Diagnosis | None, *, provider: str, outcome: Outcome) -> str:
+    """Two or three plain sentences: what failed, whether the change under test caused
+    it and which commit, then the log lines behind it, and a one-line footer."""
+    rule = rule_of(d.summary) if d is not None else None
+    lines = [CI_HEADING, ""]
     if d is None:
-        lines.append(f"No diagnosis ({outcome}).")
+        why = NO_RULE_FIRED if provider == "rules" else f"No diagnosis ({outcome})."
+        lines.append(f"{_what_failed(case)} {why}")
     else:
-        lines += [
-            f"**{d.category}** in `{d.service}` (confidence {d.confidence:.2f})",
-            "",
-            d.summary,
-            "",
-            f"Evidence: {', '.join(f'`{e}`' for e in d.evidence)}",
-            "",
-            f"Suggested next step: {d.recommended_action}",
-        ]
-    lines += ["", f"<sub>Investigated by {provider}. Review before acting.</sub>"]
+        reason = (d.summary.removeprefix(f"rule {rule}: ") if rule else d.summary).strip()
+        reason = _plain(reason[:1].upper() + reason[1:]).rstrip(".")
+        deploys = {dep.id: dep for dep in case.store.deploys}
+        commits = [deploys[e] for e in d.evidence if e in deploys]
+        if category_class(d.category) == "change":
+            verdict = "The change under test likely caused it"
+            if commits:
+                c = commits[0]
+                verdict += f": commit `{c.id}` ({_plain(c.summary)})"
+        else:
+            verdict = "The change under test likely did not cause it"
+        lines.append(f"{_what_failed(case)} {verdict}. {reason}.")
+        logs = {line.id: line for line in case.store.logs}
+        cited = [logs[e] for e in d.evidence if e in logs][:MAX_LOG_LINES]
+        if cited:
+            lines += ["", "The log lines behind it:", "", "```text"]
+            lines += [f"{_plain(line.message)[:MAX_LINE_CHARS]}" for line in cited]
+            lines.append("```")
+    by = f"{provider} provider" + (f", rule {rule}" if rule else "")
+    if d is None:
+        by += ", no rule fired" if provider == "rules" else ""
+    else:
+        by += ". Review before acting"
+    lines += ["", f"<sub>rootcause {_version()}, {by}.</sub>"]
     return "\n".join(lines) + "\n"
 
 

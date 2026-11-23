@@ -113,6 +113,25 @@ async def test_recorder_uses_only_read_only_gh_calls(tmp_path: Path):
     assert all("--method" not in a and "-X" not in a for a in issued)
 
 
+def test_a_pull_request_gh_cannot_find_leaves_the_tested_commit_as_the_suspect():
+    """`gh pr list --head` finds nothing for some fork branches; that is not a crash."""
+    recorded = RECORDED / "raw"
+    run = json.loads((recorded / "run.json").read_text())
+
+    def fake_gh(args: list[str]) -> str:
+        if args[:2] == ["run", "view"]:
+            return "" if "--log-failed" in args else json.dumps(run)
+        if args[:2] == ["pr", "list"]:
+            return "[]"
+        if args[0] == "api":
+            return json.dumps([{"status": "modified", "filename": "bin/sous"}])
+        raise AssertionError(args)
+
+    raw = GhCli(runner=fake_gh).fetch("OrenSegal/sous", 36960431348)
+    assert [c["oid"] for c in raw.commits] == [run["headSha"]]
+    assert [d.files for d in case_from_raw(raw).store.deploys] == [["bin/sous"]]
+
+
 async def test_triage_runs_an_investigation_without_ground_truth(raw):
     run = await triage_ci(
         case_from_raw(raw), HeuristicProvider(), events=SqliteEventLog(), budget_usd=1.0

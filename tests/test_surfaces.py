@@ -104,8 +104,55 @@ def test_ci_triage_from_recorded_raw_writes_a_pr_comment(tmp_path):
     )  # fmt: skip
     assert out.exit_code == 0, out.output
     text = comment.read_text()
-    assert text.startswith("### rootcause: likely cause of this CI failure")
-    assert "4870121d6d" in text and "heuristic" in text
+    assert text.startswith("### CI failure triage")
+    assert "4870121d6d" in text and "heuristic provider" in text
+
+
+def _triage(raw, tmp_path, *extra: str):
+    comment = tmp_path / "comment.md"
+    out = runner.invoke(
+        app,
+        [
+            "ci-triage", "--raw", str(raw), "--provider", "rules",
+            "--comment-md", str(comment), "--runlog", str(tmp_path / "r.sqlite"), *extra,
+        ],
+    )  # fmt: skip
+    return out, comment.read_text()
+
+
+def test_ci_triage_rules_abstain_plainly_when_no_rule_fires(tmp_path):
+    """The recorded 008 log has no failure line that names a changed file, and no
+    environment error, so no rule fires. The verdict says so instead of guessing."""
+    out, text = _triage(SCENARIOS / "008-sous-shellcheck" / "raw", tmp_path)
+    assert out.exit_code == 2, out.output
+    assert "Job `test (ubuntu-latest)` failed at step `shellcheck`." in text
+    assert "No rule fired; this needs a person or a model." in text
+    assert "rules provider, no rule fired" in text
+    assert "caused it" not in text and "4870121d6d" not in text
+
+
+def test_ci_triage_rules_name_the_commit_and_the_log_lines(tmp_path):
+    """A live-shaped run through `--raw`: the recorded 008 run and commits, with a
+    synthetic failed log whose error line names a file only commit 4870121d6d changed.
+    The line also carries a code fence and a mention, which must not reach a comment
+    intact."""
+    recorded = SCENARIOS / "008-sous-shellcheck" / "raw"
+    raw = tmp_path / "raw"
+    raw.mkdir()
+    for name in ("run.json", "commits.json"):
+        (raw / name).write_text((recorded / name).read_text())
+    line = "tests/gate.test.sh:51: error: green breaks ``` @octocat"
+    (raw / "failed.log").write_text(
+        f"test (ubuntu-latest)\tshellcheck\t2026-10-02T03:30:08.0225201Z {line}\n"
+    )
+    out, text = _triage(raw, tmp_path)
+    assert out.exit_code == 0, out.output
+    sentences, _, rest = text.partition("The log lines behind it:")
+    assert "The change under test likely caused it: commit `4870121d6d`" in sentences
+    assert "tests/gate.test.sh:51: error" in rest
+    assert "```" not in rest.split("```text", 1)[1].rsplit("```", 1)[0]
+    assert "@octocat" not in text
+    assert "rules provider, rule one_commit_named" in text
 
 
 def test_ci_triage_needs_a_run_or_raw_input(tmp_path):
