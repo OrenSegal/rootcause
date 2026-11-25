@@ -1,0 +1,16 @@
+[
+  {
+    "id": "129123633f",
+    "service": "sphinx",
+    "version": "129123633f",
+    "ts": "2026-10-28T18:23:22Z",
+    "author": "jdillard",
+    "summary": "Avoid duplicate-label warnings during incremental parallel builds",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "sphinx/domains/std/__init__.py",
+      "tests/test_domains/test_domain_std.py"
+    ]
+  }
+]

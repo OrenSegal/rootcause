@@ -1,0 +1,15 @@
+id: ci-multidict-37614237594
+title: Store CIMultiDict keys as istr eagerly
+alert:
+  severity: ci
+  service: build-wheels-for-other-platforms-build-wheels-on-windows-latest
+  summary: "workflow CI/CD failed on claude/eager-ci-key-evaluation-d805b4 at a3bf2e93c0:\
+    \ step 'Build wheels' in job '\U0001F4E6 Build wheels for other platforms / Build  wheels\
+    \ on windows-latest' failed."
+truth:
+  grading: class
+  category: bad_code_deploy
+  service: multidict
+  required_evidence_any:
+  - a3bf2e93c0
+provenance: recorded

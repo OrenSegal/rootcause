@@ -1,0 +1,17 @@
+# Mined from https://github.com/dask/dask/actions/runs/44742477660 (dask/dask, licence
+# BSD-3-Clause). Fixed by run https://github.com/dask/dask/actions/runs/44743600618.
+# Label rule: the fix changed files exactly one tested commit touched. Fix touched:
+# dask/array/slicing.py.
+id: ci-dask-44742477660
+title: '[unsupervised AI] Fix array assignment graph dependencies'
+alert:
+  severity: ci
+  service: pre-commit-hooks
+  summary: 'workflow Linting failed on oss/dask-9415-setitem-graph at f993a0ff6b: step ''Run
+    pre-commit/action@v3.0.1'' in job ''pre-commit hooks'' failed.'
+truth:
+  category: bad_code_deploy
+  service: dask
+  required_evidence_any:
+  - f993a0ff6b
+provenance: recorded

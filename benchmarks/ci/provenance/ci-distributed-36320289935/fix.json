@@ -1,0 +1,12 @@
+{
+  "fixed_run": "https://github.com/dask/distributed/actions/runs/36371684976",
+  "fixed_sha": "3daa9dde2a7b68d6089c6374ea47f9c037dc87d6",
+  "commits": [
+    "3daa9dde2a7b68d6089c6374ea47f9c037dc87d6"
+  ],
+  "files": [
+    "distributed/diagnostics/tests/test_scheduler_plugin.py"
+  ],
+  "merges": [],
+  "status": "ahead"
+}

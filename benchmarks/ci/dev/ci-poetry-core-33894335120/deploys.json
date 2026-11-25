@@ -1,0 +1,16 @@
+[
+  {
+    "id": "fb7b595c10",
+    "service": "poetry-core",
+    "version": "fb7b595c10",
+    "ts": "2026-09-04T16:17:40Z",
+    "author": "oda",
+    "summary": "fix: str() of a range whose upper bound is all zeros raised IndexError",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "src/poetry/core/constraints/version/version_constraint.py",
+      "tests/constraints/version/test_version_range.py"
+    ]
+  }
+]

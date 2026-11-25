@@ -1,0 +1,18 @@
+# Mined from https://github.com/pallets/click/actions/runs/33496785933 (pallets/click,
+# licence BSD-3-Clause). Fixed by run
+# https://github.com/pallets/click/actions/runs/33503178404. Label rule: the failed log
+# shows an environment error: 'eNotFound'. Fix touched:
+# tests/test_utils/test_open_file.py.
+id: ci-click-33496785933
+title: '[rejected AI] atomic open_file: set mode via fchmod and close fd on failure (#3824)'
+alert:
+  severity: ci
+  service: windows
+  summary: 'workflow Tests failed on fix/atomic-open-file-fchmod at 0891cde540: step ''Run
+    uv run --locked --no-default-groups --group dev tox run'' in job ''Windows'' failed.'
+truth:
+  category: infrastructure
+  service: click
+  required_evidence_any:
+  - log-0242
+provenance: recorded

@@ -1,0 +1,16 @@
+{
+  "fixed_run": "https://github.com/numpy/numpy/actions/runs/44970609288",
+  "fixed_sha": "f8751be907320dfd9bf78a5d786fbaf7a58fd959",
+  "commits": [
+    "f8751be907320dfd9bf78a5d786fbaf7a58fd959"
+  ],
+  "files": [
+    "numpy/_core/src/common/npy_float_to_int.h",
+    "numpy/_core/src/multiarray/common.h",
+    "numpy/_core/src/multiarray/ctors.c",
+    "numpy/_core/src/multiarray/datetime.c",
+    "numpy/_core/src/multiarray/lowlevel_strided_loops.c.src",
+    "numpy/_core/src/umath/loops.c.src"
+  ],
+  "status": "ahead"
+}

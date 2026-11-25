@@ -1,0 +1,22 @@
+[
+  {
+    "author": "ferly7",
+    "committedDate": "2026-11-18T13:47:11Z",
+    "messageHeadline": "Support bytes values in HTTPHeaderDict",
+    "oid": "366010bc6129d01133a85ea5b8df6534305215db",
+    "files": [
+      {
+        "filename": "changelog/3072.bugfix.rst",
+        "status": "added"
+      },
+      {
+        "filename": "src/urllib3/_collections.py",
+        "status": "modified"
+      },
+      {
+        "filename": "test/test_collections.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

@@ -1,0 +1,15 @@
+id: ci-pip-tools-38342388980
+title: Remove support for Python 3.9
+alert:
+  severity: ci
+  service: macos-15-intel-3-11-lowest
+  summary: 'workflow CI failed on drop-py39 at 9cad2748ce: step ''Upload coverage to Codecov''
+    in job ''macos-15-intel / 3.11 / lowest'' failed.'
+truth:
+  grading: class
+  category: infrastructure
+  service: pip-tools
+  required_evidence_any:
+  - log-1871
+  - log-1989
+provenance: recorded

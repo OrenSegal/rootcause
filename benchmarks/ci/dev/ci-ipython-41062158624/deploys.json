@@ -1,0 +1,17 @@
+[
+  {
+    "id": "6fdda9f958",
+    "service": "ipython",
+    "version": "6fdda9f958",
+    "ts": "2026-10-29T12:46:16Z",
+    "author": "jenshnielsen",
+    "summary": "Close cells the pseudo-sync runner cannot finish",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "IPython/core/async_helpers.py",
+      "IPython/core/interactiveshell.py",
+      "tests/test_interactiveshell.py"
+    ]
+  }
+]

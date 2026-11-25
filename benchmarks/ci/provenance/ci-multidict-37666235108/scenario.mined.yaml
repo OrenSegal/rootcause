@@ -1,0 +1,18 @@
+# Mined from https://github.com/aio-libs/multidict/actions/runs/37666235108 (aio-
+# libs/multidict, licence Apache-2.0). Fixed by run https://github.com/aio-
+# libs/multidict/actions/runs/37671246560. Label rule: the fix changed files exactly one
+# tested commit touched. Fix touched: CHANGES/1742.misc.rst,
+# multidict/_multilib/hashtable.h.
+id: ci-multidict-37666235108
+title: Rewrite md_repr() on top of md_walk_all()
+alert:
+  severity: ci
+  service: inlining
+  summary: 'workflow CI/CD failed on claude/md-repr-md-walk-all-bd3f0d at 862acaf16a: step
+    ''Check that the hot paths keep their helpers inlined'' in job ''Inlining'' failed.'
+truth:
+  category: bad_code_deploy
+  service: multidict
+  required_evidence_any:
+  - 862acaf16a
+provenance: recorded

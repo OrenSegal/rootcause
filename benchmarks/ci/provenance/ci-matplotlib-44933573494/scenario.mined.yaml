@@ -1,0 +1,18 @@
+# Mined from https://github.com/matplotlib/matplotlib/actions/runs/44933573494
+# (matplotlib/matplotlib, licence none). Fixed by run
+# https://github.com/matplotlib/matplotlib/actions/runs/44934344521. Label rule: the fix
+# changed files exactly one tested commit touched. Fix touched:
+# lib/matplotlib/tests/test_axes.py.
+id: ci-matplotlib-44933573494
+title: Fix boxplot with empty data and tick labels
+alert:
+  severity: ci
+  service: ruff
+  summary: 'workflow Linting failed on fix-empty-boxplot-tick-labels at 28278aff69: step ''Run
+    ruff'' in job ''ruff'' failed.'
+truth:
+  category: bad_code_deploy
+  service: matplotlib
+  required_evidence_any:
+  - 28278aff69
+provenance: recorded

@@ -1,0 +1,14 @@
+[
+  {
+    "author": "dependabot[bot]",
+    "committedDate": "2026-10-20T21:02:27Z",
+    "messageHeadline": "build(deps): bump certifi from 2026.7.22 to 2026.10.19",
+    "oid": "9c9fa3c1317cc4328571497e5c5879801111d8ce",
+    "files": [
+      {
+        "filename": "requirements.txt",
+        "status": "modified"
+      }
+    ]
+  }
+]

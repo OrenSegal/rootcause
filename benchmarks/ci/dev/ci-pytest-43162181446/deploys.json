@@ -1,0 +1,19 @@
+[
+  {
+    "id": "8a95e68427",
+    "service": "pytest",
+    "version": "8a95e68427",
+    "ts": "2026-11-12T05:31:35Z",
+    "author": "gaborbernat",
+    "summary": "\u2728 feat(fixtures): export SubRequest",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "changelog/7469.improvement.rst",
+      "doc/en/conf.py",
+      "doc/en/reference/reference.rst",
+      "src/pytest/__init__.py",
+      "testing/python/fixtures.py"
+    ]
+  }
+]

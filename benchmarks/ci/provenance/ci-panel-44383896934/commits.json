@@ -1,0 +1,34 @@
+[
+  {
+    "author": "philippjfr",
+    "committedDate": "2026-11-18T19:43:54Z",
+    "messageHeadline": "fix: Resolve relative resource urls against the route a session is on",
+    "oid": "52769465812503f635b39f7714b2e2cfe789f672",
+    "files": [
+      {
+        "filename": "panel/io/location.py",
+        "status": "modified"
+      },
+      {
+        "filename": "panel/tests/conftest.py",
+        "status": "modified"
+      },
+      {
+        "filename": "panel/tests/ui/io/assets/design.css",
+        "status": "added"
+      },
+      {
+        "filename": "panel/tests/ui/io/test_location.py",
+        "status": "modified"
+      },
+      {
+        "filename": "panel/tests/ui/io/test_resources.py",
+        "status": "modified"
+      },
+      {
+        "filename": "panel/theme/base.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

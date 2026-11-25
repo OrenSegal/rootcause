@@ -1,0 +1,17 @@
+[
+  {
+    "id": "2751a66ea8",
+    "service": "attrs",
+    "version": "2751a66ea8",
+    "ts": "2026-10-03T01:12:24Z",
+    "author": "Samuel-Hills",
+    "summary": "fix: preserve explicitly declared slots",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "changelog.d/1637.change.md",
+      "src/attr/_make.py",
+      "tests/test_slots.py"
+    ]
+  }
+]

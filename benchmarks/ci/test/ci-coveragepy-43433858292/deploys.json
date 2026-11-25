@@ -1,0 +1,16 @@
+[
+  {
+    "id": "f059db2da6",
+    "service": "coveragepy",
+    "version": "f059db2da6",
+    "ts": "2026-11-13T13:27:19Z",
+    "author": "imsurya26",
+    "summary": "Fix json: filter contexts by region statements when show_contexts is enabled (fixes #2374)",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "coverage/jsonreport.py",
+      "tests/test_json.py"
+    ]
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "author": "tiangolo",
+    "committedDate": "2026-11-14T15:47:43Z",
+    "messageHeadline": "\u2728 Add dependency concurrency limits with `Depends(max_concurrency=...)`",
+    "oid": "b0608a7331107b14f429ae07dcd746491d2dff18",
+    "files": [
+      {
+        "filename": "docs/en/docs/advanced/advanced-dependencies.md",
+        "status": "modified"
+      },
+      {
+        "filename": "fastapi/concurrency.py",
+        "status": "modified"
+      },
+      {
+        "filename": "fastapi/dependencies/models.py",
+        "status": "modified"
+      },
+      {
+        "filename": "fastapi/dependencies/utils.py",
+        "status": "modified"
+      },
+      {
+        "filename": "fastapi/param_functions.py",
+        "status": "modified"
+      },
+      {
+        "filename": "fastapi/params.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_dependency_concurrency.py",
+        "status": "added"
+      }
+    ]
+  }
+]

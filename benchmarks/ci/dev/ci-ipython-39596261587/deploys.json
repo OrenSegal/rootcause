@@ -1,0 +1,15 @@
+[
+  {
+    "id": "94c7262ef2",
+    "service": "ipython",
+    "version": "94c7262ef2",
+    "ts": "2026-10-21T12:00:49Z",
+    "author": "Carreau",
+    "summary": "Apply suggestion from @Carreau",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "IPython/core/magics/execution.py"
+    ]
+  }
+]

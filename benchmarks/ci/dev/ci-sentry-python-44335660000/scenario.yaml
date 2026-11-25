@@ -1,0 +1,17 @@
+id: ci-sentry-python-44335660000
+title: 'feat(anthropic): Set gen_ai.usage.output_tokens.reasoning attributes for streaming
+  responses'
+alert:
+  severity: ci
+  service: dbs-dbs-3-6-ubuntu-22-04
+  summary: 'workflow Test failed on srothh/anthropic-output-tokens-reasoning-streaming at
+    a5bf844543: step ''Test redis_py_cluster_legacy'' in job ''DBs / DBs (3.6, ubuntu-22.04)''
+    failed.'
+truth:
+  grading: class
+  category: infrastructure
+  service: sentry-python
+  required_evidence_any:
+  - log-2253
+  - log-2752
+provenance: recorded

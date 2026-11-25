@@ -1,0 +1,18 @@
+# Mined from https://github.com/pypa/build/actions/runs/44219314063 (pypa/build, licence
+# MIT). Fixed by run https://github.com/pypa/build/actions/runs/44220835358. Label rule:
+# the fix changed files exactly one tested commit touched. Fix touched:
+# .github/workflows/cd.yml, .pre-commit-config.yaml, pyproject.toml,
+# tests/test_self_packaging.py.
+id: ci-build-44219314063
+title: "\U0001F477 ci(release): embed wheel SBOM"
+alert:
+  severity: ci
+  service: pytest-run-tests-ubuntu-26-04-3-11-tox
+  summary: 'workflow test failed on sbom-wheel at 720879db6a: step ''Run test suite via tox''
+    in job ''pytest / Run tests (ubuntu-26.04, 3.11, tox)'' failed.'
+truth:
+  category: bad_code_deploy
+  service: build
+  required_evidence_any:
+  - 720879db6a
+provenance: recorded

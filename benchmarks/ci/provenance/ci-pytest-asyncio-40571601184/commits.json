@@ -1,0 +1,18 @@
+[
+  {
+    "author": "voidstackloop",
+    "committedDate": "2026-10-27T18:00:57Z",
+    "messageHeadline": "fix(plugin): validate asyncio marker loop_scope with UsageError",
+    "oid": "5c58517276426145ae949e9c690d9ab7dfadc3a1",
+    "files": [
+      {
+        "filename": "pytest_asyncio/plugin.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_asyncio_mark.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "author": "GOUTHAM018-MAKER",
+    "committedDate": "2026-11-18T13:56:11Z",
+    "messageHeadline": "Fixed the cytoscape",
+    "oid": "e14db0e50efc4f6dd33db5a1e7b9f1c385b652a0",
+    "files": [
+      {
+        "filename": "networkx/readwrite/json_graph/cytoscape.py",
+        "status": "modified"
+      },
+      {
+        "filename": "networkx/readwrite/json_graph/tests/test_cytoscape.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

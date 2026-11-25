@@ -1,0 +1,26 @@
+[
+  {
+    "author": "official-burak",
+    "committedDate": "2026-08-31T11:13:46Z",
+    "messageHeadline": "The escaped test is false for undefined values.",
+    "oid": "a877bf760af0990a608f0e308604497793488564",
+    "files": [
+      {
+        "filename": "CHANGES.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "src/jinja2/tests.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_api.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_tests.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

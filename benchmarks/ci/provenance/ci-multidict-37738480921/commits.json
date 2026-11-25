@@ -1,0 +1,22 @@
+[
+  {
+    "author": "asvetlov",
+    "committedDate": "2026-10-08T06:35:12Z",
+    "messageHeadline": "Drop the extra key and value references in md_update_from_dict()",
+    "oid": "d523f7ab7d7ec38b4265af99594454285e2d6aa8",
+    "files": [
+      {
+        "filename": "CHANGES/1747.misc.rst",
+        "status": "added"
+      },
+      {
+        "filename": "multidict/_multilib/bulk_update.h",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_update.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

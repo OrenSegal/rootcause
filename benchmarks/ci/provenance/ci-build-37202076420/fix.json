@@ -1,0 +1,15 @@
+{
+  "fixed_run": "https://github.com/pypa/build/actions/runs/37205365845",
+  "fixed_sha": "18d497274558b5c3dddded0f8e750c8e59f27127",
+  "commits": [
+    "3303bd9b8827463fe752208a1725fc46dfbe3a20",
+    "b576d292c0f871f72485fdfce106db85c4ca8906",
+    "18d497274558b5c3dddded0f8e750c8e59f27127"
+  ],
+  "files": [
+    "src/build/_compat/tarfile.py",
+    "tests/test_compat_tarfile.py",
+    "tests/test_main.py"
+  ],
+  "status": "ahead"
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "b389aedb3c",
+    "service": "anyio",
+    "version": "b389aedb3c",
+    "ts": "2026-11-16T22:16:31Z",
+    "author": "Gorkem-Taha",
+    "summary": "Preserve asyncio callback messages in raised exceptions",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "changelog.d/1479.fixed.rst",
+      "src/anyio/_backends/_asyncio.py",
+      "tests/test_pytest_plugin.py"
+    ]
+  }
+]

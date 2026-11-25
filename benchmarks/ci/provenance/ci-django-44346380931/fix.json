@@ -1,0 +1,11 @@
+{
+  "fixed_run": "https://github.com/django/django/actions/runs/44364356722",
+  "fixed_sha": "0863a0b1552740d83d2736d7c32a2d6c8135b9f1",
+  "commits": [
+    "0863a0b1552740d83d2736d7c32a2d6c8135b9f1"
+  ],
+  "files": [
+    "tests/auth_tests/test_views.py"
+  ],
+  "status": "ahead"
+}

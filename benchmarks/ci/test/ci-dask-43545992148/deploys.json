@@ -1,0 +1,16 @@
+[
+  {
+    "id": "6e0d294ec7",
+    "service": "dask",
+    "version": "6e0d294ec7",
+    "ts": "2026-11-14T01:21:56Z",
+    "author": "tanmay-satija",
+    "summary": "Keep expand_dims task graphs lazy",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "dask/array/routines.py",
+      "dask/array/tests/test_routines.py"
+    ]
+  }
+]

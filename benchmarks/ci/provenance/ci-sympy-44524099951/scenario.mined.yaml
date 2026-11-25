@@ -1,0 +1,17 @@
+# Mined from https://github.com/sympy/sympy/actions/runs/44524099951 (sympy/sympy,
+# licence NOASSERTION). Fixed by run
+# https://github.com/sympy/sympy/actions/runs/44779467569. Label rule: the fix changed
+# files exactly one tested commit touched. Fix touched: sympy/printing/codeprinter.py.
+id: ci-sympy-44524099951
+title: "\U0001F916 printing: parenthesize Relational operands in code printers"
+alert:
+  severity: ci
+  service: build-docs
+  summary: 'workflow test failed on fix/codeprinter-relational-parens at 37007a4167: step
+    ''Run doc/aptinstall.sh'' in job ''Build Docs'' failed.'
+truth:
+  category: bad_code_deploy
+  service: sympy
+  required_evidence_any:
+  - 37007a4167
+provenance: recorded

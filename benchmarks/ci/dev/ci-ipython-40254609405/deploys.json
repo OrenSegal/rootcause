@@ -1,0 +1,16 @@
+[
+  {
+    "id": "82973a7f80",
+    "service": "ipython",
+    "version": "82973a7f80",
+    "ts": "2026-10-26T01:27:43Z",
+    "author": "bniladridas",
+    "summary": "Detect unmatched brackets in multi-line input (gh-13099)",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "IPython/core/inputtransformer2.py",
+      "tests/test_inputtransformer2.py"
+    ]
+  }
+]

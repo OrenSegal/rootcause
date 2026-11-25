@@ -1,0 +1,14 @@
+id: ci-pandas-44446651122
+title: 'BUG: misplaced overlay of off-period time series on a period axis (GH#18467)'
+alert:
+  severity: ci
+  service: type-checking
+  summary: 'workflow Code Checks failed on bug-18467 at 5b7cd71b3b: step ''Typing Checks''
+    in job ''Type Checking'' failed.'
+truth:
+  grading: class
+  category: bad_code_deploy
+  service: pandas
+  required_evidence_any:
+  - 5b7cd71b3b
+provenance: recorded

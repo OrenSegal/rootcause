@@ -1,0 +1,19 @@
+# Mined from https://github.com/pyca/cryptography/actions/runs/43610216850
+# (pyca/cryptography, licence NOASSERTION). Fixed by run
+# https://github.com/pyca/cryptography/actions/runs/44029014208. Label rule: the fix
+# changed files exactly one tested commit touched. Fix touched: docs/development/test-
+# vectors.rst, tests/hazmat/primitives/test_dsa.py,
+# vectors/cryptography_vectors/asymmetric/DSA/custom/nilpotent-pkcs8.pem.
+id: ci-cryptography-43610216850
+title: check traditional dsa private keys match their public key
+alert:
+  severity: ci
+  service: all-green
+  summary: 'workflow CI failed on dsa-traditional-public-key-match at a2dbabd654: step ''Combine
+    coverage and fail if it''s <100%.'' in job ''all-green'' failed.'
+truth:
+  category: bad_code_deploy
+  service: cryptography
+  required_evidence_any:
+  - a2dbabd654
+provenance: recorded

@@ -1,0 +1,11 @@
+{
+  "fixed_run": "https://github.com/sympy/sympy/actions/runs/44779467569",
+  "fixed_sha": "8ca7840585bf20a852a706445247c1cbf21a1e38",
+  "commits": [
+    "8ca7840585bf20a852a706445247c1cbf21a1e38"
+  ],
+  "files": [
+    "sympy/printing/codeprinter.py"
+  ],
+  "status": "ahead"
+}

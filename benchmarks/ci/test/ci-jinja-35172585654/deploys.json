@@ -1,0 +1,17 @@
+[
+  {
+    "id": "60ee3fe11a",
+    "service": "jinja",
+    "version": "60ee3fe11a",
+    "ts": "2026-09-17T01:57:21Z",
+    "author": "DYNOSuprovo",
+    "summary": "support arbitrary Mapping in urlencode filter",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "CHANGES.rst",
+      "src/jinja2/filters.py",
+      "tests/test_filters.py"
+    ]
+  }
+]

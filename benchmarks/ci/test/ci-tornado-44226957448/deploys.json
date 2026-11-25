@@ -1,0 +1,75 @@
+[
+  {
+    "id": "8da16cf86d",
+    "service": "tornado",
+    "version": "8da16cf86d",
+    "ts": "2026-11-07T01:46:46Z",
+    "author": "mmporong",
+    "summary": "httpserver: Accept bracketed IPv6 addresses in xheaders",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "tornado/httpserver.py",
+      "tornado/test/httpserver_test.py"
+    ]
+  },
+  {
+    "id": "a429ba30a6",
+    "service": "tornado",
+    "version": "a429ba30a6",
+    "ts": "2026-11-18T02:57:03Z",
+    "author": "mmporong",
+    "summary": "Merge remote-tracking branch 'upstream/master' into fix-xheaders-bracketed-ipv6",
+    "config_before": {
+      ".github/workflows/test.yml": "previous"
+    },
+    "config_after": {
+      ".github/workflows/test.yml": "modified in a429ba30a6"
+    },
+    "files": [
+      ".github/workflows/test.yml",
+      ".gitignore",
+      "SECURITY.md",
+      "docs/conf.py",
+      "docs/httpserver.rst",
+      "docs/index.rst",
+      "docs/releases.rst",
+      "docs/releases/v6.6.1.rst",
+      "maint/fuzz/README.md",
+      "maint/fuzz/common.py",
+      "maint/fuzz/fuzz_http_client.py",
+      "maint/fuzz/fuzz_http_server.py",
+      "maint/fuzz/fuzz_httputil.py",
+      "maint/fuzz/requirements.txt",
+      "tornado/auth.py",
+      "tornado/curl_httpclient.py",
+      "tornado/escape.py",
+      "tornado/http1connection.py",
+      "tornado/httpclient.py",
+      "tornado/httpserver.py",
+      "tornado/httputil.py",
+      "tornado/netutil.py",
+      "tornado/platform/asyncio.py",
+      "tornado/simple_httpclient.py",
+      "tornado/test/api.txt",
+      "tornado/test/asyncio_test.py",
+      "tornado/test/circlerefs_test.py",
+      "tornado/test/curl_httpclient_test.py",
+      "tornado/test/escape_test.py",
+      "tornado/test/http1connection_test.py",
+      "tornado/test/httpclient_test.py",
+      "tornado/test/httpserver_test.py",
+      "tornado/test/httputil_test.py",
+      "tornado/test/iostream_test.py",
+      "tornado/test/property_test.py",
+      "tornado/test/security_corpus_test.py",
+      "tornado/test/simple_httpclient_test.py",
+      "tornado/test/util.py",
+      "tornado/test/web_test.py",
+      "tornado/test/websocket_test.py",
+      "tornado/test/wsgi_test.py",
+      "tornado/web.py",
+      "tornado/wsgi.py"
+    ]
+  }
+]

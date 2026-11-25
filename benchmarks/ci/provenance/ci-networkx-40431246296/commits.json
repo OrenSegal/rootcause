@@ -1,0 +1,14 @@
+[
+  {
+    "author": "tacaswell",
+    "committedDate": "2026-10-27T01:12:49Z",
+    "messageHeadline": "Update GitHub Actions for the emSign CA incident",
+    "oid": "6d68381c78a292a646f698595723bf8f50716bc8",
+    "files": [
+      {
+        "filename": ".github/workflows/release.yml",
+        "status": "modified"
+      }
+    ]
+  }
+]

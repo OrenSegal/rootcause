@@ -1,0 +1,18 @@
+[
+  {
+    "author": "asvetlov",
+    "committedDate": "2026-10-08T11:38:39Z",
+    "messageHeadline": "Check for repeated keys when a dict or keyword names hold a str subclass",
+    "oid": "352e8d49d35c38008887fa60f1b6679355e23af4",
+    "files": [
+      {
+        "filename": "multidict/_multilib/bulk_update.h",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_keys_dedup.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

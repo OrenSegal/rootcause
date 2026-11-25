@@ -1,0 +1,17 @@
+# Mined from https://github.com/scrapy/scrapy/actions/runs/42716259868 (scrapy/scrapy,
+# licence BSD-3-Clause). Fixed by run
+# https://github.com/scrapy/scrapy/actions/runs/42716259868. Label rule: a rerun of the
+# same commit passed. Fix touched: nothing (rerun).
+id: ci-scrapy-42716259868
+title: Skip the empty LogStats and PeriodicLog lines on spider open
+alert:
+  severity: ci
+  service: tests-windows-3-11-9-min-extra-deps
+  summary: 'workflow CI failed on logstats-skip-first-line at 9902ebb9da: step ''Run tests''
+    in job ''tests (windows, 3.11.9, min-extra-deps)'' failed.'
+truth:
+  category: infrastructure
+  service: scrapy
+  required_evidence_any:
+  - log-0670
+provenance: recorded

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "61ecdaf534",
+    "service": "poetry",
+    "version": "61ecdaf534",
+    "ts": "2026-10-31T13:16:50Z",
+    "author": "Thanatos9404",
+    "summary": "fix(plugins): name the plugin that fails to load or activate",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "docs/plugins.md",
+      "src/poetry/plugins/plugin_manager.py",
+      "tests/console/test_application.py",
+      "tests/plugins/test_plugin_manager.py"
+    ]
+  }
+]

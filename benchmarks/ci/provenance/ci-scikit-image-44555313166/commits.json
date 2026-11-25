@@ -1,0 +1,26 @@
+[
+  {
+    "author": "matthew-brett",
+    "committedDate": "2026-11-19T15:28:17Z",
+    "messageHeadline": "Remove alternative sigma interface",
+    "oid": "99df232ff52b3098e9464989eebcb6ecb22f2d19",
+    "files": [
+      {
+        "filename": "src/_skimage2/filters/ridges.py",
+        "status": "modified"
+      },
+      {
+        "filename": "src/skimage/filters/ridges.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/skimage/filters/test_ridges.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/skimage/test_migration.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

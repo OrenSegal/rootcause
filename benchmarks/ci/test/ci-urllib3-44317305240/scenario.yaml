@@ -1,0 +1,14 @@
+id: ci-urllib3-44317305240
+title: Support bytes values in HTTPHeaderDict
+alert:
+  severity: ci
+  service: lint
+  summary: 'workflow lint failed on fix-3072-headerdict-bytes-values at 366010bc61: step ''Lint
+    code'' in job ''lint'' failed.'
+truth:
+  grading: class
+  category: bad_code_deploy
+  service: urllib3
+  required_evidence_any:
+  - 366010bc61
+provenance: recorded

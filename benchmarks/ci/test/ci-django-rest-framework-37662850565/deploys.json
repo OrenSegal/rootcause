@@ -1,0 +1,16 @@
+[
+  {
+    "id": "2832c2ed2e",
+    "service": "django-rest-framework",
+    "version": "2832c2ed2e",
+    "ts": "2026-10-07T17:39:04Z",
+    "author": "G-Glitch404",
+    "summary": "Fix custom ChoiceField mappings for model choices",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "rest_framework/serializers.py",
+      "tests/test_model_serializer.py"
+    ]
+  }
+]

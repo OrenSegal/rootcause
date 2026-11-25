@@ -1,0 +1,19 @@
+# Mined from https://github.com/pytest-dev/pytest/actions/runs/43162181446 (pytest-
+# dev/pytest, licence MIT). Fixed by run https://github.com/pytest-
+# dev/pytest/actions/runs/43162181446. Label rule: a rerun of the same commit passed.
+# Fix touched: nothing (rerun).
+id: ci-pytest-43162181446
+title: Expose SubRequest as a public type
+alert:
+  severity: ci
+  service: build-doctesting
+  summary: 'workflow test failed on feat/public-subrequest at 8a95e68427: step ''Set up Python
+    3.10'' in job ''build (doctesting)'' failed.'
+truth:
+  category: infrastructure
+  service: pytest
+  required_evidence_any:
+  - log-0469
+  - log-0470
+  - log-0537
+provenance: recorded

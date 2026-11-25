@@ -1,0 +1,14 @@
+id: ci-pytest-asyncio-44882498211
+title: Fix loop factories being ignored when asyncio marker comes from parametrization
+alert:
+  severity: ci
+  service: run-linters
+  summary: 'workflow CI failed on fix-1463-loop-factories-parametrized-markers at 3bb316de4d:
+    step ''Run pre-commit checks'' in job ''Run linters'' failed.'
+truth:
+  grading: class
+  category: bad_code_deploy
+  service: pytest-asyncio
+  required_evidence_any:
+  - 3bb316de4d
+provenance: recorded

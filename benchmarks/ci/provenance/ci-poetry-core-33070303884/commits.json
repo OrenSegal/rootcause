@@ -1,0 +1,114 @@
+[
+  {
+    "author": "github-actions[bot]",
+    "committedDate": "2026-08-01T00:46:25Z",
+    "messageHeadline": "Automated licenses list update",
+    "oid": "4caae256aec45196b0c594c9927038335f30880d",
+    "files": [
+      {
+        "filename": "src/poetry/core/spdx/data/licenses.json",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "Secrus",
+    "committedDate": "2026-08-27T12:05:58Z",
+    "messageHeadline": "Merge branch 'main' into license-autoupdate",
+    "oid": "f70075db28ed0a989e7d68fedd2c3aae13acb35e",
+    "files": [
+      {
+        "filename": ".github/workflows/update-licenses.yaml",
+        "status": "modified"
+      },
+      {
+        "filename": ".pre-commit-config.yaml",
+        "status": "modified"
+      },
+      {
+        "filename": "poetry.lock",
+        "status": "modified"
+      },
+      {
+        "filename": "pyproject.toml",
+        "status": "modified"
+      },
+      {
+        "filename": "src/poetry/core/constraints/generic/constraint.py",
+        "status": "modified"
+      },
+      {
+        "filename": "src/poetry/core/constraints/generic/parser.py",
+        "status": "modified"
+      },
+      {
+        "filename": "src/poetry/core/constraints/version/parser.py",
+        "status": "modified"
+      },
+      {
+        "filename": "src/poetry/core/constraints/version/patterns.py",
+        "status": "modified"
+      },
+      {
+        "filename": "src/poetry/core/constraints/version/version.py",
+        "status": "modified"
+      },
+      {
+        "filename": "src/poetry/core/constraints/version/version_range.py",
+        "status": "modified"
+      },
+      {
+        "filename": "src/poetry/core/constraints/version/version_union.py",
+        "status": "modified"
+      },
+      {
+        "filename": "src/poetry/core/factory.py",
+        "status": "modified"
+      },
+      {
+        "filename": "src/poetry/core/masonry/api.py",
+        "status": "modified"
+      },
+      {
+        "filename": "src/poetry/core/masonry/builders/wheel.py",
+        "status": "modified"
+      },
+      {
+        "filename": "src/poetry/core/vcs/__init__.py",
+        "status": "modified"
+      },
+      {
+        "filename": "src/poetry/core/version/markers.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/constraints/generic/test_constraint.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/constraints/version/test_version.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/constraints/version/test_version_range.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/packages/test_package.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_factory.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/testutils.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/version/test_markers.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

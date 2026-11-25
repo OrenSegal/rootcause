@@ -1,0 +1,22 @@
+[
+  {
+    "author": "jaideeppyne",
+    "committedDate": "2026-09-16T09:02:01Z",
+    "messageHeadline": "fix: do not pad slice filter when length divides evenly",
+    "oid": "63a800ac8144d45e9912e9c5f612fe14ef23bb14",
+    "files": [
+      {
+        "filename": "CHANGES.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "src/jinja2/filters.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_filters.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

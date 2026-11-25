@@ -1,0 +1,102 @@
+[
+  {
+    "author": "srothh",
+    "committedDate": "2026-11-18T12:58:36Z",
+    "messageHeadline": "feat(anthropic): Set gen_ai.usage.output_to",
+    "oid": "bcfc0e527402be08cba3b2a04f8dc47cbfa2744d",
+    "files": [
+      {
+        "filename": "sentry_sdk/integrations/anthropic.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "srothh",
+    "committedDate": "2026-11-18T13:33:44Z",
+    "messageHeadline": "test(anthropic): Add tests for output_reasoning_tokens #5802",
+    "oid": "71cf7a7eb3cfa7cc75b0de2f7532a86850787154",
+    "files": [
+      {
+        "filename": "tests/integrations/anthropic/test_anthropic.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "srothh",
+    "committedDate": "2026-11-18T13:37:23Z",
+    "messageHeadline": "ref(anthropic): Remove _RecordedUsage change from non-streaming branch",
+    "oid": "ac8ebf4a5d285347c9c6872627fa17137e48a586",
+    "files": [
+      {
+        "filename": "sentry_sdk/integrations/anthropic.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "srothh",
+    "committedDate": "2026-11-18T15:18:50Z",
+    "messageHeadline": "test(anthropic): Remove unnessecary parametrization from reasoning token test #5802",
+    "oid": "fea2b6197cb3d2e0d4aeb653228a725526e0823f",
+    "files": [
+      {
+        "filename": "tests/integrations/anthropic/test_anthropic.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "srothh",
+    "committedDate": "2026-11-18T15:19:49Z",
+    "messageHeadline": "feat(anthropic): Set output tokens for streaming responses #5802",
+    "oid": "e3eccfff4b87cbb7feec2ddda04deee6c4802e0e",
+    "files": [
+      {
+        "filename": "sentry_sdk/integrations/anthropic.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "srothh",
+    "committedDate": "2026-11-18T15:19:49Z",
+    "messageHeadline": "test(anthropic): Add tests for streaming reasoning tokens",
+    "oid": "02306295cf8a4363d4ed1778a8d3f5eee74dcfb1",
+    "files": [
+      {
+        "filename": "tests/integrations/anthropic/test_anthropic.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "srothh",
+    "committedDate": "2026-11-18T15:19:49Z",
+    "messageHeadline": "ref(anthropic): Fix ruff formatting #5802",
+    "oid": "10fafd6c73c60073d6e49e60243e85c6150d994e",
+    "files": [
+      {
+        "filename": "sentry_sdk/integrations/anthropic.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/integrations/anthropic/test_anthropic.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "srothh",
+    "committedDate": "2026-11-18T15:25:03Z",
+    "messageHeadline": "test(anthropic): Remove unnecassary test parametrization from reasoning token tests",
+    "oid": "a5bf84454353e4953bda5a0402771cb5c4cb8707",
+    "files": [
+      {
+        "filename": "tests/integrations/anthropic/test_anthropic.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

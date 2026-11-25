@@ -1,0 +1,14 @@
+[
+  {
+    "author": "bastimeyer",
+    "committedDate": "2026-10-07T16:47:41Z",
+    "messageHeadline": "build: bump pycryptodome to 3.24.0",
+    "oid": "5b4f3b26d1cc830bd0b85b1cd0527d9b56092dcc",
+    "files": [
+      {
+        "filename": "uv.lock",
+        "status": "modified"
+      }
+    ]
+  }
+]

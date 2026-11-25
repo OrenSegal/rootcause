@@ -1,0 +1,1012 @@
+[
+  {
+    "span_id": "run-33496785933",
+    "trace_id": "run-33496785933",
+    "parent_id": null,
+    "service": "tests",
+    "name": "Tests",
+    "start": "2026-09-01T10:19:02Z",
+    "duration_ms": 43000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-99820706727",
+    "trace_id": "run-33496785933",
+    "parent_id": "run-33496785933",
+    "service": "typing",
+    "name": "typing",
+    "start": "2026-09-01T10:19:05Z",
+    "duration_ms": 22000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820706727-step-1",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820706727",
+    "service": "typing",
+    "name": "Set up job",
+    "start": "2026-09-01T10:19:06Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820706727-step-2",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820706727",
+    "service": "typing",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-09-01T10:19:09Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820706727-step-3",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820706727",
+    "service": "typing",
+    "name": "Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+    "start": "2026-09-01T10:19:12Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820706727-step-4",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820706727",
+    "service": "typing",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-09-01T10:19:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820706727-step-5",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820706727",
+    "service": "typing",
+    "name": "cache mypy",
+    "start": "2026-09-01T10:19:15Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820706727-step-6",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820706727",
+    "service": "typing",
+    "name": "Run uv run --locked --no-default-groups --group dev tox run -e typing",
+    "start": "2026-09-01T10:19:16Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820706727-step-9",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820706727",
+    "service": "typing",
+    "name": "Post cache mypy",
+    "start": "2026-09-01T10:19:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820706727-step-10",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820706727",
+    "service": "typing",
+    "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-09-01T10:19:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820706727-step-11",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820706727",
+    "service": "typing",
+    "name": "Post Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+    "start": "2026-09-01T10:19:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820706727-step-12",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820706727",
+    "service": "typing",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-09-01T10:19:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820706727-step-13",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820706727",
+    "service": "typing",
+    "name": "Complete job",
+    "start": "2026-09-01T10:19:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820706932",
+    "trace_id": "run-33496785933",
+    "parent_id": "run-33496785933",
+    "service": "3-10",
+    "name": "3.10",
+    "start": "2026-09-01T10:19:05Z",
+    "duration_ms": 21000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820706932-step-1",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820706932",
+    "service": "3-10",
+    "name": "Set up job",
+    "start": "2026-09-01T10:19:06Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820706932-step-2",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820706932",
+    "service": "3-10",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-09-01T10:19:07Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820706932-step-3",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820706932",
+    "service": "3-10",
+    "name": "Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+    "start": "2026-09-01T10:19:10Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820706932-step-4",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820706932",
+    "service": "3-10",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-09-01T10:19:13Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820706932-step-5",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820706932",
+    "service": "3-10",
+    "name": "Run uv run --locked --no-default-groups --group dev tox run",
+    "start": "2026-09-01T10:19:13Z",
+    "duration_ms": 11000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820706932-step-8",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820706932",
+    "service": "3-10",
+    "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-09-01T10:19:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820706932-step-9",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820706932",
+    "service": "3-10",
+    "name": "Post Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+    "start": "2026-09-01T10:19:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820706932-step-10",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820706932",
+    "service": "3-10",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-09-01T10:19:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820706932-step-11",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820706932",
+    "service": "3-10",
+    "name": "Complete job",
+    "start": "2026-09-01T10:19:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820706976",
+    "trace_id": "run-33496785933",
+    "parent_id": "run-33496785933",
+    "service": "windows",
+    "name": "Windows",
+    "start": "2026-09-01T10:19:07Z",
+    "duration_ms": 37000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-99820706976-step-1",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820706976",
+    "service": "windows",
+    "name": "Set up job",
+    "start": "2026-09-01T10:19:09Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820706976-step-2",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820706976",
+    "service": "windows",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-09-01T10:19:13Z",
+    "duration_ms": 12000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820706976-step-3",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820706976",
+    "service": "windows",
+    "name": "Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+    "start": "2026-09-01T10:19:25Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820706976-step-4",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820706976",
+    "service": "windows",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-09-01T10:19:30Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820706976-step-5",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820706976",
+    "service": "windows",
+    "name": "Run uv run --locked --no-default-groups --group dev tox run",
+    "start": "2026-09-01T10:19:30Z",
+    "duration_ms": 11000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-99820706976-step-10",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820706976",
+    "service": "windows",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-09-01T10:19:41Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820706976-step-11",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820706976",
+    "service": "windows",
+    "name": "Complete job",
+    "start": "2026-09-01T10:19:43Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707039",
+    "trace_id": "run-33496785933",
+    "parent_id": "run-33496785933",
+    "service": "3-14t",
+    "name": "3.14t",
+    "start": "2026-09-01T10:19:05Z",
+    "duration_ms": 25000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707039-step-1",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707039",
+    "service": "3-14t",
+    "name": "Set up job",
+    "start": "2026-09-01T10:19:05Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707039-step-2",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707039",
+    "service": "3-14t",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-09-01T10:19:06Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707039-step-3",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707039",
+    "service": "3-14t",
+    "name": "Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+    "start": "2026-09-01T10:19:07Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707039-step-4",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707039",
+    "service": "3-14t",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-09-01T10:19:09Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707039-step-5",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707039",
+    "service": "3-14t",
+    "name": "Run uv run --locked --no-default-groups --group dev tox run",
+    "start": "2026-09-01T10:19:18Z",
+    "duration_ms": 10000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707039-step-8",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707039",
+    "service": "3-14t",
+    "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-09-01T10:19:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707039-step-9",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707039",
+    "service": "3-14t",
+    "name": "Post Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+    "start": "2026-09-01T10:19:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707039-step-10",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707039",
+    "service": "3-14t",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-09-01T10:19:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707039-step-11",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707039",
+    "service": "3-14t",
+    "name": "Complete job",
+    "start": "2026-09-01T10:19:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707088",
+    "trace_id": "run-33496785933",
+    "parent_id": "run-33496785933",
+    "service": "3-13",
+    "name": "3.13",
+    "start": "2026-09-01T10:19:04Z",
+    "duration_ms": 18000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707088-step-1",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707088",
+    "service": "3-13",
+    "name": "Set up job",
+    "start": "2026-09-01T10:19:05Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707088-step-2",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707088",
+    "service": "3-13",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-09-01T10:19:06Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707088-step-3",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707088",
+    "service": "3-13",
+    "name": "Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+    "start": "2026-09-01T10:19:07Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707088-step-4",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707088",
+    "service": "3-13",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-09-01T10:19:09Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707088-step-5",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707088",
+    "service": "3-13",
+    "name": "Run uv run --locked --no-default-groups --group dev tox run",
+    "start": "2026-09-01T10:19:09Z",
+    "duration_ms": 11000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707088-step-8",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707088",
+    "service": "3-13",
+    "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-09-01T10:19:20Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707088-step-9",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707088",
+    "service": "3-13",
+    "name": "Post Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+    "start": "2026-09-01T10:19:20Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707088-step-10",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707088",
+    "service": "3-13",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-09-01T10:19:20Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707088-step-11",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707088",
+    "service": "3-13",
+    "name": "Complete job",
+    "start": "2026-09-01T10:19:21Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707103",
+    "trace_id": "run-33496785933",
+    "parent_id": "run-33496785933",
+    "service": "pypy",
+    "name": "PyPy",
+    "start": "2026-09-01T10:19:05Z",
+    "duration_ms": 32000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707103-step-1",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707103",
+    "service": "pypy",
+    "name": "Set up job",
+    "start": "2026-09-01T10:19:05Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707103-step-2",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707103",
+    "service": "pypy",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-09-01T10:19:07Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707103-step-3",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707103",
+    "service": "pypy",
+    "name": "Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+    "start": "2026-09-01T10:19:08Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707103-step-4",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707103",
+    "service": "pypy",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-09-01T10:19:10Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707103-step-5",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707103",
+    "service": "pypy",
+    "name": "Run uv run --locked --no-default-groups --group dev tox run",
+    "start": "2026-09-01T10:19:11Z",
+    "duration_ms": 23000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707103-step-8",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707103",
+    "service": "pypy",
+    "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-09-01T10:19:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707103-step-9",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707103",
+    "service": "pypy",
+    "name": "Post Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+    "start": "2026-09-01T10:19:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707103-step-10",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707103",
+    "service": "pypy",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-09-01T10:19:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707103-step-11",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707103",
+    "service": "pypy",
+    "name": "Complete job",
+    "start": "2026-09-01T10:19:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707107",
+    "trace_id": "run-33496785933",
+    "parent_id": "run-33496785933",
+    "service": "3-14",
+    "name": "3.14",
+    "start": "2026-09-01T10:19:05Z",
+    "duration_ms": 19000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707107-step-1",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707107",
+    "service": "3-14",
+    "name": "Set up job",
+    "start": "2026-09-01T10:19:05Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707107-step-2",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707107",
+    "service": "3-14",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-09-01T10:19:06Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707107-step-3",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707107",
+    "service": "3-14",
+    "name": "Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+    "start": "2026-09-01T10:19:07Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707107-step-4",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707107",
+    "service": "3-14",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-09-01T10:19:09Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707107-step-5",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707107",
+    "service": "3-14",
+    "name": "Run uv run --locked --no-default-groups --group dev tox run",
+    "start": "2026-09-01T10:19:09Z",
+    "duration_ms": 13000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707107-step-8",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707107",
+    "service": "3-14",
+    "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-09-01T10:19:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707107-step-9",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707107",
+    "service": "3-14",
+    "name": "Post Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+    "start": "2026-09-01T10:19:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707107-step-10",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707107",
+    "service": "3-14",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-09-01T10:19:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707107-step-11",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707107",
+    "service": "3-14",
+    "name": "Complete job",
+    "start": "2026-09-01T10:19:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707125",
+    "trace_id": "run-33496785933",
+    "parent_id": "run-33496785933",
+    "service": "3-12",
+    "name": "3.12",
+    "start": "2026-09-01T10:19:05Z",
+    "duration_ms": 19000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707125-step-1",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707125",
+    "service": "3-12",
+    "name": "Set up job",
+    "start": "2026-09-01T10:19:06Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707125-step-2",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707125",
+    "service": "3-12",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-09-01T10:19:07Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707125-step-3",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707125",
+    "service": "3-12",
+    "name": "Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+    "start": "2026-09-01T10:19:08Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707125-step-4",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707125",
+    "service": "3-12",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-09-01T10:19:11Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707125-step-5",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707125",
+    "service": "3-12",
+    "name": "Run uv run --locked --no-default-groups --group dev tox run",
+    "start": "2026-09-01T10:19:11Z",
+    "duration_ms": 11000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707125-step-8",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707125",
+    "service": "3-12",
+    "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-09-01T10:19:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707125-step-9",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707125",
+    "service": "3-12",
+    "name": "Post Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+    "start": "2026-09-01T10:19:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707125-step-10",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707125",
+    "service": "3-12",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-09-01T10:19:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707125-step-11",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707125",
+    "service": "3-12",
+    "name": "Complete job",
+    "start": "2026-09-01T10:19:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707146",
+    "trace_id": "run-33496785933",
+    "parent_id": "run-33496785933",
+    "service": "3-11",
+    "name": "3.11",
+    "start": "2026-09-01T10:19:06Z",
+    "duration_ms": 21000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707146-step-1",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707146",
+    "service": "3-11",
+    "name": "Set up job",
+    "start": "2026-09-01T10:19:07Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707146-step-2",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707146",
+    "service": "3-11",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-09-01T10:19:09Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707146-step-3",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707146",
+    "service": "3-11",
+    "name": "Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+    "start": "2026-09-01T10:19:10Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707146-step-4",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707146",
+    "service": "3-11",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-09-01T10:19:13Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707146-step-5",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707146",
+    "service": "3-11",
+    "name": "Run uv run --locked --no-default-groups --group dev tox run",
+    "start": "2026-09-01T10:19:13Z",
+    "duration_ms": 11000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707146-step-8",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707146",
+    "service": "3-11",
+    "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-09-01T10:19:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707146-step-9",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707146",
+    "service": "3-11",
+    "name": "Post Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+    "start": "2026-09-01T10:19:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707146-step-10",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707146",
+    "service": "3-11",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-09-01T10:19:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707146-step-11",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707146",
+    "service": "3-11",
+    "name": "Complete job",
+    "start": "2026-09-01T10:19:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707169",
+    "trace_id": "run-33496785933",
+    "parent_id": "run-33496785933",
+    "service": "mac",
+    "name": "Mac",
+    "start": "2026-09-01T10:19:06Z",
+    "duration_ms": 31000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707169-step-1",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707169",
+    "service": "mac",
+    "name": "Set up job",
+    "start": "2026-09-01T10:19:06Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707169-step-2",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707169",
+    "service": "mac",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-09-01T10:19:08Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707169-step-3",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707169",
+    "service": "mac",
+    "name": "Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+    "start": "2026-09-01T10:19:11Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707169-step-4",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707169",
+    "service": "mac",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-09-01T10:19:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707169-step-5",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707169",
+    "service": "mac",
+    "name": "Run uv run --locked --no-default-groups --group dev tox run",
+    "start": "2026-09-01T10:19:15Z",
+    "duration_ms": 17000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707169-step-8",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707169",
+    "service": "mac",
+    "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-09-01T10:19:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707169-step-9",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707169",
+    "service": "mac",
+    "name": "Post Run astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+    "start": "2026-09-01T10:19:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707169-step-10",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707169",
+    "service": "mac",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-09-01T10:19:32Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-99820707169-step-11",
+    "trace_id": "run-33496785933",
+    "parent_id": "job-99820707169",
+    "service": "mac",
+    "name": "Complete job",
+    "start": "2026-09-01T10:19:33Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

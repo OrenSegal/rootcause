@@ -1,0 +1,14 @@
+[
+  {
+    "author": "iccir",
+    "committedDate": "2026-11-16T16:33:06Z",
+    "messageHeadline": "Disable Siri/telemetry/knowledge as well",
+    "oid": "f7854b000e6453a6ee82ecd5622276557d967d80",
+    "files": [
+      {
+        "filename": ".github/workflows/tests.yml",
+        "status": "modified"
+      }
+    ]
+  }
+]

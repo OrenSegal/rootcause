@@ -1,0 +1,16 @@
+[
+  {
+    "id": "7a4284ffe4",
+    "service": "jupyter_server",
+    "version": "7a4284ffe4",
+    "ts": "2026-11-02T11:53:39Z",
+    "author": "mrdevel2002-ui",
+    "summary": "scrub url secrets from tornado exception logs",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "jupyter_server/base/handlers.py",
+      "tests/base/test_handlers.py"
+    ]
+  }
+]

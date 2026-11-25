@@ -1,0 +1,17 @@
+[
+  {
+    "id": "c7c42d09c3",
+    "service": "pipx",
+    "version": "c7c42d09c3",
+    "ts": "2026-11-20T02:28:09Z",
+    "author": "8hjkkwikl8",
+    "summary": "\ud83d\udc1b fix(upgrade): keep --suffix in local-source reinstall hint",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "changelog.d/+upgrade-suffix-remedy.bugfix.rst",
+      "src/pipx/commands/upgrade.py",
+      "tests/test_upgrade.py"
+    ]
+  }
+]

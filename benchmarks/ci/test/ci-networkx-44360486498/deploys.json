@@ -1,0 +1,16 @@
+[
+  {
+    "id": "e14db0e50e",
+    "service": "networkx",
+    "version": "e14db0e50e",
+    "ts": "2026-11-18T13:56:11Z",
+    "author": "GOUTHAM018-MAKER",
+    "summary": "Fixed the cytoscape",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "networkx/readwrite/json_graph/cytoscape.py",
+      "networkx/readwrite/json_graph/tests/test_cytoscape.py"
+    ]
+  }
+]

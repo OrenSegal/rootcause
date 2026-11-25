@@ -1,0 +1,14 @@
+[
+  {
+    "author": "nxvvvv",
+    "committedDate": "2026-10-28T10:33:11Z",
+    "messageHeadline": "Assert the server drops the connection in the paused-read wsproto test",
+    "oid": "0884039004e2073e66fb661b0bfa7209d25b302f",
+    "files": [
+      {
+        "filename": "tests/protocols/test_websocket.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

@@ -1,0 +1,20 @@
+# Mined from https://github.com/aio-libs/multidict/actions/runs/37647784094 (aio-
+# libs/multidict, licence Apache-2.0). Fixed by run https://github.com/aio-
+# libs/multidict/actions/runs/37650596942. Label rule: the fix changed files exactly one
+# tested commit touched. Fix touched: CHANGES/1740.misc.rst,
+# multidict/_multilib/bulk_update.h, multidict/_multilib/debug.h,
+# multidict/_multilib/hashtable.h, multidict/_multilib/htkeys.h,
+# multidict/_multilib/walk.h, tests/test_multidict.py, tools/check_inlining.py.
+id: ci-multidict-37647784094
+title: Drop ALWAYS_INLINE from the C extension
+alert:
+  severity: ci
+  service: inlining
+  summary: 'workflow CI/CD failed on claude/always-inline-conversion-166543 at b1660cc5b4:
+    step ''Check that the hot paths keep their helpers inlined'' in job ''Inlining'' failed.'
+truth:
+  category: bad_code_deploy
+  service: multidict
+  required_evidence_any:
+  - b1660cc5b4
+provenance: recorded

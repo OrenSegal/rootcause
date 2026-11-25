@@ -1,0 +1,17 @@
+# Mined from https://github.com/python-poetry/poetry-core/actions/runs/33070303884
+# (python-poetry/poetry-core, licence MIT). Fixed by run https://github.com/python-
+# poetry/poetry-core/actions/runs/33070303884. Label rule: the first attempt failed and
+# a re-run of the same pull-request run passed. Fix touched: nothing (rerun).
+id: ci-poetry-core-33070303884
+title: Automated licenses list update
+alert:
+  severity: ci
+  service: ubuntu-pypy-3-11
+  summary: 'workflow Tests failed on license-autoupdate at f70075db28: step ''Install dependencies''
+    in job ''Ubuntu / pypy-3.11'' failed.'
+truth:
+  category: infrastructure
+  service: poetry-core
+  required_evidence_any:
+  - log-0295
+provenance: recorded

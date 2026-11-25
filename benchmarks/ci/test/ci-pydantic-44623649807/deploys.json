@@ -1,0 +1,15 @@
+[
+  {
+    "id": "051023fad1",
+    "service": "pydantic",
+    "version": "051023fad1",
+    "ts": "2026-11-19T21:55:34Z",
+    "author": "alexmojaki",
+    "summary": "Inline the shared integer cursor token validation helper",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "pydantic-core/src/validators/int.rs"
+    ]
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "fixed_run": "https://github.com/holoviz/panel/actions/runs/44372756741",
+  "fixed_sha": "84a0150983bb01c960c31466f9f7c04fef8be726",
+  "commits": [
+    "84a0150983bb01c960c31466f9f7c04fef8be726"
+  ],
+  "files": [
+    "panel/models/layout.ts",
+    "panel/models/reactive_esm.ts",
+    "panel/tests/ui/test_custom.py"
+  ],
+  "merges": [],
+  "status": "ahead"
+}

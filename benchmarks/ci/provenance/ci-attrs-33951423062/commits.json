@@ -1,0 +1,18 @@
+[
+  {
+    "author": "Nikhi00718",
+    "committedDate": "2026-09-04T16:44:44Z",
+    "messageHeadline": "Resolve forward references in generated init annotations",
+    "oid": "a636abe97f506faa360a7894b648380ade984cf6",
+    "files": [
+      {
+        "filename": "src/attr/_make.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_annotations.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

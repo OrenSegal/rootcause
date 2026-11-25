@@ -1,0 +1,14 @@
+id: ci-django-rest-framework-37662850565
+title: Preserve custom ChoiceField mappings for model choices
+alert:
+  severity: ci
+  service: python-3-10
+  summary: 'workflow CI failed on fix/9179-choice-field-mapping at 2832c2ed2e: step ''Run
+    tox targets for 3.10'' in job ''Python 3.10'' failed.'
+truth:
+  grading: class
+  category: bad_code_deploy
+  service: django-rest-framework
+  required_evidence_any:
+  - 2832c2ed2e
+provenance: recorded

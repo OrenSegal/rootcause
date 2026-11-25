@@ -1,0 +1,1882 @@
+[
+  {
+    "span_id": "run-43887039806",
+    "trace_id": "run-43887039806",
+    "parent_id": null,
+    "service": "test-suite",
+    "name": "test suite",
+    "start": "2026-11-16T14:33:53Z",
+    "duration_ms": 208000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-133367885150",
+    "trace_id": "run-43887039806",
+    "parent_id": "run-43887039806",
+    "service": "changed-files",
+    "name": "changed-files",
+    "start": "2026-11-16T14:33:55Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367885150-step-1",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367885150",
+    "service": "changed-files",
+    "name": "Set up job",
+    "start": "2026-11-16T14:33:56Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367885150-step-2",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367885150",
+    "service": "changed-files",
+    "name": "Run actions/checkout@v7",
+    "start": "2026-11-16T14:33:56Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367885150-step-3",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367885150",
+    "service": "changed-files",
+    "name": "Get changed files by category",
+    "start": "2026-11-16T14:33:57Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367885150-step-6",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367885150",
+    "service": "changed-files",
+    "name": "Post Run actions/checkout@v7",
+    "start": "2026-11-16T14:33:59Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367885150-step-7",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367885150",
+    "service": "changed-files",
+    "name": "Complete job",
+    "start": "2026-11-16T14:33:59Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367952945",
+    "trace_id": "run-43887039806",
+    "parent_id": "run-43887039806",
+    "service": "docs",
+    "name": "docs",
+    "start": "2026-11-16T14:34:02Z",
+    "duration_ms": 27000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-133367952945-step-1",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367952945",
+    "service": "docs",
+    "name": "Set up job",
+    "start": "2026-11-16T14:34:03Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367952945-step-2",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367952945",
+    "service": "docs",
+    "name": "Run actions/checkout@v7",
+    "start": "2026-11-16T14:34:05Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367952945-step-3",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367952945",
+    "service": "docs",
+    "name": "Set up Python ",
+    "start": "2026-11-16T14:34:09Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367952945-step-4",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367952945",
+    "service": "docs",
+    "name": "Install the project and its dependencies",
+    "start": "2026-11-16T14:34:14Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367952945-step-5",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367952945",
+    "service": "docs",
+    "name": "Build documentation",
+    "start": "2026-11-16T14:34:21Z",
+    "duration_ms": 6000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-133367952945-step-10",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367952945",
+    "service": "docs",
+    "name": "Post Run actions/checkout@v7",
+    "start": "2026-11-16T14:34:27Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367952945-step-11",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367952945",
+    "service": "docs",
+    "name": "Complete job",
+    "start": "2026-11-16T14:34:27Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953004",
+    "trace_id": "run-43887039806",
+    "parent_id": "run-43887039806",
+    "service": "pyright",
+    "name": "pyright",
+    "start": "2026-11-16T14:34:02Z",
+    "duration_ms": 11000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953004-step-1",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953004",
+    "service": "pyright",
+    "name": "Set up job",
+    "start": "2026-11-16T14:34:02Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953004-step-2",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953004",
+    "service": "pyright",
+    "name": "Run actions/checkout@v7",
+    "start": "2026-11-16T14:34:03Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953004-step-3",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953004",
+    "service": "pyright",
+    "name": "Set up Python",
+    "start": "2026-11-16T14:34:03Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953004-step-4",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953004",
+    "service": "pyright",
+    "name": "Run actions/cache@v6",
+    "start": "2026-11-16T14:34:03Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953004-step-5",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953004",
+    "service": "pyright",
+    "name": "Install dependencies",
+    "start": "2026-11-16T14:34:04Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953004-step-6",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953004",
+    "service": "pyright",
+    "name": "Run pyright",
+    "start": "2026-11-16T14:34:10Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953004-step-10",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953004",
+    "service": "pyright",
+    "name": "Post Run actions/cache@v6",
+    "start": "2026-11-16T14:34:11Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953004-step-11",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953004",
+    "service": "pyright",
+    "name": "Post Set up Python",
+    "start": "2026-11-16T14:34:11Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953004-step-12",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953004",
+    "service": "pyright",
+    "name": "Post Run actions/checkout@v7",
+    "start": "2026-11-16T14:34:11Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953004-step-13",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953004",
+    "service": "pyright",
+    "name": "Complete job",
+    "start": "2026-11-16T14:34:11Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953320",
+    "trace_id": "run-43887039806",
+    "parent_id": "run-43887039806",
+    "service": "test-ubuntu-latest-3-13-trio-false",
+    "name": "test (ubuntu-latest, 3.13, [trio], false)",
+    "start": "2026-11-16T14:34:03Z",
+    "duration_ms": 148000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953320-step-1",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953320",
+    "service": "test-ubuntu-latest-3-13-trio-false",
+    "name": "Set up job",
+    "start": "2026-11-16T14:34:04Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953320-step-2",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953320",
+    "service": "test-ubuntu-latest-3-13-trio-false",
+    "name": "Run actions/checkout@v7",
+    "start": "2026-11-16T14:34:05Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953320-step-3",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953320",
+    "service": "test-ubuntu-latest-3-13-trio-false",
+    "name": "Set up Python 3.13",
+    "start": "2026-11-16T14:34:06Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953320-step-4",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953320",
+    "service": "test-ubuntu-latest-3-13-trio-false",
+    "name": "Install the project and its dependencies",
+    "start": "2026-11-16T14:34:10Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953320-step-6",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953320",
+    "service": "test-ubuntu-latest-3-13-trio-false",
+    "name": "Patch /etc/hosts",
+    "start": "2026-11-16T14:34:18Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953320-step-8",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953320",
+    "service": "test-ubuntu-latest-3-13-trio-false",
+    "name": "Test with pytest",
+    "start": "2026-11-16T14:34:18Z",
+    "duration_ms": 128000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953320-step-9",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953320",
+    "service": "test-ubuntu-latest-3-13-trio-false",
+    "name": "Generate coverage report",
+    "start": "2026-11-16T14:36:26Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953320-step-11",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953320",
+    "service": "test-ubuntu-latest-3-13-trio-false",
+    "name": "Upload Coverage",
+    "start": "2026-11-16T14:36:26Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953320-step-21",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953320",
+    "service": "test-ubuntu-latest-3-13-trio-false",
+    "name": "Post Set up Python 3.13",
+    "start": "2026-11-16T14:36:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953320-step-22",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953320",
+    "service": "test-ubuntu-latest-3-13-trio-false",
+    "name": "Post Run actions/checkout@v7",
+    "start": "2026-11-16T14:36:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953320-step-23",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953320",
+    "service": "test-ubuntu-latest-3-13-trio-false",
+    "name": "Complete job",
+    "start": "2026-11-16T14:36:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953387",
+    "trace_id": "run-43887039806",
+    "parent_id": "run-43887039806",
+    "service": "test-macos-latest-3-15-trio",
+    "name": "test (macos-latest, 3.15, [trio])",
+    "start": "2026-11-16T14:34:06Z",
+    "duration_ms": 137000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953387-step-1",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953387",
+    "service": "test-macos-latest-3-15-trio",
+    "name": "Set up job",
+    "start": "2026-11-16T14:34:06Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953387-step-2",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953387",
+    "service": "test-macos-latest-3-15-trio",
+    "name": "Run actions/checkout@v7",
+    "start": "2026-11-16T14:34:08Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953387-step-3",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953387",
+    "service": "test-macos-latest-3-15-trio",
+    "name": "Set up Python 3.15",
+    "start": "2026-11-16T14:34:10Z",
+    "duration_ms": 27000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953387-step-4",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953387",
+    "service": "test-macos-latest-3-15-trio",
+    "name": "Install the project and its dependencies",
+    "start": "2026-11-16T14:34:37Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953387-step-6",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953387",
+    "service": "test-macos-latest-3-15-trio",
+    "name": "Patch /etc/hosts",
+    "start": "2026-11-16T14:34:41Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953387-step-8",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953387",
+    "service": "test-macos-latest-3-15-trio",
+    "name": "Test with pytest",
+    "start": "2026-11-16T14:34:41Z",
+    "duration_ms": 87000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953387-step-9",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953387",
+    "service": "test-macos-latest-3-15-trio",
+    "name": "Generate coverage report",
+    "start": "2026-11-16T14:36:08Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953387-step-10",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953387",
+    "service": "test-macos-latest-3-15-trio",
+    "name": "Trust Coveralls Homebrew tap (Homebrew 6 requirement)",
+    "start": "2026-11-16T14:36:09Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953387-step-11",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953387",
+    "service": "test-macos-latest-3-15-trio",
+    "name": "Upload Coverage",
+    "start": "2026-11-16T14:36:10Z",
+    "duration_ms": 10000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953387-step-21",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953387",
+    "service": "test-macos-latest-3-15-trio",
+    "name": "Post Set up Python 3.15",
+    "start": "2026-11-16T14:36:20Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953387-step-22",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953387",
+    "service": "test-macos-latest-3-15-trio",
+    "name": "Post Run actions/checkout@v7",
+    "start": "2026-11-16T14:36:20Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953387-step-23",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953387",
+    "service": "test-macos-latest-3-15-trio",
+    "name": "Complete job",
+    "start": "2026-11-16T14:36:20Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953399",
+    "trace_id": "run-43887039806",
+    "parent_id": "run-43887039806",
+    "service": "test-ubuntu-latest-3-15-trio-false",
+    "name": "test (ubuntu-latest, 3.15, [trio], false)",
+    "start": "2026-11-16T14:34:02Z",
+    "duration_ms": 116000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953399-step-1",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953399",
+    "service": "test-ubuntu-latest-3-15-trio-false",
+    "name": "Set up job",
+    "start": "2026-11-16T14:34:03Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953399-step-2",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953399",
+    "service": "test-ubuntu-latest-3-15-trio-false",
+    "name": "Run actions/checkout@v7",
+    "start": "2026-11-16T14:34:04Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953399-step-3",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953399",
+    "service": "test-ubuntu-latest-3-15-trio-false",
+    "name": "Set up Python 3.15",
+    "start": "2026-11-16T14:34:05Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953399-step-4",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953399",
+    "service": "test-ubuntu-latest-3-15-trio-false",
+    "name": "Install the project and its dependencies",
+    "start": "2026-11-16T14:34:08Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953399-step-6",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953399",
+    "service": "test-ubuntu-latest-3-15-trio-false",
+    "name": "Patch /etc/hosts",
+    "start": "2026-11-16T14:34:16Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953399-step-8",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953399",
+    "service": "test-ubuntu-latest-3-15-trio-false",
+    "name": "Test with pytest",
+    "start": "2026-11-16T14:34:16Z",
+    "duration_ms": 97000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953399-step-9",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953399",
+    "service": "test-ubuntu-latest-3-15-trio-false",
+    "name": "Generate coverage report",
+    "start": "2026-11-16T14:35:53Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953399-step-11",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953399",
+    "service": "test-ubuntu-latest-3-15-trio-false",
+    "name": "Upload Coverage",
+    "start": "2026-11-16T14:35:54Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953399-step-21",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953399",
+    "service": "test-ubuntu-latest-3-15-trio-false",
+    "name": "Post Set up Python 3.15",
+    "start": "2026-11-16T14:35:56Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953399-step-22",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953399",
+    "service": "test-ubuntu-latest-3-15-trio-false",
+    "name": "Post Run actions/checkout@v7",
+    "start": "2026-11-16T14:35:56Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953399-step-23",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953399",
+    "service": "test-ubuntu-latest-3-15-trio-false",
+    "name": "Complete job",
+    "start": "2026-11-16T14:35:56Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953471",
+    "trace_id": "run-43887039806",
+    "parent_id": "run-43887039806",
+    "service": "test-ubuntu-latest-3-12-trio-false",
+    "name": "test (ubuntu-latest, 3.12, [trio], false)",
+    "start": "2026-11-16T14:34:02Z",
+    "duration_ms": 136000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953471-step-1",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953471",
+    "service": "test-ubuntu-latest-3-12-trio-false",
+    "name": "Set up job",
+    "start": "2026-11-16T14:34:03Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953471-step-2",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953471",
+    "service": "test-ubuntu-latest-3-12-trio-false",
+    "name": "Run actions/checkout@v7",
+    "start": "2026-11-16T14:34:04Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953471-step-3",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953471",
+    "service": "test-ubuntu-latest-3-12-trio-false",
+    "name": "Set up Python 3.12",
+    "start": "2026-11-16T14:34:05Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953471-step-4",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953471",
+    "service": "test-ubuntu-latest-3-12-trio-false",
+    "name": "Install the project and its dependencies",
+    "start": "2026-11-16T14:34:08Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953471-step-6",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953471",
+    "service": "test-ubuntu-latest-3-12-trio-false",
+    "name": "Patch /etc/hosts",
+    "start": "2026-11-16T14:34:16Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953471-step-8",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953471",
+    "service": "test-ubuntu-latest-3-12-trio-false",
+    "name": "Test with pytest",
+    "start": "2026-11-16T14:34:16Z",
+    "duration_ms": 117000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953471-step-9",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953471",
+    "service": "test-ubuntu-latest-3-12-trio-false",
+    "name": "Generate coverage report",
+    "start": "2026-11-16T14:36:13Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953471-step-11",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953471",
+    "service": "test-ubuntu-latest-3-12-trio-false",
+    "name": "Upload Coverage",
+    "start": "2026-11-16T14:36:14Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953471-step-21",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953471",
+    "service": "test-ubuntu-latest-3-12-trio-false",
+    "name": "Post Set up Python 3.12",
+    "start": "2026-11-16T14:36:15Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953471-step-22",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953471",
+    "service": "test-ubuntu-latest-3-12-trio-false",
+    "name": "Post Run actions/checkout@v7",
+    "start": "2026-11-16T14:36:16Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953471-step-23",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953471",
+    "service": "test-ubuntu-latest-3-12-trio-false",
+    "name": "Complete job",
+    "start": "2026-11-16T14:36:16Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953490",
+    "trace_id": "run-43887039806",
+    "parent_id": "run-43887039806",
+    "service": "test-ubuntu-latest-3-14-trio-false",
+    "name": "test (ubuntu-latest, 3.14, [trio], false)",
+    "start": "2026-11-16T14:34:02Z",
+    "duration_ms": 131000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953490-step-1",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953490",
+    "service": "test-ubuntu-latest-3-14-trio-false",
+    "name": "Set up job",
+    "start": "2026-11-16T14:34:03Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953490-step-2",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953490",
+    "service": "test-ubuntu-latest-3-14-trio-false",
+    "name": "Run actions/checkout@v7",
+    "start": "2026-11-16T14:34:03Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953490-step-3",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953490",
+    "service": "test-ubuntu-latest-3-14-trio-false",
+    "name": "Set up Python 3.14",
+    "start": "2026-11-16T14:34:04Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953490-step-4",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953490",
+    "service": "test-ubuntu-latest-3-14-trio-false",
+    "name": "Install the project and its dependencies",
+    "start": "2026-11-16T14:34:12Z",
+    "duration_ms": 11000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953490-step-6",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953490",
+    "service": "test-ubuntu-latest-3-14-trio-false",
+    "name": "Patch /etc/hosts",
+    "start": "2026-11-16T14:34:23Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953490-step-8",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953490",
+    "service": "test-ubuntu-latest-3-14-trio-false",
+    "name": "Test with pytest",
+    "start": "2026-11-16T14:34:23Z",
+    "duration_ms": 106000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953490-step-9",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953490",
+    "service": "test-ubuntu-latest-3-14-trio-false",
+    "name": "Generate coverage report",
+    "start": "2026-11-16T14:36:09Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953490-step-11",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953490",
+    "service": "test-ubuntu-latest-3-14-trio-false",
+    "name": "Upload Coverage",
+    "start": "2026-11-16T14:36:10Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953490-step-21",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953490",
+    "service": "test-ubuntu-latest-3-14-trio-false",
+    "name": "Post Set up Python 3.14",
+    "start": "2026-11-16T14:36:11Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953490-step-22",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953490",
+    "service": "test-ubuntu-latest-3-14-trio-false",
+    "name": "Post Run actions/checkout@v7",
+    "start": "2026-11-16T14:36:11Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953490-step-23",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953490",
+    "service": "test-ubuntu-latest-3-14-trio-false",
+    "name": "Complete job",
+    "start": "2026-11-16T14:36:11Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953504",
+    "trace_id": "run-43887039806",
+    "parent_id": "run-43887039806",
+    "service": "test-ubuntu-latest-3-15-only-asyncio",
+    "name": "test (ubuntu-latest, 3.15, only asyncio)",
+    "start": "2026-11-16T14:34:02Z",
+    "duration_ms": 107000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953504-step-1",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953504",
+    "service": "test-ubuntu-latest-3-15-only-asyncio",
+    "name": "Set up job",
+    "start": "2026-11-16T14:34:03Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953504-step-2",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953504",
+    "service": "test-ubuntu-latest-3-15-only-asyncio",
+    "name": "Run actions/checkout@v7",
+    "start": "2026-11-16T14:34:04Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953504-step-3",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953504",
+    "service": "test-ubuntu-latest-3-15-only-asyncio",
+    "name": "Set up Python 3.15",
+    "start": "2026-11-16T14:34:05Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953504-step-4",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953504",
+    "service": "test-ubuntu-latest-3-15-only-asyncio",
+    "name": "Install the project and its dependencies",
+    "start": "2026-11-16T14:34:09Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953504-step-6",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953504",
+    "service": "test-ubuntu-latest-3-15-only-asyncio",
+    "name": "Patch /etc/hosts",
+    "start": "2026-11-16T14:34:16Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953504-step-8",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953504",
+    "service": "test-ubuntu-latest-3-15-only-asyncio",
+    "name": "Test with pytest",
+    "start": "2026-11-16T14:34:16Z",
+    "duration_ms": 85000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953504-step-9",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953504",
+    "service": "test-ubuntu-latest-3-15-only-asyncio",
+    "name": "Generate coverage report",
+    "start": "2026-11-16T14:35:41Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953504-step-11",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953504",
+    "service": "test-ubuntu-latest-3-15-only-asyncio",
+    "name": "Upload Coverage",
+    "start": "2026-11-16T14:35:41Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953504-step-21",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953504",
+    "service": "test-ubuntu-latest-3-15-only-asyncio",
+    "name": "Post Set up Python 3.15",
+    "start": "2026-11-16T14:35:46Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953504-step-22",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953504",
+    "service": "test-ubuntu-latest-3-15-only-asyncio",
+    "name": "Post Run actions/checkout@v7",
+    "start": "2026-11-16T14:35:46Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953504-step-23",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953504",
+    "service": "test-ubuntu-latest-3-15-only-asyncio",
+    "name": "Complete job",
+    "start": "2026-11-16T14:35:46Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953515",
+    "trace_id": "run-43887039806",
+    "parent_id": "run-43887039806",
+    "service": "test-ubuntu-latest-pypy3-11-trio-false",
+    "name": "test (ubuntu-latest, pypy3.11, [trio], false)",
+    "start": "2026-11-16T14:34:02Z",
+    "duration_ms": 149000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953515-step-1",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953515",
+    "service": "test-ubuntu-latest-pypy3-11-trio-false",
+    "name": "Set up job",
+    "start": "2026-11-16T14:34:03Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953515-step-2",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953515",
+    "service": "test-ubuntu-latest-pypy3-11-trio-false",
+    "name": "Run actions/checkout@v7",
+    "start": "2026-11-16T14:34:03Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953515-step-3",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953515",
+    "service": "test-ubuntu-latest-pypy3-11-trio-false",
+    "name": "Set up Python pypy3.11",
+    "start": "2026-11-16T14:34:04Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953515-step-4",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953515",
+    "service": "test-ubuntu-latest-pypy3-11-trio-false",
+    "name": "Install the project and its dependencies",
+    "start": "2026-11-16T14:34:12Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953515-step-6",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953515",
+    "service": "test-ubuntu-latest-pypy3-11-trio-false",
+    "name": "Patch /etc/hosts",
+    "start": "2026-11-16T14:34:21Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953515-step-8",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953515",
+    "service": "test-ubuntu-latest-pypy3-11-trio-false",
+    "name": "Test with pytest",
+    "start": "2026-11-16T14:34:21Z",
+    "duration_ms": 125000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953515-step-9",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953515",
+    "service": "test-ubuntu-latest-pypy3-11-trio-false",
+    "name": "Generate coverage report",
+    "start": "2026-11-16T14:36:26Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953515-step-11",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953515",
+    "service": "test-ubuntu-latest-pypy3-11-trio-false",
+    "name": "Upload Coverage",
+    "start": "2026-11-16T14:36:27Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953515-step-21",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953515",
+    "service": "test-ubuntu-latest-pypy3-11-trio-false",
+    "name": "Post Set up Python pypy3.11",
+    "start": "2026-11-16T14:36:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953515-step-22",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953515",
+    "service": "test-ubuntu-latest-pypy3-11-trio-false",
+    "name": "Post Run actions/checkout@v7",
+    "start": "2026-11-16T14:36:28Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953515-step-23",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953515",
+    "service": "test-ubuntu-latest-pypy3-11-trio-false",
+    "name": "Complete job",
+    "start": "2026-11-16T14:36:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953520",
+    "trace_id": "run-43887039806",
+    "parent_id": "run-43887039806",
+    "service": "test-windows-latest-3-15-trio",
+    "name": "test (windows-latest, 3.15, [trio])",
+    "start": "2026-11-16T14:34:02Z",
+    "duration_ms": 192000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953520-step-1",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953520",
+    "service": "test-windows-latest-3-15-trio",
+    "name": "Set up job",
+    "start": "2026-11-16T14:34:03Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953520-step-2",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953520",
+    "service": "test-windows-latest-3-15-trio",
+    "name": "Run actions/checkout@v7",
+    "start": "2026-11-16T14:34:03Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953520-step-3",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953520",
+    "service": "test-windows-latest-3-15-trio",
+    "name": "Set up Python 3.15",
+    "start": "2026-11-16T14:34:09Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953520-step-4",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953520",
+    "service": "test-windows-latest-3-15-trio",
+    "name": "Install the project and its dependencies",
+    "start": "2026-11-16T14:34:15Z",
+    "duration_ms": 21000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953520-step-7",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953520",
+    "service": "test-windows-latest-3-15-trio",
+    "name": "Patch C:\\Windows\\System32\\drivers\\etc\\hosts",
+    "start": "2026-11-16T14:34:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953520-step-8",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953520",
+    "service": "test-windows-latest-3-15-trio",
+    "name": "Test with pytest",
+    "start": "2026-11-16T14:34:36Z",
+    "duration_ms": 148000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953520-step-9",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953520",
+    "service": "test-windows-latest-3-15-trio",
+    "name": "Generate coverage report",
+    "start": "2026-11-16T14:37:04Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953520-step-11",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953520",
+    "service": "test-windows-latest-3-15-trio",
+    "name": "Upload Coverage",
+    "start": "2026-11-16T14:37:05Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953520-step-21",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953520",
+    "service": "test-windows-latest-3-15-trio",
+    "name": "Post Set up Python 3.15",
+    "start": "2026-11-16T14:37:11Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953520-step-22",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953520",
+    "service": "test-windows-latest-3-15-trio",
+    "name": "Post Run actions/checkout@v7",
+    "start": "2026-11-16T14:37:11Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953520-step-23",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953520",
+    "service": "test-windows-latest-3-15-trio",
+    "name": "Complete job",
+    "start": "2026-11-16T14:37:13Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953531",
+    "trace_id": "run-43887039806",
+    "parent_id": "run-43887039806",
+    "service": "test-ubuntu-latest-3-11-trio-false",
+    "name": "test (ubuntu-latest, 3.11, [trio], false)",
+    "start": "2026-11-16T14:34:02Z",
+    "duration_ms": 117000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953531-step-1",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953531",
+    "service": "test-ubuntu-latest-3-11-trio-false",
+    "name": "Set up job",
+    "start": "2026-11-16T14:34:03Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953531-step-2",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953531",
+    "service": "test-ubuntu-latest-3-11-trio-false",
+    "name": "Run actions/checkout@v7",
+    "start": "2026-11-16T14:34:04Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953531-step-3",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953531",
+    "service": "test-ubuntu-latest-3-11-trio-false",
+    "name": "Set up Python 3.11",
+    "start": "2026-11-16T14:34:04Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953531-step-4",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953531",
+    "service": "test-ubuntu-latest-3-11-trio-false",
+    "name": "Install the project and its dependencies",
+    "start": "2026-11-16T14:34:07Z",
+    "duration_ms": 10000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953531-step-6",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953531",
+    "service": "test-ubuntu-latest-3-11-trio-false",
+    "name": "Patch /etc/hosts",
+    "start": "2026-11-16T14:34:17Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953531-step-8",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953531",
+    "service": "test-ubuntu-latest-3-11-trio-false",
+    "name": "Test with pytest",
+    "start": "2026-11-16T14:34:17Z",
+    "duration_ms": 99000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953531-step-9",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953531",
+    "service": "test-ubuntu-latest-3-11-trio-false",
+    "name": "Generate coverage report",
+    "start": "2026-11-16T14:35:56Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953531-step-11",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953531",
+    "service": "test-ubuntu-latest-3-11-trio-false",
+    "name": "Upload Coverage",
+    "start": "2026-11-16T14:35:57Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953531-step-21",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953531",
+    "service": "test-ubuntu-latest-3-11-trio-false",
+    "name": "Post Set up Python 3.11",
+    "start": "2026-11-16T14:35:58Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953531-step-22",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953531",
+    "service": "test-ubuntu-latest-3-11-trio-false",
+    "name": "Post Run actions/checkout@v7",
+    "start": "2026-11-16T14:35:58Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953531-step-23",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953531",
+    "service": "test-ubuntu-latest-3-11-trio-false",
+    "name": "Complete job",
+    "start": "2026-11-16T14:35:58Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953546",
+    "trace_id": "run-43887039806",
+    "parent_id": "run-43887039806",
+    "service": "test-ubuntu-latest-3-15t-trio-false",
+    "name": "test (ubuntu-latest, 3.15t, [trio], false)",
+    "start": "2026-11-16T14:34:02Z",
+    "duration_ms": 116000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953546-step-1",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953546",
+    "service": "test-ubuntu-latest-3-15t-trio-false",
+    "name": "Set up job",
+    "start": "2026-11-16T14:34:03Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953546-step-2",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953546",
+    "service": "test-ubuntu-latest-3-15t-trio-false",
+    "name": "Run actions/checkout@v7",
+    "start": "2026-11-16T14:34:03Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953546-step-3",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953546",
+    "service": "test-ubuntu-latest-3-15t-trio-false",
+    "name": "Set up Python 3.15t",
+    "start": "2026-11-16T14:34:04Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953546-step-4",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953546",
+    "service": "test-ubuntu-latest-3-15t-trio-false",
+    "name": "Install the project and its dependencies",
+    "start": "2026-11-16T14:34:11Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953546-step-6",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953546",
+    "service": "test-ubuntu-latest-3-15t-trio-false",
+    "name": "Patch /etc/hosts",
+    "start": "2026-11-16T14:34:18Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953546-step-8",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953546",
+    "service": "test-ubuntu-latest-3-15t-trio-false",
+    "name": "Test with pytest",
+    "start": "2026-11-16T14:34:18Z",
+    "duration_ms": 95000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953546-step-9",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953546",
+    "service": "test-ubuntu-latest-3-15t-trio-false",
+    "name": "Generate coverage report",
+    "start": "2026-11-16T14:35:53Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953546-step-11",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953546",
+    "service": "test-ubuntu-latest-3-15t-trio-false",
+    "name": "Upload Coverage",
+    "start": "2026-11-16T14:35:53Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953546-step-21",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953546",
+    "service": "test-ubuntu-latest-3-15t-trio-false",
+    "name": "Post Set up Python 3.15t",
+    "start": "2026-11-16T14:35:55Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953546-step-22",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953546",
+    "service": "test-ubuntu-latest-3-15t-trio-false",
+    "name": "Post Run actions/checkout@v7",
+    "start": "2026-11-16T14:35:55Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953546-step-23",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953546",
+    "service": "test-ubuntu-latest-3-15t-trio-false",
+    "name": "Complete job",
+    "start": "2026-11-16T14:35:55Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953547",
+    "trace_id": "run-43887039806",
+    "parent_id": "run-43887039806",
+    "service": "test-ubuntu-latest-3-11-trio-true-oldest-dependencies",
+    "name": "test (ubuntu-latest, 3.11, [trio], true, oldest dependencies)",
+    "start": "2026-11-16T14:34:03Z",
+    "duration_ms": 111000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953547-step-1",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953547",
+    "service": "test-ubuntu-latest-3-11-trio-true-oldest-dependencies",
+    "name": "Set up job",
+    "start": "2026-11-16T14:34:04Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953547-step-2",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953547",
+    "service": "test-ubuntu-latest-3-11-trio-true-oldest-dependencies",
+    "name": "Run actions/checkout@v7",
+    "start": "2026-11-16T14:34:07Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953547-step-3",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953547",
+    "service": "test-ubuntu-latest-3-11-trio-true-oldest-dependencies",
+    "name": "Set up Python 3.11",
+    "start": "2026-11-16T14:34:14Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953547-step-5",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953547",
+    "service": "test-ubuntu-latest-3-11-trio-true-oldest-dependencies",
+    "name": "Install the project and its dependencies (lowest bound)",
+    "start": "2026-11-16T14:34:21Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953547-step-6",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953547",
+    "service": "test-ubuntu-latest-3-11-trio-true-oldest-dependencies",
+    "name": "Patch /etc/hosts",
+    "start": "2026-11-16T14:34:30Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953547-step-8",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953547",
+    "service": "test-ubuntu-latest-3-11-trio-true-oldest-dependencies",
+    "name": "Test with pytest",
+    "start": "2026-11-16T14:34:30Z",
+    "duration_ms": 79000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953547-step-9",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953547",
+    "service": "test-ubuntu-latest-3-11-trio-true-oldest-dependencies",
+    "name": "Generate coverage report",
+    "start": "2026-11-16T14:35:49Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953547-step-11",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953547",
+    "service": "test-ubuntu-latest-3-11-trio-true-oldest-dependencies",
+    "name": "Upload Coverage",
+    "start": "2026-11-16T14:35:49Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953547-step-21",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953547",
+    "service": "test-ubuntu-latest-3-11-trio-true-oldest-dependencies",
+    "name": "Post Set up Python 3.11",
+    "start": "2026-11-16T14:35:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953547-step-22",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953547",
+    "service": "test-ubuntu-latest-3-11-trio-true-oldest-dependencies",
+    "name": "Post Run actions/checkout@v7",
+    "start": "2026-11-16T14:35:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953547-step-23",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953547",
+    "service": "test-ubuntu-latest-3-11-trio-true-oldest-dependencies",
+    "name": "Complete job",
+    "start": "2026-11-16T14:35:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953562",
+    "trace_id": "run-43887039806",
+    "parent_id": "run-43887039806",
+    "service": "test-windows-latest-3-11-trio",
+    "name": "test (windows-latest, 3.11, [trio])",
+    "start": "2026-11-16T14:34:03Z",
+    "duration_ms": 167000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953562-step-1",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953562",
+    "service": "test-windows-latest-3-11-trio",
+    "name": "Set up job",
+    "start": "2026-11-16T14:34:04Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953562-step-2",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953562",
+    "service": "test-windows-latest-3-11-trio",
+    "name": "Run actions/checkout@v7",
+    "start": "2026-11-16T14:34:05Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953562-step-3",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953562",
+    "service": "test-windows-latest-3-11-trio",
+    "name": "Set up Python 3.11",
+    "start": "2026-11-16T14:34:11Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953562-step-4",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953562",
+    "service": "test-windows-latest-3-11-trio",
+    "name": "Install the project and its dependencies",
+    "start": "2026-11-16T14:34:15Z",
+    "duration_ms": 17000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953562-step-7",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953562",
+    "service": "test-windows-latest-3-11-trio",
+    "name": "Patch C:\\Windows\\System32\\drivers\\etc\\hosts",
+    "start": "2026-11-16T14:34:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953562-step-8",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953562",
+    "service": "test-windows-latest-3-11-trio",
+    "name": "Test with pytest",
+    "start": "2026-11-16T14:34:32Z",
+    "duration_ms": 131000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953562-step-9",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953562",
+    "service": "test-windows-latest-3-11-trio",
+    "name": "Generate coverage report",
+    "start": "2026-11-16T14:36:43Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953562-step-11",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953562",
+    "service": "test-windows-latest-3-11-trio",
+    "name": "Upload Coverage",
+    "start": "2026-11-16T14:36:44Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953562-step-21",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953562",
+    "service": "test-windows-latest-3-11-trio",
+    "name": "Post Set up Python 3.11",
+    "start": "2026-11-16T14:36:47Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953562-step-22",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953562",
+    "service": "test-windows-latest-3-11-trio",
+    "name": "Post Run actions/checkout@v7",
+    "start": "2026-11-16T14:36:47Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953562-step-23",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953562",
+    "service": "test-windows-latest-3-11-trio",
+    "name": "Complete job",
+    "start": "2026-11-16T14:36:49Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953581",
+    "trace_id": "run-43887039806",
+    "parent_id": "run-43887039806",
+    "service": "test-macos-latest-3-11-trio",
+    "name": "test (macos-latest, 3.11, [trio])",
+    "start": "2026-11-16T14:34:07Z",
+    "duration_ms": 108000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953581-step-1",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953581",
+    "service": "test-macos-latest-3-11-trio",
+    "name": "Set up job",
+    "start": "2026-11-16T14:34:07Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953581-step-2",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953581",
+    "service": "test-macos-latest-3-11-trio",
+    "name": "Run actions/checkout@v7",
+    "start": "2026-11-16T14:34:09Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953581-step-3",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953581",
+    "service": "test-macos-latest-3-11-trio",
+    "name": "Set up Python 3.11",
+    "start": "2026-11-16T14:34:10Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953581-step-4",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953581",
+    "service": "test-macos-latest-3-11-trio",
+    "name": "Install the project and its dependencies",
+    "start": "2026-11-16T14:34:11Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953581-step-6",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953581",
+    "service": "test-macos-latest-3-11-trio",
+    "name": "Patch /etc/hosts",
+    "start": "2026-11-16T14:34:17Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953581-step-8",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953581",
+    "service": "test-macos-latest-3-11-trio",
+    "name": "Test with pytest",
+    "start": "2026-11-16T14:34:17Z",
+    "duration_ms": 78000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953581-step-9",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953581",
+    "service": "test-macos-latest-3-11-trio",
+    "name": "Generate coverage report",
+    "start": "2026-11-16T14:35:35Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953581-step-10",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953581",
+    "service": "test-macos-latest-3-11-trio",
+    "name": "Trust Coveralls Homebrew tap (Homebrew 6 requirement)",
+    "start": "2026-11-16T14:35:36Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953581-step-11",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953581",
+    "service": "test-macos-latest-3-11-trio",
+    "name": "Upload Coverage",
+    "start": "2026-11-16T14:35:41Z",
+    "duration_ms": 11000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953581-step-21",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953581",
+    "service": "test-macos-latest-3-11-trio",
+    "name": "Post Set up Python 3.11",
+    "start": "2026-11-16T14:35:52Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953581-step-22",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953581",
+    "service": "test-macos-latest-3-11-trio",
+    "name": "Post Run actions/checkout@v7",
+    "start": "2026-11-16T14:35:52Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133367953581-step-23",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133367953581",
+    "service": "test-macos-latest-3-11-trio",
+    "name": "Complete job",
+    "start": "2026-11-16T14:35:52Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133369944856",
+    "trace_id": "run-43887039806",
+    "parent_id": "run-43887039806",
+    "service": "finish-coveralls",
+    "name": "Finish Coveralls",
+    "start": "2026-11-16T14:37:17Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133369944856-step-1",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133369944856",
+    "service": "finish-coveralls",
+    "name": "Set up job",
+    "start": "2026-11-16T14:37:17Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133369944856-step-2",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133369944856",
+    "service": "finish-coveralls",
+    "name": "Finished",
+    "start": "2026-11-16T14:37:18Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133369944856-step-3",
+    "trace_id": "run-43887039806",
+    "parent_id": "job-133369944856",
+    "service": "finish-coveralls",
+    "name": "Complete job",
+    "start": "2026-11-16T14:37:19Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

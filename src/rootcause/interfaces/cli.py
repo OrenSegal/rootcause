@@ -2,12 +2,17 @@
 
 import asyncio
 import os
+from importlib import metadata
 from pathlib import Path
 from typing import Annotated
 
 import typer
 
+from rootcause.application.diff import compare as compare_results
+from rootcause.application.diff import diff_markdown, restrict
 from rootcause.application.evals import comparison_markdown
+from rootcause.application.lints import lint_markdown
+from rootcause.application.triage import failed_jobs, failed_steps, rule_of
 from rootcause.composition import (
     CORPUS,
     EffortLevel,
@@ -21,12 +26,14 @@ from rootcause.composition import (
     discover,
     fetch_ci_case,
     investigate,
+    ladder_replay,
     load_case,
     load_ci_raw,
     load_sweep_spec,
     open_events,
     plan_sweep,
     provider_factory,
+    read_results,
     retrieval_eval,
     run_suite,
     run_sweep,
@@ -36,6 +43,7 @@ from rootcause.composition import (
     write_sweep_report,
 )
 from rootcause.domain.answers import Diagnosis, Outcome
+from rootcause.domain.scenario import Case, TruthClass, category_class
 
 app = typer.Typer(no_args_is_help=True, add_completion=False)
 
@@ -60,6 +68,7 @@ EXIT_CODES: dict[Outcome, int] = {
     Outcome.REFUSED: 4,
 }
 EVAL_BELOW_THRESHOLD = 1
+DIFF_REGRESSION = 1
 
 
 def _require_scenarios(root: Path) -> None:
@@ -242,6 +251,81 @@ def report_cmd(
     typer.echo(write_sweep_report(out, strict_service=strict_service))
 
 
+@app.command("diff")
+def diff_cmd(
+    a: Annotated[
+        str, typer.Argument(metavar="A", help="Baseline: a JSONL file, or SWEEP_DIR:CONFIG.")
+    ],
+    b: Annotated[str, typer.Argument(metavar="B", help="Candidate, in either form.")],
+    intersect: Annotated[
+        bool, typer.Option("--intersect", help="Drop cases present on one side only.")
+    ] = False,
+    fail_on_regression: Annotated[
+        bool, typer.Option("--fail-on-regression", help="Exit 1 when A is better than B.")
+    ] = False,
+    strict_service: StrictService = False,
+    class_: Annotated[
+        TruthClass | None,
+        typer.Option(
+            "--class",
+            help="Only cases of this truth class (change or not_change). The class comes "
+            "from class-graded sweep rows, or a truth_class field in a JSONL file.",
+        ),
+    ] = None,
+    cases: Annotated[
+        Path | None,
+        typer.Option(help="Only the case ids listed in this file, one per line."),
+    ] = None,
+    json_out: Annotated[bool, typer.Option("--json", help="Print the result as JSON.")] = False,
+) -> None:
+    """Did B beat A, or is the gap noise? Pairs the two result sets by case. A JSONL file
+    has one run per line: {"case": str, "passed": bool, "cost": float, "error": bool},
+    cost and error optional. Runs marked as errors count toward cost, not the pass rate."""
+    try:
+        sides = [(s, read_results(s, strict_service=strict_service)) for s in (a, b)]
+        ids = cases.read_text().split() if cases else None
+        sides = restrict(sides, truth_class=class_, cases=ids)
+        report = compare_results(sides[0], sides[1], intersect=intersect)
+    except ValueError as e:
+        raise typer.BadParameter(str(e)) from e
+    typer.echo(report.model_dump_json(indent=2) if json_out else diff_markdown(report))
+    if fail_on_regression and report.verdict == "a_better":
+        raise typer.Exit(DIFF_REGRESSION)
+
+
+@app.command("ladder")
+def ladder_cmd(
+    sweep_dir: Annotated[Path, typer.Argument(help="A finished sweep results directory.")],
+    cheap: Annotated[str, typer.Option(help="Config answering what the rules leave.")],
+    strong: Annotated[str, typer.Option(help="Config for answers a lint flags.")],
+    out: Annotated[
+        Path | None,
+        typer.Option(help="Write the ladder's runs here as JSONL, for `rootcause diff`."),
+    ] = None,
+) -> None:
+    """Replay a finished sweep as a triage ladder, with no model calls: the rules
+    first, the cheap config where they abstain, the strong config where a lint flags
+    the cheap answer. Reads the sweep without writing to it."""
+    try:
+        result = asyncio.run(ladder_replay(sweep_dir, cheap, strong))
+    except ValueError as e:
+        raise typer.BadParameter(str(e)) from e
+    lines = [result.replay.markdown(), "| rule | answered | passed |", "|---|---|---|"]
+    for rule in sorted({r for _, r, _ in result.rules}):
+        hits = [ok for _, r, ok in result.rules if r == rule]
+        lines.append(f"| {rule} | {len(hits)} | {sum(hits)} |")
+    lines += [
+        "",
+        lint_markdown(result.lints, "Lints on every answer"),
+        lint_markdown(result.lints_after_rules, "Lints on answers where the rules abstained"),
+    ]
+    typer.echo("\n".join(lines))
+    if out is not None:
+        records = [s.record() for s in result.replay.steps]
+        out.write_text("".join(r.model_dump_json(exclude={"error"}) + "\n" for r in records))
+        typer.echo(f"wrote {len(records)} runs to {out}")
+
+
 @app.command("ci-triage")
 def ci_triage_cmd(
     repo: Annotated[str | None, typer.Option(help="owner/name, with --run.")] = None,
@@ -269,28 +353,80 @@ def ci_triage_cmd(
     result = asyncio.run(
         triage_ci(case, llm, events=open_events(runlog), budget_usd=budget_usd, mode=mode)
     )
-    body = ci_comment(result.answer, provider=llm.name, outcome=result.outcome)
+    body = ci_comment(case, result.answer, provider=llm.name, outcome=result.outcome)
     typer.echo(body)
     if comment_md:
         comment_md.write_text(body)
     raise typer.Exit(EXIT_CODES[result.outcome])
 
 
-def ci_comment(d: Diagnosis | None, *, provider: str, outcome: Outcome) -> str:
-    lines = ["### rootcause: likely cause of this CI failure", ""]
+CI_HEADING = "### CI failure triage"
+NO_RULE_FIRED = "No rule fired; this needs a person or a model."
+MAX_LOG_LINES = 5
+MAX_LINE_CHARS = 240
+
+
+def _plain(text: str) -> str:
+    """Text from a log, a commit or a model, made safe for a PR comment: it can't close a
+    code span or mention anyone. On a fork's pull request all of it is untrusted."""
+    return text.replace("`", "'").replace("@", "@​")
+
+
+def _version() -> str:
+    try:
+        return metadata.version("rootcause-agent")
+    except metadata.PackageNotFoundError:
+        return "dev"
+
+
+def _what_failed(case: Case) -> str:
+    spans = case.store.spans
+    failed = failed_jobs(spans)
+    if not failed:
+        return _plain(case.scenario.alert.summary)
+    names = [f"`{_plain(j.name)}`" for j in failed[:3]]
+    more = f" and {len(failed) - 3} more" if len(failed) > 3 else ""
+    steps = failed_steps(spans, failed[0])
+    at = f" at step `{_plain(steps[0])}`" if steps and len(failed) == 1 else ""
+    if len(names) == 1:
+        return f"Job {names[0]} failed{at}."
+    listed = f"{', '.join(names[:-1])} and {names[-1]}" if not more else ", ".join(names)
+    return f"Jobs {listed}{more} failed."
+
+
+def ci_comment(case: Case, d: Diagnosis | None, *, provider: str, outcome: Outcome) -> str:
+    """Two or three plain sentences: what failed, whether the change under test caused
+    it and which commit, then the log lines behind it, and a one-line footer."""
+    rule = rule_of(d.summary) if d is not None else None
+    lines = [CI_HEADING, ""]
     if d is None:
-        lines.append(f"No diagnosis ({outcome}).")
+        why = NO_RULE_FIRED if provider == "rules" else f"No diagnosis ({outcome})."
+        lines.append(f"{_what_failed(case)} {why}")
     else:
-        lines += [
-            f"**{d.category}** in `{d.service}` (confidence {d.confidence:.2f})",
-            "",
-            d.summary,
-            "",
-            f"Evidence: {', '.join(f'`{e}`' for e in d.evidence)}",
-            "",
-            f"Suggested next step: {d.recommended_action}",
-        ]
-    lines += ["", f"<sub>Investigated by {provider}. Review before acting.</sub>"]
+        reason = (d.summary.removeprefix(f"rule {rule}: ") if rule else d.summary).strip()
+        reason = _plain(reason[:1].upper() + reason[1:]).rstrip(".")
+        deploys = {dep.id: dep for dep in case.store.deploys}
+        commits = [deploys[e] for e in d.evidence if e in deploys]
+        if category_class(d.category) == "change":
+            verdict = "The change under test likely caused it"
+            if commits:
+                c = commits[0]
+                verdict += f": commit `{c.id}` ({_plain(c.summary)})"
+        else:
+            verdict = "The change under test likely did not cause it"
+        lines.append(f"{_what_failed(case)} {verdict}. {reason}.")
+        logs = {line.id: line for line in case.store.logs}
+        cited = [logs[e] for e in d.evidence if e in logs][:MAX_LOG_LINES]
+        if cited:
+            lines += ["", "The log lines behind it:", "", "```text"]
+            lines += [f"{_plain(line.message)[:MAX_LINE_CHARS]}" for line in cited]
+            lines.append("```")
+    by = f"{provider} provider" + (f", rule {rule}" if rule else "")
+    if d is None:
+        by += ", no rule fired" if provider == "rules" else ""
+    else:
+        by += ". Review before acting"
+    lines += ["", f"<sub>rootcause {_version()}, {by}.</sub>"]
     return "\n".join(lines) + "\n"
 
 

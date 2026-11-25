@@ -1,0 +1,17 @@
+[
+  {
+    "id": "2d83fe6f96",
+    "service": "pandas",
+    "version": "2d83fe6f96",
+    "ts": "2026-11-18T23:12:57Z",
+    "author": "jbrockmendel",
+    "summary": "BUG: length-1 value silently dropped by .loc[:, col] on an empty DataFrame (GH#56203)",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "doc/source/whatsnew/v3.2.0.rst",
+      "pandas/core/indexing.py",
+      "pandas/tests/indexing/test_loc.py"
+    ]
+  }
+]

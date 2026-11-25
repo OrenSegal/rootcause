@@ -1,0 +1,17 @@
+[
+  {
+    "id": "43f09e2b71",
+    "service": "joblib",
+    "version": "43f09e2b71",
+    "ts": "2026-10-13T04:35:58Z",
+    "author": "linjiaye929",
+    "summary": "FIX publish cache layout metadata atomically",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "CHANGES.rst",
+      "joblib/_store_backends.py",
+      "joblib/test/test_store_backends.py"
+    ]
+  }
+]

@@ -1,0 +1,21 @@
+# Mined from https://github.com/scrapy/scrapy/actions/runs/43506370153 (scrapy/scrapy,
+# licence BSD-3-Clause). Fixed by run
+# https://github.com/scrapy/scrapy/actions/runs/43865789244. Label rule: a rerun of the
+# same commit passed. Fix touched: nothing (rerun).
+id: ci-scrapy-43506370153
+title: skip nested async function in is_generator_with_return_value
+alert:
+  severity: ci
+  service: pre-commit
+  summary: 'workflow CI failed on nested_async_def_is_generator_with_return_value at bde6b65e02:
+    step ''Run pre-commit/action@2c7b3805fd2a0fd8c1884dcaebf91fc102a13ecd'' in job ''pre-commit''
+    failed.'
+truth:
+  category: infrastructure
+  service: scrapy
+  required_evidence_any:
+  - log-0352
+  - log-0361
+  - log-0631
+  - log-0648
+provenance: recorded

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "a446dc9f35",
+    "service": "coveragepy",
+    "version": "a446dc9f35",
+    "ts": "2026-11-13T07:46:34Z",
+    "author": "KRRT7",
+    "summary": "fix: follow greenlet switches so lines aren't recorded in the wrong file",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "coverage/collector.py",
+      "coverage/ctracer/tracer.c",
+      "coverage/ctracer/tracer.h",
+      "coverage/tracer.pyi",
+      "news/20261113_150000_turcioskevinr_greenlet_switch_lines.rst",
+      "tests/test_concurrency.py"
+    ]
+  }
+]

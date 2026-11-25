@@ -1,0 +1,14 @@
+[
+  {
+    "author": "YeshwanthRajSelvaraj",
+    "committedDate": "2026-08-28T16:57:12Z",
+    "messageHeadline": "Update urlize test cases for trailing punctuation handling",
+    "oid": "088afb5f67f95c82f22458cf8e2f023baf7ba2d3",
+    "files": [
+      {
+        "filename": "tests/test_filters.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

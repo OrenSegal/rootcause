@@ -1,0 +1,14 @@
+id: ci-cibuildwheel-42578732710
+title: '[Bot] Update dependencies'
+alert:
+  severity: ci
+  service: linters-mypy-ruff-etc
+  summary: 'workflow Test failed on update-dependencies-pr at d7e33c2ca1: step ''Run j178/prek-action@44924fe9ef4a6f88253c4b6b1bf11c689d3ce53d''
+    in job ''Linters (mypy, ruff, etc.)'' failed.'
+truth:
+  grading: class
+  category: infrastructure
+  service: cibuildwheel
+  required_evidence_any:
+  - log-0243
+provenance: recorded

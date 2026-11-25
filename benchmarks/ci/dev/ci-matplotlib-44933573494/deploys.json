@@ -1,0 +1,17 @@
+[
+  {
+    "id": "28278aff69",
+    "service": "matplotlib",
+    "version": "28278aff69",
+    "ts": "2026-11-21T17:55:19Z",
+    "author": "abdulrafey2005",
+    "summary": "Fix boxplot with empty data and tick labels",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "lib/matplotlib/axes/_axes.py",
+      "lib/matplotlib/cbook.py",
+      "lib/matplotlib/tests/test_axes.py"
+    ]
+  }
+]

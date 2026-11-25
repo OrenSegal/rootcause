@@ -1,0 +1,26 @@
+[
+  {
+    "author": "davidbrochart",
+    "committedDate": "2026-11-16T14:26:25Z",
+    "messageHeadline": "Expose run_sync_soon through the low-level API",
+    "oid": "a22b2a86fc848702dc95dbb358836aadca517c34",
+    "files": [
+      {
+        "filename": "docs/api.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "docs/signals.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "src/anyio/lowlevel.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_lowlevel.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

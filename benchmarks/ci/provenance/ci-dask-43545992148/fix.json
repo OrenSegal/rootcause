@@ -1,0 +1,13 @@
+{
+  "fixed_run": "https://github.com/dask/dask/actions/runs/43550418961",
+  "fixed_sha": "81b9b36af6d457e775932d8196811fd51668bce6",
+  "commits": [
+    "81b9b36af6d457e775932d8196811fd51668bce6"
+  ],
+  "files": [
+    "dask/array/routines.py",
+    "dask/array/tests/test_routines.py"
+  ],
+  "merges": [],
+  "status": "ahead"
+}

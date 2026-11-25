@@ -1,0 +1,14 @@
+id: ci-scrapy-42512822031
+title: Support coros in schedulers and dupefilters.
+alert:
+  severity: ci
+  service: tests-windows-3-11-9-min
+  summary: 'workflow CI failed on scheduler-dupefilter-coroutines at 0c2e3e8385: step ''Run
+    tests'' in job ''tests (windows, 3.11.9, min)'' failed.'
+truth:
+  grading: class
+  category: infrastructure
+  service: scrapy
+  required_evidence_any:
+  - log-0549
+provenance: recorded

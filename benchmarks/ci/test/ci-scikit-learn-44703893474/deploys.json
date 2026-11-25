@@ -1,0 +1,15 @@
+[
+  {
+    "id": "1fd1de3e12",
+    "service": "scikit-learn",
+    "version": "1fd1de3e12",
+    "ts": "2026-11-20T08:36:10Z",
+    "author": "lorentzenchr",
+    "summary": "DOC revision of linear models section",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "examples/release_highlights/plot_release_highlights_1_10_0.py"
+    ]
+  }
+]

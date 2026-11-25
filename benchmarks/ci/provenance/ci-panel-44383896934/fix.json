@@ -1,0 +1,19 @@
+{
+  "fixed_run": "https://github.com/holoviz/panel/actions/runs/44391374267",
+  "fixed_sha": "449c9c02dbbdd7f8420cb1c3ace12b2b54eeb86f",
+  "commits": [
+    "89f6b9a811e3098d0b0863ce4fb5f272c0e85610",
+    "449c9c02dbbdd7f8420cb1c3ace12b2b54eeb86f"
+  ],
+  "files": [
+    "panel/io/fastapi.py",
+    "panel/io/location.py",
+    "panel/tests/io/test_location.py",
+    "panel/tests/ui/io/assets/theme.css",
+    "panel/tests/ui/io/test_location.py",
+    "panel/tests/ui/io/test_resources.py",
+    "panel/theme/base.py"
+  ],
+  "merges": [],
+  "status": "ahead"
+}

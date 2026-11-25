@@ -1,0 +1,15 @@
+{
+  "fixed_run": "https://github.com/pandas-dev/pandas/actions/runs/44584723193",
+  "fixed_sha": "3ae179a0ba8047b88c757607fd7fb6117117602a",
+  "commits": [
+    "3ae179a0ba8047b88c757607fd7fb6117117602a"
+  ],
+  "files": [
+    "doc/source/whatsnew/v3.2.0.rst",
+    "pandas/plotting/_core.py",
+    "pandas/plotting/_matplotlib/core.py",
+    "pandas/plotting/_matplotlib/tools.py",
+    "pandas/tests/plotting/test_misc.py"
+  ],
+  "status": "ahead"
+}

@@ -1,0 +1,20 @@
+# Mined from https://github.com/ipython/ipython/actions/runs/39596535293
+# (ipython/ipython, licence BSD-3-Clause). Fixed by run
+# https://github.com/ipython/ipython/actions/runs/39598478561. Label rule: the fix
+# changed files exactly one tested commit touched. Fix touched:
+# docs/source/whatsnew/version0.11.rst, docs/source/whatsnew/version0.12.rst,
+# docs/source/whatsnew/version0.13.rst, docs/source/whatsnew/version1.0.rst,
+# docs/source/whatsnew/version2.0.rst, docs/source/whatsnew/version3.rst.
+id: ci-ipython-39596535293
+title: Clean docs
+alert:
+  severity: ci
+  service: build
+  summary: 'workflow Build docs failed on clean-docs at dcd1daacbd: step ''Build docs'' in
+    job ''build'' failed.'
+truth:
+  category: bad_code_deploy
+  service: ipython
+  required_evidence_any:
+  - dcd1daacbd
+provenance: recorded

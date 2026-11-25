@@ -1,0 +1,12 @@
+{
+  "fixed_run": "https://github.com/encode/django-rest-framework/actions/runs/34096394995",
+  "fixed_sha": "f790f5e4244679543ec84113d27925bd55661e22",
+  "commits": [
+    "f790f5e4244679543ec84113d27925bd55661e22"
+  ],
+  "files": [
+    "rest_framework/relations.py"
+  ],
+  "merges": [],
+  "status": "ahead"
+}

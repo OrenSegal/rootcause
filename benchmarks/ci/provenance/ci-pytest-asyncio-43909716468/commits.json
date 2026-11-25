@@ -1,0 +1,22 @@
+[
+  {
+    "author": "krishashah-03",
+    "committedDate": "2026-11-16T16:36:00Z",
+    "messageHeadline": "Allow event loop policies that reject set_event_loop (#1233)",
+    "oid": "1a505aa7e90d6417c2697ee77c8bc8b74df5adab",
+    "files": [
+      {
+        "filename": "changelog.d/1233.fixed.rst",
+        "status": "added"
+      },
+      {
+        "filename": "pytest_asyncio/plugin.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_set_event_loop.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

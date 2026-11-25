@@ -1,0 +1,15 @@
+[
+  {
+    "id": "cb1d609cd6",
+    "service": "geopandas",
+    "version": "cb1d609cd6",
+    "ts": "2026-09-06T12:45:12Z",
+    "author": "martinfleis",
+    "summary": "TST: do not use opentopomap tiles in tests",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "geopandas/tests/test_plotting.py"
+    ]
+  }
+]

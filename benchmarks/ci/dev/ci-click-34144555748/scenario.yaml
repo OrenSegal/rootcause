@@ -1,0 +1,15 @@
+id: ci-click-34144555748
+title: '[rejected AI] Fix Windows click.edit notepad launch failures'
+alert:
+  severity: ci
+  service: typing
+  summary: 'workflow Tests failed on fix/3840-windows-click-edit-notepad at 3068b299db: step
+    ''Run uv run --locked --no-default-groups --group dev tox run -e typing'' in job ''typing''
+    failed.'
+truth:
+  grading: class
+  category: bad_code_deploy
+  service: click
+  required_evidence_any:
+  - 3068b299db
+provenance: recorded

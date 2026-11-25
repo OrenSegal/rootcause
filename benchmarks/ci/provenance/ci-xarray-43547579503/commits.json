@@ -1,0 +1,22 @@
+[
+  {
+    "author": "jaesungkr",
+    "committedDate": "2026-11-14T01:41:35Z",
+    "messageHeadline": "Fix map_blocks reconstruction of MultiIndex coordinates",
+    "oid": "a4b90cb203625dee8e1199c37578f0c54198a597",
+    "files": [
+      {
+        "filename": "doc/whats-new.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "xarray/core/parallel.py",
+        "status": "modified"
+      },
+      {
+        "filename": "xarray/tests/test_dask.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

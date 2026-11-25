@@ -1,0 +1,14 @@
+{
+  "fixed_run": "https://github.com/networkx/networkx/actions/runs/44364152267",
+  "fixed_sha": "d2b080b8807392c8d7e2e230f9c5c2d072e08b14",
+  "commits": [
+    "7a41a92843bf25e4cb3b405f88f9259c84899b6a",
+    "d2b080b8807392c8d7e2e230f9c5c2d072e08b14"
+  ],
+  "files": [
+    "networkx/readwrite/json_graph/cytoscape.py",
+    "networkx/readwrite/json_graph/tests/test_cytoscape.py",
+    "pixi.lock"
+  ],
+  "status": "ahead"
+}

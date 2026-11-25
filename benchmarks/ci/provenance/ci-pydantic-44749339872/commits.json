@@ -1,0 +1,54 @@
+[
+  {
+    "author": "alexmojaki",
+    "committedDate": "2026-11-20T13:56:27Z",
+    "messageHeadline": "Benchmark JSON container union branch selection",
+    "oid": "58572a0f43843797a98c802062d6f019a179f208",
+    "files": [
+      {
+        "filename": "tests/benchmarks/test_json_unions.py",
+        "status": "added"
+      }
+    ]
+  },
+  {
+    "author": "alexmojaki",
+    "committedDate": "2026-11-20T13:56:41Z",
+    "messageHeadline": "Benchmark checked JSON skips for bytes and strings",
+    "oid": "f2b71eeea6e2487108d952c2b7f80718f4399467",
+    "files": [
+      {
+        "filename": "tests/benchmarks/test_json_checked_skip.py",
+        "status": "added"
+      }
+    ]
+  },
+  {
+    "author": "alexmojaki",
+    "committedDate": "2026-11-20T13:57:04Z",
+    "messageHeadline": "Benchmark after validators on JSON containers",
+    "oid": "91667d013bc1cfbcfdbb59e0c840f59e330b6837",
+    "files": [
+      {
+        "filename": "tests/benchmarks/test_json_wrappers.py",
+        "status": "added"
+      }
+    ]
+  },
+  {
+    "author": "alexmojaki",
+    "committedDate": "2026-11-20T14:00:20Z",
+    "messageHeadline": "Merge commit '91667' into codex/json-cursor-expand-unions",
+    "oid": "fe5cff33bbe69e784198497ad49bcd0b02f15ade",
+    "files": [
+      {
+        "filename": "tests/benchmarks/test_json_checked_skip.py",
+        "status": "added"
+      },
+      {
+        "filename": "tests/benchmarks/test_json_wrappers.py",
+        "status": "added"
+      }
+    ]
+  }
+]

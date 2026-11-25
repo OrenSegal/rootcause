@@ -1,0 +1,18 @@
+# Mined from https://github.com/networkx/networkx/actions/runs/42599643490
+# (networkx/networkx, licence NOASSERTION). Fixed by run
+# https://github.com/networkx/networkx/actions/runs/42601214725. Label rule: the fix
+# changed files exactly one tested commit touched. Fix touched:
+# networkx/algorithms/traversal/tests/test_dfs.py.
+id: ci-networkx-42599643490
+title: Fix DFS traversal behavior when depth_limit is 0
+alert:
+  severity: ci
+  service: format
+  summary: 'workflow style failed on fix-dfs-depth-limit-zero at b9500b54de: step ''Lint''
+    in job ''format'' failed.'
+truth:
+  category: bad_code_deploy
+  service: networkx
+  required_evidence_any:
+  - b9500b54de
+provenance: recorded

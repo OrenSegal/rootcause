@@ -1,0 +1,90 @@
+[
+  {
+    "author": "notatallshaw",
+    "committedDate": "2026-11-08T05:57:49Z",
+    "messageHeadline": "Lock development and CI dependencies with Nab",
+    "oid": "6272660787be30b73ccc65dd79c3bb7f803dab18",
+    "files": [
+      {
+        "filename": ".devcontainer/postCreate.sh",
+        "status": "modified"
+      },
+      {
+        "filename": ".github/workflows/ci.yml",
+        "status": "modified"
+      },
+      {
+        "filename": ".github/workflows/update-rtd-redirects.yml",
+        "status": "modified"
+      },
+      {
+        "filename": ".pre-commit-config.yaml",
+        "status": "modified"
+      },
+      {
+        "filename": ".readthedocs.yml",
+        "status": "modified"
+      },
+      {
+        "filename": "docs/html/development/getting-started.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "noxfile.py",
+        "status": "modified"
+      },
+      {
+        "filename": "pylock.dev.toml",
+        "status": "added"
+      },
+      {
+        "filename": "pyproject.toml",
+        "status": "modified"
+      },
+      {
+        "filename": "tools/constraints.txt",
+        "status": "removed"
+      },
+      {
+        "filename": "tools/protected_pip.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tools/pylock.update-rtd-redirects.toml",
+        "status": "added"
+      },
+      {
+        "filename": "tools/release/__init__.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "notatallshaw",
+    "committedDate": "2026-11-08T05:57:51Z",
+    "messageHeadline": "Refresh all dependency locks in the weekly update",
+    "oid": "304a881b99c1fadf80407e0668cc2cd65503edcc",
+    "files": [
+      {
+        "filename": ".github/scripts/create_lock_update_pr.sh",
+        "status": "added"
+      },
+      {
+        "filename": ".github/workflows/update-build-project-lock.yml",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "notatallshaw",
+    "committedDate": "2026-11-08T06:20:11Z",
+    "messageHeadline": "Add news for development and CI locks",
+    "oid": "e9ce1dbc8c4860bf81f63381efcecbdd066260c9",
+    "files": [
+      {
+        "filename": "news/14430.process.rst",
+        "status": "added"
+      }
+    ]
+  }
+]

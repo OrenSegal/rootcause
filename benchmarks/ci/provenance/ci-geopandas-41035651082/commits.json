@@ -1,0 +1,14 @@
+[
+  {
+    "author": "jorisvandenbossche",
+    "committedDate": "2026-10-30T09:42:38Z",
+    "messageHeadline": "CI: use gh release instead of softprops/action-gh-release",
+    "oid": "0b6db8414d897268951bdcdf5c194cbcb321bc81",
+    "files": [
+      {
+        "filename": ".github/workflows/release.yml",
+        "status": "modified"
+      }
+    ]
+  }
+]

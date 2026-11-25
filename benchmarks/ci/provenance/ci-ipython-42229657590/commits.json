@@ -1,0 +1,18 @@
+[
+  {
+    "author": "Parinika",
+    "committedDate": "2026-11-06T13:54:32Z",
+    "messageHeadline": "Fix dictionary mutation during pretty printing",
+    "oid": "e11b13a5f84ee63dadab2d6e28adc64d859e33ac",
+    "files": [
+      {
+        "filename": "IPython/lib/pretty.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_pretty.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

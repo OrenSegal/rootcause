@@ -1,0 +1,18 @@
+# Mined from https://github.com/ipython/ipython/actions/runs/41062158624
+# (ipython/ipython, licence BSD-3-Clause). Fixed by run
+# https://github.com/ipython/ipython/actions/runs/41454090291. Label rule: the fix
+# changed files exactly one tested commit touched. Fix touched:
+# tests/test_interactiveshell.py.
+id: ci-ipython-41062158624
+title: Close cells the pseudo-sync runner cannot finish
+alert:
+  severity: ci
+  service: oldest-deps-ubuntu-latest
+  summary: 'workflow Run tests failed on fix_generator_exit at 6fdda9f958: step ''pytest''
+    in job ''oldest-deps (ubuntu-latest)'' failed.'
+truth:
+  category: bad_code_deploy
+  service: ipython
+  required_evidence_any:
+  - 6fdda9f958
+provenance: recorded

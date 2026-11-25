@@ -1,0 +1,17 @@
+[
+  {
+    "id": "f993a0ff6b",
+    "service": "dask",
+    "version": "f993a0ff6b",
+    "ts": "2026-11-20T13:13:40Z",
+    "author": "ViktorBystrov72",
+    "summary": "[unsupervised AI] \u0418\u0441\u043f\u0440\u0430\u0432\u0438\u0442\u044c \u0437\u0430\u0432\u0438\u0441\u0438\u043c\u043e\u0441\u0442\u0438 \u0433\u0440\u0430\u0444\u0430 \u043f\u0440\u0438 \u043f\u0440\u0438\u0441\u0432\u0430\u0438\u0432\u0430\u043d\u0438\u0438 \u0441\u0440\u0435\u0437\u0443",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "dask/array/core.py",
+      "dask/array/slicing.py",
+      "dask/array/tests/test_array_core.py"
+    ]
+  }
+]

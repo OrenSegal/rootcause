@@ -1,0 +1,22 @@
+[
+  {
+    "id": "7476c9c61b",
+    "service": "cibuildwheel",
+    "version": "7476c9c61b",
+    "ts": "2026-10-24T13:33:26Z",
+    "author": "dependabot[bot]",
+    "summary": "chore(deps): bump the actions group with 2 updates",
+    "config_before": {
+      ".github/workflows/update-dependencies.yml": "previous",
+      ".github/workflows/zizmor.yml": "previous"
+    },
+    "config_after": {
+      ".github/workflows/update-dependencies.yml": "modified in 7476c9c61b",
+      ".github/workflows/zizmor.yml": "modified in 7476c9c61b"
+    },
+    "files": [
+      ".github/workflows/update-dependencies.yml",
+      ".github/workflows/zizmor.yml"
+    ]
+  }
+]

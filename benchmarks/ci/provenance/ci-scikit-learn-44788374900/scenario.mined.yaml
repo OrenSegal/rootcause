@@ -1,0 +1,18 @@
+# Mined from https://github.com/scikit-learn/scikit-learn/actions/runs/44788374900
+# (scikit-learn/scikit-learn, licence BSD-3-Clause). Fixed by run
+# https://github.com/scikit-learn/scikit-learn/actions/runs/44927486537. Label rule: the
+# fix changed files exactly one tested commit touched. Fix touched:
+# sklearn/utils/tests/test_array_api.py.
+id: ci-scikit-learn-44788374900
+title: FIX move_estimator_to should not convert non-numeric/non-boolean array attributes
+alert:
+  severity: ci
+  service: lint
+  summary: 'workflow Unit tests failed on fix-35109-move-estimator-to-non-numeric at d34a8b11f9:
+    step ''Run linters'' in job ''Lint'' failed.'
+truth:
+  category: bad_code_deploy
+  service: scikit-learn
+  required_evidence_any:
+  - d34a8b11f9
+provenance: recorded

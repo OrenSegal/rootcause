@@ -1,0 +1,14 @@
+id: ci-poetry-core-33894335120
+title: 'fix: str() of a range whose upper bound is all zeros raised IndexError'
+alert:
+  severity: ci
+  service: ubuntu-pypy-3-11
+  summary: 'workflow Tests failed on fix-wildcard-zero-upper-bound at fb7b595c10: step ''Install
+    dependencies'' in job ''Ubuntu / pypy-3.11'' failed.'
+truth:
+  grading: class
+  category: infrastructure
+  service: poetry-core
+  required_evidence_any:
+  - log-0296
+provenance: recorded

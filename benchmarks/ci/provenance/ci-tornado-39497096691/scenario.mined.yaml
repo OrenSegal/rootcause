@@ -1,0 +1,18 @@
+# Mined from https://github.com/tornadoweb/tornado/actions/runs/39497096691
+# (tornadoweb/tornado, licence Apache-2.0). Fixed by run
+# https://github.com/tornadoweb/tornado/actions/runs/39497096691. Label rule: the first
+# attempt failed and a re-run of the same pull-request run passed. Fix touched: nothing
+# (rerun).
+id: ci-tornado-39497096691
+title: 'build(deps): bump certifi from 2026.7.22 to 2026.10.19'
+alert:
+  severity: ci
+  service: run-full-tests-pypy-3-11-v8-x-pypy3
+  summary: 'workflow Test failed on dependabot/pip/certifi-2026.10.19 at 9c9fa3c131: step
+    ''Run test suite'' in job ''Run full tests (pypy-3.11-v8.x, pypy3)'' failed.'
+truth:
+  category: infrastructure
+  service: tornado
+  required_evidence_any:
+  - log-0316
+provenance: recorded

@@ -1,0 +1,34 @@
+[
+  {
+    "author": "jbrockmendel",
+    "committedDate": "2026-11-19T17:34:15Z",
+    "messageHeadline": "ENH: SeriesGroupBy.transform accepts a list of functions (GH#17309)",
+    "oid": "09a8de01587a1a7109b39b2f3fabfaedd828a7f6",
+    "files": [
+      {
+        "filename": "doc/source/whatsnew/v3.2.0.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "pandas/core/groupby/generic.py",
+        "status": "modified"
+      },
+      {
+        "filename": "pandas/core/groupby/groupby.py",
+        "status": "modified"
+      },
+      {
+        "filename": "pandas/tests/groupby/test_apply.py",
+        "status": "modified"
+      },
+      {
+        "filename": "pandas/tests/groupby/transform/test_numba.py",
+        "status": "modified"
+      },
+      {
+        "filename": "pandas/tests/groupby/transform/test_transform.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

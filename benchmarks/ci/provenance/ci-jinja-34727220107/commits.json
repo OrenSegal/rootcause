@@ -1,0 +1,14 @@
+[
+  {
+    "author": "gcoinstash-cmd",
+    "committedDate": "2026-09-13T00:08:45Z",
+    "messageHeadline": "test(filters): add unit tests for default filter truthiness and None handling",
+    "oid": "5af3d943ac89014ae1d220a9e030536844fb4b35",
+    "files": [
+      {
+        "filename": "tests/test_filter_default_cases.py",
+        "status": "added"
+      }
+    ]
+  }
+]

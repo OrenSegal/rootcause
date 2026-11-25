@@ -1,0 +1,22 @@
+[
+  {
+    "author": "Mrun25",
+    "committedDate": "2026-11-08T09:32:40Z",
+    "messageHeadline": "Fixed buffered TCP receives after explicit closure on asyncio",
+    "oid": "c5cf158f7deb400dca53b28a3958195d2c8ad645",
+    "files": [
+      {
+        "filename": "changelog.d/1466.fixed.rst",
+        "status": "added"
+      },
+      {
+        "filename": "src/anyio/_backends/_asyncio.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_sockets.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "fixed_run": "https://github.com/agronholm/anyio/actions/runs/43970837808",
+  "fixed_sha": "96e8bf34bb38e510352f108b8a38ccbf821cdf2a",
+  "commits": [
+    "96e8bf34bb38e510352f108b8a38ccbf821cdf2a"
+  ],
+  "files": [
+    "tests/test_pytest_plugin.py"
+  ],
+  "status": "ahead"
+}

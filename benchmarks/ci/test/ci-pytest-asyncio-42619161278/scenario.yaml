@@ -1,0 +1,14 @@
+id: ci-pytest-asyncio-42619161278
+title: 'feat: warn about unhandled event loop exceptions'
+alert:
+  severity: ci
+  service: run-linters
+  summary: 'workflow CI failed on feat/unhandled-loop-warnings at 35b5eccd46: step ''Run pre-commit
+    checks'' in job ''Run linters'' failed.'
+truth:
+  grading: class
+  category: bad_code_deploy
+  service: pytest-asyncio
+  required_evidence_any:
+  - 35b5eccd46
+provenance: recorded

@@ -1,0 +1,12 @@
+{
+  "fixed_run": "https://github.com/dask/dask/actions/runs/43345786855",
+  "fixed_sha": "3497a666a0b3e858b6e0d16cbab5c01a178cd01a",
+  "commits": [
+    "3497a666a0b3e858b6e0d16cbab5c01a178cd01a"
+  ],
+  "files": [
+    "dask/dataframe/dask_expr/_collection.py"
+  ],
+  "merges": [],
+  "status": "ahead"
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "author": "officialayush5839-arch",
+    "committedDate": "2026-10-21T03:20:08Z",
+    "messageHeadline": "fix(routing): strip leading slash from path in Mount.url_path_for (#3686)",
+    "oid": "44d79149f170c9154ac227f74c18b18967e62347",
+    "files": [
+      {
+        "filename": "starlette/routing.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_routing.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/types.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

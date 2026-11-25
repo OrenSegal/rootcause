@@ -1,0 +1,18 @@
+# Mined from https://github.com/fastapi/fastapi/actions/runs/43418818964
+# (fastapi/fastapi, licence MIT). Fixed by run
+# https://github.com/fastapi/fastapi/actions/runs/43421096992. Label rule: the fix only
+# changed config one tested commit touched. Fix touched: .github/workflows/actions.lock,
+# .github/workflows/zizmor.yml, pyproject.toml, uv.lock.
+id: ci-fastapi-43418818964
+title: "\U0001F512\uFE0F Generate GH actions worklow lockfile and bump Zizmor"
+alert:
+  severity: ci
+  service: pre-commit
+  summary: 'workflow pre-commit failed on gh-actions-lockfile at 8c59d8c7c5: step ''Error
+    out on pre-commit errors'' in job ''pre-commit'' failed.'
+truth:
+  category: config_change
+  service: fastapi
+  required_evidence_any:
+  - 8c59d8c7c5
+provenance: recorded

@@ -1,0 +1,362 @@
+[
+  {
+    "span_id": "run-43388470319",
+    "trace_id": "run-43388470319",
+    "parent_id": null,
+    "service": "quality",
+    "name": "Quality",
+    "start": "2026-11-13T07:49:07Z",
+    "duration_ms": 378000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-131762439762",
+    "trace_id": "run-43388470319",
+    "parent_id": "run-43388470319",
+    "service": "check-changed-files",
+    "name": "Check changed files",
+    "start": "2026-11-13T07:49:10Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-131762439762-step-1",
+    "trace_id": "run-43388470319",
+    "parent_id": "job-131762439762",
+    "service": "check-changed-files",
+    "name": "Set up job",
+    "start": "2026-11-13T07:49:11Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-131762439762-step-2",
+    "trace_id": "run-43388470319",
+    "parent_id": "job-131762439762",
+    "service": "check-changed-files",
+    "name": "Check out the repo",
+    "start": "2026-11-13T07:49:12Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-131762439762-step-3",
+    "trace_id": "run-43388470319",
+    "parent_id": "job-131762439762",
+    "service": "check-changed-files",
+    "name": "Examine changed files",
+    "start": "2026-11-13T07:49:13Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-131762439762-step-6",
+    "trace_id": "run-43388470319",
+    "parent_id": "job-131762439762",
+    "service": "check-changed-files",
+    "name": "Post Check out the repo",
+    "start": "2026-11-13T07:49:14Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-131762439762-step-7",
+    "trace_id": "run-43388470319",
+    "parent_id": "job-131762439762",
+    "service": "check-changed-files",
+    "name": "Complete job",
+    "start": "2026-11-13T07:49:14Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-131762499010",
+    "trace_id": "run-43388470319",
+    "parent_id": "run-43388470319",
+    "service": "build-docs",
+    "name": "Build docs",
+    "start": "2026-11-13T07:51:34Z",
+    "duration_ms": 231000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-131762499010-step-1",
+    "trace_id": "run-43388470319",
+    "parent_id": "job-131762499010",
+    "service": "build-docs",
+    "name": "Set up job",
+    "start": "2026-11-13T07:51:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-131762499010-step-2",
+    "trace_id": "run-43388470319",
+    "parent_id": "job-131762499010",
+    "service": "build-docs",
+    "name": "Check out the repo",
+    "start": "2026-11-13T07:51:35Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-131762499010-step-3",
+    "trace_id": "run-43388470319",
+    "parent_id": "job-131762499010",
+    "service": "build-docs",
+    "name": "Fetch origin/main",
+    "start": "2026-11-13T07:51:37Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-131762499010-step-4",
+    "trace_id": "run-43388470319",
+    "parent_id": "job-131762499010",
+    "service": "build-docs",
+    "name": "Install Python",
+    "start": "2026-11-13T07:51:38Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-131762499010-step-5",
+    "trace_id": "run-43388470319",
+    "parent_id": "job-131762499010",
+    "service": "build-docs",
+    "name": "Show environment",
+    "start": "2026-11-13T07:51:40Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-131762499010-step-6",
+    "trace_id": "run-43388470319",
+    "parent_id": "job-131762499010",
+    "service": "build-docs",
+    "name": "Install dependencies",
+    "start": "2026-11-13T07:51:40Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-131762499010-step-7",
+    "trace_id": "run-43388470319",
+    "parent_id": "job-131762499010",
+    "service": "build-docs",
+    "name": "Tox doc",
+    "start": "2026-11-13T07:51:42Z",
+    "duration_ms": 219000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-131762499010-step-13",
+    "trace_id": "run-43388470319",
+    "parent_id": "job-131762499010",
+    "service": "build-docs",
+    "name": "Post Install Python",
+    "start": "2026-11-13T07:55:21Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-131762499010-step-14",
+    "trace_id": "run-43388470319",
+    "parent_id": "job-131762499010",
+    "service": "build-docs",
+    "name": "Post Check out the repo",
+    "start": "2026-11-13T07:55:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-131762499010-step-15",
+    "trace_id": "run-43388470319",
+    "parent_id": "job-131762499010",
+    "service": "build-docs",
+    "name": "Complete job",
+    "start": "2026-11-13T07:55:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-131762499103",
+    "trace_id": "run-43388470319",
+    "parent_id": "run-43388470319",
+    "service": "check-types",
+    "name": "Check types",
+    "start": "2026-11-13T07:51:34Z",
+    "duration_ms": 27000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-131762499103-step-1",
+    "trace_id": "run-43388470319",
+    "parent_id": "job-131762499103",
+    "service": "check-types",
+    "name": "Set up job",
+    "start": "2026-11-13T07:51:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-131762499103-step-2",
+    "trace_id": "run-43388470319",
+    "parent_id": "job-131762499103",
+    "service": "check-types",
+    "name": "Check out the repo",
+    "start": "2026-11-13T07:51:35Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-131762499103-step-3",
+    "trace_id": "run-43388470319",
+    "parent_id": "job-131762499103",
+    "service": "check-types",
+    "name": "Install Python",
+    "start": "2026-11-13T07:51:37Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-131762499103-step-4",
+    "trace_id": "run-43388470319",
+    "parent_id": "job-131762499103",
+    "service": "check-types",
+    "name": "Install dependencies",
+    "start": "2026-11-13T07:51:38Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-131762499103-step-5",
+    "trace_id": "run-43388470319",
+    "parent_id": "job-131762499103",
+    "service": "check-types",
+    "name": "Tox mypy",
+    "start": "2026-11-13T07:51:40Z",
+    "duration_ms": 19000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-131762499103-step-9",
+    "trace_id": "run-43388470319",
+    "parent_id": "job-131762499103",
+    "service": "check-types",
+    "name": "Post Install Python",
+    "start": "2026-11-13T07:51:59Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-131762499103-step-10",
+    "trace_id": "run-43388470319",
+    "parent_id": "job-131762499103",
+    "service": "check-types",
+    "name": "Post Check out the repo",
+    "start": "2026-11-13T07:51:59Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-131762499103-step-11",
+    "trace_id": "run-43388470319",
+    "parent_id": "job-131762499103",
+    "service": "check-types",
+    "name": "Complete job",
+    "start": "2026-11-13T07:51:59Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-131762499178",
+    "trace_id": "run-43388470319",
+    "parent_id": "run-43388470319",
+    "service": "pylint-etc",
+    "name": "Pylint etc",
+    "start": "2026-11-13T07:53:28Z",
+    "duration_ms": 43000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-131762499178-step-1",
+    "trace_id": "run-43388470319",
+    "parent_id": "job-131762499178",
+    "service": "pylint-etc",
+    "name": "Set up job",
+    "start": "2026-11-13T07:53:29Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-131762499178-step-2",
+    "trace_id": "run-43388470319",
+    "parent_id": "job-131762499178",
+    "service": "pylint-etc",
+    "name": "Check out the repo",
+    "start": "2026-11-13T07:53:30Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-131762499178-step-3",
+    "trace_id": "run-43388470319",
+    "parent_id": "job-131762499178",
+    "service": "pylint-etc",
+    "name": "Install Python",
+    "start": "2026-11-13T07:53:33Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-131762499178-step-4",
+    "trace_id": "run-43388470319",
+    "parent_id": "job-131762499178",
+    "service": "pylint-etc",
+    "name": "Install dependencies",
+    "start": "2026-11-13T07:53:37Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-131762499178-step-5",
+    "trace_id": "run-43388470319",
+    "parent_id": "job-131762499178",
+    "service": "pylint-etc",
+    "name": "Tox lint",
+    "start": "2026-11-13T07:53:39Z",
+    "duration_ms": 28000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-131762499178-step-10",
+    "trace_id": "run-43388470319",
+    "parent_id": "job-131762499178",
+    "service": "pylint-etc",
+    "name": "Post Check out the repo",
+    "start": "2026-11-13T07:54:07Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-131762499178-step-11",
+    "trace_id": "run-43388470319",
+    "parent_id": "job-131762499178",
+    "service": "pylint-etc",
+    "name": "Complete job",
+    "start": "2026-11-13T07:54:08Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-131762500904",
+    "trace_id": "run-43388470319",
+    "parent_id": "run-43388470319",
+    "service": "zizmor-gha-security-check",
+    "name": "Zizmor GHA security check",
+    "start": "2026-11-13T07:49:17Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

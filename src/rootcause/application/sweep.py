@@ -7,7 +7,8 @@ scenarios (repeats of one scenario are correlated, so runs are not independent),
 pass^k (every attempt right) and pass@k (any attempt right), cost per solved
 incident, and latency percentiles. A configuration is dominated when another
 one is at least as reliable (pass^k) for no more money and better on one of
-the two.
+the two. When scenarios are class-graded, the report adds the pass rate per truth
+class and balanced accuracy (the mean of the two class pass rates).
 
 Harness errors are kept apart from model failures throughout: they are not in
 the pass rate, but their cost is in cost per solved incident, because it was
@@ -24,7 +25,7 @@ from typing import Literal
 
 from pydantic import BaseModel, model_validator
 
-from rootcause.application.evals import Grade
+from rootcause.application.evals import Grade, balanced_rate, class_rates
 from rootcause.application.investigator import SEARCH_POSTMORTEMS
 from rootcause.application.stats import cluster_bootstrap, pass_at_k, pass_hat_k, percentile
 
@@ -240,6 +241,7 @@ def report_markdown(
             lines.append(f"| {c.name} | {cells[0]} | {cells[1]} |")
         lines += ["", "Held out: " + ", ".join(spec.held_out) + ". Results on these are never "
                   "used to change the brief, the grader or an accepted set."]  # fmt: skip
+    lines += _class_lines(spec, summaries, rows, strict_service=strict_service)
     names = [s.name for s in summaries]
     grid: dict[str, dict[str, list[bool]]] = defaultdict(lambda: defaultdict(list))
     for r in rows:
@@ -249,6 +251,43 @@ def report_markdown(
         cells = [f"{sum(grid[sid][n])}/{len(grid[sid][n])}" for n in names]
         lines.append(f"| {sid} | " + " | ".join(cells) + " |")
     return "\n".join(lines) + "\n"
+
+
+def _class_lines(
+    spec: SweepSpec,
+    summaries: Sequence[ConfigSummary],
+    rows: Sequence[Row],
+    *,
+    strict_service: bool,
+) -> list[str]:
+    """Pass rate per truth class and balanced accuracy, for sweeps with class-graded
+    scenarios. Empty otherwise, so older reports are unchanged."""
+    if not any(r.grade.truth_class for r in rows):
+        return []
+    by_name = {c.name: c for c in spec.configs}
+    lines = ["", "| config | change (95% CI) | not_change (95% CI) | balanced | pooled |",
+             "|---|---|---|---|---|"]  # fmt: skip
+    for s in summaries:
+        scored = [r for r in rows if r.config == s.name and not is_error(by_name[s.name], r)]
+        rates = {
+            c.truth_class: c
+            for c in class_rates(
+                (r.scenario_id, r.grade.truth_class, r.grade.passes(strict_service=strict_service))
+                for r in scored
+            )
+        }
+        cells = [
+            f"{c.cell()}, {c.runs} runs" if (c := rates.get(name)) else "no runs"
+            for name in ("change", "not_change")
+        ]
+        balanced = balanced_rate(list(rates.values()))
+        lines.append(
+            f"| {s.name} | {cells[0]} | {cells[1]} "
+            f"| {_pct(balanced) if balanced is not None else 'n/a'} | {_pct(s.pass_rate)} |"
+        )
+    lines += ["", "Balanced is the mean of the two class pass rates. Class-graded scenarios "
+              "check the class and the commit, not the exact category or service."]  # fmt: skip
+    return lines
 
 
 def report_svg(spec: SweepSpec, summaries: Sequence[ConfigSummary]) -> str:

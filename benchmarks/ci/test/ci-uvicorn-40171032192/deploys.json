@@ -1,0 +1,26 @@
+[
+  {
+    "id": "02852aa8e5",
+    "service": "uvicorn",
+    "version": "02852aa8e5",
+    "ts": "2026-10-25T06:58:26Z",
+    "author": "Kludex",
+    "summary": "Abort stalled writes from the server tick instead of per-connection timers",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "docs/settings.md",
+      "tests/benchmarks/http.py",
+      "tests/protocols/test_http.py",
+      "tests/protocols/test_http2.py",
+      "tests/test_server.py",
+      "uvicorn/main.py",
+      "uvicorn/protocols/http/flow_control.py",
+      "uvicorn/protocols/http/h11_impl.py",
+      "uvicorn/protocols/http/httptools_impl.py",
+      "uvicorn/protocols/http/zttp_h2_impl.py",
+      "uvicorn/protocols/http/zttp_impl.py",
+      "uvicorn/server.py"
+    ]
+  }
+]

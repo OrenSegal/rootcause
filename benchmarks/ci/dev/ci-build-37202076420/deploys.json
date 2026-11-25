@@ -1,0 +1,19 @@
+[
+  {
+    "id": "c8e36bc75b",
+    "service": "build",
+    "version": "c8e36bc75b",
+    "ts": "2026-10-04T12:25:45Z",
+    "author": "harsh-thakkar7",
+    "summary": "fix: validate sdist members with tarfile's extraction filter",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "docs/changelog/1208.bugfix.rst",
+      "src/build/__main__.py",
+      "src/build/_compat/tarfile.py",
+      "tests/test_compat_tarfile.py",
+      "tests/test_main.py"
+    ]
+  }
+]

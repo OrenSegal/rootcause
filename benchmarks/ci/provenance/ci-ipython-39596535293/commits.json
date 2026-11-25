@@ -1,0 +1,62 @@
+[
+  {
+    "author": "Carreau",
+    "committedDate": "2026-10-21T12:02:55Z",
+    "messageHeadline": "REmove github stats, and fix some double backticks",
+    "oid": "dcd1daacbd9b3b70d568e42ab0f4dd01d765f1df",
+    "files": [
+      {
+        "filename": "docs/source/whatsnew/github-stats-0.11.rst",
+        "status": "removed"
+      },
+      {
+        "filename": "docs/source/whatsnew/github-stats-0.12.rst",
+        "status": "removed"
+      },
+      {
+        "filename": "docs/source/whatsnew/github-stats-0.13.rst",
+        "status": "removed"
+      },
+      {
+        "filename": "docs/source/whatsnew/github-stats-1.0.rst",
+        "status": "removed"
+      },
+      {
+        "filename": "docs/source/whatsnew/github-stats-2.0.rst",
+        "status": "removed"
+      },
+      {
+        "filename": "docs/source/whatsnew/github-stats-3.rst",
+        "status": "removed"
+      },
+      {
+        "filename": "docs/source/whatsnew/github-stats-4.rst",
+        "status": "removed"
+      },
+      {
+        "filename": "docs/source/whatsnew/github-stats-5.rst",
+        "status": "removed"
+      },
+      {
+        "filename": "docs/source/whatsnew/github-stats-6.rst",
+        "status": "removed"
+      },
+      {
+        "filename": "docs/source/whatsnew/github-stats-7.rst",
+        "status": "removed"
+      },
+      {
+        "filename": "docs/source/whatsnew/github-stats-8.rst",
+        "status": "removed"
+      },
+      {
+        "filename": "docs/source/whatsnew/index.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "docs/source/whatsnew/version3.rst",
+        "status": "modified"
+      }
+    ]
+  }
+]

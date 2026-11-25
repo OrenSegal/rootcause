@@ -1,0 +1,22 @@
+[
+  {
+    "author": "ychampion",
+    "committedDate": "2026-11-14T10:56:17Z",
+    "messageHeadline": "fix: preserve data recorded by other threads during flush_data",
+    "oid": "e571532dd2f9cc37f389ee87ce3267f8f4ac5e75",
+    "files": [
+      {
+        "filename": "coverage/collector.py",
+        "status": "modified"
+      },
+      {
+        "filename": "news/20261114_161400_ychampion_flush_data_threads.rst",
+        "status": "added"
+      },
+      {
+        "filename": "tests/test_collector.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "80f53aa5d3",
+    "service": "urllib3",
+    "version": "80f53aa5d3",
+    "ts": "2026-11-18T13:47:26Z",
+    "author": "ferly7",
+    "summary": "Construct Authorization and Proxy-Authorization headers from URL userinfo",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "changelog/1999.feature.rst",
+      "src/urllib3/poolmanager.py",
+      "test/test_poolmanager.py",
+      "test/test_proxymanager.py"
+    ]
+  }
+]

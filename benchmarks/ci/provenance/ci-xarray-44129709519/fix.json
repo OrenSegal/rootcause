@@ -1,0 +1,11 @@
+{
+  "fixed_run": "https://github.com/pydata/xarray/actions/runs/44147118317",
+  "fixed_sha": "e7302b627d85d3656fe0590015e8fb05c71f87c3",
+  "commits": [
+    "e7302b627d85d3656fe0590015e8fb05c71f87c3"
+  ],
+  "files": [
+    "asv_bench/benchmarks/arrow.py"
+  ],
+  "status": "ahead"
+}

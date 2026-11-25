@@ -1,0 +1,17 @@
+[
+  {
+    "id": "3bb316de4d",
+    "service": "pytest-asyncio",
+    "version": "3bb316de4d",
+    "ts": "2026-11-21T07:55:32Z",
+    "author": "tony1233200",
+    "summary": "Fix loop factories being ignored when asyncio marker comes from parametrization",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "changelog.d/1463.fixed.rst",
+      "pytest_asyncio/plugin.py",
+      "tests/test_loop_factory_parametrization.py"
+    ]
+  }
+]

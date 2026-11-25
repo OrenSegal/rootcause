@@ -1,0 +1,25 @@
+{
+  "fixed_run": "https://github.com/sphinx-doc/sphinx/actions/runs/44398838985",
+  "fixed_sha": "0512f9f8430a49b160b4baedf6167733e2b83505",
+  "commits": [
+    "3b9a91d8c447ebccb49d5523cfdf6f5e258fa2e4",
+    "2c65e9ea35f6ade7a397b3572997bc55ab97b465",
+    "cba049a22933b0ca414e078f13676065ca8b34a7",
+    "95d2c1e9e3a4fa584d431174326603cc1ed58dcb",
+    "ec3bac8b9fd52df3f3995c9067ad6da5068da49d",
+    "b03d67eaf52b2bc78783b897eaff404c96960659",
+    "f98e33b1e31471011917ee2ebb71946a76101f83",
+    "6a65ac9e053cde2b283b0a466da8a3f018848152",
+    "5a52abd69c6cca83f75291a45da6f24462277bf2",
+    "0512f9f8430a49b160b4baedf6167733e2b83505"
+  ],
+  "files": [
+    ".github/workflows/main.yml",
+    "tests/js/doctools.spec.js",
+    "tests/test_builders/test_build_html_5_output.py",
+    "tests/test_builders/test_build_latex.py",
+    "tests/test_builders/test_build_manpage.py",
+    "tests/test_builders/test_build_texinfo.py"
+  ],
+  "status": "ahead"
+}

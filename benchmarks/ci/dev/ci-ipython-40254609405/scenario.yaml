@@ -1,0 +1,14 @@
+id: ci-ipython-40254609405
+title: Detect unmatched brackets in multi-line input
+alert:
+  severity: ci
+  service: oldest-deps-ubuntu-latest
+  summary: 'workflow Run tests failed on fix/indentationerror-unmatched-brackets at 82973a7f80:
+    step ''pytest'' in job ''oldest-deps (ubuntu-latest)'' failed.'
+truth:
+  grading: class
+  category: bad_code_deploy
+  service: ipython
+  required_evidence_any:
+  - 82973a7f80
+provenance: recorded

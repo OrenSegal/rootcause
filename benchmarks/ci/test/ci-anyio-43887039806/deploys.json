@@ -1,0 +1,18 @@
+[
+  {
+    "id": "a22b2a86fc",
+    "service": "anyio",
+    "version": "a22b2a86fc",
+    "ts": "2026-11-16T14:26:25Z",
+    "author": "davidbrochart",
+    "summary": "Expose run_sync_soon through the low-level API",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "docs/api.rst",
+      "docs/signals.rst",
+      "src/anyio/lowlevel.py",
+      "tests/test_lowlevel.py"
+    ]
+  }
+]

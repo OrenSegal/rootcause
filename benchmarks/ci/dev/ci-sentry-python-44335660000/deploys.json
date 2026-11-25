@@ -1,0 +1,107 @@
+[
+  {
+    "id": "bcfc0e5274",
+    "service": "sentry-python",
+    "version": "bcfc0e5274",
+    "ts": "2026-11-18T12:58:36Z",
+    "author": "srothh",
+    "summary": "feat(anthropic): Set gen_ai.usage.output_to",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "sentry_sdk/integrations/anthropic.py"
+    ]
+  },
+  {
+    "id": "71cf7a7eb3",
+    "service": "sentry-python",
+    "version": "71cf7a7eb3",
+    "ts": "2026-11-18T13:33:44Z",
+    "author": "srothh",
+    "summary": "test(anthropic): Add tests for output_reasoning_tokens #5802",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "tests/integrations/anthropic/test_anthropic.py"
+    ]
+  },
+  {
+    "id": "ac8ebf4a5d",
+    "service": "sentry-python",
+    "version": "ac8ebf4a5d",
+    "ts": "2026-11-18T13:37:23Z",
+    "author": "srothh",
+    "summary": "ref(anthropic): Remove _RecordedUsage change from non-streaming branch",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "sentry_sdk/integrations/anthropic.py"
+    ]
+  },
+  {
+    "id": "fea2b6197c",
+    "service": "sentry-python",
+    "version": "fea2b6197c",
+    "ts": "2026-11-18T15:18:50Z",
+    "author": "srothh",
+    "summary": "test(anthropic): Remove unnessecary parametrization from reasoning token test #5802",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "tests/integrations/anthropic/test_anthropic.py"
+    ]
+  },
+  {
+    "id": "e3eccfff4b",
+    "service": "sentry-python",
+    "version": "e3eccfff4b",
+    "ts": "2026-11-18T15:19:49Z",
+    "author": "srothh",
+    "summary": "feat(anthropic): Set output tokens for streaming responses #5802",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "sentry_sdk/integrations/anthropic.py"
+    ]
+  },
+  {
+    "id": "02306295cf",
+    "service": "sentry-python",
+    "version": "02306295cf",
+    "ts": "2026-11-18T15:19:49Z",
+    "author": "srothh",
+    "summary": "test(anthropic): Add tests for streaming reasoning tokens",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "tests/integrations/anthropic/test_anthropic.py"
+    ]
+  },
+  {
+    "id": "10fafd6c73",
+    "service": "sentry-python",
+    "version": "10fafd6c73",
+    "ts": "2026-11-18T15:19:49Z",
+    "author": "srothh",
+    "summary": "ref(anthropic): Fix ruff formatting #5802",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "sentry_sdk/integrations/anthropic.py",
+      "tests/integrations/anthropic/test_anthropic.py"
+    ]
+  },
+  {
+    "id": "a5bf844543",
+    "service": "sentry-python",
+    "version": "a5bf844543",
+    "ts": "2026-11-18T15:25:03Z",
+    "author": "srothh",
+    "summary": "test(anthropic): Remove unnecassary test parametrization from reasoning token tests",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "tests/integrations/anthropic/test_anthropic.py"
+    ]
+  }
+]

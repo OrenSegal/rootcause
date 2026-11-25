@@ -1,0 +1,292 @@
+[
+  {
+    "span_id": "run-44788374900",
+    "trace_id": "run-44788374900",
+    "parent_id": null,
+    "service": "unit-tests",
+    "name": "Unit tests",
+    "start": "2026-11-20T17:58:40Z",
+    "duration_ms": 30000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-136469203022",
+    "trace_id": "run-44788374900",
+    "parent_id": "run-44788374900",
+    "service": "lint",
+    "name": "Lint",
+    "start": "2026-11-20T17:58:44Z",
+    "duration_ms": 19000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-136469203022-step-1",
+    "trace_id": "run-44788374900",
+    "parent_id": "job-136469203022",
+    "service": "lint",
+    "name": "Set up job",
+    "start": "2026-11-20T17:58:44Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136469203022-step-2",
+    "trace_id": "run-44788374900",
+    "parent_id": "job-136469203022",
+    "service": "lint",
+    "name": "Checkout",
+    "start": "2026-11-20T17:58:45Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136469203022-step-3",
+    "trace_id": "run-44788374900",
+    "parent_id": "job-136469203022",
+    "service": "lint",
+    "name": "Run actions/setup-python@v7.1.0",
+    "start": "2026-11-20T17:58:47Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136469203022-step-4",
+    "trace_id": "run-44788374900",
+    "parent_id": "job-136469203022",
+    "service": "lint",
+    "name": "Update pip >= 26.2.2",
+    "start": "2026-11-20T17:58:49Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136469203022-step-5",
+    "trace_id": "run-44788374900",
+    "parent_id": "job-136469203022",
+    "service": "lint",
+    "name": "Install linters",
+    "start": "2026-11-20T17:58:50Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136469203022-step-6",
+    "trace_id": "run-44788374900",
+    "parent_id": "job-136469203022",
+    "service": "lint",
+    "name": "Run linters",
+    "start": "2026-11-20T17:58:53Z",
+    "duration_ms": 8000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-136469203022-step-14",
+    "trace_id": "run-44788374900",
+    "parent_id": "job-136469203022",
+    "service": "lint",
+    "name": "Post Checkout",
+    "start": "2026-11-20T17:59:01Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136469203022-step-15",
+    "trace_id": "run-44788374900",
+    "parent_id": "job-136469203022",
+    "service": "lint",
+    "name": "Complete job",
+    "start": "2026-11-20T17:59:02Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136469203346",
+    "trace_id": "run-44788374900",
+    "parent_id": "run-44788374900",
+    "service": "retrieve-the-latest-commit-message",
+    "name": "Retrieve the latest commit message",
+    "start": "2026-11-20T17:58:44Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136469203346-step-1",
+    "trace_id": "run-44788374900",
+    "parent_id": "job-136469203346",
+    "service": "retrieve-the-latest-commit-message",
+    "name": "Set up job",
+    "start": "2026-11-20T17:58:45Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136469203346-step-2",
+    "trace_id": "run-44788374900",
+    "parent_id": "job-136469203346",
+    "service": "retrieve-the-latest-commit-message",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-20T17:58:46Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136469203346-step-3",
+    "trace_id": "run-44788374900",
+    "parent_id": "job-136469203346",
+    "service": "retrieve-the-latest-commit-message",
+    "name": "Retrieve the latest commit message",
+    "start": "2026-11-20T17:58:48Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136469203346-step-6",
+    "trace_id": "run-44788374900",
+    "parent_id": "job-136469203346",
+    "service": "retrieve-the-latest-commit-message",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-20T17:58:48Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136469203346-step-7",
+    "trace_id": "run-44788374900",
+    "parent_id": "job-136469203346",
+    "service": "retrieve-the-latest-commit-message",
+    "name": "Complete job",
+    "start": "2026-11-20T17:58:48Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136469292816",
+    "trace_id": "run-44788374900",
+    "parent_id": "run-44788374900",
+    "service": "retrieve-the-selected-tests",
+    "name": "Retrieve the selected tests",
+    "start": "2026-11-20T17:58:53Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136469292816-step-1",
+    "trace_id": "run-44788374900",
+    "parent_id": "job-136469292816",
+    "service": "retrieve-the-selected-tests",
+    "name": "Set up job",
+    "start": "2026-11-20T17:58:54Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136469292816-step-2",
+    "trace_id": "run-44788374900",
+    "parent_id": "job-136469292816",
+    "service": "retrieve-the-selected-tests",
+    "name": "Retrieve the selected tests",
+    "start": "2026-11-20T17:58:54Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136469292816-step-3",
+    "trace_id": "run-44788374900",
+    "parent_id": "job-136469292816",
+    "service": "retrieve-the-selected-tests",
+    "name": "Complete job",
+    "start": "2026-11-20T17:58:54Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136469406686",
+    "trace_id": "run-44788374900",
+    "parent_id": "run-44788374900",
+    "service": "check-all-job-statuses",
+    "name": "Check all job statuses",
+    "start": "2026-11-20T17:59:06Z",
+    "duration_ms": 4000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-136469406686-step-1",
+    "trace_id": "run-44788374900",
+    "parent_id": "job-136469406686",
+    "service": "check-all-job-statuses",
+    "name": "Set up job",
+    "start": "2026-11-20T17:59:07Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136469406686-step-2",
+    "trace_id": "run-44788374900",
+    "parent_id": "job-136469406686",
+    "service": "check-all-job-statuses",
+    "name": "Run re-actors/alls-green@v1.3.0",
+    "start": "2026-11-20T17:59:08Z",
+    "duration_ms": 0.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-136469406686-step-3",
+    "trace_id": "run-44788374900",
+    "parent_id": "job-136469406686",
+    "service": "check-all-job-statuses",
+    "name": "Complete job",
+    "start": "2026-11-20T17:59:08Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136469407103",
+    "trace_id": "run-44788374900",
+    "parent_id": "run-44788374900",
+    "service": "linux-x86-64-pylatest-pip-scipy-dev",
+    "name": "Linux x86-64 pylatest_pip_scipy_dev",
+    "start": "2026-11-20T17:59:04Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136469407341",
+    "trace_id": "run-44788374900",
+    "parent_id": "run-44788374900",
+    "service": "linux-x86-64-pylatest-free-threaded",
+    "name": "Linux x86-64 pylatest_free_threaded",
+    "start": "2026-11-20T17:59:04Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136469407362",
+    "trace_id": "run-44788374900",
+    "parent_id": "run-44788374900",
+    "service": "matrix-name",
+    "name": "matrix.name",
+    "start": "2026-11-20T17:59:04Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136469408600",
+    "trace_id": "run-44788374900",
+    "parent_id": "run-44788374900",
+    "service": "linux-i386-debian-32bit",
+    "name": "Linux i386 debian_32bit",
+    "start": "2026-11-20T17:59:04Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136469408866",
+    "trace_id": "run-44788374900",
+    "parent_id": "run-44788374900",
+    "service": "linux-x86-64-pylatest-free-threaded-parallelism",
+    "name": "Linux x86-64 pylatest_free_threaded_parallelism",
+    "start": "2026-11-20T17:59:04Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

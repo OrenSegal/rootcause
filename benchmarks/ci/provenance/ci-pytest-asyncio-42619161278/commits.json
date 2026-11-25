@@ -1,0 +1,38 @@
+[
+  {
+    "author": "kd-02",
+    "committedDate": "2026-11-09T12:22:06Z",
+    "messageHeadline": "feat: warn about unhandled event loop exceptions",
+    "oid": "35b5eccd46d651ed7a48c6c2090448d3e00986dc",
+    "files": [
+      {
+        "filename": "changelog.d/205.added.rst",
+        "status": "added"
+      },
+      {
+        "filename": "docs/reference/index.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "docs/reference/warnings.rst",
+        "status": "added"
+      },
+      {
+        "filename": "pytest_asyncio/__init__.py",
+        "status": "modified"
+      },
+      {
+        "filename": "pytest_asyncio/plugin.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_loop_exceptions.py",
+        "status": "added"
+      },
+      {
+        "filename": "tests/test_task_cleanup.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

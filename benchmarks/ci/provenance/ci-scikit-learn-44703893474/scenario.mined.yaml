@@ -1,0 +1,18 @@
+# Mined from https://github.com/scikit-learn/scikit-learn/actions/runs/44703893474
+# (scikit-learn/scikit-learn, licence BSD-3-Clause). Fixed by run
+# https://github.com/scikit-learn/scikit-learn/actions/runs/44977405414. Label rule: the
+# fix changed files exactly one tested commit touched. Fix touched:
+# examples/release_highlights/plot_release_highlights_1_10_0.py.
+id: ci-scikit-learn-44703893474
+title: DOC Release highlights for 1.10
+alert:
+  severity: ci
+  service: verify-actions-lock
+  summary: 'workflow Verify actions lockfile failed on release-highlights-1.10 at 1fd1de3e12:
+    step ''Run gh actions-lock --verify'' in job ''verify-actions-lock'' failed.'
+truth:
+  category: bad_code_deploy
+  service: scikit-learn
+  required_evidence_any:
+  - 1fd1de3e12
+provenance: recorded

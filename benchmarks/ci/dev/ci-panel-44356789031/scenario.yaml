@@ -1,0 +1,17 @@
+id: ci-panel-44356789031
+title: 'fix: Resize the container of ESM components when their size changes'
+alert:
+  severity: ci
+  service: ui-test-ui-macos-latest
+  summary: 'workflow tests failed on fix/esm-container-size at a7ebfdb6d7: step ''Test UI''
+    in job ''ui:test-ui:macos-latest'' failed.'
+truth:
+  grading: class
+  category: infrastructure
+  service: panel
+  required_evidence_any:
+  - log-3734
+  - log-3745
+  - log-3804
+  - log-3950
+provenance: recorded

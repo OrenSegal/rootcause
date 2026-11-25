@@ -1,0 +1,22 @@
+[
+  {
+    "author": "jenshnielsen",
+    "committedDate": "2026-10-29T12:46:16Z",
+    "messageHeadline": "Close cells the pseudo-sync runner cannot finish",
+    "oid": "6fdda9f958e184ac1f3561989d1fd8368160bd64",
+    "files": [
+      {
+        "filename": "IPython/core/async_helpers.py",
+        "status": "modified"
+      },
+      {
+        "filename": "IPython/core/interactiveshell.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_interactiveshell.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

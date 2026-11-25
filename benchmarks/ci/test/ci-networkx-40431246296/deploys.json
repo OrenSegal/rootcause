@@ -1,0 +1,19 @@
+[
+  {
+    "id": "6d68381c78",
+    "service": "networkx",
+    "version": "6d68381c78",
+    "ts": "2026-10-27T01:12:49Z",
+    "author": "tacaswell",
+    "summary": "Update GitHub Actions for the emSign CA incident",
+    "config_before": {
+      ".github/workflows/release.yml": "previous"
+    },
+    "config_after": {
+      ".github/workflows/release.yml": "modified in 6d68381c78"
+    },
+    "files": [
+      ".github/workflows/release.yml"
+    ]
+  }
+]

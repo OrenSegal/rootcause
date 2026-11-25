@@ -1,0 +1,14 @@
+[
+  {
+    "author": "Schefflera-Arboricola",
+    "committedDate": "2026-11-19T07:09:35Z",
+    "messageHeadline": "Add zizmor pre-commit hook configuration",
+    "oid": "c537b78f1efac4febb80cbb5ed33fbff6ccb09f2",
+    "files": [
+      {
+        "filename": ".pre-commit-config.yaml",
+        "status": "modified"
+      }
+    ]
+  }
+]

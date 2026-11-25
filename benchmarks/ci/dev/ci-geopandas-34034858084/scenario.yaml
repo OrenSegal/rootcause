@@ -1,0 +1,15 @@
+id: ci-geopandas-34034858084
+title: 'TST: do not use OpenTopoMap tiles in tests'
+alert:
+  severity: ci
+  service: ubuntu-latest-ci-envs-313-latest-no-pyogrio-yaml
+  summary: 'workflow Tests failed on no-opentopo at cb1d609cd6: step ''Test'' in job ''ubuntu-latest,
+    ci/envs/313-latest-no-pyogrio.yaml'' failed.'
+truth:
+  grading: class
+  category: infrastructure
+  service: geopandas
+  required_evidence_any:
+  - log-8578
+  - log-16598
+provenance: recorded

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "abd57f8de6",
+    "service": "bokeh",
+    "version": "abd57f8de6",
+    "ts": "2026-11-18T17:39:27Z",
+    "author": "philippjfr",
+    "summary": "Test binary buffers and edge cases of comm sessions",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "bokehjs/test/unit/client/comm.ts",
+      "tests/integration/test_jupyter_extension.py",
+      "tests/unit/bokeh/io/test_notebook__io.py",
+      "tests/unit/bokeh/server/test_comm.py"
+    ]
+  }
+]

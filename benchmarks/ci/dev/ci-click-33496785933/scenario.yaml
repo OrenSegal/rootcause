@@ -1,0 +1,14 @@
+id: ci-click-33496785933
+title: '[rejected AI] atomic open_file: set mode via fchmod and close fd on failure (#3824)'
+alert:
+  severity: ci
+  service: windows
+  summary: 'workflow Tests failed on fix/atomic-open-file-fchmod at 0891cde540: step ''Run
+    uv run --locked --no-default-groups --group dev tox run'' in job ''Windows'' failed.'
+truth:
+  grading: class
+  category: bad_code_deploy
+  service: click
+  required_evidence_any:
+  - 0891cde540
+provenance: recorded

@@ -1,0 +1,15 @@
+[
+  {
+    "id": "0884039004",
+    "service": "uvicorn",
+    "version": "0884039004",
+    "ts": "2026-10-28T10:33:11Z",
+    "author": "nxvvvv",
+    "summary": "Assert the server drops the connection in the paused-read wsproto test",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "tests/protocols/test_websocket.py"
+    ]
+  }
+]

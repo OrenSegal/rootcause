@@ -1,0 +1,16 @@
+[
+  {
+    "id": "b5c3cbe896",
+    "service": "django-rest-framework",
+    "version": "b5c3cbe896",
+    "ts": "2026-09-12T09:29:37Z",
+    "author": "VimalN2005",
+    "summary": "Fix unique_for_<range> validation on partial serializer updates (refs #6341)",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "rest_framework/validators.py",
+      "tests/test_validators.py"
+    ]
+  }
+]

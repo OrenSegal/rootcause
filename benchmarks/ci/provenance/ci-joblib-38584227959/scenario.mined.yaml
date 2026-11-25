@@ -1,0 +1,18 @@
+# Mined from https://github.com/joblib/joblib/actions/runs/38584227959 (joblib/joblib,
+# licence BSD-3-Clause). Fixed by run
+# https://github.com/joblib/joblib/actions/runs/38584227959. Label rule: the first
+# attempt failed and a re-run of the same pull-request run passed. Fix touched: nothing
+# (rerun).
+id: ci-joblib-38584227959
+title: FIX race condition in accessing _FUNCTION_HASHES
+alert:
+  severity: ci
+  service: testing-distributed-latest-ubuntu-latest-latest-supported-true
+  summary: 'workflow CI failed on 1885-fix-cache-thread-race at 282771718f: step ''Run tests''
+    in job ''Testing (distributed-latest, ubuntu-latest, latest_supported, true)'' failed.'
+truth:
+  category: infrastructure
+  service: joblib
+  required_evidence_any:
+  - log-3933
+provenance: recorded

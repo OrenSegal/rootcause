@@ -1,0 +1,22 @@
+[
+  {
+    "author": "gaborbernat",
+    "committedDate": "2026-11-18T01:53:55Z",
+    "messageHeadline": "\ud83d\udd27 build(package): add wheel SBOM",
+    "oid": "720879db6a6c2436b79794fd5c589e42d57e2039",
+    "files": [
+      {
+        "filename": ".pre-commit-config.yaml",
+        "status": "modified"
+      },
+      {
+        "filename": "pyproject.toml",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_self_packaging.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

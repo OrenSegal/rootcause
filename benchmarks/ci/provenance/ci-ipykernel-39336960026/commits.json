@@ -1,0 +1,18 @@
+[
+  {
+    "author": "dependabot[bot]",
+    "committedDate": "2026-10-19T22:43:36Z",
+    "messageHeadline": "Bump actions/create-github-app-token",
+    "oid": "408fda14800fabda5f9a629b1a2c010c535cfd44",
+    "files": [
+      {
+        "filename": ".github/workflows/publish-changelog.yml",
+        "status": "modified"
+      },
+      {
+        "filename": ".github/workflows/publish-release.yml",
+        "status": "modified"
+      }
+    ]
+  }
+]

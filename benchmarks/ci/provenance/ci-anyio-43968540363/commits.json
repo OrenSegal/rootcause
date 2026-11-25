@@ -1,0 +1,22 @@
+[
+  {
+    "author": "Gorkem-Taha",
+    "committedDate": "2026-11-16T22:16:31Z",
+    "messageHeadline": "Preserve asyncio callback messages in raised exceptions",
+    "oid": "b389aedb3cc1f6357071dffc7afca4ab7d58d91d",
+    "files": [
+      {
+        "filename": "changelog.d/1479.fixed.rst",
+        "status": "added"
+      },
+      {
+        "filename": "src/anyio/_backends/_asyncio.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_pytest_plugin.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

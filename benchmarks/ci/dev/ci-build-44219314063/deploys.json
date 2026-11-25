@@ -1,0 +1,23 @@
+[
+  {
+    "id": "720879db6a",
+    "service": "build",
+    "version": "720879db6a",
+    "ts": "2026-11-18T01:53:55Z",
+    "author": "gaborbernat",
+    "summary": "\ud83d\udd27 build(package): add wheel SBOM",
+    "config_before": {
+      ".pre-commit-config.yaml": "previous",
+      "pyproject.toml": "previous"
+    },
+    "config_after": {
+      ".pre-commit-config.yaml": "modified in 720879db6a",
+      "pyproject.toml": "modified in 720879db6a"
+    },
+    "files": [
+      ".pre-commit-config.yaml",
+      "pyproject.toml",
+      "tests/test_self_packaging.py"
+    ]
+  }
+]

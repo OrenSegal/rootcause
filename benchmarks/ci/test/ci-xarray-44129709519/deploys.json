@@ -1,0 +1,65 @@
+[
+  {
+    "id": "6991fb7ba1",
+    "service": "xarray",
+    "version": "6991fb7ba1",
+    "ts": "2026-11-17T16:45:29Z",
+    "author": "jules-ch",
+    "summary": "feat: add Arrow PyCapsule support for Dataset",
+    "config_before": {
+      "pixi.toml": "previous"
+    },
+    "config_after": {
+      "pixi.toml": "modified in 6991fb7ba1"
+    },
+    "files": [
+      "_stubtest/allowlist.txt",
+      "asv_bench/benchmarks/__init__.py",
+      "asv_bench/benchmarks/arrow.py",
+      "doc/api/io.rst",
+      "doc/conf.py",
+      "doc/user-guide/arrow.md",
+      "doc/user-guide/index.md",
+      "doc/user-guide/io.md",
+      "doc/whats-new.rst",
+      "pixi.toml",
+      "xarray/core/arrow.py",
+      "xarray/core/dataarray.py",
+      "xarray/core/dataset.py",
+      "xarray/tests/test_dataarray.py",
+      "xarray/tests/test_dataset.py"
+    ]
+  },
+  {
+    "id": "6b9c45af61",
+    "service": "xarray",
+    "version": "6b9c45af61",
+    "ts": "2026-11-17T16:45:29Z",
+    "author": "jules-ch",
+    "summary": "chore: raise on unamed and chunked dataset",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "xarray/core/arrow.py",
+      "xarray/core/dataarray.py",
+      "xarray/core/dataset.py",
+      "xarray/tests/test_dataarray.py",
+      "xarray/tests/test_dataset.py"
+    ]
+  },
+  {
+    "id": "fbe0781773",
+    "service": "xarray",
+    "version": "fbe0781773",
+    "ts": "2026-11-17T16:45:29Z",
+    "author": "jules-ch",
+    "summary": "chore: move tests",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "xarray/tests/test_arrow.py",
+      "xarray/tests/test_dataarray.py",
+      "xarray/tests/test_dataset.py"
+    ]
+  }
+]

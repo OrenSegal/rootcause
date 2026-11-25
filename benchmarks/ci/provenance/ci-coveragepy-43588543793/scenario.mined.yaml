@@ -1,0 +1,17 @@
+# Mined from https://github.com/coveragepy/coveragepy/actions/runs/43588543793
+# (nedbat/coveragepy, licence Apache-2.0). Fixed by run
+# https://github.com/coveragepy/coveragepy/actions/runs/43643581497. Label rule: the fix
+# changed files exactly one tested commit touched. Fix touched: tests/test_collector.py.
+id: ci-coveragepy-43588543793
+title: 'fix: preserve data recorded by other threads during flush_data'
+alert:
+  severity: ci
+  service: 3-15t-on-ubuntu
+  summary: 'workflow Tests failed on fix/flush-data-thread-loss-2384 at e571532dd2: step ''Run
+    tox for 3.15t'' in job ''3.15t on ubuntu'' failed.'
+truth:
+  category: bad_code_deploy
+  service: coveragepy
+  required_evidence_any:
+  - e571532dd2
+provenance: recorded

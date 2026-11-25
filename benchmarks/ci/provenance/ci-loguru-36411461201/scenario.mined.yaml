@@ -1,0 +1,17 @@
+# Mined from https://github.com/Delgan/loguru/actions/runs/36411461201 (Delgan/loguru,
+# licence MIT). Fixed by run https://github.com/Delgan/loguru/actions/runs/36411461201.
+# Label rule: the first attempt failed and a re-run of the same pull-request run passed.
+# Fix touched: nothing (rerun).
+id: ci-loguru-36411461201
+title: Migrate docs to markdown
+alert:
+  severity: ci
+  service: docs
+  summary: 'workflow Docs failed on migrate-docs-to-markdown at 44012d8754: step ''Build documentation''
+    in job ''docs'' failed.'
+truth:
+  category: infrastructure
+  service: loguru
+  required_evidence_any:
+  - log-0298
+provenance: recorded

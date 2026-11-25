@@ -1,0 +1,166 @@
+[
+  {
+    "author": "wedamija",
+    "committedDate": "2026-11-13T23:49:34Z",
+    "messageHeadline": "feat(tracing): Warn when traces_sample_rate is 0",
+    "oid": "84120affcdd8b9a973c6f608afe31ae31cba7aa8",
+    "files": [
+      {
+        "filename": "sentry_sdk/client.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_client.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "wedamija",
+    "committedDate": "2026-11-16T22:48:58Z",
+    "messageHeadline": "feat: Point coding agents to a setup checklist",
+    "oid": "20e8b44d0299b58827b73e0af0d615fab305f343",
+    "files": [
+      {
+        "filename": "MANIFEST.in",
+        "status": "modified"
+      },
+      {
+        "filename": "sentry_sdk/SETUP_CHECKLIST.md",
+        "status": "added"
+      },
+      {
+        "filename": "sentry_sdk/client.py",
+        "status": "modified"
+      },
+      {
+        "filename": "sentry_sdk/consts.py",
+        "status": "modified"
+      },
+      {
+        "filename": "setup.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/conftest.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_client.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "wedamija",
+    "committedDate": "2026-11-17T01:02:54Z",
+    "messageHeadline": "feat: Say what's off in the agent setup hint",
+    "oid": "356c2001f36f8a13117b38271997cfc94d7f2011",
+    "files": [
+      {
+        "filename": "sentry_sdk/client.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_client.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "wedamija",
+    "committedDate": "2026-11-17T23:27:25Z",
+    "messageHeadline": "feat: Ask Codex to tell the user what's off",
+    "oid": "16bd42ed0b215e593e9bcaad1d59b095bee2e8a9",
+    "files": [
+      {
+        "filename": "sentry_sdk/client.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_client.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "wedamija",
+    "committedDate": "2026-11-18T19:41:21Z",
+    "messageHeadline": "feat: Tell agents what Sentry won't show, not which settings are off",
+    "oid": "43dd1347f3bb968b55c4c4a43d2a86080572cd09",
+    "files": [
+      {
+        "filename": "sentry_sdk/client.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_client.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "wedamija",
+    "committedDate": "2026-11-18T19:54:56Z",
+    "messageHeadline": "fix: Say request trace and breadcrumbs in the agent hint",
+    "oid": "42f9f540b08aafe63c562071d490b0bd261f5085",
+    "files": [
+      {
+        "filename": "sentry_sdk/client.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_client.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "wedamija",
+    "committedDate": "2026-11-18T20:37:53Z",
+    "messageHeadline": "feat: Only show the agent hint while Sentry is being set up",
+    "oid": "c14c0eb1027f0f5b700c6bf70e7eb574ea2c3cac",
+    "files": [
+      {
+        "filename": "sentry_sdk/client.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_client.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "wedamija",
+    "committedDate": "2026-11-18T20:52:57Z",
+    "messageHeadline": "feat: Use a 10 minute window for the agent hint without git",
+    "oid": "ca9a2f480eee97d5dae6f7273a34944a5ed4a678",
+    "files": [
+      {
+        "filename": "sentry_sdk/client.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_client.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "wedamija",
+    "committedDate": "2026-11-18T21:02:24Z",
+    "messageHeadline": "fix: Make the agent hint's git check work on Python 3.6",
+    "oid": "de714e2e76424b72285c7b19314331e3df8523db",
+    "files": [
+      {
+        "filename": "sentry_sdk/client.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_client.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

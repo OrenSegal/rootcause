@@ -1,0 +1,14 @@
+id: ci-pandas-44420380546
+title: 'BUG: plotting into one shared axes hid tick labels on its siblings (GH#27052)'
+alert:
+  severity: ci
+  service: type-checking
+  summary: 'workflow Code Checks failed on bug-27052 at b47335b45f: step ''Typing Checks''
+    in job ''Type Checking'' failed.'
+truth:
+  grading: class
+  category: bad_code_deploy
+  service: pandas
+  required_evidence_any:
+  - b47335b45f
+provenance: recorded

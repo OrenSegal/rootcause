@@ -1,0 +1,162 @@
+[
+  {
+    "span_id": "run-42578732710",
+    "trace_id": "run-42578732710",
+    "parent_id": null,
+    "service": "test",
+    "name": "Test",
+    "start": "2026-11-09T07:20:38Z",
+    "duration_ms": 56000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-129032220470",
+    "trace_id": "run-42578732710",
+    "parent_id": "run-42578732710",
+    "service": "linters-mypy-ruff-etc",
+    "name": "Linters (mypy, ruff, etc.)",
+    "start": "2026-11-09T07:20:43Z",
+    "duration_ms": 50000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-129032220470-step-1",
+    "trace_id": "run-42578732710",
+    "parent_id": "job-129032220470",
+    "service": "linters-mypy-ruff-etc",
+    "name": "Set up job",
+    "start": "2026-11-09T07:20:43Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-129032220470-step-2",
+    "trace_id": "run-42578732710",
+    "parent_id": "job-129032220470",
+    "service": "linters-mypy-ruff-etc",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-09T07:20:44Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-129032220470-step-3",
+    "trace_id": "run-42578732710",
+    "parent_id": "job-129032220470",
+    "service": "linters-mypy-ruff-etc",
+    "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+    "start": "2026-11-09T07:20:45Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-129032220470-step-4",
+    "trace_id": "run-42578732710",
+    "parent_id": "job-129032220470",
+    "service": "linters-mypy-ruff-etc",
+    "name": "Run astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2",
+    "start": "2026-11-09T07:20:46Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-129032220470-step-5",
+    "trace_id": "run-42578732710",
+    "parent_id": "job-129032220470",
+    "service": "linters-mypy-ruff-etc",
+    "name": "Run j178/prek-action@44924fe9ef4a6f88253c4b6b1bf11c689d3ce53d",
+    "start": "2026-11-09T07:20:47Z",
+    "duration_ms": 44000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-129032220470-step-9",
+    "trace_id": "run-42578732710",
+    "parent_id": "job-129032220470",
+    "service": "linters-mypy-ruff-etc",
+    "name": "Post Run j178/prek-action@44924fe9ef4a6f88253c4b6b1bf11c689d3ce53d",
+    "start": "2026-11-09T07:21:31Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-129032220470-step-12",
+    "trace_id": "run-42578732710",
+    "parent_id": "job-129032220470",
+    "service": "linters-mypy-ruff-etc",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-09T07:21:31Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-129032220470-step-13",
+    "trace_id": "run-42578732710",
+    "parent_id": "job-129032220470",
+    "service": "linters-mypy-ruff-etc",
+    "name": "Complete job",
+    "start": "2026-11-09T07:21:31Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-129032520650",
+    "trace_id": "run-42578732710",
+    "parent_id": "run-42578732710",
+    "service": "get-qemu-emulated-architectures",
+    "name": "Get qemu emulated architectures",
+    "start": "2026-11-09T07:21:33Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-129032521071",
+    "trace_id": "run-42578732710",
+    "parent_id": "run-42578732710",
+    "service": "generate-a-sample-project",
+    "name": "Generate a sample project",
+    "start": "2026-11-09T07:21:34Z",
+    "duration_ms": -1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-129032521186",
+    "trace_id": "run-42578732710",
+    "parent_id": "run-42578732710",
+    "service": "test-on-matrix-os-matrix-python-version-matrix-test-select",
+    "name": "Test on ${{ matrix.os }} (${{ matrix.python_version }}) ${{ matrix.test_select }}",
+    "start": "2026-11-09T07:21:34Z",
+    "duration_ms": -1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-129032521402",
+    "trace_id": "run-42578732710",
+    "parent_id": "run-42578732710",
+    "service": "test-uv-extra-on-matrix-os-matrix-test-select",
+    "name": "Test uv extra on ${{ matrix.os }} ${{ matrix.test_select }}",
+    "start": "2026-11-09T07:21:34Z",
+    "duration_ms": -1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-129032521610",
+    "trace_id": "run-42578732710",
+    "parent_id": "run-42578732710",
+    "service": "test-pyodide",
+    "name": "Test pyodide",
+    "start": "2026-11-09T07:21:34Z",
+    "duration_ms": -1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-129032521965",
+    "trace_id": "run-42578732710",
+    "parent_id": "run-42578732710",
+    "service": "test-linux-matrix-arch-using-qemu",
+    "name": "Test Linux ${{ matrix.arch }} using qemu",
+    "start": "2026-11-09T07:21:34Z",
+    "duration_ms": -1000.0,
+    "status": "ok"
+  }
+]

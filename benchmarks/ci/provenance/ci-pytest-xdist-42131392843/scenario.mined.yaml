@@ -1,0 +1,19 @@
+# Mined from https://github.com/pytest-dev/pytest-xdist/actions/runs/42131392843
+# (pytest-dev/pytest-xdist, licence MIT). Fixed by run https://github.com/pytest-
+# dev/pytest-xdist/actions/runs/42133220170. Label rule: the failed log shows an
+# environment error: "version '3.9' with architecture 'x64' was not found". Fix touched:
+# .github/workflows/test.yml.
+id: ci-pytest-xdist-42131392843
+title: 'fix(workers): preserve usage-error diagnostics and exit status'
+alert:
+  severity: ci
+  service: test-py39-pytestmin-ubuntu-latest
+  summary: 'workflow test failed on contribution/15346-worker-usage-errors at ab56651595:
+    step ''Set up Python'' in job ''test (py39-pytestmin, ubuntu-latest)'' failed.'
+truth:
+  category: infrastructure
+  service: pytest-xdist
+  required_evidence_any:
+  - log-0509
+  - log-0238
+provenance: recorded

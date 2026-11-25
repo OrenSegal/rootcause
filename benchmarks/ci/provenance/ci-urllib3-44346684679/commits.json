@@ -1,0 +1,14 @@
+[
+  {
+    "author": "ferly7",
+    "committedDate": "2026-11-18T16:23:19Z",
+    "messageHeadline": "Add tests covering decoder LF endings, broken streams, seek/readable",
+    "oid": "2152da6cbc3a44db5f01b13a8a6491b50d1b0878",
+    "files": [
+      {
+        "filename": "test/test_multipart.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

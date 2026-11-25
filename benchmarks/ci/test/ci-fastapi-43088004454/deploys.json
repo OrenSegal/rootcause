@@ -1,0 +1,16 @@
+[
+  {
+    "id": "c31ee07649",
+    "service": "fastapi",
+    "version": "c31ee07649",
+    "ts": "2026-11-11T19:31:03Z",
+    "author": "tiangolo",
+    "summary": "\ud83d\udc1b Fix synchronous dependency cleanup on cancellation",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "fastapi/concurrency.py",
+      "tests/test_concurrency.py"
+    ]
+  }
+]

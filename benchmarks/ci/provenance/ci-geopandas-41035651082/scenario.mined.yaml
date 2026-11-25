@@ -1,0 +1,19 @@
+# Mined from https://github.com/geopandas/geopandas/actions/runs/41035651082
+# (geopandas/geopandas, licence BSD-3-Clause). Fixed by run
+# https://github.com/geopandas/geopandas/actions/runs/41035651082. Label rule: the first
+# attempt failed and a re-run of the same pull-request run passed. Fix touched: nothing
+# (rerun).
+id: ci-geopandas-41035651082
+title: 'CI: use gh release instead of softprops/action-gh-release'
+alert:
+  severity: ci
+  service: ubuntu-latest-ci-envs-313-dev-yaml
+  summary: 'workflow Tests failed on gh-release at 0b6db8414d: step ''Install Conda environment
+    with Micromamba'' in job ''ubuntu-latest, ci/envs/313-dev.yaml'' failed.'
+truth:
+  category: infrastructure
+  service: geopandas
+  required_evidence_any:
+  - log-0484
+  - log-0489
+provenance: recorded

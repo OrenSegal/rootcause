@@ -1,0 +1,11 @@
+{
+  "fixed_run": "https://github.com/pydantic/pydantic/actions/runs/44621257138",
+  "fixed_sha": "65c74e5c952554cbeebe3d8883950e2dac67addb",
+  "commits": [
+    "65c74e5c952554cbeebe3d8883950e2dac67addb"
+  ],
+  "files": [
+    "tests/test_json_streaming_expanded.py"
+  ],
+  "status": "ahead"
+}

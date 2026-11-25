@@ -1,0 +1,20 @@
+# Mined from https://github.com/networkx/networkx/actions/runs/44360486498
+# (networkx/networkx, licence NOASSERTION). Fixed by run
+# https://github.com/networkx/networkx/actions/runs/44364152267. Label rule: the fix
+# changed files exactly one tested commit touched. Fix touched:
+# networkx/readwrite/json_graph/cytoscape.py,
+# networkx/readwrite/json_graph/tests/test_cytoscape.py, pixi.lock.
+id: ci-networkx-44360486498
+title: Make Cytoscape edge endpoints reference the exported node IDs; map IDs back on import
+  and restore tuple nodes after JSON conversion.
+alert:
+  severity: ci
+  service: format
+  summary: 'workflow style failed on first-fix at e14db0e50e: step ''Lint'' in job ''format''
+    failed.'
+truth:
+  category: bad_code_deploy
+  service: networkx
+  required_evidence_any:
+  - e14db0e50e
+provenance: recorded

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "3af7cff3da",
+    "service": "jinja",
+    "version": "3af7cff3da",
+    "ts": "2026-08-31T17:58:16Z",
+    "author": "sanyamk23",
+    "summary": "Fix indent filter ignoring blank=False when first=True",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "src/jinja2/filters.py",
+      "tests/test_filters.py"
+    ]
+  }
+]

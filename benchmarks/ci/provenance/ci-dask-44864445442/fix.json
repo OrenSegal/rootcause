@@ -1,0 +1,12 @@
+{
+  "fixed_run": "https://github.com/dask/dask/actions/runs/44939779400",
+  "fixed_sha": "1b5f488e246353783de60f08073a30e87e3b3ade",
+  "commits": [
+    "1b5f488e246353783de60f08073a30e87e3b3ade"
+  ],
+  "files": [
+    "dask/dataframe/tests/test_groupby.py"
+  ],
+  "merges": [],
+  "status": "ahead"
+}

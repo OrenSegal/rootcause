@@ -1,0 +1,2512 @@
+[
+  {
+    "span_id": "run-41440372866",
+    "trace_id": "run-41440372866",
+    "parent_id": null,
+    "service": "jupyter-server-tests",
+    "name": "Jupyter Server Tests",
+    "start": "2026-11-02T11:53:51Z",
+    "duration_ms": 1062000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-125260434516",
+    "trace_id": "run-41440372866",
+    "parent_id": "run-41440372866",
+    "service": "test-minimum-versions",
+    "name": "Test Minimum Versions",
+    "start": "2026-11-02T11:54:00Z",
+    "duration_ms": 349000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434516-step-1",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434516",
+    "service": "test-minimum-versions",
+    "name": "Set up job",
+    "start": "2026-11-02T11:54:10Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434516-step-2",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434516",
+    "service": "test-minimum-versions",
+    "name": "Run actions/checkout@v6",
+    "start": "2026-11-02T11:54:12Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434516-step-3",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434516",
+    "service": "test-minimum-versions",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/base-setup@v1",
+    "start": "2026-11-02T11:54:12Z",
+    "duration_ms": 25000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434516-step-4",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434516",
+    "service": "test-minimum-versions",
+    "name": "Run the unit tests",
+    "start": "2026-11-02T11:54:37Z",
+    "duration_ms": 309000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434516-step-7",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434516",
+    "service": "test-minimum-versions",
+    "name": "Post Run jupyterlab/maintainer-tools/.github/actions/base-setup@v1",
+    "start": "2026-11-02T11:59:46Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434516-step-8",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434516",
+    "service": "test-minimum-versions",
+    "name": "Post Run actions/checkout@v6",
+    "start": "2026-11-02T11:59:47Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434516-step-9",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434516",
+    "service": "test-minimum-versions",
+    "name": "Complete job",
+    "start": "2026-11-02T11:59:47Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434694",
+    "trace_id": "run-41440372866",
+    "parent_id": "run-41440372866",
+    "service": "test-lint",
+    "name": "Test Lint",
+    "start": "2026-11-02T11:53:58Z",
+    "duration_ms": 74000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434694-step-1",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434694",
+    "service": "test-lint",
+    "name": "Set up job",
+    "start": "2026-11-02T11:53:59Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434694-step-2",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434694",
+    "service": "test-lint",
+    "name": "Run actions/checkout@v6",
+    "start": "2026-11-02T11:54:01Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434694-step-3",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434694",
+    "service": "test-lint",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/base-setup@v1",
+    "start": "2026-11-02T11:54:02Z",
+    "duration_ms": 15000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434694-step-4",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434694",
+    "service": "test-lint",
+    "name": "Run Linters",
+    "start": "2026-11-02T11:54:17Z",
+    "duration_ms": 52000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434694-step-7",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434694",
+    "service": "test-lint",
+    "name": "Post Run jupyterlab/maintainer-tools/.github/actions/base-setup@v1",
+    "start": "2026-11-02T11:55:09Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434694-step-8",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434694",
+    "service": "test-lint",
+    "name": "Post Run actions/checkout@v6",
+    "start": "2026-11-02T11:55:10Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434694-step-9",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434694",
+    "service": "test-lint",
+    "name": "Complete job",
+    "start": "2026-11-02T11:55:10Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434745",
+    "trace_id": "run-41440372866",
+    "parent_id": "run-41440372866",
+    "service": "test-docs",
+    "name": "Test Docs",
+    "start": "2026-11-02T11:53:56Z",
+    "duration_ms": 69000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434745-step-1",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434745",
+    "service": "test-docs",
+    "name": "Set up job",
+    "start": "2026-11-02T11:53:57Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434745-step-2",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434745",
+    "service": "test-docs",
+    "name": "Run actions/checkout@v6",
+    "start": "2026-11-02T11:53:58Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434745-step-3",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434745",
+    "service": "test-docs",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/base-setup@v1",
+    "start": "2026-11-02T11:53:59Z",
+    "duration_ms": 17000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434745-step-4",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434745",
+    "service": "test-docs",
+    "name": "Install Dependencies",
+    "start": "2026-11-02T11:54:16Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434745-step-5",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434745",
+    "service": "test-docs",
+    "name": "Build API docs",
+    "start": "2026-11-02T11:54:23Z",
+    "duration_ms": 19000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434745-step-6",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434745",
+    "service": "test-docs",
+    "name": "Run hatch -v run docs:build",
+    "start": "2026-11-02T11:54:42Z",
+    "duration_ms": 20000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434745-step-11",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434745",
+    "service": "test-docs",
+    "name": "Post Run jupyterlab/maintainer-tools/.github/actions/base-setup@v1",
+    "start": "2026-11-02T11:55:02Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434745-step-12",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434745",
+    "service": "test-docs",
+    "name": "Post Run actions/checkout@v6",
+    "start": "2026-11-02T11:55:03Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434745-step-13",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434745",
+    "service": "test-docs",
+    "name": "Complete job",
+    "start": "2026-11-02T11:55:03Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434815",
+    "trace_id": "run-41440372866",
+    "parent_id": "run-41440372866",
+    "service": "check-release",
+    "name": "check_release",
+    "start": "2026-11-02T11:53:55Z",
+    "duration_ms": 145000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434815-step-1",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434815",
+    "service": "check-release",
+    "name": "Set up job",
+    "start": "2026-11-02T11:53:56Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434815-step-2",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434815",
+    "service": "check-release",
+    "name": "Checkout",
+    "start": "2026-11-02T11:53:57Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434815-step-3",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434815",
+    "service": "check-release",
+    "name": "Base Setup",
+    "start": "2026-11-02T11:53:58Z",
+    "duration_ms": 16000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434815-step-4",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434815",
+    "service": "check-release",
+    "name": "Install Dependencies",
+    "start": "2026-11-02T11:54:14Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434815-step-5",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434815",
+    "service": "check-release",
+    "name": "Check Release",
+    "start": "2026-11-02T11:54:23Z",
+    "duration_ms": 114000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434815-step-9",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434815",
+    "service": "check-release",
+    "name": "Post Base Setup",
+    "start": "2026-11-02T11:56:17Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434815-step-10",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434815",
+    "service": "check-release",
+    "name": "Post Checkout",
+    "start": "2026-11-02T11:56:18Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434815-step-11",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434815",
+    "service": "check-release",
+    "name": "Complete job",
+    "start": "2026-11-02T11:56:18Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434830",
+    "trace_id": "run-41440372866",
+    "parent_id": "run-41440372866",
+    "service": "integration-check-ubuntu-latest-3-10",
+    "name": "integration_check (ubuntu-latest, 3.10)",
+    "start": "2026-11-02T11:53:55Z",
+    "duration_ms": 169000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434830-step-1",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434830",
+    "service": "integration-check-ubuntu-latest-3-10",
+    "name": "Set up job",
+    "start": "2026-11-02T11:53:55Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434830-step-2",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434830",
+    "service": "integration-check-ubuntu-latest-3-10",
+    "name": "Run actions/checkout@v6",
+    "start": "2026-11-02T11:53:57Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434830-step-3",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434830",
+    "service": "integration-check-ubuntu-latest-3-10",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/base-setup@v1",
+    "start": "2026-11-02T11:53:58Z",
+    "duration_ms": 19000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434830-step-4",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434830",
+    "service": "integration-check-ubuntu-latest-3-10",
+    "name": "Run the tests",
+    "start": "2026-11-02T11:54:17Z",
+    "duration_ms": 143000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434830-step-5",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434830",
+    "service": "integration-check-ubuntu-latest-3-10",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/upload-coverage@v1",
+    "start": "2026-11-02T11:56:40Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434830-step-9",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434830",
+    "service": "integration-check-ubuntu-latest-3-10",
+    "name": "Post Run jupyterlab/maintainer-tools/.github/actions/base-setup@v1",
+    "start": "2026-11-02T11:56:41Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434830-step-10",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434830",
+    "service": "integration-check-ubuntu-latest-3-10",
+    "name": "Post Run actions/checkout@v6",
+    "start": "2026-11-02T11:56:43Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434830-step-11",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434830",
+    "service": "integration-check-ubuntu-latest-3-10",
+    "name": "Complete job",
+    "start": "2026-11-02T11:56:43Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434870",
+    "trace_id": "run-41440372866",
+    "parent_id": "run-41440372866",
+    "service": "test-examples",
+    "name": "Test Examples",
+    "start": "2026-11-02T11:54:05Z",
+    "duration_ms": 54000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434870-step-1",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434870",
+    "service": "test-examples",
+    "name": "Set up job",
+    "start": "2026-11-02T11:54:06Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434870-step-2",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434870",
+    "service": "test-examples",
+    "name": "Run actions/checkout@v6",
+    "start": "2026-11-02T11:54:08Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434870-step-3",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434870",
+    "service": "test-examples",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/base-setup@v1",
+    "start": "2026-11-02T11:54:09Z",
+    "duration_ms": 17000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434870-step-4",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434870",
+    "service": "test-examples",
+    "name": "Install the Python dependencies for the examples",
+    "start": "2026-11-02T11:54:26Z",
+    "duration_ms": 24000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434870-step-5",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434870",
+    "service": "test-examples",
+    "name": "Run the tests for the examples",
+    "start": "2026-11-02T11:54:50Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434870-step-9",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434870",
+    "service": "test-examples",
+    "name": "Post Run jupyterlab/maintainer-tools/.github/actions/base-setup@v1",
+    "start": "2026-11-02T11:54:55Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434870-step-10",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434870",
+    "service": "test-examples",
+    "name": "Post Run actions/checkout@v6",
+    "start": "2026-11-02T11:54:57Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434870-step-11",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434870",
+    "service": "test-examples",
+    "name": "Complete job",
+    "start": "2026-11-02T11:54:57Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434876",
+    "trace_id": "run-41440372866",
+    "parent_id": "run-41440372866",
+    "service": "test-prereleases",
+    "name": "Test Prereleases",
+    "start": "2026-11-02T11:53:55Z",
+    "duration_ms": 314000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434876-step-1",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434876",
+    "service": "test-prereleases",
+    "name": "Set up job",
+    "start": "2026-11-02T11:53:56Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434876-step-2",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434876",
+    "service": "test-prereleases",
+    "name": "Run actions/checkout@v6",
+    "start": "2026-11-02T11:53:58Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434876-step-3",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434876",
+    "service": "test-prereleases",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/base-setup@v1",
+    "start": "2026-11-02T11:54:00Z",
+    "duration_ms": 21000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434876-step-4",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434876",
+    "service": "test-prereleases",
+    "name": "Run the tests",
+    "start": "2026-11-02T11:54:21Z",
+    "duration_ms": 285000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434876-step-7",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434876",
+    "service": "test-prereleases",
+    "name": "Post Run jupyterlab/maintainer-tools/.github/actions/base-setup@v1",
+    "start": "2026-11-02T11:59:06Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434876-step-8",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434876",
+    "service": "test-prereleases",
+    "name": "Post Run actions/checkout@v6",
+    "start": "2026-11-02T11:59:07Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434876-step-9",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434876",
+    "service": "test-prereleases",
+    "name": "Complete job",
+    "start": "2026-11-02T11:59:07Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434883",
+    "trace_id": "run-41440372866",
+    "parent_id": "run-41440372866",
+    "service": "build-macos-latest-3-12",
+    "name": "build (macos-latest, 3.12)",
+    "start": "2026-11-02T11:53:56Z",
+    "duration_ms": 336000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434883-step-1",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434883",
+    "service": "build-macos-latest-3-12",
+    "name": "Set up job",
+    "start": "2026-11-02T11:53:55Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434883-step-2",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434883",
+    "service": "build-macos-latest-3-12",
+    "name": "Checkout",
+    "start": "2026-11-02T11:53:58Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434883-step-3",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434883",
+    "service": "build-macos-latest-3-12",
+    "name": "Base Setup",
+    "start": "2026-11-02T11:53:59Z",
+    "duration_ms": 14000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434883-step-5",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434883",
+    "service": "build-macos-latest-3-12",
+    "name": "Run the tests on posix",
+    "start": "2026-11-02T11:54:13Z",
+    "duration_ms": 314000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434883-step-7",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434883",
+    "service": "build-macos-latest-3-12",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/upload-coverage@v1",
+    "start": "2026-11-02T11:59:27Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434883-step-13",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434883",
+    "service": "build-macos-latest-3-12",
+    "name": "Post Base Setup",
+    "start": "2026-11-02T11:59:28Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434883-step-14",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434883",
+    "service": "build-macos-latest-3-12",
+    "name": "Post Checkout",
+    "start": "2026-11-02T11:59:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434883-step-15",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434883",
+    "service": "build-macos-latest-3-12",
+    "name": "Complete job",
+    "start": "2026-11-02T11:59:29Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434922",
+    "trace_id": "run-41440372866",
+    "parent_id": "run-41440372866",
+    "service": "check-links",
+    "name": "Check Links",
+    "start": "2026-11-02T11:53:55Z",
+    "duration_ms": 458000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434922-step-1",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434922",
+    "service": "check-links",
+    "name": "Set up job",
+    "start": "2026-11-02T11:53:56Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434922-step-2",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434922",
+    "service": "check-links",
+    "name": "Run actions/checkout@v6",
+    "start": "2026-11-02T11:53:58Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434922-step-3",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434922",
+    "service": "check-links",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/base-setup@v1",
+    "start": "2026-11-02T11:53:59Z",
+    "duration_ms": 16000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434922-step-4",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434922",
+    "service": "check-links",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/check-links@v1",
+    "start": "2026-11-02T11:54:15Z",
+    "duration_ms": 434000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434922-step-7",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434922",
+    "service": "check-links",
+    "name": "Post Run jupyterlab/maintainer-tools/.github/actions/base-setup@v1",
+    "start": "2026-11-02T12:01:29Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434922-step-8",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434922",
+    "service": "check-links",
+    "name": "Post Run actions/checkout@v6",
+    "start": "2026-11-02T12:01:30Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434922-step-9",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434922",
+    "service": "check-links",
+    "name": "Complete job",
+    "start": "2026-11-02T12:01:31Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434932",
+    "trace_id": "run-41440372866",
+    "parent_id": "run-41440372866",
+    "service": "test-remote-file-systems",
+    "name": "Test remote file systems",
+    "start": "2026-11-02T11:53:55Z",
+    "duration_ms": 58000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434932-step-1",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434932",
+    "service": "test-remote-file-systems",
+    "name": "Set up job",
+    "start": "2026-11-02T11:53:56Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434932-step-2",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434932",
+    "service": "test-remote-file-systems",
+    "name": "Run actions/checkout@v6",
+    "start": "2026-11-02T11:53:58Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434932-step-3",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434932",
+    "service": "test-remote-file-systems",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/base-setup@v1",
+    "start": "2026-11-02T11:54:00Z",
+    "duration_ms": 16000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434932-step-4",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434932",
+    "service": "test-remote-file-systems",
+    "name": "Create NFS file system",
+    "start": "2026-11-02T11:54:16Z",
+    "duration_ms": 12000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434932-step-5",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434932",
+    "service": "test-remote-file-systems",
+    "name": "Run the tests",
+    "start": "2026-11-02T11:54:28Z",
+    "duration_ms": 21000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434932-step-9",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434932",
+    "service": "test-remote-file-systems",
+    "name": "Post Run jupyterlab/maintainer-tools/.github/actions/base-setup@v1",
+    "start": "2026-11-02T11:54:49Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434932-step-10",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434932",
+    "service": "test-remote-file-systems",
+    "name": "Post Run actions/checkout@v6",
+    "start": "2026-11-02T11:54:50Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434932-step-11",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434932",
+    "service": "test-remote-file-systems",
+    "name": "Complete job",
+    "start": "2026-11-02T11:54:51Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434948",
+    "trace_id": "run-41440372866",
+    "parent_id": "run-41440372866",
+    "service": "build-ubuntu-latest-3-13",
+    "name": "build (ubuntu-latest, 3.13)",
+    "start": "2026-11-02T11:53:55Z",
+    "duration_ms": 409000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434948-step-1",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434948",
+    "service": "build-ubuntu-latest-3-13",
+    "name": "Set up job",
+    "start": "2026-11-02T11:53:55Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434948-step-2",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434948",
+    "service": "build-ubuntu-latest-3-13",
+    "name": "Checkout",
+    "start": "2026-11-02T11:53:57Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434948-step-3",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434948",
+    "service": "build-ubuntu-latest-3-13",
+    "name": "Base Setup",
+    "start": "2026-11-02T11:53:58Z",
+    "duration_ms": 16000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434948-step-4",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434948",
+    "service": "build-ubuntu-latest-3-13",
+    "name": "Install nbconvert dependencies on Linux",
+    "start": "2026-11-02T11:54:14Z",
+    "duration_ms": 79000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434948-step-5",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434948",
+    "service": "build-ubuntu-latest-3-13",
+    "name": "Run the tests on posix",
+    "start": "2026-11-02T11:55:33Z",
+    "duration_ms": 306000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434948-step-7",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434948",
+    "service": "build-ubuntu-latest-3-13",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/upload-coverage@v1",
+    "start": "2026-11-02T12:00:39Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434948-step-13",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434948",
+    "service": "build-ubuntu-latest-3-13",
+    "name": "Post Base Setup",
+    "start": "2026-11-02T12:00:41Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434948-step-14",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434948",
+    "service": "build-ubuntu-latest-3-13",
+    "name": "Post Checkout",
+    "start": "2026-11-02T12:00:41Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260434948-step-15",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260434948",
+    "service": "build-ubuntu-latest-3-13",
+    "name": "Complete job",
+    "start": "2026-11-02T12:00:42Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435006",
+    "trace_id": "run-41440372866",
+    "parent_id": "run-41440372866",
+    "service": "build-ubuntu-latest-3-12",
+    "name": "build (ubuntu-latest, 3.12)",
+    "start": "2026-11-02T11:53:55Z",
+    "duration_ms": 403000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435006-step-1",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435006",
+    "service": "build-ubuntu-latest-3-12",
+    "name": "Set up job",
+    "start": "2026-11-02T11:53:56Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435006-step-2",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435006",
+    "service": "build-ubuntu-latest-3-12",
+    "name": "Checkout",
+    "start": "2026-11-02T11:53:58Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435006-step-3",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435006",
+    "service": "build-ubuntu-latest-3-12",
+    "name": "Base Setup",
+    "start": "2026-11-02T11:53:59Z",
+    "duration_ms": 13000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435006-step-4",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435006",
+    "service": "build-ubuntu-latest-3-12",
+    "name": "Install nbconvert dependencies on Linux",
+    "start": "2026-11-02T11:54:12Z",
+    "duration_ms": 85000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435006-step-5",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435006",
+    "service": "build-ubuntu-latest-3-12",
+    "name": "Run the tests on posix",
+    "start": "2026-11-02T11:55:37Z",
+    "duration_ms": 296000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435006-step-7",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435006",
+    "service": "build-ubuntu-latest-3-12",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/upload-coverage@v1",
+    "start": "2026-11-02T12:00:33Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435006-step-13",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435006",
+    "service": "build-ubuntu-latest-3-12",
+    "name": "Post Base Setup",
+    "start": "2026-11-02T12:00:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435006-step-14",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435006",
+    "service": "build-ubuntu-latest-3-12",
+    "name": "Post Checkout",
+    "start": "2026-11-02T12:00:35Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435006-step-15",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435006",
+    "service": "build-ubuntu-latest-3-12",
+    "name": "Complete job",
+    "start": "2026-11-02T12:00:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435014",
+    "trace_id": "run-41440372866",
+    "parent_id": "run-41440372866",
+    "service": "integration-check-ubuntu-latest-3-11",
+    "name": "integration_check (ubuntu-latest, 3.11)",
+    "start": "2026-11-02T11:53:55Z",
+    "duration_ms": 137000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435014-step-1",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435014",
+    "service": "integration-check-ubuntu-latest-3-11",
+    "name": "Set up job",
+    "start": "2026-11-02T11:53:55Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435014-step-2",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435014",
+    "service": "integration-check-ubuntu-latest-3-11",
+    "name": "Run actions/checkout@v6",
+    "start": "2026-11-02T11:53:58Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435014-step-3",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435014",
+    "service": "integration-check-ubuntu-latest-3-11",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/base-setup@v1",
+    "start": "2026-11-02T11:53:59Z",
+    "duration_ms": 14000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435014-step-4",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435014",
+    "service": "integration-check-ubuntu-latest-3-11",
+    "name": "Run the tests",
+    "start": "2026-11-02T11:54:13Z",
+    "duration_ms": 115000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435014-step-5",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435014",
+    "service": "integration-check-ubuntu-latest-3-11",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/upload-coverage@v1",
+    "start": "2026-11-02T11:56:08Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435014-step-9",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435014",
+    "service": "integration-check-ubuntu-latest-3-11",
+    "name": "Post Run jupyterlab/maintainer-tools/.github/actions/base-setup@v1",
+    "start": "2026-11-02T11:56:09Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435014-step-10",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435014",
+    "service": "integration-check-ubuntu-latest-3-11",
+    "name": "Post Run actions/checkout@v6",
+    "start": "2026-11-02T11:56:10Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435014-step-11",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435014",
+    "service": "integration-check-ubuntu-latest-3-11",
+    "name": "Complete job",
+    "start": "2026-11-02T11:56:10Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435045",
+    "trace_id": "run-41440372866",
+    "parent_id": "run-41440372866",
+    "service": "build-ubuntu-latest-3-10",
+    "name": "build (ubuntu-latest, 3.10)",
+    "start": "2026-11-02T11:53:55Z",
+    "duration_ms": 669000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435045-step-1",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435045",
+    "service": "build-ubuntu-latest-3-10",
+    "name": "Set up job",
+    "start": "2026-11-02T11:53:56Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435045-step-2",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435045",
+    "service": "build-ubuntu-latest-3-10",
+    "name": "Checkout",
+    "start": "2026-11-02T11:53:59Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435045-step-3",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435045",
+    "service": "build-ubuntu-latest-3-10",
+    "name": "Base Setup",
+    "start": "2026-11-02T11:54:00Z",
+    "duration_ms": 19000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435045-step-4",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435045",
+    "service": "build-ubuntu-latest-3-10",
+    "name": "Install nbconvert dependencies on Linux",
+    "start": "2026-11-02T11:54:19Z",
+    "duration_ms": 294000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435045-step-5",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435045",
+    "service": "build-ubuntu-latest-3-10",
+    "name": "Run the tests on posix",
+    "start": "2026-11-02T11:59:13Z",
+    "duration_ms": 345000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435045-step-7",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435045",
+    "service": "build-ubuntu-latest-3-10",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/upload-coverage@v1",
+    "start": "2026-11-02T12:04:58Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435045-step-13",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435045",
+    "service": "build-ubuntu-latest-3-10",
+    "name": "Post Base Setup",
+    "start": "2026-11-02T12:04:59Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435045-step-14",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435045",
+    "service": "build-ubuntu-latest-3-10",
+    "name": "Post Checkout",
+    "start": "2026-11-02T12:05:00Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435045-step-15",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435045",
+    "service": "build-ubuntu-latest-3-10",
+    "name": "Complete job",
+    "start": "2026-11-02T12:05:01Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435051",
+    "trace_id": "run-41440372866",
+    "parent_id": "run-41440372866",
+    "service": "build-macos-latest-3-10",
+    "name": "build (macos-latest, 3.10)",
+    "start": "2026-11-02T11:53:56Z",
+    "duration_ms": 519000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435051-step-1",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435051",
+    "service": "build-macos-latest-3-10",
+    "name": "Set up job",
+    "start": "2026-11-02T11:53:57Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435051-step-2",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435051",
+    "service": "build-macos-latest-3-10",
+    "name": "Checkout",
+    "start": "2026-11-02T11:54:00Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435051-step-3",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435051",
+    "service": "build-macos-latest-3-10",
+    "name": "Base Setup",
+    "start": "2026-11-02T11:54:02Z",
+    "duration_ms": 70000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435051-step-5",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435051",
+    "service": "build-macos-latest-3-10",
+    "name": "Run the tests on posix",
+    "start": "2026-11-02T11:55:12Z",
+    "duration_ms": 436000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435051-step-7",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435051",
+    "service": "build-macos-latest-3-10",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/upload-coverage@v1",
+    "start": "2026-11-02T12:02:28Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435051-step-13",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435051",
+    "service": "build-macos-latest-3-10",
+    "name": "Post Base Setup",
+    "start": "2026-11-02T12:02:30Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435051-step-14",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435051",
+    "service": "build-macos-latest-3-10",
+    "name": "Post Checkout",
+    "start": "2026-11-02T12:02:31Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435051-step-15",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435051",
+    "service": "build-macos-latest-3-10",
+    "name": "Complete job",
+    "start": "2026-11-02T12:02:32Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435053",
+    "trace_id": "run-41440372866",
+    "parent_id": "run-41440372866",
+    "service": "integration-check-ubuntu-latest-3-12",
+    "name": "integration_check (ubuntu-latest, 3.12)",
+    "start": "2026-11-02T11:53:55Z",
+    "duration_ms": 166000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435053-step-1",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435053",
+    "service": "integration-check-ubuntu-latest-3-12",
+    "name": "Set up job",
+    "start": "2026-11-02T11:53:56Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435053-step-2",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435053",
+    "service": "integration-check-ubuntu-latest-3-12",
+    "name": "Run actions/checkout@v6",
+    "start": "2026-11-02T11:53:59Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435053-step-3",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435053",
+    "service": "integration-check-ubuntu-latest-3-12",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/base-setup@v1",
+    "start": "2026-11-02T11:54:00Z",
+    "duration_ms": 15000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435053-step-4",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435053",
+    "service": "integration-check-ubuntu-latest-3-12",
+    "name": "Run the tests",
+    "start": "2026-11-02T11:54:15Z",
+    "duration_ms": 140000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435053-step-5",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435053",
+    "service": "integration-check-ubuntu-latest-3-12",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/upload-coverage@v1",
+    "start": "2026-11-02T11:56:35Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435053-step-9",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435053",
+    "service": "integration-check-ubuntu-latest-3-12",
+    "name": "Post Run jupyterlab/maintainer-tools/.github/actions/base-setup@v1",
+    "start": "2026-11-02T11:56:37Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435053-step-10",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435053",
+    "service": "integration-check-ubuntu-latest-3-12",
+    "name": "Post Run actions/checkout@v6",
+    "start": "2026-11-02T11:56:38Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435053-step-11",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435053",
+    "service": "integration-check-ubuntu-latest-3-12",
+    "name": "Complete job",
+    "start": "2026-11-02T11:56:39Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435054",
+    "trace_id": "run-41440372866",
+    "parent_id": "run-41440372866",
+    "service": "build-ubuntu-latest-3-14",
+    "name": "build (ubuntu-latest, 3.14)",
+    "start": "2026-11-02T11:53:55Z",
+    "duration_ms": 435000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435054-step-1",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435054",
+    "service": "build-ubuntu-latest-3-14",
+    "name": "Set up job",
+    "start": "2026-11-02T11:53:56Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435054-step-2",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435054",
+    "service": "build-ubuntu-latest-3-14",
+    "name": "Checkout",
+    "start": "2026-11-02T11:53:59Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435054-step-3",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435054",
+    "service": "build-ubuntu-latest-3-14",
+    "name": "Base Setup",
+    "start": "2026-11-02T11:54:00Z",
+    "duration_ms": 17000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435054-step-4",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435054",
+    "service": "build-ubuntu-latest-3-14",
+    "name": "Install nbconvert dependencies on Linux",
+    "start": "2026-11-02T11:54:17Z",
+    "duration_ms": 118000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435054-step-5",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435054",
+    "service": "build-ubuntu-latest-3-14",
+    "name": "Run the tests on posix",
+    "start": "2026-11-02T11:56:15Z",
+    "duration_ms": 290000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435054-step-7",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435054",
+    "service": "build-ubuntu-latest-3-14",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/upload-coverage@v1",
+    "start": "2026-11-02T12:01:05Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435054-step-13",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435054",
+    "service": "build-ubuntu-latest-3-14",
+    "name": "Post Base Setup",
+    "start": "2026-11-02T12:01:07Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435054-step-14",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435054",
+    "service": "build-ubuntu-latest-3-14",
+    "name": "Post Checkout",
+    "start": "2026-11-02T12:01:08Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435054-step-15",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435054",
+    "service": "build-ubuntu-latest-3-14",
+    "name": "Complete job",
+    "start": "2026-11-02T12:01:08Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435081",
+    "trace_id": "run-41440372866",
+    "parent_id": "run-41440372866",
+    "service": "build-macos-latest-3-11",
+    "name": "build (macos-latest, 3.11)",
+    "start": "2026-11-02T11:53:56Z",
+    "duration_ms": 437000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435081-step-1",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435081",
+    "service": "build-macos-latest-3-11",
+    "name": "Set up job",
+    "start": "2026-11-02T11:53:56Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435081-step-2",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435081",
+    "service": "build-macos-latest-3-11",
+    "name": "Checkout",
+    "start": "2026-11-02T11:53:58Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435081-step-3",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435081",
+    "service": "build-macos-latest-3-11",
+    "name": "Base Setup",
+    "start": "2026-11-02T11:54:01Z",
+    "duration_ms": 21000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435081-step-5",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435081",
+    "service": "build-macos-latest-3-11",
+    "name": "Run the tests on posix",
+    "start": "2026-11-02T11:54:22Z",
+    "duration_ms": 403000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435081-step-7",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435081",
+    "service": "build-macos-latest-3-11",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/upload-coverage@v1",
+    "start": "2026-11-02T12:01:05Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435081-step-13",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435081",
+    "service": "build-macos-latest-3-11",
+    "name": "Post Base Setup",
+    "start": "2026-11-02T12:01:07Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435081-step-14",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435081",
+    "service": "build-macos-latest-3-11",
+    "name": "Post Checkout",
+    "start": "2026-11-02T12:01:08Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435081-step-15",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435081",
+    "service": "build-macos-latest-3-11",
+    "name": "Complete job",
+    "start": "2026-11-02T12:01:09Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435090",
+    "trace_id": "run-41440372866",
+    "parent_id": "run-41440372866",
+    "service": "build-windows-latest-3-13",
+    "name": "build (windows-latest, 3.13)",
+    "start": "2026-11-02T11:53:55Z",
+    "duration_ms": 492000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435090-step-1",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435090",
+    "service": "build-windows-latest-3-13",
+    "name": "Set up job",
+    "start": "2026-11-02T11:53:56Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435090-step-2",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435090",
+    "service": "build-windows-latest-3-13",
+    "name": "Checkout",
+    "start": "2026-11-02T11:53:58Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435090-step-3",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435090",
+    "service": "build-windows-latest-3-13",
+    "name": "Base Setup",
+    "start": "2026-11-02T11:54:04Z",
+    "duration_ms": 43000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435090-step-6",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435090",
+    "service": "build-windows-latest-3-13",
+    "name": "Run the tests on windows",
+    "start": "2026-11-02T11:54:47Z",
+    "duration_ms": 433000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435090-step-7",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435090",
+    "service": "build-windows-latest-3-13",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/upload-coverage@v1",
+    "start": "2026-11-02T12:02:00Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435090-step-13",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435090",
+    "service": "build-windows-latest-3-13",
+    "name": "Post Base Setup",
+    "start": "2026-11-02T12:02:01Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435090-step-14",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435090",
+    "service": "build-windows-latest-3-13",
+    "name": "Post Checkout",
+    "start": "2026-11-02T12:02:03Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435090-step-15",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435090",
+    "service": "build-windows-latest-3-13",
+    "name": "Complete job",
+    "start": "2026-11-02T12:02:05Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435093",
+    "trace_id": "run-41440372866",
+    "parent_id": "run-41440372866",
+    "service": "make-sdist",
+    "name": "Make SDist",
+    "start": "2026-11-02T11:54:02Z",
+    "duration_ms": 43000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435093-step-1",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435093",
+    "service": "make-sdist",
+    "name": "Set up job",
+    "start": "2026-11-02T11:54:13Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435093-step-2",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435093",
+    "service": "make-sdist",
+    "name": "Run actions/checkout@v6",
+    "start": "2026-11-02T11:54:15Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435093-step-3",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435093",
+    "service": "make-sdist",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/base-setup@v1",
+    "start": "2026-11-02T11:54:16Z",
+    "duration_ms": 18000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435093-step-4",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435093",
+    "service": "make-sdist",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/make-sdist@v1",
+    "start": "2026-11-02T11:54:34Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435093-step-7",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435093",
+    "service": "make-sdist",
+    "name": "Post Run jupyterlab/maintainer-tools/.github/actions/base-setup@v1",
+    "start": "2026-11-02T11:54:41Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435093-step-8",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435093",
+    "service": "make-sdist",
+    "name": "Post Run actions/checkout@v6",
+    "start": "2026-11-02T11:54:42Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435093-step-9",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435093",
+    "service": "make-sdist",
+    "name": "Complete job",
+    "start": "2026-11-02T11:54:42Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435104",
+    "trace_id": "run-41440372866",
+    "parent_id": "run-41440372866",
+    "service": "build-macos-latest-3-13",
+    "name": "build (macos-latest, 3.13)",
+    "start": "2026-11-02T11:53:55Z",
+    "duration_ms": 332000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435104-step-1",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435104",
+    "service": "build-macos-latest-3-13",
+    "name": "Set up job",
+    "start": "2026-11-02T11:53:55Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435104-step-2",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435104",
+    "service": "build-macos-latest-3-13",
+    "name": "Checkout",
+    "start": "2026-11-02T11:53:57Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435104-step-3",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435104",
+    "service": "build-macos-latest-3-13",
+    "name": "Base Setup",
+    "start": "2026-11-02T11:53:59Z",
+    "duration_ms": 14000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435104-step-5",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435104",
+    "service": "build-macos-latest-3-13",
+    "name": "Run the tests on posix",
+    "start": "2026-11-02T11:54:13Z",
+    "duration_ms": 306000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435104-step-7",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435104",
+    "service": "build-macos-latest-3-13",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/upload-coverage@v1",
+    "start": "2026-11-02T11:59:19Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435104-step-13",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435104",
+    "service": "build-macos-latest-3-13",
+    "name": "Post Base Setup",
+    "start": "2026-11-02T11:59:21Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435104-step-14",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435104",
+    "service": "build-macos-latest-3-13",
+    "name": "Post Checkout",
+    "start": "2026-11-02T11:59:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435104-step-15",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435104",
+    "service": "build-macos-latest-3-13",
+    "name": "Complete job",
+    "start": "2026-11-02T11:59:22Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435105",
+    "trace_id": "run-41440372866",
+    "parent_id": "run-41440372866",
+    "service": "build-windows-latest-3-11",
+    "name": "build (windows-latest, 3.11)",
+    "start": "2026-11-02T11:53:55Z",
+    "duration_ms": 578000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435105-step-1",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435105",
+    "service": "build-windows-latest-3-11",
+    "name": "Set up job",
+    "start": "2026-11-02T11:53:56Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435105-step-2",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435105",
+    "service": "build-windows-latest-3-11",
+    "name": "Checkout",
+    "start": "2026-11-02T11:53:58Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435105-step-3",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435105",
+    "service": "build-windows-latest-3-11",
+    "name": "Base Setup",
+    "start": "2026-11-02T11:54:04Z",
+    "duration_ms": 47000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435105-step-6",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435105",
+    "service": "build-windows-latest-3-11",
+    "name": "Run the tests on windows",
+    "start": "2026-11-02T11:54:51Z",
+    "duration_ms": 513000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435105-step-7",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435105",
+    "service": "build-windows-latest-3-11",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/upload-coverage@v1",
+    "start": "2026-11-02T12:03:24Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435105-step-13",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435105",
+    "service": "build-windows-latest-3-11",
+    "name": "Post Base Setup",
+    "start": "2026-11-02T12:03:26Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435105-step-14",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435105",
+    "service": "build-windows-latest-3-11",
+    "name": "Post Checkout",
+    "start": "2026-11-02T12:03:28Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435105-step-15",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435105",
+    "service": "build-windows-latest-3-11",
+    "name": "Complete job",
+    "start": "2026-11-02T12:03:31Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435140",
+    "trace_id": "run-41440372866",
+    "parent_id": "run-41440372866",
+    "service": "build-ubuntu-latest-3-11",
+    "name": "build (ubuntu-latest, 3.11)",
+    "start": "2026-11-02T11:53:55Z",
+    "duration_ms": 478000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435140-step-1",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435140",
+    "service": "build-ubuntu-latest-3-11",
+    "name": "Set up job",
+    "start": "2026-11-02T11:53:56Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435140-step-2",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435140",
+    "service": "build-ubuntu-latest-3-11",
+    "name": "Checkout",
+    "start": "2026-11-02T11:53:58Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435140-step-3",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435140",
+    "service": "build-ubuntu-latest-3-11",
+    "name": "Base Setup",
+    "start": "2026-11-02T11:53:59Z",
+    "duration_ms": 21000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435140-step-4",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435140",
+    "service": "build-ubuntu-latest-3-11",
+    "name": "Install nbconvert dependencies on Linux",
+    "start": "2026-11-02T11:54:20Z",
+    "duration_ms": 93000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435140-step-5",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435140",
+    "service": "build-ubuntu-latest-3-11",
+    "name": "Run the tests on posix",
+    "start": "2026-11-02T11:55:53Z",
+    "duration_ms": 356000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435140-step-7",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435140",
+    "service": "build-ubuntu-latest-3-11",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/upload-coverage@v1",
+    "start": "2026-11-02T12:01:49Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435140-step-13",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435140",
+    "service": "build-ubuntu-latest-3-11",
+    "name": "Post Base Setup",
+    "start": "2026-11-02T12:01:50Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435140-step-14",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435140",
+    "service": "build-ubuntu-latest-3-11",
+    "name": "Post Checkout",
+    "start": "2026-11-02T12:01:51Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435140-step-15",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435140",
+    "service": "build-ubuntu-latest-3-11",
+    "name": "Complete job",
+    "start": "2026-11-02T12:01:52Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435141",
+    "trace_id": "run-41440372866",
+    "parent_id": "run-41440372866",
+    "service": "build-windows-latest-3-10",
+    "name": "build (windows-latest, 3.10)",
+    "start": "2026-11-02T11:53:57Z",
+    "duration_ms": 720000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435141-step-1",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435141",
+    "service": "build-windows-latest-3-10",
+    "name": "Set up job",
+    "start": "2026-11-02T11:53:59Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435141-step-2",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435141",
+    "service": "build-windows-latest-3-10",
+    "name": "Checkout",
+    "start": "2026-11-02T11:54:03Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435141-step-3",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435141",
+    "service": "build-windows-latest-3-10",
+    "name": "Base Setup",
+    "start": "2026-11-02T11:54:09Z",
+    "duration_ms": 107000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435141-step-6",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435141",
+    "service": "build-windows-latest-3-10",
+    "name": "Run the tests on windows",
+    "start": "2026-11-02T11:55:56Z",
+    "duration_ms": 595000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435141-step-7",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435141",
+    "service": "build-windows-latest-3-10",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/upload-coverage@v1",
+    "start": "2026-11-02T12:05:51Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435141-step-13",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435141",
+    "service": "build-windows-latest-3-10",
+    "name": "Post Base Setup",
+    "start": "2026-11-02T12:05:52Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435141-step-14",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435141",
+    "service": "build-windows-latest-3-10",
+    "name": "Post Checkout",
+    "start": "2026-11-02T12:05:54Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435141-step-15",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435141",
+    "service": "build-windows-latest-3-10",
+    "name": "Complete job",
+    "start": "2026-11-02T12:05:57Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435178",
+    "trace_id": "run-41440372866",
+    "parent_id": "run-41440372866",
+    "service": "build-windows-latest-3-14",
+    "name": "build (windows-latest, 3.14)",
+    "start": "2026-11-02T11:53:56Z",
+    "duration_ms": 529000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435178-step-1",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435178",
+    "service": "build-windows-latest-3-14",
+    "name": "Set up job",
+    "start": "2026-11-02T11:53:57Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435178-step-2",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435178",
+    "service": "build-windows-latest-3-14",
+    "name": "Checkout",
+    "start": "2026-11-02T11:53:59Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435178-step-3",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435178",
+    "service": "build-windows-latest-3-14",
+    "name": "Base Setup",
+    "start": "2026-11-02T11:54:06Z",
+    "duration_ms": 48000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435178-step-6",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435178",
+    "service": "build-windows-latest-3-14",
+    "name": "Run the tests on windows",
+    "start": "2026-11-02T11:54:54Z",
+    "duration_ms": 464000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435178-step-7",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435178",
+    "service": "build-windows-latest-3-14",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/upload-coverage@v1",
+    "start": "2026-11-02T12:02:38Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435178-step-13",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435178",
+    "service": "build-windows-latest-3-14",
+    "name": "Post Base Setup",
+    "start": "2026-11-02T12:02:39Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435178-step-14",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435178",
+    "service": "build-windows-latest-3-14",
+    "name": "Post Checkout",
+    "start": "2026-11-02T12:02:41Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435178-step-15",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435178",
+    "service": "build-windows-latest-3-14",
+    "name": "Complete job",
+    "start": "2026-11-02T12:02:44Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435247",
+    "trace_id": "run-41440372866",
+    "parent_id": "run-41440372866",
+    "service": "build-macos-latest-3-14",
+    "name": "build (macos-latest, 3.14)",
+    "start": "2026-11-02T11:54:01Z",
+    "duration_ms": 437000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435247-step-1",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435247",
+    "service": "build-macos-latest-3-14",
+    "name": "Set up job",
+    "start": "2026-11-02T11:54:02Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435247-step-2",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435247",
+    "service": "build-macos-latest-3-14",
+    "name": "Checkout",
+    "start": "2026-11-02T11:54:05Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435247-step-3",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435247",
+    "service": "build-macos-latest-3-14",
+    "name": "Base Setup",
+    "start": "2026-11-02T11:54:08Z",
+    "duration_ms": 26000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435247-step-5",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435247",
+    "service": "build-macos-latest-3-14",
+    "name": "Run the tests on posix",
+    "start": "2026-11-02T11:54:34Z",
+    "duration_ms": 396000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435247-step-7",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435247",
+    "service": "build-macos-latest-3-14",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/upload-coverage@v1",
+    "start": "2026-11-02T12:01:10Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435247-step-13",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435247",
+    "service": "build-macos-latest-3-14",
+    "name": "Post Base Setup",
+    "start": "2026-11-02T12:01:12Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435247-step-14",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435247",
+    "service": "build-macos-latest-3-14",
+    "name": "Post Checkout",
+    "start": "2026-11-02T12:01:13Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435247-step-15",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435247",
+    "service": "build-macos-latest-3-14",
+    "name": "Complete job",
+    "start": "2026-11-02T12:01:14Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435366",
+    "trace_id": "run-41440372866",
+    "parent_id": "run-41440372866",
+    "service": "build-windows-latest-3-12",
+    "name": "build (windows-latest, 3.12)",
+    "start": "2026-11-02T11:53:55Z",
+    "duration_ms": 1057000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-125260435366-step-1",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435366",
+    "service": "build-windows-latest-3-12",
+    "name": "Set up job",
+    "start": "2026-11-02T11:53:57Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435366-step-2",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435366",
+    "service": "build-windows-latest-3-12",
+    "name": "Checkout",
+    "start": "2026-11-02T11:54:00Z",
+    "duration_ms": 12000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435366-step-3",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435366",
+    "service": "build-windows-latest-3-12",
+    "name": "Base Setup",
+    "start": "2026-11-02T11:54:12Z",
+    "duration_ms": 78000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435366-step-6",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435366",
+    "service": "build-windows-latest-3-12",
+    "name": "Run the tests on windows",
+    "start": "2026-11-02T11:55:30Z",
+    "duration_ms": 958000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-125260435366-step-13",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435366",
+    "service": "build-windows-latest-3-12",
+    "name": "Post Base Setup",
+    "start": "2026-11-02T12:11:28Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435366-step-14",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435366",
+    "service": "build-windows-latest-3-12",
+    "name": "Post Checkout",
+    "start": "2026-11-02T12:11:29Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260435366-step-15",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260435366",
+    "service": "build-windows-latest-3-12",
+    "name": "Complete job",
+    "start": "2026-11-02T12:11:31Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260806422",
+    "trace_id": "run-41440372866",
+    "parent_id": "run-41440372866",
+    "service": "install-from-sdist-and-test",
+    "name": "Install from SDist and Test",
+    "start": "2026-11-02T11:54:48Z",
+    "duration_ms": 300000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260806422-step-1",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260806422",
+    "service": "install-from-sdist-and-test",
+    "name": "Set up job",
+    "start": "2026-11-02T11:54:48Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260806422-step-2",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260806422",
+    "service": "install-from-sdist-and-test",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/base-setup@v1",
+    "start": "2026-11-02T11:54:51Z",
+    "duration_ms": 17000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260806422-step-3",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260806422",
+    "service": "install-from-sdist-and-test",
+    "name": "Run jupyterlab/maintainer-tools/.github/actions/test-sdist@v1",
+    "start": "2026-11-02T11:55:08Z",
+    "duration_ms": 277000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260806422-step-6",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260806422",
+    "service": "install-from-sdist-and-test",
+    "name": "Post Run jupyterlab/maintainer-tools/.github/actions/base-setup@v1",
+    "start": "2026-11-02T11:59:45Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125260806422-step-7",
+    "trace_id": "run-41440372866",
+    "parent_id": "job-125260806422",
+    "service": "install-from-sdist-and-test",
+    "name": "Complete job",
+    "start": "2026-11-02T11:59:45Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-125268107704",
+    "trace_id": "run-41440372866",
+    "parent_id": "run-41440372866",
+    "service": "coverage",
+    "name": "coverage",
+    "start": "2026-11-02T12:11:33Z",
+    "duration_ms": -1000.0,
+    "status": "ok"
+  }
+]

@@ -1,0 +1,18 @@
+id: ci-poetry-39765933980
+title: 'test: reuse init_basic_toml fixture in new project expectations'
+alert:
+  severity: ci
+  service: ubuntu-python-3-15-pytest
+  summary: 'workflow Tests failed on codex/fixture-dedup-3155-20261022 at decddbe25d: step
+    ''Run poetry run pytest --integration -v'' in job ''Ubuntu (Python 3.15) / pytest'' failed.'
+truth:
+  grading: class
+  category: infrastructure
+  service: poetry
+  required_evidence_any:
+  - log-2688
+  - log-3342
+  - log-3749
+  - log-3821
+  - log-4024
+provenance: recorded

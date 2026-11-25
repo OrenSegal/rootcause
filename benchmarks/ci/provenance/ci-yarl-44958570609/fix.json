@@ -1,0 +1,11 @@
+{
+  "fixed_run": "https://github.com/aio-libs/yarl/actions/runs/44959469683",
+  "fixed_sha": "e1cdcd56a30f796b5c205e2678a679e751b4a173",
+  "commits": [
+    "e1cdcd56a30f796b5c205e2678a679e751b4a173"
+  ],
+  "files": [
+    "docs/api.rst"
+  ],
+  "status": "ahead"
+}

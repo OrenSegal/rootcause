@@ -1,0 +1,12 @@
+{
+  "fixed_run": "https://github.com/coveragepy/coveragepy/actions/runs/43435497078",
+  "fixed_sha": "2297bac9efbdd4ddbba14cce0724c2a7f1629137",
+  "commits": [
+    "2297bac9efbdd4ddbba14cce0724c2a7f1629137"
+  ],
+  "files": [
+    "coverage/jsonreport.py"
+  ],
+  "merges": [],
+  "status": "ahead"
+}

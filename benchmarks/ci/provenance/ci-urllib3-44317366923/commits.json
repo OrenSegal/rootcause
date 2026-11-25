@@ -1,0 +1,30 @@
+[
+  {
+    "author": "ferly7",
+    "committedDate": "2026-11-18T13:47:37Z",
+    "messageHeadline": "Add streaming multipart encoder and decoder in urllib3.multipart",
+    "oid": "20374a9e395fe7e4c162b113510cf0c0fa299f1b",
+    "files": [
+      {
+        "filename": "changelog/624.feature.rst",
+        "status": "added"
+      },
+      {
+        "filename": "docs/reference/urllib3.fields.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "src/urllib3/filepost.py",
+        "status": "modified"
+      },
+      {
+        "filename": "src/urllib3/multipart.py",
+        "status": "added"
+      },
+      {
+        "filename": "test/test_multipart.py",
+        "status": "added"
+      }
+    ]
+  }
+]

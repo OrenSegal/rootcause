@@ -1,0 +1,57 @@
+name: rootcause diff
+description: Compare two eval result files case by case and fail the job when the candidate is a real regression.
+branding:
+  icon: git-pull-request
+  color: gray-dark
+inputs:
+  baseline:
+    description: >-
+      JSONL results of the baseline, one run per line:
+      {"case": "...", "passed": true, "cost": 0.01}. cost is optional.
+    required: true
+  candidate:
+    description: JSONL results of the candidate, in the same form.
+    required: true
+  intersect:
+    description: Drop cases present on one side only ("true" or "false").
+    default: "false"
+  cases:
+    description: Optional file listing the case ids to compare, one per line.
+    default: ""
+  fail-on-regression:
+    description: Fail the job when the baseline is better than the candidate ("true" or "false").
+    default: "true"
+outputs:
+  diff:
+    description: Path to the diff markdown.
+    value: ${{ steps.diff.outputs.diff }}
+runs:
+  using: composite
+  steps:
+    - uses: astral-sh/setup-uv@1db35dd8eee11c5894872e0b383ae6c406cf738d # v10.4.0
+      with:
+        python-version: "3.14"
+        version: "0.13.1"
+    - id: diff
+      shell: bash
+      env:
+        BASELINE: ${{ inputs.baseline }}
+        CANDIDATE: ${{ inputs.candidate }}
+        INTERSECT: ${{ inputs.intersect }}
+        CASES: ${{ inputs.cases }}
+        FAIL_ON_REGRESSION: ${{ inputs.fail-on-regression }}
+      run: |
+        out="$RUNNER_TEMP/rootcause-diff.md"
+        echo "diff=$out" >> "$GITHUB_OUTPUT"
+        # Inputs arrive through env so they stay data. Paths resolve against the caller's
+        # workspace; the tool runs from this action's own checkout.
+        args=()
+        [ "$INTERSECT" = "true" ] && args+=(--intersect)
+        [ "$FAIL_ON_REGRESSION" = "true" ] && args+=(--fail-on-regression)
+        [ -n "$CASES" ] && args+=(--cases "$CASES")
+        status=0
+        uv run --locked --project "$GITHUB_ACTION_PATH/.." rootcause diff \
+          "${args[@]}" -- "$BASELINE" "$CANDIDATE" > "$out" || status=$?
+        cat "$out"
+        cat "$out" >> "$GITHUB_STEP_SUMMARY"
+        exit "$status"

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "9902ebb9da",
+    "service": "scrapy",
+    "version": "9902ebb9da",
+    "ts": "2026-11-09T22:56:16Z",
+    "author": "hygorcluz",
+    "summary": "Skip the empty PeriodicLog line on spider open as well",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "docs/topics/extensions.rst",
+      "scrapy/extensions/periodic_log.py",
+      "tests/test_extension_periodic_log.py"
+    ]
+  }
+]

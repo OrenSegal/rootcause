@@ -17,6 +17,18 @@ class Category(StrEnum):
     NO_INCIDENT = "no_incident"
 
 
+# The two classes a class-graded truth is judged on: a change under test caused the
+# failure, or something else did (resource, dependency, infrastructure, or nothing
+# wrong with the change at all: in the dev pilot, correct flaky-test diagnoses were
+# filed as no_incident).
+TruthClass = Literal["change", "not_change"]
+CHANGE_CATEGORIES = frozenset({Category.CONFIG_CHANGE, Category.BAD_CODE_DEPLOY})
+
+
+def category_class(category: Category) -> TruthClass:
+    return "change" if category in CHANGE_CATEGORIES else "not_change"
+
+
 class Alert(BaseModel):
     """The page that starts an investigation. `render` is the only definition of
     the text an investigator receives, and `parse` reads it back."""
@@ -54,6 +66,10 @@ class GroundTruth(BaseModel):
     # offered only with retrieval on). Lets search be measured as a step taken, not a tool
     # that happened to be available.
     required_tools: list[str] = []
+    # "exact" grades the category, service and required evidence. "class" grades only
+    # whether a change under test caused the failure and, if so, which deploy: see
+    # application/evals.py. The CI benchmark (benchmarks/ci) uses "class".
+    grading: Literal["exact", "class"] = "exact"
 
     def accepts(self, service: str, *, strict: bool = False) -> bool:
         return service == self.service or (not strict and service in self.accepted_services)

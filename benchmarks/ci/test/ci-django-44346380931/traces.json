@@ -1,0 +1,402 @@
+[
+  {
+    "span_id": "run-44346380931",
+    "trace_id": "run-44346380931",
+    "parent_id": null,
+    "service": "linters",
+    "name": "Linters",
+    "start": "2026-11-18T16:21:58Z",
+    "duration_ms": 60000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-134949776206",
+    "trace_id": "run-44346380931",
+    "parent_id": "run-44346380931",
+    "service": "zizmor",
+    "name": "zizmor",
+    "start": "2026-11-18T16:22:00Z",
+    "duration_ms": 14000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134949776206-step-1",
+    "trace_id": "run-44346380931",
+    "parent_id": "job-134949776206",
+    "service": "zizmor",
+    "name": "Set up job",
+    "start": "2026-11-18T16:22:01Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134949776206-step-2",
+    "trace_id": "run-44346380931",
+    "parent_id": "job-134949776206",
+    "service": "zizmor",
+    "name": "Checkout",
+    "start": "2026-11-18T16:22:03Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134949776206-step-3",
+    "trace_id": "run-44346380931",
+    "parent_id": "job-134949776206",
+    "service": "zizmor",
+    "name": "Run zizmor",
+    "start": "2026-11-18T16:22:06Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134949776206-step-5",
+    "trace_id": "run-44346380931",
+    "parent_id": "job-134949776206",
+    "service": "zizmor",
+    "name": "Post Run zizmor",
+    "start": "2026-11-18T16:22:11Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134949776206-step-6",
+    "trace_id": "run-44346380931",
+    "parent_id": "job-134949776206",
+    "service": "zizmor",
+    "name": "Post Checkout",
+    "start": "2026-11-18T16:22:11Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134949776206-step-7",
+    "trace_id": "run-44346380931",
+    "parent_id": "job-134949776206",
+    "service": "zizmor",
+    "name": "Complete job",
+    "start": "2026-11-18T16:22:11Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134949776971",
+    "trace_id": "run-44346380931",
+    "parent_id": "run-44346380931",
+    "service": "biome",
+    "name": "biome",
+    "start": "2026-11-18T16:22:00Z",
+    "duration_ms": 24000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134949776971-step-1",
+    "trace_id": "run-44346380931",
+    "parent_id": "job-134949776971",
+    "service": "biome",
+    "name": "Set up job",
+    "start": "2026-11-18T16:22:01Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134949776971-step-2",
+    "trace_id": "run-44346380931",
+    "parent_id": "job-134949776971",
+    "service": "biome",
+    "name": "Checkout",
+    "start": "2026-11-18T16:22:01Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134949776971-step-3",
+    "trace_id": "run-44346380931",
+    "parent_id": "job-134949776971",
+    "service": "biome",
+    "name": "Set up Node.js",
+    "start": "2026-11-18T16:22:05Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134949776971-step-4",
+    "trace_id": "run-44346380931",
+    "parent_id": "job-134949776971",
+    "service": "biome",
+    "name": "Run npm install",
+    "start": "2026-11-18T16:22:08Z",
+    "duration_ms": 14000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134949776971-step-5",
+    "trace_id": "run-44346380931",
+    "parent_id": "job-134949776971",
+    "service": "biome",
+    "name": "Run npx biome ci",
+    "start": "2026-11-18T16:22:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134949776971-step-9",
+    "trace_id": "run-44346380931",
+    "parent_id": "job-134949776971",
+    "service": "biome",
+    "name": "Post Set up Node.js",
+    "start": "2026-11-18T16:22:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134949776971-step-10",
+    "trace_id": "run-44346380931",
+    "parent_id": "job-134949776971",
+    "service": "biome",
+    "name": "Post Checkout",
+    "start": "2026-11-18T16:22:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134949776971-step-11",
+    "trace_id": "run-44346380931",
+    "parent_id": "job-134949776971",
+    "service": "biome",
+    "name": "Complete job",
+    "start": "2026-11-18T16:22:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134949776978",
+    "trace_id": "run-44346380931",
+    "parent_id": "run-44346380931",
+    "service": "black",
+    "name": "black",
+    "start": "2026-11-18T16:22:00Z",
+    "duration_ms": 58000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-134949776978-step-1",
+    "trace_id": "run-44346380931",
+    "parent_id": "job-134949776978",
+    "service": "black",
+    "name": "Set up job",
+    "start": "2026-11-18T16:22:01Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134949776978-step-2",
+    "trace_id": "run-44346380931",
+    "parent_id": "job-134949776978",
+    "service": "black",
+    "name": "Checkout",
+    "start": "2026-11-18T16:22:02Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134949776978-step-3",
+    "trace_id": "run-44346380931",
+    "parent_id": "job-134949776978",
+    "service": "black",
+    "name": "black",
+    "start": "2026-11-18T16:22:05Z",
+    "duration_ms": 51000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-134949776978-step-6",
+    "trace_id": "run-44346380931",
+    "parent_id": "job-134949776978",
+    "service": "black",
+    "name": "Post Checkout",
+    "start": "2026-11-18T16:22:56Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134949776978-step-7",
+    "trace_id": "run-44346380931",
+    "parent_id": "job-134949776978",
+    "service": "black",
+    "name": "Complete job",
+    "start": "2026-11-18T16:22:56Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134949777003",
+    "trace_id": "run-44346380931",
+    "parent_id": "run-44346380931",
+    "service": "flake8",
+    "name": "flake8",
+    "start": "2026-11-18T16:22:00Z",
+    "duration_ms": 26000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-134949777003-step-1",
+    "trace_id": "run-44346380931",
+    "parent_id": "job-134949777003",
+    "service": "flake8",
+    "name": "Set up job",
+    "start": "2026-11-18T16:22:01Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134949777003-step-2",
+    "trace_id": "run-44346380931",
+    "parent_id": "job-134949777003",
+    "service": "flake8",
+    "name": "Checkout",
+    "start": "2026-11-18T16:22:01Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134949777003-step-3",
+    "trace_id": "run-44346380931",
+    "parent_id": "job-134949777003",
+    "service": "flake8",
+    "name": "Set up Python",
+    "start": "2026-11-18T16:22:05Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134949777003-step-4",
+    "trace_id": "run-44346380931",
+    "parent_id": "job-134949777003",
+    "service": "flake8",
+    "name": "Run python -m pip install flake8",
+    "start": "2026-11-18T16:22:05Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134949777003-step-5",
+    "trace_id": "run-44346380931",
+    "parent_id": "job-134949777003",
+    "service": "flake8",
+    "name": "flake8",
+    "start": "2026-11-18T16:22:09Z",
+    "duration_ms": 16000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-134949777003-step-10",
+    "trace_id": "run-44346380931",
+    "parent_id": "job-134949777003",
+    "service": "flake8",
+    "name": "Post Checkout",
+    "start": "2026-11-18T16:22:25Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134949777003-step-11",
+    "trace_id": "run-44346380931",
+    "parent_id": "job-134949777003",
+    "service": "flake8",
+    "name": "Complete job",
+    "start": "2026-11-18T16:22:25Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134949777031",
+    "trace_id": "run-44346380931",
+    "parent_id": "run-44346380931",
+    "service": "isort",
+    "name": "isort",
+    "start": "2026-11-18T16:22:00Z",
+    "duration_ms": 13000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134949777031-step-1",
+    "trace_id": "run-44346380931",
+    "parent_id": "job-134949777031",
+    "service": "isort",
+    "name": "Set up job",
+    "start": "2026-11-18T16:22:01Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134949777031-step-2",
+    "trace_id": "run-44346380931",
+    "parent_id": "job-134949777031",
+    "service": "isort",
+    "name": "Checkout",
+    "start": "2026-11-18T16:22:02Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134949777031-step-3",
+    "trace_id": "run-44346380931",
+    "parent_id": "job-134949777031",
+    "service": "isort",
+    "name": "Set up Python",
+    "start": "2026-11-18T16:22:05Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134949777031-step-4",
+    "trace_id": "run-44346380931",
+    "parent_id": "job-134949777031",
+    "service": "isort",
+    "name": "Run python -m pip install isort",
+    "start": "2026-11-18T16:22:05Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134949777031-step-5",
+    "trace_id": "run-44346380931",
+    "parent_id": "job-134949777031",
+    "service": "isort",
+    "name": "isort",
+    "start": "2026-11-18T16:22:09Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134949777031-step-9",
+    "trace_id": "run-44346380931",
+    "parent_id": "job-134949777031",
+    "service": "isort",
+    "name": "Post Set up Python",
+    "start": "2026-11-18T16:22:11Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134949777031-step-10",
+    "trace_id": "run-44346380931",
+    "parent_id": "job-134949777031",
+    "service": "isort",
+    "name": "Post Checkout",
+    "start": "2026-11-18T16:22:11Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134949777031-step-11",
+    "trace_id": "run-44346380931",
+    "parent_id": "job-134949777031",
+    "service": "isort",
+    "name": "Complete job",
+    "start": "2026-11-18T16:22:12Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

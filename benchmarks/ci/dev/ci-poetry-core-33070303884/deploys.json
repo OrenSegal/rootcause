@@ -1,0 +1,60 @@
+[
+  {
+    "id": "4caae256ae",
+    "service": "poetry-core",
+    "version": "4caae256ae",
+    "ts": "2026-08-01T00:46:25Z",
+    "author": "github-actions[bot]",
+    "summary": "Automated licenses list update",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "src/poetry/core/spdx/data/licenses.json"
+    ]
+  },
+  {
+    "id": "f70075db28",
+    "service": "poetry-core",
+    "version": "f70075db28",
+    "ts": "2026-08-27T12:05:58Z",
+    "author": "Secrus",
+    "summary": "Merge branch 'main' into license-autoupdate",
+    "config_before": {
+      ".github/workflows/update-licenses.yaml": "previous",
+      ".pre-commit-config.yaml": "previous",
+      "poetry.lock": "previous",
+      "pyproject.toml": "previous"
+    },
+    "config_after": {
+      ".github/workflows/update-licenses.yaml": "modified in f70075db28",
+      ".pre-commit-config.yaml": "modified in f70075db28",
+      "poetry.lock": "modified in f70075db28",
+      "pyproject.toml": "modified in f70075db28"
+    },
+    "files": [
+      ".github/workflows/update-licenses.yaml",
+      ".pre-commit-config.yaml",
+      "poetry.lock",
+      "pyproject.toml",
+      "src/poetry/core/constraints/generic/constraint.py",
+      "src/poetry/core/constraints/generic/parser.py",
+      "src/poetry/core/constraints/version/parser.py",
+      "src/poetry/core/constraints/version/patterns.py",
+      "src/poetry/core/constraints/version/version.py",
+      "src/poetry/core/constraints/version/version_range.py",
+      "src/poetry/core/constraints/version/version_union.py",
+      "src/poetry/core/factory.py",
+      "src/poetry/core/masonry/api.py",
+      "src/poetry/core/masonry/builders/wheel.py",
+      "src/poetry/core/vcs/__init__.py",
+      "src/poetry/core/version/markers.py",
+      "tests/constraints/generic/test_constraint.py",
+      "tests/constraints/version/test_version.py",
+      "tests/constraints/version/test_version_range.py",
+      "tests/packages/test_package.py",
+      "tests/test_factory.py",
+      "tests/testutils.py",
+      "tests/version/test_markers.py"
+    ]
+  }
+]

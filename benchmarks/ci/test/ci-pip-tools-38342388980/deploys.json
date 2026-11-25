@@ -1,0 +1,30 @@
+[
+  {
+    "id": "9cad2748ce",
+    "service": "pip-tools",
+    "version": "9cad2748ce",
+    "ts": "2026-10-12T20:39:15Z",
+    "author": "sirosen",
+    "summary": "Remove support for Python 3.9",
+    "config_before": {
+      ".github/workflows/ci.yml": "previous",
+      ".pre-commit-config.yaml": "previous",
+      "pyproject.toml": "previous",
+      "tox.ini": "previous"
+    },
+    "config_after": {
+      ".github/workflows/ci.yml": "modified in 9cad2748ce",
+      ".pre-commit-config.yaml": "modified in 9cad2748ce",
+      "pyproject.toml": "modified in 9cad2748ce",
+      "tox.ini": "modified in 9cad2748ce"
+    },
+    "files": [
+      ".github/workflows/ci.yml",
+      ".pre-commit-config.yaml",
+      "changelog.d/2439.packaging.md",
+      "piptools/build.py",
+      "pyproject.toml",
+      "tox.ini"
+    ]
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "dccc7837b5",
+    "service": "build",
+    "version": "dccc7837b5",
+    "ts": "2026-10-09T23:01:11Z",
+    "author": "gaborbernat",
+    "summary": "feat(python): default to Python 3.15",
+    "config_before": {
+      ".github/workflows/pre-release.yml": "previous",
+      ".github/workflows/reusable-docs.yml": "previous",
+      ".github/workflows/reusable-pytest.yml": "previous",
+      ".github/workflows/reusable-type.yml": "previous",
+      ".pre-commit-config.yaml": "previous",
+      ".readthedocs.yml": "previous",
+      "pyproject.toml": "previous",
+      "tox.toml": "previous"
+    },
+    "config_after": {
+      ".github/workflows/pre-release.yml": "modified in dccc7837b5",
+      ".github/workflows/reusable-docs.yml": "modified in dccc7837b5",
+      ".github/workflows/reusable-pytest.yml": "modified in dccc7837b5",
+      ".github/workflows/reusable-type.yml": "modified in dccc7837b5",
+      ".pre-commit-config.yaml": "modified in dccc7837b5",
+      ".readthedocs.yml": "modified in dccc7837b5",
+      "pyproject.toml": "modified in dccc7837b5",
+      "tox.toml": "modified in dccc7837b5"
+    },
+    "files": [
+      ".github/workflows/pre-release.yml",
+      ".github/workflows/reusable-docs.yml",
+      ".github/workflows/reusable-pytest.yml",
+      ".github/workflows/reusable-type.yml",
+      ".pre-commit-config.yaml",
+      ".readthedocs.yml",
+      "docs/how-to/install.rst",
+      "docs/tutorial/getting-started.rst",
+      "pyproject.toml",
+      "src/build/_builder.py",
+      "src/build/_compat/importlib.py",
+      "src/build/_compat/tarfile.py",
+      "src/build/_compat/tomllib.py",
+      "src/build/_util.py",
+      "src/build/env.py",
+      "src/build/util.py",
+      "tests/conftest.py",
+      "tests/integration_sources.py",
+      "tests/packages/test-no-prepare/backend_no_prepare.py",
+      "tests/test_env.py",
+      "tests/test_main.py",
+      "tests/test_projectbuilder.py",
+      "tests/test_self_packaging.py",
+      "tox.toml"
+    ]
+  }
+]

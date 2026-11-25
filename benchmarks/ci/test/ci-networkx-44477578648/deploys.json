@@ -1,0 +1,19 @@
+[
+  {
+    "id": "c537b78f1e",
+    "service": "networkx",
+    "version": "c537b78f1e",
+    "ts": "2026-11-19T07:09:35Z",
+    "author": "Schefflera-Arboricola",
+    "summary": "Add zizmor pre-commit hook configuration",
+    "config_before": {
+      ".pre-commit-config.yaml": "previous"
+    },
+    "config_after": {
+      ".pre-commit-config.yaml": "modified in c537b78f1e"
+    },
+    "files": [
+      ".pre-commit-config.yaml"
+    ]
+  }
+]

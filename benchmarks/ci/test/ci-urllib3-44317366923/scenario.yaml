@@ -1,0 +1,14 @@
+id: ci-urllib3-44317366923
+title: Add streaming multipart encoder and decoder in urllib3.multipart
+alert:
+  severity: ci
+  service: lint
+  summary: 'workflow lint failed on fix-624-streaming-multipart at 20374a9e39: step ''Lint
+    code'' in job ''lint'' failed.'
+truth:
+  grading: class
+  category: bad_code_deploy
+  service: urllib3
+  required_evidence_any:
+  - 20374a9e39
+provenance: recorded

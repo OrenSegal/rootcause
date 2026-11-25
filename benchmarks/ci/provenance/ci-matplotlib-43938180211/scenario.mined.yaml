@@ -1,0 +1,18 @@
+# Mined from https://github.com/matplotlib/matplotlib/actions/runs/43938180211
+# (matplotlib/matplotlib, licence none). Fixed by run
+# https://github.com/matplotlib/matplotlib/actions/runs/43947880912. Label rule: the fix
+# changed files exactly one tested commit touched. Fix touched:
+# lib/matplotlib/tests/test_table.py.
+id: ci-matplotlib-43938180211
+title: 'FIX: validate empty cellText and cellColours in table()'
+alert:
+  severity: ci
+  service: ruff
+  summary: 'workflow Linting failed on fix-table-empty-celltext at 757845f1ed: step ''Run
+    ruff'' in job ''ruff'' failed.'
+truth:
+  category: bad_code_deploy
+  service: matplotlib
+  required_evidence_any:
+  - 757845f1ed
+provenance: recorded

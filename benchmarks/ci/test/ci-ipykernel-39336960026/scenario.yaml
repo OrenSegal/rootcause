@@ -1,0 +1,14 @@
+id: ci-ipykernel-39336960026
+title: Bump actions/create-github-app-token from 3.2.0 to 3.3.0 in the actions group
+alert:
+  severity: ci
+  service: build-macos-latest-qt6-3-12
+  summary: 'workflow ipykernel tests failed on dependabot/github_actions/actions-c51d5d0d9b
+    at 408fda1480: step ''Run the tests'' in job ''build (macos-latest, qt6, 3.12)'' failed.'
+truth:
+  grading: class
+  category: infrastructure
+  service: ipykernel
+  required_evidence_any:
+  - log-2974
+provenance: recorded

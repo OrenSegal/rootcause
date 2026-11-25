@@ -1,0 +1,18 @@
+[
+  {
+    "author": "oda",
+    "committedDate": "2026-09-04T16:17:40Z",
+    "messageHeadline": "fix: str() of a range whose upper bound is all zeros raised IndexError",
+    "oid": "fb7b595c10dd0fdaf0e0f425e5f8ba40a84eeca6",
+    "files": [
+      {
+        "filename": "src/poetry/core/constraints/version/version_constraint.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/constraints/version/test_version_range.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

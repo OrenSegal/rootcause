@@ -1,0 +1,18 @@
+[
+  {
+    "author": "SwastikTripathi",
+    "committedDate": "2026-10-22T03:37:55Z",
+    "messageHeadline": "fix: preserve inner quotes when stripping env-file values (#3687)",
+    "oid": "93d4eb9385276a082019bf2bef6f6d55e672b88b",
+    "files": [
+      {
+        "filename": "starlette/config.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_config.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

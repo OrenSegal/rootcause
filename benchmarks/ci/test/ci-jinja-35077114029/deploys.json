@@ -1,0 +1,17 @@
+[
+  {
+    "id": "63a800ac81",
+    "service": "jinja",
+    "version": "63a800ac81",
+    "ts": "2026-09-16T09:02:01Z",
+    "author": "jaideeppyne",
+    "summary": "fix: do not pad slice filter when length divides evenly",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "CHANGES.rst",
+      "src/jinja2/filters.py",
+      "tests/test_filters.py"
+    ]
+  }
+]

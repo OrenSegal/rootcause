@@ -1,0 +1,15 @@
+id: ci-geopandas-41035651082
+title: 'CI: use gh release instead of softprops/action-gh-release'
+alert:
+  severity: ci
+  service: ubuntu-latest-ci-envs-313-dev-yaml
+  summary: 'workflow Tests failed on gh-release at 0b6db8414d: step ''Install Conda environment
+    with Micromamba'' in job ''ubuntu-latest, ci/envs/313-dev.yaml'' failed.'
+truth:
+  grading: class
+  category: infrastructure
+  service: geopandas
+  required_evidence_any:
+  - log-0484
+  - log-0489
+provenance: recorded

@@ -1,0 +1,14 @@
+id: ci-uvicorn-41758966132
+title: Stop configure_logging from mutating a caller-owned log_config
+alert:
+  severity: ci
+  service: python-3-12-ubuntu-latest
+  summary: 'workflow Test Suite failed on fix/log-config-use-colors at 1aa219c8e5: step ''Enforce
+    coverage'' in job ''Python 3.12 ubuntu-latest'' failed.'
+truth:
+  grading: class
+  category: bad_code_deploy
+  service: uvicorn
+  required_evidence_any:
+  - 1aa219c8e5
+provenance: recorded

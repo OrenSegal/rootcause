@@ -1,0 +1,22 @@
+[
+  {
+    "author": "8hjkkwikl8",
+    "committedDate": "2026-11-20T02:28:09Z",
+    "messageHeadline": "\ud83d\udc1b fix(upgrade): keep --suffix in local-source reinstall hint",
+    "oid": "c7c42d09c32914a5caaf46e08bd2360b9f0d01ba",
+    "files": [
+      {
+        "filename": "changelog.d/+upgrade-suffix-remedy.bugfix.rst",
+        "status": "added"
+      },
+      {
+        "filename": "src/pipx/commands/upgrade.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_upgrade.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

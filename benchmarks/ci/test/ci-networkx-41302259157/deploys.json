@@ -1,0 +1,16 @@
+[
+  {
+    "id": "5a57813d4e",
+    "service": "networkx",
+    "version": "5a57813d4e",
+    "ts": "2026-11-01T11:30:54Z",
+    "author": "saiyam-jain-dev",
+    "summary": "BUG: preserve 1D array in katz_centrality_numpy for single-node graphs (fixes #8977)",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "networkx/algorithms/centrality/katz.py",
+      "networkx/algorithms/centrality/tests/test_katz_centrality.py"
+    ]
+  }
+]

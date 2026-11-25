@@ -1,0 +1,99 @@
+name: rootcause triage
+description: Say whether a failed CI run was caused by the change under test, with the log lines behind it.
+branding:
+  icon: search
+  color: gray-dark
+# Meant for a workflow triggered by workflow_run. That workflow runs in the base
+# repository's context, so it can read a fork's failed run without running the fork's
+# code. This action never checks out or executes the pull request: it reads the run's
+# jobs, failed log and commits through `gh`, and the tool itself is installed from this
+# action's own ref.
+inputs:
+  run-id:
+    description: The failed workflow run to triage.
+    default: ${{ github.event.workflow_run.id }}
+  repository:
+    description: owner/name of the repository the run belongs to.
+    default: ${{ github.repository }}
+  provider:
+    description: rules (no API key, deterministic, abstains when no rule fires) or anthropic.
+    default: rules
+  model:
+    description: Model id for the anthropic provider.
+    default: claude-opus-5-5
+  budget-usd:
+    description: Spending cap for one triage with the anthropic provider.
+    default: "0.50"
+  anthropic-api-key:
+    description: Required when provider is anthropic.
+    required: false
+  comment:
+    description: >-
+      Also post the verdict as a pull-request comment ("true" or "false"). Needs
+      pull-requests write permission in the calling workflow.
+    default: "false"
+  pr-number:
+    description: >-
+      The pull request to comment on. The default is empty for a pull request from a
+      fork; the comment is then skipped and the summary says so.
+    default: ${{ github.event.workflow_run.pull_requests[0].number }}
+  github-token:
+    description: Token for the read-only gh calls, and for the comment when asked.
+    default: ${{ github.token }}
+outputs:
+  verdict:
+    description: Path to the verdict markdown.
+    value: ${{ steps.triage.outputs.verdict }}
+runs:
+  using: composite
+  steps:
+    - uses: astral-sh/setup-uv@1db35dd8eee11c5894872e0b383ae6c406cf738d # v10.4.0
+      with:
+        python-version: "3.14"
+        version: "0.13.1"
+    - id: triage
+      shell: bash
+      env:
+        GH_TOKEN: ${{ inputs.github-token }}
+        ANTHROPIC_API_KEY: ${{ inputs.anthropic-api-key }}
+        RUN_ID: ${{ inputs.run-id }}
+        REPOSITORY: ${{ inputs.repository }}
+        PROVIDER: ${{ inputs.provider }}
+        MODEL: ${{ inputs.model }}
+        BUDGET_USD: ${{ inputs.budget-usd }}
+      run: |
+        verdict="$RUNNER_TEMP/rootcause-triage.md"
+        echo "verdict=$verdict" >> "$GITHUB_OUTPUT"
+        # Inputs arrive through env so they stay data; the CLI validates their values.
+        # The project is this action's own checkout, pinned to the ref the caller chose.
+        status=0
+        uv run --locked --project "$GITHUB_ACTION_PATH/.." rootcause ci-triage \
+          --repo "$REPOSITORY" \
+          --run "$RUN_ID" \
+          --provider "$PROVIDER" \
+          --model "$MODEL" \
+          --budget-usd "$BUDGET_USD" \
+          --runlog "$RUNNER_TEMP/rootcause-triage.sqlite" \
+          --comment-md "$verdict" || status=$?
+        # 2 is an abstention or no answer: the verdict says so, and the step passes.
+        if [ "$status" -ne 0 ] && [ "$status" -ne 2 ]; then
+          echo "rootcause ci-triage exited $status" >&2
+          [ -s "$verdict" ] || printf '### CI failure triage\n\nThe triage did not finish (exit %s). See the step log.\n' "$status" > "$verdict"
+          cat "$verdict" >> "$GITHUB_STEP_SUMMARY"
+          exit "$status"
+        fi
+        cat "$verdict" >> "$GITHUB_STEP_SUMMARY"
+    - if: inputs.comment == 'true'
+      shell: bash
+      env:
+        GH_TOKEN: ${{ inputs.github-token }}
+        REPOSITORY: ${{ inputs.repository }}
+        PR_NUMBER: ${{ inputs.pr-number }}
+        VERDICT: ${{ steps.triage.outputs.verdict }}
+      run: |
+        case "$PR_NUMBER" in
+          ''|*[!0-9]*)
+            echo "No pull request number for this run (a fork's pull request has none here), so no comment was posted." >> "$GITHUB_STEP_SUMMARY"
+            exit 0 ;;
+        esac
+        gh pr comment "$PR_NUMBER" --repo "$REPOSITORY" --body-file "$VERDICT"

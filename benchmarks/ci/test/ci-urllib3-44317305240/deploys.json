@@ -1,0 +1,17 @@
+[
+  {
+    "id": "366010bc61",
+    "service": "urllib3",
+    "version": "366010bc61",
+    "ts": "2026-11-18T13:47:11Z",
+    "author": "ferly7",
+    "summary": "Support bytes values in HTTPHeaderDict",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "changelog/3072.bugfix.rst",
+      "src/urllib3/_collections.py",
+      "test/test_collections.py"
+    ]
+  }
+]

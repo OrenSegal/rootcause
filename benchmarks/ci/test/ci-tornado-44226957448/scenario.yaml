@@ -1,0 +1,14 @@
+id: ci-tornado-44226957448
+title: 'httpserver: Accept bracketed IPv6 addresses in xheaders'
+alert:
+  severity: ci
+  service: run-mac-tests
+  summary: 'workflow Test failed on fix-xheaders-bracketed-ipv6 at a429ba30a6: step ''Run
+    test suite'' in job ''Run mac tests'' failed.'
+truth:
+  grading: class
+  category: infrastructure
+  service: tornado
+  required_evidence_any:
+  - log-0295
+provenance: recorded

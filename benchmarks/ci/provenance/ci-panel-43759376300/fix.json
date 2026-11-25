@@ -1,0 +1,14 @@
+{
+  "fixed_run": "https://github.com/holoviz/panel/actions/runs/43778862996",
+  "fixed_sha": "597d5672d0cfbf68629673ff3157dcc125db725a",
+  "commits": [
+    "c2945074ba0dd0ad1629442d4ebb4537049c123b",
+    "597d5672d0cfbf68629673ff3157dcc125db725a"
+  ],
+  "files": [
+    "CHANGELOG.md",
+    "doc/about/releases.md"
+  ],
+  "merges": [],
+  "status": "ahead"
+}

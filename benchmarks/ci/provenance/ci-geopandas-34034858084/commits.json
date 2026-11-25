@@ -1,0 +1,14 @@
+[
+  {
+    "author": "martinfleis",
+    "committedDate": "2026-09-06T12:45:12Z",
+    "messageHeadline": "TST: do not use opentopomap tiles in tests",
+    "oid": "cb1d609cd60fe83224ec091b796195521285fde6",
+    "files": [
+      {
+        "filename": "geopandas/tests/test_plotting.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

@@ -1,0 +1,18 @@
+# Mined from https://github.com/pypa/pipx/actions/runs/44661741143 (pypa/pipx, licence
+# MIT). Fixed by run https://github.com/pypa/pipx/actions/runs/44663152514. Label rule:
+# the fix changed files exactly one tested commit touched. Fix touched:
+# changelog.d/+upgrade-suffix-remedy.bugfix.rst, tests/test_upgrade.py,
+# tests/test_upgrade_all.py.
+id: ci-pipx-44661741143
+title: "\U0001F41B fix(upgrade): keep --suffix in local-source reinstall hint"
+alert:
+  severity: ci
+  service: test-3-11-ubuntu-26-04
+  summary: "workflow \U0001F9EA tests failed on fix/upgrade-suffix-remedy at c7c42d09c3: step\
+    \ '\U0001F9EA Run test suite' in job '\U0001F9EA test 3.11 - ubuntu-26.04' failed."
+truth:
+  category: bad_code_deploy
+  service: pipx
+  required_evidence_any:
+  - c7c42d09c3
+provenance: recorded

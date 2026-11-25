@@ -1,0 +1,14 @@
+id: ci-scikit-learn-44703893474
+title: DOC Release highlights for 1.10
+alert:
+  severity: ci
+  service: verify-actions-lock
+  summary: 'workflow Verify actions lockfile failed on release-highlights-1.10 at 1fd1de3e12:
+    step ''Run gh actions-lock --verify'' in job ''verify-actions-lock'' failed.'
+truth:
+  grading: class
+  category: infrastructure
+  service: scikit-learn
+  required_evidence_any:
+  - log-0174
+provenance: recorded

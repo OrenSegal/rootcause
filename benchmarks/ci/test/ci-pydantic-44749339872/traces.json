@@ -1,0 +1,5882 @@
+[
+  {
+    "span_id": "run-44749339872",
+    "trace_id": "run-44749339872",
+    "parent_id": null,
+    "service": "ci",
+    "name": "CI",
+    "start": "2026-11-20T14:00:28Z",
+    "duration_ms": 561000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-136332843507",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "core-build-sdist",
+    "name": "core / Build sdist",
+    "start": "2026-11-20T14:00:32Z",
+    "duration_ms": 21000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843507-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843507",
+    "service": "core-build-sdist",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843507-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843507",
+    "service": "core-build-sdist",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:35Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843507-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843507",
+    "service": "core-build-sdist",
+    "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-11-20T14:00:37Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843507-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843507",
+    "service": "core-build-sdist",
+    "name": "Run PyO3/maturin-action@e83996d129638aa358a18fbd1dfb82f0b0fb5d3b",
+    "start": "2026-11-20T14:00:37Z",
+    "duration_ms": 12000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843507-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843507",
+    "service": "core-build-sdist",
+    "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+    "start": "2026-11-20T14:00:49Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843507-step-11",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843507",
+    "service": "core-build-sdist",
+    "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+    "start": "2026-11-20T14:00:50Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843507-step-12",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843507",
+    "service": "core-build-sdist",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:51Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843507-step-13",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843507",
+    "service": "core-build-sdist",
+    "name": "Complete job",
+    "start": "2026-11-20T14:00:51Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843799",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "core-test-msrv",
+    "name": "core / Test MSRV",
+    "start": "2026-11-20T14:00:32Z",
+    "duration_ms": 94000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843799-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843799",
+    "service": "core-test-msrv",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843799-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843799",
+    "service": "core-test-msrv",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843799-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843799",
+    "service": "core-test-msrv",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:35Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843799-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843799",
+    "service": "core-test-msrv",
+    "name": "Resolve MSRV",
+    "start": "2026-11-20T14:00:37Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843799-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843799",
+    "service": "core-test-msrv",
+    "name": "Install rust MSRV",
+    "start": "2026-11-20T14:00:39Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843799-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843799",
+    "service": "core-test-msrv",
+    "name": "Cache rust",
+    "start": "2026-11-20T14:00:46Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843799-step-7",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843799",
+    "service": "core-test-msrv",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:46Z",
+    "duration_ms": 33000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843799-step-8",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843799",
+    "service": "core-test-msrv",
+    "name": "Run uv pip freeze",
+    "start": "2026-11-20T14:01:19Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843799-step-9",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843799",
+    "service": "core-test-msrv",
+    "name": "Run uv run pytest tests/pydantic_core",
+    "start": "2026-11-20T14:01:19Z",
+    "duration_ms": 23000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843799-step-10",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843799",
+    "service": "core-test-msrv",
+    "name": "Run cargo test",
+    "start": "2026-11-20T14:01:42Z",
+    "duration_ms": 22000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843799-step-18",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843799",
+    "service": "core-test-msrv",
+    "name": "Post Cache rust",
+    "start": "2026-11-20T14:02:04Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843799-step-19",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843799",
+    "service": "core-test-msrv",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:02:04Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843799-step-20",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843799",
+    "service": "core-test-msrv",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:02:04Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843799-step-21",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843799",
+    "service": "core-test-msrv",
+    "name": "Complete job",
+    "start": "2026-11-20T14:02:05Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843882",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "core-run-rust-benchmarks",
+    "name": "core / Run Rust benchmarks",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 217000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843882-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843882",
+    "service": "core-run-rust-benchmarks",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843882-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843882",
+    "service": "core-run-rust-benchmarks",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:35Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843882-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843882",
+    "service": "core-run-rust-benchmarks",
+    "name": "Install rust nightly",
+    "start": "2026-11-20T14:00:37Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843882-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843882",
+    "service": "core-run-rust-benchmarks",
+    "name": "Cache rust",
+    "start": "2026-11-20T14:00:45Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843882-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843882",
+    "service": "core-run-rust-benchmarks",
+    "name": "Run cargo bench",
+    "start": "2026-11-20T14:00:46Z",
+    "duration_ms": 200000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843882-step-9",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843882",
+    "service": "core-run-rust-benchmarks",
+    "name": "Post Cache rust",
+    "start": "2026-11-20T14:04:06Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843882-step-10",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843882",
+    "service": "core-run-rust-benchmarks",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:04:08Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843882-step-11",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843882",
+    "service": "core-run-rust-benchmarks",
+    "name": "Complete job",
+    "start": "2026-11-20T14:04:08Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843902",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "test-ubuntu-latest-3-12",
+    "name": "Test ubuntu-latest / 3.12",
+    "start": "2026-11-20T14:00:32Z",
+    "duration_ms": 197000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843902-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843902",
+    "service": "test-ubuntu-latest-3-12",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843902-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843902",
+    "service": "test-ubuntu-latest-3-12",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843902-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843902",
+    "service": "test-ubuntu-latest-3-12",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:36Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843902-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843902",
+    "service": "test-ubuntu-latest-3-12",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:39Z",
+    "duration_ms": 39000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843902-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843902",
+    "service": "test-ubuntu-latest-3-12",
+    "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+    "start": "2026-11-20T14:01:18Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843902-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843902",
+    "service": "test-ubuntu-latest-3-12",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-20T14:01:18Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843902-step-7",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843902",
+    "service": "test-ubuntu-latest-3-12",
+    "name": "Run pytest",
+    "start": "2026-11-20T14:01:18Z",
+    "duration_ms": 145000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843902-step-9",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843902",
+    "service": "test-ubuntu-latest-3-12",
+    "name": "Store coverage files",
+    "start": "2026-11-20T14:03:43Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843902-step-17",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843902",
+    "service": "test-ubuntu-latest-3-12",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:03:45Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843902-step-18",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843902",
+    "service": "test-ubuntu-latest-3-12",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:03:45Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843902-step-19",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843902",
+    "service": "test-ubuntu-latest-3-12",
+    "name": "Complete job",
+    "start": "2026-11-20T14:03:45Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843930",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "core-build-pyemscripten-3-14",
+    "name": "core / Build PyEmscripten (3.14)",
+    "start": "2026-11-20T14:00:32Z",
+    "duration_ms": 260000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843930-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843930",
+    "service": "core-build-pyemscripten-3-14",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843930-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843930",
+    "service": "core-build-pyemscripten-3-14",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:35Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843930-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843930",
+    "service": "core-build-pyemscripten-3-14",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:36Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843930-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843930",
+    "service": "core-build-pyemscripten-3-14",
+    "name": "Run uv sync --only-group pyodide-build",
+    "start": "2026-11-20T14:00:39Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843930-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843930",
+    "service": "core-build-pyemscripten-3-14",
+    "name": "Run uv run pyodide xbuildenv install 314.0.7",
+    "start": "2026-11-20T14:00:39Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843930-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843930",
+    "service": "core-build-pyemscripten-3-14",
+    "name": "Get pyodide config",
+    "start": "2026-11-20T14:00:40Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843930-step-7",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843930",
+    "service": "core-build-pyemscripten-3-14",
+    "name": "Run emscripten-core/setup-emsdk@4528d102f7230f0e7b276855c01ea1159be0e984",
+    "start": "2026-11-20T14:00:42Z",
+    "duration_ms": 33000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843930-step-8",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843930",
+    "service": "core-build-pyemscripten-3-14",
+    "name": "Build wheels",
+    "start": "2026-11-20T14:01:15Z",
+    "duration_ms": 212000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843930-step-9",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843930",
+    "service": "core-build-pyemscripten-3-14",
+    "name": "Run ls -lh dist/",
+    "start": "2026-11-20T14:04:47Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843930-step-11",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843930",
+    "service": "core-build-pyemscripten-3-14",
+    "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+    "start": "2026-11-20T14:04:47Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843930-step-21",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843930",
+    "service": "core-build-pyemscripten-3-14",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:04:48Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843930-step-22",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843930",
+    "service": "core-build-pyemscripten-3-14",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:04:48Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843930-step-23",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843930",
+    "service": "core-build-pyemscripten-3-14",
+    "name": "Complete job",
+    "start": "2026-11-20T14:04:49Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843946",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "lint-3-13",
+    "name": "Lint 3.13",
+    "start": "2026-11-20T14:00:32Z",
+    "duration_ms": 158000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843946-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843946",
+    "service": "lint-3-13",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843946-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843946",
+    "service": "lint-3-13",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843946-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843946",
+    "service": "lint-3-13",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:36Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843946-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843946",
+    "service": "lint-3-13",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:40Z",
+    "duration_ms": 88000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843946-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843946",
+    "service": "lint-3-13",
+    "name": "Run pre-commit/action@2c7b3805fd2a0fd8c1884dcaebf91fc102a13ecd",
+    "start": "2026-11-20T14:02:08Z",
+    "duration_ms": 56000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843946-step-8",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843946",
+    "service": "lint-3-13",
+    "name": "Post Run pre-commit/action@2c7b3805fd2a0fd8c1884dcaebf91fc102a13ecd",
+    "start": "2026-11-20T14:03:04Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843946-step-9",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843946",
+    "service": "lint-3-13",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:03:05Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843946-step-10",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843946",
+    "service": "lint-3-13",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:03:05Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843946-step-11",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843946",
+    "service": "lint-3-13",
+    "name": "Complete job",
+    "start": "2026-11-20T14:03:05Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843966",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "test-macos-15-intel-3-15t",
+    "name": "Test macos-15-intel / 3.15t",
+    "start": "2026-11-20T14:00:32Z",
+    "duration_ms": 442000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843966-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843966",
+    "service": "test-macos-15-intel-3-15t",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843966-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843966",
+    "service": "test-macos-15-intel-3-15t",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:36Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843966-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843966",
+    "service": "test-macos-15-intel-3-15t",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:41Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843966-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843966",
+    "service": "test-macos-15-intel-3-15t",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:47Z",
+    "duration_ms": 122000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843966-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843966",
+    "service": "test-macos-15-intel-3-15t",
+    "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+    "start": "2026-11-20T14:02:49Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843966-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843966",
+    "service": "test-macos-15-intel-3-15t",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-20T14:02:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843966-step-7",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843966",
+    "service": "test-macos-15-intel-3-15t",
+    "name": "Run pytest",
+    "start": "2026-11-20T14:02:50Z",
+    "duration_ms": 296000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843966-step-9",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843966",
+    "service": "test-macos-15-intel-3-15t",
+    "name": "Store coverage files",
+    "start": "2026-11-20T14:07:46Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843966-step-17",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843966",
+    "service": "test-macos-15-intel-3-15t",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:07:47Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843966-step-18",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843966",
+    "service": "test-macos-15-intel-3-15t",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:07:47Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843966-step-19",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843966",
+    "service": "test-macos-15-intel-3-15t",
+    "name": "Complete job",
+    "start": "2026-11-20T14:07:48Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843971",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "test-ubuntu-latest-3-15",
+    "name": "Test ubuntu-latest / 3.15",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 141000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843971-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843971",
+    "service": "test-ubuntu-latest-3-15",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843971-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843971",
+    "service": "test-ubuntu-latest-3-15",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:35Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843971-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843971",
+    "service": "test-ubuntu-latest-3-15",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:36Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843971-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843971",
+    "service": "test-ubuntu-latest-3-15",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:40Z",
+    "duration_ms": 35000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843971-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843971",
+    "service": "test-ubuntu-latest-3-15",
+    "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+    "start": "2026-11-20T14:01:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843971-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843971",
+    "service": "test-ubuntu-latest-3-15",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-20T14:01:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843971-step-7",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843971",
+    "service": "test-ubuntu-latest-3-15",
+    "name": "Run pytest",
+    "start": "2026-11-20T14:01:15Z",
+    "duration_ms": 92000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843971-step-9",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843971",
+    "service": "test-ubuntu-latest-3-15",
+    "name": "Store coverage files",
+    "start": "2026-11-20T14:02:47Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843971-step-17",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843971",
+    "service": "test-ubuntu-latest-3-15",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:02:49Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843971-step-18",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843971",
+    "service": "test-ubuntu-latest-3-15",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:02:49Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843971-step-19",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843971",
+    "service": "test-ubuntu-latest-3-15",
+    "name": "Complete job",
+    "start": "2026-11-20T14:02:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843982",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "test-ubuntu-latest-3-13",
+    "name": "Test ubuntu-latest / 3.13",
+    "start": "2026-11-20T14:00:32Z",
+    "duration_ms": 164000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843982-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843982",
+    "service": "test-ubuntu-latest-3-13",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:32Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843982-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843982",
+    "service": "test-ubuntu-latest-3-13",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843982-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843982",
+    "service": "test-ubuntu-latest-3-13",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:35Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843982-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843982",
+    "service": "test-ubuntu-latest-3-13",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:38Z",
+    "duration_ms": 35000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843982-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843982",
+    "service": "test-ubuntu-latest-3-13",
+    "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+    "start": "2026-11-20T14:01:13Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843982-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843982",
+    "service": "test-ubuntu-latest-3-13",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-20T14:01:13Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843982-step-7",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843982",
+    "service": "test-ubuntu-latest-3-13",
+    "name": "Run pytest",
+    "start": "2026-11-20T14:01:13Z",
+    "duration_ms": 119000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843982-step-9",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843982",
+    "service": "test-ubuntu-latest-3-13",
+    "name": "Store coverage files",
+    "start": "2026-11-20T14:03:12Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843982-step-17",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843982",
+    "service": "test-ubuntu-latest-3-13",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:03:13Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843982-step-18",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843982",
+    "service": "test-ubuntu-latest-3-13",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:03:14Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332843982-step-19",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332843982",
+    "service": "test-ubuntu-latest-3-13",
+    "name": "Complete job",
+    "start": "2026-11-20T14:03:14Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844004",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "core-test-with-debug-build-3-14",
+    "name": "core / Test with debug build (3.14)",
+    "start": "2026-11-20T14:00:32Z",
+    "duration_ms": 150000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844004-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844004",
+    "service": "core-test-with-debug-build-3-14",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:32Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844004-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844004",
+    "service": "core-test-with-debug-build-3-14",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844004-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844004",
+    "service": "core-test-with-debug-build-3-14",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:35Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844004-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844004",
+    "service": "core-test-with-debug-build-3-14",
+    "name": "Install rust stable",
+    "start": "2026-11-20T14:00:38Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844004-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844004",
+    "service": "core-test-with-debug-build-3-14",
+    "name": "Cache rust",
+    "start": "2026-11-20T14:00:47Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844004-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844004",
+    "service": "core-test-with-debug-build-3-14",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:48Z",
+    "duration_ms": 27000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844004-step-7",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844004",
+    "service": "core-test-with-debug-build-3-14",
+    "name": "Run uv run --no-sync maturin develop --uv",
+    "start": "2026-11-20T14:01:15Z",
+    "duration_ms": 14000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844004-step-8",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844004",
+    "service": "core-test-with-debug-build-3-14",
+    "name": "Run uv pip freeze",
+    "start": "2026-11-20T14:01:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844004-step-9",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844004",
+    "service": "core-test-with-debug-build-3-14",
+    "name": "Run uv run pytest",
+    "start": "2026-11-20T14:01:29Z",
+    "duration_ms": 83000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844004-step-16",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844004",
+    "service": "core-test-with-debug-build-3-14",
+    "name": "Post Cache rust",
+    "start": "2026-11-20T14:02:52Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844004-step-17",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844004",
+    "service": "core-test-with-debug-build-3-14",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:02:52Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844004-step-18",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844004",
+    "service": "core-test-with-debug-build-3-14",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:02:53Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844004-step-19",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844004",
+    "service": "core-test-with-debug-build-3-14",
+    "name": "Complete job",
+    "start": "2026-11-20T14:02:53Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844012",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "typechecking-integration-tests",
+    "name": "Typechecking integration tests",
+    "start": "2026-11-20T14:00:32Z",
+    "duration_ms": 42000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844012-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844012",
+    "service": "typechecking-integration-tests",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844012-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844012",
+    "service": "typechecking-integration-tests",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844012-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844012",
+    "service": "typechecking-integration-tests",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:35Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844012-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844012",
+    "service": "typechecking-integration-tests",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:38Z",
+    "duration_ms": 27000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844012-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844012",
+    "service": "typechecking-integration-tests",
+    "name": "Run typechecking integration tests (Pyright)",
+    "start": "2026-11-20T14:01:05Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844012-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844012",
+    "service": "typechecking-integration-tests",
+    "name": "Run typechecking integration tests (Mypy)",
+    "start": "2026-11-20T14:01:09Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844012-step-7",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844012",
+    "service": "typechecking-integration-tests",
+    "name": "Run typechecking integration tests (Pyrefly)",
+    "start": "2026-11-20T14:01:11Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844012-step-13",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844012",
+    "service": "typechecking-integration-tests",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:01:11Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844012-step-14",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844012",
+    "service": "typechecking-integration-tests",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:01:11Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844012-step-15",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844012",
+    "service": "typechecking-integration-tests",
+    "name": "Complete job",
+    "start": "2026-11-20T14:01:11Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844014",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "lint-3-12",
+    "name": "Lint 3.12",
+    "start": "2026-11-20T14:00:32Z",
+    "duration_ms": 82000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844014-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844014",
+    "service": "lint-3-12",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844014-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844014",
+    "service": "lint-3-12",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844014-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844014",
+    "service": "lint-3-12",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:35Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844014-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844014",
+    "service": "lint-3-12",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:37Z",
+    "duration_ms": 31000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844014-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844014",
+    "service": "lint-3-12",
+    "name": "Run pre-commit/action@2c7b3805fd2a0fd8c1884dcaebf91fc102a13ecd",
+    "start": "2026-11-20T14:01:08Z",
+    "duration_ms": 44000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844014-step-8",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844014",
+    "service": "lint-3-12",
+    "name": "Post Run pre-commit/action@2c7b3805fd2a0fd8c1884dcaebf91fc102a13ecd",
+    "start": "2026-11-20T14:01:52Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844014-step-9",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844014",
+    "service": "lint-3-12",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:01:52Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844014-step-10",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844014",
+    "service": "lint-3-12",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:01:52Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844014-step-11",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844014",
+    "service": "lint-3-12",
+    "name": "Complete job",
+    "start": "2026-11-20T14:01:52Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844048",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "test-pydantic-plugin",
+    "name": "Test Pydantic plugin",
+    "start": "2026-11-20T14:00:32Z",
+    "duration_ms": 50000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844048-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844048",
+    "service": "test-pydantic-plugin",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844048-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844048",
+    "service": "test-pydantic-plugin",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844048-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844048",
+    "service": "test-pydantic-plugin",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:35Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844048-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844048",
+    "service": "test-pydantic-plugin",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:39Z",
+    "duration_ms": 37000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844048-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844048",
+    "service": "test-pydantic-plugin",
+    "name": "Install example plugin",
+    "start": "2026-11-20T14:01:16Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844048-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844048",
+    "service": "test-pydantic-plugin",
+    "name": "Run uv run pytest tests/plugin",
+    "start": "2026-11-20T14:01:16Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844048-step-11",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844048",
+    "service": "test-pydantic-plugin",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:01:18Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844048-step-12",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844048",
+    "service": "test-pydantic-plugin",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:01:18Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844048-step-13",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844048",
+    "service": "test-pydantic-plugin",
+    "name": "Complete job",
+    "start": "2026-11-20T14:01:18Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844060",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "core-test-on-graalpy-graalpy3-12",
+    "name": "core / Test on GraalPy graalpy3.12",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 153000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844060-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844060",
+    "service": "core-test-on-graalpy-graalpy3-12",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844060-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844060",
+    "service": "core-test-on-graalpy-graalpy3-12",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:36Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844060-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844060",
+    "service": "core-test-on-graalpy-graalpy3-12",
+    "name": "Install rust stable",
+    "start": "2026-11-20T14:00:37Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844060-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844060",
+    "service": "core-test-on-graalpy-graalpy3-12",
+    "name": "Cache rust",
+    "start": "2026-11-20T14:00:38Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844060-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844060",
+    "service": "core-test-on-graalpy-graalpy3-12",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:39Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844060-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844060",
+    "service": "core-test-on-graalpy-graalpy3-12",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:42Z",
+    "duration_ms": 43000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844060-step-7",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844060",
+    "service": "core-test-on-graalpy-graalpy3-12",
+    "name": "Run uv pip freeze",
+    "start": "2026-11-20T14:01:25Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844060-step-8",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844060",
+    "service": "core-test-on-graalpy-graalpy3-12",
+    "name": "Run uv run --no-sync pytest tests/pydantic_core --ignore=tests/pydantic_core/test_docstrings.py $EXTRA_PYTEST_ARGS",
+    "start": "2026-11-20T14:01:25Z",
+    "duration_ms": 97000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844060-step-14",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844060",
+    "service": "core-test-on-graalpy-graalpy3-12",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:03:02Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844060-step-15",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844060",
+    "service": "core-test-on-graalpy-graalpy3-12",
+    "name": "Post Cache rust",
+    "start": "2026-11-20T14:03:02Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844060-step-16",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844060",
+    "service": "core-test-on-graalpy-graalpy3-12",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:03:02Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844060-step-17",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844060",
+    "service": "core-test-on-graalpy-graalpy3-12",
+    "name": "Complete job",
+    "start": "2026-11-20T14:03:03Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844104",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "test-typing-extensions-main-branch-on-python-3-15",
+    "name": "Test typing-extensions (`main` branch) on Python 3.15",
+    "start": "2026-11-20T14:00:32Z",
+    "duration_ms": 127000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844104-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844104",
+    "service": "test-typing-extensions-main-branch-on-python-3-15",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844104-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844104",
+    "service": "test-typing-extensions-main-branch-on-python-3-15",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844104-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844104",
+    "service": "test-typing-extensions-main-branch-on-python-3-15",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:35Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844104-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844104",
+    "service": "test-typing-extensions-main-branch-on-python-3-15",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:36Z",
+    "duration_ms": 34000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844104-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844104",
+    "service": "test-typing-extensions-main-branch-on-python-3-15",
+    "name": "Install typing-extensions",
+    "start": "2026-11-20T14:01:10Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844104-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844104",
+    "service": "test-typing-extensions-main-branch-on-python-3-15",
+    "name": "Run tests",
+    "start": "2026-11-20T14:01:12Z",
+    "duration_ms": 84000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844104-step-11",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844104",
+    "service": "test-typing-extensions-main-branch-on-python-3-15",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:02:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844104-step-12",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844104",
+    "service": "test-typing-extensions-main-branch-on-python-3-15",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:02:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844104-step-13",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844104",
+    "service": "test-typing-extensions-main-branch-on-python-3-15",
+    "name": "Complete job",
+    "start": "2026-11-20T14:02:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844119",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "test-macos-latest-3-12",
+    "name": "Test macos-latest / 3.12",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 355000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844119-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844119",
+    "service": "test-macos-latest-3-12",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844119-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844119",
+    "service": "test-macos-latest-3-12",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:37Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844119-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844119",
+    "service": "test-macos-latest-3-12",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:41Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844119-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844119",
+    "service": "test-macos-latest-3-12",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:48Z",
+    "duration_ms": 79000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844119-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844119",
+    "service": "test-macos-latest-3-12",
+    "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+    "start": "2026-11-20T14:02:07Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844119-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844119",
+    "service": "test-macos-latest-3-12",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-20T14:02:07Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844119-step-7",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844119",
+    "service": "test-macos-latest-3-12",
+    "name": "Run pytest",
+    "start": "2026-11-20T14:02:07Z",
+    "duration_ms": 252000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844119-step-9",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844119",
+    "service": "test-macos-latest-3-12",
+    "name": "Store coverage files",
+    "start": "2026-11-20T14:06:19Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844119-step-17",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844119",
+    "service": "test-macos-latest-3-12",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:06:21Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844119-step-18",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844119",
+    "service": "test-macos-latest-3-12",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:06:21Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844119-step-19",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844119",
+    "service": "test-macos-latest-3-12",
+    "name": "Complete job",
+    "start": "2026-11-20T14:06:22Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844136",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "test-ubuntu-latest-3-11",
+    "name": "Test ubuntu-latest / 3.11",
+    "start": "2026-11-20T14:00:32Z",
+    "duration_ms": 242000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844136-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844136",
+    "service": "test-ubuntu-latest-3-11",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:32Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844136-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844136",
+    "service": "test-ubuntu-latest-3-11",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844136-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844136",
+    "service": "test-ubuntu-latest-3-11",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844136-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844136",
+    "service": "test-ubuntu-latest-3-11",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:37Z",
+    "duration_ms": 42000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844136-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844136",
+    "service": "test-ubuntu-latest-3-11",
+    "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+    "start": "2026-11-20T14:01:19Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844136-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844136",
+    "service": "test-ubuntu-latest-3-11",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-20T14:01:19Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844136-step-7",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844136",
+    "service": "test-ubuntu-latest-3-11",
+    "name": "Run pytest",
+    "start": "2026-11-20T14:01:19Z",
+    "duration_ms": 191000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844136-step-9",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844136",
+    "service": "test-ubuntu-latest-3-11",
+    "name": "Store coverage files",
+    "start": "2026-11-20T14:04:30Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844136-step-17",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844136",
+    "service": "test-ubuntu-latest-3-11",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:04:31Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844136-step-18",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844136",
+    "service": "test-ubuntu-latest-3-11",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:04:31Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844136-step-19",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844136",
+    "service": "test-ubuntu-latest-3-11",
+    "name": "Complete job",
+    "start": "2026-11-20T14:04:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844155",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "lint-3-15",
+    "name": "Lint 3.15",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 98000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844155-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844155",
+    "service": "lint-3-15",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844155-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844155",
+    "service": "lint-3-15",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:36Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844155-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844155",
+    "service": "lint-3-15",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:37Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844155-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844155",
+    "service": "lint-3-15",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:40Z",
+    "duration_ms": 40000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844155-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844155",
+    "service": "lint-3-15",
+    "name": "Run pre-commit/action@2c7b3805fd2a0fd8c1884dcaebf91fc102a13ecd",
+    "start": "2026-11-20T14:01:20Z",
+    "duration_ms": 46000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844155-step-8",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844155",
+    "service": "lint-3-15",
+    "name": "Post Run pre-commit/action@2c7b3805fd2a0fd8c1884dcaebf91fc102a13ecd",
+    "start": "2026-11-20T14:02:06Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844155-step-9",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844155",
+    "service": "lint-3-15",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:02:06Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844155-step-10",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844155",
+    "service": "lint-3-15",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:02:06Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844155-step-11",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844155",
+    "service": "lint-3-15",
+    "name": "Complete job",
+    "start": "2026-11-20T14:02:06Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844165",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "test-typing-extensions-main-branch-on-python-3-12",
+    "name": "Test typing-extensions (`main` branch) on Python 3.12",
+    "start": "2026-11-20T14:00:32Z",
+    "duration_ms": 180000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844165-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844165",
+    "service": "test-typing-extensions-main-branch-on-python-3-12",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844165-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844165",
+    "service": "test-typing-extensions-main-branch-on-python-3-12",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844165-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844165",
+    "service": "test-typing-extensions-main-branch-on-python-3-12",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:35Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844165-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844165",
+    "service": "test-typing-extensions-main-branch-on-python-3-12",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:36Z",
+    "duration_ms": 34000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844165-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844165",
+    "service": "test-typing-extensions-main-branch-on-python-3-12",
+    "name": "Install typing-extensions",
+    "start": "2026-11-20T14:01:10Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844165-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844165",
+    "service": "test-typing-extensions-main-branch-on-python-3-12",
+    "name": "Run tests",
+    "start": "2026-11-20T14:01:11Z",
+    "duration_ms": 139000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844165-step-11",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844165",
+    "service": "test-typing-extensions-main-branch-on-python-3-12",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:03:30Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844165-step-12",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844165",
+    "service": "test-typing-extensions-main-branch-on-python-3-12",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:03:30Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844165-step-13",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844165",
+    "service": "test-typing-extensions-main-branch-on-python-3-12",
+    "name": "Complete job",
+    "start": "2026-11-20T14:03:30Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844168",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "mypy-typechecking-tests",
+    "name": "Mypy typechecking tests",
+    "start": "2026-11-20T14:00:32Z",
+    "duration_ms": 86000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844168-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844168",
+    "service": "mypy-typechecking-tests",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:32Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844168-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844168",
+    "service": "mypy-typechecking-tests",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844168-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844168",
+    "service": "mypy-typechecking-tests",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:35Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844168-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844168",
+    "service": "mypy-typechecking-tests",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:38Z",
+    "duration_ms": 31000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844168-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844168",
+    "service": "mypy-typechecking-tests",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-20T14:01:09Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844168-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844168",
+    "service": "mypy-typechecking-tests",
+    "name": "Run mypy tests",
+    "start": "2026-11-20T14:01:09Z",
+    "duration_ms": 44000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844168-step-7",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844168",
+    "service": "mypy-typechecking-tests",
+    "name": "Store coverage files",
+    "start": "2026-11-20T14:01:53Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844168-step-13",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844168",
+    "service": "mypy-typechecking-tests",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:01:55Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844168-step-14",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844168",
+    "service": "mypy-typechecking-tests",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:01:55Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844168-step-15",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844168",
+    "service": "mypy-typechecking-tests",
+    "name": "Complete job",
+    "start": "2026-11-20T14:01:55Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844177",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "core-test-on-windows",
+    "name": "core / Test on windows",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 152000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844177-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844177",
+    "service": "core-test-on-windows",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844177-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844177",
+    "service": "core-test-on-windows",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:36Z",
+    "duration_ms": 11000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844177-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844177",
+    "service": "core-test-on-windows",
+    "name": "Install rust stable",
+    "start": "2026-11-20T14:00:47Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844177-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844177",
+    "service": "core-test-on-windows",
+    "name": "Cache rust",
+    "start": "2026-11-20T14:00:53Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844177-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844177",
+    "service": "core-test-on-windows",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:56Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844177-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844177",
+    "service": "core-test-on-windows",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:01:01Z",
+    "duration_ms": 64000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844177-step-7",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844177",
+    "service": "core-test-on-windows",
+    "name": "Run uv pip freeze",
+    "start": "2026-11-20T14:02:05Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844177-step-8",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844177",
+    "service": "core-test-on-windows",
+    "name": "Run uv run pytest tests/pydantic_core",
+    "start": "2026-11-20T14:02:06Z",
+    "duration_ms": 25000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844177-step-9",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844177",
+    "service": "core-test-on-windows",
+    "name": "Run cargo test",
+    "start": "2026-11-20T14:02:31Z",
+    "duration_ms": 30000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844177-step-16",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844177",
+    "service": "core-test-on-windows",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:03:01Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844177-step-17",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844177",
+    "service": "core-test-on-windows",
+    "name": "Post Cache rust",
+    "start": "2026-11-20T14:03:01Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844177-step-18",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844177",
+    "service": "core-test-on-windows",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:03:01Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844177-step-19",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844177",
+    "service": "core-test-on-windows",
+    "name": "Complete job",
+    "start": "2026-11-20T14:03:03Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844193",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "lint-3-11",
+    "name": "Lint 3.11",
+    "start": "2026-11-20T14:00:32Z",
+    "duration_ms": 88000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844193-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844193",
+    "service": "lint-3-11",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844193-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844193",
+    "service": "lint-3-11",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:35Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844193-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844193",
+    "service": "lint-3-11",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:36Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844193-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844193",
+    "service": "lint-3-11",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:38Z",
+    "duration_ms": 39000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844193-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844193",
+    "service": "lint-3-11",
+    "name": "Run pre-commit/action@2c7b3805fd2a0fd8c1884dcaebf91fc102a13ecd",
+    "start": "2026-11-20T14:01:17Z",
+    "duration_ms": 40000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844193-step-8",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844193",
+    "service": "lint-3-11",
+    "name": "Post Run pre-commit/action@2c7b3805fd2a0fd8c1884dcaebf91fc102a13ecd",
+    "start": "2026-11-20T14:01:57Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844193-step-9",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844193",
+    "service": "lint-3-11",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:01:57Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844193-step-10",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844193",
+    "service": "lint-3-11",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:01:58Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844193-step-11",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844193",
+    "service": "lint-3-11",
+    "name": "Complete job",
+    "start": "2026-11-20T14:01:58Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844196",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "lint-3-14",
+    "name": "Lint 3.14",
+    "start": "2026-11-20T14:00:32Z",
+    "duration_ms": 102000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844196-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844196",
+    "service": "lint-3-14",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844196-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844196",
+    "service": "lint-3-14",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844196-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844196",
+    "service": "lint-3-14",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:35Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844196-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844196",
+    "service": "lint-3-14",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:37Z",
+    "duration_ms": 47000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844196-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844196",
+    "service": "lint-3-14",
+    "name": "Run pre-commit/action@2c7b3805fd2a0fd8c1884dcaebf91fc102a13ecd",
+    "start": "2026-11-20T14:01:24Z",
+    "duration_ms": 48000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844196-step-8",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844196",
+    "service": "lint-3-14",
+    "name": "Post Run pre-commit/action@2c7b3805fd2a0fd8c1884dcaebf91fc102a13ecd",
+    "start": "2026-11-20T14:02:12Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844196-step-9",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844196",
+    "service": "lint-3-14",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:02:12Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844196-step-10",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844196",
+    "service": "lint-3-14",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:02:12Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844196-step-11",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844196",
+    "service": "lint-3-14",
+    "name": "Complete job",
+    "start": "2026-11-20T14:02:12Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844198",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "test-typing-extensions-main-branch-on-python-3-14",
+    "name": "Test typing-extensions (`main` branch) on Python 3.14",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 173000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844198-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844198",
+    "service": "test-typing-extensions-main-branch-on-python-3-14",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844198-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844198",
+    "service": "test-typing-extensions-main-branch-on-python-3-14",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:35Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844198-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844198",
+    "service": "test-typing-extensions-main-branch-on-python-3-14",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:36Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844198-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844198",
+    "service": "test-typing-extensions-main-branch-on-python-3-14",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:37Z",
+    "duration_ms": 52000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844198-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844198",
+    "service": "test-typing-extensions-main-branch-on-python-3-14",
+    "name": "Install typing-extensions",
+    "start": "2026-11-20T14:01:29Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844198-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844198",
+    "service": "test-typing-extensions-main-branch-on-python-3-14",
+    "name": "Run tests",
+    "start": "2026-11-20T14:01:30Z",
+    "duration_ms": 112000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844198-step-11",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844198",
+    "service": "test-typing-extensions-main-branch-on-python-3-14",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:03:22Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844198-step-12",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844198",
+    "service": "test-typing-extensions-main-branch-on-python-3-14",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:03:23Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844198-step-13",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844198",
+    "service": "test-typing-extensions-main-branch-on-python-3-14",
+    "name": "Complete job",
+    "start": "2026-11-20T14:03:23Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844200",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "docs-build",
+    "name": "docs-build",
+    "start": "2026-11-20T14:00:32Z",
+    "duration_ms": 138000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844200-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844200",
+    "service": "docs-build",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844200-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844200",
+    "service": "docs-build",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844200-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844200",
+    "service": "docs-build",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:35Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844200-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844200",
+    "service": "docs-build",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:38Z",
+    "duration_ms": 57000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844200-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844200",
+    "service": "docs-build",
+    "name": "Run uv run python -c 'import docs.plugins.main'",
+    "start": "2026-11-20T14:01:35Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844200-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844200",
+    "service": "docs-build",
+    "name": "prepare shortcuts for extra modules",
+    "start": "2026-11-20T14:01:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844200-step-7",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844200",
+    "service": "docs-build",
+    "name": "Run PYTHONPATH=\"$PWD${PYTHONPATH:+:${PYTHONPATH}}\" uv run mkdocs build",
+    "start": "2026-11-20T14:01:36Z",
+    "duration_ms": 72000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844200-step-13",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844200",
+    "service": "docs-build",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:02:48Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844200-step-14",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844200",
+    "service": "docs-build",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:02:48Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844200-step-15",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844200",
+    "service": "docs-build",
+    "name": "Complete job",
+    "start": "2026-11-20T14:02:48Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844201",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "test-memray",
+    "name": "Test memray",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 381000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844201-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844201",
+    "service": "test-memray",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844201-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844201",
+    "service": "test-memray",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:35Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844201-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844201",
+    "service": "test-memray",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:37Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844201-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844201",
+    "service": "test-memray",
+    "name": "install deps",
+    "start": "2026-11-20T14:00:39Z",
+    "duration_ms": 31000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844201-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844201",
+    "service": "test-memray",
+    "name": "Run tests",
+    "start": "2026-11-20T14:01:10Z",
+    "duration_ms": 341000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844201-step-9",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844201",
+    "service": "test-memray",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:06:51Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844201-step-10",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844201",
+    "service": "test-memray",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:06:51Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844201-step-11",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844201",
+    "service": "test-memray",
+    "name": "Complete job",
+    "start": "2026-11-20T14:06:51Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844204",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "test-ubuntu-latest-3-15t",
+    "name": "Test ubuntu-latest / 3.15t",
+    "start": "2026-11-20T14:00:32Z",
+    "duration_ms": 176000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844204-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844204",
+    "service": "test-ubuntu-latest-3-15t",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844204-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844204",
+    "service": "test-ubuntu-latest-3-15t",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844204-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844204",
+    "service": "test-ubuntu-latest-3-15t",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:36Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844204-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844204",
+    "service": "test-ubuntu-latest-3-15t",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:38Z",
+    "duration_ms": 42000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844204-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844204",
+    "service": "test-ubuntu-latest-3-15t",
+    "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+    "start": "2026-11-20T14:01:20Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844204-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844204",
+    "service": "test-ubuntu-latest-3-15t",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-20T14:01:20Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844204-step-7",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844204",
+    "service": "test-ubuntu-latest-3-15t",
+    "name": "Run pytest",
+    "start": "2026-11-20T14:01:20Z",
+    "duration_ms": 125000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844204-step-9",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844204",
+    "service": "test-ubuntu-latest-3-15t",
+    "name": "Store coverage files",
+    "start": "2026-11-20T14:03:25Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844204-step-17",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844204",
+    "service": "test-ubuntu-latest-3-15t",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:03:26Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844204-step-18",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844204",
+    "service": "test-ubuntu-latest-3-15t",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:03:26Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844204-step-19",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844204",
+    "service": "test-ubuntu-latest-3-15t",
+    "name": "Complete job",
+    "start": "2026-11-20T14:03:27Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844213",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "core-test-on-graalpy-graalpy3-13",
+    "name": "core / Test on GraalPy graalpy3.13",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 148000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844213-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844213",
+    "service": "core-test-on-graalpy-graalpy3-13",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844213-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844213",
+    "service": "core-test-on-graalpy-graalpy3-13",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:35Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844213-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844213",
+    "service": "core-test-on-graalpy-graalpy3-13",
+    "name": "Install rust stable",
+    "start": "2026-11-20T14:00:37Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844213-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844213",
+    "service": "core-test-on-graalpy-graalpy3-13",
+    "name": "Cache rust",
+    "start": "2026-11-20T14:00:45Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844213-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844213",
+    "service": "core-test-on-graalpy-graalpy3-13",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:46Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844213-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844213",
+    "service": "core-test-on-graalpy-graalpy3-13",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:49Z",
+    "duration_ms": 38000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844213-step-7",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844213",
+    "service": "core-test-on-graalpy-graalpy3-13",
+    "name": "Run uv pip freeze",
+    "start": "2026-11-20T14:01:27Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844213-step-8",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844213",
+    "service": "core-test-on-graalpy-graalpy3-13",
+    "name": "Run uv run --no-sync pytest tests/pydantic_core --ignore=tests/pydantic_core/test_docstrings.py $EXTRA_PYTEST_ARGS",
+    "start": "2026-11-20T14:01:27Z",
+    "duration_ms": 90000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844213-step-14",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844213",
+    "service": "core-test-on-graalpy-graalpy3-13",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:02:57Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844213-step-15",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844213",
+    "service": "core-test-on-graalpy-graalpy3-13",
+    "name": "Post Cache rust",
+    "start": "2026-11-20T14:02:57Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844213-step-16",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844213",
+    "service": "core-test-on-graalpy-graalpy3-13",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:02:57Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844213-step-17",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844213",
+    "service": "core-test-on-graalpy-graalpy3-13",
+    "name": "Complete job",
+    "start": "2026-11-20T14:02:58Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844220",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "test-macos-latest-pypy3-11",
+    "name": "Test macos-latest / pypy3.11",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 271000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-136332844220-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844220",
+    "service": "test-macos-latest-pypy3-11",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:35Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844220-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844220",
+    "service": "test-macos-latest-pypy3-11",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:37Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844220-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844220",
+    "service": "test-macos-latest-pypy3-11",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:40Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844220-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844220",
+    "service": "test-macos-latest-pypy3-11",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:45Z",
+    "duration_ms": 63000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844220-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844220",
+    "service": "test-macos-latest-pypy3-11",
+    "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+    "start": "2026-11-20T14:01:48Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844220-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844220",
+    "service": "test-macos-latest-pypy3-11",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-20T14:01:49Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844220-step-8",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844220",
+    "service": "test-macos-latest-pypy3-11",
+    "name": "Run pytest (no coverage)",
+    "start": "2026-11-20T14:01:49Z",
+    "duration_ms": 187000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-136332844220-step-18",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844220",
+    "service": "test-macos-latest-pypy3-11",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:04:56Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844220-step-19",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844220",
+    "service": "test-macos-latest-pypy3-11",
+    "name": "Complete job",
+    "start": "2026-11-20T14:04:58Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844226",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "test-macos-latest-3-15",
+    "name": "Test macos-latest / 3.15",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 215000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844226-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844226",
+    "service": "test-macos-latest-3-15",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844226-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844226",
+    "service": "test-macos-latest-3-15",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:35Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844226-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844226",
+    "service": "test-macos-latest-3-15",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:40Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844226-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844226",
+    "service": "test-macos-latest-3-15",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:43Z",
+    "duration_ms": 64000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844226-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844226",
+    "service": "test-macos-latest-3-15",
+    "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+    "start": "2026-11-20T14:01:47Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844226-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844226",
+    "service": "test-macos-latest-3-15",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-20T14:01:47Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844226-step-7",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844226",
+    "service": "test-macos-latest-3-15",
+    "name": "Run pytest",
+    "start": "2026-11-20T14:01:47Z",
+    "duration_ms": 133000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844226-step-9",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844226",
+    "service": "test-macos-latest-3-15",
+    "name": "Store coverage files",
+    "start": "2026-11-20T14:04:00Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844226-step-17",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844226",
+    "service": "test-macos-latest-3-15",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:04:01Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844226-step-18",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844226",
+    "service": "test-macos-latest-3-15",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:04:02Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844226-step-19",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844226",
+    "service": "test-macos-latest-3-15",
+    "name": "Complete job",
+    "start": "2026-11-20T14:04:02Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844236",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "core-test-with-debug-build-pypy3-11",
+    "name": "core / Test with debug build (pypy3.11)",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 236000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844236-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844236",
+    "service": "core-test-with-debug-build-pypy3-11",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844236-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844236",
+    "service": "core-test-with-debug-build-pypy3-11",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844236-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844236",
+    "service": "core-test-with-debug-build-pypy3-11",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:35Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844236-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844236",
+    "service": "core-test-with-debug-build-pypy3-11",
+    "name": "Install rust stable",
+    "start": "2026-11-20T14:00:37Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844236-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844236",
+    "service": "core-test-with-debug-build-pypy3-11",
+    "name": "Cache rust",
+    "start": "2026-11-20T14:00:38Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844236-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844236",
+    "service": "core-test-with-debug-build-pypy3-11",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:39Z",
+    "duration_ms": 49000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844236-step-7",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844236",
+    "service": "core-test-with-debug-build-pypy3-11",
+    "name": "Run uv run --no-sync maturin develop --uv",
+    "start": "2026-11-20T14:01:28Z",
+    "duration_ms": 17000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844236-step-8",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844236",
+    "service": "core-test-with-debug-build-pypy3-11",
+    "name": "Run uv pip freeze",
+    "start": "2026-11-20T14:01:45Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844236-step-9",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844236",
+    "service": "core-test-with-debug-build-pypy3-11",
+    "name": "Run uv run pytest",
+    "start": "2026-11-20T14:01:45Z",
+    "duration_ms": 162000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844236-step-16",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844236",
+    "service": "core-test-with-debug-build-pypy3-11",
+    "name": "Post Cache rust",
+    "start": "2026-11-20T14:04:27Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844236-step-17",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844236",
+    "service": "core-test-with-debug-build-pypy3-11",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:04:27Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844236-step-18",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844236",
+    "service": "core-test-with-debug-build-pypy3-11",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:04:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844236-step-19",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844236",
+    "service": "core-test-with-debug-build-pypy3-11",
+    "name": "Complete job",
+    "start": "2026-11-20T14:04:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844240",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "test-typing-extensions-main-branch-on-python-3-13",
+    "name": "Test typing-extensions (`main` branch) on Python 3.13",
+    "start": "2026-11-20T14:00:32Z",
+    "duration_ms": 196000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844240-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844240",
+    "service": "test-typing-extensions-main-branch-on-python-3-13",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844240-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844240",
+    "service": "test-typing-extensions-main-branch-on-python-3-13",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844240-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844240",
+    "service": "test-typing-extensions-main-branch-on-python-3-13",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:35Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844240-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844240",
+    "service": "test-typing-extensions-main-branch-on-python-3-13",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:36Z",
+    "duration_ms": 45000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844240-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844240",
+    "service": "test-typing-extensions-main-branch-on-python-3-13",
+    "name": "Install typing-extensions",
+    "start": "2026-11-20T14:01:21Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844240-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844240",
+    "service": "test-typing-extensions-main-branch-on-python-3-13",
+    "name": "Run tests",
+    "start": "2026-11-20T14:01:23Z",
+    "duration_ms": 143000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844240-step-11",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844240",
+    "service": "test-typing-extensions-main-branch-on-python-3-13",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:03:46Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844240-step-12",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844240",
+    "service": "test-typing-extensions-main-branch-on-python-3-13",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:03:46Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844240-step-13",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844240",
+    "service": "test-typing-extensions-main-branch-on-python-3-13",
+    "name": "Complete job",
+    "start": "2026-11-20T14:03:46Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844241",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "test-macos-latest-3-13",
+    "name": "Test macos-latest / 3.13",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 107000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-136332844241-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844241",
+    "service": "test-macos-latest-3-13",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:35Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844241-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844241",
+    "service": "test-macos-latest-3-13",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:36Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844241-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844241",
+    "service": "test-macos-latest-3-13",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:41Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844241-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844241",
+    "service": "test-macos-latest-3-13",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:47Z",
+    "duration_ms": 88000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-136332844241-step-18",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844241",
+    "service": "test-macos-latest-3-13",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:02:16Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844241-step-19",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844241",
+    "service": "test-macos-latest-3-13",
+    "name": "Complete job",
+    "start": "2026-11-20T14:02:16Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844255",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "test-macos-latest-3-15t",
+    "name": "Test macos-latest / 3.15t",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 273000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844255-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844255",
+    "service": "test-macos-latest-3-15t",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844255-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844255",
+    "service": "test-macos-latest-3-15t",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:36Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844255-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844255",
+    "service": "test-macos-latest-3-15t",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:40Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844255-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844255",
+    "service": "test-macos-latest-3-15t",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:45Z",
+    "duration_ms": 60000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844255-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844255",
+    "service": "test-macos-latest-3-15t",
+    "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+    "start": "2026-11-20T14:01:45Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844255-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844255",
+    "service": "test-macos-latest-3-15t",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-20T14:01:45Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844255-step-7",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844255",
+    "service": "test-macos-latest-3-15t",
+    "name": "Run pytest",
+    "start": "2026-11-20T14:01:45Z",
+    "duration_ms": 191000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844255-step-9",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844255",
+    "service": "test-macos-latest-3-15t",
+    "name": "Store coverage files",
+    "start": "2026-11-20T14:04:56Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844255-step-17",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844255",
+    "service": "test-macos-latest-3-15t",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:04:59Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844255-step-18",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844255",
+    "service": "test-macos-latest-3-15t",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:04:59Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844255-step-19",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844255",
+    "service": "test-macos-latest-3-15t",
+    "name": "Complete job",
+    "start": "2026-11-20T14:05:00Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844271",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "test-macos-latest-3-11",
+    "name": "Test macos-latest / 3.11",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 151000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844271-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844271",
+    "service": "test-macos-latest-3-11",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844271-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844271",
+    "service": "test-macos-latest-3-11",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:35Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844271-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844271",
+    "service": "test-macos-latest-3-11",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:37Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844271-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844271",
+    "service": "test-macos-latest-3-11",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:40Z",
+    "duration_ms": 28000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844271-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844271",
+    "service": "test-macos-latest-3-11",
+    "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+    "start": "2026-11-20T14:01:08Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844271-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844271",
+    "service": "test-macos-latest-3-11",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-20T14:01:08Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844271-step-7",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844271",
+    "service": "test-macos-latest-3-11",
+    "name": "Run pytest",
+    "start": "2026-11-20T14:01:08Z",
+    "duration_ms": 110000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844271-step-9",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844271",
+    "service": "test-macos-latest-3-11",
+    "name": "Store coverage files",
+    "start": "2026-11-20T14:02:58Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844271-step-17",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844271",
+    "service": "test-macos-latest-3-11",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:03:00Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844271-step-18",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844271",
+    "service": "test-macos-latest-3-11",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:03:00Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844271-step-19",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844271",
+    "service": "test-macos-latest-3-11",
+    "name": "Complete job",
+    "start": "2026-11-20T14:03:01Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844274",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "test-ubuntu-latest-pypy3-11",
+    "name": "Test ubuntu-latest / pypy3.11",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 221000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844274-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844274",
+    "service": "test-ubuntu-latest-pypy3-11",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844274-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844274",
+    "service": "test-ubuntu-latest-pypy3-11",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844274-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844274",
+    "service": "test-ubuntu-latest-pypy3-11",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:35Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844274-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844274",
+    "service": "test-ubuntu-latest-pypy3-11",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:37Z",
+    "duration_ms": 47000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844274-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844274",
+    "service": "test-ubuntu-latest-pypy3-11",
+    "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+    "start": "2026-11-20T14:01:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844274-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844274",
+    "service": "test-ubuntu-latest-pypy3-11",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-20T14:01:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844274-step-8",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844274",
+    "service": "test-ubuntu-latest-pypy3-11",
+    "name": "Run pytest (no coverage)",
+    "start": "2026-11-20T14:01:24Z",
+    "duration_ms": 168000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844274-step-17",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844274",
+    "service": "test-ubuntu-latest-pypy3-11",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:04:12Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844274-step-18",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844274",
+    "service": "test-ubuntu-latest-pypy3-11",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:04:13Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844274-step-19",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844274",
+    "service": "test-ubuntu-latest-pypy3-11",
+    "name": "Complete job",
+    "start": "2026-11-20T14:04:13Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844282",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "test-windows-latest-3-14",
+    "name": "Test windows-latest / 3.14",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 178000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844282-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844282",
+    "service": "test-windows-latest-3-14",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844282-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844282",
+    "service": "test-windows-latest-3-14",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:35Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844282-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844282",
+    "service": "test-windows-latest-3-14",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:42Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844282-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844282",
+    "service": "test-windows-latest-3-14",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:46Z",
+    "duration_ms": 69000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844282-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844282",
+    "service": "test-windows-latest-3-14",
+    "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+    "start": "2026-11-20T14:01:55Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844282-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844282",
+    "service": "test-windows-latest-3-14",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-20T14:01:56Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844282-step-7",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844282",
+    "service": "test-windows-latest-3-14",
+    "name": "Run pytest",
+    "start": "2026-11-20T14:01:57Z",
+    "duration_ms": 89000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844282-step-9",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844282",
+    "service": "test-windows-latest-3-14",
+    "name": "Store coverage files",
+    "start": "2026-11-20T14:03:26Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844282-step-17",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844282",
+    "service": "test-windows-latest-3-14",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:03:27Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844282-step-18",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844282",
+    "service": "test-windows-latest-3-14",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:03:28Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844282-step-19",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844282",
+    "service": "test-windows-latest-3-14",
+    "name": "Complete job",
+    "start": "2026-11-20T14:03:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844294",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "test-ubuntu-latest-3-14",
+    "name": "Test ubuntu-latest / 3.14",
+    "start": "2026-11-20T14:00:32Z",
+    "duration_ms": 137000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844294-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844294",
+    "service": "test-ubuntu-latest-3-14",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844294-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844294",
+    "service": "test-ubuntu-latest-3-14",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844294-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844294",
+    "service": "test-ubuntu-latest-3-14",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:35Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844294-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844294",
+    "service": "test-ubuntu-latest-3-14",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:37Z",
+    "duration_ms": 36000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844294-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844294",
+    "service": "test-ubuntu-latest-3-14",
+    "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+    "start": "2026-11-20T14:01:13Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844294-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844294",
+    "service": "test-ubuntu-latest-3-14",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-20T14:01:13Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844294-step-7",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844294",
+    "service": "test-ubuntu-latest-3-14",
+    "name": "Run pytest",
+    "start": "2026-11-20T14:01:13Z",
+    "duration_ms": 92000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844294-step-9",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844294",
+    "service": "test-ubuntu-latest-3-14",
+    "name": "Store coverage files",
+    "start": "2026-11-20T14:02:45Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844294-step-17",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844294",
+    "service": "test-ubuntu-latest-3-14",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:02:46Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844294-step-18",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844294",
+    "service": "test-ubuntu-latest-3-14",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:02:46Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844294-step-19",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844294",
+    "service": "test-ubuntu-latest-3-14",
+    "name": "Complete job",
+    "start": "2026-11-20T14:02:46Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844300",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "core-test-on-ubuntu",
+    "name": "core / Test on ubuntu",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 76000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844300-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844300",
+    "service": "core-test-on-ubuntu",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844300-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844300",
+    "service": "core-test-on-ubuntu",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:35Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844300-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844300",
+    "service": "core-test-on-ubuntu",
+    "name": "Install rust stable",
+    "start": "2026-11-20T14:00:36Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844300-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844300",
+    "service": "core-test-on-ubuntu",
+    "name": "Cache rust",
+    "start": "2026-11-20T14:00:45Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844300-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844300",
+    "service": "core-test-on-ubuntu",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:45Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844300-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844300",
+    "service": "core-test-on-ubuntu",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:48Z",
+    "duration_ms": 24000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844300-step-7",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844300",
+    "service": "core-test-on-ubuntu",
+    "name": "Run uv pip freeze",
+    "start": "2026-11-20T14:01:12Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844300-step-8",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844300",
+    "service": "core-test-on-ubuntu",
+    "name": "Run uv run pytest tests/pydantic_core",
+    "start": "2026-11-20T14:01:12Z",
+    "duration_ms": 20000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844300-step-9",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844300",
+    "service": "core-test-on-ubuntu",
+    "name": "Run cargo test",
+    "start": "2026-11-20T14:01:32Z",
+    "duration_ms": 14000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844300-step-16",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844300",
+    "service": "core-test-on-ubuntu",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:01:46Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844300-step-17",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844300",
+    "service": "core-test-on-ubuntu",
+    "name": "Post Cache rust",
+    "start": "2026-11-20T14:01:47Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844300-step-18",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844300",
+    "service": "core-test-on-ubuntu",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:01:47Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844300-step-19",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844300",
+    "service": "core-test-on-ubuntu",
+    "name": "Complete job",
+    "start": "2026-11-20T14:01:47Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844330",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "test-windows-latest-pypy3-11",
+    "name": "Test windows-latest / pypy3.11",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 371000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844330-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844330",
+    "service": "test-windows-latest-pypy3-11",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844330-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844330",
+    "service": "test-windows-latest-pypy3-11",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844330-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844330",
+    "service": "test-windows-latest-pypy3-11",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:42Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844330-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844330",
+    "service": "test-windows-latest-pypy3-11",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:48Z",
+    "duration_ms": 144000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844330-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844330",
+    "service": "test-windows-latest-pypy3-11",
+    "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+    "start": "2026-11-20T14:03:12Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844330-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844330",
+    "service": "test-windows-latest-pypy3-11",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-20T14:03:13Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844330-step-8",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844330",
+    "service": "test-windows-latest-pypy3-11",
+    "name": "Run pytest (no coverage)",
+    "start": "2026-11-20T14:03:14Z",
+    "duration_ms": 205000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844330-step-17",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844330",
+    "service": "test-windows-latest-pypy3-11",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:06:39Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844330-step-18",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844330",
+    "service": "test-windows-latest-pypy3-11",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:06:39Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844330-step-19",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844330",
+    "service": "test-windows-latest-pypy3-11",
+    "name": "Complete job",
+    "start": "2026-11-20T14:06:41Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844342",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "test-macos-latest-3-14",
+    "name": "Test macos-latest / 3.14",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 205000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844342-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844342",
+    "service": "test-macos-latest-3-14",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844342-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844342",
+    "service": "test-macos-latest-3-14",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:36Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844342-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844342",
+    "service": "test-macos-latest-3-14",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:39Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844342-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844342",
+    "service": "test-macos-latest-3-14",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:46Z",
+    "duration_ms": 58000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844342-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844342",
+    "service": "test-macos-latest-3-14",
+    "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+    "start": "2026-11-20T14:01:44Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844342-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844342",
+    "service": "test-macos-latest-3-14",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-20T14:01:44Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844342-step-7",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844342",
+    "service": "test-macos-latest-3-14",
+    "name": "Run pytest",
+    "start": "2026-11-20T14:01:45Z",
+    "duration_ms": 125000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844342-step-9",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844342",
+    "service": "test-macos-latest-3-14",
+    "name": "Store coverage files",
+    "start": "2026-11-20T14:03:50Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844342-step-17",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844342",
+    "service": "test-macos-latest-3-14",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:03:52Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844342-step-18",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844342",
+    "service": "test-macos-latest-3-14",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:03:52Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844342-step-19",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844342",
+    "service": "test-macos-latest-3-14",
+    "name": "Complete job",
+    "start": "2026-11-20T14:03:53Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844343",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "test-windows-latest-3-15t",
+    "name": "Test windows-latest / 3.15t",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 235000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844343-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844343",
+    "service": "test-windows-latest-3-15t",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844343-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844343",
+    "service": "test-windows-latest-3-15t",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844343-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844343",
+    "service": "test-windows-latest-3-15t",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:41Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844343-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844343",
+    "service": "test-windows-latest-3-15t",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:44Z",
+    "duration_ms": 76000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844343-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844343",
+    "service": "test-windows-latest-3-15t",
+    "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+    "start": "2026-11-20T14:02:00Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844343-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844343",
+    "service": "test-windows-latest-3-15t",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-20T14:02:01Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844343-step-7",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844343",
+    "service": "test-windows-latest-3-15t",
+    "name": "Run pytest",
+    "start": "2026-11-20T14:02:01Z",
+    "duration_ms": 142000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844343-step-9",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844343",
+    "service": "test-windows-latest-3-15t",
+    "name": "Store coverage files",
+    "start": "2026-11-20T14:04:23Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844343-step-17",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844343",
+    "service": "test-windows-latest-3-15t",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:04:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844343-step-18",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844343",
+    "service": "test-windows-latest-3-15t",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:04:24Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844343-step-19",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844343",
+    "service": "test-windows-latest-3-15t",
+    "name": "Complete job",
+    "start": "2026-11-20T14:04:25Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844383",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "test-typing-extensions-main-branch-on-python-3-11",
+    "name": "Test typing-extensions (`main` branch) on Python 3.11",
+    "start": "2026-11-20T14:00:32Z",
+    "duration_ms": 239000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844383-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844383",
+    "service": "test-typing-extensions-main-branch-on-python-3-11",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844383-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844383",
+    "service": "test-typing-extensions-main-branch-on-python-3-11",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844383-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844383",
+    "service": "test-typing-extensions-main-branch-on-python-3-11",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:35Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844383-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844383",
+    "service": "test-typing-extensions-main-branch-on-python-3-11",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:36Z",
+    "duration_ms": 41000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844383-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844383",
+    "service": "test-typing-extensions-main-branch-on-python-3-11",
+    "name": "Install typing-extensions",
+    "start": "2026-11-20T14:01:17Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844383-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844383",
+    "service": "test-typing-extensions-main-branch-on-python-3-11",
+    "name": "Run tests",
+    "start": "2026-11-20T14:01:18Z",
+    "duration_ms": 190000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844383-step-11",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844383",
+    "service": "test-typing-extensions-main-branch-on-python-3-11",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:04:28Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844383-step-12",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844383",
+    "service": "test-typing-extensions-main-branch-on-python-3-11",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:04:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844383-step-13",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844383",
+    "service": "test-typing-extensions-main-branch-on-python-3-11",
+    "name": "Complete job",
+    "start": "2026-11-20T14:04:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844402",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "test-windows-latest-3-15",
+    "name": "Test windows-latest / 3.15",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 241000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844402-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844402",
+    "service": "test-windows-latest-3-15",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844402-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844402",
+    "service": "test-windows-latest-3-15",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:36Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844402-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844402",
+    "service": "test-windows-latest-3-15",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:44Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844402-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844402",
+    "service": "test-windows-latest-3-15",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:49Z",
+    "duration_ms": 94000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844402-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844402",
+    "service": "test-windows-latest-3-15",
+    "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+    "start": "2026-11-20T14:02:23Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844402-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844402",
+    "service": "test-windows-latest-3-15",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-20T14:02:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844402-step-7",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844402",
+    "service": "test-windows-latest-3-15",
+    "name": "Run pytest",
+    "start": "2026-11-20T14:02:24Z",
+    "duration_ms": 123000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844402-step-9",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844402",
+    "service": "test-windows-latest-3-15",
+    "name": "Store coverage files",
+    "start": "2026-11-20T14:04:27Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844402-step-17",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844402",
+    "service": "test-windows-latest-3-15",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:04:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844402-step-18",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844402",
+    "service": "test-windows-latest-3-15",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:04:29Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844402-step-19",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844402",
+    "service": "test-windows-latest-3-15",
+    "name": "Complete job",
+    "start": "2026-11-20T14:04:31Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844407",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "core-test-on-macos",
+    "name": "core / Test on macos",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 106000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844407-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844407",
+    "service": "core-test-on-macos",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844407-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844407",
+    "service": "core-test-on-macos",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:36Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844407-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844407",
+    "service": "core-test-on-macos",
+    "name": "Install rust stable",
+    "start": "2026-11-20T14:00:39Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844407-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844407",
+    "service": "core-test-on-macos",
+    "name": "Cache rust",
+    "start": "2026-11-20T14:00:41Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844407-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844407",
+    "service": "core-test-on-macos",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:42Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844407-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844407",
+    "service": "core-test-on-macos",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:47Z",
+    "duration_ms": 45000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844407-step-7",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844407",
+    "service": "core-test-on-macos",
+    "name": "Run uv pip freeze",
+    "start": "2026-11-20T14:01:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844407-step-8",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844407",
+    "service": "core-test-on-macos",
+    "name": "Run uv run pytest tests/pydantic_core",
+    "start": "2026-11-20T14:01:32Z",
+    "duration_ms": 24000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844407-step-9",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844407",
+    "service": "core-test-on-macos",
+    "name": "Run cargo test",
+    "start": "2026-11-20T14:01:56Z",
+    "duration_ms": 19000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844407-step-16",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844407",
+    "service": "core-test-on-macos",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:02:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844407-step-17",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844407",
+    "service": "core-test-on-macos",
+    "name": "Post Cache rust",
+    "start": "2026-11-20T14:02:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844407-step-18",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844407",
+    "service": "core-test-on-macos",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:02:15Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844407-step-19",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844407",
+    "service": "core-test-on-macos",
+    "name": "Complete job",
+    "start": "2026-11-20T14:02:16Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844424",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "test-macos-15-intel-3-15",
+    "name": "Test macos-15-intel / 3.15",
+    "start": "2026-11-20T14:00:35Z",
+    "duration_ms": 541000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844424-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844424",
+    "service": "test-macos-15-intel-3-15",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:36Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844424-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844424",
+    "service": "test-macos-15-intel-3-15",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:40Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844424-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844424",
+    "service": "test-macos-15-intel-3-15",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:48Z",
+    "duration_ms": 17000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844424-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844424",
+    "service": "test-macos-15-intel-3-15",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:01:05Z",
+    "duration_ms": 229000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844424-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844424",
+    "service": "test-macos-15-intel-3-15",
+    "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+    "start": "2026-11-20T14:04:54Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844424-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844424",
+    "service": "test-macos-15-intel-3-15",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-20T14:04:55Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844424-step-7",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844424",
+    "service": "test-macos-15-intel-3-15",
+    "name": "Run pytest",
+    "start": "2026-11-20T14:04:55Z",
+    "duration_ms": 264000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844424-step-9",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844424",
+    "service": "test-macos-15-intel-3-15",
+    "name": "Store coverage files",
+    "start": "2026-11-20T14:09:19Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844424-step-17",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844424",
+    "service": "test-macos-15-intel-3-15",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:09:21Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844424-step-18",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844424",
+    "service": "test-macos-15-intel-3-15",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:09:22Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844424-step-19",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844424",
+    "service": "test-macos-15-intel-3-15",
+    "name": "Complete job",
+    "start": "2026-11-20T14:09:23Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844428",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "test-windows-latest-3-11",
+    "name": "Test windows-latest / 3.11",
+    "start": "2026-11-20T14:00:33Z",
+    "duration_ms": 321000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844428-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844428",
+    "service": "test-windows-latest-3-11",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844428-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844428",
+    "service": "test-windows-latest-3-11",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:35Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844428-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844428",
+    "service": "test-windows-latest-3-11",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:44Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844428-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844428",
+    "service": "test-windows-latest-3-11",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:49Z",
+    "duration_ms": 86000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844428-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844428",
+    "service": "test-windows-latest-3-11",
+    "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+    "start": "2026-11-20T14:02:15Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844428-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844428",
+    "service": "test-windows-latest-3-11",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-20T14:02:16Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844428-step-7",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844428",
+    "service": "test-windows-latest-3-11",
+    "name": "Run pytest",
+    "start": "2026-11-20T14:02:16Z",
+    "duration_ms": 211000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844428-step-9",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844428",
+    "service": "test-windows-latest-3-11",
+    "name": "Store coverage files",
+    "start": "2026-11-20T14:05:47Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844428-step-17",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844428",
+    "service": "test-windows-latest-3-11",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:05:49Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844428-step-18",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844428",
+    "service": "test-windows-latest-3-11",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:05:49Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844428-step-19",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844428",
+    "service": "test-windows-latest-3-11",
+    "name": "Complete job",
+    "start": "2026-11-20T14:05:51Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844451",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "test-windows-latest-3-12",
+    "name": "Test windows-latest / 3.12",
+    "start": "2026-11-20T14:00:34Z",
+    "duration_ms": 288000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844451-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844451",
+    "service": "test-windows-latest-3-12",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:35Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844451-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844451",
+    "service": "test-windows-latest-3-12",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:36Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844451-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844451",
+    "service": "test-windows-latest-3-12",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:44Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844451-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844451",
+    "service": "test-windows-latest-3-12",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:49Z",
+    "duration_ms": 77000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844451-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844451",
+    "service": "test-windows-latest-3-12",
+    "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+    "start": "2026-11-20T14:02:06Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844451-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844451",
+    "service": "test-windows-latest-3-12",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-20T14:02:07Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844451-step-7",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844451",
+    "service": "test-windows-latest-3-12",
+    "name": "Run pytest",
+    "start": "2026-11-20T14:02:07Z",
+    "duration_ms": 190000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844451-step-9",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844451",
+    "service": "test-windows-latest-3-12",
+    "name": "Store coverage files",
+    "start": "2026-11-20T14:05:17Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844451-step-17",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844451",
+    "service": "test-windows-latest-3-12",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:05:18Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844451-step-18",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844451",
+    "service": "test-windows-latest-3-12",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:05:18Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844451-step-19",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844451",
+    "service": "test-windows-latest-3-12",
+    "name": "Complete job",
+    "start": "2026-11-20T14:05:20Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844505",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "test-windows-latest-3-13",
+    "name": "Test windows-latest / 3.13",
+    "start": "2026-11-20T14:00:35Z",
+    "duration_ms": 363000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844505-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844505",
+    "service": "test-windows-latest-3-13",
+    "name": "Set up job",
+    "start": "2026-11-20T14:00:36Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844505-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844505",
+    "service": "test-windows-latest-3-13",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:00:38Z",
+    "duration_ms": 12000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844505-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844505",
+    "service": "test-windows-latest-3-13",
+    "name": "Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:00:50Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844505-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844505",
+    "service": "test-windows-latest-3-13",
+    "name": "Install dependencies",
+    "start": "2026-11-20T14:00:59Z",
+    "duration_ms": 125000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844505-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844505",
+    "service": "test-windows-latest-3-13",
+    "name": "Run uv run python -c \"import pydantic.version; print(pydantic.version.version_info())\"",
+    "start": "2026-11-20T14:03:04Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844505-step-6",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844505",
+    "service": "test-windows-latest-3-13",
+    "name": "Run mkdir coverage",
+    "start": "2026-11-20T14:03:05Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844505-step-7",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844505",
+    "service": "test-windows-latest-3-13",
+    "name": "Run pytest",
+    "start": "2026-11-20T14:03:05Z",
+    "duration_ms": 205000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844505-step-9",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844505",
+    "service": "test-windows-latest-3-13",
+    "name": "Store coverage files",
+    "start": "2026-11-20T14:06:30Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844505-step-17",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844505",
+    "service": "test-windows-latest-3-13",
+    "name": "Post Run astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7",
+    "start": "2026-11-20T14:06:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844505-step-18",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844505",
+    "service": "test-windows-latest-3-13",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:06:32Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332844505-step-19",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136332844505",
+    "service": "test-windows-latest-3-13",
+    "name": "Complete job",
+    "start": "2026-11-20T14:06:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332845570",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "build-pydantic",
+    "name": "build-pydantic",
+    "start": "2026-11-20T14:00:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332845682",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "core-build-pgo-optimized-on-matrix-platform-os-matrix-interpreter",
+    "name": "core / Build PGO-optimized on ${{ matrix.platform.os }} / ${{ matrix.interpreter }}",
+    "start": "2026-11-20T14:00:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332846196",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "core-test-build-on-matrix-target-matrix-distro",
+    "name": "core / Test build on ${{ matrix.target }}-${{ matrix.distro }}",
+    "start": "2026-11-20T14:00:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332846303",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "core-build-on-matrix-os-matrix-target-matrix-interpreter-all-matrix-os-linux-format-0-matrix-manylinux-auto-manylinux-matrix-manylinux",
+    "name": "core / Build on ${{ matrix.os }} (${{ matrix.target }} - ${{ (matrix.interpreter || 'all') }}${{ (((matrix.os == 'linux') && format(' - {0}', (((matrix.manylinux == 'auto') && 'manylinux') || matrix.manylinux))) || '') }})",
+    "start": "2026-11-20T14:00:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332846403",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "core-test-build-on-matrix-platform-os",
+    "name": "core / Test build on ${{ matrix.platform.os }}",
+    "start": "2026-11-20T14:00:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136332846753",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "core-test-with-debug-python-matrix-python-version",
+    "name": "core / Test with debug Python (${{ matrix.python-version }})",
+    "start": "2026-11-20T14:00:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136335205689",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "test-build-on-pyemscripten-pyodide-3-14",
+    "name": "Test build on PyEmscripten (Pyodide) (3.14)",
+    "start": "2026-11-20T14:04:55Z",
+    "duration_ms": 195000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136335205689-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136335205689",
+    "service": "test-build-on-pyemscripten-pyodide-3-14",
+    "name": "Set up job",
+    "start": "2026-11-20T14:04:55Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136335205689-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136335205689",
+    "service": "test-build-on-pyemscripten-pyodide-3-14",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:04:56Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136335205689-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136335205689",
+    "service": "test-build-on-pyemscripten-pyodide-3-14",
+    "name": "install uv",
+    "start": "2026-11-20T14:04:57Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136335205689-step-4",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136335205689",
+    "service": "test-build-on-pyemscripten-pyodide-3-14",
+    "name": "get dist artifacts",
+    "start": "2026-11-20T14:05:00Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136335205689-step-5",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136335205689",
+    "service": "test-build-on-pyemscripten-pyodide-3-14",
+    "name": "Run uv sync --only-group pyodide-build",
+    "start": "2026-11-20T14:05:00Z",
+    "duration_ms": 188000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136335205689-step-9",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136335205689",
+    "service": "test-build-on-pyemscripten-pyodide-3-14",
+    "name": "Post install uv",
+    "start": "2026-11-20T14:08:08Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136335205689-step-10",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136335205689",
+    "service": "test-build-on-pyemscripten-pyodide-3-14",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-20T14:08:08Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136335205689-step-11",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136335205689",
+    "service": "test-build-on-pyemscripten-pyodide-3-14",
+    "name": "Complete job",
+    "start": "2026-11-20T14:08:08Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136337772657",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "check",
+    "name": "check",
+    "start": "2026-11-20T14:09:44Z",
+    "duration_ms": 4000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-136337772657-step-1",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136337772657",
+    "service": "check",
+    "name": "Set up job",
+    "start": "2026-11-20T14:09:45Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136337772657-step-2",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136337772657",
+    "service": "check",
+    "name": "Decide whether the needed jobs succeeded or failed",
+    "start": "2026-11-20T14:09:46Z",
+    "duration_ms": 0.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-136337772657-step-3",
+    "trace_id": "run-44749339872",
+    "parent_id": "job-136337772657",
+    "service": "check",
+    "name": "Complete job",
+    "start": "2026-11-20T14:09:46Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136337775582",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "coverage-pr-comment",
+    "name": "coverage-pr-comment",
+    "start": "2026-11-20T14:09:37Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136337776546",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "coverage-combine",
+    "name": "coverage-combine",
+    "start": "2026-11-20T14:09:37Z",
+    "duration_ms": -1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136337879282",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "deploy-docs",
+    "name": "deploy-docs",
+    "start": "2026-11-20T14:09:49Z",
+    "duration_ms": -1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136337879333",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "release-pydantic",
+    "name": "release-pydantic",
+    "start": "2026-11-20T14:09:49Z",
+    "duration_ms": -1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136337879832",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "release-pydantic-core",
+    "name": "release-pydantic-core",
+    "start": "2026-11-20T14:09:49Z",
+    "duration_ms": -1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-136337880544",
+    "trace_id": "run-44749339872",
+    "parent_id": "run-44749339872",
+    "service": "send-tweet",
+    "name": "Send tweet",
+    "start": "2026-11-20T14:09:49Z",
+    "duration_ms": -1000.0,
+    "status": "ok"
+  }
+]

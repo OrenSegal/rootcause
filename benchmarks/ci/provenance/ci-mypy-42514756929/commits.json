@@ -1,0 +1,50 @@
+[
+  {
+    "author": "Rifa-111",
+    "committedDate": "2026-11-08T19:01:49Z",
+    "messageHeadline": "Fix placeholder qualified names during semantic analysis (#22326)",
+    "oid": "e0084311fe497a17805db2fbdfeeb0c05601b170",
+    "files": [
+      {
+        "filename": "mypy/semanal.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "Rifa-111",
+    "committedDate": "2026-11-08T19:03:09Z",
+    "messageHeadline": "Support deferred dynamic class hook test fixture",
+    "oid": "b5dd3d7c1b995333376bb7c7da760ec9a54aa24c",
+    "files": [
+      {
+        "filename": "test-data/unit/plugins/dyn_class_from_method.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "Rifa-111",
+    "committedDate": "2026-11-08T19:03:11Z",
+    "messageHeadline": "Add regression coverage for imported placeholder dynamic class hooks",
+    "oid": "d020e3143e5011982b951282119974d350c66b21",
+    "files": [
+      {
+        "filename": "test-data/unit/check-custom-plugin.test",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "Rifa-111",
+    "committedDate": "2026-11-08T19:22:50Z",
+    "messageHeadline": "Import PlaceholderNode for deferred dynamic class regression fixture",
+    "oid": "1a8ca7e2930c05f9a0920d8525eb79abc8ac2e56",
+    "files": [
+      {
+        "filename": "test-data/unit/plugins/dyn_class_from_method.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

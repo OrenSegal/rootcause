@@ -1,0 +1,19 @@
+[
+  {
+    "id": "0b6db8414d",
+    "service": "geopandas",
+    "version": "0b6db8414d",
+    "ts": "2026-10-30T09:42:38Z",
+    "author": "jorisvandenbossche",
+    "summary": "CI: use gh release instead of softprops/action-gh-release",
+    "config_before": {
+      ".github/workflows/release.yml": "previous"
+    },
+    "config_after": {
+      ".github/workflows/release.yml": "modified in 0b6db8414d"
+    },
+    "files": [
+      ".github/workflows/release.yml"
+    ]
+  }
+]

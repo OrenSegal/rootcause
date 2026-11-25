@@ -1,0 +1,14 @@
+id: ci-altair-35669720079
+title: 'chore: Add class typing to generated mixins'
+alert:
+  severity: ci
+  service: build-docs
+  summary: 'workflow Docs failed on fix-type-ignore at 2cb3c4f602: step ''Upload docs preview
+    artifact'' in job ''Build docs'' failed.'
+truth:
+  grading: class
+  category: infrastructure
+  service: altair
+  required_evidence_any:
+  - log-2793
+provenance: recorded

@@ -1,0 +1,14 @@
+id: ci-anyio-43968540363
+title: Preserve asyncio callback messages in raised exceptions
+alert:
+  severity: ci
+  service: test-ubuntu-latest-pypy3-11-trio-false
+  summary: 'workflow test suite failed on fix/asyncio-callback-error-notes at b389aedb3c:
+    step ''Test with pytest'' in job ''test (ubuntu-latest, pypy3.11, [trio], false)'' failed.'
+truth:
+  grading: class
+  category: bad_code_deploy
+  service: anyio
+  required_evidence_any:
+  - b389aedb3c
+provenance: recorded

@@ -1,0 +1,11 @@
+{
+  "fixed_run": "https://github.com/pydata/xarray/actions/runs/43554386884",
+  "fixed_sha": "ed66f017c8c1500cd21a7911430f6d49c260e066",
+  "commits": [
+    "ed66f017c8c1500cd21a7911430f6d49c260e066"
+  ],
+  "files": [
+    "xarray/core/parallel.py"
+  ],
+  "status": "ahead"
+}

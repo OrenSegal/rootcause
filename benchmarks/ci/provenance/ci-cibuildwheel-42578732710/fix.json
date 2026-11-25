@@ -1,0 +1,7 @@
+{
+  "fixed_run": "https://github.com/pypa/cibuildwheel/actions/runs/42578732710",
+  "fixed_sha": "d7e33c2ca11d1fb2d03d37acc6ab19ae2f2043f9",
+  "status": "rerun",
+  "commits": [],
+  "files": []
+}

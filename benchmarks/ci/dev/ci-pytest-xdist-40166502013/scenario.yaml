@@ -1,0 +1,15 @@
+id: ci-pytest-xdist-40166502013
+title: Honor --no-header in distributed terminal reporting
+alert:
+  severity: ci
+  service: test-py39-pytestmin-ubuntu-latest
+  summary: 'workflow test failed on fix-respect-no-header-20261001 at ae3f31bf37: step ''Set
+    up Python'' in job ''test (py39-pytestmin, ubuntu-latest)'' failed.'
+truth:
+  grading: class
+  category: infrastructure
+  service: pytest-xdist
+  required_evidence_any:
+  - log-0237
+  - log-0507
+provenance: recorded

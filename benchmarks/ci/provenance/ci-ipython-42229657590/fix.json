@@ -1,0 +1,11 @@
+{
+  "fixed_run": "https://github.com/ipython/ipython/actions/runs/42230847838",
+  "fixed_sha": "c1d07e4e3682a90c10b783cab8ae07d12c854679",
+  "commits": [
+    "c1d07e4e3682a90c10b783cab8ae07d12c854679"
+  ],
+  "files": [
+    "tests/test_pretty.py"
+  ],
+  "status": "ahead"
+}

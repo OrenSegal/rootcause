@@ -1,0 +1,14 @@
+[
+  {
+    "author": "pre-commit-ci[bot]",
+    "committedDate": "2026-09-28T17:52:39Z",
+    "messageHeadline": "[pre-commit.ci] pre-commit autoupdate",
+    "oid": "58854f545a493c1da58a1a73d67f9de224c89244",
+    "files": [
+      {
+        "filename": ".pre-commit-config.yaml",
+        "status": "modified"
+      }
+    ]
+  }
+]

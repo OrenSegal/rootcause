@@ -1,0 +1,16 @@
+[
+  {
+    "id": "0f81ac853f",
+    "service": "uvicorn",
+    "version": "0f81ac853f",
+    "ts": "2026-10-24T20:37:55Z",
+    "author": "askarshabdanov1-collab",
+    "summary": "Stop idle server promptly on should_exit (#3216)",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "tests/test_server.py",
+      "uvicorn/server.py"
+    ]
+  }
+]

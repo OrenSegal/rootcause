@@ -1,0 +1,14 @@
+id: ci-build-44219314063
+title: "\U0001F477 ci(release): embed wheel SBOM"
+alert:
+  severity: ci
+  service: pytest-run-tests-ubuntu-26-04-3-11-tox
+  summary: 'workflow test failed on sbom-wheel at 720879db6a: step ''Run test suite via tox''
+    in job ''pytest / Run tests (ubuntu-26.04, 3.11, tox)'' failed.'
+truth:
+  grading: class
+  category: bad_code_deploy
+  service: build
+  required_evidence_any:
+  - 720879db6a
+provenance: recorded

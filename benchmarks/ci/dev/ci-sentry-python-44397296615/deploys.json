@@ -1,0 +1,133 @@
+[
+  {
+    "id": "84120affcd",
+    "service": "sentry-python",
+    "version": "84120affcd",
+    "ts": "2026-11-13T23:49:34Z",
+    "author": "wedamija",
+    "summary": "feat(tracing): Warn when traces_sample_rate is 0",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "sentry_sdk/client.py",
+      "tests/test_client.py"
+    ]
+  },
+  {
+    "id": "20e8b44d02",
+    "service": "sentry-python",
+    "version": "20e8b44d02",
+    "ts": "2026-11-16T22:48:58Z",
+    "author": "wedamija",
+    "summary": "feat: Point coding agents to a setup checklist",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "MANIFEST.in",
+      "sentry_sdk/SETUP_CHECKLIST.md",
+      "sentry_sdk/client.py",
+      "sentry_sdk/consts.py",
+      "setup.py",
+      "tests/conftest.py",
+      "tests/test_client.py"
+    ]
+  },
+  {
+    "id": "356c2001f3",
+    "service": "sentry-python",
+    "version": "356c2001f3",
+    "ts": "2026-11-17T01:02:54Z",
+    "author": "wedamija",
+    "summary": "feat: Say what's off in the agent setup hint",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "sentry_sdk/client.py",
+      "tests/test_client.py"
+    ]
+  },
+  {
+    "id": "16bd42ed0b",
+    "service": "sentry-python",
+    "version": "16bd42ed0b",
+    "ts": "2026-11-17T23:27:25Z",
+    "author": "wedamija",
+    "summary": "feat: Ask Codex to tell the user what's off",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "sentry_sdk/client.py",
+      "tests/test_client.py"
+    ]
+  },
+  {
+    "id": "43dd1347f3",
+    "service": "sentry-python",
+    "version": "43dd1347f3",
+    "ts": "2026-11-18T19:41:21Z",
+    "author": "wedamija",
+    "summary": "feat: Tell agents what Sentry won't show, not which settings are off",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "sentry_sdk/client.py",
+      "tests/test_client.py"
+    ]
+  },
+  {
+    "id": "42f9f540b0",
+    "service": "sentry-python",
+    "version": "42f9f540b0",
+    "ts": "2026-11-18T19:54:56Z",
+    "author": "wedamija",
+    "summary": "fix: Say request trace and breadcrumbs in the agent hint",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "sentry_sdk/client.py",
+      "tests/test_client.py"
+    ]
+  },
+  {
+    "id": "c14c0eb102",
+    "service": "sentry-python",
+    "version": "c14c0eb102",
+    "ts": "2026-11-18T20:37:53Z",
+    "author": "wedamija",
+    "summary": "feat: Only show the agent hint while Sentry is being set up",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "sentry_sdk/client.py",
+      "tests/test_client.py"
+    ]
+  },
+  {
+    "id": "ca9a2f480e",
+    "service": "sentry-python",
+    "version": "ca9a2f480e",
+    "ts": "2026-11-18T20:52:57Z",
+    "author": "wedamija",
+    "summary": "feat: Use a 10 minute window for the agent hint without git",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "sentry_sdk/client.py",
+      "tests/test_client.py"
+    ]
+  },
+  {
+    "id": "de714e2e76",
+    "service": "sentry-python",
+    "version": "de714e2e76",
+    "ts": "2026-11-18T21:02:24Z",
+    "author": "wedamija",
+    "summary": "fix: Make the agent hint's git check work on Python 3.6",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "sentry_sdk/client.py",
+      "tests/test_client.py"
+    ]
+  }
+]

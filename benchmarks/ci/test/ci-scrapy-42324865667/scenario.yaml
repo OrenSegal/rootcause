@@ -1,0 +1,14 @@
+id: ci-scrapy-42324865667
+title: Do not warn about requests built by get_retry_request()
+alert:
+  severity: ci
+  service: tests-ubuntu-3-15-default-reactor
+  summary: 'workflow CI failed on metacopy-retry-requests at 03e1f94e96: step ''Run tests''
+    in job ''tests (ubuntu, 3.15, default-reactor)'' failed.'
+truth:
+  grading: class
+  category: bad_code_deploy
+  service: scrapy
+  required_evidence_any:
+  - 03e1f94e96
+provenance: recorded

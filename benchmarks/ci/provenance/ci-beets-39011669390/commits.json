@@ -1,0 +1,66 @@
+[
+  {
+    "author": "JOJ0",
+    "committedDate": "2026-10-15T05:49:31Z",
+    "messageHeadline": "lastgenre: Album stage albumartists fall back",
+    "oid": "9f4172f1f4ea9e5fc6db0f85f7cfced42ee142bd",
+    "files": [
+      {
+        "filename": "beetsplug/lastgenre/__init__.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "JOJ0",
+    "committedDate": "2026-10-15T05:49:31Z",
+    "messageHeadline": "lastgenre: Docs for album stage albumartists fallback",
+    "oid": "1714c7ade1987348a9a0498ad994e2400a1d49bc",
+    "files": [
+      {
+        "filename": "docs/plugins/lastgenre.rst",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "JOJ0",
+    "committedDate": "2026-10-15T05:54:01Z",
+    "messageHeadline": "Changelog #6893 lastgenre album stage fallback",
+    "oid": "427ac8d5d5de5406aed2aae7ddfd1d01d3773515",
+    "files": [
+      {
+        "filename": "docs/changelog.rst",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "JOJ0",
+    "committedDate": "2026-10-15T05:54:07Z",
+    "messageHeadline": "lastgenre: Streamline log label wording: albumartist",
+    "oid": "6ec4b83c8cc350ae131c0610e39afae1f3e73c84",
+    "files": [
+      {
+        "filename": "beetsplug/lastgenre/__init__.py",
+        "status": "modified"
+      },
+      {
+        "filename": "test/plugins/test_lastgenre.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "JOJ0",
+    "committedDate": "2026-10-17T06:54:47Z",
+    "messageHeadline": "lastgenre: Test multi-valued albumartists fallback",
+    "oid": "71475b9f48e62180fde382af8cca62a41726ef1a",
+    "files": [
+      {
+        "filename": "test/plugins/test_lastgenre.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

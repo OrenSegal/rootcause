@@ -1,0 +1,70 @@
+[
+  {
+    "id": "199f674ca4",
+    "service": "ipykernel",
+    "version": "199f674ca4",
+    "ts": "2026-09-14T11:25:25Z",
+    "author": "Carreau",
+    "summary": "MAINT: Autotype methods",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "ipykernel/_eventloop_macos.py",
+      "ipykernel/comm/comm.py",
+      "ipykernel/comm/manager.py",
+      "ipykernel/compiler.py",
+      "ipykernel/control.py",
+      "ipykernel/debugger.py",
+      "ipykernel/displayhook.py",
+      "ipykernel/embed.py",
+      "ipykernel/eventloops.py",
+      "ipykernel/gui/gtk3embed.py",
+      "ipykernel/gui/gtkembed.py",
+      "ipykernel/heartbeat.py",
+      "ipykernel/inprocess/blocking.py",
+      "ipykernel/inprocess/channels.py",
+      "ipykernel/inprocess/client.py",
+      "ipykernel/inprocess/ipkernel.py",
+      "ipykernel/inprocess/manager.py",
+      "ipykernel/inprocess/socket.py",
+      "ipykernel/iostream.py",
+      "ipykernel/ipkernel.py",
+      "ipykernel/kernelapp.py",
+      "ipykernel/kernelbase.py",
+      "ipykernel/log.py",
+      "ipykernel/parentpoller.py",
+      "ipykernel/shellchannel.py",
+      "ipykernel/socket_pair.py",
+      "ipykernel/subshell.py",
+      "ipykernel/subshell_manager.py",
+      "ipykernel/thread.py",
+      "ipykernel/trio_runner.py",
+      "ipykernel/utils.py",
+      "ipykernel/zmqshell.py"
+    ]
+  },
+  {
+    "id": "72e89d177f",
+    "service": "ipykernel",
+    "version": "72e89d177f",
+    "ts": "2026-09-14T11:44:27Z",
+    "author": "Carreau",
+    "summary": "Annotate the news items that are trigered by autotyping.",
+    "config_before": {
+      "pyproject.toml": "previous"
+    },
+    "config_after": {
+      "pyproject.toml": "modified in 72e89d177f"
+    },
+    "files": [
+      "ipykernel/debugger.py",
+      "ipykernel/displayhook.py",
+      "ipykernel/gui/gtk3embed.py",
+      "ipykernel/gui/gtkembed.py",
+      "ipykernel/iostream.py",
+      "ipykernel/trio_runner.py",
+      "ipykernel/zmqshell.py",
+      "pyproject.toml"
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "fixed_run": "https://github.com/ipython/ipython/actions/runs/39876347814",
+  "fixed_sha": "a5b9e791c9799dfa32ca3ff7273e32f03669126a",
+  "commits": [
+    "a5b9e791c9799dfa32ca3ff7273e32f03669126a"
+  ],
+  "files": [
+    "IPython/utils/_process_posix.py"
+  ],
+  "status": "ahead"
+}

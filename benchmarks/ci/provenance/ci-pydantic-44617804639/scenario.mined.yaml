@@ -1,0 +1,18 @@
+# Mined from https://github.com/pydantic/pydantic/actions/runs/44617804639
+# (pydantic/pydantic, licence MIT). Fixed by run
+# https://github.com/pydantic/pydantic/actions/runs/44621257138. Label rule: the fix
+# changed files exactly one tested commit touched. Fix touched:
+# tests/test_json_streaming_expanded.py.
+id: ci-pydantic-44617804639
+title: Expand cached JSON validation and construct ordinary nested models during parsing
+alert:
+  severity: ci
+  service: core-test-with-debug-build-3-14-stream-verify
+  summary: 'workflow CI failed on codex/json-narrow-expanded at 52a98fcea4: step ''Run uv
+    run --no-sync pytest'' in job ''core / Test with debug build (3.14, stream-verify)'' failed.'
+truth:
+  category: bad_code_deploy
+  service: pydantic
+  required_evidence_any:
+  - 52a98fcea4
+provenance: recorded

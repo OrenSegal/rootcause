@@ -302,3 +302,48 @@ def test_the_committed_rule_suite_sweep_loads_and_its_held_out_scenarios_exist()
     )
     spec = spec.model_copy(update={"scenarios": str(SCENARIOS)})
     assert len(sweep_paths(spec)) == 8 and set(spec.held_out) < set(spec.scenario_ids)
+
+
+def test_committed_rows_load_and_grade_as_they_were_recorded():
+    """Every committed sweep row recomputes to the pass it was stored with. Only the
+    sweeps over benchmarks/ci (named ci-*) are class-graded: the class grade changed
+    no earlier number."""
+    import json
+
+    files = sorted((SCENARIOS.parent / "results" / "sweeps").glob("*/*.jsonl"))
+    lines = [(f.parent.name, line) for f in files if f.name in ("rows.jsonl", "errors.jsonl")
+             for line in f.read_text().splitlines() if line.strip()]  # fmt: skip
+    assert lines
+    for sweep, line in lines:
+        row = Row.model_validate_json(line)
+        assert row.grade.passed == json.loads(line)["grade"]["passed"]
+        assert sweep.startswith("ci-") or row.grade.truth_class is None
+
+
+def test_authored_scenarios_keep_the_exact_grade():
+    from rootcause.composition import list_scenarios
+
+    truths = [s.truth for s in list_scenarios(SCENARIOS) if s.truth]
+    assert truths and all(t.grading == "exact" for t in truths)
+
+
+def test_report_shows_pass_rate_per_class_and_balanced_accuracy():
+    from rootcause.application.sweep import report_markdown
+
+    def classed(sid: str, truth_class: str, passed: bool, rep: int) -> Row:
+        g = grade(sid, True).model_copy(
+            update={"truth_class": truth_class, "class_ok": passed, "commit_ok": True}
+        )
+        return Row(config="opus-high", scenario_id=sid, rep=rep, grade=g)
+
+    rows_ = [classed(f"c{i}", "change", True, r) for i in range(3) for r in range(2)]
+    rows_ += [classed("n0", "not_change", False, r) for r in range(2)]
+    rows_ += [classed("n1", "not_change", r == 0, r) for r in range(2)]
+    spec = SweepSpec(name="cls", repeats=2, configs=[OPUS])
+    s = summarize(OPUS, rows_, k=2)
+    md = report_markdown(spec, [s], rows_)
+    assert "| config | change (95% CI) | not_change (95% CI) | balanced | pooled |" in md
+    assert "| opus-high | 100% (44% to 100%), 6 runs | 25% (0% to 50%), 4 runs | 62% | 70% |" in md
+    plain = report_markdown(spec, [summarize(OPUS, rows("opus-high", {"a": [True]}))],
+                            rows("opus-high", {"a": [True]}))  # fmt: skip
+    assert "balanced" not in plain

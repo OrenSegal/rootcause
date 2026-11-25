@@ -1,0 +1,5282 @@
+[
+  {
+    "span_id": "run-37614237594",
+    "trace_id": "run-37614237594",
+    "parent_id": null,
+    "service": "ci-cd",
+    "name": "CI/CD",
+    "start": "2026-10-07T11:27:48Z",
+    "duration_ms": 562000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-112768615632",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "pre-set-global-build-settings",
+    "name": "\u2699\ufe0f Pre-set global build settings",
+    "start": "2026-10-07T11:28:35Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768615632-step-1",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768615632",
+    "service": "pre-set-global-build-settings",
+    "name": "Set up job",
+    "start": "2026-10-07T11:28:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768615632-step-2",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768615632",
+    "service": "pre-set-global-build-settings",
+    "name": "Run print('No-op')",
+    "start": "2026-10-07T11:28:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768615632-step-3",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768615632",
+    "service": "pre-set-global-build-settings",
+    "name": "Complete job",
+    "start": "2026-10-07T11:28:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768615999",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "lint-linter",
+    "name": "lint / Linter",
+    "start": "2026-10-07T11:28:08Z",
+    "duration_ms": 64000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768615999-step-1",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768615999",
+    "service": "lint-linter",
+    "name": "Set up job",
+    "start": "2026-10-07T11:28:09Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768615999-step-2",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768615999",
+    "service": "lint-linter",
+    "name": "Checkout",
+    "start": "2026-10-07T11:28:11Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768615999-step-3",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768615999",
+    "service": "lint-linter",
+    "name": "Setup Python 3.12",
+    "start": "2026-10-07T11:28:11Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768615999-step-4",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768615999",
+    "service": "lint-linter",
+    "name": "Cache PyPI",
+    "start": "2026-10-07T11:28:11Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768615999-step-5",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768615999",
+    "service": "lint-linter",
+    "name": "Cache pre-commit.com virtualenvs",
+    "start": "2026-10-07T11:28:15Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768615999-step-6",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768615999",
+    "service": "lint-linter",
+    "name": "Install dependencies",
+    "start": "2026-10-07T11:28:18Z",
+    "duration_ms": 15000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768615999-step-7",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768615999",
+    "service": "lint-linter",
+    "name": "Run linters",
+    "start": "2026-10-07T11:28:33Z",
+    "duration_ms": 18000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768615999-step-8",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768615999",
+    "service": "lint-linter",
+    "name": "Send coverage data to Coveralls",
+    "start": "2026-10-07T11:28:51Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768615999-step-9",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768615999",
+    "service": "lint-linter",
+    "name": "Install spell checker",
+    "start": "2026-10-07T11:28:56Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768615999-step-10",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768615999",
+    "service": "lint-linter",
+    "name": "Run docs spelling",
+    "start": "2026-10-07T11:28:59Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768615999-step-11",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768615999",
+    "service": "lint-linter",
+    "name": "Prepare twine checker",
+    "start": "2026-10-07T11:29:03Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768615999-step-12",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768615999",
+    "service": "lint-linter",
+    "name": "Run twine checker",
+    "start": "2026-10-07T11:29:09Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768615999-step-21",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768615999",
+    "service": "lint-linter",
+    "name": "Post Cache pre-commit.com virtualenvs",
+    "start": "2026-10-07T11:29:09Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768615999-step-22",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768615999",
+    "service": "lint-linter",
+    "name": "Post Cache PyPI",
+    "start": "2026-10-07T11:29:10Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768615999-step-23",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768615999",
+    "service": "lint-linter",
+    "name": "Post Setup Python 3.12",
+    "start": "2026-10-07T11:29:10Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768615999-step-24",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768615999",
+    "service": "lint-linter",
+    "name": "Post Checkout",
+    "start": "2026-10-07T11:29:10Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768615999-step-25",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768615999",
+    "service": "lint-linter",
+    "name": "Complete job",
+    "start": "2026-10-07T11:29:10Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917005",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "build-distribution-packages",
+    "name": "\ud83d\udce6 Build distribution packages",
+    "start": "2026-10-07T11:28:40Z",
+    "duration_ms": 12000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917005-step-1",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917005",
+    "service": "build-distribution-packages",
+    "name": "Set up job",
+    "start": "2026-10-07T11:28:40Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917005-step-2",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917005",
+    "service": "build-distribution-packages",
+    "name": "Checkout",
+    "start": "2026-10-07T11:28:41Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917005-step-3",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917005",
+    "service": "build-distribution-packages",
+    "name": "Set up Python 3.x",
+    "start": "2026-10-07T11:28:42Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917005-step-4",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917005",
+    "service": "build-distribution-packages",
+    "name": "Install core libraries for build",
+    "start": "2026-10-07T11:28:42Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917005-step-5",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917005",
+    "service": "build-distribution-packages",
+    "name": "Build sdists and pure-python wheel",
+    "start": "2026-10-07T11:28:46Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917005-step-6",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917005",
+    "service": "build-distribution-packages",
+    "name": "Determine actual created filenames",
+    "start": "2026-10-07T11:28:49Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917005-step-7",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917005",
+    "service": "build-distribution-packages",
+    "name": "Upload built artifacts for testing",
+    "start": "2026-10-07T11:28:49Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917005-step-13",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917005",
+    "service": "build-distribution-packages",
+    "name": "Post Set up Python 3.x",
+    "start": "2026-10-07T11:28:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917005-step-14",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917005",
+    "service": "build-distribution-packages",
+    "name": "Post Checkout",
+    "start": "2026-10-07T11:28:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917005-step-15",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917005",
+    "service": "build-distribution-packages",
+    "name": "Complete job",
+    "start": "2026-10-07T11:28:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917014",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "benchmark-gil-2",
+    "name": "Benchmark GIL 2",
+    "start": "2026-10-07T11:28:41Z",
+    "duration_ms": 387000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917014-step-1",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917014",
+    "service": "benchmark-gil-2",
+    "name": "Set up job",
+    "start": "2026-10-07T11:28:42Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917014-step-2",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917014",
+    "service": "benchmark-gil-2",
+    "name": "Checkout project",
+    "start": "2026-10-07T11:28:44Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917014-step-3",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917014",
+    "service": "benchmark-gil-2",
+    "name": "Setup Python 3.14",
+    "start": "2026-10-07T11:28:46Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917014-step-4",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917014",
+    "service": "benchmark-gil-2",
+    "name": "Install dependencies",
+    "start": "2026-10-07T11:28:49Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917014-step-5",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917014",
+    "service": "benchmark-gil-2",
+    "name": "Self-install",
+    "start": "2026-10-07T11:28:58Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917014-step-6",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917014",
+    "service": "benchmark-gil-2",
+    "name": "Run benchmarks",
+    "start": "2026-10-07T11:29:07Z",
+    "duration_ms": 357000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917014-step-10",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917014",
+    "service": "benchmark-gil-2",
+    "name": "Post Run benchmarks",
+    "start": "2026-10-07T11:35:04Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917014-step-11",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917014",
+    "service": "benchmark-gil-2",
+    "name": "Post Setup Python 3.14",
+    "start": "2026-10-07T11:35:05Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917014-step-12",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917014",
+    "service": "benchmark-gil-2",
+    "name": "Post Checkout project",
+    "start": "2026-10-07T11:35:05Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917014-step-13",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917014",
+    "service": "benchmark-gil-2",
+    "name": "Complete job",
+    "start": "2026-10-07T11:35:05Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917081",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "benchmark-ft-2",
+    "name": "Benchmark FT 2",
+    "start": "2026-10-07T11:28:40Z",
+    "duration_ms": 420000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917081-step-1",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917081",
+    "service": "benchmark-ft-2",
+    "name": "Set up job",
+    "start": "2026-10-07T11:28:40Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917081-step-2",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917081",
+    "service": "benchmark-ft-2",
+    "name": "Checkout project",
+    "start": "2026-10-07T11:28:42Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917081-step-3",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917081",
+    "service": "benchmark-ft-2",
+    "name": "Setup Python 3.14t",
+    "start": "2026-10-07T11:28:42Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917081-step-4",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917081",
+    "service": "benchmark-ft-2",
+    "name": "Install dependencies",
+    "start": "2026-10-07T11:28:51Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917081-step-5",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917081",
+    "service": "benchmark-ft-2",
+    "name": "Self-install",
+    "start": "2026-10-07T11:28:57Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917081-step-6",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917081",
+    "service": "benchmark-ft-2",
+    "name": "Run benchmarks",
+    "start": "2026-10-07T11:29:05Z",
+    "duration_ms": 393000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917081-step-10",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917081",
+    "service": "benchmark-ft-2",
+    "name": "Post Run benchmarks",
+    "start": "2026-10-07T11:35:38Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917081-step-11",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917081",
+    "service": "benchmark-ft-2",
+    "name": "Post Setup Python 3.14t",
+    "start": "2026-10-07T11:35:38Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917081-step-12",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917081",
+    "service": "benchmark-ft-2",
+    "name": "Post Checkout project",
+    "start": "2026-10-07T11:35:39Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917081-step-13",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917081",
+    "service": "benchmark-ft-2",
+    "name": "Complete job",
+    "start": "2026-10-07T11:35:39Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917139",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "benchmark-gil-1",
+    "name": "Benchmark GIL 1",
+    "start": "2026-10-07T11:28:42Z",
+    "duration_ms": 297000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917139-step-1",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917139",
+    "service": "benchmark-gil-1",
+    "name": "Set up job",
+    "start": "2026-10-07T11:28:42Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917139-step-2",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917139",
+    "service": "benchmark-gil-1",
+    "name": "Checkout project",
+    "start": "2026-10-07T11:28:44Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917139-step-3",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917139",
+    "service": "benchmark-gil-1",
+    "name": "Setup Python 3.14",
+    "start": "2026-10-07T11:28:46Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917139-step-4",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917139",
+    "service": "benchmark-gil-1",
+    "name": "Install dependencies",
+    "start": "2026-10-07T11:28:48Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917139-step-5",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917139",
+    "service": "benchmark-gil-1",
+    "name": "Self-install",
+    "start": "2026-10-07T11:28:55Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917139-step-6",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917139",
+    "service": "benchmark-gil-1",
+    "name": "Run benchmarks",
+    "start": "2026-10-07T11:29:03Z",
+    "duration_ms": 274000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917139-step-10",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917139",
+    "service": "benchmark-gil-1",
+    "name": "Post Run benchmarks",
+    "start": "2026-10-07T11:33:37Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917139-step-11",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917139",
+    "service": "benchmark-gil-1",
+    "name": "Post Setup Python 3.14",
+    "start": "2026-10-07T11:33:37Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917139-step-12",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917139",
+    "service": "benchmark-gil-1",
+    "name": "Post Checkout project",
+    "start": "2026-10-07T11:33:38Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917139-step-13",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917139",
+    "service": "benchmark-gil-1",
+    "name": "Complete job",
+    "start": "2026-10-07T11:33:38Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917186",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "benchmark-ft-1",
+    "name": "Benchmark FT 1",
+    "start": "2026-10-07T11:28:44Z",
+    "duration_ms": 430000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917186-step-1",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917186",
+    "service": "benchmark-ft-1",
+    "name": "Set up job",
+    "start": "2026-10-07T11:28:45Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917186-step-2",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917186",
+    "service": "benchmark-ft-1",
+    "name": "Checkout project",
+    "start": "2026-10-07T11:28:47Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917186-step-3",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917186",
+    "service": "benchmark-ft-1",
+    "name": "Setup Python 3.14t",
+    "start": "2026-10-07T11:28:48Z",
+    "duration_ms": 12000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917186-step-4",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917186",
+    "service": "benchmark-ft-1",
+    "name": "Install dependencies",
+    "start": "2026-10-07T11:29:00Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917186-step-5",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917186",
+    "service": "benchmark-ft-1",
+    "name": "Self-install",
+    "start": "2026-10-07T11:29:07Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917186-step-6",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917186",
+    "service": "benchmark-ft-1",
+    "name": "Run benchmarks",
+    "start": "2026-10-07T11:29:15Z",
+    "duration_ms": 395000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917186-step-10",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917186",
+    "service": "benchmark-ft-1",
+    "name": "Post Run benchmarks",
+    "start": "2026-10-07T11:35:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917186-step-11",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917186",
+    "service": "benchmark-ft-1",
+    "name": "Post Setup Python 3.14t",
+    "start": "2026-10-07T11:35:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917186-step-12",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917186",
+    "service": "benchmark-ft-1",
+    "name": "Post Checkout project",
+    "start": "2026-10-07T11:35:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112768917186-step-13",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112768917186",
+    "service": "benchmark-ft-1",
+    "name": "Complete job",
+    "start": "2026-10-07T11:35:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769004917",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "test-the-optional-cython-c-api-binding",
+    "name": "Test the optional Cython C API binding",
+    "start": "2026-10-07T11:28:55Z",
+    "duration_ms": 34000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769004917-step-1",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769004917",
+    "service": "test-the-optional-cython-c-api-binding",
+    "name": "Set up job",
+    "start": "2026-10-07T11:28:56Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769004917-step-2",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769004917",
+    "service": "test-the-optional-cython-c-api-binding",
+    "name": "Retrieve the project source from an sdist inside the GHA artifact",
+    "start": "2026-10-07T11:28:59Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769004917-step-3",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769004917",
+    "service": "test-the-optional-cython-c-api-binding",
+    "name": "Setup Python 3.13",
+    "start": "2026-10-07T11:29:00Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769004917-step-4",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769004917",
+    "service": "test-the-optional-cython-c-api-binding",
+    "name": "Install dependencies",
+    "start": "2026-10-07T11:29:03Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769004917-step-5",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769004917",
+    "service": "test-the-optional-cython-c-api-binding",
+    "name": "Install Cython",
+    "start": "2026-10-07T11:29:10Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769004917-step-6",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769004917",
+    "service": "test-the-optional-cython-c-api-binding",
+    "name": "Self-install with Cython available",
+    "start": "2026-10-07T11:29:11Z",
+    "duration_ms": 11000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769004917-step-7",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769004917",
+    "service": "test-the-optional-cython-c-api-binding",
+    "name": "Confirm multidict._testcyapi actually built",
+    "start": "2026-10-07T11:29:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769004917-step-8",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769004917",
+    "service": "test-the-optional-cython-c-api-binding",
+    "name": "Run the C API capsule tests",
+    "start": "2026-10-07T11:29:22Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769004917-step-9",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769004917",
+    "service": "test-the-optional-cython-c-api-binding",
+    "name": "Append coverage results to Job Summary",
+    "start": "2026-10-07T11:29:25Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769004917-step-10",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769004917",
+    "service": "test-the-optional-cython-c-api-binding",
+    "name": "Prepare coverage artifact",
+    "start": "2026-10-07T11:29:25Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769004917-step-20",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769004917",
+    "service": "test-the-optional-cython-c-api-binding",
+    "name": "Post Setup Python 3.13",
+    "start": "2026-10-07T11:29:27Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769004917-step-21",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769004917",
+    "service": "test-the-optional-cython-c-api-binding",
+    "name": "Complete job",
+    "start": "2026-10-07T11:29:27Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005016",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "inlining",
+    "name": "Inlining",
+    "start": "2026-10-07T11:28:55Z",
+    "duration_ms": 26000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005016-step-1",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005016",
+    "service": "inlining",
+    "name": "Set up job",
+    "start": "2026-10-07T11:28:56Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005016-step-2",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005016",
+    "service": "inlining",
+    "name": "Retrieve the project source from an sdist inside the GHA artifact",
+    "start": "2026-10-07T11:28:58Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005016-step-3",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005016",
+    "service": "inlining",
+    "name": "Setup Python 3.14",
+    "start": "2026-10-07T11:28:59Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005016-step-4",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005016",
+    "service": "inlining",
+    "name": "Setup Python 3.14t",
+    "start": "2026-10-07T11:29:00Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005016-step-5",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005016",
+    "service": "inlining",
+    "name": "Show the compiler version",
+    "start": "2026-10-07T11:29:08Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005016-step-6",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005016",
+    "service": "inlining",
+    "name": "Check that the hot paths keep their helpers inlined",
+    "start": "2026-10-07T11:29:08Z",
+    "duration_ms": 10000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005016-step-11",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005016",
+    "service": "inlining",
+    "name": "Post Setup Python 3.14t",
+    "start": "2026-10-07T11:29:18Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005016-step-12",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005016",
+    "service": "inlining",
+    "name": "Post Setup Python 3.14",
+    "start": "2026-10-07T11:29:18Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005016-step-13",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005016",
+    "service": "inlining",
+    "name": "Complete job",
+    "start": "2026-10-07T11:29:18Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005037",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "hypothesis-gil",
+    "name": "Hypothesis (GIL)",
+    "start": "2026-10-07T11:28:54Z",
+    "duration_ms": 53000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005037-step-1",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005037",
+    "service": "hypothesis-gil",
+    "name": "Set up job",
+    "start": "2026-10-07T11:28:55Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005037-step-2",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005037",
+    "service": "hypothesis-gil",
+    "name": "Retrieve the project source from an sdist inside the GHA artifact",
+    "start": "2026-10-07T11:28:59Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005037-step-3",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005037",
+    "service": "hypothesis-gil",
+    "name": "Setup Python 3.13",
+    "start": "2026-10-07T11:29:00Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005037-step-4",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005037",
+    "service": "hypothesis-gil",
+    "name": "Install dependencies",
+    "start": "2026-10-07T11:29:01Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005037-step-5",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005037",
+    "service": "hypothesis-gil",
+    "name": "Install Hypothesis",
+    "start": "2026-10-07T11:29:05Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005037-step-6",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005037",
+    "service": "hypothesis-gil",
+    "name": "Self-install",
+    "start": "2026-10-07T11:29:06Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005037-step-7",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005037",
+    "service": "hypothesis-gil",
+    "name": "Run the Hypothesis test suite",
+    "start": "2026-10-07T11:29:11Z",
+    "duration_ms": 32000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005037-step-8",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005037",
+    "service": "hypothesis-gil",
+    "name": "Produce markdown test summary from JUnit",
+    "start": "2026-10-07T11:29:43Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005037-step-9",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005037",
+    "service": "hypothesis-gil",
+    "name": "Append coverage results to Job Summary",
+    "start": "2026-10-07T11:29:43Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005037-step-10",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005037",
+    "service": "hypothesis-gil",
+    "name": "Prepare coverage artifact",
+    "start": "2026-10-07T11:29:44Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005037-step-20",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005037",
+    "service": "hypothesis-gil",
+    "name": "Post Setup Python 3.13",
+    "start": "2026-10-07T11:29:45Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005037-step-21",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005037",
+    "service": "hypothesis-gil",
+    "name": "Complete job",
+    "start": "2026-10-07T11:29:45Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005090",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "hypothesis-ft",
+    "name": "Hypothesis (FT)",
+    "start": "2026-10-07T11:29:05Z",
+    "duration_ms": 112000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005090-step-1",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005090",
+    "service": "hypothesis-ft",
+    "name": "Set up job",
+    "start": "2026-10-07T11:29:06Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005090-step-2",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005090",
+    "service": "hypothesis-ft",
+    "name": "Retrieve the project source from an sdist inside the GHA artifact",
+    "start": "2026-10-07T11:29:09Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005090-step-3",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005090",
+    "service": "hypothesis-ft",
+    "name": "Setup Python 3.14t",
+    "start": "2026-10-07T11:29:11Z",
+    "duration_ms": 10000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005090-step-4",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005090",
+    "service": "hypothesis-ft",
+    "name": "Install dependencies",
+    "start": "2026-10-07T11:29:21Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005090-step-5",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005090",
+    "service": "hypothesis-ft",
+    "name": "Install Hypothesis",
+    "start": "2026-10-07T11:29:27Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005090-step-6",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005090",
+    "service": "hypothesis-ft",
+    "name": "Self-install",
+    "start": "2026-10-07T11:29:28Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005090-step-7",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005090",
+    "service": "hypothesis-ft",
+    "name": "Run the Hypothesis test suite",
+    "start": "2026-10-07T11:29:36Z",
+    "duration_ms": 75000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005090-step-8",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005090",
+    "service": "hypothesis-ft",
+    "name": "Produce markdown test summary from JUnit",
+    "start": "2026-10-07T11:30:51Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005090-step-9",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005090",
+    "service": "hypothesis-ft",
+    "name": "Append coverage results to Job Summary",
+    "start": "2026-10-07T11:30:51Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005090-step-10",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005090",
+    "service": "hypothesis-ft",
+    "name": "Prepare coverage artifact",
+    "start": "2026-10-07T11:30:52Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005090-step-20",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005090",
+    "service": "hypothesis-ft",
+    "name": "Post Setup Python 3.14t",
+    "start": "2026-10-07T11:30:53Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005090-step-21",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005090",
+    "service": "hypothesis-ft",
+    "name": "Complete job",
+    "start": "2026-10-07T11:30:53Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005112",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "threadsanitizer",
+    "name": "ThreadSanitizer",
+    "start": "2026-10-07T11:28:55Z",
+    "duration_ms": 486000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005112-step-1",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005112",
+    "service": "threadsanitizer",
+    "name": "Set up job",
+    "start": "2026-10-07T11:28:56Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005112-step-2",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005112",
+    "service": "threadsanitizer",
+    "name": "Retrieve the project source from an sdist inside the GHA artifact",
+    "start": "2026-10-07T11:28:58Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005112-step-3",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005112",
+    "service": "threadsanitizer",
+    "name": "Cache the TSan-instrumented free-threaded CPython build",
+    "start": "2026-10-07T11:28:59Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005112-step-6",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005112",
+    "service": "threadsanitizer",
+    "name": "Self-install multidict against the TSan-instrumented CPython",
+    "start": "2026-10-07T11:29:01Z",
+    "duration_ms": 33000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005112-step-7",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005112",
+    "service": "threadsanitizer",
+    "name": "Install test dependencies",
+    "start": "2026-10-07T11:29:34Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005112-step-8",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005112",
+    "service": "threadsanitizer",
+    "name": "Enable core dumps",
+    "start": "2026-10-07T11:29:40Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005112-step-9",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005112",
+    "service": "threadsanitizer",
+    "name": "Run the test suite under ThreadSanitizer",
+    "start": "2026-10-07T11:29:40Z",
+    "duration_ms": 439000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005112-step-22",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005112",
+    "service": "threadsanitizer",
+    "name": "Post Cache the TSan-instrumented free-threaded CPython build",
+    "start": "2026-10-07T11:36:59Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005112-step-23",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005112",
+    "service": "threadsanitizer",
+    "name": "Complete job",
+    "start": "2026-10-07T11:36:59Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005168",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "addresssanitizer",
+    "name": "AddressSanitizer",
+    "start": "2026-10-07T11:29:07Z",
+    "duration_ms": 126000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005168-step-1",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005168",
+    "service": "addresssanitizer",
+    "name": "Set up job",
+    "start": "2026-10-07T11:29:08Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005168-step-2",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005168",
+    "service": "addresssanitizer",
+    "name": "Retrieve the project source from an sdist inside the GHA artifact",
+    "start": "2026-10-07T11:29:11Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005168-step-3",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005168",
+    "service": "addresssanitizer",
+    "name": "Setup Python 3.13",
+    "start": "2026-10-07T11:29:12Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005168-step-4",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005168",
+    "service": "addresssanitizer",
+    "name": "Install dependencies",
+    "start": "2026-10-07T11:29:16Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005168-step-5",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005168",
+    "service": "addresssanitizer",
+    "name": "Self-install with AddressSanitizer and UndefinedBehaviorSanitizer",
+    "start": "2026-10-07T11:29:22Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005168-step-6",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005168",
+    "service": "addresssanitizer",
+    "name": "Enable core dumps",
+    "start": "2026-10-07T11:29:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005168-step-7",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005168",
+    "service": "addresssanitizer",
+    "name": "Run the test suite under AddressSanitizer",
+    "start": "2026-10-07T11:29:28Z",
+    "duration_ms": 102000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005168-step-20",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005168",
+    "service": "addresssanitizer",
+    "name": "Post Setup Python 3.13",
+    "start": "2026-10-07T11:31:10Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005168-step-21",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005168",
+    "service": "addresssanitizer",
+    "name": "Complete job",
+    "start": "2026-10-07T11:31:10Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005444",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "build-linux-wheels-for-testing-build-manylinux-wheels",
+    "name": "\ud83d\udce6 Build Linux wheels for testing / Build manylinux wheels",
+    "start": "2026-10-07T11:29:12Z",
+    "duration_ms": 136000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005444-step-1",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005444",
+    "service": "build-linux-wheels-for-testing-build-manylinux-wheels",
+    "name": "Set up job",
+    "start": "2026-10-07T11:29:13Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005444-step-2",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005444",
+    "service": "build-linux-wheels-for-testing-build-manylinux-wheels",
+    "name": "Export requested job-global environment variables",
+    "start": "2026-10-07T11:29:17Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005444-step-3",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005444",
+    "service": "build-linux-wheels-for-testing-build-manylinux-wheels",
+    "name": "Compute GHA artifact name ending",
+    "start": "2026-10-07T11:29:17Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005444-step-4",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005444",
+    "service": "build-linux-wheels-for-testing-build-manylinux-wheels",
+    "name": "Download the source distribution",
+    "start": "2026-10-07T11:29:17Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005444-step-6",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005444",
+    "service": "build-linux-wheels-for-testing-build-manylinux-wheels",
+    "name": "Build wheels",
+    "start": "2026-10-07T11:29:18Z",
+    "duration_ms": 127000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005444-step-7",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005444",
+    "service": "build-linux-wheels-for-testing-build-manylinux-wheels",
+    "name": "Upload built artifacts for testing and publishing",
+    "start": "2026-10-07T11:31:25Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005444-step-14",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005444",
+    "service": "build-linux-wheels-for-testing-build-manylinux-wheels",
+    "name": "Post Build wheels",
+    "start": "2026-10-07T11:31:26Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005444-step-15",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005444",
+    "service": "build-linux-wheels-for-testing-build-manylinux-wheels",
+    "name": "Complete job",
+    "start": "2026-10-07T11:31:27Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005629",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "build-wheels-for-other-platforms-build-wheels-on-macos-latest",
+    "name": "\ud83d\udce6 Build wheels for other platforms / Build  wheels on macos-latest",
+    "start": "2026-10-07T11:28:53Z",
+    "duration_ms": 453000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005653",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "build-wheels-for-other-platforms-build-wheels-on-windows-latest",
+    "name": "\ud83d\udce6 Build wheels for other platforms / Build  wheels on windows-latest",
+    "start": "2026-10-07T11:29:10Z",
+    "duration_ms": 435000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-112769005653-step-1",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005653",
+    "service": "build-wheels-for-other-platforms-build-wheels-on-windows-latest",
+    "name": "Set up job",
+    "start": "2026-10-07T11:29:11Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005653-step-2",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005653",
+    "service": "build-wheels-for-other-platforms-build-wheels-on-windows-latest",
+    "name": "Export requested job-global environment variables",
+    "start": "2026-10-07T11:29:13Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005653-step-3",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005653",
+    "service": "build-wheels-for-other-platforms-build-wheels-on-windows-latest",
+    "name": "Compute GHA artifact name ending",
+    "start": "2026-10-07T11:29:14Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005653-step-4",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005653",
+    "service": "build-wheels-for-other-platforms-build-wheels-on-windows-latest",
+    "name": "Download the source distribution",
+    "start": "2026-10-07T11:29:15Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005653-step-6",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005653",
+    "service": "build-wheels-for-other-platforms-build-wheels-on-windows-latest",
+    "name": "Build wheels",
+    "start": "2026-10-07T11:29:16Z",
+    "duration_ms": 427000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-112769005653-step-14",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005653",
+    "service": "build-wheels-for-other-platforms-build-wheels-on-windows-latest",
+    "name": "Post Build wheels",
+    "start": "2026-10-07T11:36:23Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769005653-step-15",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769005653",
+    "service": "build-wheels-for-other-platforms-build-wheels-on-windows-latest",
+    "name": "Complete job",
+    "start": "2026-10-07T11:36:23Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975467",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "test-3-14t-ext",
+    "name": "Test 3.14t ext",
+    "start": "2026-10-07T11:31:32Z",
+    "duration_ms": 166000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975467-step-1",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975467",
+    "service": "test-3-14t-ext",
+    "name": "Set up job",
+    "start": "2026-10-07T11:31:33Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975467-step-2",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975467",
+    "service": "test-3-14t-ext",
+    "name": "Determine build type",
+    "start": "2026-10-07T11:31:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975467-step-3",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975467",
+    "service": "test-3-14t-ext",
+    "name": "Retrieve the project source from an sdist inside the GHA artifact",
+    "start": "2026-10-07T11:31:36Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975467-step-4",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975467",
+    "service": "test-3-14t-ext",
+    "name": "Download distributions",
+    "start": "2026-10-07T11:31:37Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975467-step-5",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975467",
+    "service": "test-3-14t-ext",
+    "name": "Setup Python 3.14t",
+    "start": "2026-10-07T11:31:38Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975467-step-6",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975467",
+    "service": "test-3-14t-ext",
+    "name": "Compute runtime Python version",
+    "start": "2026-10-07T11:31:47Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975467-step-7",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975467",
+    "service": "test-3-14t-ext",
+    "name": "Get pip cache dir",
+    "start": "2026-10-07T11:31:47Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975467-step-8",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975467",
+    "service": "test-3-14t-ext",
+    "name": "Cache PyPI",
+    "start": "2026-10-07T11:31:47Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975467-step-9",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975467",
+    "service": "test-3-14t-ext",
+    "name": "Install dependencies",
+    "start": "2026-10-07T11:31:48Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975467-step-10",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975467",
+    "service": "test-3-14t-ext",
+    "name": "Determine pre-compiled compatible wheel",
+    "start": "2026-10-07T11:31:54Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975467-step-12",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975467",
+    "service": "test-3-14t-ext",
+    "name": "Self-install (from wheel)",
+    "start": "2026-10-07T11:31:55Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975467-step-13",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975467",
+    "service": "test-3-14t-ext",
+    "name": "Run unittests",
+    "start": "2026-10-07T11:31:55Z",
+    "duration_ms": 137000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975467-step-14",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975467",
+    "service": "test-3-14t-ext",
+    "name": "Produce markdown test summary from JUnit",
+    "start": "2026-10-07T11:34:12Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975467-step-15",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975467",
+    "service": "test-3-14t-ext",
+    "name": "Append coverage results to Job Summary",
+    "start": "2026-10-07T11:34:12Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975467-step-17",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975467",
+    "service": "test-3-14t-ext",
+    "name": "Prepare coverage artifact",
+    "start": "2026-10-07T11:34:13Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975467-step-33",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975467",
+    "service": "test-3-14t-ext",
+    "name": "Post Cache PyPI",
+    "start": "2026-10-07T11:34:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975467-step-34",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975467",
+    "service": "test-3-14t-ext",
+    "name": "Post Setup Python 3.14t",
+    "start": "2026-10-07T11:34:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975467-step-35",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975467",
+    "service": "test-3-14t-ext",
+    "name": "Complete job",
+    "start": "2026-10-07T11:34:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975484",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "test-3-12-ext",
+    "name": "Test 3.12 ext",
+    "start": "2026-10-07T11:31:31Z",
+    "duration_ms": 119000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975484-step-1",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975484",
+    "service": "test-3-12-ext",
+    "name": "Set up job",
+    "start": "2026-10-07T11:31:31Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975484-step-2",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975484",
+    "service": "test-3-12-ext",
+    "name": "Determine build type",
+    "start": "2026-10-07T11:31:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975484-step-3",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975484",
+    "service": "test-3-12-ext",
+    "name": "Retrieve the project source from an sdist inside the GHA artifact",
+    "start": "2026-10-07T11:31:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975484-step-4",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975484",
+    "service": "test-3-12-ext",
+    "name": "Download distributions",
+    "start": "2026-10-07T11:31:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975484-step-5",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975484",
+    "service": "test-3-12-ext",
+    "name": "Setup Python 3.12",
+    "start": "2026-10-07T11:31:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975484-step-6",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975484",
+    "service": "test-3-12-ext",
+    "name": "Compute runtime Python version",
+    "start": "2026-10-07T11:31:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975484-step-7",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975484",
+    "service": "test-3-12-ext",
+    "name": "Get pip cache dir",
+    "start": "2026-10-07T11:31:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975484-step-8",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975484",
+    "service": "test-3-12-ext",
+    "name": "Cache PyPI",
+    "start": "2026-10-07T11:31:35Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975484-step-9",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975484",
+    "service": "test-3-12-ext",
+    "name": "Install dependencies",
+    "start": "2026-10-07T11:31:36Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975484-step-10",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975484",
+    "service": "test-3-12-ext",
+    "name": "Determine pre-compiled compatible wheel",
+    "start": "2026-10-07T11:31:43Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975484-step-12",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975484",
+    "service": "test-3-12-ext",
+    "name": "Self-install (from wheel)",
+    "start": "2026-10-07T11:31:43Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975484-step-13",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975484",
+    "service": "test-3-12-ext",
+    "name": "Run unittests",
+    "start": "2026-10-07T11:31:44Z",
+    "duration_ms": 101000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975484-step-14",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975484",
+    "service": "test-3-12-ext",
+    "name": "Produce markdown test summary from JUnit",
+    "start": "2026-10-07T11:33:25Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975484-step-15",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975484",
+    "service": "test-3-12-ext",
+    "name": "Append coverage results to Job Summary",
+    "start": "2026-10-07T11:33:25Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975484-step-17",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975484",
+    "service": "test-3-12-ext",
+    "name": "Prepare coverage artifact",
+    "start": "2026-10-07T11:33:26Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975484-step-33",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975484",
+    "service": "test-3-12-ext",
+    "name": "Post Cache PyPI",
+    "start": "2026-10-07T11:33:27Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975484-step-34",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975484",
+    "service": "test-3-12-ext",
+    "name": "Post Setup Python 3.12",
+    "start": "2026-10-07T11:33:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975484-step-35",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975484",
+    "service": "test-3-12-ext",
+    "name": "Complete job",
+    "start": "2026-10-07T11:33:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975503",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "test-3-14t",
+    "name": "Test 3.14t",
+    "start": "2026-10-07T11:31:31Z",
+    "duration_ms": 121000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975503-step-1",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975503",
+    "service": "test-3-14t",
+    "name": "Set up job",
+    "start": "2026-10-07T11:31:32Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975503-step-2",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975503",
+    "service": "test-3-14t",
+    "name": "Determine build type",
+    "start": "2026-10-07T11:31:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975503-step-3",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975503",
+    "service": "test-3-14t",
+    "name": "Retrieve the project source from an sdist inside the GHA artifact",
+    "start": "2026-10-07T11:31:36Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975503-step-4",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975503",
+    "service": "test-3-14t",
+    "name": "Download distributions",
+    "start": "2026-10-07T11:31:37Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975503-step-5",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975503",
+    "service": "test-3-14t",
+    "name": "Setup Python 3.14t",
+    "start": "2026-10-07T11:31:39Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975503-step-6",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975503",
+    "service": "test-3-14t",
+    "name": "Compute runtime Python version",
+    "start": "2026-10-07T11:31:46Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975503-step-7",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975503",
+    "service": "test-3-14t",
+    "name": "Get pip cache dir",
+    "start": "2026-10-07T11:31:46Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975503-step-8",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975503",
+    "service": "test-3-14t",
+    "name": "Cache PyPI",
+    "start": "2026-10-07T11:31:47Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975503-step-9",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975503",
+    "service": "test-3-14t",
+    "name": "Install dependencies",
+    "start": "2026-10-07T11:31:48Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975503-step-10",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975503",
+    "service": "test-3-14t",
+    "name": "Determine pre-compiled compatible wheel",
+    "start": "2026-10-07T11:31:54Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975503-step-12",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975503",
+    "service": "test-3-14t",
+    "name": "Self-install (from wheel)",
+    "start": "2026-10-07T11:31:54Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975503-step-13",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975503",
+    "service": "test-3-14t",
+    "name": "Run unittests",
+    "start": "2026-10-07T11:31:55Z",
+    "duration_ms": 92000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975503-step-14",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975503",
+    "service": "test-3-14t",
+    "name": "Produce markdown test summary from JUnit",
+    "start": "2026-10-07T11:33:27Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975503-step-15",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975503",
+    "service": "test-3-14t",
+    "name": "Append coverage results to Job Summary",
+    "start": "2026-10-07T11:33:27Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975503-step-17",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975503",
+    "service": "test-3-14t",
+    "name": "Prepare coverage artifact",
+    "start": "2026-10-07T11:33:28Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975503-step-33",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975503",
+    "service": "test-3-14t",
+    "name": "Post Cache PyPI",
+    "start": "2026-10-07T11:33:30Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975503-step-34",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975503",
+    "service": "test-3-14t",
+    "name": "Post Setup Python 3.14t",
+    "start": "2026-10-07T11:33:30Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975503-step-35",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975503",
+    "service": "test-3-14t",
+    "name": "Complete job",
+    "start": "2026-10-07T11:33:30Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975507",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "test-3-11-ext",
+    "name": "Test 3.11 ext",
+    "start": "2026-10-07T11:31:31Z",
+    "duration_ms": 179000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975507-step-1",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975507",
+    "service": "test-3-11-ext",
+    "name": "Set up job",
+    "start": "2026-10-07T11:31:31Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975507-step-2",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975507",
+    "service": "test-3-11-ext",
+    "name": "Determine build type",
+    "start": "2026-10-07T11:31:33Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975507-step-3",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975507",
+    "service": "test-3-11-ext",
+    "name": "Retrieve the project source from an sdist inside the GHA artifact",
+    "start": "2026-10-07T11:31:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975507-step-4",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975507",
+    "service": "test-3-11-ext",
+    "name": "Download distributions",
+    "start": "2026-10-07T11:31:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975507-step-5",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975507",
+    "service": "test-3-11-ext",
+    "name": "Setup Python 3.11",
+    "start": "2026-10-07T11:31:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975507-step-6",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975507",
+    "service": "test-3-11-ext",
+    "name": "Compute runtime Python version",
+    "start": "2026-10-07T11:31:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975507-step-7",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975507",
+    "service": "test-3-11-ext",
+    "name": "Get pip cache dir",
+    "start": "2026-10-07T11:31:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975507-step-8",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975507",
+    "service": "test-3-11-ext",
+    "name": "Cache PyPI",
+    "start": "2026-10-07T11:31:35Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975507-step-9",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975507",
+    "service": "test-3-11-ext",
+    "name": "Install dependencies",
+    "start": "2026-10-07T11:31:36Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975507-step-10",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975507",
+    "service": "test-3-11-ext",
+    "name": "Determine pre-compiled compatible wheel",
+    "start": "2026-10-07T11:31:42Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975507-step-12",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975507",
+    "service": "test-3-11-ext",
+    "name": "Self-install (from wheel)",
+    "start": "2026-10-07T11:31:42Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975507-step-13",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975507",
+    "service": "test-3-11-ext",
+    "name": "Run unittests",
+    "start": "2026-10-07T11:31:43Z",
+    "duration_ms": 162000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975507-step-14",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975507",
+    "service": "test-3-11-ext",
+    "name": "Produce markdown test summary from JUnit",
+    "start": "2026-10-07T11:34:25Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975507-step-15",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975507",
+    "service": "test-3-11-ext",
+    "name": "Append coverage results to Job Summary",
+    "start": "2026-10-07T11:34:25Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975507-step-17",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975507",
+    "service": "test-3-11-ext",
+    "name": "Prepare coverage artifact",
+    "start": "2026-10-07T11:34:27Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975507-step-33",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975507",
+    "service": "test-3-11-ext",
+    "name": "Post Cache PyPI",
+    "start": "2026-10-07T11:34:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975507-step-34",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975507",
+    "service": "test-3-11-ext",
+    "name": "Post Setup Python 3.11",
+    "start": "2026-10-07T11:34:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975507-step-35",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975507",
+    "service": "test-3-11-ext",
+    "name": "Complete job",
+    "start": "2026-10-07T11:34:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975518",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "test-3-12",
+    "name": "Test 3.12",
+    "start": "2026-10-07T11:31:33Z",
+    "duration_ms": 89000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975518-step-1",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975518",
+    "service": "test-3-12",
+    "name": "Set up job",
+    "start": "2026-10-07T11:31:35Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975518-step-2",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975518",
+    "service": "test-3-12",
+    "name": "Determine build type",
+    "start": "2026-10-07T11:31:37Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975518-step-3",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975518",
+    "service": "test-3-12",
+    "name": "Retrieve the project source from an sdist inside the GHA artifact",
+    "start": "2026-10-07T11:31:37Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975518-step-4",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975518",
+    "service": "test-3-12",
+    "name": "Download distributions",
+    "start": "2026-10-07T11:31:39Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975518-step-5",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975518",
+    "service": "test-3-12",
+    "name": "Setup Python 3.12",
+    "start": "2026-10-07T11:31:41Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975518-step-6",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975518",
+    "service": "test-3-12",
+    "name": "Compute runtime Python version",
+    "start": "2026-10-07T11:31:41Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975518-step-7",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975518",
+    "service": "test-3-12",
+    "name": "Get pip cache dir",
+    "start": "2026-10-07T11:31:41Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975518-step-8",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975518",
+    "service": "test-3-12",
+    "name": "Cache PyPI",
+    "start": "2026-10-07T11:31:42Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975518-step-9",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975518",
+    "service": "test-3-12",
+    "name": "Install dependencies",
+    "start": "2026-10-07T11:31:44Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975518-step-10",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975518",
+    "service": "test-3-12",
+    "name": "Determine pre-compiled compatible wheel",
+    "start": "2026-10-07T11:31:49Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975518-step-12",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975518",
+    "service": "test-3-12",
+    "name": "Self-install (from wheel)",
+    "start": "2026-10-07T11:31:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975518-step-13",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975518",
+    "service": "test-3-12",
+    "name": "Run unittests",
+    "start": "2026-10-07T11:31:50Z",
+    "duration_ms": 65000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975518-step-14",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975518",
+    "service": "test-3-12",
+    "name": "Produce markdown test summary from JUnit",
+    "start": "2026-10-07T11:32:55Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975518-step-15",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975518",
+    "service": "test-3-12",
+    "name": "Append coverage results to Job Summary",
+    "start": "2026-10-07T11:32:55Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975518-step-17",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975518",
+    "service": "test-3-12",
+    "name": "Prepare coverage artifact",
+    "start": "2026-10-07T11:32:56Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975518-step-33",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975518",
+    "service": "test-3-12",
+    "name": "Post Cache PyPI",
+    "start": "2026-10-07T11:32:58Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975518-step-34",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975518",
+    "service": "test-3-12",
+    "name": "Post Setup Python 3.12",
+    "start": "2026-10-07T11:32:58Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975518-step-35",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975518",
+    "service": "test-3-12",
+    "name": "Complete job",
+    "start": "2026-10-07T11:32:59Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975520",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "test-3-11-ext-debug",
+    "name": "Test 3.11 ext debug",
+    "start": "2026-10-07T11:31:31Z",
+    "duration_ms": 130000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975520-step-1",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975520",
+    "service": "test-3-11-ext-debug",
+    "name": "Set up job",
+    "start": "2026-10-07T11:31:32Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975520-step-2",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975520",
+    "service": "test-3-11-ext-debug",
+    "name": "Determine build type",
+    "start": "2026-10-07T11:31:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975520-step-3",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975520",
+    "service": "test-3-11-ext-debug",
+    "name": "Retrieve the project source from an sdist inside the GHA artifact",
+    "start": "2026-10-07T11:31:36Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975520-step-5",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975520",
+    "service": "test-3-11-ext-debug",
+    "name": "Setup Python 3.11",
+    "start": "2026-10-07T11:31:37Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975520-step-6",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975520",
+    "service": "test-3-11-ext-debug",
+    "name": "Compute runtime Python version",
+    "start": "2026-10-07T11:31:37Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975520-step-7",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975520",
+    "service": "test-3-11-ext-debug",
+    "name": "Get pip cache dir",
+    "start": "2026-10-07T11:31:38Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975520-step-8",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975520",
+    "service": "test-3-11-ext-debug",
+    "name": "Cache PyPI",
+    "start": "2026-10-07T11:31:39Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975520-step-9",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975520",
+    "service": "test-3-11-ext-debug",
+    "name": "Install dependencies",
+    "start": "2026-10-07T11:31:41Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975520-step-11",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975520",
+    "service": "test-3-11-ext-debug",
+    "name": "Ensure clean for source build",
+    "start": "2026-10-07T11:31:48Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975520-step-12",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975520",
+    "service": "test-3-11-ext-debug",
+    "name": "Self-install (from source)",
+    "start": "2026-10-07T11:31:48Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975520-step-13",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975520",
+    "service": "test-3-11-ext-debug",
+    "name": "Run unittests",
+    "start": "2026-10-07T11:31:53Z",
+    "duration_ms": 101000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975520-step-14",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975520",
+    "service": "test-3-11-ext-debug",
+    "name": "Produce markdown test summary from JUnit",
+    "start": "2026-10-07T11:33:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975520-step-15",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975520",
+    "service": "test-3-11-ext-debug",
+    "name": "Append coverage results to Job Summary",
+    "start": "2026-10-07T11:33:35Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975520-step-17",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975520",
+    "service": "test-3-11-ext-debug",
+    "name": "Prepare coverage artifact",
+    "start": "2026-10-07T11:33:36Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975520-step-33",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975520",
+    "service": "test-3-11-ext-debug",
+    "name": "Post Cache PyPI",
+    "start": "2026-10-07T11:33:38Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975520-step-34",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975520",
+    "service": "test-3-11-ext-debug",
+    "name": "Post Setup Python 3.11",
+    "start": "2026-10-07T11:33:38Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975520-step-35",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975520",
+    "service": "test-3-11-ext-debug",
+    "name": "Complete job",
+    "start": "2026-10-07T11:33:38Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975525",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "test-3-10",
+    "name": "Test 3.10",
+    "start": "2026-10-07T11:31:31Z",
+    "duration_ms": 104000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975525-step-1",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975525",
+    "service": "test-3-10",
+    "name": "Set up job",
+    "start": "2026-10-07T11:31:32Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975525-step-2",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975525",
+    "service": "test-3-10",
+    "name": "Determine build type",
+    "start": "2026-10-07T11:31:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975525-step-3",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975525",
+    "service": "test-3-10",
+    "name": "Retrieve the project source from an sdist inside the GHA artifact",
+    "start": "2026-10-07T11:31:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975525-step-4",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975525",
+    "service": "test-3-10",
+    "name": "Download distributions",
+    "start": "2026-10-07T11:31:35Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975525-step-5",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975525",
+    "service": "test-3-10",
+    "name": "Setup Python 3.10",
+    "start": "2026-10-07T11:31:36Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975525-step-6",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975525",
+    "service": "test-3-10",
+    "name": "Compute runtime Python version",
+    "start": "2026-10-07T11:31:37Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975525-step-7",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975525",
+    "service": "test-3-10",
+    "name": "Get pip cache dir",
+    "start": "2026-10-07T11:31:37Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975525-step-8",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975525",
+    "service": "test-3-10",
+    "name": "Cache PyPI",
+    "start": "2026-10-07T11:31:38Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975525-step-9",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975525",
+    "service": "test-3-10",
+    "name": "Install dependencies",
+    "start": "2026-10-07T11:31:39Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975525-step-10",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975525",
+    "service": "test-3-10",
+    "name": "Determine pre-compiled compatible wheel",
+    "start": "2026-10-07T11:31:45Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975525-step-12",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975525",
+    "service": "test-3-10",
+    "name": "Self-install (from wheel)",
+    "start": "2026-10-07T11:31:46Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975525-step-13",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975525",
+    "service": "test-3-10",
+    "name": "Run unittests",
+    "start": "2026-10-07T11:31:46Z",
+    "duration_ms": 84000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975525-step-14",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975525",
+    "service": "test-3-10",
+    "name": "Produce markdown test summary from JUnit",
+    "start": "2026-10-07T11:33:10Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975525-step-15",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975525",
+    "service": "test-3-10",
+    "name": "Append coverage results to Job Summary",
+    "start": "2026-10-07T11:33:10Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975525-step-17",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975525",
+    "service": "test-3-10",
+    "name": "Prepare coverage artifact",
+    "start": "2026-10-07T11:33:12Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975525-step-33",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975525",
+    "service": "test-3-10",
+    "name": "Post Cache PyPI",
+    "start": "2026-10-07T11:33:13Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975525-step-34",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975525",
+    "service": "test-3-10",
+    "name": "Post Setup Python 3.10",
+    "start": "2026-10-07T11:33:13Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975525-step-35",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975525",
+    "service": "test-3-10",
+    "name": "Complete job",
+    "start": "2026-10-07T11:33:14Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975534",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "test-3-12-ext-debug",
+    "name": "Test 3.12 ext debug",
+    "start": "2026-10-07T11:31:31Z",
+    "duration_ms": 168000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975534-step-1",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975534",
+    "service": "test-3-12-ext-debug",
+    "name": "Set up job",
+    "start": "2026-10-07T11:31:32Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975534-step-2",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975534",
+    "service": "test-3-12-ext-debug",
+    "name": "Determine build type",
+    "start": "2026-10-07T11:31:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975534-step-3",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975534",
+    "service": "test-3-12-ext-debug",
+    "name": "Retrieve the project source from an sdist inside the GHA artifact",
+    "start": "2026-10-07T11:31:35Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975534-step-5",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975534",
+    "service": "test-3-12-ext-debug",
+    "name": "Setup Python 3.12",
+    "start": "2026-10-07T11:31:37Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975534-step-6",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975534",
+    "service": "test-3-12-ext-debug",
+    "name": "Compute runtime Python version",
+    "start": "2026-10-07T11:31:37Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975534-step-7",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975534",
+    "service": "test-3-12-ext-debug",
+    "name": "Get pip cache dir",
+    "start": "2026-10-07T11:31:37Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975534-step-8",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975534",
+    "service": "test-3-12-ext-debug",
+    "name": "Cache PyPI",
+    "start": "2026-10-07T11:31:38Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975534-step-9",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975534",
+    "service": "test-3-12-ext-debug",
+    "name": "Install dependencies",
+    "start": "2026-10-07T11:31:41Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975534-step-11",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975534",
+    "service": "test-3-12-ext-debug",
+    "name": "Ensure clean for source build",
+    "start": "2026-10-07T11:31:48Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975534-step-12",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975534",
+    "service": "test-3-12-ext-debug",
+    "name": "Self-install (from source)",
+    "start": "2026-10-07T11:31:49Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975534-step-13",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975534",
+    "service": "test-3-12-ext-debug",
+    "name": "Run unittests",
+    "start": "2026-10-07T11:31:52Z",
+    "duration_ms": 140000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975534-step-14",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975534",
+    "service": "test-3-12-ext-debug",
+    "name": "Produce markdown test summary from JUnit",
+    "start": "2026-10-07T11:34:12Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975534-step-15",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975534",
+    "service": "test-3-12-ext-debug",
+    "name": "Append coverage results to Job Summary",
+    "start": "2026-10-07T11:34:12Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975534-step-17",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975534",
+    "service": "test-3-12-ext-debug",
+    "name": "Prepare coverage artifact",
+    "start": "2026-10-07T11:34:14Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975534-step-33",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975534",
+    "service": "test-3-12-ext-debug",
+    "name": "Post Cache PyPI",
+    "start": "2026-10-07T11:34:16Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975534-step-34",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975534",
+    "service": "test-3-12-ext-debug",
+    "name": "Post Setup Python 3.12",
+    "start": "2026-10-07T11:34:16Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975534-step-35",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975534",
+    "service": "test-3-12-ext-debug",
+    "name": "Complete job",
+    "start": "2026-10-07T11:34:16Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975536",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "test-3-13-ext-debug",
+    "name": "Test 3.13 ext debug",
+    "start": "2026-10-07T11:31:31Z",
+    "duration_ms": 90000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975536-step-1",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975536",
+    "service": "test-3-13-ext-debug",
+    "name": "Set up job",
+    "start": "2026-10-07T11:31:32Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975536-step-2",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975536",
+    "service": "test-3-13-ext-debug",
+    "name": "Determine build type",
+    "start": "2026-10-07T11:31:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975536-step-3",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975536",
+    "service": "test-3-13-ext-debug",
+    "name": "Retrieve the project source from an sdist inside the GHA artifact",
+    "start": "2026-10-07T11:31:35Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975536-step-5",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975536",
+    "service": "test-3-13-ext-debug",
+    "name": "Setup Python 3.13",
+    "start": "2026-10-07T11:31:37Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975536-step-6",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975536",
+    "service": "test-3-13-ext-debug",
+    "name": "Compute runtime Python version",
+    "start": "2026-10-07T11:31:37Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975536-step-7",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975536",
+    "service": "test-3-13-ext-debug",
+    "name": "Get pip cache dir",
+    "start": "2026-10-07T11:31:37Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975536-step-8",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975536",
+    "service": "test-3-13-ext-debug",
+    "name": "Cache PyPI",
+    "start": "2026-10-07T11:31:38Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975536-step-9",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975536",
+    "service": "test-3-13-ext-debug",
+    "name": "Install dependencies",
+    "start": "2026-10-07T11:31:39Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975536-step-11",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975536",
+    "service": "test-3-13-ext-debug",
+    "name": "Ensure clean for source build",
+    "start": "2026-10-07T11:31:44Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975536-step-12",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975536",
+    "service": "test-3-13-ext-debug",
+    "name": "Self-install (from source)",
+    "start": "2026-10-07T11:31:44Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975536-step-13",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975536",
+    "service": "test-3-13-ext-debug",
+    "name": "Run unittests",
+    "start": "2026-10-07T11:31:46Z",
+    "duration_ms": 69000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975536-step-14",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975536",
+    "service": "test-3-13-ext-debug",
+    "name": "Produce markdown test summary from JUnit",
+    "start": "2026-10-07T11:32:55Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975536-step-15",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975536",
+    "service": "test-3-13-ext-debug",
+    "name": "Append coverage results to Job Summary",
+    "start": "2026-10-07T11:32:55Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975536-step-17",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975536",
+    "service": "test-3-13-ext-debug",
+    "name": "Prepare coverage artifact",
+    "start": "2026-10-07T11:32:56Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975536-step-33",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975536",
+    "service": "test-3-13-ext-debug",
+    "name": "Post Cache PyPI",
+    "start": "2026-10-07T11:32:58Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975536-step-34",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975536",
+    "service": "test-3-13-ext-debug",
+    "name": "Post Setup Python 3.13",
+    "start": "2026-10-07T11:32:58Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975536-step-35",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975536",
+    "service": "test-3-13-ext-debug",
+    "name": "Complete job",
+    "start": "2026-10-07T11:32:58Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975541",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "test-3-14",
+    "name": "Test 3.14",
+    "start": "2026-10-07T11:31:31Z",
+    "duration_ms": 53000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975541-step-1",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975541",
+    "service": "test-3-14",
+    "name": "Set up job",
+    "start": "2026-10-07T11:31:32Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975541-step-2",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975541",
+    "service": "test-3-14",
+    "name": "Determine build type",
+    "start": "2026-10-07T11:31:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975541-step-3",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975541",
+    "service": "test-3-14",
+    "name": "Retrieve the project source from an sdist inside the GHA artifact",
+    "start": "2026-10-07T11:31:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975541-step-4",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975541",
+    "service": "test-3-14",
+    "name": "Download distributions",
+    "start": "2026-10-07T11:31:35Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975541-step-5",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975541",
+    "service": "test-3-14",
+    "name": "Setup Python 3.14",
+    "start": "2026-10-07T11:31:37Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975541-step-6",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975541",
+    "service": "test-3-14",
+    "name": "Compute runtime Python version",
+    "start": "2026-10-07T11:31:37Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975541-step-7",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975541",
+    "service": "test-3-14",
+    "name": "Get pip cache dir",
+    "start": "2026-10-07T11:31:37Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975541-step-8",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975541",
+    "service": "test-3-14",
+    "name": "Cache PyPI",
+    "start": "2026-10-07T11:31:38Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975541-step-9",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975541",
+    "service": "test-3-14",
+    "name": "Install dependencies",
+    "start": "2026-10-07T11:31:39Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975541-step-10",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975541",
+    "service": "test-3-14",
+    "name": "Determine pre-compiled compatible wheel",
+    "start": "2026-10-07T11:31:44Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975541-step-12",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975541",
+    "service": "test-3-14",
+    "name": "Self-install (from wheel)",
+    "start": "2026-10-07T11:31:44Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975541-step-13",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975541",
+    "service": "test-3-14",
+    "name": "Run unittests",
+    "start": "2026-10-07T11:31:44Z",
+    "duration_ms": 35000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975541-step-14",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975541",
+    "service": "test-3-14",
+    "name": "Produce markdown test summary from JUnit",
+    "start": "2026-10-07T11:32:19Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975541-step-15",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975541",
+    "service": "test-3-14",
+    "name": "Append coverage results to Job Summary",
+    "start": "2026-10-07T11:32:19Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975541-step-17",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975541",
+    "service": "test-3-14",
+    "name": "Prepare coverage artifact",
+    "start": "2026-10-07T11:32:20Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975541-step-33",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975541",
+    "service": "test-3-14",
+    "name": "Post Cache PyPI",
+    "start": "2026-10-07T11:32:21Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975541-step-34",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975541",
+    "service": "test-3-14",
+    "name": "Post Setup Python 3.14",
+    "start": "2026-10-07T11:32:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975541-step-35",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975541",
+    "service": "test-3-14",
+    "name": "Complete job",
+    "start": "2026-10-07T11:32:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975547",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "test-3-13",
+    "name": "Test 3.13",
+    "start": "2026-10-07T11:31:31Z",
+    "duration_ms": 75000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975547-step-1",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975547",
+    "service": "test-3-13",
+    "name": "Set up job",
+    "start": "2026-10-07T11:31:32Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975547-step-2",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975547",
+    "service": "test-3-13",
+    "name": "Determine build type",
+    "start": "2026-10-07T11:31:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975547-step-3",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975547",
+    "service": "test-3-13",
+    "name": "Retrieve the project source from an sdist inside the GHA artifact",
+    "start": "2026-10-07T11:31:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975547-step-4",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975547",
+    "service": "test-3-13",
+    "name": "Download distributions",
+    "start": "2026-10-07T11:31:35Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975547-step-5",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975547",
+    "service": "test-3-13",
+    "name": "Setup Python 3.13",
+    "start": "2026-10-07T11:31:36Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975547-step-6",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975547",
+    "service": "test-3-13",
+    "name": "Compute runtime Python version",
+    "start": "2026-10-07T11:31:37Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975547-step-7",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975547",
+    "service": "test-3-13",
+    "name": "Get pip cache dir",
+    "start": "2026-10-07T11:31:37Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975547-step-8",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975547",
+    "service": "test-3-13",
+    "name": "Cache PyPI",
+    "start": "2026-10-07T11:31:37Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975547-step-9",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975547",
+    "service": "test-3-13",
+    "name": "Install dependencies",
+    "start": "2026-10-07T11:31:38Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975547-step-10",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975547",
+    "service": "test-3-13",
+    "name": "Determine pre-compiled compatible wheel",
+    "start": "2026-10-07T11:31:44Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975547-step-12",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975547",
+    "service": "test-3-13",
+    "name": "Self-install (from wheel)",
+    "start": "2026-10-07T11:31:45Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975547-step-13",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975547",
+    "service": "test-3-13",
+    "name": "Run unittests",
+    "start": "2026-10-07T11:31:45Z",
+    "duration_ms": 56000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975547-step-14",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975547",
+    "service": "test-3-13",
+    "name": "Produce markdown test summary from JUnit",
+    "start": "2026-10-07T11:32:41Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975547-step-15",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975547",
+    "service": "test-3-13",
+    "name": "Append coverage results to Job Summary",
+    "start": "2026-10-07T11:32:41Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975547-step-17",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975547",
+    "service": "test-3-13",
+    "name": "Prepare coverage artifact",
+    "start": "2026-10-07T11:32:42Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975547-step-33",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975547",
+    "service": "test-3-13",
+    "name": "Post Cache PyPI",
+    "start": "2026-10-07T11:32:44Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975547-step-34",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975547",
+    "service": "test-3-13",
+    "name": "Post Setup Python 3.13",
+    "start": "2026-10-07T11:32:44Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975547-step-35",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975547",
+    "service": "test-3-13",
+    "name": "Complete job",
+    "start": "2026-10-07T11:32:44Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975554",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "test-3-14-ext-debug",
+    "name": "Test 3.14 ext debug",
+    "start": "2026-10-07T11:31:31Z",
+    "duration_ms": 136000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975554-step-1",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975554",
+    "service": "test-3-14-ext-debug",
+    "name": "Set up job",
+    "start": "2026-10-07T11:31:32Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975554-step-2",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975554",
+    "service": "test-3-14-ext-debug",
+    "name": "Determine build type",
+    "start": "2026-10-07T11:31:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975554-step-3",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975554",
+    "service": "test-3-14-ext-debug",
+    "name": "Retrieve the project source from an sdist inside the GHA artifact",
+    "start": "2026-10-07T11:31:35Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975554-step-5",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975554",
+    "service": "test-3-14-ext-debug",
+    "name": "Setup Python 3.14",
+    "start": "2026-10-07T11:31:37Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975554-step-6",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975554",
+    "service": "test-3-14-ext-debug",
+    "name": "Compute runtime Python version",
+    "start": "2026-10-07T11:31:37Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975554-step-7",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975554",
+    "service": "test-3-14-ext-debug",
+    "name": "Get pip cache dir",
+    "start": "2026-10-07T11:31:37Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975554-step-8",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975554",
+    "service": "test-3-14-ext-debug",
+    "name": "Cache PyPI",
+    "start": "2026-10-07T11:31:38Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975554-step-9",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975554",
+    "service": "test-3-14-ext-debug",
+    "name": "Install dependencies",
+    "start": "2026-10-07T11:31:40Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975554-step-11",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975554",
+    "service": "test-3-14-ext-debug",
+    "name": "Ensure clean for source build",
+    "start": "2026-10-07T11:31:46Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975554-step-12",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975554",
+    "service": "test-3-14-ext-debug",
+    "name": "Self-install (from source)",
+    "start": "2026-10-07T11:31:47Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975554-step-13",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975554",
+    "service": "test-3-14-ext-debug",
+    "name": "Run unittests",
+    "start": "2026-10-07T11:31:50Z",
+    "duration_ms": 111000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975554-step-14",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975554",
+    "service": "test-3-14-ext-debug",
+    "name": "Produce markdown test summary from JUnit",
+    "start": "2026-10-07T11:33:41Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975554-step-15",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975554",
+    "service": "test-3-14-ext-debug",
+    "name": "Append coverage results to Job Summary",
+    "start": "2026-10-07T11:33:41Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975554-step-17",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975554",
+    "service": "test-3-14-ext-debug",
+    "name": "Prepare coverage artifact",
+    "start": "2026-10-07T11:33:42Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975554-step-33",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975554",
+    "service": "test-3-14-ext-debug",
+    "name": "Post Cache PyPI",
+    "start": "2026-10-07T11:33:44Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975554-step-34",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975554",
+    "service": "test-3-14-ext-debug",
+    "name": "Post Setup Python 3.14",
+    "start": "2026-10-07T11:33:44Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975554-step-35",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975554",
+    "service": "test-3-14-ext-debug",
+    "name": "Complete job",
+    "start": "2026-10-07T11:33:44Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975586",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "test-3-10-ext",
+    "name": "Test 3.10 ext",
+    "start": "2026-10-07T11:31:31Z",
+    "duration_ms": 117000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975586-step-1",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975586",
+    "service": "test-3-10-ext",
+    "name": "Set up job",
+    "start": "2026-10-07T11:31:32Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975586-step-2",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975586",
+    "service": "test-3-10-ext",
+    "name": "Determine build type",
+    "start": "2026-10-07T11:31:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975586-step-3",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975586",
+    "service": "test-3-10-ext",
+    "name": "Retrieve the project source from an sdist inside the GHA artifact",
+    "start": "2026-10-07T11:31:35Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975586-step-4",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975586",
+    "service": "test-3-10-ext",
+    "name": "Download distributions",
+    "start": "2026-10-07T11:31:37Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975586-step-5",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975586",
+    "service": "test-3-10-ext",
+    "name": "Setup Python 3.10",
+    "start": "2026-10-07T11:31:38Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975586-step-6",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975586",
+    "service": "test-3-10-ext",
+    "name": "Compute runtime Python version",
+    "start": "2026-10-07T11:31:39Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975586-step-7",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975586",
+    "service": "test-3-10-ext",
+    "name": "Get pip cache dir",
+    "start": "2026-10-07T11:31:39Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975586-step-8",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975586",
+    "service": "test-3-10-ext",
+    "name": "Cache PyPI",
+    "start": "2026-10-07T11:31:40Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975586-step-9",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975586",
+    "service": "test-3-10-ext",
+    "name": "Install dependencies",
+    "start": "2026-10-07T11:31:41Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975586-step-10",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975586",
+    "service": "test-3-10-ext",
+    "name": "Determine pre-compiled compatible wheel",
+    "start": "2026-10-07T11:31:47Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975586-step-12",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975586",
+    "service": "test-3-10-ext",
+    "name": "Self-install (from wheel)",
+    "start": "2026-10-07T11:31:47Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975586-step-13",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975586",
+    "service": "test-3-10-ext",
+    "name": "Run unittests",
+    "start": "2026-10-07T11:31:47Z",
+    "duration_ms": 95000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975586-step-14",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975586",
+    "service": "test-3-10-ext",
+    "name": "Produce markdown test summary from JUnit",
+    "start": "2026-10-07T11:33:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975586-step-15",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975586",
+    "service": "test-3-10-ext",
+    "name": "Append coverage results to Job Summary",
+    "start": "2026-10-07T11:33:22Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975586-step-17",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975586",
+    "service": "test-3-10-ext",
+    "name": "Prepare coverage artifact",
+    "start": "2026-10-07T11:33:23Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975586-step-33",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975586",
+    "service": "test-3-10-ext",
+    "name": "Post Cache PyPI",
+    "start": "2026-10-07T11:33:25Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975586-step-34",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975586",
+    "service": "test-3-10-ext",
+    "name": "Post Setup Python 3.10",
+    "start": "2026-10-07T11:33:26Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975586-step-35",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975586",
+    "service": "test-3-10-ext",
+    "name": "Complete job",
+    "start": "2026-10-07T11:33:26Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975589",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "test-3-11",
+    "name": "Test 3.11",
+    "start": "2026-10-07T11:31:31Z",
+    "duration_ms": 86000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975589-step-1",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975589",
+    "service": "test-3-11",
+    "name": "Set up job",
+    "start": "2026-10-07T11:31:32Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975589-step-2",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975589",
+    "service": "test-3-11",
+    "name": "Determine build type",
+    "start": "2026-10-07T11:31:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975589-step-3",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975589",
+    "service": "test-3-11",
+    "name": "Retrieve the project source from an sdist inside the GHA artifact",
+    "start": "2026-10-07T11:31:35Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975589-step-4",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975589",
+    "service": "test-3-11",
+    "name": "Download distributions",
+    "start": "2026-10-07T11:31:37Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975589-step-5",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975589",
+    "service": "test-3-11",
+    "name": "Setup Python 3.11",
+    "start": "2026-10-07T11:31:39Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975589-step-6",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975589",
+    "service": "test-3-11",
+    "name": "Compute runtime Python version",
+    "start": "2026-10-07T11:31:39Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975589-step-7",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975589",
+    "service": "test-3-11",
+    "name": "Get pip cache dir",
+    "start": "2026-10-07T11:31:39Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975589-step-8",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975589",
+    "service": "test-3-11",
+    "name": "Cache PyPI",
+    "start": "2026-10-07T11:31:39Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975589-step-9",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975589",
+    "service": "test-3-11",
+    "name": "Install dependencies",
+    "start": "2026-10-07T11:31:42Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975589-step-10",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975589",
+    "service": "test-3-11",
+    "name": "Determine pre-compiled compatible wheel",
+    "start": "2026-10-07T11:31:48Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975589-step-12",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975589",
+    "service": "test-3-11",
+    "name": "Self-install (from wheel)",
+    "start": "2026-10-07T11:31:48Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975589-step-13",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975589",
+    "service": "test-3-11",
+    "name": "Run unittests",
+    "start": "2026-10-07T11:31:48Z",
+    "duration_ms": 63000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975589-step-14",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975589",
+    "service": "test-3-11",
+    "name": "Produce markdown test summary from JUnit",
+    "start": "2026-10-07T11:32:51Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975589-step-15",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975589",
+    "service": "test-3-11",
+    "name": "Append coverage results to Job Summary",
+    "start": "2026-10-07T11:32:51Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975589-step-17",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975589",
+    "service": "test-3-11",
+    "name": "Prepare coverage artifact",
+    "start": "2026-10-07T11:32:52Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975589-step-33",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975589",
+    "service": "test-3-11",
+    "name": "Post Cache PyPI",
+    "start": "2026-10-07T11:32:54Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975589-step-34",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975589",
+    "service": "test-3-11",
+    "name": "Post Setup Python 3.11",
+    "start": "2026-10-07T11:32:54Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975589-step-35",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975589",
+    "service": "test-3-11",
+    "name": "Complete job",
+    "start": "2026-10-07T11:32:54Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975596",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "test-3-14-ext",
+    "name": "Test 3.14 ext",
+    "start": "2026-10-07T11:31:31Z",
+    "duration_ms": 105000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975596-step-1",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975596",
+    "service": "test-3-14-ext",
+    "name": "Set up job",
+    "start": "2026-10-07T11:31:32Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975596-step-2",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975596",
+    "service": "test-3-14-ext",
+    "name": "Determine build type",
+    "start": "2026-10-07T11:31:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975596-step-3",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975596",
+    "service": "test-3-14-ext",
+    "name": "Retrieve the project source from an sdist inside the GHA artifact",
+    "start": "2026-10-07T11:31:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975596-step-4",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975596",
+    "service": "test-3-14-ext",
+    "name": "Download distributions",
+    "start": "2026-10-07T11:31:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975596-step-5",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975596",
+    "service": "test-3-14-ext",
+    "name": "Setup Python 3.14",
+    "start": "2026-10-07T11:31:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975596-step-6",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975596",
+    "service": "test-3-14-ext",
+    "name": "Compute runtime Python version",
+    "start": "2026-10-07T11:31:35Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975596-step-7",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975596",
+    "service": "test-3-14-ext",
+    "name": "Get pip cache dir",
+    "start": "2026-10-07T11:31:36Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975596-step-8",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975596",
+    "service": "test-3-14-ext",
+    "name": "Cache PyPI",
+    "start": "2026-10-07T11:31:37Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975596-step-9",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975596",
+    "service": "test-3-14-ext",
+    "name": "Install dependencies",
+    "start": "2026-10-07T11:31:38Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975596-step-10",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975596",
+    "service": "test-3-14-ext",
+    "name": "Determine pre-compiled compatible wheel",
+    "start": "2026-10-07T11:31:45Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975596-step-12",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975596",
+    "service": "test-3-14-ext",
+    "name": "Self-install (from wheel)",
+    "start": "2026-10-07T11:31:46Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975596-step-13",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975596",
+    "service": "test-3-14-ext",
+    "name": "Run unittests",
+    "start": "2026-10-07T11:31:46Z",
+    "duration_ms": 85000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975596-step-14",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975596",
+    "service": "test-3-14-ext",
+    "name": "Produce markdown test summary from JUnit",
+    "start": "2026-10-07T11:33:11Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975596-step-15",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975596",
+    "service": "test-3-14-ext",
+    "name": "Append coverage results to Job Summary",
+    "start": "2026-10-07T11:33:12Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975596-step-17",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975596",
+    "service": "test-3-14-ext",
+    "name": "Prepare coverage artifact",
+    "start": "2026-10-07T11:33:13Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975596-step-33",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975596",
+    "service": "test-3-14-ext",
+    "name": "Post Cache PyPI",
+    "start": "2026-10-07T11:33:14Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975596-step-34",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975596",
+    "service": "test-3-14-ext",
+    "name": "Post Setup Python 3.14",
+    "start": "2026-10-07T11:33:14Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975596-step-35",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975596",
+    "service": "test-3-14-ext",
+    "name": "Complete job",
+    "start": "2026-10-07T11:33:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975609",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "test-3-14t-ext-debug",
+    "name": "Test 3.14t ext debug",
+    "start": "2026-10-07T11:31:31Z",
+    "duration_ms": 198000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975609-step-1",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975609",
+    "service": "test-3-14t-ext-debug",
+    "name": "Set up job",
+    "start": "2026-10-07T11:31:33Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975609-step-2",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975609",
+    "service": "test-3-14t-ext-debug",
+    "name": "Determine build type",
+    "start": "2026-10-07T11:31:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975609-step-3",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975609",
+    "service": "test-3-14t-ext-debug",
+    "name": "Retrieve the project source from an sdist inside the GHA artifact",
+    "start": "2026-10-07T11:31:36Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975609-step-5",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975609",
+    "service": "test-3-14t-ext-debug",
+    "name": "Setup Python 3.14t",
+    "start": "2026-10-07T11:31:37Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975609-step-6",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975609",
+    "service": "test-3-14t-ext-debug",
+    "name": "Compute runtime Python version",
+    "start": "2026-10-07T11:31:46Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975609-step-7",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975609",
+    "service": "test-3-14t-ext-debug",
+    "name": "Get pip cache dir",
+    "start": "2026-10-07T11:31:46Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975609-step-8",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975609",
+    "service": "test-3-14t-ext-debug",
+    "name": "Cache PyPI",
+    "start": "2026-10-07T11:31:46Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975609-step-9",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975609",
+    "service": "test-3-14t-ext-debug",
+    "name": "Install dependencies",
+    "start": "2026-10-07T11:31:48Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975609-step-11",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975609",
+    "service": "test-3-14t-ext-debug",
+    "name": "Ensure clean for source build",
+    "start": "2026-10-07T11:31:54Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975609-step-12",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975609",
+    "service": "test-3-14t-ext-debug",
+    "name": "Self-install (from source)",
+    "start": "2026-10-07T11:31:54Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975609-step-13",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975609",
+    "service": "test-3-14t-ext-debug",
+    "name": "Run unittests",
+    "start": "2026-10-07T11:31:58Z",
+    "duration_ms": 164000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975609-step-14",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975609",
+    "service": "test-3-14t-ext-debug",
+    "name": "Produce markdown test summary from JUnit",
+    "start": "2026-10-07T11:34:42Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975609-step-15",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975609",
+    "service": "test-3-14t-ext-debug",
+    "name": "Append coverage results to Job Summary",
+    "start": "2026-10-07T11:34:42Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975609-step-17",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975609",
+    "service": "test-3-14t-ext-debug",
+    "name": "Prepare coverage artifact",
+    "start": "2026-10-07T11:34:43Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975609-step-33",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975609",
+    "service": "test-3-14t-ext-debug",
+    "name": "Post Cache PyPI",
+    "start": "2026-10-07T11:34:46Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975609-step-34",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975609",
+    "service": "test-3-14t-ext-debug",
+    "name": "Post Setup Python 3.14t",
+    "start": "2026-10-07T11:34:46Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975609-step-35",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975609",
+    "service": "test-3-14t-ext-debug",
+    "name": "Complete job",
+    "start": "2026-10-07T11:34:46Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975684",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "test-3-10-ext-debug",
+    "name": "Test 3.10 ext debug",
+    "start": "2026-10-07T11:31:31Z",
+    "duration_ms": 115000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975684-step-1",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975684",
+    "service": "test-3-10-ext-debug",
+    "name": "Set up job",
+    "start": "2026-10-07T11:31:32Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975684-step-2",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975684",
+    "service": "test-3-10-ext-debug",
+    "name": "Determine build type",
+    "start": "2026-10-07T11:31:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975684-step-3",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975684",
+    "service": "test-3-10-ext-debug",
+    "name": "Retrieve the project source from an sdist inside the GHA artifact",
+    "start": "2026-10-07T11:31:36Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975684-step-5",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975684",
+    "service": "test-3-10-ext-debug",
+    "name": "Setup Python 3.10",
+    "start": "2026-10-07T11:31:38Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975684-step-6",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975684",
+    "service": "test-3-10-ext-debug",
+    "name": "Compute runtime Python version",
+    "start": "2026-10-07T11:31:38Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975684-step-7",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975684",
+    "service": "test-3-10-ext-debug",
+    "name": "Get pip cache dir",
+    "start": "2026-10-07T11:31:38Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975684-step-8",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975684",
+    "service": "test-3-10-ext-debug",
+    "name": "Cache PyPI",
+    "start": "2026-10-07T11:31:38Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975684-step-9",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975684",
+    "service": "test-3-10-ext-debug",
+    "name": "Install dependencies",
+    "start": "2026-10-07T11:31:41Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975684-step-11",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975684",
+    "service": "test-3-10-ext-debug",
+    "name": "Ensure clean for source build",
+    "start": "2026-10-07T11:31:45Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975684-step-12",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975684",
+    "service": "test-3-10-ext-debug",
+    "name": "Self-install (from source)",
+    "start": "2026-10-07T11:31:45Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975684-step-13",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975684",
+    "service": "test-3-10-ext-debug",
+    "name": "Run unittests",
+    "start": "2026-10-07T11:31:48Z",
+    "duration_ms": 91000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975684-step-14",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975684",
+    "service": "test-3-10-ext-debug",
+    "name": "Produce markdown test summary from JUnit",
+    "start": "2026-10-07T11:33:19Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975684-step-15",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975684",
+    "service": "test-3-10-ext-debug",
+    "name": "Append coverage results to Job Summary",
+    "start": "2026-10-07T11:33:19Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975684-step-17",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975684",
+    "service": "test-3-10-ext-debug",
+    "name": "Prepare coverage artifact",
+    "start": "2026-10-07T11:33:20Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975684-step-33",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975684",
+    "service": "test-3-10-ext-debug",
+    "name": "Post Cache PyPI",
+    "start": "2026-10-07T11:33:23Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975684-step-34",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975684",
+    "service": "test-3-10-ext-debug",
+    "name": "Post Setup Python 3.10",
+    "start": "2026-10-07T11:33:23Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975684-step-35",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975684",
+    "service": "test-3-10-ext-debug",
+    "name": "Complete job",
+    "start": "2026-10-07T11:33:23Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975828",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "test-3-13-ext",
+    "name": "Test 3.13 ext",
+    "start": "2026-10-07T11:31:31Z",
+    "duration_ms": 115000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975828-step-1",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975828",
+    "service": "test-3-13-ext",
+    "name": "Set up job",
+    "start": "2026-10-07T11:31:33Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975828-step-2",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975828",
+    "service": "test-3-13-ext",
+    "name": "Determine build type",
+    "start": "2026-10-07T11:31:36Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975828-step-3",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975828",
+    "service": "test-3-13-ext",
+    "name": "Retrieve the project source from an sdist inside the GHA artifact",
+    "start": "2026-10-07T11:31:36Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975828-step-4",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975828",
+    "service": "test-3-13-ext",
+    "name": "Download distributions",
+    "start": "2026-10-07T11:31:37Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975828-step-5",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975828",
+    "service": "test-3-13-ext",
+    "name": "Setup Python 3.13",
+    "start": "2026-10-07T11:31:39Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975828-step-6",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975828",
+    "service": "test-3-13-ext",
+    "name": "Compute runtime Python version",
+    "start": "2026-10-07T11:31:40Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975828-step-7",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975828",
+    "service": "test-3-13-ext",
+    "name": "Get pip cache dir",
+    "start": "2026-10-07T11:31:40Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975828-step-8",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975828",
+    "service": "test-3-13-ext",
+    "name": "Cache PyPI",
+    "start": "2026-10-07T11:31:41Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975828-step-9",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975828",
+    "service": "test-3-13-ext",
+    "name": "Install dependencies",
+    "start": "2026-10-07T11:31:43Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975828-step-10",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975828",
+    "service": "test-3-13-ext",
+    "name": "Determine pre-compiled compatible wheel",
+    "start": "2026-10-07T11:31:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975828-step-12",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975828",
+    "service": "test-3-13-ext",
+    "name": "Self-install (from wheel)",
+    "start": "2026-10-07T11:31:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975828-step-13",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975828",
+    "service": "test-3-13-ext",
+    "name": "Run unittests",
+    "start": "2026-10-07T11:31:51Z",
+    "duration_ms": 87000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975828-step-14",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975828",
+    "service": "test-3-13-ext",
+    "name": "Produce markdown test summary from JUnit",
+    "start": "2026-10-07T11:33:18Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975828-step-15",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975828",
+    "service": "test-3-13-ext",
+    "name": "Append coverage results to Job Summary",
+    "start": "2026-10-07T11:33:19Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975828-step-17",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975828",
+    "service": "test-3-13-ext",
+    "name": "Prepare coverage artifact",
+    "start": "2026-10-07T11:33:20Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975828-step-33",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975828",
+    "service": "test-3-13-ext",
+    "name": "Post Cache PyPI",
+    "start": "2026-10-07T11:33:22Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975828-step-34",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975828",
+    "service": "test-3-13-ext",
+    "name": "Post Setup Python 3.13",
+    "start": "2026-10-07T11:33:23Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975828-step-35",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975828",
+    "service": "test-3-13-ext",
+    "name": "Complete job",
+    "start": "2026-10-07T11:33:23Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975858",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "test-pypy-3-10",
+    "name": "Test pypy-3.10",
+    "start": "2026-10-07T11:31:31Z",
+    "duration_ms": 245000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975858-step-1",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975858",
+    "service": "test-pypy-3-10",
+    "name": "Set up job",
+    "start": "2026-10-07T11:31:32Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975858-step-2",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975858",
+    "service": "test-pypy-3-10",
+    "name": "Determine build type",
+    "start": "2026-10-07T11:31:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975858-step-3",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975858",
+    "service": "test-pypy-3-10",
+    "name": "Retrieve the project source from an sdist inside the GHA artifact",
+    "start": "2026-10-07T11:31:35Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975858-step-4",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975858",
+    "service": "test-pypy-3-10",
+    "name": "Download distributions",
+    "start": "2026-10-07T11:31:36Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975858-step-5",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975858",
+    "service": "test-pypy-3-10",
+    "name": "Setup Python pypy-3.10",
+    "start": "2026-10-07T11:31:37Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975858-step-6",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975858",
+    "service": "test-pypy-3-10",
+    "name": "Compute runtime Python version",
+    "start": "2026-10-07T11:31:37Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975858-step-7",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975858",
+    "service": "test-pypy-3-10",
+    "name": "Get pip cache dir",
+    "start": "2026-10-07T11:31:44Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975858-step-8",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975858",
+    "service": "test-pypy-3-10",
+    "name": "Cache PyPI",
+    "start": "2026-10-07T11:31:49Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975858-step-9",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975858",
+    "service": "test-pypy-3-10",
+    "name": "Install dependencies",
+    "start": "2026-10-07T11:31:50Z",
+    "duration_ms": 14000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975858-step-10",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975858",
+    "service": "test-pypy-3-10",
+    "name": "Determine pre-compiled compatible wheel",
+    "start": "2026-10-07T11:32:04Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975858-step-12",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975858",
+    "service": "test-pypy-3-10",
+    "name": "Self-install (from wheel)",
+    "start": "2026-10-07T11:32:04Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975858-step-13",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975858",
+    "service": "test-pypy-3-10",
+    "name": "Run unittests",
+    "start": "2026-10-07T11:32:05Z",
+    "duration_ms": 205000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975858-step-14",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975858",
+    "service": "test-pypy-3-10",
+    "name": "Produce markdown test summary from JUnit",
+    "start": "2026-10-07T11:35:30Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975858-step-15",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975858",
+    "service": "test-pypy-3-10",
+    "name": "Append coverage results to Job Summary",
+    "start": "2026-10-07T11:35:30Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975858-step-17",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975858",
+    "service": "test-pypy-3-10",
+    "name": "Prepare coverage artifact",
+    "start": "2026-10-07T11:35:32Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975858-step-33",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975858",
+    "service": "test-pypy-3-10",
+    "name": "Post Cache PyPI",
+    "start": "2026-10-07T11:35:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975858-step-34",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975858",
+    "service": "test-pypy-3-10",
+    "name": "Post Setup Python pypy-3.10",
+    "start": "2026-10-07T11:35:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112769975858-step-35",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112769975858",
+    "service": "test-pypy-3-10",
+    "name": "Complete job",
+    "start": "2026-10-07T11:35:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112772018851",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "tests-status",
+    "name": "Tests status",
+    "start": "2026-10-07T11:37:04Z",
+    "duration_ms": 5000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-112772018851-step-1",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112772018851",
+    "service": "tests-status",
+    "name": "Set up job",
+    "start": "2026-10-07T11:37:04Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112772018851-step-2",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112772018851",
+    "service": "tests-status",
+    "name": "Decide whether the needed jobs succeeded or failed",
+    "start": "2026-10-07T11:37:07Z",
+    "duration_ms": 0.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-112772018851-step-9",
+    "trace_id": "run-37614237594",
+    "parent_id": "job-112772018851",
+    "service": "tests-status",
+    "name": "Complete job",
+    "start": "2026-10-07T11:37:07Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112772069512",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "pre-deploy",
+    "name": "Pre-Deploy",
+    "start": "2026-10-07T11:37:10Z",
+    "duration_ms": -1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112772070432",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "build-wheels-for-odd-arches",
+    "name": "\ud83d\udce6 Build wheels for odd arches${{ '' }}",
+    "start": "2026-10-07T11:37:10Z",
+    "duration_ms": -1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112772071078",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "build-wheels-for-mobile-arches",
+    "name": "\ud83d\udce6 Build wheels for mobile arches${{ '' }}",
+    "start": "2026-10-07T11:37:10Z",
+    "duration_ms": -1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-112772071789",
+    "trace_id": "run-37614237594",
+    "parent_id": "run-37614237594",
+    "service": "deploy",
+    "name": "Deploy",
+    "start": "2026-10-07T11:37:10Z",
+    "duration_ms": -1000.0,
+    "status": "ok"
+  }
+]

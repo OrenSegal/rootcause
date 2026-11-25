@@ -1,0 +1,16 @@
+[
+  {
+    "id": "b9500b54de",
+    "service": "networkx",
+    "version": "b9500b54de",
+    "ts": "2026-11-09T10:12:46Z",
+    "author": "HITESH4577",
+    "summary": "Fix DFS traversal functions when depth_limit is 0",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "networkx/algorithms/traversal/depth_first_search.py",
+      "networkx/algorithms/traversal/tests/test_dfs.py"
+    ]
+  }
+]

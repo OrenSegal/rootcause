@@ -1,0 +1,18 @@
+[
+  {
+    "author": "philippjfr",
+    "committedDate": "2026-11-18T17:16:03Z",
+    "messageHeadline": "fix: Resize the container of ESM components when their size changes",
+    "oid": "a7ebfdb6d757b192cac705d66147c71676a0783b",
+    "files": [
+      {
+        "filename": "panel/models/reactive_esm.ts",
+        "status": "modified"
+      },
+      {
+        "filename": "panel/tests/ui/test_custom.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "author": "VanshajPoonia",
+    "committedDate": "2026-11-18T19:10:37Z",
+    "messageHeadline": "Allow interp along dimensions with a single coordinate value",
+    "oid": "4e702a98c84b11b6231311be786b1a56a0597996",
+    "files": [
+      {
+        "filename": "xarray/core/missing.py",
+        "status": "modified"
+      },
+      {
+        "filename": "xarray/tests/test_interp.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "VanshajPoonia",
+    "committedDate": "2026-11-18T19:10:37Z",
+    "messageHeadline": "Document interp along a single coordinate value",
+    "oid": "74f132f57db5e77c0eea6369c2faef1de5c1e546",
+    "files": [
+      {
+        "filename": "xarray/core/dataarray.py",
+        "status": "modified"
+      },
+      {
+        "filename": "xarray/core/dataset.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "VanshajPoonia",
+    "committedDate": "2026-11-18T19:10:37Z",
+    "messageHeadline": "Add whats-new entry for #10747",
+    "oid": "9ae0e3ad9c144e295bcd40598307f643d0739a20",
+    "files": [
+      {
+        "filename": "doc/whats-new.rst",
+        "status": "modified"
+      }
+    ]
+  }
+]

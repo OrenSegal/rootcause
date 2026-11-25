@@ -1,0 +1,22 @@
+[
+  {
+    "id": "408fda1480",
+    "service": "ipykernel",
+    "version": "408fda1480",
+    "ts": "2026-10-19T22:43:36Z",
+    "author": "dependabot[bot]",
+    "summary": "Bump actions/create-github-app-token",
+    "config_before": {
+      ".github/workflows/publish-changelog.yml": "previous",
+      ".github/workflows/publish-release.yml": "previous"
+    },
+    "config_after": {
+      ".github/workflows/publish-changelog.yml": "modified in 408fda1480",
+      ".github/workflows/publish-release.yml": "modified in 408fda1480"
+    },
+    "files": [
+      ".github/workflows/publish-changelog.yml",
+      ".github/workflows/publish-release.yml"
+    ]
+  }
+]

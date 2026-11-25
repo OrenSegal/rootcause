@@ -1,0 +1,2172 @@
+[
+  {
+    "span_id": "run-44548218666",
+    "trace_id": "run-44548218666",
+    "parent_id": null,
+    "service": "python-tests",
+    "name": "Python tests",
+    "start": "2026-11-19T14:51:03Z",
+    "duration_ms": 208000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-135644487861",
+    "trace_id": "run-44548218666",
+    "parent_id": "run-44548218666",
+    "service": "check-imports",
+    "name": "check-imports",
+    "start": "2026-11-19T14:51:09Z",
+    "duration_ms": 25000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644487861-step-1",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644487861",
+    "service": "check-imports",
+    "name": "Set up job",
+    "start": "2026-11-19T14:51:10Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644487861-step-2",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644487861",
+    "service": "check-imports",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:51:11Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644487861-step-3",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644487861",
+    "service": "check-imports",
+    "name": "Set up Python",
+    "start": "2026-11-19T14:51:12Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644487861-step-4",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644487861",
+    "service": "check-imports",
+    "name": "Install base dependencies only",
+    "start": "2026-11-19T14:51:12Z",
+    "duration_ms": 13000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644487861-step-5",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644487861",
+    "service": "check-imports",
+    "name": "Check imports",
+    "start": "2026-11-19T14:51:25Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644487861-step-9",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644487861",
+    "service": "check-imports",
+    "name": "Post Set up Python",
+    "start": "2026-11-19T14:51:31Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644487861-step-10",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644487861",
+    "service": "check-imports",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:51:31Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644487861-step-11",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644487861",
+    "service": "check-imports",
+    "name": "Complete job",
+    "start": "2026-11-19T14:51:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488079",
+    "trace_id": "run-44548218666",
+    "parent_id": "run-44548218666",
+    "service": "build-windows-3-10-inference",
+    "name": "build-windows (3.10, inference)",
+    "start": "2026-11-19T14:51:09Z",
+    "duration_ms": 96000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488079-step-1",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488079",
+    "service": "build-windows-3-10-inference",
+    "name": "Set up job",
+    "start": "2026-11-19T14:51:09Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488079-step-2",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488079",
+    "service": "build-windows-3-10-inference",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:51:11Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488079-step-3",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488079",
+    "service": "build-windows-3-10-inference",
+    "name": "Set up Python 3.10",
+    "start": "2026-11-19T14:51:16Z",
+    "duration_ms": 38000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488079-step-4",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488079",
+    "service": "build-windows-3-10-inference",
+    "name": "Setup venv + uv",
+    "start": "2026-11-19T14:51:54Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488079-step-5",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488079",
+    "service": "build-windows-3-10-inference",
+    "name": "Install dependencies",
+    "start": "2026-11-19T14:51:57Z",
+    "duration_ms": 12000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488079-step-6",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488079",
+    "service": "build-windows-3-10-inference",
+    "name": "Run tests",
+    "start": "2026-11-19T14:52:09Z",
+    "duration_ms": 25000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488079-step-7",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488079",
+    "service": "build-windows-3-10-inference",
+    "name": "Upload coverage reports to Codecov with GitHub Action",
+    "start": "2026-11-19T14:52:34Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488079-step-13",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488079",
+    "service": "build-windows-3-10-inference",
+    "name": "Post Set up Python 3.10",
+    "start": "2026-11-19T14:52:41Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488079-step-14",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488079",
+    "service": "build-windows-3-10-inference",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:52:42Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488079-step-15",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488079",
+    "service": "build-windows-3-10-inference",
+    "name": "Complete job",
+    "start": "2026-11-19T14:52:44Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488116",
+    "trace_id": "run-44548218666",
+    "parent_id": "run-44548218666",
+    "service": "build-windows-3-10-api",
+    "name": "build-windows (3.10, api)",
+    "start": "2026-11-19T14:51:08Z",
+    "duration_ms": 166000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488116-step-1",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488116",
+    "service": "build-windows-3-10-api",
+    "name": "Set up job",
+    "start": "2026-11-19T14:51:09Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488116-step-2",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488116",
+    "service": "build-windows-3-10-api",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:51:10Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488116-step-3",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488116",
+    "service": "build-windows-3-10-api",
+    "name": "Set up Python 3.10",
+    "start": "2026-11-19T14:51:15Z",
+    "duration_ms": 30000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488116-step-4",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488116",
+    "service": "build-windows-3-10-api",
+    "name": "Setup venv + uv",
+    "start": "2026-11-19T14:51:45Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488116-step-5",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488116",
+    "service": "build-windows-3-10-api",
+    "name": "Install dependencies",
+    "start": "2026-11-19T14:51:47Z",
+    "duration_ms": 11000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488116-step-6",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488116",
+    "service": "build-windows-3-10-api",
+    "name": "Run tests",
+    "start": "2026-11-19T14:51:58Z",
+    "duration_ms": 106000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488116-step-7",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488116",
+    "service": "build-windows-3-10-api",
+    "name": "Upload coverage reports to Codecov with GitHub Action",
+    "start": "2026-11-19T14:53:44Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488116-step-13",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488116",
+    "service": "build-windows-3-10-api",
+    "name": "Post Set up Python 3.10",
+    "start": "2026-11-19T14:53:51Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488116-step-14",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488116",
+    "service": "build-windows-3-10-api",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:53:51Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488116-step-15",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488116",
+    "service": "build-windows-3-10-api",
+    "name": "Complete job",
+    "start": "2026-11-19T14:53:53Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488197",
+    "trace_id": "run-44548218666",
+    "parent_id": "run-44548218666",
+    "service": "build-windows-3-15-inference",
+    "name": "build-windows (3.15, inference)",
+    "start": "2026-11-19T14:51:09Z",
+    "duration_ms": 72000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488197-step-1",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488197",
+    "service": "build-windows-3-15-inference",
+    "name": "Set up job",
+    "start": "2026-11-19T14:51:10Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488197-step-2",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488197",
+    "service": "build-windows-3-15-inference",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:51:12Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488197-step-3",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488197",
+    "service": "build-windows-3-15-inference",
+    "name": "Set up Python 3.15",
+    "start": "2026-11-19T14:51:17Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488197-step-4",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488197",
+    "service": "build-windows-3-15-inference",
+    "name": "Setup venv + uv",
+    "start": "2026-11-19T14:51:17Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488197-step-5",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488197",
+    "service": "build-windows-3-15-inference",
+    "name": "Install dependencies",
+    "start": "2026-11-19T14:51:23Z",
+    "duration_ms": 25000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488197-step-6",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488197",
+    "service": "build-windows-3-15-inference",
+    "name": "Run tests",
+    "start": "2026-11-19T14:51:48Z",
+    "duration_ms": 22000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488197-step-7",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488197",
+    "service": "build-windows-3-15-inference",
+    "name": "Upload coverage reports to Codecov with GitHub Action",
+    "start": "2026-11-19T14:52:10Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488197-step-13",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488197",
+    "service": "build-windows-3-15-inference",
+    "name": "Post Set up Python 3.15",
+    "start": "2026-11-19T14:52:17Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488197-step-14",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488197",
+    "service": "build-windows-3-15-inference",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:52:17Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488197-step-15",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488197",
+    "service": "build-windows-3-15-inference",
+    "name": "Complete job",
+    "start": "2026-11-19T14:52:20Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488271",
+    "trace_id": "run-44548218666",
+    "parent_id": "run-44548218666",
+    "service": "build-ubuntu-3-13-gradio",
+    "name": "build-ubuntu (3.13, gradio)",
+    "start": "2026-11-19T14:51:30Z",
+    "duration_ms": 33000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488271-step-1",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488271",
+    "service": "build-ubuntu-3-13-gradio",
+    "name": "Set up job",
+    "start": "2026-11-19T14:51:31Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488271-step-2",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488271",
+    "service": "build-ubuntu-3-13-gradio",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:51:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488271-step-3",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488271",
+    "service": "build-ubuntu-3-13-gradio",
+    "name": "Set up Python 3.13",
+    "start": "2026-11-19T14:51:32Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488271-step-4",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488271",
+    "service": "build-ubuntu-3-13-gradio",
+    "name": "Setup venv + uv",
+    "start": "2026-11-19T14:51:38Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488271-step-5",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488271",
+    "service": "build-ubuntu-3-13-gradio",
+    "name": "Install dependencies",
+    "start": "2026-11-19T14:51:40Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488271-step-6",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488271",
+    "service": "build-ubuntu-3-13-gradio",
+    "name": "Run tests",
+    "start": "2026-11-19T14:51:43Z",
+    "duration_ms": 16000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488271-step-7",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488271",
+    "service": "build-ubuntu-3-13-gradio",
+    "name": "Upload coverage reports to Codecov with GitHub Action",
+    "start": "2026-11-19T14:51:59Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488271-step-13",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488271",
+    "service": "build-ubuntu-3-13-gradio",
+    "name": "Post Set up Python 3.13",
+    "start": "2026-11-19T14:52:01Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488271-step-14",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488271",
+    "service": "build-ubuntu-3-13-gradio",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:52:01Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488271-step-15",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488271",
+    "service": "build-ubuntu-3-13-gradio",
+    "name": "Complete job",
+    "start": "2026-11-19T14:52:01Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488273",
+    "trace_id": "run-44548218666",
+    "parent_id": "run-44548218666",
+    "service": "build-windows-3-10-transfer-hf-xet",
+    "name": "build-windows (3.10, transfer (hf_xet))",
+    "start": "2026-11-19T14:51:09Z",
+    "duration_ms": 201000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488273-step-1",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488273",
+    "service": "build-windows-3-10-transfer-hf-xet",
+    "name": "Set up job",
+    "start": "2026-11-19T14:51:10Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488273-step-2",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488273",
+    "service": "build-windows-3-10-transfer-hf-xet",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:51:11Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488273-step-3",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488273",
+    "service": "build-windows-3-10-transfer-hf-xet",
+    "name": "Set up Python 3.10",
+    "start": "2026-11-19T14:51:17Z",
+    "duration_ms": 55000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488273-step-4",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488273",
+    "service": "build-windows-3-10-transfer-hf-xet",
+    "name": "Setup venv + uv",
+    "start": "2026-11-19T14:52:12Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488273-step-5",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488273",
+    "service": "build-windows-3-10-transfer-hf-xet",
+    "name": "Install dependencies",
+    "start": "2026-11-19T14:52:15Z",
+    "duration_ms": 28000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488273-step-6",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488273",
+    "service": "build-windows-3-10-transfer-hf-xet",
+    "name": "Run tests",
+    "start": "2026-11-19T14:52:43Z",
+    "duration_ms": 95000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488273-step-7",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488273",
+    "service": "build-windows-3-10-transfer-hf-xet",
+    "name": "Upload coverage reports to Codecov with GitHub Action",
+    "start": "2026-11-19T14:54:18Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488273-step-13",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488273",
+    "service": "build-windows-3-10-transfer-hf-xet",
+    "name": "Post Set up Python 3.10",
+    "start": "2026-11-19T14:54:26Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488273-step-14",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488273",
+    "service": "build-windows-3-10-transfer-hf-xet",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:54:26Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488273-step-15",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488273",
+    "service": "build-windows-3-10-transfer-hf-xet",
+    "name": "Complete job",
+    "start": "2026-11-19T14:54:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488361",
+    "trace_id": "run-44548218666",
+    "parent_id": "run-44548218666",
+    "service": "build-ubuntu-3-10-transfer-no-hf-xet",
+    "name": "build-ubuntu (3.10, transfer (no hf_xet))",
+    "start": "2026-11-19T14:51:31Z",
+    "duration_ms": 45000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488361-step-1",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488361",
+    "service": "build-ubuntu-3-10-transfer-no-hf-xet",
+    "name": "Set up job",
+    "start": "2026-11-19T14:51:31Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488361-step-2",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488361",
+    "service": "build-ubuntu-3-10-transfer-no-hf-xet",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:51:32Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488361-step-3",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488361",
+    "service": "build-ubuntu-3-10-transfer-no-hf-xet",
+    "name": "Set up Python 3.10",
+    "start": "2026-11-19T14:51:33Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488361-step-4",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488361",
+    "service": "build-ubuntu-3-10-transfer-no-hf-xet",
+    "name": "Setup venv + uv",
+    "start": "2026-11-19T14:51:39Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488361-step-5",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488361",
+    "service": "build-ubuntu-3-10-transfer-no-hf-xet",
+    "name": "Install dependencies",
+    "start": "2026-11-19T14:51:40Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488361-step-6",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488361",
+    "service": "build-ubuntu-3-10-transfer-no-hf-xet",
+    "name": "Run tests",
+    "start": "2026-11-19T14:51:42Z",
+    "duration_ms": 30000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488361-step-7",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488361",
+    "service": "build-ubuntu-3-10-transfer-no-hf-xet",
+    "name": "Upload coverage reports to Codecov with GitHub Action",
+    "start": "2026-11-19T14:52:12Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488361-step-13",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488361",
+    "service": "build-ubuntu-3-10-transfer-no-hf-xet",
+    "name": "Post Set up Python 3.10",
+    "start": "2026-11-19T14:52:14Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488361-step-14",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488361",
+    "service": "build-ubuntu-3-10-transfer-no-hf-xet",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:52:14Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488361-step-15",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488361",
+    "service": "build-ubuntu-3-10-transfer-no-hf-xet",
+    "name": "Complete job",
+    "start": "2026-11-19T14:52:14Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488449",
+    "trace_id": "run-44548218666",
+    "parent_id": "run-44548218666",
+    "service": "build-ubuntu-3-15-transfer-no-hf-xet",
+    "name": "build-ubuntu (3.15, transfer (no hf_xet))",
+    "start": "2026-11-19T14:51:32Z",
+    "duration_ms": 43000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488449-step-1",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488449",
+    "service": "build-ubuntu-3-15-transfer-no-hf-xet",
+    "name": "Set up job",
+    "start": "2026-11-19T14:51:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488449-step-2",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488449",
+    "service": "build-ubuntu-3-15-transfer-no-hf-xet",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:51:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488449-step-3",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488449",
+    "service": "build-ubuntu-3-15-transfer-no-hf-xet",
+    "name": "Set up Python 3.15",
+    "start": "2026-11-19T14:51:34Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488449-step-4",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488449",
+    "service": "build-ubuntu-3-15-transfer-no-hf-xet",
+    "name": "Setup venv + uv",
+    "start": "2026-11-19T14:51:42Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488449-step-5",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488449",
+    "service": "build-ubuntu-3-15-transfer-no-hf-xet",
+    "name": "Install dependencies",
+    "start": "2026-11-19T14:51:43Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488449-step-6",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488449",
+    "service": "build-ubuntu-3-15-transfer-no-hf-xet",
+    "name": "Run tests",
+    "start": "2026-11-19T14:51:47Z",
+    "duration_ms": 25000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488449-step-7",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488449",
+    "service": "build-ubuntu-3-15-transfer-no-hf-xet",
+    "name": "Upload coverage reports to Codecov with GitHub Action",
+    "start": "2026-11-19T14:52:12Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488449-step-13",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488449",
+    "service": "build-ubuntu-3-15-transfer-no-hf-xet",
+    "name": "Post Set up Python 3.15",
+    "start": "2026-11-19T14:52:13Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488449-step-14",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488449",
+    "service": "build-ubuntu-3-15-transfer-no-hf-xet",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:52:13Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488449-step-15",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488449",
+    "service": "build-ubuntu-3-15-transfer-no-hf-xet",
+    "name": "Complete job",
+    "start": "2026-11-19T14:52:13Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488475",
+    "trace_id": "run-44548218666",
+    "parent_id": "run-44548218666",
+    "service": "build-windows-3-15-transfer-hf-xet",
+    "name": "build-windows (3.15, transfer (hf_xet))",
+    "start": "2026-11-19T14:51:09Z",
+    "duration_ms": 153000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-135644488475-step-1",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488475",
+    "service": "build-windows-3-15-transfer-hf-xet",
+    "name": "Set up job",
+    "start": "2026-11-19T14:51:10Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488475-step-2",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488475",
+    "service": "build-windows-3-15-transfer-hf-xet",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:51:12Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488475-step-3",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488475",
+    "service": "build-windows-3-15-transfer-hf-xet",
+    "name": "Set up Python 3.15",
+    "start": "2026-11-19T14:51:17Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488475-step-4",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488475",
+    "service": "build-windows-3-15-transfer-hf-xet",
+    "name": "Setup venv + uv",
+    "start": "2026-11-19T14:51:17Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488475-step-5",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488475",
+    "service": "build-windows-3-15-transfer-hf-xet",
+    "name": "Install dependencies",
+    "start": "2026-11-19T14:51:24Z",
+    "duration_ms": 28000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488475-step-6",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488475",
+    "service": "build-windows-3-15-transfer-hf-xet",
+    "name": "Run tests",
+    "start": "2026-11-19T14:51:52Z",
+    "duration_ms": 105000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-135644488475-step-14",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488475",
+    "service": "build-windows-3-15-transfer-hf-xet",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:53:37Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488475-step-15",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488475",
+    "service": "build-windows-3-15-transfer-hf-xet",
+    "name": "Complete job",
+    "start": "2026-11-19T14:53:40Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488490",
+    "trace_id": "run-44548218666",
+    "parent_id": "run-44548218666",
+    "service": "build-windows-3-15-transfer-no-hf-xet",
+    "name": "build-windows (3.15, transfer (no hf_xet))",
+    "start": "2026-11-19T14:51:09Z",
+    "duration_ms": 134000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488490-step-1",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488490",
+    "service": "build-windows-3-15-transfer-no-hf-xet",
+    "name": "Set up job",
+    "start": "2026-11-19T14:51:11Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488490-step-2",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488490",
+    "service": "build-windows-3-15-transfer-no-hf-xet",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:51:13Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488490-step-3",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488490",
+    "service": "build-windows-3-15-transfer-no-hf-xet",
+    "name": "Set up Python 3.15",
+    "start": "2026-11-19T14:51:21Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488490-step-4",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488490",
+    "service": "build-windows-3-15-transfer-no-hf-xet",
+    "name": "Setup venv + uv",
+    "start": "2026-11-19T14:51:21Z",
+    "duration_ms": 24000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488490-step-5",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488490",
+    "service": "build-windows-3-15-transfer-no-hf-xet",
+    "name": "Install dependencies",
+    "start": "2026-11-19T14:51:45Z",
+    "duration_ms": 36000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488490-step-6",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488490",
+    "service": "build-windows-3-15-transfer-no-hf-xet",
+    "name": "Run tests",
+    "start": "2026-11-19T14:52:21Z",
+    "duration_ms": 46000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488490-step-7",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488490",
+    "service": "build-windows-3-15-transfer-no-hf-xet",
+    "name": "Upload coverage reports to Codecov with GitHub Action",
+    "start": "2026-11-19T14:53:07Z",
+    "duration_ms": 12000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488490-step-13",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488490",
+    "service": "build-windows-3-15-transfer-no-hf-xet",
+    "name": "Post Set up Python 3.15",
+    "start": "2026-11-19T14:53:19Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488490-step-14",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488490",
+    "service": "build-windows-3-15-transfer-no-hf-xet",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:53:19Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488490-step-15",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488490",
+    "service": "build-windows-3-15-transfer-no-hf-xet",
+    "name": "Complete job",
+    "start": "2026-11-19T14:53:21Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488494",
+    "trace_id": "run-44548218666",
+    "parent_id": "run-44548218666",
+    "service": "build-ubuntu-3-12-torch-latest",
+    "name": "build-ubuntu (3.12, torch_latest)",
+    "start": "2026-11-19T14:51:30Z",
+    "duration_ms": 60000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488494-step-1",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488494",
+    "service": "build-ubuntu-3-12-torch-latest",
+    "name": "Set up job",
+    "start": "2026-11-19T14:51:31Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488494-step-2",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488494",
+    "service": "build-ubuntu-3-12-torch-latest",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:51:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488494-step-3",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488494",
+    "service": "build-ubuntu-3-12-torch-latest",
+    "name": "Set up Python 3.12",
+    "start": "2026-11-19T14:51:32Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488494-step-4",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488494",
+    "service": "build-ubuntu-3-12-torch-latest",
+    "name": "Setup venv + uv",
+    "start": "2026-11-19T14:51:38Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488494-step-5",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488494",
+    "service": "build-ubuntu-3-12-torch-latest",
+    "name": "Install dependencies",
+    "start": "2026-11-19T14:51:39Z",
+    "duration_ms": 12000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488494-step-6",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488494",
+    "service": "build-ubuntu-3-12-torch-latest",
+    "name": "Run tests",
+    "start": "2026-11-19T14:51:51Z",
+    "duration_ms": 35000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488494-step-7",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488494",
+    "service": "build-ubuntu-3-12-torch-latest",
+    "name": "Upload coverage reports to Codecov with GitHub Action",
+    "start": "2026-11-19T14:52:26Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488494-step-13",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488494",
+    "service": "build-ubuntu-3-12-torch-latest",
+    "name": "Post Set up Python 3.12",
+    "start": "2026-11-19T14:52:28Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488494-step-14",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488494",
+    "service": "build-ubuntu-3-12-torch-latest",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:52:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488494-step-15",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488494",
+    "service": "build-ubuntu-3-12-torch-latest",
+    "name": "Complete job",
+    "start": "2026-11-19T14:52:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488495",
+    "trace_id": "run-44548218666",
+    "parent_id": "run-44548218666",
+    "service": "build-ubuntu-3-15-inference",
+    "name": "build-ubuntu (3.15, inference)",
+    "start": "2026-11-19T14:51:31Z",
+    "duration_ms": 41000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488495-step-1",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488495",
+    "service": "build-ubuntu-3-15-inference",
+    "name": "Set up job",
+    "start": "2026-11-19T14:51:32Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488495-step-2",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488495",
+    "service": "build-ubuntu-3-15-inference",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:51:33Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488495-step-3",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488495",
+    "service": "build-ubuntu-3-15-inference",
+    "name": "Set up Python 3.15",
+    "start": "2026-11-19T14:51:33Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488495-step-4",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488495",
+    "service": "build-ubuntu-3-15-inference",
+    "name": "Setup venv + uv",
+    "start": "2026-11-19T14:51:41Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488495-step-5",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488495",
+    "service": "build-ubuntu-3-15-inference",
+    "name": "Install dependencies",
+    "start": "2026-11-19T14:51:42Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488495-step-6",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488495",
+    "service": "build-ubuntu-3-15-inference",
+    "name": "Run tests",
+    "start": "2026-11-19T14:51:50Z",
+    "duration_ms": 18000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488495-step-7",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488495",
+    "service": "build-ubuntu-3-15-inference",
+    "name": "Upload coverage reports to Codecov with GitHub Action",
+    "start": "2026-11-19T14:52:08Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488495-step-13",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488495",
+    "service": "build-ubuntu-3-15-inference",
+    "name": "Post Set up Python 3.15",
+    "start": "2026-11-19T14:52:10Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488495-step-14",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488495",
+    "service": "build-ubuntu-3-15-inference",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:52:10Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488495-step-15",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488495",
+    "service": "build-ubuntu-3-15-inference",
+    "name": "Complete job",
+    "start": "2026-11-19T14:52:10Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488508",
+    "trace_id": "run-44548218666",
+    "parent_id": "run-44548218666",
+    "service": "build-ubuntu-3-10-python-3-10-torch-1-11",
+    "name": "build-ubuntu (3.10, Python 3.10, torch_1.11)",
+    "start": "2026-11-19T14:51:31Z",
+    "duration_ms": 61000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488508-step-1",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488508",
+    "service": "build-ubuntu-3-10-python-3-10-torch-1-11",
+    "name": "Set up job",
+    "start": "2026-11-19T14:51:32Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488508-step-2",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488508",
+    "service": "build-ubuntu-3-10-python-3-10-torch-1-11",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:51:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488508-step-3",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488508",
+    "service": "build-ubuntu-3-10-python-3-10-torch-1-11",
+    "name": "Set up Python 3.10",
+    "start": "2026-11-19T14:51:34Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488508-step-4",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488508",
+    "service": "build-ubuntu-3-10-python-3-10-torch-1-11",
+    "name": "Setup venv + uv",
+    "start": "2026-11-19T14:51:40Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488508-step-5",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488508",
+    "service": "build-ubuntu-3-10-python-3-10-torch-1-11",
+    "name": "Install dependencies",
+    "start": "2026-11-19T14:51:41Z",
+    "duration_ms": 21000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488508-step-6",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488508",
+    "service": "build-ubuntu-3-10-python-3-10-torch-1-11",
+    "name": "Run tests",
+    "start": "2026-11-19T14:52:02Z",
+    "duration_ms": 26000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488508-step-7",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488508",
+    "service": "build-ubuntu-3-10-python-3-10-torch-1-11",
+    "name": "Upload coverage reports to Codecov with GitHub Action",
+    "start": "2026-11-19T14:52:28Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488508-step-13",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488508",
+    "service": "build-ubuntu-3-10-python-3-10-torch-1-11",
+    "name": "Post Set up Python 3.10",
+    "start": "2026-11-19T14:52:30Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488508-step-14",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488508",
+    "service": "build-ubuntu-3-10-python-3-10-torch-1-11",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:52:30Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488508-step-15",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488508",
+    "service": "build-ubuntu-3-10-python-3-10-torch-1-11",
+    "name": "Complete job",
+    "start": "2026-11-19T14:52:30Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488550",
+    "trace_id": "run-44548218666",
+    "parent_id": "run-44548218666",
+    "service": "build-ubuntu-3-10-transfer-hf-xet",
+    "name": "build-ubuntu (3.10, transfer (hf_xet))",
+    "start": "2026-11-19T14:51:31Z",
+    "duration_ms": 71000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488550-step-1",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488550",
+    "service": "build-ubuntu-3-10-transfer-hf-xet",
+    "name": "Set up job",
+    "start": "2026-11-19T14:51:32Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488550-step-2",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488550",
+    "service": "build-ubuntu-3-10-transfer-hf-xet",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:51:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488550-step-3",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488550",
+    "service": "build-ubuntu-3-10-transfer-hf-xet",
+    "name": "Set up Python 3.10",
+    "start": "2026-11-19T14:51:34Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488550-step-4",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488550",
+    "service": "build-ubuntu-3-10-transfer-hf-xet",
+    "name": "Setup venv + uv",
+    "start": "2026-11-19T14:51:40Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488550-step-5",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488550",
+    "service": "build-ubuntu-3-10-transfer-hf-xet",
+    "name": "Install dependencies",
+    "start": "2026-11-19T14:51:41Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488550-step-6",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488550",
+    "service": "build-ubuntu-3-10-transfer-hf-xet",
+    "name": "Run tests",
+    "start": "2026-11-19T14:51:43Z",
+    "duration_ms": 55000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488550-step-7",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488550",
+    "service": "build-ubuntu-3-10-transfer-hf-xet",
+    "name": "Upload coverage reports to Codecov with GitHub Action",
+    "start": "2026-11-19T14:52:38Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488550-step-13",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488550",
+    "service": "build-ubuntu-3-10-transfer-hf-xet",
+    "name": "Post Set up Python 3.10",
+    "start": "2026-11-19T14:52:40Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488550-step-14",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488550",
+    "service": "build-ubuntu-3-10-transfer-hf-xet",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:52:40Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488550-step-15",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488550",
+    "service": "build-ubuntu-3-10-transfer-hf-xet",
+    "name": "Complete job",
+    "start": "2026-11-19T14:52:40Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488559",
+    "trace_id": "run-44548218666",
+    "parent_id": "run-44548218666",
+    "service": "build-windows-3-10-transfer-no-hf-xet",
+    "name": "build-windows (3.10, transfer (no hf_xet))",
+    "start": "2026-11-19T14:51:09Z",
+    "duration_ms": 133000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488559-step-1",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488559",
+    "service": "build-windows-3-10-transfer-no-hf-xet",
+    "name": "Set up job",
+    "start": "2026-11-19T14:51:10Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488559-step-2",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488559",
+    "service": "build-windows-3-10-transfer-no-hf-xet",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:51:12Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488559-step-3",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488559",
+    "service": "build-windows-3-10-transfer-no-hf-xet",
+    "name": "Set up Python 3.10",
+    "start": "2026-11-19T14:51:17Z",
+    "duration_ms": 44000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488559-step-4",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488559",
+    "service": "build-windows-3-10-transfer-no-hf-xet",
+    "name": "Setup venv + uv",
+    "start": "2026-11-19T14:52:01Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488559-step-5",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488559",
+    "service": "build-windows-3-10-transfer-no-hf-xet",
+    "name": "Install dependencies",
+    "start": "2026-11-19T14:52:03Z",
+    "duration_ms": 14000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488559-step-6",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488559",
+    "service": "build-windows-3-10-transfer-no-hf-xet",
+    "name": "Run tests",
+    "start": "2026-11-19T14:52:17Z",
+    "duration_ms": 53000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488559-step-7",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488559",
+    "service": "build-windows-3-10-transfer-no-hf-xet",
+    "name": "Upload coverage reports to Codecov with GitHub Action",
+    "start": "2026-11-19T14:53:10Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488559-step-13",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488559",
+    "service": "build-windows-3-10-transfer-no-hf-xet",
+    "name": "Post Set up Python 3.10",
+    "start": "2026-11-19T14:53:17Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488559-step-14",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488559",
+    "service": "build-windows-3-10-transfer-no-hf-xet",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:53:18Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488559-step-15",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488559",
+    "service": "build-windows-3-10-transfer-no-hf-xet",
+    "name": "Complete job",
+    "start": "2026-11-19T14:53:20Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488620",
+    "trace_id": "run-44548218666",
+    "parent_id": "run-44548218666",
+    "service": "build-ubuntu-3-15-api",
+    "name": "build-ubuntu (3.15, api)",
+    "start": "2026-11-19T14:51:31Z",
+    "duration_ms": 115000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488620-step-1",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488620",
+    "service": "build-ubuntu-3-15-api",
+    "name": "Set up job",
+    "start": "2026-11-19T14:51:31Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488620-step-2",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488620",
+    "service": "build-ubuntu-3-15-api",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:51:32Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488620-step-3",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488620",
+    "service": "build-ubuntu-3-15-api",
+    "name": "Set up Python 3.15",
+    "start": "2026-11-19T14:51:33Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488620-step-4",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488620",
+    "service": "build-ubuntu-3-15-api",
+    "name": "Setup venv + uv",
+    "start": "2026-11-19T14:51:41Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488620-step-5",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488620",
+    "service": "build-ubuntu-3-15-api",
+    "name": "Install dependencies",
+    "start": "2026-11-19T14:51:42Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488620-step-6",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488620",
+    "service": "build-ubuntu-3-15-api",
+    "name": "Run tests",
+    "start": "2026-11-19T14:51:46Z",
+    "duration_ms": 96000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488620-step-7",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488620",
+    "service": "build-ubuntu-3-15-api",
+    "name": "Upload coverage reports to Codecov with GitHub Action",
+    "start": "2026-11-19T14:53:22Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488620-step-13",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488620",
+    "service": "build-ubuntu-3-15-api",
+    "name": "Post Set up Python 3.15",
+    "start": "2026-11-19T14:53:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488620-step-14",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488620",
+    "service": "build-ubuntu-3-15-api",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:53:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488620-step-15",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488620",
+    "service": "build-ubuntu-3-15-api",
+    "name": "Complete job",
+    "start": "2026-11-19T14:53:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488705",
+    "trace_id": "run-44548218666",
+    "parent_id": "run-44548218666",
+    "service": "build-ubuntu-3-10-inference",
+    "name": "build-ubuntu (3.10, inference)",
+    "start": "2026-11-19T14:51:30Z",
+    "duration_ms": 44000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488705-step-1",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488705",
+    "service": "build-ubuntu-3-10-inference",
+    "name": "Set up job",
+    "start": "2026-11-19T14:51:31Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488705-step-2",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488705",
+    "service": "build-ubuntu-3-10-inference",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:51:32Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488705-step-3",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488705",
+    "service": "build-ubuntu-3-10-inference",
+    "name": "Set up Python 3.10",
+    "start": "2026-11-19T14:51:33Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488705-step-4",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488705",
+    "service": "build-ubuntu-3-10-inference",
+    "name": "Setup venv + uv",
+    "start": "2026-11-19T14:51:39Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488705-step-5",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488705",
+    "service": "build-ubuntu-3-10-inference",
+    "name": "Install dependencies",
+    "start": "2026-11-19T14:51:40Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488705-step-6",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488705",
+    "service": "build-ubuntu-3-10-inference",
+    "name": "Run tests",
+    "start": "2026-11-19T14:51:46Z",
+    "duration_ms": 24000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488705-step-7",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488705",
+    "service": "build-ubuntu-3-10-inference",
+    "name": "Upload coverage reports to Codecov with GitHub Action",
+    "start": "2026-11-19T14:52:10Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488705-step-13",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488705",
+    "service": "build-ubuntu-3-10-inference",
+    "name": "Post Set up Python 3.10",
+    "start": "2026-11-19T14:52:12Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488705-step-14",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488705",
+    "service": "build-ubuntu-3-10-inference",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:52:12Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488705-step-15",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488705",
+    "service": "build-ubuntu-3-10-inference",
+    "name": "Complete job",
+    "start": "2026-11-19T14:52:12Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488714",
+    "trace_id": "run-44548218666",
+    "parent_id": "run-44548218666",
+    "service": "build-ubuntu-3-15-transfer-hf-xet",
+    "name": "build-ubuntu (3.15, transfer (hf_xet))",
+    "start": "2026-11-19T14:51:32Z",
+    "duration_ms": 69000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488714-step-1",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488714",
+    "service": "build-ubuntu-3-15-transfer-hf-xet",
+    "name": "Set up job",
+    "start": "2026-11-19T14:51:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488714-step-2",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488714",
+    "service": "build-ubuntu-3-15-transfer-hf-xet",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:51:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488714-step-3",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488714",
+    "service": "build-ubuntu-3-15-transfer-hf-xet",
+    "name": "Set up Python 3.15",
+    "start": "2026-11-19T14:51:35Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488714-step-4",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488714",
+    "service": "build-ubuntu-3-15-transfer-hf-xet",
+    "name": "Setup venv + uv",
+    "start": "2026-11-19T14:51:42Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488714-step-5",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488714",
+    "service": "build-ubuntu-3-15-transfer-hf-xet",
+    "name": "Install dependencies",
+    "start": "2026-11-19T14:51:44Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488714-step-6",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488714",
+    "service": "build-ubuntu-3-15-transfer-hf-xet",
+    "name": "Run tests",
+    "start": "2026-11-19T14:51:48Z",
+    "duration_ms": 50000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488714-step-7",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488714",
+    "service": "build-ubuntu-3-15-transfer-hf-xet",
+    "name": "Upload coverage reports to Codecov with GitHub Action",
+    "start": "2026-11-19T14:52:38Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488714-step-13",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488714",
+    "service": "build-ubuntu-3-15-transfer-hf-xet",
+    "name": "Post Set up Python 3.15",
+    "start": "2026-11-19T14:52:40Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488714-step-14",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488714",
+    "service": "build-ubuntu-3-15-transfer-hf-xet",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:52:40Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488714-step-15",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488714",
+    "service": "build-ubuntu-3-15-transfer-hf-xet",
+    "name": "Complete job",
+    "start": "2026-11-19T14:52:40Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488765",
+    "trace_id": "run-44548218666",
+    "parent_id": "run-44548218666",
+    "service": "build-ubuntu-3-10-api",
+    "name": "build-ubuntu (3.10, api)",
+    "start": "2026-11-19T14:51:32Z",
+    "duration_ms": 119000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488765-step-1",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488765",
+    "service": "build-ubuntu-3-10-api",
+    "name": "Set up job",
+    "start": "2026-11-19T14:51:33Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488765-step-2",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488765",
+    "service": "build-ubuntu-3-10-api",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:51:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488765-step-3",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488765",
+    "service": "build-ubuntu-3-10-api",
+    "name": "Set up Python 3.10",
+    "start": "2026-11-19T14:51:34Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488765-step-4",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488765",
+    "service": "build-ubuntu-3-10-api",
+    "name": "Setup venv + uv",
+    "start": "2026-11-19T14:51:40Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488765-step-5",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488765",
+    "service": "build-ubuntu-3-10-api",
+    "name": "Install dependencies",
+    "start": "2026-11-19T14:51:41Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488765-step-6",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488765",
+    "service": "build-ubuntu-3-10-api",
+    "name": "Run tests",
+    "start": "2026-11-19T14:51:43Z",
+    "duration_ms": 104000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488765-step-7",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488765",
+    "service": "build-ubuntu-3-10-api",
+    "name": "Upload coverage reports to Codecov with GitHub Action",
+    "start": "2026-11-19T14:53:27Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488765-step-13",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488765",
+    "service": "build-ubuntu-3-10-api",
+    "name": "Post Set up Python 3.10",
+    "start": "2026-11-19T14:53:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488765-step-14",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488765",
+    "service": "build-ubuntu-3-10-api",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:53:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644488765-step-15",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644488765",
+    "service": "build-ubuntu-3-10-api",
+    "name": "Complete job",
+    "start": "2026-11-19T14:53:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644503072",
+    "trace_id": "run-44548218666",
+    "parent_id": "run-44548218666",
+    "service": "build-windows-3-15-api",
+    "name": "build-windows (3.15, api)",
+    "start": "2026-11-19T14:51:10Z",
+    "duration_ms": 156000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644503072-step-1",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644503072",
+    "service": "build-windows-3-15-api",
+    "name": "Set up job",
+    "start": "2026-11-19T14:51:11Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644503072-step-2",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644503072",
+    "service": "build-windows-3-15-api",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:51:13Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644503072-step-3",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644503072",
+    "service": "build-windows-3-15-api",
+    "name": "Set up Python 3.15",
+    "start": "2026-11-19T14:51:19Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644503072-step-4",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644503072",
+    "service": "build-windows-3-15-api",
+    "name": "Setup venv + uv",
+    "start": "2026-11-19T14:51:19Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644503072-step-5",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644503072",
+    "service": "build-windows-3-15-api",
+    "name": "Install dependencies",
+    "start": "2026-11-19T14:51:27Z",
+    "duration_ms": 29000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644503072-step-6",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644503072",
+    "service": "build-windows-3-15-api",
+    "name": "Run tests",
+    "start": "2026-11-19T14:51:56Z",
+    "duration_ms": 98000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644503072-step-7",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644503072",
+    "service": "build-windows-3-15-api",
+    "name": "Upload coverage reports to Codecov with GitHub Action",
+    "start": "2026-11-19T14:53:34Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644503072-step-13",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644503072",
+    "service": "build-windows-3-15-api",
+    "name": "Post Set up Python 3.15",
+    "start": "2026-11-19T14:53:42Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644503072-step-14",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644503072",
+    "service": "build-windows-3-15-api",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-19T14:53:42Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-135644503072-step-15",
+    "trace_id": "run-44548218666",
+    "parent_id": "job-135644503072",
+    "service": "build-windows-3-15-api",
+    "name": "Complete job",
+    "start": "2026-11-19T14:53:45Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

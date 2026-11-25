@@ -1,0 +1,54 @@
+[
+  {
+    "id": "1a8e0be10e",
+    "service": "pydantic",
+    "version": "1a8e0be10e",
+    "ts": "2026-11-20T15:47:39Z",
+    "author": "alexmojaki",
+    "summary": "Benchmark correct UUID winners in JSON smart unions",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "tests/benchmarks/test_json_uuid_union.py"
+    ]
+  },
+  {
+    "id": "7cb0c7f850",
+    "service": "pydantic",
+    "version": "7cb0c7f850",
+    "ts": "2026-11-20T15:52:09Z",
+    "author": "alexmojaki",
+    "summary": "Merge shared benchmark baseline into guard layer",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "tests/benchmarks/test_json_uuid_union.py"
+    ]
+  },
+  {
+    "id": "20b7ee13d4",
+    "service": "pydantic",
+    "version": "20b7ee13d4",
+    "ts": "2026-11-20T15:52:19Z",
+    "author": "alexmojaki",
+    "summary": "Merge shared benchmark baseline into cache layer",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "tests/benchmarks/test_json_uuid_union.py"
+    ]
+  },
+  {
+    "id": "26f74193d7",
+    "service": "pydantic",
+    "version": "26f74193d7",
+    "ts": "2026-11-20T15:52:27Z",
+    "author": "alexmojaki",
+    "summary": "Merge shared benchmark baseline into depth layer",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "tests/benchmarks/test_json_uuid_union.py"
+    ]
+  }
+]

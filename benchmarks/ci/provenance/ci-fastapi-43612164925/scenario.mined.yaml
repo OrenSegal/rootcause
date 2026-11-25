@@ -1,0 +1,20 @@
+# Mined from https://github.com/fastapi/fastapi/actions/runs/43612164925
+# (fastapi/fastapi, licence MIT). Fixed by run
+# https://github.com/fastapi/fastapi/actions/runs/43614671955. Label rule: the fix
+# changed files exactly one tested commit touched. Fix touched:
+# fastapi/.agents/skills/fastapi/SKILL.md,
+# fastapi/.agents/skills/fastapi/references/dependencies.md,
+# tests/test_dependency_concurrency.py.
+id: ci-fastapi-43612164925
+title: "\u2728 Add dependency concurrency limits with `Depends(max_concurrency=...)`"
+alert:
+  severity: ci
+  service: coverage-combine
+  summary: 'workflow Test failed on codex/depends-max-concurrency at b0608a7331: step ''Run
+    uv run coverage report --fail-under=100'' in job ''coverage-combine'' failed.'
+truth:
+  category: bad_code_deploy
+  service: fastapi
+  required_evidence_any:
+  - b0608a7331
+provenance: recorded

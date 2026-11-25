@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import Any
 
 from rootcause.application.ports import Event, RunInfo
+from rootcause.application.transcript import OUTCOME
 
 # Bump on any change to the tables below. Old logs are refused, never silently migrated.
 SCHEMA_VERSION = 2
@@ -89,3 +90,19 @@ class SqliteEventLog:
             (run_id,),
         ).fetchall()
         return [RunInfo(*row) for row in rows]
+
+
+def read_outcomes(path: Path) -> list[tuple[RunInfo, dict[str, Any]]]:
+    """Every run with a logged outcome, and that outcome, from an event log opened
+    read-only: a sweep that is still running can be read without being written to."""
+    db = sqlite3.connect(f"file:{path.resolve()}?mode=ro", uri=True)
+    try:
+        rows = db.execute(
+            "select r.run_id, r.scenario_id, r.agent, r.provider, r.parent_run_id, e.payload"
+            " from runs r join events e on e.run_id = r.run_id"
+            " where e.kind = ? order by r.run_id",
+            (OUTCOME,),
+        ).fetchall()
+    finally:
+        db.close()
+    return [(RunInfo(*row[:5]), json.loads(row[5])) for row in rows]

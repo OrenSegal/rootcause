@@ -1,0 +1,3282 @@
+[
+  {
+    "span_id": "run-42324865667",
+    "trace_id": "run-42324865667",
+    "parent_id": null,
+    "service": "ci",
+    "name": "CI",
+    "start": "2026-11-07T01:35:19Z",
+    "duration_ms": 25418000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-128353539658",
+    "trace_id": "run-42324865667",
+    "parent_id": "run-42324865667",
+    "service": "pre-commit",
+    "name": "pre-commit",
+    "start": "2026-11-07T08:31:01Z",
+    "duration_ms": 12000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539658-step-1",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539658",
+    "service": "pre-commit",
+    "name": "Set up job",
+    "start": "2026-11-07T08:31:01Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539658-step-2",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539658",
+    "service": "pre-commit",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:31:02Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539658-step-3",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539658",
+    "service": "pre-commit",
+    "name": "Run pre-commit/action@2c7b3805fd2a0fd8c1884dcaebf91fc102a13ecd",
+    "start": "2026-11-07T08:31:04Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539658-step-7",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539658",
+    "service": "pre-commit",
+    "name": "Post Run pre-commit/action@2c7b3805fd2a0fd8c1884dcaebf91fc102a13ecd",
+    "start": "2026-11-07T08:31:11Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539658-step-8",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539658",
+    "service": "pre-commit",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:31:11Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539658-step-9",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539658",
+    "service": "pre-commit",
+    "name": "Complete job",
+    "start": "2026-11-07T08:31:11Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539754",
+    "trace_id": "run-42324865667",
+    "parent_id": "run-42324865667",
+    "service": "checks-3-15-twinecheck",
+    "name": "checks (3.15, twinecheck)",
+    "start": "2026-11-07T08:31:00Z",
+    "duration_ms": 20000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539754-step-1",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539754",
+    "service": "checks-3-15-twinecheck",
+    "name": "Set up job",
+    "start": "2026-11-07T08:31:01Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539754-step-2",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539754",
+    "service": "checks-3-15-twinecheck",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:31:02Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539754-step-3",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539754",
+    "service": "checks-3-15-twinecheck",
+    "name": "Set up Python 3.15",
+    "start": "2026-11-07T08:31:04Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539754-step-4",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539754",
+    "service": "checks-3-15-twinecheck",
+    "name": "Set up uv",
+    "start": "2026-11-07T08:31:04Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539754-step-5",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539754",
+    "service": "checks-3-15-twinecheck",
+    "name": "Run check",
+    "start": "2026-11-07T08:31:07Z",
+    "duration_ms": 10000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539754-step-10",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539754",
+    "service": "checks-3-15-twinecheck",
+    "name": "Post Set up uv",
+    "start": "2026-11-07T08:31:18Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539754-step-11",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539754",
+    "service": "checks-3-15-twinecheck",
+    "name": "Post Set up Python 3.15",
+    "start": "2026-11-07T08:31:18Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539754-step-12",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539754",
+    "service": "checks-3-15-twinecheck",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:31:18Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539754-step-13",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539754",
+    "service": "checks-3-15-twinecheck",
+    "name": "Complete job",
+    "start": "2026-11-07T08:31:18Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539812",
+    "trace_id": "run-42324865667",
+    "parent_id": "run-42324865667",
+    "service": "checks-3-11-mypy-tests",
+    "name": "checks (3.11, mypy-tests)",
+    "start": "2026-11-07T08:31:01Z",
+    "duration_ms": 51000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539812-step-1",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539812",
+    "service": "checks-3-11-mypy-tests",
+    "name": "Set up job",
+    "start": "2026-11-07T08:31:02Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539812-step-2",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539812",
+    "service": "checks-3-11-mypy-tests",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:31:03Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539812-step-3",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539812",
+    "service": "checks-3-11-mypy-tests",
+    "name": "Set up Python 3.11",
+    "start": "2026-11-07T08:31:04Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539812-step-4",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539812",
+    "service": "checks-3-11-mypy-tests",
+    "name": "Set up uv",
+    "start": "2026-11-07T08:31:04Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539812-step-5",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539812",
+    "service": "checks-3-11-mypy-tests",
+    "name": "Run check",
+    "start": "2026-11-07T08:31:08Z",
+    "duration_ms": 42000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539812-step-10",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539812",
+    "service": "checks-3-11-mypy-tests",
+    "name": "Post Set up uv",
+    "start": "2026-11-07T08:31:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539812-step-11",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539812",
+    "service": "checks-3-11-mypy-tests",
+    "name": "Post Set up Python 3.11",
+    "start": "2026-11-07T08:31:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539812-step-12",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539812",
+    "service": "checks-3-11-mypy-tests",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:31:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539812-step-13",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539812",
+    "service": "checks-3-11-mypy-tests",
+    "name": "Complete job",
+    "start": "2026-11-07T08:31:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539832",
+    "trace_id": "run-42324865667",
+    "parent_id": "run-42324865667",
+    "service": "checks-3-14-docs",
+    "name": "checks (3.14, docs)",
+    "start": "2026-11-07T08:31:01Z",
+    "duration_ms": 36000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539832-step-1",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539832",
+    "service": "checks-3-14-docs",
+    "name": "Set up job",
+    "start": "2026-11-07T08:31:02Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539832-step-2",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539832",
+    "service": "checks-3-14-docs",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:31:03Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539832-step-3",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539832",
+    "service": "checks-3-14-docs",
+    "name": "Set up Python 3.14",
+    "start": "2026-11-07T08:31:04Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539832-step-4",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539832",
+    "service": "checks-3-14-docs",
+    "name": "Set up uv",
+    "start": "2026-11-07T08:31:04Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539832-step-5",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539832",
+    "service": "checks-3-14-docs",
+    "name": "Run check",
+    "start": "2026-11-07T08:31:08Z",
+    "duration_ms": 26000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539832-step-10",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539832",
+    "service": "checks-3-14-docs",
+    "name": "Post Set up uv",
+    "start": "2026-11-07T08:31:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539832-step-11",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539832",
+    "service": "checks-3-14-docs",
+    "name": "Post Set up Python 3.14",
+    "start": "2026-11-07T08:31:34Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539832-step-12",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539832",
+    "service": "checks-3-14-docs",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:31:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539832-step-13",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539832",
+    "service": "checks-3-14-docs",
+    "name": "Complete job",
+    "start": "2026-11-07T08:31:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539835",
+    "trace_id": "run-42324865667",
+    "parent_id": "run-42324865667",
+    "service": "checks-3-14-docs-tests",
+    "name": "checks (3.14, docs-tests)",
+    "start": "2026-11-07T08:31:01Z",
+    "duration_ms": 16000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539835-step-1",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539835",
+    "service": "checks-3-14-docs-tests",
+    "name": "Set up job",
+    "start": "2026-11-07T08:31:01Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539835-step-2",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539835",
+    "service": "checks-3-14-docs-tests",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:31:02Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539835-step-3",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539835",
+    "service": "checks-3-14-docs-tests",
+    "name": "Set up Python 3.14",
+    "start": "2026-11-07T08:31:04Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539835-step-4",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539835",
+    "service": "checks-3-14-docs-tests",
+    "name": "Set up uv",
+    "start": "2026-11-07T08:31:04Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539835-step-5",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539835",
+    "service": "checks-3-14-docs-tests",
+    "name": "Run check",
+    "start": "2026-11-07T08:31:06Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539835-step-10",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539835",
+    "service": "checks-3-14-docs-tests",
+    "name": "Post Set up uv",
+    "start": "2026-11-07T08:31:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539835-step-11",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539835",
+    "service": "checks-3-14-docs-tests",
+    "name": "Post Set up Python 3.14",
+    "start": "2026-11-07T08:31:15Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539835-step-12",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539835",
+    "service": "checks-3-14-docs-tests",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:31:16Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539835-step-13",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539835",
+    "service": "checks-3-14-docs-tests",
+    "name": "Complete job",
+    "start": "2026-11-07T08:31:16Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539864",
+    "trace_id": "run-42324865667",
+    "parent_id": "run-42324865667",
+    "service": "checks-3-11-mypy",
+    "name": "checks (3.11, mypy)",
+    "start": "2026-11-07T08:31:00Z",
+    "duration_ms": 21000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539864-step-1",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539864",
+    "service": "checks-3-11-mypy",
+    "name": "Set up job",
+    "start": "2026-11-07T08:31:01Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539864-step-2",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539864",
+    "service": "checks-3-11-mypy",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:31:02Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539864-step-3",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539864",
+    "service": "checks-3-11-mypy",
+    "name": "Set up Python 3.11",
+    "start": "2026-11-07T08:31:03Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539864-step-4",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539864",
+    "service": "checks-3-11-mypy",
+    "name": "Set up uv",
+    "start": "2026-11-07T08:31:03Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539864-step-5",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539864",
+    "service": "checks-3-11-mypy",
+    "name": "Run check",
+    "start": "2026-11-07T08:31:06Z",
+    "duration_ms": 12000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539864-step-10",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539864",
+    "service": "checks-3-11-mypy",
+    "name": "Post Set up uv",
+    "start": "2026-11-07T08:31:18Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539864-step-11",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539864",
+    "service": "checks-3-11-mypy",
+    "name": "Post Set up Python 3.11",
+    "start": "2026-11-07T08:31:18Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539864-step-12",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539864",
+    "service": "checks-3-11-mypy",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:31:18Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539864-step-13",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539864",
+    "service": "checks-3-11-mypy",
+    "name": "Complete job",
+    "start": "2026-11-07T08:31:19Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539893",
+    "trace_id": "run-42324865667",
+    "parent_id": "run-42324865667",
+    "service": "checks-3-14-pylint",
+    "name": "checks (3.14, pylint)",
+    "start": "2026-11-07T08:31:01Z",
+    "duration_ms": 56000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539893-step-1",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539893",
+    "service": "checks-3-14-pylint",
+    "name": "Set up job",
+    "start": "2026-11-07T08:31:01Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539893-step-2",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539893",
+    "service": "checks-3-14-pylint",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:31:02Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539893-step-3",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539893",
+    "service": "checks-3-14-pylint",
+    "name": "Set up Python 3.14",
+    "start": "2026-11-07T08:31:03Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539893-step-4",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539893",
+    "service": "checks-3-14-pylint",
+    "name": "Set up uv",
+    "start": "2026-11-07T08:31:04Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539893-step-5",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539893",
+    "service": "checks-3-14-pylint",
+    "name": "Run check",
+    "start": "2026-11-07T08:31:06Z",
+    "duration_ms": 48000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539893-step-10",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539893",
+    "service": "checks-3-14-pylint",
+    "name": "Post Set up uv",
+    "start": "2026-11-07T08:31:54Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539893-step-11",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539893",
+    "service": "checks-3-14-pylint",
+    "name": "Post Set up Python 3.14",
+    "start": "2026-11-07T08:31:54Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539893-step-12",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539893",
+    "service": "checks-3-14-pylint",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:31:55Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353539893-step-13",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353539893",
+    "service": "checks-3-14-pylint",
+    "name": "Complete job",
+    "start": "2026-11-07T08:31:55Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751913",
+    "trace_id": "run-42324865667",
+    "parent_id": "run-42324865667",
+    "service": "tests-macos-3-11-py",
+    "name": "tests (macos, 3.11, py)",
+    "start": "2026-11-07T08:32:00Z",
+    "duration_ms": 225000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751913-step-1",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751913",
+    "service": "tests-macos-3-11-py",
+    "name": "Set up job",
+    "start": "2026-11-07T08:32:01Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751913-step-2",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751913",
+    "service": "tests-macos-3-11-py",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:32:06Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751913-step-3",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751913",
+    "service": "tests-macos-3-11-py",
+    "name": "Set up Python 3.11",
+    "start": "2026-11-07T08:32:11Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751913-step-5",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751913",
+    "service": "tests-macos-3-11-py",
+    "name": "Set up uv",
+    "start": "2026-11-07T08:32:11Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751913-step-6",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751913",
+    "service": "tests-macos-3-11-py",
+    "name": "Install mitmproxy",
+    "start": "2026-11-07T08:32:18Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751913-step-7",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751913",
+    "service": "tests-macos-3-11-py",
+    "name": "Run tests",
+    "start": "2026-11-07T08:32:18Z",
+    "duration_ms": 195000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751913-step-9",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751913",
+    "service": "tests-macos-3-11-py",
+    "name": "Upload test results",
+    "start": "2026-11-07T08:35:33Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751913-step-16",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751913",
+    "service": "tests-macos-3-11-py",
+    "name": "Post Set up uv",
+    "start": "2026-11-07T08:35:38Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751913-step-17",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751913",
+    "service": "tests-macos-3-11-py",
+    "name": "Post Set up Python 3.11",
+    "start": "2026-11-07T08:35:38Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751913-step-18",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751913",
+    "service": "tests-macos-3-11-py",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:35:38Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751913-step-19",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751913",
+    "service": "tests-macos-3-11-py",
+    "name": "Complete job",
+    "start": "2026-11-07T08:35:39Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751936",
+    "trace_id": "run-42324865667",
+    "parent_id": "run-42324865667",
+    "service": "tests-macos-3-15-no-reactor",
+    "name": "tests (macos, 3.15, no-reactor)",
+    "start": "2026-11-07T08:32:00Z",
+    "duration_ms": 276000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751936-step-1",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751936",
+    "service": "tests-macos-3-15-no-reactor",
+    "name": "Set up job",
+    "start": "2026-11-07T08:32:00Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751936-step-2",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751936",
+    "service": "tests-macos-3-15-no-reactor",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:32:03Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751936-step-3",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751936",
+    "service": "tests-macos-3-15-no-reactor",
+    "name": "Set up Python 3.15",
+    "start": "2026-11-07T08:32:06Z",
+    "duration_ms": 45000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751936-step-5",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751936",
+    "service": "tests-macos-3-15-no-reactor",
+    "name": "Set up uv",
+    "start": "2026-11-07T08:32:51Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751936-step-6",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751936",
+    "service": "tests-macos-3-15-no-reactor",
+    "name": "Install mitmproxy",
+    "start": "2026-11-07T08:32:54Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751936-step-7",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751936",
+    "service": "tests-macos-3-15-no-reactor",
+    "name": "Run tests",
+    "start": "2026-11-07T08:32:55Z",
+    "duration_ms": 204000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751936-step-9",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751936",
+    "service": "tests-macos-3-15-no-reactor",
+    "name": "Upload test results",
+    "start": "2026-11-07T08:36:19Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751936-step-16",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751936",
+    "service": "tests-macos-3-15-no-reactor",
+    "name": "Post Set up uv",
+    "start": "2026-11-07T08:36:26Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751936-step-17",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751936",
+    "service": "tests-macos-3-15-no-reactor",
+    "name": "Post Set up Python 3.15",
+    "start": "2026-11-07T08:36:26Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751936-step-18",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751936",
+    "service": "tests-macos-3-15-no-reactor",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:36:26Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751936-step-19",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751936",
+    "service": "tests-macos-3-15-no-reactor",
+    "name": "Complete job",
+    "start": "2026-11-07T08:36:28Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751957",
+    "trace_id": "run-42324865667",
+    "parent_id": "run-42324865667",
+    "service": "tests-macos-3-15-py",
+    "name": "tests (macos, 3.15, py)",
+    "start": "2026-11-07T08:32:00Z",
+    "duration_ms": 394000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751957-step-1",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751957",
+    "service": "tests-macos-3-15-py",
+    "name": "Set up job",
+    "start": "2026-11-07T08:32:00Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751957-step-2",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751957",
+    "service": "tests-macos-3-15-py",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:32:05Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751957-step-3",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751957",
+    "service": "tests-macos-3-15-py",
+    "name": "Set up Python 3.15",
+    "start": "2026-11-07T08:32:09Z",
+    "duration_ms": 54000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751957-step-5",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751957",
+    "service": "tests-macos-3-15-py",
+    "name": "Set up uv",
+    "start": "2026-11-07T08:33:03Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751957-step-6",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751957",
+    "service": "tests-macos-3-15-py",
+    "name": "Install mitmproxy",
+    "start": "2026-11-07T08:33:08Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751957-step-7",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751957",
+    "service": "tests-macos-3-15-py",
+    "name": "Run tests",
+    "start": "2026-11-07T08:33:09Z",
+    "duration_ms": 314000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751957-step-8",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751957",
+    "service": "tests-macos-3-15-py",
+    "name": "Upload coverage report",
+    "start": "2026-11-07T08:38:23Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751957-step-9",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751957",
+    "service": "tests-macos-3-15-py",
+    "name": "Upload test results",
+    "start": "2026-11-07T08:38:26Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751957-step-16",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751957",
+    "service": "tests-macos-3-15-py",
+    "name": "Post Set up uv",
+    "start": "2026-11-07T08:38:29Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751957-step-17",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751957",
+    "service": "tests-macos-3-15-py",
+    "name": "Post Set up Python 3.15",
+    "start": "2026-11-07T08:38:30Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751957-step-18",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751957",
+    "service": "tests-macos-3-15-py",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:38:30Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751957-step-19",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751957",
+    "service": "tests-macos-3-15-py",
+    "name": "Complete job",
+    "start": "2026-11-07T08:38:31Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751972",
+    "trace_id": "run-42324865667",
+    "parent_id": "run-42324865667",
+    "service": "tests-windows-3-11-9-min-extra-deps",
+    "name": "tests (windows, 3.11.9, min-extra-deps)",
+    "start": "2026-11-07T08:31:59Z",
+    "duration_ms": 417000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751972-step-1",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751972",
+    "service": "tests-windows-3-11-9-min-extra-deps",
+    "name": "Set up job",
+    "start": "2026-11-07T08:32:00Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751972-step-2",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751972",
+    "service": "tests-windows-3-11-9-min-extra-deps",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:32:03Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751972-step-3",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751972",
+    "service": "tests-windows-3-11-9-min-extra-deps",
+    "name": "Set up Python 3.11.9",
+    "start": "2026-11-07T08:32:11Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751972-step-5",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751972",
+    "service": "tests-windows-3-11-9-min-extra-deps",
+    "name": "Set up uv",
+    "start": "2026-11-07T08:32:11Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751972-step-6",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751972",
+    "service": "tests-windows-3-11-9-min-extra-deps",
+    "name": "Install mitmproxy",
+    "start": "2026-11-07T08:32:19Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751972-step-7",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751972",
+    "service": "tests-windows-3-11-9-min-extra-deps",
+    "name": "Run tests",
+    "start": "2026-11-07T08:32:20Z",
+    "duration_ms": 381000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751972-step-9",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751972",
+    "service": "tests-windows-3-11-9-min-extra-deps",
+    "name": "Upload test results",
+    "start": "2026-11-07T08:38:41Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751972-step-16",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751972",
+    "service": "tests-windows-3-11-9-min-extra-deps",
+    "name": "Post Set up uv",
+    "start": "2026-11-07T08:38:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751972-step-17",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751972",
+    "service": "tests-windows-3-11-9-min-extra-deps",
+    "name": "Post Set up Python 3.11.9",
+    "start": "2026-11-07T08:38:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751972-step-18",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751972",
+    "service": "tests-windows-3-11-9-min-extra-deps",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:38:50Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353751972-step-19",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353751972",
+    "service": "tests-windows-3-11-9-min-extra-deps",
+    "name": "Complete job",
+    "start": "2026-11-07T08:38:52Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752027",
+    "trace_id": "run-42324865667",
+    "parent_id": "run-42324865667",
+    "service": "tests-windows-3-15-extra-deps",
+    "name": "tests (windows, 3.15, extra-deps)",
+    "start": "2026-11-07T08:31:59Z",
+    "duration_ms": 380000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752027-step-1",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752027",
+    "service": "tests-windows-3-15-extra-deps",
+    "name": "Set up job",
+    "start": "2026-11-07T08:32:00Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752027-step-2",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752027",
+    "service": "tests-windows-3-15-extra-deps",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:32:01Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752027-step-3",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752027",
+    "service": "tests-windows-3-15-extra-deps",
+    "name": "Set up Python 3.15",
+    "start": "2026-11-07T08:32:09Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752027-step-5",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752027",
+    "service": "tests-windows-3-15-extra-deps",
+    "name": "Set up uv",
+    "start": "2026-11-07T08:32:09Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752027-step-6",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752027",
+    "service": "tests-windows-3-15-extra-deps",
+    "name": "Install mitmproxy",
+    "start": "2026-11-07T08:32:16Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752027-step-7",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752027",
+    "service": "tests-windows-3-15-extra-deps",
+    "name": "Run tests",
+    "start": "2026-11-07T08:32:17Z",
+    "duration_ms": 349000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752027-step-9",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752027",
+    "service": "tests-windows-3-15-extra-deps",
+    "name": "Upload test results",
+    "start": "2026-11-07T08:38:06Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752027-step-16",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752027",
+    "service": "tests-windows-3-15-extra-deps",
+    "name": "Post Set up uv",
+    "start": "2026-11-07T08:38:13Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752027-step-17",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752027",
+    "service": "tests-windows-3-15-extra-deps",
+    "name": "Post Set up Python 3.15",
+    "start": "2026-11-07T08:38:14Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752027-step-18",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752027",
+    "service": "tests-windows-3-15-extra-deps",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:38:14Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752027-step-19",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752027",
+    "service": "tests-windows-3-15-extra-deps",
+    "name": "Complete job",
+    "start": "2026-11-07T08:38:16Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752054",
+    "trace_id": "run-42324865667",
+    "parent_id": "run-42324865667",
+    "service": "tests-windows-3-11-py",
+    "name": "tests (windows, 3.11, py)",
+    "start": "2026-11-07T08:32:47Z",
+    "duration_ms": 252000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752054-step-1",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752054",
+    "service": "tests-windows-3-11-py",
+    "name": "Set up job",
+    "start": "2026-11-07T08:32:48Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752054-step-2",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752054",
+    "service": "tests-windows-3-11-py",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:32:51Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752054-step-3",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752054",
+    "service": "tests-windows-3-11-py",
+    "name": "Set up Python 3.11",
+    "start": "2026-11-07T08:32:59Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752054-step-5",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752054",
+    "service": "tests-windows-3-11-py",
+    "name": "Set up uv",
+    "start": "2026-11-07T08:32:59Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752054-step-6",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752054",
+    "service": "tests-windows-3-11-py",
+    "name": "Install mitmproxy",
+    "start": "2026-11-07T08:33:05Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752054-step-7",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752054",
+    "service": "tests-windows-3-11-py",
+    "name": "Run tests",
+    "start": "2026-11-07T08:33:05Z",
+    "duration_ms": 222000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752054-step-9",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752054",
+    "service": "tests-windows-3-11-py",
+    "name": "Upload test results",
+    "start": "2026-11-07T08:36:47Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752054-step-16",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752054",
+    "service": "tests-windows-3-11-py",
+    "name": "Post Set up uv",
+    "start": "2026-11-07T08:36:55Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752054-step-17",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752054",
+    "service": "tests-windows-3-11-py",
+    "name": "Post Set up Python 3.11",
+    "start": "2026-11-07T08:36:55Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752054-step-18",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752054",
+    "service": "tests-windows-3-11-py",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:36:55Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752054-step-19",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752054",
+    "service": "tests-windows-3-11-py",
+    "name": "Complete job",
+    "start": "2026-11-07T08:36:56Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752059",
+    "trace_id": "run-42324865667",
+    "parent_id": "run-42324865667",
+    "service": "tests-windows-3-15-default-reactor",
+    "name": "tests (windows, 3.15, default-reactor)",
+    "start": "2026-11-07T08:31:59Z",
+    "duration_ms": 288000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752059-step-1",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752059",
+    "service": "tests-windows-3-15-default-reactor",
+    "name": "Set up job",
+    "start": "2026-11-07T08:32:00Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752059-step-2",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752059",
+    "service": "tests-windows-3-15-default-reactor",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:32:03Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752059-step-3",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752059",
+    "service": "tests-windows-3-15-default-reactor",
+    "name": "Set up Python 3.15",
+    "start": "2026-11-07T08:32:11Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752059-step-5",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752059",
+    "service": "tests-windows-3-15-default-reactor",
+    "name": "Set up uv",
+    "start": "2026-11-07T08:32:12Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752059-step-6",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752059",
+    "service": "tests-windows-3-15-default-reactor",
+    "name": "Install mitmproxy",
+    "start": "2026-11-07T08:32:19Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752059-step-7",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752059",
+    "service": "tests-windows-3-15-default-reactor",
+    "name": "Run tests",
+    "start": "2026-11-07T08:32:20Z",
+    "duration_ms": 254000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752059-step-9",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752059",
+    "service": "tests-windows-3-15-default-reactor",
+    "name": "Upload test results",
+    "start": "2026-11-07T08:36:34Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752059-step-16",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752059",
+    "service": "tests-windows-3-15-default-reactor",
+    "name": "Post Set up uv",
+    "start": "2026-11-07T08:36:42Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752059-step-17",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752059",
+    "service": "tests-windows-3-15-default-reactor",
+    "name": "Post Set up Python 3.15",
+    "start": "2026-11-07T08:36:42Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752059-step-18",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752059",
+    "service": "tests-windows-3-15-default-reactor",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:36:42Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752059-step-19",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752059",
+    "service": "tests-windows-3-15-default-reactor",
+    "name": "Complete job",
+    "start": "2026-11-07T08:36:44Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752088",
+    "trace_id": "run-42324865667",
+    "parent_id": "run-42324865667",
+    "service": "tests-ubuntu-3-11-17-min-extra-deps",
+    "name": "tests (ubuntu, 3.11.17, min-extra-deps)",
+    "start": "2026-11-07T08:31:59Z",
+    "duration_ms": 283000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752088-step-1",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752088",
+    "service": "tests-ubuntu-3-11-17-min-extra-deps",
+    "name": "Set up job",
+    "start": "2026-11-07T08:32:00Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752088-step-2",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752088",
+    "service": "tests-ubuntu-3-11-17-min-extra-deps",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:32:03Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752088-step-3",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752088",
+    "service": "tests-ubuntu-3-11-17-min-extra-deps",
+    "name": "Set up Python 3.11.17",
+    "start": "2026-11-07T08:32:04Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752088-step-4",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752088",
+    "service": "tests-ubuntu-3-11-17-min-extra-deps",
+    "name": "Install system libraries",
+    "start": "2026-11-07T08:32:10Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752088-step-5",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752088",
+    "service": "tests-ubuntu-3-11-17-min-extra-deps",
+    "name": "Set up uv",
+    "start": "2026-11-07T08:32:17Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752088-step-6",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752088",
+    "service": "tests-ubuntu-3-11-17-min-extra-deps",
+    "name": "Install mitmproxy",
+    "start": "2026-11-07T08:32:20Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752088-step-7",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752088",
+    "service": "tests-ubuntu-3-11-17-min-extra-deps",
+    "name": "Run tests",
+    "start": "2026-11-07T08:32:21Z",
+    "duration_ms": 253000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752088-step-8",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752088",
+    "service": "tests-ubuntu-3-11-17-min-extra-deps",
+    "name": "Upload coverage report",
+    "start": "2026-11-07T08:36:34Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752088-step-9",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752088",
+    "service": "tests-ubuntu-3-11-17-min-extra-deps",
+    "name": "Upload test results",
+    "start": "2026-11-07T08:36:37Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752088-step-16",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752088",
+    "service": "tests-ubuntu-3-11-17-min-extra-deps",
+    "name": "Post Set up uv",
+    "start": "2026-11-07T08:36:39Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752088-step-17",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752088",
+    "service": "tests-ubuntu-3-11-17-min-extra-deps",
+    "name": "Post Set up Python 3.11.17",
+    "start": "2026-11-07T08:36:40Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752088-step-18",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752088",
+    "service": "tests-ubuntu-3-11-17-min-extra-deps",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:36:40Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752088-step-19",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752088",
+    "service": "tests-ubuntu-3-11-17-min-extra-deps",
+    "name": "Complete job",
+    "start": "2026-11-07T08:36:40Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752089",
+    "trace_id": "run-42324865667",
+    "parent_id": "run-42324865667",
+    "service": "tests-windows-3-15-py",
+    "name": "tests (windows, 3.15, py)",
+    "start": "2026-11-07T08:31:59Z",
+    "duration_ms": 352000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752089-step-1",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752089",
+    "service": "tests-windows-3-15-py",
+    "name": "Set up job",
+    "start": "2026-11-07T08:32:00Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752089-step-2",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752089",
+    "service": "tests-windows-3-15-py",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:32:02Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752089-step-3",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752089",
+    "service": "tests-windows-3-15-py",
+    "name": "Set up Python 3.15",
+    "start": "2026-11-07T08:32:08Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752089-step-5",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752089",
+    "service": "tests-windows-3-15-py",
+    "name": "Set up uv",
+    "start": "2026-11-07T08:32:08Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752089-step-6",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752089",
+    "service": "tests-windows-3-15-py",
+    "name": "Install mitmproxy",
+    "start": "2026-11-07T08:32:14Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752089-step-7",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752089",
+    "service": "tests-windows-3-15-py",
+    "name": "Run tests",
+    "start": "2026-11-07T08:32:15Z",
+    "duration_ms": 316000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752089-step-8",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752089",
+    "service": "tests-windows-3-15-py",
+    "name": "Upload coverage report",
+    "start": "2026-11-07T08:37:31Z",
+    "duration_ms": 10000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752089-step-9",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752089",
+    "service": "tests-windows-3-15-py",
+    "name": "Upload test results",
+    "start": "2026-11-07T08:37:41Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752089-step-16",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752089",
+    "service": "tests-windows-3-15-py",
+    "name": "Post Set up uv",
+    "start": "2026-11-07T08:37:47Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752089-step-17",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752089",
+    "service": "tests-windows-3-15-py",
+    "name": "Post Set up Python 3.15",
+    "start": "2026-11-07T08:37:47Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752089-step-18",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752089",
+    "service": "tests-windows-3-15-py",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:37:47Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752089-step-19",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752089",
+    "service": "tests-windows-3-15-py",
+    "name": "Complete job",
+    "start": "2026-11-07T08:37:49Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752098",
+    "trace_id": "run-42324865667",
+    "parent_id": "run-42324865667",
+    "service": "tests-ubuntu-3-15-no-reactor",
+    "name": "tests (ubuntu, 3.15, no-reactor)",
+    "start": "2026-11-07T08:31:59Z",
+    "duration_ms": 201000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752098-step-1",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752098",
+    "service": "tests-ubuntu-3-15-no-reactor",
+    "name": "Set up job",
+    "start": "2026-11-07T08:32:00Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752098-step-2",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752098",
+    "service": "tests-ubuntu-3-15-no-reactor",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:32:03Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752098-step-3",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752098",
+    "service": "tests-ubuntu-3-15-no-reactor",
+    "name": "Set up Python 3.15",
+    "start": "2026-11-07T08:32:04Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752098-step-5",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752098",
+    "service": "tests-ubuntu-3-15-no-reactor",
+    "name": "Set up uv",
+    "start": "2026-11-07T08:32:05Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752098-step-6",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752098",
+    "service": "tests-ubuntu-3-15-no-reactor",
+    "name": "Install mitmproxy",
+    "start": "2026-11-07T08:32:08Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752098-step-7",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752098",
+    "service": "tests-ubuntu-3-15-no-reactor",
+    "name": "Run tests",
+    "start": "2026-11-07T08:32:08Z",
+    "duration_ms": 184000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752098-step-8",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752098",
+    "service": "tests-ubuntu-3-15-no-reactor",
+    "name": "Upload coverage report",
+    "start": "2026-11-07T08:35:12Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752098-step-9",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752098",
+    "service": "tests-ubuntu-3-15-no-reactor",
+    "name": "Upload test results",
+    "start": "2026-11-07T08:35:14Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752098-step-16",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752098",
+    "service": "tests-ubuntu-3-15-no-reactor",
+    "name": "Post Set up uv",
+    "start": "2026-11-07T08:35:16Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752098-step-17",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752098",
+    "service": "tests-ubuntu-3-15-no-reactor",
+    "name": "Post Set up Python 3.15",
+    "start": "2026-11-07T08:35:17Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752098-step-18",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752098",
+    "service": "tests-ubuntu-3-15-no-reactor",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:35:17Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752098-step-19",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752098",
+    "service": "tests-ubuntu-3-15-no-reactor",
+    "name": "Complete job",
+    "start": "2026-11-07T08:35:17Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752100",
+    "trace_id": "run-42324865667",
+    "parent_id": "run-42324865667",
+    "service": "tests-ubuntu-3-15-botocore",
+    "name": "tests (ubuntu, 3.15, botocore)",
+    "start": "2026-11-07T08:31:59Z",
+    "duration_ms": 46000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752100-step-1",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752100",
+    "service": "tests-ubuntu-3-15-botocore",
+    "name": "Set up job",
+    "start": "2026-11-07T08:32:00Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752100-step-2",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752100",
+    "service": "tests-ubuntu-3-15-botocore",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:32:02Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752100-step-3",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752100",
+    "service": "tests-ubuntu-3-15-botocore",
+    "name": "Set up Python 3.15",
+    "start": "2026-11-07T08:32:03Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752100-step-5",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752100",
+    "service": "tests-ubuntu-3-15-botocore",
+    "name": "Set up uv",
+    "start": "2026-11-07T08:32:03Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752100-step-6",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752100",
+    "service": "tests-ubuntu-3-15-botocore",
+    "name": "Install mitmproxy",
+    "start": "2026-11-07T08:32:06Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752100-step-7",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752100",
+    "service": "tests-ubuntu-3-15-botocore",
+    "name": "Run tests",
+    "start": "2026-11-07T08:32:07Z",
+    "duration_ms": 31000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752100-step-8",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752100",
+    "service": "tests-ubuntu-3-15-botocore",
+    "name": "Upload coverage report",
+    "start": "2026-11-07T08:32:38Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752100-step-9",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752100",
+    "service": "tests-ubuntu-3-15-botocore",
+    "name": "Upload test results",
+    "start": "2026-11-07T08:32:40Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752100-step-16",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752100",
+    "service": "tests-ubuntu-3-15-botocore",
+    "name": "Post Set up uv",
+    "start": "2026-11-07T08:32:43Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752100-step-17",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752100",
+    "service": "tests-ubuntu-3-15-botocore",
+    "name": "Post Set up Python 3.15",
+    "start": "2026-11-07T08:32:43Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752100-step-18",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752100",
+    "service": "tests-ubuntu-3-15-botocore",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:32:43Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752100-step-19",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752100",
+    "service": "tests-ubuntu-3-15-botocore",
+    "name": "Complete job",
+    "start": "2026-11-07T08:32:43Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752119",
+    "trace_id": "run-42324865667",
+    "parent_id": "run-42324865667",
+    "service": "tests-windows-3-11-9-min",
+    "name": "tests (windows, 3.11.9, min)",
+    "start": "2026-11-07T08:32:00Z",
+    "duration_ms": 262000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752119-step-1",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752119",
+    "service": "tests-windows-3-11-9-min",
+    "name": "Set up job",
+    "start": "2026-11-07T08:32:00Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752119-step-2",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752119",
+    "service": "tests-windows-3-11-9-min",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:32:03Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752119-step-3",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752119",
+    "service": "tests-windows-3-11-9-min",
+    "name": "Set up Python 3.11.9",
+    "start": "2026-11-07T08:32:09Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752119-step-5",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752119",
+    "service": "tests-windows-3-11-9-min",
+    "name": "Set up uv",
+    "start": "2026-11-07T08:32:09Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752119-step-6",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752119",
+    "service": "tests-windows-3-11-9-min",
+    "name": "Install mitmproxy",
+    "start": "2026-11-07T08:32:17Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752119-step-7",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752119",
+    "service": "tests-windows-3-11-9-min",
+    "name": "Run tests",
+    "start": "2026-11-07T08:32:18Z",
+    "duration_ms": 232000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752119-step-9",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752119",
+    "service": "tests-windows-3-11-9-min",
+    "name": "Upload test results",
+    "start": "2026-11-07T08:36:10Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752119-step-16",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752119",
+    "service": "tests-windows-3-11-9-min",
+    "name": "Post Set up uv",
+    "start": "2026-11-07T08:36:18Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752119-step-17",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752119",
+    "service": "tests-windows-3-11-9-min",
+    "name": "Post Set up Python 3.11.9",
+    "start": "2026-11-07T08:36:18Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752119-step-18",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752119",
+    "service": "tests-windows-3-11-9-min",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:36:18Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752119-step-19",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752119",
+    "service": "tests-windows-3-11-9-min",
+    "name": "Complete job",
+    "start": "2026-11-07T08:36:20Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752120",
+    "trace_id": "run-42324865667",
+    "parent_id": "run-42324865667",
+    "service": "tests-ubuntu-3-15-default-reactor",
+    "name": "tests (ubuntu, 3.15, default-reactor)",
+    "start": "2026-11-07T08:31:59Z",
+    "duration_ms": 218000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-128353752120-step-1",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752120",
+    "service": "tests-ubuntu-3-15-default-reactor",
+    "name": "Set up job",
+    "start": "2026-11-07T08:32:00Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752120-step-2",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752120",
+    "service": "tests-ubuntu-3-15-default-reactor",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:32:02Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752120-step-3",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752120",
+    "service": "tests-ubuntu-3-15-default-reactor",
+    "name": "Set up Python 3.15",
+    "start": "2026-11-07T08:32:04Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752120-step-5",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752120",
+    "service": "tests-ubuntu-3-15-default-reactor",
+    "name": "Set up uv",
+    "start": "2026-11-07T08:32:04Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752120-step-6",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752120",
+    "service": "tests-ubuntu-3-15-default-reactor",
+    "name": "Install mitmproxy",
+    "start": "2026-11-07T08:32:07Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752120-step-7",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752120",
+    "service": "tests-ubuntu-3-15-default-reactor",
+    "name": "Run tests",
+    "start": "2026-11-07T08:32:08Z",
+    "duration_ms": 202000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-128353752120-step-8",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752120",
+    "service": "tests-ubuntu-3-15-default-reactor",
+    "name": "Upload coverage report",
+    "start": "2026-11-07T08:35:30Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752120-step-9",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752120",
+    "service": "tests-ubuntu-3-15-default-reactor",
+    "name": "Upload test results",
+    "start": "2026-11-07T08:35:33Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752120-step-18",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752120",
+    "service": "tests-ubuntu-3-15-default-reactor",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:35:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752120-step-19",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752120",
+    "service": "tests-ubuntu-3-15-default-reactor",
+    "name": "Complete job",
+    "start": "2026-11-07T08:35:35Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752146",
+    "trace_id": "run-42324865667",
+    "parent_id": "run-42324865667",
+    "service": "tests-ubuntu-3-11-17-min",
+    "name": "tests (ubuntu, 3.11.17, min)",
+    "start": "2026-11-07T08:32:00Z",
+    "duration_ms": 319000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752146-step-1",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752146",
+    "service": "tests-ubuntu-3-11-17-min",
+    "name": "Set up job",
+    "start": "2026-11-07T08:32:01Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752146-step-2",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752146",
+    "service": "tests-ubuntu-3-11-17-min",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:32:03Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752146-step-3",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752146",
+    "service": "tests-ubuntu-3-11-17-min",
+    "name": "Set up Python 3.11.17",
+    "start": "2026-11-07T08:32:04Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752146-step-4",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752146",
+    "service": "tests-ubuntu-3-11-17-min",
+    "name": "Install system libraries",
+    "start": "2026-11-07T08:32:11Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752146-step-5",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752146",
+    "service": "tests-ubuntu-3-11-17-min",
+    "name": "Set up uv",
+    "start": "2026-11-07T08:32:18Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752146-step-6",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752146",
+    "service": "tests-ubuntu-3-11-17-min",
+    "name": "Install mitmproxy",
+    "start": "2026-11-07T08:32:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752146-step-7",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752146",
+    "service": "tests-ubuntu-3-11-17-min",
+    "name": "Run tests",
+    "start": "2026-11-07T08:32:22Z",
+    "duration_ms": 287000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752146-step-8",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752146",
+    "service": "tests-ubuntu-3-11-17-min",
+    "name": "Upload coverage report",
+    "start": "2026-11-07T08:37:09Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752146-step-9",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752146",
+    "service": "tests-ubuntu-3-11-17-min",
+    "name": "Upload test results",
+    "start": "2026-11-07T08:37:12Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752146-step-16",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752146",
+    "service": "tests-ubuntu-3-11-17-min",
+    "name": "Post Set up uv",
+    "start": "2026-11-07T08:37:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752146-step-17",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752146",
+    "service": "tests-ubuntu-3-11-17-min",
+    "name": "Post Set up Python 3.11.17",
+    "start": "2026-11-07T08:37:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752146-step-18",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752146",
+    "service": "tests-ubuntu-3-11-17-min",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:37:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752146-step-19",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752146",
+    "service": "tests-ubuntu-3-11-17-min",
+    "name": "Complete job",
+    "start": "2026-11-07T08:37:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752152",
+    "trace_id": "run-42324865667",
+    "parent_id": "run-42324865667",
+    "service": "tests-ubuntu-3-11-17-min-default-reactor",
+    "name": "tests (ubuntu, 3.11.17, min-default-reactor)",
+    "start": "2026-11-07T08:32:00Z",
+    "duration_ms": 225000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-128353752152-step-1",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752152",
+    "service": "tests-ubuntu-3-11-17-min-default-reactor",
+    "name": "Set up job",
+    "start": "2026-11-07T08:32:01Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752152-step-2",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752152",
+    "service": "tests-ubuntu-3-11-17-min-default-reactor",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:32:03Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752152-step-3",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752152",
+    "service": "tests-ubuntu-3-11-17-min-default-reactor",
+    "name": "Set up Python 3.11.17",
+    "start": "2026-11-07T08:32:04Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752152-step-4",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752152",
+    "service": "tests-ubuntu-3-11-17-min-default-reactor",
+    "name": "Install system libraries",
+    "start": "2026-11-07T08:32:10Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752152-step-5",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752152",
+    "service": "tests-ubuntu-3-11-17-min-default-reactor",
+    "name": "Set up uv",
+    "start": "2026-11-07T08:32:17Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752152-step-6",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752152",
+    "service": "tests-ubuntu-3-11-17-min-default-reactor",
+    "name": "Install mitmproxy",
+    "start": "2026-11-07T08:32:21Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752152-step-7",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752152",
+    "service": "tests-ubuntu-3-11-17-min-default-reactor",
+    "name": "Run tests",
+    "start": "2026-11-07T08:32:21Z",
+    "duration_ms": 195000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-128353752152-step-8",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752152",
+    "service": "tests-ubuntu-3-11-17-min-default-reactor",
+    "name": "Upload coverage report",
+    "start": "2026-11-07T08:35:36Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752152-step-9",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752152",
+    "service": "tests-ubuntu-3-11-17-min-default-reactor",
+    "name": "Upload test results",
+    "start": "2026-11-07T08:35:39Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752152-step-18",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752152",
+    "service": "tests-ubuntu-3-11-17-min-default-reactor",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:35:42Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752152-step-19",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752152",
+    "service": "tests-ubuntu-3-11-17-min-default-reactor",
+    "name": "Complete job",
+    "start": "2026-11-07T08:35:42Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752176",
+    "trace_id": "run-42324865667",
+    "parent_id": "run-42324865667",
+    "service": "tests-ubuntu-3-15-no-reactor-extra-deps",
+    "name": "tests (ubuntu, 3.15, no-reactor-extra-deps)",
+    "start": "2026-11-07T08:32:00Z",
+    "duration_ms": 303000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752176-step-1",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752176",
+    "service": "tests-ubuntu-3-15-no-reactor-extra-deps",
+    "name": "Set up job",
+    "start": "2026-11-07T08:32:01Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752176-step-2",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752176",
+    "service": "tests-ubuntu-3-15-no-reactor-extra-deps",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:32:03Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752176-step-3",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752176",
+    "service": "tests-ubuntu-3-15-no-reactor-extra-deps",
+    "name": "Set up Python 3.15",
+    "start": "2026-11-07T08:32:04Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752176-step-5",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752176",
+    "service": "tests-ubuntu-3-15-no-reactor-extra-deps",
+    "name": "Set up uv",
+    "start": "2026-11-07T08:32:04Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752176-step-6",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752176",
+    "service": "tests-ubuntu-3-15-no-reactor-extra-deps",
+    "name": "Install mitmproxy",
+    "start": "2026-11-07T08:32:08Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752176-step-7",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752176",
+    "service": "tests-ubuntu-3-15-no-reactor-extra-deps",
+    "name": "Run tests",
+    "start": "2026-11-07T08:32:09Z",
+    "duration_ms": 284000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752176-step-8",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752176",
+    "service": "tests-ubuntu-3-15-no-reactor-extra-deps",
+    "name": "Upload coverage report",
+    "start": "2026-11-07T08:36:53Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752176-step-9",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752176",
+    "service": "tests-ubuntu-3-15-no-reactor-extra-deps",
+    "name": "Upload test results",
+    "start": "2026-11-07T08:36:56Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752176-step-16",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752176",
+    "service": "tests-ubuntu-3-15-no-reactor-extra-deps",
+    "name": "Post Set up uv",
+    "start": "2026-11-07T08:36:59Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752176-step-17",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752176",
+    "service": "tests-ubuntu-3-15-no-reactor-extra-deps",
+    "name": "Post Set up Python 3.15",
+    "start": "2026-11-07T08:36:59Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752176-step-18",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752176",
+    "service": "tests-ubuntu-3-15-no-reactor-extra-deps",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:36:59Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752176-step-19",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752176",
+    "service": "tests-ubuntu-3-15-no-reactor-extra-deps",
+    "name": "Complete job",
+    "start": "2026-11-07T08:36:59Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752177",
+    "trace_id": "run-42324865667",
+    "parent_id": "run-42324865667",
+    "service": "tests-ubuntu-3-11-py",
+    "name": "tests (ubuntu, 3.11, py)",
+    "start": "2026-11-07T08:31:59Z",
+    "duration_ms": 178000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752177-step-1",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752177",
+    "service": "tests-ubuntu-3-11-py",
+    "name": "Set up job",
+    "start": "2026-11-07T08:32:00Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752177-step-2",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752177",
+    "service": "tests-ubuntu-3-11-py",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:32:01Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752177-step-3",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752177",
+    "service": "tests-ubuntu-3-11-py",
+    "name": "Set up Python 3.11",
+    "start": "2026-11-07T08:32:02Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752177-step-5",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752177",
+    "service": "tests-ubuntu-3-11-py",
+    "name": "Set up uv",
+    "start": "2026-11-07T08:32:02Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752177-step-6",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752177",
+    "service": "tests-ubuntu-3-11-py",
+    "name": "Install mitmproxy",
+    "start": "2026-11-07T08:32:05Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752177-step-7",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752177",
+    "service": "tests-ubuntu-3-11-py",
+    "name": "Run tests",
+    "start": "2026-11-07T08:32:07Z",
+    "duration_ms": 164000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752177-step-9",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752177",
+    "service": "tests-ubuntu-3-11-py",
+    "name": "Upload test results",
+    "start": "2026-11-07T08:34:51Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752177-step-16",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752177",
+    "service": "tests-ubuntu-3-11-py",
+    "name": "Post Set up uv",
+    "start": "2026-11-07T08:34:54Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752177-step-17",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752177",
+    "service": "tests-ubuntu-3-11-py",
+    "name": "Post Set up Python 3.11",
+    "start": "2026-11-07T08:34:54Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752177-step-18",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752177",
+    "service": "tests-ubuntu-3-11-py",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:34:54Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752177-step-19",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752177",
+    "service": "tests-ubuntu-3-11-py",
+    "name": "Complete job",
+    "start": "2026-11-07T08:34:55Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752183",
+    "trace_id": "run-42324865667",
+    "parent_id": "run-42324865667",
+    "service": "tests-ubuntu-3-15-extra-deps",
+    "name": "tests (ubuntu, 3.15, extra-deps)",
+    "start": "2026-11-07T08:31:59Z",
+    "duration_ms": 258000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-128353752183-step-1",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752183",
+    "service": "tests-ubuntu-3-15-extra-deps",
+    "name": "Set up job",
+    "start": "2026-11-07T08:32:00Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752183-step-2",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752183",
+    "service": "tests-ubuntu-3-15-extra-deps",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:32:02Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752183-step-3",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752183",
+    "service": "tests-ubuntu-3-15-extra-deps",
+    "name": "Set up Python 3.15",
+    "start": "2026-11-07T08:32:03Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752183-step-5",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752183",
+    "service": "tests-ubuntu-3-15-extra-deps",
+    "name": "Set up uv",
+    "start": "2026-11-07T08:32:03Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752183-step-6",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752183",
+    "service": "tests-ubuntu-3-15-extra-deps",
+    "name": "Install mitmproxy",
+    "start": "2026-11-07T08:32:06Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752183-step-7",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752183",
+    "service": "tests-ubuntu-3-15-extra-deps",
+    "name": "Run tests",
+    "start": "2026-11-07T08:32:06Z",
+    "duration_ms": 244000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-128353752183-step-8",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752183",
+    "service": "tests-ubuntu-3-15-extra-deps",
+    "name": "Upload coverage report",
+    "start": "2026-11-07T08:36:10Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752183-step-9",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752183",
+    "service": "tests-ubuntu-3-15-extra-deps",
+    "name": "Upload test results",
+    "start": "2026-11-07T08:36:12Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752183-step-18",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752183",
+    "service": "tests-ubuntu-3-15-extra-deps",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:36:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752183-step-19",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752183",
+    "service": "tests-ubuntu-3-15-extra-deps",
+    "name": "Complete job",
+    "start": "2026-11-07T08:36:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752195",
+    "trace_id": "run-42324865667",
+    "parent_id": "run-42324865667",
+    "service": "tests-ubuntu-3-11-17-min-botocore",
+    "name": "tests (ubuntu, 3.11.17, min-botocore)",
+    "start": "2026-11-07T08:31:59Z",
+    "duration_ms": 77000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752195-step-1",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752195",
+    "service": "tests-ubuntu-3-11-17-min-botocore",
+    "name": "Set up job",
+    "start": "2026-11-07T08:32:00Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752195-step-2",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752195",
+    "service": "tests-ubuntu-3-11-17-min-botocore",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:32:03Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752195-step-3",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752195",
+    "service": "tests-ubuntu-3-11-17-min-botocore",
+    "name": "Set up Python 3.11.17",
+    "start": "2026-11-07T08:32:04Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752195-step-4",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752195",
+    "service": "tests-ubuntu-3-11-17-min-botocore",
+    "name": "Install system libraries",
+    "start": "2026-11-07T08:32:11Z",
+    "duration_ms": 18000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752195-step-5",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752195",
+    "service": "tests-ubuntu-3-11-17-min-botocore",
+    "name": "Set up uv",
+    "start": "2026-11-07T08:32:29Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752195-step-6",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752195",
+    "service": "tests-ubuntu-3-11-17-min-botocore",
+    "name": "Install mitmproxy",
+    "start": "2026-11-07T08:32:33Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752195-step-7",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752195",
+    "service": "tests-ubuntu-3-11-17-min-botocore",
+    "name": "Run tests",
+    "start": "2026-11-07T08:32:33Z",
+    "duration_ms": 34000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752195-step-8",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752195",
+    "service": "tests-ubuntu-3-11-17-min-botocore",
+    "name": "Upload coverage report",
+    "start": "2026-11-07T08:33:07Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752195-step-9",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752195",
+    "service": "tests-ubuntu-3-11-17-min-botocore",
+    "name": "Upload test results",
+    "start": "2026-11-07T08:33:09Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752195-step-16",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752195",
+    "service": "tests-ubuntu-3-11-17-min-botocore",
+    "name": "Post Set up uv",
+    "start": "2026-11-07T08:33:12Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752195-step-17",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752195",
+    "service": "tests-ubuntu-3-11-17-min-botocore",
+    "name": "Post Set up Python 3.11.17",
+    "start": "2026-11-07T08:33:12Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752195-step-18",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752195",
+    "service": "tests-ubuntu-3-11-17-min-botocore",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:33:12Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752195-step-19",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752195",
+    "service": "tests-ubuntu-3-11-17-min-botocore",
+    "name": "Complete job",
+    "start": "2026-11-07T08:33:12Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752222",
+    "trace_id": "run-42324865667",
+    "parent_id": "run-42324865667",
+    "service": "tests-ubuntu-3-15-py",
+    "name": "tests (ubuntu, 3.15, py)",
+    "start": "2026-11-07T08:31:59Z",
+    "duration_ms": 297000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752222-step-1",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752222",
+    "service": "tests-ubuntu-3-15-py",
+    "name": "Set up job",
+    "start": "2026-11-07T08:32:00Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752222-step-2",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752222",
+    "service": "tests-ubuntu-3-15-py",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:32:02Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752222-step-3",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752222",
+    "service": "tests-ubuntu-3-15-py",
+    "name": "Set up Python 3.15",
+    "start": "2026-11-07T08:32:03Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752222-step-5",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752222",
+    "service": "tests-ubuntu-3-15-py",
+    "name": "Set up uv",
+    "start": "2026-11-07T08:32:04Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752222-step-6",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752222",
+    "service": "tests-ubuntu-3-15-py",
+    "name": "Install mitmproxy",
+    "start": "2026-11-07T08:32:09Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752222-step-7",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752222",
+    "service": "tests-ubuntu-3-15-py",
+    "name": "Run tests",
+    "start": "2026-11-07T08:32:09Z",
+    "duration_ms": 278000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752222-step-8",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752222",
+    "service": "tests-ubuntu-3-15-py",
+    "name": "Upload coverage report",
+    "start": "2026-11-07T08:36:47Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752222-step-9",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752222",
+    "service": "tests-ubuntu-3-15-py",
+    "name": "Upload test results",
+    "start": "2026-11-07T08:36:50Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752222-step-16",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752222",
+    "service": "tests-ubuntu-3-15-py",
+    "name": "Post Set up uv",
+    "start": "2026-11-07T08:36:52Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752222-step-17",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752222",
+    "service": "tests-ubuntu-3-15-py",
+    "name": "Post Set up Python 3.15",
+    "start": "2026-11-07T08:36:52Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752222-step-18",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752222",
+    "service": "tests-ubuntu-3-15-py",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:36:53Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752222-step-19",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752222",
+    "service": "tests-ubuntu-3-15-py",
+    "name": "Complete job",
+    "start": "2026-11-07T08:36:53Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752342",
+    "trace_id": "run-42324865667",
+    "parent_id": "run-42324865667",
+    "service": "tests-windows-3-15-no-reactor",
+    "name": "tests (windows, 3.15, no-reactor)",
+    "start": "2026-11-07T08:33:17Z",
+    "duration_ms": 215000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-128353752342-step-1",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752342",
+    "service": "tests-windows-3-15-no-reactor",
+    "name": "Set up job",
+    "start": "2026-11-07T08:33:18Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752342-step-2",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752342",
+    "service": "tests-windows-3-15-no-reactor",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:33:20Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752342-step-3",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752342",
+    "service": "tests-windows-3-15-no-reactor",
+    "name": "Set up Python 3.15",
+    "start": "2026-11-07T08:33:26Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752342-step-5",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752342",
+    "service": "tests-windows-3-15-no-reactor",
+    "name": "Set up uv",
+    "start": "2026-11-07T08:33:26Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752342-step-6",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752342",
+    "service": "tests-windows-3-15-no-reactor",
+    "name": "Install mitmproxy",
+    "start": "2026-11-07T08:33:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752342-step-7",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752342",
+    "service": "tests-windows-3-15-no-reactor",
+    "name": "Run tests",
+    "start": "2026-11-07T08:33:32Z",
+    "duration_ms": 190000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-128353752342-step-9",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752342",
+    "service": "tests-windows-3-15-no-reactor",
+    "name": "Upload test results",
+    "start": "2026-11-07T08:36:42Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752342-step-18",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752342",
+    "service": "tests-windows-3-15-no-reactor",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-07T08:36:48Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-128353752342-step-19",
+    "trace_id": "run-42324865667",
+    "parent_id": "job-128353752342",
+    "service": "tests-windows-3-15-no-reactor",
+    "name": "Complete job",
+    "start": "2026-11-07T08:36:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

@@ -1,0 +1,14 @@
+id: ci-fastapi-44138170508
+title: "\u267B\uFE0F Refactor query, header, and form parameter extraction"
+alert:
+  severity: ci
+  service: coverage-combine
+  summary: 'workflow Test failed on codex/refactor-parameter-extraction at 1a42905d42: step
+    ''Run uv run coverage report --fail-under=100'' in job ''coverage-combine'' failed.'
+truth:
+  grading: class
+  category: bad_code_deploy
+  service: fastapi
+  required_evidence_any:
+  - 1a42905d42
+provenance: recorded

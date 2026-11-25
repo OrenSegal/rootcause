@@ -1,0 +1,18 @@
+# Mined from https://github.com/Kludex/uvicorn/actions/runs/41654959377 (encode/uvicorn,
+# licence BSD-3-Clause). Fixed by run
+# https://github.com/Kludex/uvicorn/actions/runs/41663089630. Label rule: the fix
+# changed files exactly one tested commit touched. Fix touched: tests/test_config.py,
+# uvicorn/config.py.
+id: ci-uvicorn-41654959377
+title: 'feat(config): support @asynccontextmanager app_factory functions (#1151)'
+alert:
+  severity: ci
+  service: python-3-11-windows-latest
+  summary: 'workflow Test Suite failed on fix/issue-1151-async-context-manager-app-factory
+    at 10986fad5f: step ''Enforce coverage'' in job ''Python 3.11 windows-latest'' failed.'
+truth:
+  category: bad_code_deploy
+  service: uvicorn
+  required_evidence_any:
+  - 10986fad5f
+provenance: recorded

@@ -1,0 +1,12 @@
+{
+  "fixed_run": "https://github.com/pytest-dev/pytest-xdist/actions/runs/42133220170",
+  "fixed_sha": "8d3edc2669eefdb66c09fdeec7e718881645a45c",
+  "commits": [
+    "8d3edc2669eefdb66c09fdeec7e718881645a45c"
+  ],
+  "files": [
+    ".github/workflows/test.yml"
+  ],
+  "merges": [],
+  "status": "ahead"
+}

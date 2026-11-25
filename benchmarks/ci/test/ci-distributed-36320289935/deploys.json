@@ -1,0 +1,17 @@
+[
+  {
+    "id": "2926d28f4e",
+    "service": "distributed",
+    "version": "2926d28f4e",
+    "ts": "2026-09-27T11:41:14Z",
+    "author": "Karunasagar12",
+    "summary": "ENH: Add has_scheduler_plugin method to check if plugin is registered",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "distributed/client.py",
+      "distributed/diagnostics/tests/test_scheduler_plugin.py",
+      "distributed/scheduler.py"
+    ]
+  }
+]

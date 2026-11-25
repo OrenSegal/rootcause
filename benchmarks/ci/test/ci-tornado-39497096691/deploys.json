@@ -1,0 +1,15 @@
+[
+  {
+    "id": "9c9fa3c131",
+    "service": "tornado",
+    "version": "9c9fa3c131",
+    "ts": "2026-10-20T21:02:27Z",
+    "author": "dependabot[bot]",
+    "summary": "build(deps): bump certifi from 2026.7.22 to 2026.10.19",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "requirements.txt"
+    ]
+  }
+]

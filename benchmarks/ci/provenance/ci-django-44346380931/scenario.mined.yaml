@@ -1,0 +1,17 @@
+# Mined from https://github.com/django/django/actions/runs/44346380931 (django/django,
+# licence BSD-3-Clause). Fixed by run
+# https://github.com/django/django/actions/runs/44364356722. Label rule: the fix changed
+# files exactly one tested commit touched. Fix touched: tests/auth_tests/test_views.py.
+id: ci-django-44346380931
+title: "Fixed 37514 -- Requires Change user permission to add user when using\u2026"
+alert:
+  severity: ci
+  service: black
+  summary: 'workflow Linters failed on 27514 at 15f1bdfc1f: step ''black'' in job ''black''
+    failed.'
+truth:
+  category: bad_code_deploy
+  service: django
+  required_evidence_any:
+  - 15f1bdfc1f
+provenance: recorded

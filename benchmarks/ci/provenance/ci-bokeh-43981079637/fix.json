@@ -1,0 +1,12 @@
+{
+  "fixed_run": "https://github.com/bokeh/bokeh/actions/runs/43992455846",
+  "fixed_sha": "944210f4778d798326d5fc4a67276e667534fa5f",
+  "commits": [
+    "944210f4778d798326d5fc4a67276e667534fa5f"
+  ],
+  "files": [
+    "bokehjs/src/lib/document/defs.ts"
+  ],
+  "merges": [],
+  "status": "ahead"
+}

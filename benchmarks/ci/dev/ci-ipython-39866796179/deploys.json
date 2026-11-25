@@ -1,0 +1,28 @@
+[
+  {
+    "id": "e35f2f450a",
+    "service": "ipython",
+    "version": "e35f2f450a",
+    "ts": "2026-10-22T22:40:21Z",
+    "author": "anyingiit",
+    "summary": "TST: fail on the assertion, and cover ^C after the child is forked",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "tests/test_process.py"
+    ]
+  },
+  {
+    "id": "9bddbb8104",
+    "service": "ipython",
+    "version": "9bddbb8104",
+    "ts": "2026-10-22T22:40:22Z",
+    "author": "anyingiit",
+    "summary": "Hold back ^C while pexpect spawns the child in system()",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "IPython/utils/_process_posix.py"
+    ]
+  }
+]

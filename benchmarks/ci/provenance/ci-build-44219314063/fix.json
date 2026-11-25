@@ -1,0 +1,14 @@
+{
+  "fixed_run": "https://github.com/pypa/build/actions/runs/44220835358",
+  "fixed_sha": "fb0de4bea260b846cb2d4795d4496bd8f3b7e861",
+  "commits": [
+    "fb0de4bea260b846cb2d4795d4496bd8f3b7e861"
+  ],
+  "files": [
+    ".github/workflows/cd.yml",
+    ".pre-commit-config.yaml",
+    "pyproject.toml",
+    "tests/test_self_packaging.py"
+  ],
+  "status": "ahead"
+}

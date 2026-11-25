@@ -1,0 +1,16 @@
+[
+  {
+    "id": "93d4eb9385",
+    "service": "starlette",
+    "version": "93d4eb9385",
+    "ts": "2026-10-22T03:37:55Z",
+    "author": "SwastikTripathi",
+    "summary": "fix: preserve inner quotes when stripping env-file values (#3687)",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "starlette/config.py",
+      "tests/test_config.py"
+    ]
+  }
+]

@@ -1,0 +1,18 @@
+# Mined from https://github.com/Kludex/starlette/actions/runs/39807406334
+# (encode/starlette, licence BSD-3-Clause). Fixed by run
+# https://github.com/Kludex/starlette/actions/runs/39820263105. Label rule: the fix
+# changed files exactly one tested commit touched. Fix touched:
+# tests/test_datastructures.py.
+id: ci-starlette-39807406334
+title: Fix URL.replace() double port when hostname embeds one
+alert:
+  severity: ci
+  service: python-3-14
+  summary: 'workflow Test Suite failed on fix-url-replace-port at 03db5ca896: step ''Enforce
+    coverage'' in job ''Python 3.14'' failed.'
+truth:
+  category: bad_code_deploy
+  service: starlette
+  required_evidence_any:
+  - 03db5ca896
+provenance: recorded

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "99df232ff5",
+    "service": "scikit-image",
+    "version": "99df232ff5",
+    "ts": "2026-11-19T15:28:17Z",
+    "author": "matthew-brett",
+    "summary": "Remove alternative sigma interface",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "src/_skimage2/filters/ridges.py",
+      "src/skimage/filters/ridges.py",
+      "tests/skimage/filters/test_ridges.py",
+      "tests/skimage/test_migration.py"
+    ]
+  }
+]

@@ -1,0 +1,892 @@
+[
+  {
+    "span_id": "run-44969244228",
+    "trace_id": "run-44969244228",
+    "parent_id": null,
+    "service": "wheel-builder",
+    "name": "Wheel builder",
+    "start": "2026-11-22T00:58:56Z",
+    "duration_ms": 519000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-137045162370",
+    "trace_id": "run-44969244228",
+    "parent_id": "run-44969244228",
+    "service": "build-wheels-cp313-ios-arm64-accelerate-device-and-simulator",
+    "name": "Build wheels cp313-iOS-arm64-accelerate (device and simulator)",
+    "start": "2026-11-22T00:59:00Z",
+    "duration_ms": 199000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-137045162370-step-1",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162370",
+    "service": "build-wheels-cp313-ios-arm64-accelerate-device-and-simulator",
+    "name": "Set up job",
+    "start": "2026-11-22T00:59:01Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162370-step-2",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162370",
+    "service": "build-wheels-cp313-ios-arm64-accelerate-device-and-simulator",
+    "name": "Checkout numpy",
+    "start": "2026-11-22T00:59:04Z",
+    "duration_ms": 16000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162370-step-3",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162370",
+    "service": "build-wheels-cp313-ios-arm64-accelerate-device-and-simulator",
+    "name": "Build iOS device wheel",
+    "start": "2026-11-22T00:59:20Z",
+    "duration_ms": 89000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-137045162370-step-4",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162370",
+    "service": "build-wheels-cp313-ios-arm64-accelerate-device-and-simulator",
+    "name": "Build and test iOS simulator wheel",
+    "start": "2026-11-22T01:00:49Z",
+    "duration_ms": 84000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-137045162370-step-8",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162370",
+    "service": "build-wheels-cp313-ios-arm64-accelerate-device-and-simulator",
+    "name": "Post Build and test iOS simulator wheel",
+    "start": "2026-11-22T01:02:13Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162370-step-9",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162370",
+    "service": "build-wheels-cp313-ios-arm64-accelerate-device-and-simulator",
+    "name": "Post Build iOS device wheel",
+    "start": "2026-11-22T01:02:13Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162370-step-10",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162370",
+    "service": "build-wheels-cp313-ios-arm64-accelerate-device-and-simulator",
+    "name": "Post Checkout numpy",
+    "start": "2026-11-22T01:02:13Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162370-step-11",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162370",
+    "service": "build-wheels-cp313-ios-arm64-accelerate-device-and-simulator",
+    "name": "Complete job",
+    "start": "2026-11-22T01:02:15Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162503",
+    "trace_id": "run-44969244228",
+    "parent_id": "run-44969244228",
+    "service": "build-wheel-cp313-musllinux-aarch64",
+    "name": "Build wheel cp313-musllinux_aarch64-",
+    "start": "2026-11-22T00:59:01Z",
+    "duration_ms": 385000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162503-step-1",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162503",
+    "service": "build-wheel-cp313-musllinux-aarch64",
+    "name": "Set up job",
+    "start": "2026-11-22T00:59:02Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162503-step-2",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162503",
+    "service": "build-wheel-cp313-musllinux-aarch64",
+    "name": "Checkout numpy",
+    "start": "2026-11-22T00:59:03Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162503-step-6",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162503",
+    "service": "build-wheel-cp313-musllinux-aarch64",
+    "name": "Build wheels",
+    "start": "2026-11-22T00:59:12Z",
+    "duration_ms": 370000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162503-step-7",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162503",
+    "service": "build-wheel-cp313-musllinux-aarch64",
+    "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+    "start": "2026-11-22T01:05:22Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162503-step-13",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162503",
+    "service": "build-wheel-cp313-musllinux-aarch64",
+    "name": "Post Build wheels",
+    "start": "2026-11-22T01:05:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162503-step-14",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162503",
+    "service": "build-wheel-cp313-musllinux-aarch64",
+    "name": "Post Checkout numpy",
+    "start": "2026-11-22T01:05:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162503-step-15",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162503",
+    "service": "build-wheel-cp313-musllinux-aarch64",
+    "name": "Complete job",
+    "start": "2026-11-22T01:05:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162560",
+    "trace_id": "run-44969244228",
+    "parent_id": "run-44969244228",
+    "service": "build-wheel-cp313-musllinux-x86-64",
+    "name": "Build wheel cp313-musllinux_x86_64-",
+    "start": "2026-11-22T00:58:59Z",
+    "duration_ms": 442000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162560-step-1",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162560",
+    "service": "build-wheel-cp313-musllinux-x86-64",
+    "name": "Set up job",
+    "start": "2026-11-22T00:59:00Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162560-step-2",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162560",
+    "service": "build-wheel-cp313-musllinux-x86-64",
+    "name": "Checkout numpy",
+    "start": "2026-11-22T00:59:01Z",
+    "duration_ms": 10000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162560-step-6",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162560",
+    "service": "build-wheel-cp313-musllinux-x86-64",
+    "name": "Build wheels",
+    "start": "2026-11-22T00:59:11Z",
+    "duration_ms": 425000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162560-step-7",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162560",
+    "service": "build-wheel-cp313-musllinux-x86-64",
+    "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+    "start": "2026-11-22T01:06:16Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162560-step-13",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162560",
+    "service": "build-wheel-cp313-musllinux-x86-64",
+    "name": "Post Build wheels",
+    "start": "2026-11-22T01:06:18Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162560-step-14",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162560",
+    "service": "build-wheel-cp313-musllinux-x86-64",
+    "name": "Post Checkout numpy",
+    "start": "2026-11-22T01:06:18Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162560-step-15",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162560",
+    "service": "build-wheel-cp313-musllinux-x86-64",
+    "name": "Complete job",
+    "start": "2026-11-22T01:06:19Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162569",
+    "trace_id": "run-44969244228",
+    "parent_id": "run-44969244228",
+    "service": "build-wheel-cp313-macosx-arm64-openblas",
+    "name": "Build wheel cp313-macosx_arm64-openblas",
+    "start": "2026-11-22T00:59:00Z",
+    "duration_ms": 110000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-137045162569-step-1",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162569",
+    "service": "build-wheel-cp313-macosx-arm64-openblas",
+    "name": "Set up job",
+    "start": "2026-11-22T00:59:02Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162569-step-2",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162569",
+    "service": "build-wheel-cp313-macosx-arm64-openblas",
+    "name": "Checkout numpy",
+    "start": "2026-11-22T00:59:04Z",
+    "duration_ms": 19000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162569-step-5",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162569",
+    "service": "build-wheel-cp313-macosx-arm64-openblas",
+    "name": "Setup macOS",
+    "start": "2026-11-22T00:59:23Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162569-step-6",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162569",
+    "service": "build-wheel-cp313-macosx-arm64-openblas",
+    "name": "Build wheels",
+    "start": "2026-11-22T00:59:23Z",
+    "duration_ms": 82000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-137045162569-step-13",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162569",
+    "service": "build-wheel-cp313-macosx-arm64-openblas",
+    "name": "Post Build wheels",
+    "start": "2026-11-22T01:00:45Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162569-step-14",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162569",
+    "service": "build-wheel-cp313-macosx-arm64-openblas",
+    "name": "Post Checkout numpy",
+    "start": "2026-11-22T01:00:45Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162569-step-15",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162569",
+    "service": "build-wheel-cp313-macosx-arm64-openblas",
+    "name": "Complete job",
+    "start": "2026-11-22T01:00:47Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162593",
+    "trace_id": "run-44969244228",
+    "parent_id": "run-44969244228",
+    "service": "build-wheel-cp313-android-arm64-v8a",
+    "name": "Build wheel cp313-android_arm64_v8a-",
+    "start": "2026-11-22T00:58:59Z",
+    "duration_ms": 79000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-137045162593-step-1",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162593",
+    "service": "build-wheel-cp313-android-arm64-v8a",
+    "name": "Set up job",
+    "start": "2026-11-22T00:59:00Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162593-step-2",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162593",
+    "service": "build-wheel-cp313-android-arm64-v8a",
+    "name": "Checkout numpy",
+    "start": "2026-11-22T00:59:02Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162593-step-6",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162593",
+    "service": "build-wheel-cp313-android-arm64-v8a",
+    "name": "Build wheels",
+    "start": "2026-11-22T00:59:10Z",
+    "duration_ms": 66000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-137045162593-step-13",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162593",
+    "service": "build-wheel-cp313-android-arm64-v8a",
+    "name": "Post Build wheels",
+    "start": "2026-11-22T01:00:16Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162593-step-14",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162593",
+    "service": "build-wheel-cp313-android-arm64-v8a",
+    "name": "Post Checkout numpy",
+    "start": "2026-11-22T01:00:16Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162593-step-15",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162593",
+    "service": "build-wheel-cp313-android-arm64-v8a",
+    "name": "Complete job",
+    "start": "2026-11-22T01:00:17Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162597",
+    "trace_id": "run-44969244228",
+    "parent_id": "run-44969244228",
+    "service": "build-wheel-cp313-win-amd64",
+    "name": "Build wheel cp313-win_amd64-",
+    "start": "2026-11-22T00:58:59Z",
+    "duration_ms": 138000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-137045162597-step-1",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162597",
+    "service": "build-wheel-cp313-win-amd64",
+    "name": "Set up job",
+    "start": "2026-11-22T00:59:00Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162597-step-2",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162597",
+    "service": "build-wheel-cp313-win-amd64",
+    "name": "Checkout numpy",
+    "start": "2026-11-22T00:59:01Z",
+    "duration_ms": 20000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162597-step-4",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162597",
+    "service": "build-wheel-cp313-win-amd64",
+    "name": "pkg-config-for-win",
+    "start": "2026-11-22T00:59:21Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162597-step-6",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162597",
+    "service": "build-wheel-cp313-win-amd64",
+    "name": "Build wheels",
+    "start": "2026-11-22T00:59:21Z",
+    "duration_ms": 111000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-137045162597-step-13",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162597",
+    "service": "build-wheel-cp313-win-amd64",
+    "name": "Post Build wheels",
+    "start": "2026-11-22T01:01:12Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162597-step-14",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162597",
+    "service": "build-wheel-cp313-win-amd64",
+    "name": "Post Checkout numpy",
+    "start": "2026-11-22T01:01:12Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162597-step-15",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162597",
+    "service": "build-wheel-cp313-win-amd64",
+    "name": "Complete job",
+    "start": "2026-11-22T01:01:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162624",
+    "trace_id": "run-44969244228",
+    "parent_id": "run-44969244228",
+    "service": "build-wheel-cp313-android-x86-64",
+    "name": "Build wheel cp313-android_x86_64-",
+    "start": "2026-11-22T00:58:59Z",
+    "duration_ms": 129000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-137045162624-step-1",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162624",
+    "service": "build-wheel-cp313-android-x86-64",
+    "name": "Set up job",
+    "start": "2026-11-22T00:59:00Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162624-step-2",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162624",
+    "service": "build-wheel-cp313-android-x86-64",
+    "name": "Checkout numpy",
+    "start": "2026-11-22T00:59:02Z",
+    "duration_ms": 13000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162624-step-6",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162624",
+    "service": "build-wheel-cp313-android-x86-64",
+    "name": "Build wheels",
+    "start": "2026-11-22T00:59:15Z",
+    "duration_ms": 110000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-137045162624-step-13",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162624",
+    "service": "build-wheel-cp313-android-x86-64",
+    "name": "Post Build wheels",
+    "start": "2026-11-22T01:01:05Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162624-step-14",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162624",
+    "service": "build-wheel-cp313-android-x86-64",
+    "name": "Post Checkout numpy",
+    "start": "2026-11-22T01:01:05Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162624-step-15",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162624",
+    "service": "build-wheel-cp313-android-x86-64",
+    "name": "Complete job",
+    "start": "2026-11-22T01:01:05Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162629",
+    "trace_id": "run-44969244228",
+    "parent_id": "run-44969244228",
+    "service": "build-wheel-cp313-manylinux-aarch64",
+    "name": "Build wheel cp313-manylinux_aarch64-",
+    "start": "2026-11-22T00:59:01Z",
+    "duration_ms": 348000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162629-step-1",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162629",
+    "service": "build-wheel-cp313-manylinux-aarch64",
+    "name": "Set up job",
+    "start": "2026-11-22T00:59:02Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162629-step-2",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162629",
+    "service": "build-wheel-cp313-manylinux-aarch64",
+    "name": "Checkout numpy",
+    "start": "2026-11-22T00:59:03Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162629-step-6",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162629",
+    "service": "build-wheel-cp313-manylinux-aarch64",
+    "name": "Build wheels",
+    "start": "2026-11-22T00:59:12Z",
+    "duration_ms": 333000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162629-step-7",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162629",
+    "service": "build-wheel-cp313-manylinux-aarch64",
+    "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+    "start": "2026-11-22T01:04:45Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162629-step-13",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162629",
+    "service": "build-wheel-cp313-manylinux-aarch64",
+    "name": "Post Build wheels",
+    "start": "2026-11-22T01:04:47Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162629-step-14",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162629",
+    "service": "build-wheel-cp313-manylinux-aarch64",
+    "name": "Post Checkout numpy",
+    "start": "2026-11-22T01:04:47Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162629-step-15",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162629",
+    "service": "build-wheel-cp313-manylinux-aarch64",
+    "name": "Complete job",
+    "start": "2026-11-22T01:04:47Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162678",
+    "trace_id": "run-44969244228",
+    "parent_id": "run-44969244228",
+    "service": "build-wheel-cp313-manylinux-x86-64",
+    "name": "Build wheel cp313-manylinux_x86_64-",
+    "start": "2026-11-22T00:58:59Z",
+    "duration_ms": 515000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162678-step-1",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162678",
+    "service": "build-wheel-cp313-manylinux-x86-64",
+    "name": "Set up job",
+    "start": "2026-11-22T00:59:00Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162678-step-2",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162678",
+    "service": "build-wheel-cp313-manylinux-x86-64",
+    "name": "Checkout numpy",
+    "start": "2026-11-22T00:59:02Z",
+    "duration_ms": 14000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162678-step-6",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162678",
+    "service": "build-wheel-cp313-manylinux-x86-64",
+    "name": "Build wheels",
+    "start": "2026-11-22T00:59:16Z",
+    "duration_ms": 493000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162678-step-7",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162678",
+    "service": "build-wheel-cp313-manylinux-x86-64",
+    "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+    "start": "2026-11-22T01:07:29Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162678-step-13",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162678",
+    "service": "build-wheel-cp313-manylinux-x86-64",
+    "name": "Post Build wheels",
+    "start": "2026-11-22T01:07:31Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162678-step-14",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162678",
+    "service": "build-wheel-cp313-manylinux-x86-64",
+    "name": "Post Checkout numpy",
+    "start": "2026-11-22T01:07:31Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162678-step-15",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162678",
+    "service": "build-wheel-cp313-manylinux-x86-64",
+    "name": "Complete job",
+    "start": "2026-11-22T01:07:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162681",
+    "trace_id": "run-44969244228",
+    "parent_id": "run-44969244228",
+    "service": "build-wheel-cp313-win-arm64",
+    "name": "Build wheel cp313-win_arm64-",
+    "start": "2026-11-22T00:58:59Z",
+    "duration_ms": 205000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-137045162681-step-1",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162681",
+    "service": "build-wheel-cp313-win-arm64",
+    "name": "Set up job",
+    "start": "2026-11-22T00:59:00Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162681-step-2",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162681",
+    "service": "build-wheel-cp313-win-arm64",
+    "name": "Checkout numpy",
+    "start": "2026-11-22T00:59:03Z",
+    "duration_ms": 46000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162681-step-3",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162681",
+    "service": "build-wheel-cp313-win-arm64",
+    "name": "win_arm64 - set environment variables",
+    "start": "2026-11-22T00:59:49Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162681-step-4",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162681",
+    "service": "build-wheel-cp313-win-arm64",
+    "name": "pkg-config-for-win",
+    "start": "2026-11-22T00:59:50Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162681-step-6",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162681",
+    "service": "build-wheel-cp313-win-arm64",
+    "name": "Build wheels",
+    "start": "2026-11-22T00:59:50Z",
+    "duration_ms": 143000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-137045162681-step-13",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162681",
+    "service": "build-wheel-cp313-win-arm64",
+    "name": "Post Build wheels",
+    "start": "2026-11-22T01:02:13Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162681-step-14",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162681",
+    "service": "build-wheel-cp313-win-arm64",
+    "name": "Post Checkout numpy",
+    "start": "2026-11-22T01:02:13Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162681-step-15",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162681",
+    "service": "build-wheel-cp313-win-arm64",
+    "name": "Complete job",
+    "start": "2026-11-22T01:02:22Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162721",
+    "trace_id": "run-44969244228",
+    "parent_id": "run-44969244228",
+    "service": "build-wheel-cp314t-macosx-x86-64-openblas",
+    "name": "Build wheel cp314t-macosx_x86_64-openblas",
+    "start": "2026-11-22T00:59:00Z",
+    "duration_ms": 271000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-137045162721-step-1",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162721",
+    "service": "build-wheel-cp314t-macosx-x86-64-openblas",
+    "name": "Set up job",
+    "start": "2026-11-22T00:59:01Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162721-step-2",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162721",
+    "service": "build-wheel-cp314t-macosx-x86-64-openblas",
+    "name": "Checkout numpy",
+    "start": "2026-11-22T00:59:04Z",
+    "duration_ms": 21000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162721-step-5",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162721",
+    "service": "build-wheel-cp314t-macosx-x86-64-openblas",
+    "name": "Setup macOS",
+    "start": "2026-11-22T00:59:25Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162721-step-6",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162721",
+    "service": "build-wheel-cp314t-macosx-x86-64-openblas",
+    "name": "Build wheels",
+    "start": "2026-11-22T00:59:25Z",
+    "duration_ms": 242000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-137045162721-step-13",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162721",
+    "service": "build-wheel-cp314t-macosx-x86-64-openblas",
+    "name": "Post Build wheels",
+    "start": "2026-11-22T01:03:27Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162721-step-14",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162721",
+    "service": "build-wheel-cp314t-macosx-x86-64-openblas",
+    "name": "Post Checkout numpy",
+    "start": "2026-11-22T01:03:27Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-137045162721-step-15",
+    "trace_id": "run-44969244228",
+    "parent_id": "job-137045162721",
+    "service": "build-wheel-cp314t-macosx-x86-64-openblas",
+    "name": "Complete job",
+    "start": "2026-11-22T01:03:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

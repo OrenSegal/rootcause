@@ -1,0 +1,70 @@
+[
+  {
+    "author": "cibuildwheel-bot[bot]",
+    "committedDate": "2026-11-09T07:20:31Z",
+    "messageHeadline": "Update dependencies",
+    "oid": "d7e33c2ca11d1fb2d03d37acc6ab19ae2f2043f9",
+    "files": [
+      {
+        "filename": "cibuildwheel/resources/constraints-pyodide312.txt",
+        "status": "modified"
+      },
+      {
+        "filename": "cibuildwheel/resources/constraints-pyodide313.txt",
+        "status": "modified"
+      },
+      {
+        "filename": "cibuildwheel/resources/constraints-pyodide314.txt",
+        "status": "modified"
+      },
+      {
+        "filename": "cibuildwheel/resources/constraints-pyodide315.txt",
+        "status": "modified"
+      },
+      {
+        "filename": "cibuildwheel/resources/constraints-python310.txt",
+        "status": "modified"
+      },
+      {
+        "filename": "cibuildwheel/resources/constraints-python311.txt",
+        "status": "modified"
+      },
+      {
+        "filename": "cibuildwheel/resources/constraints-python312.txt",
+        "status": "modified"
+      },
+      {
+        "filename": "cibuildwheel/resources/constraints-python313.txt",
+        "status": "modified"
+      },
+      {
+        "filename": "cibuildwheel/resources/constraints-python314.txt",
+        "status": "modified"
+      },
+      {
+        "filename": "cibuildwheel/resources/constraints-python315.txt",
+        "status": "modified"
+      },
+      {
+        "filename": "cibuildwheel/resources/constraints-python39.txt",
+        "status": "modified"
+      },
+      {
+        "filename": "cibuildwheel/resources/constraints.txt",
+        "status": "modified"
+      },
+      {
+        "filename": "cibuildwheel/resources/pinned_docker_images.cfg",
+        "status": "modified"
+      },
+      {
+        "filename": "cibuildwheel/resources/virtualenv.toml",
+        "status": "modified"
+      },
+      {
+        "filename": "docs/working-examples.md",
+        "status": "modified"
+      }
+    ]
+  }
+]

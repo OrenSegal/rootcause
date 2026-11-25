@@ -1,0 +1,36 @@
+[
+  {
+    "id": "dac747c397",
+    "service": "streamlink",
+    "version": "dac747c397",
+    "ts": "2026-10-22T18:46:17Z",
+    "author": "bastimeyer",
+    "summary": "build: bump brotli to 1.2.1",
+    "config_before": {
+      "uv.lock": "previous"
+    },
+    "config_after": {
+      "uv.lock": "modified in dac747c397"
+    },
+    "files": [
+      "uv.lock"
+    ]
+  },
+  {
+    "id": "83bf4bcbc4",
+    "service": "streamlink",
+    "version": "83bf4bcbc4",
+    "ts": "2026-10-22T18:46:32Z",
+    "author": "bastimeyer",
+    "summary": "ci.github: bump brotli 3.14t temp wheels to 1.2.1",
+    "config_before": {
+      ".github/workflows/scripts/install-temp-dependencies.sh": "previous"
+    },
+    "config_after": {
+      ".github/workflows/scripts/install-temp-dependencies.sh": "modified in 83bf4bcbc4"
+    },
+    "files": [
+      ".github/workflows/scripts/install-temp-dependencies.sh"
+    ]
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "fixed_run": "https://github.com/aio-libs/yarl/actions/runs/40398972339",
+  "fixed_sha": "728a984ca8cdcb579d632b5313104931a35b8f0a",
+  "commits": [
+    "fe22e36861c61318f0e22d4a9370d9c957786e93",
+    "ba9939be94401f970993cf183e31d73a81432122",
+    "3ee08869654e9802a5b6769085f7fc69edce5d5f",
+    "6061eba5b70dbf975e00c918ec7549bfc7cf09fc",
+    "31ce4d26ecc7379ff5698c05009dfa4c1d35679c",
+    "d250d7ce404a83a494e2af219ca0d574727ee7a7",
+    "e7416884133cee06ad6012388be92288f3697739",
+    "0faf5864d0125697cf2327db6b6ed91994fa353b",
+    "9583042bf761db5dfa1cac3d1f5d055f0c30d57e",
+    "728a984ca8cdcb579d632b5313104931a35b8f0a"
+  ],
+  "files": [
+    ".github/workflows/aiohttp.yml",
+    ".github/workflows/ci-cd.yml",
+    ".github/workflows/codeql.yml",
+    ".github/workflows/reusable-cibuildwheel.yml",
+    ".github/workflows/reusable-codspeed.yml",
+    "CHANGES/1996.bugfix.rst",
+    "requirements/test-cibuildwheel.txt",
+    "tests/test_url_join_empty_authority.py",
+    "yarl/_url.py"
+  ],
+  "status": "ahead"
+}

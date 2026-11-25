@@ -1,0 +1,13 @@
+{
+  "fixed_run": "https://github.com/Kludex/uvicorn/actions/runs/41760037465",
+  "fixed_sha": "26433f1e51fa2178a41bd7ccce46fd87a9bd4dda",
+  "commits": [
+    "1ae378afc45daa8a1732d6dd188e349926fdd115",
+    "26433f1e51fa2178a41bd7ccce46fd87a9bd4dda"
+  ],
+  "files": [
+    "docs/settings.md",
+    "tests/test_config.py"
+  ],
+  "status": "ahead"
+}

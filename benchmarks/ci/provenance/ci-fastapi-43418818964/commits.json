@@ -1,0 +1,86 @@
+[
+  {
+    "author": "YuriiMotov",
+    "committedDate": "2026-11-13T11:36:31Z",
+    "messageHeadline": "Generate GH actions worklow lockfile",
+    "oid": "8c59d8c7c5bb1a646585e3a753849c0cb337361f",
+    "files": [
+      {
+        "filename": ".github/workflows/actions.lock",
+        "status": "added"
+      },
+      {
+        "filename": ".github/workflows/add-to-project.yml",
+        "status": "modified"
+      },
+      {
+        "filename": ".github/workflows/build-docs.yml",
+        "status": "modified"
+      },
+      {
+        "filename": ".github/workflows/bump-pre-commit-hooks.yml",
+        "status": "modified"
+      },
+      {
+        "filename": ".github/workflows/create-draft-release.yml",
+        "status": "modified"
+      },
+      {
+        "filename": ".github/workflows/deploy-docs.yml",
+        "status": "modified"
+      },
+      {
+        "filename": ".github/workflows/detect-conflicts.yml",
+        "status": "modified"
+      },
+      {
+        "filename": ".github/workflows/guard-dependencies.yml",
+        "status": "modified"
+      },
+      {
+        "filename": ".github/workflows/issue-manager.yml",
+        "status": "modified"
+      },
+      {
+        "filename": ".github/workflows/pre-commit.yml",
+        "status": "modified"
+      },
+      {
+        "filename": ".github/workflows/prepare-release.yml",
+        "status": "modified"
+      },
+      {
+        "filename": ".github/workflows/publish.yml",
+        "status": "modified"
+      },
+      {
+        "filename": ".github/workflows/smokeshow.yml",
+        "status": "modified"
+      },
+      {
+        "filename": ".github/workflows/sponsors.yml",
+        "status": "modified"
+      },
+      {
+        "filename": ".github/workflows/test-redistribute.yml",
+        "status": "modified"
+      },
+      {
+        "filename": ".github/workflows/test.yml",
+        "status": "modified"
+      },
+      {
+        "filename": ".github/workflows/topic-repos.yml",
+        "status": "modified"
+      },
+      {
+        "filename": ".github/workflows/translate.yml",
+        "status": "modified"
+      },
+      {
+        "filename": ".github/workflows/zizmor.yml",
+        "status": "modified"
+      }
+    ]
+  }
+]

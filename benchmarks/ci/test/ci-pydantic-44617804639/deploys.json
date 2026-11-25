@@ -1,0 +1,16 @@
+[
+  {
+    "id": "52a98fcea4",
+    "service": "pydantic",
+    "version": "52a98fcea4",
+    "ts": "2026-11-19T21:20:02Z",
+    "author": "alexmojaki",
+    "summary": "Construct native streamed models during parsing when class storage is ordinary",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "pydantic-core/src/validators/model_fields.rs",
+      "tests/test_json_streaming_expanded.py"
+    ]
+  }
+]

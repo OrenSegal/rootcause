@@ -1,0 +1,17 @@
+# Mined from https://github.com/dask/dask/actions/runs/43545992148 (dask/dask, licence
+# BSD-3-Clause). Fixed by run https://github.com/dask/dask/actions/runs/43550418961.
+# Label rule: the fix changed files exactly one tested commit touched. Fix touched:
+# dask/array/routines.py, dask/array/tests/test_routines.py.
+id: ci-dask-43545992148
+title: Keep expand_dims task graphs lazy
+alert:
+  severity: ci
+  service: windows-latest-py310-test-ci
+  summary: 'workflow Tests failed on fix/expand-dims-lazy-graph at 6e0d294ec7: step ''Run
+    tests'' in job ''windows-latest py310 test-ci'' failed.'
+truth:
+  category: bad_code_deploy
+  service: dask
+  required_evidence_any:
+  - 6e0d294ec7
+provenance: recorded

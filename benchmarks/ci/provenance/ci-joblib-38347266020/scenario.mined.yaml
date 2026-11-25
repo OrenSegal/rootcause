@@ -1,0 +1,19 @@
+# Mined from https://github.com/joblib/joblib/actions/runs/38347266020 (joblib/joblib,
+# licence BSD-3-Clause). Fixed by run
+# https://github.com/joblib/joblib/actions/runs/38347266020. Label rule: the first
+# attempt failed and a re-run of the same pull-request run passed. Fix touched: nothing
+# (rerun).
+id: ci-joblib-38347266020
+title: FIX publish cache layout metadata atomically
+alert:
+  severity: ci
+  service: testing-distributed-ubuntu-latest-oldest-supported-true
+  summary: 'workflow CI failed on codex/fix-concurrent-cache-initialization at 43f09e2b71:
+    step ''Run tests'' in job ''Testing (distributed, ubuntu-latest, oldest_supported, true)''
+    failed.'
+truth:
+  category: infrastructure
+  service: joblib
+  required_evidence_any:
+  - log-4055
+provenance: recorded

@@ -1,0 +1,18 @@
+# Mined from https://github.com/fastapi/fastapi/actions/runs/44138170508
+# (fastapi/fastapi, licence MIT). Fixed by run
+# https://github.com/fastapi/fastapi/actions/runs/44140625044. Label rule: the fix
+# changed files exactly one tested commit touched. Fix touched:
+# tests/test_parameter_extraction.py.
+id: ci-fastapi-44138170508
+title: "\u267B\uFE0F Refactor query, header, and form parameter extraction"
+alert:
+  severity: ci
+  service: coverage-combine
+  summary: 'workflow Test failed on codex/refactor-parameter-extraction at 1a42905d42: step
+    ''Run uv run coverage report --fail-under=100'' in job ''coverage-combine'' failed.'
+truth:
+  category: bad_code_deploy
+  service: fastapi
+  required_evidence_any:
+  - 1a42905d42
+provenance: recorded

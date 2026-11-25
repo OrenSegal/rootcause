@@ -1,0 +1,14 @@
+id: ci-mypy-42514756929
+title: Fix/22326 placeholder qualified name
+alert:
+  severity: ci
+  service: test-suite-with-py314-windows-64
+  summary: 'workflow Tests failed on fix/22326-placeholder-qualified-name at 1a8ca7e293: step
+    ''Test'' in job ''Test suite with py314-windows-64'' failed.'
+truth:
+  grading: class
+  category: bad_code_deploy
+  service: mypy
+  required_evidence_any:
+  - d020e3143e
+provenance: recorded

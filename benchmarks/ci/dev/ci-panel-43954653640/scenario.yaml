@@ -1,0 +1,17 @@
+id: ci-panel-43954653640
+title: 'docs: Add 1.11.0 release notes'
+alert:
+  severity: ci
+  service: ui-test-ui-windows-latest
+  summary: 'workflow tests failed on docs/release-notes-1.11.0 at 84a0031e23: step ''Test
+    UI'' in job ''ui:test-ui:windows-latest'' failed.'
+truth:
+  grading: class
+  category: infrastructure
+  service: panel
+  required_evidence_any:
+  - log-3739
+  - log-3755
+  - log-3868
+  - log-4014
+provenance: recorded

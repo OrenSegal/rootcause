@@ -1,0 +1,115 @@
+[
+  {
+    "id": "bf507b02c5",
+    "service": "loguru",
+    "version": "bf507b02c5",
+    "ts": "2026-09-24T13:35:00Z",
+    "author": "blockersiontko",
+    "summary": "Reformatted docs to .md",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "docs/api.md",
+      "docs/api.rst",
+      "docs/api/logger.md",
+      "docs/api/logger.rst",
+      "docs/api/type_hints.md",
+      "docs/api/type_hints.rst",
+      "docs/api/type_hints_source.md",
+      "docs/api/type_hints_source.rst",
+      "docs/index.md",
+      "docs/index.rst",
+      "docs/overview.md",
+      "docs/overview.rst",
+      "docs/project.md",
+      "docs/project.rst",
+      "docs/project/changelog.md",
+      "docs/project/changelog.rst",
+      "docs/project/contributing.md",
+      "docs/project/contributing.rst",
+      "docs/project/license.md",
+      "docs/project/license.rst",
+      "docs/resources.md",
+      "docs/resources.rst",
+      "docs/resources/migration.md",
+      "docs/resources/migration.rst",
+      "docs/resources/recipes.md",
+      "docs/resources/recipes.rst",
+      "docs/resources/troubleshooting.md"
+    ]
+  },
+  {
+    "id": "cd4efa89f3",
+    "service": "loguru",
+    "version": "cd4efa89f3",
+    "ts": "2026-09-24T14:14:41Z",
+    "author": "blockersiontko",
+    "summary": "WIP - fix documentation",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "docs/api.md",
+      "docs/api.rst",
+      "docs/api/logger.md",
+      "docs/api/logger.rst",
+      "docs/api/type_hints.md",
+      "docs/api/type_hints.rst",
+      "docs/conf.py",
+      "docs/index.md",
+      "docs/overview.md"
+    ]
+  },
+  {
+    "id": "ac6b3fabab",
+    "service": "loguru",
+    "version": "ac6b3fabab",
+    "ts": "2026-09-28T10:29:30Z",
+    "author": "blockersiontko",
+    "summary": "Migrate remaining docs from reStructuredText to Markdown",
+    "config_before": {
+      "pyproject.toml": "previous"
+    },
+    "config_after": {
+      "pyproject.toml": "modified in ac6b3fabab"
+    },
+    "files": [
+      "CHANGELOG.md",
+      "CHANGELOG.rst",
+      "CONTRIBUTING.md",
+      "CONTRIBUTING.rst",
+      "docs/api.md",
+      "docs/api.rst",
+      "docs/api/type_hints.md",
+      "docs/api/type_hints.rst",
+      "docs/project/changelog.md",
+      "docs/project/contributing.md",
+      "docs/resources/troubleshooting.md",
+      "pyproject.toml"
+    ]
+  },
+  {
+    "id": "44012d8754",
+    "service": "loguru",
+    "version": "44012d8754",
+    "ts": "2026-09-28T10:44:12Z",
+    "author": "blockersiontko",
+    "summary": "Fix end-of-file newlines and remove parser option from includes",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "docs/api/logger.rst",
+      "docs/api/type_hints_source.md",
+      "docs/conf.py",
+      "docs/index.md",
+      "docs/overview.md",
+      "docs/project.md",
+      "docs/project/changelog.md",
+      "docs/project/contributing.md",
+      "docs/project/license.md",
+      "docs/resources.md",
+      "docs/resources/migration.md",
+      "docs/resources/recipes.md",
+      "docs/resources/troubleshooting.md"
+    ]
+  }
+]

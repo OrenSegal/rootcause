@@ -1,0 +1,11 @@
+{
+  "fixed_run": "https://github.com/networkx/networkx/actions/runs/41303768656",
+  "fixed_sha": "452f15ae9225c88987b5ff6a1e5a1b7a9c08cc01",
+  "commits": [
+    "452f15ae9225c88987b5ff6a1e5a1b7a9c08cc01"
+  ],
+  "files": [
+    "networkx/algorithms/centrality/katz.py"
+  ],
+  "status": "ahead"
+}

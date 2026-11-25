@@ -1,0 +1,16 @@
+[
+  {
+    "id": "0891cde540",
+    "service": "click",
+    "version": "0891cde540",
+    "ts": "2026-09-01T10:18:00Z",
+    "author": "linhongyu510",
+    "summary": "fix atomic open_file: set mode via fchmod and close fd on failure",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "src/click/_compat.py",
+      "tests/test_utils/test_open_file.py"
+    ]
+  }
+]

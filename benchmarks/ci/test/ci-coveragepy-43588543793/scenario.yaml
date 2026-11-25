@@ -1,0 +1,14 @@
+id: ci-coveragepy-43588543793
+title: 'fix: preserve data recorded by other threads during flush_data'
+alert:
+  severity: ci
+  service: 3-15t-on-ubuntu
+  summary: 'workflow Tests failed on fix/flush-data-thread-loss-2384 at e571532dd2: step ''Run
+    tox for 3.15t'' in job ''3.15t on ubuntu'' failed.'
+truth:
+  grading: class
+  category: bad_code_deploy
+  service: coveragepy
+  required_evidence_any:
+  - e571532dd2
+provenance: recorded

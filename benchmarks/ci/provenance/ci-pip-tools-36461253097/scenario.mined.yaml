@@ -1,0 +1,21 @@
+# Mined from https://github.com/pypa/pip-tools/actions/runs/36461253097 (pypa/pip-tools,
+# licence BSD-3-Clause). Fixed by run https://github.com/pypa/pip-
+# tools/actions/runs/36461253097. Label rule: the first attempt failed and a re-run of
+# the same pull-request run passed. Fix touched: nothing (rerun).
+id: ci-pip-tools-36461253097
+title: '[pre-commit.ci] pre-commit autoupdate'
+alert:
+  severity: ci
+  service: windows-2025-3-10-lowest
+  summary: 'workflow CI failed on pre-commit-ci-update-config at 58854f545a: step ''Install
+    test dependencies'' in job ''windows-2025 / 3.10 / lowest'' failed.'
+truth:
+  category: infrastructure
+  service: pip-tools
+  required_evidence_any:
+  - log-1711
+  - log-1733
+  - log-3258
+  - log-3280
+  - log-6983
+provenance: recorded

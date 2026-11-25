@@ -1,0 +1,11 @@
+{
+  "fixed_run": "https://github.com/Kludex/starlette/actions/runs/39820263105",
+  "fixed_sha": "027664dedc20c37c2b578496f467995ebbc4748c",
+  "commits": [
+    "027664dedc20c37c2b578496f467995ebbc4748c"
+  ],
+  "files": [
+    "tests/test_datastructures.py"
+  ],
+  "status": "ahead"
+}

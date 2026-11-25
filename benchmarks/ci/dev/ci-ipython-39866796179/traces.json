@@ -1,0 +1,102 @@
+[
+  {
+    "span_id": "run-39866796179",
+    "trace_id": "run-39866796179",
+    "parent_id": null,
+    "service": "python-package",
+    "name": "Python package",
+    "start": "2026-10-22T22:41:45Z",
+    "duration_ms": 23000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-120130894201",
+    "trace_id": "run-39866796179",
+    "parent_id": "run-39866796179",
+    "service": "formatting",
+    "name": "formatting",
+    "start": "2026-10-22T22:41:48Z",
+    "duration_ms": 19000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-120130894201-step-1",
+    "trace_id": "run-39866796179",
+    "parent_id": "job-120130894201",
+    "service": "formatting",
+    "name": "Set up job",
+    "start": "2026-10-22T22:41:49Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-120130894201-step-2",
+    "trace_id": "run-39866796179",
+    "parent_id": "job-120130894201",
+    "service": "formatting",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-22T22:41:50Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-120130894201-step-3",
+    "trace_id": "run-39866796179",
+    "parent_id": "job-120130894201",
+    "service": "formatting",
+    "name": "Set up Python",
+    "start": "2026-10-22T22:41:55Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-120130894201-step-4",
+    "trace_id": "run-39866796179",
+    "parent_id": "job-120130894201",
+    "service": "formatting",
+    "name": "Install uv",
+    "start": "2026-10-22T22:41:58Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-120130894201-step-5",
+    "trace_id": "run-39866796179",
+    "parent_id": "job-120130894201",
+    "service": "formatting",
+    "name": "Install dependencies",
+    "start": "2026-10-22T22:42:00Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-120130894201-step-6",
+    "trace_id": "run-39866796179",
+    "parent_id": "job-120130894201",
+    "service": "formatting",
+    "name": "Lint with darker",
+    "start": "2026-10-22T22:42:01Z",
+    "duration_ms": 5000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-120130894201-step-12",
+    "trace_id": "run-39866796179",
+    "parent_id": "job-120130894201",
+    "service": "formatting",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-10-22T22:42:06Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-120130894201-step-13",
+    "trace_id": "run-39866796179",
+    "parent_id": "job-120130894201",
+    "service": "formatting",
+    "name": "Complete job",
+    "start": "2026-10-22T22:42:06Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

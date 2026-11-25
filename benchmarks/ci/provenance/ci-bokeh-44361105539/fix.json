@@ -1,0 +1,18 @@
+{
+  "fixed_run": "https://github.com/bokeh/bokeh/actions/runs/44363147580",
+  "fixed_sha": "56f23451fd9a02be7ab0963ab9e681f787183331",
+  "commits": [
+    "f3cc662c4b0ad86c383424e7c276f73e7c38bc3d",
+    "56f23451fd9a02be7ab0963ab9e681f787183331"
+  ],
+  "files": [
+    "bokehjs/test/unit/client/comm.ts",
+    "docs/bokeh/source/docs/dev_guide/jupyter.rst",
+    "jupyter/src/kernel.ts",
+    "jupyter/test/kernel.test.ts",
+    "tests/integration/test_jupyter_extension.py",
+    "tests/unit/bokeh/server/test_comm.py"
+  ],
+  "merges": [],
+  "status": "ahead"
+}

@@ -1,0 +1,13 @@
+{
+  "fixed_run": "https://github.com/encode/django-rest-framework/actions/runs/34695675264",
+  "fixed_sha": "7cc7949839ed7596bbbead5dae81a0cebe4c9309",
+  "commits": [
+    "7cc7949839ed7596bbbead5dae81a0cebe4c9309"
+  ],
+  "files": [
+    "rest_framework/validators.py",
+    "tests/test_validators.py"
+  ],
+  "merges": [],
+  "status": "ahead"
+}

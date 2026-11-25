@@ -1,0 +1,15 @@
+[
+  {
+    "id": "a6dbb66309",
+    "service": "xarray",
+    "version": "a6dbb66309",
+    "ts": "2026-11-17T17:31:58Z",
+    "author": "waseem1302-x",
+    "summary": "TST: regression tests for Dataset from DataFrame with CategoricalIndex of Intervals",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "xarray/tests/test_dataset.py"
+    ]
+  }
+]

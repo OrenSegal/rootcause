@@ -1,0 +1,14 @@
+id: ci-pytest-asyncio-42167883825
+title: Warn about unset fixture loop scope only for async fixtures
+alert:
+  severity: ci
+  service: run-linters
+  summary: 'workflow CI failed on fix-1033-default-fixture-loop-scope-warning at 578e233989:
+    step ''Run pre-commit checks'' in job ''Run linters'' failed.'
+truth:
+  grading: class
+  category: bad_code_deploy
+  service: pytest-asyncio
+  required_evidence_any:
+  - 578e233989
+provenance: recorded

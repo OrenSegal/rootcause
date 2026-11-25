@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1882cc34fb",
+    "service": "bokeh",
+    "version": "1882cc34fb",
+    "ts": "2026-11-20T05:23:51Z",
+    "author": "bryevdv",
+    "summary": "Fix nightly docs failures and improve model structure plots",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "src/bokeh/models/glyphs.pyi",
+      "src/bokeh/models/util/structure.py",
+      "src/bokeh/sphinxext/_internal/bokeh_example_metadata.py",
+      "src/bokeh/sphinxext/bokeh_plot.py",
+      "tests/unit/bokeh/models/util/test_structure.py",
+      "tests/unit/bokeh/sphinxext/test_bokeh_plot.py"
+    ]
+  }
+]

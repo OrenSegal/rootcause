@@ -1,0 +1,19 @@
+# Mined from https://github.com/encode/django-rest-framework/actions/runs/34093601968
+# (encode/django-rest-framework, licence NOASSERTION). Fixed by run
+# https://github.com/encode/django-rest-framework/actions/runs/34096394995. Label rule:
+# the fix changed files exactly one tested commit touched. Fix touched:
+# rest_framework/relations.py.
+id: ci-django-rest-framework-34093601968
+title: Fix `TypeError` in `RelatedField.get_choices()` when `to_representation` returns unhashable
+  type
+alert:
+  severity: ci
+  service: python-3-11
+  summary: 'workflow CI failed on fix/related-field-unhashable-get-choices at b5cabc1f72:
+    step ''Run tox targets for 3.11'' in job ''Python 3.11'' failed.'
+truth:
+  category: bad_code_deploy
+  service: django-rest-framework
+  required_evidence_any:
+  - b5cabc1f72
+provenance: recorded

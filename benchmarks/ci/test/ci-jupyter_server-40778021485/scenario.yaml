@@ -1,0 +1,14 @@
+id: ci-jupyter_server-40778021485
+title: Fix test failures from Tornado 6.6 and newer runners
+alert:
+  severity: ci
+  service: test-prereleases
+  summary: 'workflow Jupyter Server Tests failed on tornado-start-lines at 761f79c3a4: step
+    ''Run the tests'' in job ''Test Prereleases'' failed.'
+truth:
+  grading: class
+  category: infrastructure
+  service: jupyter_server
+  required_evidence_any:
+  - log-0783
+provenance: recorded

@@ -1,0 +1,18 @@
+[
+  {
+    "author": "philippjfr",
+    "committedDate": "2026-11-16T20:54:42Z",
+    "messageHeadline": "docs: Update the 1.11.0 release notes",
+    "oid": "84a0031e23fa9eb81f0d504228e0855371114351",
+    "files": [
+      {
+        "filename": "CHANGELOG.md",
+        "status": "modified"
+      },
+      {
+        "filename": "doc/about/releases.md",
+        "status": "modified"
+      }
+    ]
+  }
+]

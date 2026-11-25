@@ -1,0 +1,432 @@
+[
+  {
+    "span_id": "run-43938180211",
+    "trace_id": "run-43938180211",
+    "parent_id": null,
+    "service": "linting",
+    "name": "Linting",
+    "start": "2026-11-16T19:19:45Z",
+    "duration_ms": 197000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-133548243716",
+    "trace_id": "run-43938180211",
+    "parent_id": "run-43938180211",
+    "service": "clang-tidy-macos-objective-c",
+    "name": "clang-tidy (macOS / Objective-C)",
+    "start": "2026-11-16T19:19:49Z",
+    "duration_ms": 192000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548243716-step-1",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548243716",
+    "service": "clang-tidy-macos-objective-c",
+    "name": "Set up job",
+    "start": "2026-11-16T19:19:50Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548243716-step-2",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548243716",
+    "service": "clang-tidy-macos-objective-c",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T19:19:51Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548243716-step-3",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548243716",
+    "service": "clang-tidy-macos-objective-c",
+    "name": "Set up Python 3",
+    "start": "2026-11-16T19:19:58Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548243716-step-4",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548243716",
+    "service": "clang-tidy-macos-objective-c",
+    "name": "Install OS dependencies",
+    "start": "2026-11-16T19:19:58Z",
+    "duration_ms": 50000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548243716-step-5",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548243716",
+    "service": "clang-tidy-macos-objective-c",
+    "name": "Install build dependencies",
+    "start": "2026-11-16T19:20:48Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548243716-step-6",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548243716",
+    "service": "clang-tidy-macos-objective-c",
+    "name": "Run clang-tidy",
+    "start": "2026-11-16T19:20:52Z",
+    "duration_ms": 122000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548243716-step-11",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548243716",
+    "service": "clang-tidy-macos-objective-c",
+    "name": "Post Set up Python 3",
+    "start": "2026-11-16T19:22:54Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548243716-step-12",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548243716",
+    "service": "clang-tidy-macos-objective-c",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T19:22:55Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548243716-step-13",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548243716",
+    "service": "clang-tidy-macos-objective-c",
+    "name": "Complete job",
+    "start": "2026-11-16T19:22:56Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548243984",
+    "trace_id": "run-43938180211",
+    "parent_id": "run-43938180211",
+    "service": "mypy",
+    "name": "mypy",
+    "start": "2026-11-16T19:19:48Z",
+    "duration_ms": 29000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548243984-step-1",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548243984",
+    "service": "mypy",
+    "name": "Set up job",
+    "start": "2026-11-16T19:19:49Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548243984-step-2",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548243984",
+    "service": "mypy",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T19:19:50Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548243984-step-3",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548243984",
+    "service": "mypy",
+    "name": "Set up Python 3",
+    "start": "2026-11-16T19:19:52Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548243984-step-4",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548243984",
+    "service": "mypy",
+    "name": "Install mypy",
+    "start": "2026-11-16T19:19:52Z",
+    "duration_ms": 16000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548243984-step-5",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548243984",
+    "service": "mypy",
+    "name": "Set up reviewdog",
+    "start": "2026-11-16T19:20:08Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548243984-step-6",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548243984",
+    "service": "mypy",
+    "name": "Run mypy",
+    "start": "2026-11-16T19:20:08Z",
+    "duration_ms": 7000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548243984-step-11",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548243984",
+    "service": "mypy",
+    "name": "Post Set up Python 3",
+    "start": "2026-11-16T19:20:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548243984-step-12",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548243984",
+    "service": "mypy",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T19:20:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548243984-step-13",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548243984",
+    "service": "mypy",
+    "name": "Complete job",
+    "start": "2026-11-16T19:20:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548244087",
+    "trace_id": "run-43938180211",
+    "parent_id": "run-43938180211",
+    "service": "eslint",
+    "name": "eslint",
+    "start": "2026-11-16T19:19:48Z",
+    "duration_ms": 12000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548244087-step-1",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548244087",
+    "service": "eslint",
+    "name": "Set up job",
+    "start": "2026-11-16T19:19:48Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548244087-step-2",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548244087",
+    "service": "eslint",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T19:19:49Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548244087-step-3",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548244087",
+    "service": "eslint",
+    "name": "eslint",
+    "start": "2026-11-16T19:19:52Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548244087-step-6",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548244087",
+    "service": "eslint",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T19:19:58Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548244087-step-7",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548244087",
+    "service": "eslint",
+    "name": "Complete job",
+    "start": "2026-11-16T19:19:58Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548244147",
+    "trace_id": "run-43938180211",
+    "parent_id": "run-43938180211",
+    "service": "ruff",
+    "name": "ruff",
+    "start": "2026-11-16T19:19:48Z",
+    "duration_ms": 17000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-133548244147-step-1",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548244147",
+    "service": "ruff",
+    "name": "Set up job",
+    "start": "2026-11-16T19:19:49Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548244147-step-2",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548244147",
+    "service": "ruff",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T19:19:51Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548244147-step-3",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548244147",
+    "service": "ruff",
+    "name": "Set up Python 3",
+    "start": "2026-11-16T19:19:56Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548244147-step-4",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548244147",
+    "service": "ruff",
+    "name": "Install ruff",
+    "start": "2026-11-16T19:19:56Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548244147-step-5",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548244147",
+    "service": "ruff",
+    "name": "Set up reviewdog",
+    "start": "2026-11-16T19:20:02Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548244147-step-6",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548244147",
+    "service": "ruff",
+    "name": "Run ruff",
+    "start": "2026-11-16T19:20:03Z",
+    "duration_ms": 0.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-133548244147-step-12",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548244147",
+    "service": "ruff",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T19:20:03Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548244147-step-13",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548244147",
+    "service": "ruff",
+    "name": "Complete job",
+    "start": "2026-11-16T19:20:04Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548244159",
+    "trace_id": "run-43938180211",
+    "parent_id": "run-43938180211",
+    "service": "precommit",
+    "name": "precommit",
+    "start": "2026-11-16T19:19:48Z",
+    "duration_ms": 58000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-133548244159-step-1",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548244159",
+    "service": "precommit",
+    "name": "Set up job",
+    "start": "2026-11-16T19:19:49Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548244159-step-2",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548244159",
+    "service": "precommit",
+    "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T19:19:50Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548244159-step-3",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548244159",
+    "service": "precommit",
+    "name": "Run j178/prek-action@44924fe9ef4a6f88253c4b6b1bf11c689d3ce53d",
+    "start": "2026-11-16T19:19:55Z",
+    "duration_ms": 44000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-133548244159-step-7",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548244159",
+    "service": "precommit",
+    "name": "Post Run j178/prek-action@44924fe9ef4a6f88253c4b6b1bf11c689d3ce53d",
+    "start": "2026-11-16T19:20:39Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548244159-step-8",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548244159",
+    "service": "precommit",
+    "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "start": "2026-11-16T19:20:44Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-133548244159-step-9",
+    "trace_id": "run-43938180211",
+    "parent_id": "job-133548244159",
+    "service": "precommit",
+    "name": "Complete job",
+    "start": "2026-11-16T19:20:44Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

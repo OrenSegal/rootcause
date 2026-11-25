@@ -1,0 +1,54 @@
+[
+  {
+    "author": "zpt4",
+    "committedDate": "2026-11-10T17:00:50Z",
+    "messageHeadline": "dbcore: skip migration backup for tables that are empty",
+    "oid": "b159be824fe4ec40a3e7d0cc6aded393765d9d1c",
+    "files": [
+      {
+        "filename": "beets/dbcore/db.py",
+        "status": "modified"
+      },
+      {
+        "filename": "test/library/test_migrations.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "zpt4",
+    "committedDate": "2026-11-10T17:39:03Z",
+    "messageHeadline": "changelog #7170 skip migration backups for empty tables",
+    "oid": "d94aad182945c1e20794d2219a16a3f700a43773",
+    "files": [
+      {
+        "filename": "docs/changelog.rst",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "zpt4",
+    "committedDate": "2026-11-10T17:43:19Z",
+    "messageHeadline": " changelog fix bug reference",
+    "oid": "6cd5f778c0d4c6b3ce3682a43255e8a9be8bc9d8",
+    "files": [
+      {
+        "filename": "docs/changelog.rst",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "zpt4",
+    "committedDate": "2026-11-10T17:46:24Z",
+    "messageHeadline": "changelog #7170 add missing colon",
+    "oid": "9dab2ca8b931c6c6fbe995f377871166aaed6b7b",
+    "files": [
+      {
+        "filename": "docs/changelog.rst",
+        "status": "modified"
+      }
+    ]
+  }
+]

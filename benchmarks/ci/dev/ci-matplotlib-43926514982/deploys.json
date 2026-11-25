@@ -1,0 +1,20 @@
+[
+  {
+    "id": "afe033b229",
+    "service": "matplotlib",
+    "version": "afe033b229",
+    "ts": "2026-11-16T18:13:04Z",
+    "author": "iccir",
+    "summary": "Move service disabling to runner tool",
+    "config_before": {
+      ".github/workflows/tests.yml": "previous"
+    },
+    "config_after": {
+      ".github/workflows/tests.yml": "modified in afe033b229"
+    },
+    "files": [
+      ".github/workflows/tests.yml",
+      "tools/macos_runner_tool.py"
+    ]
+  }
+]

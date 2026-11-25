@@ -1,0 +1,11 @@
+{
+  "fixed_run": "https://github.com/sphinx-doc/sphinx/actions/runs/40748049337",
+  "fixed_sha": "fab1ce19190a90fa8d2644303fa648a1a1d3a68a",
+  "commits": [
+    "fab1ce19190a90fa8d2644303fa648a1a1d3a68a"
+  ],
+  "files": [
+    "tests/test_domains/test_domain_std.py"
+  ],
+  "status": "ahead"
+}

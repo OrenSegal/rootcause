@@ -1,0 +1,22 @@
+[
+  {
+    "author": "devin-ai-integration[bot]",
+    "committedDate": "2026-11-06T05:20:19Z",
+    "messageHeadline": "Warn about unset fixture loop scope only for async fixtures",
+    "oid": "578e233989a23e72db1e81a591603527ea58a733",
+    "files": [
+      {
+        "filename": "changelog.d/1033.fixed.rst",
+        "status": "added"
+      },
+      {
+        "filename": "pytest_asyncio/plugin.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_config_warnings.py",
+        "status": "added"
+      }
+    ]
+  }
+]

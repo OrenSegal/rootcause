@@ -1,0 +1,14 @@
+[
+  {
+    "author": "bastimeyer",
+    "committedDate": "2026-09-03T19:34:22Z",
+    "messageHeadline": "ci: ensure git fetch depth on all CI services",
+    "oid": "2f4bcfad9c55159572fac78c718c13348e05ba53",
+    "files": [
+      {
+        "filename": ".github/workflows/scripts/fetch-tags.sh",
+        "status": "modified"
+      }
+    ]
+  }
+]

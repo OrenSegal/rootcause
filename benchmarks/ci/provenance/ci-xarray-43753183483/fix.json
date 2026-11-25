@@ -1,0 +1,11 @@
+{
+  "fixed_run": "https://github.com/pydata/xarray/actions/runs/43757002973",
+  "fixed_sha": "7298cabc6a48a1680113888ebb4a0f980ca7039f",
+  "commits": [
+    "7298cabc6a48a1680113888ebb4a0f980ca7039f"
+  ],
+  "files": [
+    "xarray/tests/test_weighted.py"
+  ],
+  "status": "ahead"
+}

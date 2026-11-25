@@ -1,0 +1,14 @@
+id: ci-poetry-core-33070303884
+title: Automated licenses list update
+alert:
+  severity: ci
+  service: ubuntu-pypy-3-11
+  summary: 'workflow Tests failed on license-autoupdate at f70075db28: step ''Install dependencies''
+    in job ''Ubuntu / pypy-3.11'' failed.'
+truth:
+  grading: class
+  category: infrastructure
+  service: poetry-core
+  required_evidence_any:
+  - log-0295
+provenance: recorded

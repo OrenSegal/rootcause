@@ -1,0 +1,19 @@
+[
+  {
+    "id": "20374a9e39",
+    "service": "urllib3",
+    "version": "20374a9e39",
+    "ts": "2026-11-18T13:47:37Z",
+    "author": "ferly7",
+    "summary": "Add streaming multipart encoder and decoder in urllib3.multipart",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "changelog/624.feature.rst",
+      "docs/reference/urllib3.fields.rst",
+      "src/urllib3/filepost.py",
+      "src/urllib3/multipart.py",
+      "test/test_multipart.py"
+    ]
+  }
+]

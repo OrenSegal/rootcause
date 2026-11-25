@@ -1,0 +1,26 @@
+[
+  {
+    "author": "ferly7",
+    "committedDate": "2026-11-18T13:47:26Z",
+    "messageHeadline": "Construct Authorization and Proxy-Authorization headers from URL userinfo",
+    "oid": "80f53aa5d35045d895a791a113468b9f66065994",
+    "files": [
+      {
+        "filename": "changelog/1999.feature.rst",
+        "status": "added"
+      },
+      {
+        "filename": "src/urllib3/poolmanager.py",
+        "status": "modified"
+      },
+      {
+        "filename": "test/test_poolmanager.py",
+        "status": "modified"
+      },
+      {
+        "filename": "test/test_proxymanager.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

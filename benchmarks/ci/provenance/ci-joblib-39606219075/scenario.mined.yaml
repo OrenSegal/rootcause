@@ -1,0 +1,18 @@
+# Mined from https://github.com/joblib/joblib/actions/runs/39606219075 (joblib/joblib,
+# licence BSD-3-Clause). Fixed by run
+# https://github.com/joblib/joblib/actions/runs/39606219075. Label rule: the first
+# attempt failed and a re-run of the same pull-request run passed. Fix touched: nothing
+# (rerun).
+id: ci-joblib-39606219075
+title: FIX frozenset hash
+alert:
+  severity: ci
+  service: testing-python3-14-free-threaded-ubuntu-latest-free-threaded-3-14
+  summary: 'workflow CI failed on Fix-frozenset-hash at 0619edd2ab: step ''Run tests'' in
+    job ''Testing (python3.14-free-threaded, ubuntu-latest, free-threaded-3.14)'' failed.'
+truth:
+  category: infrastructure
+  service: joblib
+  required_evidence_any:
+  - log-7071
+provenance: recorded

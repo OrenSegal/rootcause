@@ -1,0 +1,17 @@
+# Mined from https://github.com/dask/dask/actions/runs/43344036689 (dask/dask, licence
+# BSD-3-Clause). Fixed by run https://github.com/dask/dask/actions/runs/43345786855.
+# Label rule: the fix changed files exactly one tested commit touched. Fix touched:
+# dask/dataframe/dask_expr/_collection.py.
+id: ci-dask-43344036689
+title: 'NumPy 2.6: Fix `__array_wrap__` method name detection'
+alert:
+  severity: ci
+  service: pre-commit-hooks
+  summary: 'workflow Linting failed on fix/array-wrap-stack-inspection at 5b4630d57b: step
+    ''Run pre-commit/action@v3.0.1'' in job ''pre-commit hooks'' failed.'
+truth:
+  category: bad_code_deploy
+  service: dask
+  required_evidence_any:
+  - 5b4630d57b
+provenance: recorded

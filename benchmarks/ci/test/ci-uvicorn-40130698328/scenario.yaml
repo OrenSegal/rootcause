@@ -1,0 +1,14 @@
+id: ci-uvicorn-40130698328
+title: Stop idle server promptly on should_exit (#3216)
+alert:
+  severity: ci
+  service: python-3-14-macos-latest
+  summary: 'workflow Test Suite failed on fix/prompt-shutdown-idle-server at 0f81ac853f: step
+    ''Run tests'' in job ''Python 3.14 macos-latest'' failed.'
+truth:
+  grading: class
+  category: bad_code_deploy
+  service: uvicorn
+  required_evidence_any:
+  - 0f81ac853f
+provenance: recorded

@@ -1,0 +1,30 @@
+[
+  {
+    "author": "aiolibsbot",
+    "committedDate": "2026-09-30T16:56:25Z",
+    "messageHeadline": "Move project metadata from setup.cfg to pyproject.toml",
+    "oid": "d0b48eeeef4b401c5399a1bf1a4de1622bdd8726",
+    "files": [
+      {
+        "filename": "pyproject.toml",
+        "status": "modified"
+      },
+      {
+        "filename": "setup.cfg",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "aiolibsbot",
+    "committedDate": "2026-09-30T16:56:57Z",
+    "messageHeadline": "Add news fragment for the PEP 621 metadata move",
+    "oid": "34a645d4fd00db7b4dcb2b2b641372a53e0b9dc1",
+    "files": [
+      {
+        "filename": "CHANGES/312.packaging.rst",
+        "status": "added"
+      }
+    ]
+  }
+]

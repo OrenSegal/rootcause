@@ -1,0 +1,19 @@
+[
+  {
+    "id": "92ce603506",
+    "service": "networkx",
+    "version": "92ce603506",
+    "ts": "2026-11-19T16:09:43Z",
+    "author": "dschult",
+    "summary": "Update milestone-merged-prs.yaml",
+    "config_before": {
+      ".github/workflows/milestone-merged-prs.yaml": "previous"
+    },
+    "config_after": {
+      ".github/workflows/milestone-merged-prs.yaml": "modified in 92ce603506"
+    },
+    "files": [
+      ".github/workflows/milestone-merged-prs.yaml"
+    ]
+  }
+]

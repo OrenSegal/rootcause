@@ -1,0 +1,17 @@
+# Mined from https://github.com/scrapy/scrapy/actions/runs/42512822031 (scrapy/scrapy,
+# licence BSD-3-Clause). Fixed by run
+# https://github.com/scrapy/scrapy/actions/runs/42512822031. Label rule: a rerun of the
+# same commit passed. Fix touched: nothing (rerun).
+id: ci-scrapy-42512822031
+title: Support coros in schedulers and dupefilters.
+alert:
+  severity: ci
+  service: tests-windows-3-11-9-min
+  summary: 'workflow CI failed on scheduler-dupefilter-coroutines at 0c2e3e8385: step ''Run
+    tests'' in job ''tests (windows, 3.11.9, min)'' failed.'
+truth:
+  category: infrastructure
+  service: scrapy
+  required_evidence_any:
+  - log-0549
+provenance: recorded

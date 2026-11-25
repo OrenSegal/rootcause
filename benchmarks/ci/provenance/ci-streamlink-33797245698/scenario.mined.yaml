@@ -1,0 +1,18 @@
+# Mined from https://github.com/streamlink/streamlink/actions/runs/33797245698
+# (streamlink/streamlink, licence BSD-2-Clause). Fixed by run
+# https://github.com/streamlink/streamlink/actions/runs/33797245698. Label rule: the
+# first attempt failed and a re-run of the same pull-request run passed. Fix touched:
+# nothing (rerun).
+id: ci-streamlink-33797245698
+title: 'ci: ensure git fetch depth on all CI services'
+alert:
+  severity: ci
+  service: test-macos-latest-3-11
+  summary: 'workflow Test failed on ci/deepen-fetch-depth at 2f4bcfad9c: step ''Install Python
+    dependencies'' in job ''Test (macos-latest, 3.11)'' failed.'
+truth:
+  category: infrastructure
+  service: streamlink
+  required_evidence_any:
+  - log-0216
+provenance: recorded

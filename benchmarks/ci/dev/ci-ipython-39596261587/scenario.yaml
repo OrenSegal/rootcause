@@ -1,0 +1,14 @@
+id: ci-ipython-39596261587
+title: Accept a quoted FILE:LINE in %debug --breakpoint
+alert:
+  severity: ci
+  service: formatting
+  summary: 'workflow Python package failed on fix/debug-breakpoint-quoted-path at 94c7262ef2:
+    step ''Lint with darker'' in job ''formatting'' failed.'
+truth:
+  grading: class
+  category: bad_code_deploy
+  service: ipython
+  required_evidence_any:
+  - 94c7262ef2
+provenance: recorded

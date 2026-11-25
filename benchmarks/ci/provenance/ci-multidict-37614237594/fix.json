@@ -1,0 +1,11 @@
+{
+  "fixed_run": "https://github.com/aio-libs/multidict/actions/runs/37615721214",
+  "fixed_sha": "1a3d5149b78abba172df7dd29d77a72b8e96a229",
+  "commits": [
+    "1a3d5149b78abba172df7dd29d77a72b8e96a229"
+  ],
+  "files": [
+    "tests/test_istr.py"
+  ],
+  "status": "ahead"
+}

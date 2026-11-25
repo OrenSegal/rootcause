@@ -1,0 +1,19 @@
+[
+  {
+    "id": "f7854b000e",
+    "service": "matplotlib",
+    "version": "f7854b000e",
+    "ts": "2026-11-16T16:33:06Z",
+    "author": "iccir",
+    "summary": "Disable Siri/telemetry/knowledge as well",
+    "config_before": {
+      ".github/workflows/tests.yml": "previous"
+    },
+    "config_after": {
+      ".github/workflows/tests.yml": "modified in f7854b000e"
+    },
+    "files": [
+      ".github/workflows/tests.yml"
+    ]
+  }
+]

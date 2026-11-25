@@ -1,0 +1,18 @@
+[
+  {
+    "author": "iccir",
+    "committedDate": "2026-11-16T18:13:04Z",
+    "messageHeadline": "Move service disabling to runner tool",
+    "oid": "afe033b229bb0c0c98fd456b81dca5786fe3780f",
+    "files": [
+      {
+        "filename": ".github/workflows/tests.yml",
+        "status": "modified"
+      },
+      {
+        "filename": "tools/macos_runner_tool.py",
+        "status": "renamed"
+      }
+    ]
+  }
+]

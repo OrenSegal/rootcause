@@ -1,0 +1,226 @@
+[
+  {
+    "author": "martinfleis",
+    "committedDate": "2026-08-31T10:30:21Z",
+    "messageHeadline": "add deprecation for tools.collect",
+    "oid": "9b463e6c3546604ef79d518f9908dcc44d0dcbaf",
+    "files": [
+      {
+        "filename": "geopandas/tools/util.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "martinfleis",
+    "committedDate": "2026-08-31T13:51:34Z",
+    "messageHeadline": "expose collect within dissolve",
+    "oid": "61d58912e7b98015fa4be9fda9f4bb45d0369966",
+    "files": [
+      {
+        "filename": "geopandas/geodataframe.py",
+        "status": "modified"
+      },
+      {
+        "filename": "geopandas/tools/tests/test_tools.py",
+        "status": "modified"
+      },
+      {
+        "filename": "geopandas/tools/util.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "martinfleis",
+    "committedDate": "2026-09-01T11:57:20Z",
+    "messageHeadline": "fix deprecation",
+    "oid": "638e84665b999186afc5e2c5c598ca918e712dd7",
+    "files": [
+      {
+        "filename": "geopandas/tools/tests/test_tools.py",
+        "status": "modified"
+      },
+      {
+        "filename": "geopandas/tools/util.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "martinfleis",
+    "committedDate": "2026-09-01T13:22:44Z",
+    "messageHeadline": "Update util.py",
+    "oid": "6bdbaf890d38e06e800fc883bd8ff050e1a05d15",
+    "files": [
+      {
+        "filename": "geopandas/tools/util.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "martinfleis",
+    "committedDate": "2026-09-16T08:02:06Z",
+    "messageHeadline": "tests and docs",
+    "oid": "43324ce63e1fca8824f03f1d7c73ec5b6169f008",
+    "files": [
+      {
+        "filename": "CHANGELOG.md",
+        "status": "modified"
+      },
+      {
+        "filename": "doc/source/docs/user_guide/aggregation_with_dissolve.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "geopandas/geodataframe.py",
+        "status": "modified"
+      },
+      {
+        "filename": "geopandas/tests/test_dissolve.py",
+        "status": "modified"
+      }
+    ]
+  },
+  {
+    "author": "martinfleis",
+    "committedDate": "2026-09-20T20:15:59Z",
+    "messageHeadline": "Merge remote-tracking branch 'upstream/main' into collect",
+    "oid": "dbcd60efab23303ed2d94b96801d37dc65b95a8c",
+    "files": [
+      {
+        "filename": "CHANGELOG.md",
+        "status": "modified"
+      },
+      {
+        "filename": "CONTRIBUTING.md",
+        "status": "modified"
+      },
+      {
+        "filename": "ci/envs/313-latest.yaml",
+        "status": "modified"
+      },
+      {
+        "filename": "doc/source/_static/code/make_grid.py",
+        "status": "added"
+      },
+      {
+        "filename": "doc/source/_static/code/make_grid_types.py",
+        "status": "added"
+      },
+      {
+        "filename": "doc/source/community/contributing.md",
+        "status": "added"
+      },
+      {
+        "filename": "doc/source/community/contributing.rst",
+        "status": "removed"
+      },
+      {
+        "filename": "doc/source/community/ecosystem.md",
+        "status": "modified"
+      },
+      {
+        "filename": "doc/source/docs/reference/geoseries.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "doc/source/docs/reference/tools.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "doc/source/docs/user_guide/geocoding.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "doc/source/docs/user_guide/interactive_mapping.ipynb",
+        "status": "modified"
+      },
+      {
+        "filename": "doc/source/gallery/plotting_basemap_background.ipynb",
+        "status": "modified"
+      },
+      {
+        "filename": "doc/source/gallery/plotting_with_folium.ipynb",
+        "status": "modified"
+      },
+      {
+        "filename": "doc/source/gallery/polygon_plotting_with_folium.ipynb",
+        "status": "modified"
+      },
+      {
+        "filename": "geopandas/__init__.py",
+        "status": "modified"
+      },
+      {
+        "filename": "geopandas/_compat.py",
+        "status": "modified"
+      },
+      {
+        "filename": "geopandas/base.py",
+        "status": "modified"
+      },
+      {
+        "filename": "geopandas/explore.py",
+        "status": "modified"
+      },
+      {
+        "filename": "geopandas/geodataframe.py",
+        "status": "modified"
+      },
+      {
+        "filename": "geopandas/io/arrow.py",
+        "status": "modified"
+      },
+      {
+        "filename": "geopandas/io/tests/test_arrow.py",
+        "status": "modified"
+      },
+      {
+        "filename": "geopandas/tests/test_explore.py",
+        "status": "modified"
+      },
+      {
+        "filename": "geopandas/tests/test_geocode.py",
+        "status": "modified"
+      },
+      {
+        "filename": "geopandas/tests/test_geom_methods.py",
+        "status": "modified"
+      },
+      {
+        "filename": "geopandas/tests/test_plotting.py",
+        "status": "modified"
+      },
+      {
+        "filename": "geopandas/tools/__init__.py",
+        "status": "modified"
+      },
+      {
+        "filename": "geopandas/tools/_random.py",
+        "status": "modified"
+      },
+      {
+        "filename": "geopandas/tools/geocoding.py",
+        "status": "modified"
+      },
+      {
+        "filename": "geopandas/tools/make_grid.py",
+        "status": "added"
+      },
+      {
+        "filename": "geopandas/tools/tests/test_make_grid.py",
+        "status": "added"
+      },
+      {
+        "filename": "geopandas/tools/tests/test_random.py",
+        "status": "modified"
+      },
+      {
+        "filename": "pyproject.toml",
+        "status": "modified"
+      }
+    ]
+  }
+]

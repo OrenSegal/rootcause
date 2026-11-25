@@ -1,0 +1,18 @@
+[
+  {
+    "id": "7acdf700fb",
+    "service": "starlette",
+    "version": "7acdf700fb",
+    "ts": "2026-10-30T19:13:41Z",
+    "author": "Eronii",
+    "summary": "feat: add url_path_for to HTTPConnection and Jinja2Templates (#843)",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "starlette/requests.py",
+      "starlette/templating.py",
+      "tests/test_requests.py",
+      "tests/test_templates.py"
+    ]
+  }
+]

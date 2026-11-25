@@ -1,0 +1,14 @@
+id: ci-yarl-40324913764
+title: Read the host after the slashes of a hostless join reference
+alert:
+  severity: ci
+  service: aiohttp-tests-master
+  summary: 'workflow Aiohttp failed on join-empty-authority at 2b481c37eb: step ''Run tests''
+    in job ''Aiohttp tests (master)'' failed.'
+truth:
+  grading: class
+  category: infrastructure
+  service: yarl
+  required_evidence_any:
+  - log-1025
+provenance: recorded

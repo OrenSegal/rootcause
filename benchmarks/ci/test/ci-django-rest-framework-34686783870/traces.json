@@ -1,0 +1,872 @@
+[
+  {
+    "span_id": "run-34686783870",
+    "trace_id": "run-34686783870",
+    "parent_id": null,
+    "service": "ci",
+    "name": "CI",
+    "start": "2026-09-12T09:48:03Z",
+    "duration_ms": 246000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-103535037103",
+    "trace_id": "run-34686783870",
+    "parent_id": "run-34686783870",
+    "service": "pre-commit",
+    "name": "pre-commit",
+    "start": "2026-09-12T09:48:05Z",
+    "duration_ms": 14000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-103535037103-step-1",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037103",
+    "service": "pre-commit",
+    "name": "Set up job",
+    "start": "2026-09-12T09:48:06Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037103-step-2",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037103",
+    "service": "pre-commit",
+    "name": "Run actions/checkout@v7",
+    "start": "2026-09-12T09:48:07Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037103-step-3",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037103",
+    "service": "pre-commit",
+    "name": "Run j178/prek-action@v3.0.0",
+    "start": "2026-09-12T09:48:09Z",
+    "duration_ms": 7000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-103535037103-step-5",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037103",
+    "service": "pre-commit",
+    "name": "Post Run j178/prek-action@v3.0.0",
+    "start": "2026-09-12T09:48:16Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037103-step-6",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037103",
+    "service": "pre-commit",
+    "name": "Post Run actions/checkout@v7",
+    "start": "2026-09-12T09:48:16Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037103-step-7",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037103",
+    "service": "pre-commit",
+    "name": "Complete job",
+    "start": "2026-09-12T09:48:17Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037182",
+    "trace_id": "run-34686783870",
+    "parent_id": "run-34686783870",
+    "service": "test-documentation-links",
+    "name": "Test documentation links",
+    "start": "2026-09-12T09:48:05Z",
+    "duration_ms": 24000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037182-step-1",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037182",
+    "service": "test-documentation-links",
+    "name": "Set up job",
+    "start": "2026-09-12T09:48:06Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037182-step-2",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037182",
+    "service": "test-documentation-links",
+    "name": "Run actions/checkout@v7",
+    "start": "2026-09-12T09:48:06Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037182-step-3",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037182",
+    "service": "test-documentation-links",
+    "name": "Run actions/setup-python@v7.0.0",
+    "start": "2026-09-12T09:48:08Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037182-step-4",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037182",
+    "service": "test-documentation-links",
+    "name": "Install dependencies",
+    "start": "2026-09-12T09:48:08Z",
+    "duration_ms": 10000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037182-step-5",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037182",
+    "service": "test-documentation-links",
+    "name": "Run mkdocs serve &",
+    "start": "2026-09-12T09:48:18Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037182-step-6",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037182",
+    "service": "test-documentation-links",
+    "name": "Run WAIT_TIME=0 && until nc -vzw 2 localhost 8000 || [ $WAIT_TIME -eq 5 ]; do sleep $(( WAIT_TIME++ )); done",
+    "start": "2026-09-12T09:48:23Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037182-step-7",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037182",
+    "service": "test-documentation-links",
+    "name": "Run if [ $WAIT_TIME == 5 ]; then echo cannot start mkdocs server on http://localhost:8000; exit 1; fi",
+    "start": "2026-09-12T09:48:23Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037182-step-8",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037182",
+    "service": "test-documentation-links",
+    "name": "Check links",
+    "start": "2026-09-12T09:48:23Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037182-step-9",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037182",
+    "service": "test-documentation-links",
+    "name": "Run echo \"Done\"",
+    "start": "2026-09-12T09:48:27Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037182-step-17",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037182",
+    "service": "test-documentation-links",
+    "name": "Post Run actions/setup-python@v7.0.0",
+    "start": "2026-09-12T09:48:27Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037182-step-18",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037182",
+    "service": "test-documentation-links",
+    "name": "Post Run actions/checkout@v7",
+    "start": "2026-09-12T09:48:27Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037182-step-19",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037182",
+    "service": "test-documentation-links",
+    "name": "Complete job",
+    "start": "2026-09-12T09:48:27Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037234",
+    "trace_id": "run-34686783870",
+    "parent_id": "run-34686783870",
+    "service": "python-3-10",
+    "name": "Python 3.10",
+    "start": "2026-09-12T09:48:06Z",
+    "duration_ms": 86000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037234-step-1",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037234",
+    "service": "python-3-10",
+    "name": "Set up job",
+    "start": "2026-09-12T09:48:07Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037234-step-2",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037234",
+    "service": "python-3-10",
+    "name": "Initialize containers",
+    "start": "2026-09-12T09:48:08Z",
+    "duration_ms": 21000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037234-step-3",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037234",
+    "service": "python-3-10",
+    "name": "Run actions/checkout@v7",
+    "start": "2026-09-12T09:48:29Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037234-step-4",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037234",
+    "service": "python-3-10",
+    "name": "Run actions/setup-python@v7.0.0",
+    "start": "2026-09-12T09:48:31Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037234-step-5",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037234",
+    "service": "python-3-10",
+    "name": "Upgrade packaging tools",
+    "start": "2026-09-12T09:48:35Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037234-step-6",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037234",
+    "service": "python-3-10",
+    "name": "Install dependencies",
+    "start": "2026-09-12T09:48:38Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037234-step-7",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037234",
+    "service": "python-3-10",
+    "name": "Run tox targets for 3.10",
+    "start": "2026-09-12T09:48:39Z",
+    "duration_ms": 46000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037234-step-9",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037234",
+    "service": "python-3-10",
+    "name": "Upload coverage",
+    "start": "2026-09-12T09:49:25Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037234-step-16",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037234",
+    "service": "python-3-10",
+    "name": "Post Run actions/setup-python@v7.0.0",
+    "start": "2026-09-12T09:49:28Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037234-step-17",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037234",
+    "service": "python-3-10",
+    "name": "Post Run actions/checkout@v7",
+    "start": "2026-09-12T09:49:28Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037234-step-18",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037234",
+    "service": "python-3-10",
+    "name": "Stop containers",
+    "start": "2026-09-12T09:49:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037234-step-19",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037234",
+    "service": "python-3-10",
+    "name": "Complete job",
+    "start": "2026-09-12T09:49:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037237",
+    "trace_id": "run-34686783870",
+    "parent_id": "run-34686783870",
+    "service": "python-3-13",
+    "name": "Python 3.13",
+    "start": "2026-09-12T09:48:05Z",
+    "duration_ms": 243000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037237-step-1",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037237",
+    "service": "python-3-13",
+    "name": "Set up job",
+    "start": "2026-09-12T09:48:06Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037237-step-2",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037237",
+    "service": "python-3-13",
+    "name": "Initialize containers",
+    "start": "2026-09-12T09:48:08Z",
+    "duration_ms": 29000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037237-step-3",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037237",
+    "service": "python-3-13",
+    "name": "Run actions/checkout@v7",
+    "start": "2026-09-12T09:48:37Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037237-step-4",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037237",
+    "service": "python-3-13",
+    "name": "Run actions/setup-python@v7.0.0",
+    "start": "2026-09-12T09:48:41Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037237-step-5",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037237",
+    "service": "python-3-13",
+    "name": "Upgrade packaging tools",
+    "start": "2026-09-12T09:48:45Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037237-step-6",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037237",
+    "service": "python-3-13",
+    "name": "Install dependencies",
+    "start": "2026-09-12T09:48:48Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037237-step-7",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037237",
+    "service": "python-3-13",
+    "name": "Run tox targets for 3.13",
+    "start": "2026-09-12T09:48:49Z",
+    "duration_ms": 137000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037237-step-8",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037237",
+    "service": "python-3-13",
+    "name": "Run extra tox targets",
+    "start": "2026-09-12T09:51:06Z",
+    "duration_ms": 55000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037237-step-9",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037237",
+    "service": "python-3-13",
+    "name": "Upload coverage",
+    "start": "2026-09-12T09:52:01Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037237-step-16",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037237",
+    "service": "python-3-13",
+    "name": "Post Run actions/setup-python@v7.0.0",
+    "start": "2026-09-12T09:52:04Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037237-step-17",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037237",
+    "service": "python-3-13",
+    "name": "Post Run actions/checkout@v7",
+    "start": "2026-09-12T09:52:04Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037237-step-18",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037237",
+    "service": "python-3-13",
+    "name": "Stop containers",
+    "start": "2026-09-12T09:52:05Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037237-step-19",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037237",
+    "service": "python-3-13",
+    "name": "Complete job",
+    "start": "2026-09-12T09:52:06Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037243",
+    "trace_id": "run-34686783870",
+    "parent_id": "run-34686783870",
+    "service": "python-3-12",
+    "name": "Python 3.12",
+    "start": "2026-09-12T09:48:06Z",
+    "duration_ms": 176000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037243-step-1",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037243",
+    "service": "python-3-12",
+    "name": "Set up job",
+    "start": "2026-09-12T09:48:06Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037243-step-2",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037243",
+    "service": "python-3-12",
+    "name": "Initialize containers",
+    "start": "2026-09-12T09:48:08Z",
+    "duration_ms": 22000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037243-step-3",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037243",
+    "service": "python-3-12",
+    "name": "Run actions/checkout@v7",
+    "start": "2026-09-12T09:48:30Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037243-step-4",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037243",
+    "service": "python-3-12",
+    "name": "Run actions/setup-python@v7.0.0",
+    "start": "2026-09-12T09:48:33Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037243-step-5",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037243",
+    "service": "python-3-12",
+    "name": "Upgrade packaging tools",
+    "start": "2026-09-12T09:48:35Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037243-step-6",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037243",
+    "service": "python-3-12",
+    "name": "Install dependencies",
+    "start": "2026-09-12T09:48:37Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037243-step-7",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037243",
+    "service": "python-3-12",
+    "name": "Run tox targets for 3.12",
+    "start": "2026-09-12T09:48:38Z",
+    "duration_ms": 138000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037243-step-9",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037243",
+    "service": "python-3-12",
+    "name": "Upload coverage",
+    "start": "2026-09-12T09:50:56Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037243-step-16",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037243",
+    "service": "python-3-12",
+    "name": "Post Run actions/setup-python@v7.0.0",
+    "start": "2026-09-12T09:50:58Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037243-step-17",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037243",
+    "service": "python-3-12",
+    "name": "Post Run actions/checkout@v7",
+    "start": "2026-09-12T09:50:59Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037243-step-18",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037243",
+    "service": "python-3-12",
+    "name": "Stop containers",
+    "start": "2026-09-12T09:50:59Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037243-step-19",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037243",
+    "service": "python-3-12",
+    "name": "Complete job",
+    "start": "2026-09-12T09:51:00Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037251",
+    "trace_id": "run-34686783870",
+    "parent_id": "run-34686783870",
+    "service": "python-3-11",
+    "name": "Python 3.11",
+    "start": "2026-09-12T09:48:05Z",
+    "duration_ms": 72000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037251-step-1",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037251",
+    "service": "python-3-11",
+    "name": "Set up job",
+    "start": "2026-09-12T09:48:06Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037251-step-2",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037251",
+    "service": "python-3-11",
+    "name": "Initialize containers",
+    "start": "2026-09-12T09:48:07Z",
+    "duration_ms": 19000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037251-step-3",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037251",
+    "service": "python-3-11",
+    "name": "Run actions/checkout@v7",
+    "start": "2026-09-12T09:48:26Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037251-step-4",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037251",
+    "service": "python-3-11",
+    "name": "Run actions/setup-python@v7.0.0",
+    "start": "2026-09-12T09:48:27Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037251-step-5",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037251",
+    "service": "python-3-11",
+    "name": "Upgrade packaging tools",
+    "start": "2026-09-12T09:48:28Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037251-step-6",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037251",
+    "service": "python-3-11",
+    "name": "Install dependencies",
+    "start": "2026-09-12T09:48:30Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037251-step-7",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037251",
+    "service": "python-3-11",
+    "name": "Run tox targets for 3.11",
+    "start": "2026-09-12T09:48:31Z",
+    "duration_ms": 42000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037251-step-9",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037251",
+    "service": "python-3-11",
+    "name": "Upload coverage",
+    "start": "2026-09-12T09:49:13Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037251-step-16",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037251",
+    "service": "python-3-11",
+    "name": "Post Run actions/setup-python@v7.0.0",
+    "start": "2026-09-12T09:49:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037251-step-17",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037251",
+    "service": "python-3-11",
+    "name": "Post Run actions/checkout@v7",
+    "start": "2026-09-12T09:49:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037251-step-18",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037251",
+    "service": "python-3-11",
+    "name": "Stop containers",
+    "start": "2026-09-12T09:49:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037251-step-19",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037251",
+    "service": "python-3-11",
+    "name": "Complete job",
+    "start": "2026-09-12T09:49:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037279",
+    "trace_id": "run-34686783870",
+    "parent_id": "run-34686783870",
+    "service": "python-3-14",
+    "name": "Python 3.14",
+    "start": "2026-09-12T09:48:05Z",
+    "duration_ms": 196000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037279-step-1",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037279",
+    "service": "python-3-14",
+    "name": "Set up job",
+    "start": "2026-09-12T09:48:06Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037279-step-2",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037279",
+    "service": "python-3-14",
+    "name": "Initialize containers",
+    "start": "2026-09-12T09:48:08Z",
+    "duration_ms": 21000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037279-step-3",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037279",
+    "service": "python-3-14",
+    "name": "Run actions/checkout@v7",
+    "start": "2026-09-12T09:48:29Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037279-step-4",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037279",
+    "service": "python-3-14",
+    "name": "Run actions/setup-python@v7.0.0",
+    "start": "2026-09-12T09:48:31Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037279-step-5",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037279",
+    "service": "python-3-14",
+    "name": "Upgrade packaging tools",
+    "start": "2026-09-12T09:48:35Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037279-step-6",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037279",
+    "service": "python-3-14",
+    "name": "Install dependencies",
+    "start": "2026-09-12T09:48:38Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037279-step-7",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037279",
+    "service": "python-3-14",
+    "name": "Run tox targets for 3.14",
+    "start": "2026-09-12T09:48:39Z",
+    "duration_ms": 156000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037279-step-9",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037279",
+    "service": "python-3-14",
+    "name": "Upload coverage",
+    "start": "2026-09-12T09:51:15Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037279-step-16",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037279",
+    "service": "python-3-14",
+    "name": "Post Run actions/setup-python@v7.0.0",
+    "start": "2026-09-12T09:51:18Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037279-step-17",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037279",
+    "service": "python-3-14",
+    "name": "Post Run actions/checkout@v7",
+    "start": "2026-09-12T09:51:18Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037279-step-18",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037279",
+    "service": "python-3-14",
+    "name": "Stop containers",
+    "start": "2026-09-12T09:51:18Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-103535037279-step-19",
+    "trace_id": "run-34686783870",
+    "parent_id": "job-103535037279",
+    "service": "python-3-14",
+    "name": "Complete job",
+    "start": "2026-09-12T09:51:19Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

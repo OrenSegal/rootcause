@@ -1,0 +1,15 @@
+[
+  {
+    "id": "86d0323fcb",
+    "service": "tornado",
+    "version": "86d0323fcb",
+    "ts": "2026-10-26T16:03:12Z",
+    "author": "dependabot[bot]",
+    "summary": "build(deps): bump filelock from 3.32.7 to 4.2.1",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "requirements.txt"
+    ]
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "49f0f11ada",
+    "service": "panel",
+    "version": "49f0f11ada",
+    "ts": "2026-11-18T15:27:24Z",
+    "author": "philippjfr",
+    "summary": "fix: Keep unlocked writes streaming while a busy callback holds the lock",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "panel/io/document.py",
+      "panel/tests/io/test_document.py"
+    ]
+  }
+]

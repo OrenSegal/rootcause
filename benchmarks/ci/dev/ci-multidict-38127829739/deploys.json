@@ -1,0 +1,29 @@
+[
+  {
+    "id": "f6502e433e",
+    "service": "multidict",
+    "version": "f6502e433e",
+    "ts": "2026-10-11T09:09:45Z",
+    "author": "asvetlov",
+    "summary": "Share one sequence loop and pin the helpers it crowded out",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "multidict/_multilib/bulk_update.h",
+      "tools/check_inlining.py"
+    ]
+  },
+  {
+    "id": "2d488dc335",
+    "service": "multidict",
+    "version": "2d488dc335",
+    "ts": "2026-10-11T09:17:07Z",
+    "author": "asvetlov",
+    "summary": "Correct the news fragment's numbers for the shared sequence loop",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "CHANGES/1763.misc.rst"
+    ]
+  }
+]

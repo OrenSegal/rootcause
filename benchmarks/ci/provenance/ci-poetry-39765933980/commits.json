@@ -1,0 +1,14 @@
+[
+  {
+    "author": "Csq57",
+    "committedDate": "2026-10-22T07:11:42Z",
+    "messageHeadline": "test: reuse init_basic_toml fixture in new project expectations",
+    "oid": "decddbe25d6005d3db978285d16deb13de540315",
+    "files": [
+      {
+        "filename": "tests/console/commands/conftest.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

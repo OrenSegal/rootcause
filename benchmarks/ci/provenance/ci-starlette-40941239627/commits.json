@@ -1,0 +1,26 @@
+[
+  {
+    "author": "voidstackloop",
+    "committedDate": "2026-10-29T19:33:19Z",
+    "messageHeadline": "fix(routing,url): strip leading slash on mount url_path_for, fix double port in replace(), and add multi-value query param support (#3686, #3684, #3528)",
+    "oid": "662ce6276083847a1da4a5a77cddd318e85d2f35",
+    "files": [
+      {
+        "filename": "starlette/datastructures.py",
+        "status": "modified"
+      },
+      {
+        "filename": "starlette/routing.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_datastructures.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_routing.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

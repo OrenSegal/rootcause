@@ -1,0 +1,392 @@
+[
+  {
+    "span_id": "run-36747921661",
+    "trace_id": "run-36747921661",
+    "parent_id": null,
+    "service": "ci-cd",
+    "name": "CI/CD",
+    "start": "2026-09-30T16:57:04Z",
+    "duration_ms": 50000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-109998789938",
+    "trace_id": "run-36747921661",
+    "parent_id": "run-36747921661",
+    "service": "pre-set-global-build-settings",
+    "name": "\u2699\ufe0f Pre-set global build settings",
+    "start": "2026-09-30T16:57:13Z",
+    "duration_ms": 6000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-109998789938-step-1",
+    "trace_id": "run-36747921661",
+    "parent_id": "job-109998789938",
+    "service": "pre-set-global-build-settings",
+    "name": "Set up job",
+    "start": "2026-09-30T16:57:14Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-109998789938-step-2",
+    "trace_id": "run-36747921661",
+    "parent_id": "job-109998789938",
+    "service": "pre-set-global-build-settings",
+    "name": "Switch to using Python 3.12 by default",
+    "start": "2026-09-30T16:57:15Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-109998789938-step-3",
+    "trace_id": "run-36747921661",
+    "parent_id": "job-109998789938",
+    "service": "pre-set-global-build-settings",
+    "name": "Check out src from Git",
+    "start": "2026-09-30T16:57:15Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-109998789938-step-4",
+    "trace_id": "run-36747921661",
+    "parent_id": "job-109998789938",
+    "service": "pre-set-global-build-settings",
+    "name": "Calculate dependency files' combined hash value for use in the cache key",
+    "start": "2026-09-30T16:57:16Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-109998789938-step-5",
+    "trace_id": "run-36747921661",
+    "parent_id": "job-109998789938",
+    "service": "pre-set-global-build-settings",
+    "name": "Read the package version from the source tree",
+    "start": "2026-09-30T16:57:17Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-109998789938-step-6",
+    "trace_id": "run-36747921661",
+    "parent_id": "job-109998789938",
+    "service": "pre-set-global-build-settings",
+    "name": "Set the expected dist artifact names",
+    "start": "2026-09-30T16:57:17Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-109998789938-step-11",
+    "trace_id": "run-36747921661",
+    "parent_id": "job-109998789938",
+    "service": "pre-set-global-build-settings",
+    "name": "Post Check out src from Git",
+    "start": "2026-09-30T16:57:17Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-109998789938-step-12",
+    "trace_id": "run-36747921661",
+    "parent_id": "job-109998789938",
+    "service": "pre-set-global-build-settings",
+    "name": "Post Switch to using Python 3.12 by default",
+    "start": "2026-09-30T16:57:17Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-109998789938-step-13",
+    "trace_id": "run-36747921661",
+    "parent_id": "job-109998789938",
+    "service": "pre-set-global-build-settings",
+    "name": "Complete job",
+    "start": "2026-09-30T16:57:17Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-109998844718",
+    "trace_id": "run-36747921661",
+    "parent_id": "run-36747921661",
+    "service": "build-dists-v0-5-4-build-dists-under-3-12",
+    "name": "\ud83d\udce6 Build dists v0.5.4 / Build dists under \ud83d\udc0d3.12",
+    "start": "2026-09-30T16:57:23Z",
+    "duration_ms": 23000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-109998844718-step-1",
+    "trace_id": "run-36747921661",
+    "parent_id": "job-109998844718",
+    "service": "build-dists-v0-5-4-build-dists-under-3-12",
+    "name": "Set up job",
+    "start": "2026-09-30T16:57:24Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-109998844718-step-2",
+    "trace_id": "run-36747921661",
+    "parent_id": "job-109998844718",
+    "service": "build-dists-v0-5-4-build-dists-under-3-12",
+    "name": "Pull ghcr.io/irongut/codecoveragesummary:v1.3.0",
+    "start": "2026-09-30T16:57:27Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-109998844718-step-4",
+    "trace_id": "run-36747921661",
+    "parent_id": "job-109998844718",
+    "service": "build-dists-v0-5-4-build-dists-under-3-12",
+    "name": "Switch to using Python v3.12 by default",
+    "start": "2026-09-30T16:57:30Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-109998844718-step-5",
+    "trace_id": "run-36747921661",
+    "parent_id": "job-109998844718",
+    "service": "build-dists-v0-5-4-build-dists-under-3-12",
+    "name": "Grab the source from Git",
+    "start": "2026-09-30T16:57:30Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-109998844718-step-7",
+    "trace_id": "run-36747921661",
+    "parent_id": "job-109998844718",
+    "service": "build-dists-v0-5-4-build-dists-under-3-12",
+    "name": "\ud83e\ude9d Invoke the in-repo `post-src-checkout` hook (if exists)",
+    "start": "2026-09-30T16:57:31Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-109998844718-step-8",
+    "trace_id": "run-36747921661",
+    "parent_id": "job-109998844718",
+    "service": "build-dists-v0-5-4-build-dists-under-3-12",
+    "name": "Set up pip cache",
+    "start": "2026-09-30T16:57:31Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-109998844718-step-11",
+    "trace_id": "run-36747921661",
+    "parent_id": "job-109998844718",
+    "service": "build-dists-v0-5-4-build-dists-under-3-12",
+    "name": "Install tox tox-uv",
+    "start": "2026-09-30T16:57:35Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-109998844718-step-13",
+    "trace_id": "run-36747921661",
+    "parent_id": "job-109998844718",
+    "service": "build-dists-v0-5-4-build-dists-under-3-12",
+    "name": "Pre-populate tox envs: `build-dists`",
+    "start": "2026-09-30T16:57:38Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-109998844718-step-16",
+    "trace_id": "run-36747921661",
+    "parent_id": "job-109998844718",
+    "service": "build-dists-v0-5-4-build-dists-under-3-12",
+    "name": "Run tox envs: `build-dists`",
+    "start": "2026-09-30T16:57:38Z",
+    "duration_ms": 5000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-109998844718-step-17",
+    "trace_id": "run-36747921661",
+    "parent_id": "job-109998844718",
+    "service": "build-dists-v0-5-4-build-dists-under-3-12",
+    "name": "\ud83e\ude9d Invoke the in-repo `post-tox-run` hook (if exists)",
+    "start": "2026-09-30T16:57:43Z",
+    "duration_ms": 0.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-109998844718-step-25",
+    "trace_id": "run-36747921661",
+    "parent_id": "job-109998844718",
+    "service": "build-dists-v0-5-4-build-dists-under-3-12",
+    "name": "\ud83e\ude9d Invoke the in-repo `post-tox-job` hook (if exists)",
+    "start": "2026-09-30T16:57:43Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-109998844718-step-47",
+    "trace_id": "run-36747921661",
+    "parent_id": "job-109998844718",
+    "service": "build-dists-v0-5-4-build-dists-under-3-12",
+    "name": "Post Set up pip cache",
+    "start": "2026-09-30T16:57:44Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-109998844718-step-48",
+    "trace_id": "run-36747921661",
+    "parent_id": "job-109998844718",
+    "service": "build-dists-v0-5-4-build-dists-under-3-12",
+    "name": "Post \ud83e\ude9d Invoke the in-repo `post-src-checkout` hook (if exists)",
+    "start": "2026-09-30T16:57:44Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-109998844718-step-49",
+    "trace_id": "run-36747921661",
+    "parent_id": "job-109998844718",
+    "service": "build-dists-v0-5-4-build-dists-under-3-12",
+    "name": "Post Grab the source from Git",
+    "start": "2026-09-30T16:57:44Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-109998844718-step-51",
+    "trace_id": "run-36747921661",
+    "parent_id": "job-109998844718",
+    "service": "build-dists-v0-5-4-build-dists-under-3-12",
+    "name": "Complete job",
+    "start": "2026-09-30T16:57:44Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-109999027511",
+    "trace_id": "run-36747921661",
+    "parent_id": "run-36747921661",
+    "service": "test-matrix-status",
+    "name": "Test matrix status",
+    "start": "2026-09-30T16:57:49Z",
+    "duration_ms": 4000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-109999027511-step-1",
+    "trace_id": "run-36747921661",
+    "parent_id": "job-109999027511",
+    "service": "test-matrix-status",
+    "name": "Set up job",
+    "start": "2026-09-30T16:57:50Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-109999027511-step-2",
+    "trace_id": "run-36747921661",
+    "parent_id": "job-109999027511",
+    "service": "test-matrix-status",
+    "name": "Decide whether the needed jobs succeeded or failed",
+    "start": "2026-09-30T16:57:51Z",
+    "duration_ms": 0.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-109999027511-step-3",
+    "trace_id": "run-36747921661",
+    "parent_id": "job-109999027511",
+    "service": "test-matrix-status",
+    "name": "Complete job",
+    "start": "2026-09-30T16:57:51Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-109999027661",
+    "trace_id": "run-36747921661",
+    "parent_id": "run-36747921661",
+    "service": "linters",
+    "name": "\ud83e\uddf9 Linters${{ '' }}",
+    "start": "2026-09-30T16:57:47Z",
+    "duration_ms": -1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-109999028482",
+    "trace_id": "run-36747921661",
+    "parent_id": "run-36747921661",
+    "service": "build-wheels-for-tested-arches",
+    "name": "\ud83d\udce6 Build wheels for tested arches${{ '' }}",
+    "start": "2026-09-30T16:57:47Z",
+    "duration_ms": -1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-109999028489",
+    "trace_id": "run-36747921661",
+    "parent_id": "run-36747921661",
+    "service": "benchmark",
+    "name": "Benchmark",
+    "start": "2026-09-30T16:57:47Z",
+    "duration_ms": -1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-109999028575",
+    "trace_id": "run-36747921661",
+    "parent_id": "run-36747921661",
+    "service": "test",
+    "name": "Test",
+    "start": "2026-09-30T16:57:47Z",
+    "duration_ms": -1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-109999029362",
+    "trace_id": "run-36747921661",
+    "parent_id": "run-36747921661",
+    "service": "validate-metadata-of-all-built-dists",
+    "name": "\ud83e\uddf9 Validate metadata of all built dists",
+    "start": "2026-09-30T16:57:47Z",
+    "duration_ms": -1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-109999077753",
+    "trace_id": "run-36747921661",
+    "parent_id": "run-36747921661",
+    "service": "pre-deploy",
+    "name": "Pre-Deploy",
+    "start": "2026-09-30T16:57:54Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-109999079031",
+    "trace_id": "run-36747921661",
+    "parent_id": "run-36747921661",
+    "service": "build-wheels-for-odd-arches",
+    "name": "\ud83d\udce6 Build wheels for odd arches${{ '' }}",
+    "start": "2026-09-30T16:57:54Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-109999079335",
+    "trace_id": "run-36747921661",
+    "parent_id": "run-36747921661",
+    "service": "deploy",
+    "name": "Deploy",
+    "start": "2026-09-30T16:57:54Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

@@ -1,0 +1,22 @@
+# Mined from https://github.com/pypa/build/actions/runs/38002299563 (pypa/build, licence
+# MIT). Fixed by run https://github.com/pypa/build/actions/runs/38007380375. Label rule:
+# the failed log shows an environment error: "version '3.15' with architecture 'x64' was
+# not found". Fix touched: .github/pull_request_template.md, .github/workflows/pre-
+# release.yml, .github/workflows/reusable-docs.yml, .github/workflows/reusable-
+# pytest.yml, .github/workflows/reusable-type.yml, docs/development/contributing.rst,
+# pyproject.toml, tox.toml.
+id: ci-build-38002299563
+title: 'feat(python): require 3.11 and default to 3.15'
+alert:
+  severity: ci
+  service: check-docs-build-docs
+  summary: 'workflow test failed on feat/python315-default at dccc7837b5: step ''Setup Python
+    3.15'' in job ''check-docs / Build docs'' failed.'
+truth:
+  category: infrastructure
+  service: build
+  required_evidence_any:
+  - log-0324
+  - log-0154
+  - log-0390
+provenance: recorded

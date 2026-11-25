@@ -1,0 +1,12 @@
+{
+  "fixed_run": "https://github.com/pytest-dev/pytest-asyncio/actions/runs/43911158965",
+  "fixed_sha": "707fbf92f9cef73969cd146133ebd6b66dce5164",
+  "commits": [
+    "707fbf92f9cef73969cd146133ebd6b66dce5164"
+  ],
+  "files": [
+    "tests/test_set_event_loop.py"
+  ],
+  "merges": [],
+  "status": "ahead"
+}

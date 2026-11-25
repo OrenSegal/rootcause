@@ -1,0 +1,11 @@
+{
+  "fixed_run": "https://github.com/pallets/click/actions/runs/34145332785",
+  "fixed_sha": "0a74041fb0c03eb70570c1e824f2f3cedf9e0745",
+  "commits": [
+    "0a74041fb0c03eb70570c1e824f2f3cedf9e0745"
+  ],
+  "files": [
+    "src/click/_termui_impl.py"
+  ],
+  "status": "ahead"
+}

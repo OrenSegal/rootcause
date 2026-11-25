@@ -1,0 +1,11 @@
+{
+  "fixed_run": "https://github.com/pydantic/pydantic/actions/runs/44625682391",
+  "fixed_sha": "92594d051a9c3aa59c75ae0347a7118da9a2e322",
+  "commits": [
+    "92594d051a9c3aa59c75ae0347a7118da9a2e322"
+  ],
+  "files": [
+    "pydantic-core/src/validators/int.rs"
+  ],
+  "status": "ahead"
+}

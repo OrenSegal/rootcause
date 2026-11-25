@@ -1,0 +1,22 @@
+[
+  {
+    "author": "hygorcluz",
+    "committedDate": "2026-11-09T22:56:16Z",
+    "messageHeadline": "Skip the empty PeriodicLog line on spider open as well",
+    "oid": "9902ebb9da5170feb618e2d86142678f201544e3",
+    "files": [
+      {
+        "filename": "docs/topics/extensions.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "scrapy/extensions/periodic_log.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_extension_periodic_log.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

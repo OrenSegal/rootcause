@@ -1,0 +1,18 @@
+[
+  {
+    "id": "03e1f94e96",
+    "service": "scrapy",
+    "version": "03e1f94e96",
+    "ts": "2026-11-07T01:00:09Z",
+    "author": "hammadqureshi-web",
+    "summary": "Do not warn about requests built by get_retry_request()",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "docs/topics/spider-middleware.rst",
+      "scrapy/downloadermiddlewares/retry.py",
+      "scrapy/spidermiddlewares/metacopy.py",
+      "tests/test_spidermiddleware_metacopy.py"
+    ]
+  }
+]

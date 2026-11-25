@@ -1,0 +1,18 @@
+[
+  {
+    "author": "tiangolo",
+    "committedDate": "2026-11-17T17:32:03Z",
+    "messageHeadline": "\u267b\ufe0f Refactor query, header, and form parameter extraction",
+    "oid": "1a42905d428f74c7cde734b16c29d67382d7662b",
+    "files": [
+      {
+        "filename": "fastapi/dependencies/utils.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_parameter_extraction.py",
+        "status": "added"
+      }
+    ]
+  }
+]

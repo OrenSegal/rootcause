@@ -1,0 +1,18 @@
+# Mined from https://github.com/pallets/jinja/actions/runs/35077114029 (pallets/jinja,
+# licence BSD-3-Clause). Fixed by run
+# https://github.com/pallets/jinja/actions/runs/35077194351. Label rule: the fix changed
+# files exactly one tested commit touched. Fix touched: tests/test_filters.py.
+id: ci-jinja-35077114029
+title: '[rejected AI] Fix urlencode treating UserDict keys as query pairs'
+alert:
+  severity: ci
+  service: main
+  summary: 'workflow pre-commit failed on fix-urlencode-mapping at 63a800ac81: step ''Run
+    uv run --locked --group pre-commit pre-commit run --show-diff-on-failure --color=always
+    --all-files'' in job ''main'' failed.'
+truth:
+  category: bad_code_deploy
+  service: jinja
+  required_evidence_any:
+  - 63a800ac81
+provenance: recorded

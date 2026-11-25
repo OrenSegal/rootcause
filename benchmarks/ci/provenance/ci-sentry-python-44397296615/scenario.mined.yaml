@@ -1,0 +1,21 @@
+# Mined from https://github.com/getsentry/sentry-python/actions/runs/44397296615
+# (getsentry/sentry-python, licence MIT). Fixed by run
+# https://github.com/getsentry/sentry-python/actions/runs/44397296615. Label rule: the
+# first attempt failed and a re-run of the same pull-request run passed. Fix touched:
+# nothing (rerun).
+id: ci-sentry-python-44397296615
+title: 'feat: Point coding agents to a setup checklist'
+alert:
+  severity: ci
+  service: dbs-dbs-3-6-ubuntu-22-04
+  summary: 'workflow Test failed on danf/warn-zero-traces-sample-rate at de714e2e76: step
+    ''Test redis_py_cluster_legacy'' in job ''DBs / DBs (3.6, ubuntu-22.04)'' failed.'
+truth:
+  category: infrastructure
+  service: sentry-python
+  required_evidence_any:
+  - log-2216
+  - log-2234
+  - log-2455
+  - log-2795
+provenance: recorded

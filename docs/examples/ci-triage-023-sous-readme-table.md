@@ -12,14 +12,14 @@ The comment body, exactly as written:
 
 ---
 
-### rootcause: likely cause of this CI failure
+### CI failure triage
 
-**bad_code_deploy** in `sous` (confidence 0.50)
+Jobs `test (macos-latest)` and `test (ubuntu-latest)` failed. The change under test likely caused it: commit `7dbc2abc9e` (Add handoff mod: write LATEST.md and LATEST.patch after each turn). Errors began after deploy 7dbc2abc9e of sous.
 
-Errors began after deploy 7dbc2abc9e of sous.
+The log lines behind it:
 
-Evidence: `7dbc2abc9e`, `log-0020`
+```text
+install + doctor: Process completed with exit code 1.
+```
 
-Suggested next step: Roll back 7dbc2abc9e.
-
-<sub>Investigated by heuristic. Review before acting.</sub>
+<sub>rootcause 0.3.0, heuristic provider. Review before acting.</sub>

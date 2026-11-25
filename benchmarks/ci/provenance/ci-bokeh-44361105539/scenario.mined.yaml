@@ -1,0 +1,20 @@
+# Mined from https://github.com/bokeh/bokeh/actions/runs/44361105539 (bokeh/bokeh,
+# licence BSD-3-Clause). Fixed by run
+# https://github.com/bokeh/bokeh/actions/runs/44363147580. Label rule: the fix changed
+# files exactly one tested commit touched. Fix touched:
+# bokehjs/test/unit/client/comm.ts, docs/bokeh/source/docs/dev_guide/jupyter.rst,
+# jupyter/src/kernel.ts, jupyter/test/kernel.test.ts,
+# tests/integration/test_jupyter_extension.py, tests/unit/bokeh/server/test_comm.py.
+id: ci-bokeh-44361105539
+title: Serve notebook applications over Jupyter comms
+alert:
+  severity: ci
+  service: core-deps-3-13-core-py313
+  summary: 'workflow Bokeh-CI failed on feat/notebook-two-way-documents at abd57f8de6: step
+    ''Run dependency tests'' in job ''core-deps (3.13, core-py313)'' failed.'
+truth:
+  category: bad_code_deploy
+  service: bokeh
+  required_evidence_any:
+  - abd57f8de6
+provenance: recorded

@@ -1,0 +1,15 @@
+id: ci-joblib-38347266020
+title: FIX publish cache layout metadata atomically
+alert:
+  severity: ci
+  service: testing-distributed-ubuntu-latest-oldest-supported-true
+  summary: 'workflow CI failed on codex/fix-concurrent-cache-initialization at 43f09e2b71:
+    step ''Run tests'' in job ''Testing (distributed, ubuntu-latest, oldest_supported, true)''
+    failed.'
+truth:
+  grading: class
+  category: infrastructure
+  service: joblib
+  required_evidence_any:
+  - log-4055
+provenance: recorded

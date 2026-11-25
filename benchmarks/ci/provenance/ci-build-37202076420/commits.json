@@ -1,0 +1,30 @@
+[
+  {
+    "author": "harsh-thakkar7",
+    "committedDate": "2026-10-04T12:25:45Z",
+    "messageHeadline": "fix: validate sdist members with tarfile's extraction filter",
+    "oid": "c8e36bc75bbb129ffde69e85d8dae356d2f2696c",
+    "files": [
+      {
+        "filename": "docs/changelog/1208.bugfix.rst",
+        "status": "modified"
+      },
+      {
+        "filename": "src/build/__main__.py",
+        "status": "modified"
+      },
+      {
+        "filename": "src/build/_compat/tarfile.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_compat_tarfile.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_main.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

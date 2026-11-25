@@ -1,0 +1,18 @@
+[
+  {
+    "author": "linhongyu510",
+    "committedDate": "2026-09-01T10:18:00Z",
+    "messageHeadline": "fix atomic open_file: set mode via fchmod and close fd on failure",
+    "oid": "0891cde54092f0ac3968bcd8956567fdcb98f0e0",
+    "files": [
+      {
+        "filename": "src/click/_compat.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_utils/test_open_file.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

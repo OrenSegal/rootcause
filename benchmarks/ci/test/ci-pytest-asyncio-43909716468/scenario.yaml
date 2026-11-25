@@ -1,0 +1,14 @@
+id: ci-pytest-asyncio-43909716468
+title: Allow event loop policies that reject set_event_loop (#1233)
+alert:
+  severity: ci
+  service: ubuntu-python-3-16
+  summary: 'workflow CI failed on fix-1233-policy-rejects-set-event-loop at 1a505aa7e9: step
+    ''Run tox targets for 3.16'' in job ''ubuntu - Python 3.16'' failed.'
+truth:
+  grading: class
+  category: bad_code_deploy
+  service: pytest-asyncio
+  required_evidence_any:
+  - 1a505aa7e9
+provenance: recorded

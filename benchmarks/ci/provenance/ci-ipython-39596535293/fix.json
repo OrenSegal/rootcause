@@ -1,0 +1,16 @@
+{
+  "fixed_run": "https://github.com/ipython/ipython/actions/runs/39598478561",
+  "fixed_sha": "225ab6105a7879fb742fc016c9f1e40f5c916189",
+  "commits": [
+    "225ab6105a7879fb742fc016c9f1e40f5c916189"
+  ],
+  "files": [
+    "docs/source/whatsnew/version0.11.rst",
+    "docs/source/whatsnew/version0.12.rst",
+    "docs/source/whatsnew/version0.13.rst",
+    "docs/source/whatsnew/version1.0.rst",
+    "docs/source/whatsnew/version2.0.rst",
+    "docs/source/whatsnew/version3.rst"
+  ],
+  "status": "ahead"
+}

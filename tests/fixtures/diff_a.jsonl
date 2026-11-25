@@ -1,0 +1,11 @@
+{"case": "c01", "passed": true, "cost": 0.01}
+{"case": "c02", "passed": true, "cost": 0.01}
+{"case": "c03", "passed": false, "cost": 0.01}
+{"case": "c03", "passed": false, "cost": 0.01, "error": true}
+{"case": "c04", "passed": false, "cost": 0.01}
+{"case": "c05", "passed": false, "cost": 0.01}
+{"case": "c06", "passed": false, "cost": 0.01}
+{"case": "c07", "passed": false, "cost": 0.01}
+{"case": "c08", "passed": false, "cost": 0.01}
+{"case": "c09", "passed": false, "cost": 0.01}
+{"case": "c10", "passed": false, "cost": 0.01}

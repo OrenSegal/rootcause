@@ -1,0 +1,36 @@
+[
+  {
+    "id": "131c214540",
+    "service": "pytest-xdist",
+    "version": "131c214540",
+    "ts": "2026-10-22T13:53:27Z",
+    "author": "pre-commit-ci[bot]",
+    "summary": "[pre-commit.ci] pre-commit autoupdate (#1380)",
+    "config_before": {
+      ".pre-commit-config.yaml": "previous"
+    },
+    "config_after": {
+      ".pre-commit-config.yaml": "modified in 131c214540"
+    },
+    "files": [
+      ".pre-commit-config.yaml"
+    ]
+  },
+  {
+    "id": "ae3f31bf37",
+    "service": "pytest-xdist",
+    "version": "ae3f31bf37",
+    "ts": "2026-10-25T05:42:20Z",
+    "author": "SAY-5",
+    "summary": "Merge branch 'master' into fix-respect-no-header-20261001",
+    "config_before": {
+      ".pre-commit-config.yaml": "previous"
+    },
+    "config_after": {
+      ".pre-commit-config.yaml": "modified in ae3f31bf37"
+    },
+    "files": [
+      ".pre-commit-config.yaml"
+    ]
+  }
+]

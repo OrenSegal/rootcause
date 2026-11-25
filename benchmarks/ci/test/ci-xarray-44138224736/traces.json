@@ -1,0 +1,1022 @@
+[
+  {
+    "span_id": "run-44138224736",
+    "trace_id": "run-44138224736",
+    "parent_id": null,
+    "service": "ci-additional",
+    "name": "CI Additional",
+    "start": "2026-11-17T17:33:07Z",
+    "duration_ms": 155000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-134233528465",
+    "trace_id": "run-44138224736",
+    "parent_id": "run-44138224736",
+    "service": "detect-ci-trigger",
+    "name": "detect ci trigger",
+    "start": "2026-11-17T17:34:13Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134233528465-step-1",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134233528465",
+    "service": "detect-ci-trigger",
+    "name": "Set up job",
+    "start": "2026-11-17T17:34:15Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134233528465-step-2",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134233528465",
+    "service": "detect-ci-trigger",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-17T17:34:17Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134233528465-step-3",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134233528465",
+    "service": "detect-ci-trigger",
+    "name": "Run xarray-contrib/ci-trigger@v1.2.1",
+    "start": "2026-11-17T17:34:19Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134233528465-step-6",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134233528465",
+    "service": "detect-ci-trigger",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-17T17:34:19Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134233528465-step-7",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134233528465",
+    "service": "detect-ci-trigger",
+    "name": "Complete job",
+    "start": "2026-11-17T17:34:19Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134233529264",
+    "trace_id": "run-44138224736",
+    "parent_id": "run-44138224736",
+    "service": "check-actions-lockfile",
+    "name": "Check actions lockfile",
+    "start": "2026-11-17T17:34:12Z",
+    "duration_ms": 10000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134233529264-step-1",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134233529264",
+    "service": "check-actions-lockfile",
+    "name": "Set up job",
+    "start": "2026-11-17T17:34:14Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134233529264-step-2",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134233529264",
+    "service": "check-actions-lockfile",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-17T17:34:14Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134233529264-step-3",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134233529264",
+    "service": "check-actions-lockfile",
+    "name": "Run gh extension install github/gh-actions-lock --pin v0.4.1",
+    "start": "2026-11-17T17:34:16Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134233529264-step-4",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134233529264",
+    "service": "check-actions-lockfile",
+    "name": "Run gh actions-lock --verify",
+    "start": "2026-11-17T17:34:17Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134233529264-step-8",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134233529264",
+    "service": "check-actions-lockfile",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-17T17:34:20Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134233529264-step-9",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134233529264",
+    "service": "check-actions-lockfile",
+    "name": "Complete job",
+    "start": "2026-11-17T17:34:21Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134233529746",
+    "trace_id": "run-44138224736",
+    "parent_id": "run-44138224736",
+    "service": "gha-security-analysis-using-zizmor",
+    "name": "GHA Security Analysis using Zizmor",
+    "start": "2026-11-17T17:33:10Z",
+    "duration_ms": 25000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134233529746-step-1",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134233529746",
+    "service": "gha-security-analysis-using-zizmor",
+    "name": "Set up job",
+    "start": "2026-11-17T17:33:11Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134233529746-step-2",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134233529746",
+    "service": "gha-security-analysis-using-zizmor",
+    "name": "Checkout repository",
+    "start": "2026-11-17T17:33:12Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134233529746-step-3",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134233529746",
+    "service": "gha-security-analysis-using-zizmor",
+    "name": "Run zizmor",
+    "start": "2026-11-17T17:33:15Z",
+    "duration_ms": 17000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134233529746-step-5",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134233529746",
+    "service": "gha-security-analysis-using-zizmor",
+    "name": "Post Run zizmor",
+    "start": "2026-11-17T17:33:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134233529746-step-6",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134233529746",
+    "service": "gha-security-analysis-using-zizmor",
+    "name": "Post Checkout repository",
+    "start": "2026-11-17T17:33:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134233529746-step-7",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134233529746",
+    "service": "gha-security-analysis-using-zizmor",
+    "name": "Complete job",
+    "start": "2026-11-17T17:33:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234346692",
+    "trace_id": "run-44138224736",
+    "parent_id": "run-44138224736",
+    "service": "check-redirects-of-moved-doc-pages",
+    "name": "Check redirects of moved doc pages",
+    "start": "2026-11-17T17:34:23Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234346692-step-1",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234346692",
+    "service": "check-redirects-of-moved-doc-pages",
+    "name": "Set up job",
+    "start": "2026-11-17T17:34:24Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234346692-step-2",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234346692",
+    "service": "check-redirects-of-moved-doc-pages",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-17T17:34:24Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234346692-step-3",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234346692",
+    "service": "check-redirects-of-moved-doc-pages",
+    "name": "Check that moved or removed doc pages are redirected",
+    "start": "2026-11-17T17:34:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234346692-step-6",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234346692",
+    "service": "check-redirects-of-moved-doc-pages",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-17T17:34:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234346692-step-7",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234346692",
+    "service": "check-redirects-of-moved-doc-pages",
+    "name": "Complete job",
+    "start": "2026-11-17T17:34:29Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234346966",
+    "trace_id": "run-44138224736",
+    "parent_id": "run-44138224736",
+    "service": "cache-pixi-lock",
+    "name": "cache-pixi-lock",
+    "start": "2026-11-17T17:34:24Z",
+    "duration_ms": 10000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234346966-step-1",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234346966",
+    "service": "cache-pixi-lock",
+    "name": "Set up job",
+    "start": "2026-11-17T17:34:25Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234346966-step-2",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234346966",
+    "service": "cache-pixi-lock",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-17T17:34:27Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234346966-step-3",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234346966",
+    "service": "cache-pixi-lock",
+    "name": "Run xarray-contrib/pixi-lock/create-and-cache@v0.1.1",
+    "start": "2026-11-17T17:34:28Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234346966-step-4",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234346966",
+    "service": "cache-pixi-lock",
+    "name": "Run actions/upload-artifact@v7.0.2",
+    "start": "2026-11-17T17:34:30Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234346966-step-7",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234346966",
+    "service": "cache-pixi-lock",
+    "name": "Post Run xarray-contrib/pixi-lock/create-and-cache@v0.1.1",
+    "start": "2026-11-17T17:34:31Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234346966-step-8",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234346966",
+    "service": "cache-pixi-lock",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-17T17:34:31Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234346966-step-9",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234346966",
+    "service": "cache-pixi-lock",
+    "name": "Complete job",
+    "start": "2026-11-17T17:34:32Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482514",
+    "trace_id": "run-44138224736",
+    "parent_id": "run-44138224736",
+    "service": "mypy-3-12",
+    "name": "Mypy 3.12",
+    "start": "2026-11-17T17:34:35Z",
+    "duration_ms": 32000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-134234482514-step-1",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482514",
+    "service": "mypy-3-12",
+    "name": "Set up job",
+    "start": "2026-11-17T17:34:36Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482514-step-2",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482514",
+    "service": "mypy-3-12",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-17T17:34:39Z",
+    "duration_ms": 8000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482514-step-3",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482514",
+    "service": "mypy-3-12",
+    "name": "Restore cached pixi lockfile",
+    "start": "2026-11-17T17:34:47Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482514-step-4",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482514",
+    "service": "mypy-3-12",
+    "name": "Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-17T17:34:47Z",
+    "duration_ms": 12000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482514-step-5",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482514",
+    "service": "mypy-3-12",
+    "name": "set environment variables",
+    "start": "2026-11-17T17:34:59Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482514-step-6",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482514",
+    "service": "mypy-3-12",
+    "name": "Version info",
+    "start": "2026-11-17T17:35:01Z",
+    "duration_ms": 3000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482514-step-7",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482514",
+    "service": "mypy-3-12",
+    "name": "Run mypy",
+    "start": "2026-11-17T17:35:04Z",
+    "duration_ms": 1000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-134234482514-step-15",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482514",
+    "service": "mypy-3-12",
+    "name": "Post Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-17T17:35:05Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482514-step-16",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482514",
+    "service": "mypy-3-12",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-17T17:35:05Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482514-step-17",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482514",
+    "service": "mypy-3-12",
+    "name": "Complete job",
+    "start": "2026-11-17T17:35:05Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482604",
+    "trace_id": "run-44138224736",
+    "parent_id": "run-44138224736",
+    "service": "mypy",
+    "name": "Mypy",
+    "start": "2026-11-17T17:34:35Z",
+    "duration_ms": 36000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-134234482604-step-1",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482604",
+    "service": "mypy",
+    "name": "Set up job",
+    "start": "2026-11-17T17:34:36Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482604-step-2",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482604",
+    "service": "mypy",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-17T17:34:38Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482604-step-3",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482604",
+    "service": "mypy",
+    "name": "Restore cached pixi lockfile",
+    "start": "2026-11-17T17:34:43Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482604-step-4",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482604",
+    "service": "mypy",
+    "name": "Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-17T17:34:43Z",
+    "duration_ms": 21000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482604-step-5",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482604",
+    "service": "mypy",
+    "name": "set environment variables",
+    "start": "2026-11-17T17:35:04Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482604-step-6",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482604",
+    "service": "mypy",
+    "name": "Version info",
+    "start": "2026-11-17T17:35:05Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482604-step-7",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482604",
+    "service": "mypy",
+    "name": "Run mypy",
+    "start": "2026-11-17T17:35:07Z",
+    "duration_ms": 2000.0,
+    "status": "error"
+  },
+  {
+    "span_id": "job-134234482604-step-15",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482604",
+    "service": "mypy",
+    "name": "Post Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-17T17:35:09Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482604-step-16",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482604",
+    "service": "mypy",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-17T17:35:09Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482604-step-17",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482604",
+    "service": "mypy",
+    "name": "Complete job",
+    "start": "2026-11-17T17:35:09Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482623",
+    "trace_id": "run-44138224736",
+    "parent_id": "run-44138224736",
+    "service": "stubtest",
+    "name": "Stubtest",
+    "start": "2026-11-17T17:34:35Z",
+    "duration_ms": 66000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482623-step-1",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482623",
+    "service": "stubtest",
+    "name": "Set up job",
+    "start": "2026-11-17T17:34:36Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482623-step-2",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482623",
+    "service": "stubtest",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-17T17:34:38Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482623-step-3",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482623",
+    "service": "stubtest",
+    "name": "Restore cached pixi lockfile",
+    "start": "2026-11-17T17:34:43Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482623-step-4",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482623",
+    "service": "stubtest",
+    "name": "Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-17T17:34:44Z",
+    "duration_ms": 17000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482623-step-5",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482623",
+    "service": "stubtest",
+    "name": "Version info",
+    "start": "2026-11-17T17:35:01Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482623-step-6",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482623",
+    "service": "stubtest",
+    "name": "Run stubtest (core modules)",
+    "start": "2026-11-17T17:35:05Z",
+    "duration_ms": 34000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482623-step-11",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482623",
+    "service": "stubtest",
+    "name": "Post Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-17T17:35:39Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482623-step-12",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482623",
+    "service": "stubtest",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-17T17:35:39Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482623-step-13",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482623",
+    "service": "stubtest",
+    "name": "Complete job",
+    "start": "2026-11-17T17:35:40Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482663",
+    "trace_id": "run-44138224736",
+    "parent_id": "run-44138224736",
+    "service": "check-generate-aggregations-is-up-to-date",
+    "name": "Check generate-aggregations is up-to-date",
+    "start": "2026-11-17T17:34:35Z",
+    "duration_ms": 11000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482663-step-1",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482663",
+    "service": "check-generate-aggregations-is-up-to-date",
+    "name": "Set up job",
+    "start": "2026-11-17T17:34:36Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482663-step-2",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482663",
+    "service": "check-generate-aggregations-is-up-to-date",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-17T17:34:38Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482663-step-3",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482663",
+    "service": "check-generate-aggregations-is-up-to-date",
+    "name": "Check if generate_aggregations.py changed",
+    "start": "2026-11-17T17:34:43Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482663-step-12",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482663",
+    "service": "check-generate-aggregations-is-up-to-date",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-17T17:34:43Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482663-step-13",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482663",
+    "service": "check-generate-aggregations-is-up-to-date",
+    "name": "Complete job",
+    "start": "2026-11-17T17:34:44Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482664",
+    "trace_id": "run-44138224736",
+    "parent_id": "run-44138224736",
+    "service": "doctests",
+    "name": "Doctests",
+    "start": "2026-11-17T17:34:36Z",
+    "duration_ms": 64000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482664-step-1",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482664",
+    "service": "doctests",
+    "name": "Set up job",
+    "start": "2026-11-17T17:34:36Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482664-step-2",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482664",
+    "service": "doctests",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-17T17:34:38Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482664-step-3",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482664",
+    "service": "doctests",
+    "name": "set environment variables",
+    "start": "2026-11-17T17:34:43Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482664-step-4",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482664",
+    "service": "doctests",
+    "name": "Restore cached pixi lockfile",
+    "start": "2026-11-17T17:34:44Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482664-step-5",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482664",
+    "service": "doctests",
+    "name": "Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-17T17:34:45Z",
+    "duration_ms": 20000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482664-step-6",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482664",
+    "service": "doctests",
+    "name": "Version info",
+    "start": "2026-11-17T17:35:05Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482664-step-7",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482664",
+    "service": "doctests",
+    "name": "Run doctests",
+    "start": "2026-11-17T17:35:09Z",
+    "duration_ms": 28000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482664-step-13",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482664",
+    "service": "doctests",
+    "name": "Post Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-17T17:35:37Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482664-step-14",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482664",
+    "service": "doctests",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-17T17:35:37Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482664-step-15",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482664",
+    "service": "doctests",
+    "name": "Complete job",
+    "start": "2026-11-17T17:35:37Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482685",
+    "trace_id": "run-44138224736",
+    "parent_id": "run-44138224736",
+    "service": "minimum-version-policy",
+    "name": "Minimum Version Policy",
+    "start": "2026-11-17T17:34:35Z",
+    "duration_ms": 17000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482685-step-1",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482685",
+    "service": "minimum-version-policy",
+    "name": "Set up job",
+    "start": "2026-11-17T17:34:36Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482685-step-2",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482685",
+    "service": "minimum-version-policy",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-17T17:34:37Z",
+    "duration_ms": 4000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482685-step-3",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482685",
+    "service": "minimum-version-policy",
+    "name": "Restore cached pixi lockfile",
+    "start": "2026-11-17T17:34:41Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482685-step-4",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482685",
+    "service": "minimum-version-policy",
+    "name": "Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-17T17:34:42Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482685-step-5",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482685",
+    "service": "minimum-version-policy",
+    "name": "Bare minimum versions policy",
+    "start": "2026-11-17T17:34:47Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482685-step-6",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482685",
+    "service": "minimum-version-policy",
+    "name": "Bare minimum and scipy versions policy",
+    "start": "2026-11-17T17:34:48Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482685-step-7",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482685",
+    "service": "minimum-version-policy",
+    "name": "All-deps minimum versions policy",
+    "start": "2026-11-17T17:34:48Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482685-step-13",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482685",
+    "service": "minimum-version-policy",
+    "name": "Post Run prefix-dev/setup-pixi@v0.11.3",
+    "start": "2026-11-17T17:34:49Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482685-step-14",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482685",
+    "service": "minimum-version-policy",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-17T17:34:49Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482685-step-15",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482685",
+    "service": "minimum-version-policy",
+    "name": "Complete job",
+    "start": "2026-11-17T17:34:49Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482765",
+    "trace_id": "run-44138224736",
+    "parent_id": "run-44138224736",
+    "service": "check-generate-ops-is-up-to-date",
+    "name": "Check generate-ops is up-to-date",
+    "start": "2026-11-17T17:34:36Z",
+    "duration_ms": 9000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482765-step-1",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482765",
+    "service": "check-generate-ops-is-up-to-date",
+    "name": "Set up job",
+    "start": "2026-11-17T17:34:36Z",
+    "duration_ms": 2000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482765-step-2",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482765",
+    "service": "check-generate-ops-is-up-to-date",
+    "name": "Run actions/checkout@v7.0.1",
+    "start": "2026-11-17T17:34:38Z",
+    "duration_ms": 5000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482765-step-3",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482765",
+    "service": "check-generate-ops-is-up-to-date",
+    "name": "Check if generate_ops.py or _typed_ops.py changed",
+    "start": "2026-11-17T17:34:43Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482765-step-12",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482765",
+    "service": "check-generate-ops-is-up-to-date",
+    "name": "Post Run actions/checkout@v7.0.1",
+    "start": "2026-11-17T17:34:43Z",
+    "duration_ms": 1000.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234482765-step-13",
+    "trace_id": "run-44138224736",
+    "parent_id": "job-134234482765",
+    "service": "check-generate-ops-is-up-to-date",
+    "name": "Complete job",
+    "start": "2026-11-17T17:34:44Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  },
+  {
+    "span_id": "job-134234485062",
+    "trace_id": "run-44138224736",
+    "parent_id": "run-44138224736",
+    "service": "pyright-matrix-pixi-env",
+    "name": "Pyright | ${{ matrix.pixi-env }}\"",
+    "start": "2026-11-17T17:34:34Z",
+    "duration_ms": 0.0,
+    "status": "ok"
+  }
+]

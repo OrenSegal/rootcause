@@ -1,0 +1,50 @@
+[
+  {
+    "author": "alexmojaki",
+    "committedDate": "2026-11-20T15:47:39Z",
+    "messageHeadline": "Benchmark correct UUID winners in JSON smart unions",
+    "oid": "1a8e0be10e30fb2dbbf38311e69e9c90321940aa",
+    "files": [
+      {
+        "filename": "tests/benchmarks/test_json_uuid_union.py",
+        "status": "added"
+      }
+    ]
+  },
+  {
+    "author": "alexmojaki",
+    "committedDate": "2026-11-20T15:52:09Z",
+    "messageHeadline": "Merge shared benchmark baseline into guard layer",
+    "oid": "7cb0c7f85028cf4626b3a34249c81152d96e9448",
+    "files": [
+      {
+        "filename": "tests/benchmarks/test_json_uuid_union.py",
+        "status": "added"
+      }
+    ]
+  },
+  {
+    "author": "alexmojaki",
+    "committedDate": "2026-11-20T15:52:19Z",
+    "messageHeadline": "Merge shared benchmark baseline into cache layer",
+    "oid": "20b7ee13d464becc36b88f2d32ffb881feaba7ac",
+    "files": [
+      {
+        "filename": "tests/benchmarks/test_json_uuid_union.py",
+        "status": "added"
+      }
+    ]
+  },
+  {
+    "author": "alexmojaki",
+    "committedDate": "2026-11-20T15:52:27Z",
+    "messageHeadline": "Merge shared benchmark baseline into depth layer",
+    "oid": "26f74193d70e5c215aa5e694e5d61985d4a9ae71",
+    "files": [
+      {
+        "filename": "tests/benchmarks/test_json_uuid_union.py",
+        "status": "added"
+      }
+    ]
+  }
+]

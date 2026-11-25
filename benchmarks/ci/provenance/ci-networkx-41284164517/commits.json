@@ -1,0 +1,26 @@
+[
+  {
+    "author": "Roshanraj2580",
+    "committedDate": "2026-11-01T07:16:00Z",
+    "messageHeadline": "Fix ZeroDivisionError in current_flow_betweenness for small graphs",
+    "oid": "3c1969356f712b312862cae9c91524f8cca6bc9f",
+    "files": [
+      {
+        "filename": "networkx/algorithms/centrality/current_flow_betweenness.py",
+        "status": "modified"
+      },
+      {
+        "filename": "networkx/algorithms/centrality/current_flow_betweenness_subset.py",
+        "status": "modified"
+      },
+      {
+        "filename": "networkx/algorithms/centrality/tests/test_current_flow_betweenness_centrality.py",
+        "status": "modified"
+      },
+      {
+        "filename": "networkx/algorithms/centrality/tests/test_current_flow_betweenness_centrality_subset.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

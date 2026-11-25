@@ -1,0 +1,19 @@
+[
+  {
+    "id": "2f4bcfad9c",
+    "service": "streamlink",
+    "version": "2f4bcfad9c",
+    "ts": "2026-09-03T19:34:22Z",
+    "author": "bastimeyer",
+    "summary": "ci: ensure git fetch depth on all CI services",
+    "config_before": {
+      ".github/workflows/scripts/fetch-tags.sh": "previous"
+    },
+    "config_after": {
+      ".github/workflows/scripts/fetch-tags.sh": "modified in 2f4bcfad9c"
+    },
+    "files": [
+      ".github/workflows/scripts/fetch-tags.sh"
+    ]
+  }
+]

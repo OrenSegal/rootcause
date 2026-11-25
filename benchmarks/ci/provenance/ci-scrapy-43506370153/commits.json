@@ -1,0 +1,18 @@
+[
+  {
+    "author": "diogosuguimoto",
+    "committedDate": "2026-11-13T20:41:39Z",
+    "messageHeadline": "skip nested async function in is_generator_with_return_value",
+    "oid": "bde6b65e028ef653d9e20d900980f87f04d1d29e",
+    "files": [
+      {
+        "filename": "scrapy/utils/misc.py",
+        "status": "modified"
+      },
+      {
+        "filename": "tests/test_utils_misc/test_return_with_argument_inside_generator.py",
+        "status": "modified"
+      }
+    ]
+  }
+]

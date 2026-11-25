@@ -1,0 +1,15 @@
+id: ci-django-rest-framework-34093601968
+title: Fix `TypeError` in `RelatedField.get_choices()` when `to_representation` returns unhashable
+  type
+alert:
+  severity: ci
+  service: python-3-11
+  summary: 'workflow CI failed on fix/related-field-unhashable-get-choices at b5cabc1f72:
+    step ''Run tox targets for 3.11'' in job ''Python 3.11'' failed.'
+truth:
+  grading: class
+  category: bad_code_deploy
+  service: django-rest-framework
+  required_evidence_any:
+  - b5cabc1f72
+provenance: recorded

@@ -1,0 +1,12 @@
+{
+  "fixed_run": "https://github.com/scikit-learn/scikit-learn/actions/runs/44927486537",
+  "fixed_sha": "6d234fe0142ce4337feb50fd918afe5bee694aad",
+  "commits": [
+    "fbc5552d6928fcad1cb667399c8422313b6bfe46",
+    "6d234fe0142ce4337feb50fd918afe5bee694aad"
+  ],
+  "files": [
+    "sklearn/utils/tests/test_array_api.py"
+  ],
+  "status": "ahead"
+}

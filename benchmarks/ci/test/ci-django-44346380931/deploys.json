@@ -1,0 +1,16 @@
+[
+  {
+    "id": "15f1bdfc1f",
+    "service": "django",
+    "version": "15f1bdfc1f",
+    "ts": "2026-11-18T16:08:53Z",
+    "author": "paul-eclipse",
+    "summary": "Fixed 27514 -- Requires Change user permission to add user when using saveasnew.",
+    "config_before": {},
+    "config_after": {},
+    "files": [
+      "django/contrib/auth/admin.py",
+      "tests/auth_tests/test_views.py"
+    ]
+  }
+]
